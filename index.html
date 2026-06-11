@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JasonOS — Digital Office Status</title>
+<style>
+  /* ── Custom properties ───────────────────────────────────────── */
+  :root {
+    --bg:          #0d0d0d;
+    --surface:     #1a1a1a;
+    --surface-2:   #242424;
+    --border:      #2e2e2e;
+    --text:        #e8e8e8;
+    --text-muted:  #6b6b6b;
+    --text-dim:    #444;
+    --accent:      #4a9eff;
+    --warn:        #ff9f40;
+    --danger:      #ff5f5f;
+    --success:     #4caf7d;
+    --radius:      10px;
+    --gap:         14px;
+  }
+
+  /* ── Reset ───────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Auth overlay ────────────────────────────────────────────── */
+  #auth-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    gap: 20px;
+  }
+
+  #auth-overlay h1 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: min(300px, 80vw);
+  }
+
+  #auth-input {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-size: 1rem;
+    padding: 12px 16px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  #auth-input:focus {
+    border-color: var(--accent);
+  }
+
+  #auth-btn {
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius);
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  #auth-error {
+    color: var(--danger);
+    font-size: 0.85rem;
+    text-align: center;
+    min-height: 1.2em;
+  }
+
+  /* ── Main layout ─────────────────────────────────────────────── */
+  #app {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: var(--gap);
+    gap: var(--gap);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ── Header strip ────────────────────────────────────────────── */
+  #header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  #header-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  #header-meta {
+    text-align: right;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  #staleness-badge {
+    display: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: var(--warn);
+    color: #000;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+
+  /* ── Cards ───────────────────────────────────────────────────── */
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+
+  .panel-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+
+  /* ── CEO Actions ─────────────────────────────────────────────── */
+  #ceo-actions-panel {
+    border-color: var(--warn);
+  }
+
+  #ceo-actions-panel .panel-label {
+    color: var(--warn);
+  }
+
+  #ceo-actions-panel.empty {
+    border-color: var(--border);
+  }
+
+  #ceo-actions-panel.empty .panel-label {
+    color: var(--text-dim);
+  }
+
+  .action-card {
+    background: var(--surface-2);
+    border-left: 3px solid var(--warn);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .action-card:last-child { margin-bottom: 0; }
+
+  .action-card .action-category {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warn);
+    margin-bottom: 3px;
+  }
+
+  .no-actions {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ── Active Initiative ───────────────────────────────────────── */
+  #active-panel .initiative-id {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  #active-panel .initiative-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  #active-panel .initiative-status {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+
+  .status-active {
+    background: rgba(74, 158, 255, 0.15);
+    color: var(--accent);
+  }
+
+  .status-next {
+    background: rgba(76, 175, 125, 0.15);
+    color: var(--success);
+  }
+
+  .status-none {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  /* ── Queue ───────────────────────────────────────────────────── */
+  .queue-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+  }
+
+  .queue-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .queue-item:first-child { padding-top: 0; }
+
+  .queue-pos {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    min-width: 18px;
+    text-align: right;
+  }
+
+  .queue-id {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 60px;
+  }
+
+  .queue-name {
+    color: var(--text);
+    flex: 1;
+  }
+
+  .queue-empty {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ── Stats bar ───────────────────────────────────────────────── */
+  #stats-panel {
+    background: transparent;
+    border-color: transparent;
+    padding: 0 2px;
+  }
+
+  .stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .stats-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .stats-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .progress-track {
+    height: 3px;
+    background: var(--surface);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+
+  /* ── Error / loading states ──────────────────────────────────── */
+  #load-error {
+    display: none;
+    background: rgba(255, 95, 95, 0.08);
+    border: 1px solid var(--danger);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 0.85rem;
+    color: var(--danger);
+  }
+
+  /* ── Landscape tweaks ────────────────────────────────────────── */
+  @media (orientation: landscape) {
+    #app {
+      display: none; /* re-shown by JS */
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+
+    #header        { width: 100%; }
+    #load-error    { width: 100%; }
+    #ceo-actions-panel { width: 100%; }
+    #active-panel  { flex: 1; min-width: 200px; }
+    #queue-panel   { flex: 1; min-width: 200px; }
+    #stats-panel   { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Auth overlay ─────────────────────────────────────────────── -->
+<div id="auth-overlay" role="main">
+  <h1>JasonOS</h1>
+  <form id="auth-form" autocomplete="off">
+    <input id="auth-input" type="password" placeholder="Access code"
+           autocomplete="current-password" autocorrect="off"
+           autocapitalize="none" spellcheck="false">
+    <button id="auth-btn" type="submit">Unlock</button>
+    <div id="auth-error" aria-live="polite"></div>
+  </form>
+</div>
+
+<!-- ── Main app ──────────────────────────────────────────────────── -->
+<div id="app" role="main" aria-label="JasonOS Digital Office Status">
+
+  <!-- Header -->
+  <div id="header">
+    <div id="header-title">JasonOS</div>
+    <div id="header-meta">
+      <div id="last-updated">—</div>
+      <div id="staleness-badge">STALE</div>
+    </div>
+  </div>
+
+  <!-- Error -->
+  <div id="load-error">Could not load status. Retrying in 15 minutes.</div>
+
+  <!-- CEO Actions -->
+  <div id="ceo-actions-panel" class="panel">
+    <div class="panel-label">CEO Actions</div>
+    <div id="ceo-actions-body"></div>
+  </div>
+
+  <!-- Active Initiative -->
+  <div id="active-panel" class="panel">
+    <div class="panel-label">Active</div>
+    <div id="active-body"></div>
+  </div>
+
+  <!-- Queue -->
+  <div id="queue-panel" class="panel">
+    <div class="panel-label">Queue</div>
+    <div id="queue-body"></div>
+  </div>
+
+  <!-- Stats -->
+  <div id="stats-panel" class="panel">
+    <div class="stats-row">
+      <span class="stats-label">Portfolio</span>
+      <span id="stats-count" class="stats-count">—</span>
+    </div>
+    <div class="progress-track">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ── Config ──────────────────────────────────────────────────── */
+  // SHA-256 hex of the access password.
+  // Default: hash of "jasonos" — REPLACE before launch.
+  // To generate: open browser console and run:
+  //   crypto.subtle.digest("SHA-256", new TextEncoder().encode("yourpassword"))
+  //     .then(function(b){console.log(Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join(""))})
+  var PASSWORD_HASH = "6b62d7d9f5cb3b7c8cd66b4843e0f5b3d2b3c9d0e7a5b1f2c4d6e8f0a2b4c6d8";
+
+  var STATUS_URL    = "status.json";
+  var REFRESH_MS    = 15 * 60 * 1000; // 15 minutes
+  var STALE_MS      = 2  * 60 * 60 * 1000; // 2 hours
+
+  /* ── Auth ────────────────────────────────────────────────────── */
+  var authOverlay = document.getElementById("auth-overlay");
+  var app         = document.getElementById("app");
+  var authForm    = document.getElementById("auth-form");
+  var authInput   = document.getElementById("auth-input");
+  var authError   = document.getElementById("auth-error");
+
+  function hexFromBuffer(buf) {
+    return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+      return b.toString(16).padStart(2, "0");
+    }).join("");
+  }
+
+  function unlock() {
+    authOverlay.style.display = "none";
+    app.style.display = "flex";
+    sessionStorage.setItem("jasonos_auth", "1");
+    loadStatus();
+    scheduleRefresh();
+  }
+
+  function checkSession() {
+    if (sessionStorage.getItem("jasonos_auth") === "1") {
+      unlock();
+      return true;
+    }
+    return false;
+  }
+
+  authForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var pw = authInput.value;
+    if (!pw) return;
+
+    authError.textContent = "";
+
+    if (!window.crypto || !window.crypto.subtle) {
+      // Fallback: no SubtleCrypto (non-HTTPS or very old WebKit)
+      authError.textContent = "Authentication requires HTTPS.";
+      return;
+    }
+
+    var encoded = new TextEncoder().encode(pw);
+    window.crypto.subtle.digest("SHA-256", encoded).then(function (buf) {
+      var hex = hexFromBuffer(buf);
+      if (hex === PASSWORD_HASH) {
+        unlock();
+      } else {
+        authError.textContent = "Incorrect access code.";
+        authInput.value = "";
+        authInput.focus();
+      }
+    }).catch(function () {
+      authError.textContent = "Authentication error.";
+    });
+  });
+
+  /* ── Status loading ──────────────────────────────────────────── */
+  var loadErrorEl    = document.getElementById("load-error");
+  var lastUpdatedEl  = document.getElementById("last-updated");
+  var stalenessBadge = document.getElementById("staleness-badge");
+
+  function formatTimestamp(iso) {
+    try {
+      var d = new Date(iso);
+      return d.toLocaleDateString(undefined, { month: "short", day: "numeric" })
+             + " · "
+             + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    } catch (e) {
+      return iso;
+    }
+  }
+
+  function checkStaleness(generatedAt) {
+    try {
+      var age = Date.now() - new Date(generatedAt).getTime();
+      if (age > STALE_MS) {
+        stalenessBadge.style.display = "inline-block";
+      } else {
+        stalenessBadge.style.display = "none";
+      }
+    } catch (e) {
+      stalenessBadge.style.display = "none";
+    }
+  }
+
+  function renderCeoActions(actions) {
+    var panel = document.getElementById("ceo-actions-panel");
+    var body  = document.getElementById("ceo-actions-body");
+
+    if (!actions || actions.length === 0) {
+      panel.classList.add("empty");
+      body.innerHTML = '<span class="no-actions">No action required</span>';
+      return;
+    }
+
+    panel.classList.remove("empty");
+    var html = "";
+    for (var i = 0; i < actions.length; i++) {
+      var a = actions[i];
+      html += '<div class="action-card">'
+            + '<div class="action-category">' + escHtml(a.category || "action") + '</div>'
+            + '<div>' + escHtml(a.label || "") + '</div>'
+            + '</div>';
+    }
+    body.innerHTML = html;
+  }
+
+  function renderActive(initiative, queue) {
+    var body = document.getElementById("active-body");
+
+    if (initiative) {
+      body.innerHTML = '<div class="initiative-id">' + escHtml(initiative.id) + '</div>'
+                     + '<div class="initiative-name">' + escHtml(initiative.name) + '</div>'
+                     + '<span class="initiative-status status-active">In Progress</span>';
+      return;
+    }
+
+    // Nothing active — show next queued item as preview
+    if (queue && queue.length > 0) {
+      var next = queue[0];
+      body.innerHTML = '<div class="initiative-id">' + escHtml(next.id) + '</div>'
+                     + '<div class="initiative-name">' + escHtml(next.name) + '</div>'
+                     + '<span class="initiative-status status-next">Up Next</span>';
+      return;
+    }
+
+    body.innerHTML = '<span class="status-none">No active initiative</span>';
+  }
+
+  function renderQueue(queue, activeInitiative) {
+    var body  = document.getElementById("queue-body");
+
+    // Filter out the first item if it's being shown in active panel (no active)
+    var items = queue || [];
+    var offset = (!activeInitiative && items.length > 0) ? 1 : 0;
+    var display = items.slice(offset);
+
+    if (display.length === 0) {
+      body.innerHTML = '<span class="queue-empty">Queue is empty</span>';
+      return;
+    }
+
+    var html = "";
+    for (var i = 0; i < display.length; i++) {
+      var item = display[i];
+      html += '<div class="queue-item">'
+            + '<span class="queue-pos">' + escHtml(String(item.position)) + '</span>'
+            + '<span class="queue-id">'  + escHtml(item.id) + '</span>'
+            + '<span class="queue-name">' + escHtml(item.name) + '</span>'
+            + '</div>';
+    }
+    body.innerHTML = html;
+  }
+
+  function renderStats(stats) {
+    var done  = (stats && stats.done)  || 0;
+    var total = (stats && stats.total) || 0;
+    var pct   = total > 0 ? Math.round(done / total * 100) : 0;
+
+    document.getElementById("stats-count").textContent = done + " / " + total;
+    document.getElementById("progress-fill").style.width = pct + "%";
+  }
+
+  function render(data) {
+    loadErrorEl.style.display = "none";
+    lastUpdatedEl.textContent = data.generated_at
+      ? formatTimestamp(data.generated_at)
+      : "Unknown";
+
+    checkStaleness(data.generated_at);
+    renderCeoActions(data.ceo_actions);
+    renderActive(data.active_initiative, data.queue);
+    renderQueue(data.queue, data.active_initiative);
+    renderStats(data.stats);
+  }
+
+  function loadStatus() {
+    var url = STATUS_URL + "?t=" + Date.now();
+    fetch(url).then(function (res) {
+      if (!res.ok) { throw new Error("HTTP " + res.status); }
+      return res.json();
+    }).then(function (data) {
+      render(data);
+    }).catch(function () {
+      loadErrorEl.style.display = "block";
+    });
+  }
+
+  function scheduleRefresh() {
+    setInterval(function () {
+      loadStatus();
+      checkStaleness(document.getElementById("last-updated").dataset.iso || "");
+    }, REFRESH_MS);
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  /* ── Init ────────────────────────────────────────────────────── */
+  if (!checkSession()) {
+    authInput.focus();
+  }
+
+}());
+</script>
+</body>
+</html>
