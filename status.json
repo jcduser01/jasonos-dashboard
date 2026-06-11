@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-11T15:14:52Z",
+  "generated_at": "2026-06-11T15:17:34Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
-    "total": 52,
+    "total": 55,
     "active": 1,
     "queued": 0,
-    "backlog": 13
+    "backlog": 16
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "minutes_since_session": 914,
+    "minutes_since_session": 917,
     "airlock_queue": 0
   },
   "active_initiative": {
@@ -111,6 +111,18 @@
       {
         "id": "INI-053",
         "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning"
+      },
+      {
+        "id": "INI-054",
+        "name": "Temple of Unicorns \u2014 Product Catalog Refresh"
+      },
+      {
+        "id": "INI-055",
+        "name": "Temple of Unicorns \u2014 Shopify Site Redesign"
+      },
+      {
+        "id": "INI-056",
+        "name": "Temple of Unicorns \u2014 Brand Design System"
       }
     ],
     "digital_office": [
