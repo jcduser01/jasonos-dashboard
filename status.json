@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T14:14:52Z",
+  "generated_at": "2026-06-11T14:25:53Z",
   "schema_version": "2",
   "stats": {
     "done": 37,
@@ -10,12 +10,25 @@
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "minutes_since_session": 854,
+    "minutes_since_session": 865,
     "airlock_queue": 0
   },
   "active_initiative": null,
   "queue": [],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Relay push needed:",
+      "context": ""
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Next session:",
+      "context": ""
+    }
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -83,20 +96,6 @@
       {
         "id": "INI-043",
         "name": "Dish n' BEATS \u2014 Brand Design System"
-      }
-    ],
-    "digital_office": [
-      {
-        "id": "INI-011",
-        "name": "Distributed Compute Architecture"
-      },
-      {
-        "id": "INI-036",
-        "name": "ICM Workspace Architecture \u2014 Pilot Evaluation and Broader Rollout Decision"
-      },
-      {
-        "id": "INI-039",
-        "name": "QMD Local Search Integration"
       },
       {
         "id": "INI-046",
@@ -121,6 +120,20 @@
       {
         "id": "INI-051",
         "name": "Temple of Unicorns \u2014 Brand & Style Guide Ingestion"
+      }
+    ],
+    "digital_office": [
+      {
+        "id": "INI-011",
+        "name": "Distributed Compute Architecture"
+      },
+      {
+        "id": "INI-036",
+        "name": "ICM Workspace Architecture \u2014 Pilot Evaluation and Broader Rollout Decision"
+      },
+      {
+        "id": "INI-039",
+        "name": "QMD Local Search Integration"
       },
       {
         "id": "INI-052",
