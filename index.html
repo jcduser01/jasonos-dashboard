@@ -335,6 +335,36 @@
     color: var(--danger);
   }
 
+  /* ── Backlog panels ──────────────────────────────────────────── */
+  .backlog-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.825rem;
+  }
+
+  .backlog-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .backlog-item:first-child { padding-top: 0; }
+
+  .backlog-id {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    min-width: 60px;
+  }
+
+  .backlog-name {
+    color: var(--text-muted);
+    flex: 1;
+  }
+
+  .backlog-empty {
+    font-size: 0.825rem;
+    color: var(--text-dim);
+  }
+
   /* ── Landscape tweaks ────────────────────────────────────────── */
   @media (orientation: landscape) {
     #app {
@@ -349,6 +379,8 @@
     #ceo-actions-panel { width: 100%; }
     #active-panel  { flex: 1; min-width: 200px; }
     #queue-panel   { flex: 1; min-width: 200px; }
+    #backlog-client-panel  { flex: 1; min-width: 200px; }
+    #backlog-digital-panel { flex: 1; min-width: 200px; }
     #stats-panel   { width: 100%; }
   }
 </style>
@@ -398,6 +430,18 @@
   <div id="queue-panel" class="panel">
     <div class="panel-label">Queue</div>
     <div id="queue-body"></div>
+  </div>
+
+  <!-- Backlog: Client Work -->
+  <div id="backlog-client-panel" class="panel">
+    <div class="panel-label">Client Work Backlog</div>
+    <div id="backlog-client-body"></div>
+  </div>
+
+  <!-- Backlog: Digital Office Infrastructure -->
+  <div id="backlog-digital-panel" class="panel">
+    <div class="panel-label">Digital Office Backlog</div>
+    <div id="backlog-digital-body"></div>
   </div>
 
   <!-- Stats -->
@@ -583,6 +627,23 @@
     body.innerHTML = html;
   }
 
+  function renderBacklog(items, bodyId) {
+    var body = document.getElementById(bodyId);
+    if (!items || items.length === 0) {
+      body.innerHTML = '<span class="backlog-empty">Empty</span>';
+      return;
+    }
+    var html = "";
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      html += '<div class="backlog-item">'
+            + '<span class="backlog-id">' + escHtml(item.id) + '</span>'
+            + '<span class="backlog-name">' + escHtml(item.name) + '</span>'
+            + '</div>';
+    }
+    body.innerHTML = html;
+  }
+
   function renderStats(stats) {
     var done  = (stats && stats.done)  || 0;
     var total = (stats && stats.total) || 0;
@@ -602,6 +663,9 @@
     renderCeoActions(data.ceo_actions);
     renderActive(data.active_initiative, data.queue);
     renderQueue(data.queue, data.active_initiative);
+    var backlog = data.backlog || {};
+    renderBacklog(backlog.client_work,    "backlog-client-body");
+    renderBacklog(backlog.digital_office, "backlog-digital-body");
     renderStats(data.stats);
   }
 

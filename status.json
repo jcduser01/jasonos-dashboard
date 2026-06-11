@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T08:09:08Z",
+  "generated_at": "2026-06-11T08:14:15Z",
   "schema_version": "1",
   "stats": {
     "done": 37,
@@ -28,5 +28,27 @@
       "position": 3
     }
   ],
-  "ceo_actions": []
+  "ceo_actions": [],
+  "backlog": {
+    "client_work": [
+      {
+        "id": "INI-009",
+        "name": "Venture Portfolio Activation"
+      }
+    ],
+    "digital_office": [
+      {
+        "id": "INI-011",
+        "name": "Distributed Compute Architecture"
+      },
+      {
+        "id": "INI-036",
+        "name": "ICM Workspace Architecture \u2014 Pilot Evaluation and Broader Rollout Decision"
+      },
+      {
+        "id": "INI-039",
+        "name": "QMD Local Search Integration"
+      }
+    ]
+  }
 }
