@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-11T13:29:51Z",
+  "generated_at": "2026-06-11T13:44:51Z",
   "schema_version": "2",
   "stats": {
     "done": 37,
-    "total": 44,
+    "total": 51,
     "active": 0,
     "queued": 0,
-    "backlog": 7
+    "backlog": 14
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "minutes_since_session": 809,
+    "minutes_since_session": 824,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -97,6 +97,34 @@
       {
         "id": "INI-039",
         "name": "QMD Local Search Integration"
+      },
+      {
+        "id": "INI-046",
+        "name": "Dish n' BEATS \u2014 Business & Guide Document Ingestion"
+      },
+      {
+        "id": "INI-047",
+        "name": "Dyson Hope \u2014 Promotion & Content Strategy Ingestion"
+      },
+      {
+        "id": "INI-048",
+        "name": "Music Culture Observation Engine \u2014 Concept Ingestion & Initiative Definition"
+      },
+      {
+        "id": "INI-049",
+        "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion"
+      },
+      {
+        "id": "INI-050",
+        "name": "SIGIL.ZERO \u2014 Business Documentation Ingestion"
+      },
+      {
+        "id": "INI-051",
+        "name": "Temple of Unicorns \u2014 Brand & Style Guide Ingestion"
+      },
+      {
+        "id": "INI-052",
+        "name": "General Utility Prompts \u2014 Capability Integration"
       }
     ]
   }
