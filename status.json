@@ -1,37 +1,20 @@
 {
-  "generated_at": "2026-06-11T12:44:51Z",
+  "generated_at": "2026-06-11T12:46:15Z",
   "schema_version": "2",
   "stats": {
     "done": 37,
     "total": 44,
-    "active": 1,
-    "queued": 2,
-    "backlog": 4
+    "active": 0,
+    "queued": 0,
+    "backlog": 7
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "minutes_since_session": 764,
+    "minutes_since_session": 766,
     "airlock_queue": 0
   },
-  "active_initiative": {
-    "id": "INI-043",
-    "name": "Dish n' BEATS \u2014 Brand Design System",
-    "status": "active"
-  },
-  "queue": [
-    {
-      "id": "INI-041",
-      "name": "Dyson Hope \u2014 Brand Design System",
-      "status": "queued",
-      "position": 1
-    },
-    {
-      "id": "INI-042",
-      "name": "SIGIL.ZERO \u2014 Brand Design System",
-      "status": "queued",
-      "position": 2
-    }
-  ],
+  "active_initiative": null,
+  "queue": [],
   "ceo_actions": [],
   "directors": [
     {
@@ -88,6 +71,18 @@
       {
         "id": "INI-009",
         "name": "Venture Portfolio Activation"
+      },
+      {
+        "id": "INI-041",
+        "name": "Dyson Hope \u2014 Brand Design System"
+      },
+      {
+        "id": "INI-042",
+        "name": "SIGIL.ZERO \u2014 Brand Design System"
+      },
+      {
+        "id": "INI-043",
+        "name": "Dish n' BEATS \u2014 Brand Design System"
       }
     ],
     "digital_office": [
