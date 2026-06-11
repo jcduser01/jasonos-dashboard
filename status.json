@@ -1,39 +1,24 @@
 {
-  "generated_at": "2026-06-11T14:59:52Z",
+  "generated_at": "2026-06-11T15:14:52Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
-    "total": 51,
-    "active": 0,
-    "queued": 3,
-    "backlog": 10
+    "total": 52,
+    "active": 1,
+    "queued": 0,
+    "backlog": 13
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "minutes_since_session": 899,
+    "minutes_since_session": 914,
     "airlock_queue": 0
   },
-  "active_initiative": null,
-  "queue": [
-    {
-      "id": "INI-041",
-      "name": "Dyson Hope \u2014 Brand Design System",
-      "status": "queued",
-      "position": 1
-    },
-    {
-      "id": "INI-042",
-      "name": "SIGIL.ZERO \u2014 Brand Design System",
-      "status": "queued",
-      "position": 2
-    },
-    {
-      "id": "INI-043",
-      "name": "Dish n' BEATS \u2014 Brand Design System",
-      "status": "queued",
-      "position": 3
-    }
-  ],
+  "active_initiative": {
+    "id": "INI-051",
+    "name": "Temple of Unicorns \u2014 Brand & Style Guide Ingestion",
+    "status": "active"
+  },
+  "queue": [],
   "ceo_actions": [],
   "directors": [
     {
@@ -92,6 +77,18 @@
         "name": "Venture Portfolio Activation"
       },
       {
+        "id": "INI-041",
+        "name": "Dyson Hope \u2014 Brand Design System"
+      },
+      {
+        "id": "INI-042",
+        "name": "SIGIL.ZERO \u2014 Brand Design System"
+      },
+      {
+        "id": "INI-043",
+        "name": "Dish n' BEATS \u2014 Brand Design System"
+      },
+      {
         "id": "INI-046",
         "name": "Dish n' BEATS \u2014 Business & Guide Document Ingestion"
       },
@@ -112,8 +109,8 @@
         "name": "SIGIL.ZERO \u2014 Business Documentation Ingestion"
       },
       {
-        "id": "INI-051",
-        "name": "Temple of Unicorns \u2014 Brand & Style Guide Ingestion"
+        "id": "INI-053",
+        "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning"
       }
     ],
     "digital_office": [
