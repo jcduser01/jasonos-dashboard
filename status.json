@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T09:59:37Z",
+  "generated_at": "2026-06-11T10:14:37Z",
   "schema_version": "2",
   "stats": {
     "done": 37,
@@ -9,25 +9,25 @@
     "backlog": 4
   },
   "operational": {
-    "last_session_date": "2026-06-11T04:58:00Z",
-    "minutes_since_session": 301,
+    "last_session_date": "2026-06-11",
+    "minutes_since_session": 614,
     "airlock_queue": 0
   },
   "active_initiative": {
-    "id": "INI-042",
-    "name": "SIGIL.ZERO \u2014 Brand Design System",
+    "id": "INI-043",
+    "name": "Dish n' BEATS \u2014 Brand Design System",
     "status": "active"
   },
   "queue": [
     {
-      "id": "INI-043",
-      "name": "Dish n' BEATS \u2014 Brand Design System",
+      "id": "INI-041",
+      "name": "Dyson Hope \u2014 Brand Design System",
       "status": "queued",
       "position": 1
     },
     {
-      "id": "INI-041",
-      "name": "Dyson Hope \u2014 Brand Design System",
+      "id": "INI-042",
+      "name": "SIGIL.ZERO \u2014 Brand Design System",
       "status": "queued",
       "position": 2
     }
