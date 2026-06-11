@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-06-11T08:29:37Z",
-  "schema_version": "1",
+  "generated_at": "2026-06-11T08:44:37Z",
+  "schema_version": "2",
   "stats": {
     "done": 37,
     "total": 44,
     "active": 0,
-    "queued": 3
+    "queued": 3,
+    "backlog": 4
+  },
+  "operational": {
+    "last_session_date": "2026-06-11",
+    "days_since_session": 0,
+    "airlock_queue": 0
   },
   "active_initiative": null,
   "queue": [
@@ -28,7 +34,64 @@
       "position": 3
     }
   ],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Install launchd publisher",
+      "context": "INI-045 follow-on"
+    }
+  ],
+  "directors": [
+    {
+      "name": "engineering-director",
+      "display": "Engineering",
+      "last_active": "2026-06-10",
+      "invocations_30d": 6
+    },
+    {
+      "name": "operations-director",
+      "display": "Operations",
+      "last_active": "2026-06-06",
+      "invocations_30d": 1
+    },
+    {
+      "name": "knowledge",
+      "display": "Knowledge",
+      "last_active": null,
+      "invocations_30d": 0
+    },
+    {
+      "name": "security-steward",
+      "display": "Security",
+      "last_active": null,
+      "invocations_30d": 0
+    },
+    {
+      "name": "research",
+      "display": "Research",
+      "last_active": null,
+      "invocations_30d": 0
+    },
+    {
+      "name": "financial-analysis",
+      "display": "Financial Analysis",
+      "last_active": null,
+      "invocations_30d": 0
+    },
+    {
+      "name": "venture",
+      "display": "Venture",
+      "last_active": null,
+      "invocations_30d": 0
+    },
+    {
+      "name": "creative",
+      "display": "Creative",
+      "last_active": null,
+      "invocations_30d": 0
+    }
+  ],
   "backlog": {
     "client_work": [
       {

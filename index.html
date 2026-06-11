@@ -11,9 +11,9 @@
     --surface:     #1a1a1a;
     --surface-2:   #242424;
     --border:      #2e2e2e;
-    --text:        #e8e8e8;
-    --text-muted:  #6b6b6b;
-    --text-dim:    #444;
+    --text:        #f2f2f2;
+    --text-muted:  #a0a0a0;
+    --text-dim:    #6a6a6a;
     --accent:      #4a9eff;
     --warn:        #ff9f40;
     --danger:      #ff5f5f;
@@ -29,7 +29,7 @@
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.45;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
@@ -76,9 +76,7 @@
     appearance: none;
   }
 
-  #auth-input:focus {
-    border-color: var(--accent);
-  }
+  #auth-input:focus { border-color: var(--accent); }
 
   #auth-btn {
     background: var(--accent);
@@ -154,30 +152,19 @@
   }
 
   .panel-label {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-dim);
     margin-bottom: 10px;
   }
 
   /* ── CEO Actions ─────────────────────────────────────────────── */
-  #ceo-actions-panel {
-    border-color: var(--warn);
-  }
-
-  #ceo-actions-panel .panel-label {
-    color: var(--warn);
-  }
-
-  #ceo-actions-panel.empty {
-    border-color: var(--border);
-  }
-
-  #ceo-actions-panel.empty .panel-label {
-    color: var(--text-dim);
-  }
+  #ceo-actions-panel { border-color: var(--warn); }
+  #ceo-actions-panel .panel-label { color: var(--warn); }
+  #ceo-actions-panel.empty { border-color: var(--border); }
+  #ceo-actions-panel.empty .panel-label { color: var(--text-dim); }
 
   .action-card {
     background: var(--surface-2);
@@ -185,13 +172,10 @@
     border-radius: 6px;
     padding: 10px 12px;
     margin-bottom: 8px;
-    font-size: 0.875rem;
-    line-height: 1.4;
   }
-
   .action-card:last-child { margin-bottom: 0; }
 
-  .action-card .action-category {
+  .action-category {
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -200,9 +184,77 @@
     margin-bottom: 3px;
   }
 
+  .action-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .action-context {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+
   .no-actions {
     font-size: 0.85rem;
     color: var(--text-muted);
+  }
+
+  /* ── Ops strip ───────────────────────────────────────────────── */
+  #ops-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .ops-tile {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 6px;
+    text-align: center;
+  }
+
+  .ops-value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+    line-height: 1.2;
+  }
+  .ops-value.accent  { color: var(--accent); }
+  .ops-value.success { color: var(--success); }
+  .ops-value.warn    { color: var(--warn); }
+  .ops-value.muted   { color: var(--text-muted); }
+
+  .ops-label {
+    font-size: 0.63rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+
+  /* ── Progress bar ────────────────────────────────────────────── */
+  #progress-strip { padding: 0 2px; margin-top: -6px; }
+
+  .progress-track {
+    height: 3px;
+    background: var(--surface);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+    width: 0%;
   }
 
   /* ── Active Initiative ───────────────────────────────────────── */
@@ -231,20 +283,9 @@
     margin-top: 6px;
   }
 
-  .status-active {
-    background: rgba(74, 158, 255, 0.15);
-    color: var(--accent);
-  }
-
-  .status-next {
-    background: rgba(76, 175, 125, 0.15);
-    color: var(--success);
-  }
-
-  .status-none {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-  }
+  .status-active { background: rgba(74, 158, 255, 0.15); color: var(--accent); }
+  .status-next   { background: rgba(76, 175, 125, 0.15); color: var(--success); }
+  .status-none   { color: var(--text-muted); font-size: 0.85rem; }
 
   /* ── Queue ───────────────────────────────────────────────────── */
   .queue-item {
@@ -255,76 +296,58 @@
     border-bottom: 1px solid var(--border);
     font-size: 0.875rem;
   }
-
-  .queue-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .queue-item:last-child  { border-bottom: none; padding-bottom: 0; }
   .queue-item:first-child { padding-top: 0; }
 
-  .queue-pos {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--text-dim);
-    min-width: 18px;
+  .queue-pos  { font-size: 0.75rem; font-weight: 700; color: var(--text-dim); min-width: 18px; text-align: right; }
+  .queue-id   { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); min-width: 60px; }
+  .queue-name { color: var(--text); flex: 1; font-weight: 500; }
+  .queue-empty { font-size: 0.9rem; color: var(--text-muted); }
+
+  /* ── Director Activity ───────────────────────────────────────── */
+  .director-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .director-row:last-child  { border-bottom: none; padding-bottom: 0; }
+  .director-row:first-child { padding-top: 0; }
+
+  .director-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .director-dot.active  { background: var(--success); }
+  .director-dot.dormant { background: var(--text-dim); }
+
+  .director-name {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .director-name.dormant { color: var(--text-muted); }
+
+  .director-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    min-width: 60px;
     text-align: right;
   }
 
-  .queue-id {
+  .director-count {
     font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    min-width: 60px;
+    color: var(--text-dim);
+    min-width: 24px;
+    text-align: right;
   }
 
-  .queue-name {
-    color: var(--text);
-    flex: 1;
-  }
-
-  .queue-empty {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-  }
-
-  /* ── Stats bar ───────────────────────────────────────────────── */
-  #stats-panel {
-    background: transparent;
-    border-color: transparent;
-    padding: 0 2px;
-  }
-
-  .stats-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-  }
-
-  .stats-label {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-  }
-
-  .stats-count {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .progress-track {
-    height: 3px;
-    background: var(--surface);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-
-  .progress-fill {
-    height: 100%;
-    background: var(--accent);
-    border-radius: 2px;
-    transition: width 0.4s ease;
-    width: 0%;
-  }
-
-  /* ── Error / loading states ──────────────────────────────────── */
+  /* ── Error state ─────────────────────────────────────────────── */
   #load-error {
     display: none;
     background: rgba(255, 95, 95, 0.08);
@@ -344,26 +367,12 @@
     border-bottom: 1px solid var(--border);
     font-size: 0.825rem;
   }
-
-  .backlog-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .backlog-item:last-child  { border-bottom: none; padding-bottom: 0; }
   .backlog-item:first-child { padding-top: 0; }
 
-  .backlog-id {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--text-dim);
-    min-width: 60px;
-  }
-
-  .backlog-name {
-    color: var(--text-muted);
-    flex: 1;
-  }
-
-  .backlog-empty {
-    font-size: 0.825rem;
-    color: var(--text-dim);
-  }
+  .backlog-id   { font-size: 0.7rem; font-weight: 700; color: var(--text-dim); min-width: 60px; }
+  .backlog-name { color: var(--text-muted); flex: 1; }
+  .backlog-empty { font-size: 0.825rem; color: var(--text-dim); }
 
   /* ── Landscape tweaks ────────────────────────────────────────── */
   @media (orientation: landscape) {
@@ -374,14 +383,16 @@
       align-content: flex-start;
     }
 
-    #header        { width: 100%; }
-    #load-error    { width: 100%; }
-    #ceo-actions-panel { width: 100%; }
-    #active-panel  { flex: 1; min-width: 200px; }
-    #queue-panel   { flex: 1; min-width: 200px; }
+    #header                { width: 100%; }
+    #load-error            { width: 100%; }
+    #ceo-actions-panel     { width: 100%; }
+    #ops-strip             { width: 100%; }
+    #progress-strip        { width: 100%; }
+    #active-panel          { flex: 1; min-width: 200px; }
+    #queue-panel           { flex: 1; min-width: 200px; }
+    #directors-panel       { width: 100%; }
     #backlog-client-panel  { flex: 1; min-width: 200px; }
     #backlog-digital-panel { flex: 1; min-width: 200px; }
-    #stats-panel   { width: 100%; }
   }
 </style>
 </head>
@@ -420,6 +431,37 @@
     <div id="ceo-actions-body"></div>
   </div>
 
+  <!-- Ops Strip -->
+  <div id="ops-strip">
+    <div class="ops-tile">
+      <div class="ops-value" id="tile-session-val">—</div>
+      <div class="ops-label">Last Session</div>
+    </div>
+    <div class="ops-tile">
+      <div class="ops-value" id="tile-airlock-val">—</div>
+      <div class="ops-label">Airlock</div>
+    </div>
+    <div class="ops-tile">
+      <div class="ops-value" id="tile-active-val">—</div>
+      <div class="ops-label">Active</div>
+    </div>
+    <div class="ops-tile">
+      <div class="ops-value" id="tile-queued-val">—</div>
+      <div class="ops-label">Queued</div>
+    </div>
+    <div class="ops-tile">
+      <div class="ops-value" id="tile-portfolio-val">—</div>
+      <div class="ops-label">Complete</div>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div id="progress-strip">
+    <div class="progress-track">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+  </div>
+
   <!-- Active Initiative -->
   <div id="active-panel" class="panel">
     <div class="panel-label">Active</div>
@@ -432,27 +474,22 @@
     <div id="queue-body"></div>
   </div>
 
+  <!-- Director Activity -->
+  <div id="directors-panel" class="panel">
+    <div class="panel-label">Director Activity</div>
+    <div id="directors-body"></div>
+  </div>
+
   <!-- Backlog: Client Work -->
   <div id="backlog-client-panel" class="panel">
     <div class="panel-label">Client Work Backlog</div>
     <div id="backlog-client-body"></div>
   </div>
 
-  <!-- Backlog: Digital Office Infrastructure -->
+  <!-- Backlog: Digital Office -->
   <div id="backlog-digital-panel" class="panel">
     <div class="panel-label">Digital Office Backlog</div>
     <div id="backlog-digital-body"></div>
-  </div>
-
-  <!-- Stats -->
-  <div id="stats-panel" class="panel">
-    <div class="stats-row">
-      <span class="stats-label">Portfolio</span>
-      <span id="stats-count" class="stats-count">—</span>
-    </div>
-    <div class="progress-track">
-      <div id="progress-fill" class="progress-fill"></div>
-    </div>
   </div>
 
 </div>
@@ -462,15 +499,10 @@
   "use strict";
 
   /* ── Config ──────────────────────────────────────────────────── */
-  // SHA-256 hex of the access password.
-  // To regenerate: open browser console and run:
-  //   crypto.subtle.digest("SHA-256", new TextEncoder().encode("yourpassword"))
-  //     .then(function(b){console.log(Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join(""))})
   var PASSWORD_HASH = "9ceac6324484d9a021adce9f1d6ed97b1dbdb0a68bb45b856edb9cdaf587fa2e";
-
   var STATUS_URL    = "status.json";
-  var REFRESH_MS    = 15 * 60 * 1000; // 15 minutes
-  var STALE_MS      = 2  * 60 * 60 * 1000; // 2 hours
+  var REFRESH_MS    = 15 * 60 * 1000;
+  var STALE_MS      = 2  * 60 * 60 * 1000;
 
   /* ── Auth ────────────────────────────────────────────────────── */
   var authOverlay = document.getElementById("auth-overlay");
@@ -494,10 +526,7 @@
   }
 
   function checkSession() {
-    if (sessionStorage.getItem("jasonos_auth") === "1") {
-      unlock();
-      return true;
-    }
+    if (sessionStorage.getItem("jasonos_auth") === "1") { unlock(); return true; }
     return false;
   }
 
@@ -505,19 +534,14 @@
     e.preventDefault();
     var pw = authInput.value;
     if (!pw) return;
-
     authError.textContent = "";
-
     if (!window.crypto || !window.crypto.subtle) {
-      // Fallback: no SubtleCrypto (non-HTTPS or very old WebKit)
       authError.textContent = "Authentication requires HTTPS.";
       return;
     }
-
     var encoded = new TextEncoder().encode(pw);
     window.crypto.subtle.digest("SHA-256", encoded).then(function (buf) {
-      var hex = hexFromBuffer(buf);
-      if (hex === PASSWORD_HASH) {
+      if (hexFromBuffer(buf) === PASSWORD_HASH) {
         unlock();
       } else {
         authError.textContent = "Incorrect access code.";
@@ -538,90 +562,154 @@
     try {
       var d = new Date(iso);
       return d.toLocaleDateString(undefined, { month: "short", day: "numeric" })
-             + " · "
+             + " \xb7 "
              + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
-    } catch (e) {
-      return iso;
-    }
+    } catch (e) { return iso; }
   }
 
   function checkStaleness(generatedAt) {
     try {
       var age = Date.now() - new Date(generatedAt).getTime();
-      if (age > STALE_MS) {
-        stalenessBadge.style.display = "inline-block";
-      } else {
-        stalenessBadge.style.display = "none";
-      }
-    } catch (e) {
-      stalenessBadge.style.display = "none";
-    }
+      stalenessBadge.style.display = age > STALE_MS ? "inline-block" : "none";
+    } catch (e) { stalenessBadge.style.display = "none"; }
   }
+
+  /* ── Renderers ───────────────────────────────────────────────── */
 
   function renderCeoActions(actions) {
     var panel = document.getElementById("ceo-actions-panel");
     var body  = document.getElementById("ceo-actions-body");
-
     if (!actions || actions.length === 0) {
       panel.classList.add("empty");
       body.innerHTML = '<span class="no-actions">No action required</span>';
       return;
     }
-
     panel.classList.remove("empty");
     var html = "";
     for (var i = 0; i < actions.length; i++) {
       var a = actions[i];
-      html += '<div class="action-card">'
-            + '<div class="action-category">' + escHtml(a.category || "action") + '</div>'
-            + '<div>' + escHtml(a.label || "") + '</div>'
+      html += '<div class="action-card">';
+      if (a.category) {
+        html += '<div class="action-category">' + escHtml(a.category) + '</div>';
+      }
+      html += '<div class="action-label">' + escHtml(a.label || "") + '</div>';
+      if (a.context) {
+        html += '<div class="action-context">' + escHtml(a.context) + '</div>';
+      }
+      html += '</div>';
+    }
+    body.innerHTML = html;
+  }
+
+  function renderOpsStrip(stats, operational) {
+    var op = operational || {};
+    var s  = stats || {};
+
+    // Last session
+    var sessionEl = document.getElementById("tile-session-val");
+    var days      = (op.days_since_session !== null && op.days_since_session !== undefined)
+                    ? op.days_since_session : null;
+    if (days === null) {
+      sessionEl.textContent = "—";
+      sessionEl.className   = "ops-value muted";
+    } else if (days === 0) {
+      sessionEl.textContent = "Today";
+      sessionEl.className   = "ops-value success";
+    } else {
+      sessionEl.textContent = days + "d";
+      sessionEl.className   = "ops-value" + (days > 7 ? " warn" : "");
+    }
+
+    // Airlock
+    var airlockEl = document.getElementById("tile-airlock-val");
+    var airlock   = op.airlock_queue || 0;
+    airlockEl.textContent = airlock;
+    airlockEl.className   = "ops-value" + (airlock > 0 ? " warn" : " muted");
+
+    // Active
+    var activeEl = document.getElementById("tile-active-val");
+    activeEl.textContent = (s.active != null) ? s.active : "—";
+    activeEl.className   = (s.active > 0) ? "ops-value accent" : "ops-value muted";
+
+    // Queued
+    document.getElementById("tile-queued-val").textContent =
+      (s.queued != null) ? s.queued : "—";
+
+    // Complete + progress
+    var done  = s.done  || 0;
+    var total = s.total || 0;
+    var pct   = total > 0 ? Math.round(done / total * 100) : 0;
+    document.getElementById("tile-portfolio-val").textContent =
+      total > 0 ? done + "/" + total : "—";
+    document.getElementById("progress-fill").style.width = pct + "%";
+  }
+
+  function renderActive(initiative, queue) {
+    var body = document.getElementById("active-body");
+    if (initiative) {
+      body.innerHTML = '<div class="initiative-id">'   + escHtml(initiative.id)   + '</div>'
+                     + '<div class="initiative-name">' + escHtml(initiative.name) + '</div>'
+                     + '<span class="initiative-status status-active">In Progress</span>';
+      return;
+    }
+    if (queue && queue.length > 0) {
+      var next = queue[0];
+      body.innerHTML = '<div class="initiative-id">'   + escHtml(next.id)   + '</div>'
+                     + '<div class="initiative-name">' + escHtml(next.name) + '</div>'
+                     + '<span class="initiative-status status-next">Up Next</span>';
+      return;
+    }
+    body.innerHTML = '<span class="status-none">No active initiative</span>';
+  }
+
+  function renderQueue(queue, activeInitiative) {
+    var body    = document.getElementById("queue-body");
+    var items   = queue || [];
+    var offset  = (!activeInitiative && items.length > 0) ? 1 : 0;
+    var display = items.slice(offset);
+    if (display.length === 0) {
+      body.innerHTML = '<span class="queue-empty">Queue is empty</span>';
+      return;
+    }
+    var html = "";
+    for (var i = 0; i < display.length; i++) {
+      var item = display[i];
+      html += '<div class="queue-item">'
+            + '<span class="queue-pos">'  + escHtml(String(item.position)) + '</span>'
+            + '<span class="queue-id">'   + escHtml(item.id)               + '</span>'
+            + '<span class="queue-name">' + escHtml(item.name)             + '</span>'
             + '</div>';
     }
     body.innerHTML = html;
   }
 
-  function renderActive(initiative, queue) {
-    var body = document.getElementById("active-body");
-
-    if (initiative) {
-      body.innerHTML = '<div class="initiative-id">' + escHtml(initiative.id) + '</div>'
-                     + '<div class="initiative-name">' + escHtml(initiative.name) + '</div>'
-                     + '<span class="initiative-status status-active">In Progress</span>';
+  function renderDirectors(directors) {
+    var body = document.getElementById("directors-body");
+    if (!directors || directors.length === 0) {
+      body.innerHTML = '<span class="queue-empty">No director data</span>';
       return;
     }
-
-    // Nothing active — show next queued item as preview
-    if (queue && queue.length > 0) {
-      var next = queue[0];
-      body.innerHTML = '<div class="initiative-id">' + escHtml(next.id) + '</div>'
-                     + '<div class="initiative-name">' + escHtml(next.name) + '</div>'
-                     + '<span class="initiative-status status-next">Up Next</span>';
-      return;
+    var now = new Date();
+    function fmtDate(dateStr) {
+      if (!dateStr) return "—";
+      try {
+        var d   = new Date(dateStr + "T00:00:00Z");
+        var age = Math.floor((now - d) / 86400000);
+        if (age === 0) return "Today";
+        if (age === 1) return "Yesterday";
+        return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+      } catch (e) { return dateStr; }
     }
-
-    body.innerHTML = '<span class="status-none">No active initiative</span>';
-  }
-
-  function renderQueue(queue, activeInitiative) {
-    var body  = document.getElementById("queue-body");
-
-    // Filter out the first item if it's being shown in active panel (no active)
-    var items = queue || [];
-    var offset = (!activeInitiative && items.length > 0) ? 1 : 0;
-    var display = items.slice(offset);
-
-    if (display.length === 0) {
-      body.innerHTML = '<span class="queue-empty">Queue is empty</span>';
-      return;
-    }
-
     var html = "";
-    for (var i = 0; i < display.length; i++) {
-      var item = display[i];
-      html += '<div class="queue-item">'
-            + '<span class="queue-pos">' + escHtml(String(item.position)) + '</span>'
-            + '<span class="queue-id">'  + escHtml(item.id) + '</span>'
-            + '<span class="queue-name">' + escHtml(item.name) + '</span>'
+    for (var i = 0; i < directors.length; i++) {
+      var d     = directors[i];
+      var isActive = d.last_active != null;
+      var count = d.invocations_30d || 0;
+      html += '<div class="director-row">'
+            + '<span class="director-dot ' + (isActive ? "active" : "dormant") + '"></span>'
+            + '<span class="director-name' + (isActive ? "" : " dormant")      + '">' + escHtml(d.display) + '</span>'
+            + '<span class="director-date">' + fmtDate(d.last_active)          + '</span>'
+            + '<span class="director-count">' + (count > 0 ? count + "\xd7" : "") + '</span>'
             + '</div>';
     }
     body.innerHTML = html;
@@ -637,55 +725,42 @@
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
       html += '<div class="backlog-item">'
-            + '<span class="backlog-id">' + escHtml(item.id) + '</span>'
+            + '<span class="backlog-id">'   + escHtml(item.id)   + '</span>'
             + '<span class="backlog-name">' + escHtml(item.name) + '</span>'
             + '</div>';
     }
     body.innerHTML = html;
   }
 
-  function renderStats(stats) {
-    var done  = (stats && stats.done)  || 0;
-    var total = (stats && stats.total) || 0;
-    var pct   = total > 0 ? Math.round(done / total * 100) : 0;
-
-    document.getElementById("stats-count").textContent = done + " / " + total;
-    document.getElementById("progress-fill").style.width = pct + "%";
-  }
-
+  /* ── Master render ───────────────────────────────────────────── */
   function render(data) {
     loadErrorEl.style.display = "none";
     lastUpdatedEl.textContent = data.generated_at
-      ? formatTimestamp(data.generated_at)
-      : "Unknown";
-
+      ? formatTimestamp(data.generated_at) : "Unknown";
     checkStaleness(data.generated_at);
     renderCeoActions(data.ceo_actions);
+    renderOpsStrip(data.stats, data.operational);
     renderActive(data.active_initiative, data.queue);
     renderQueue(data.queue, data.active_initiative);
+    renderDirectors(data.directors);
     var backlog = data.backlog || {};
     renderBacklog(backlog.client_work,    "backlog-client-body");
     renderBacklog(backlog.digital_office, "backlog-digital-body");
-    renderStats(data.stats);
   }
 
+  /* ── Fetch & schedule ────────────────────────────────────────── */
   function loadStatus() {
-    var url = STATUS_URL + "?t=" + Date.now();
-    fetch(url).then(function (res) {
-      if (!res.ok) { throw new Error("HTTP " + res.status); }
-      return res.json();
-    }).then(function (data) {
-      render(data);
-    }).catch(function () {
-      loadErrorEl.style.display = "block";
-    });
+    fetch(STATUS_URL + "?t=" + Date.now())
+      .then(function (res) {
+        if (!res.ok) { throw new Error("HTTP " + res.status); }
+        return res.json();
+      })
+      .then(function (data) { render(data); })
+      .catch(function () { loadErrorEl.style.display = "block"; });
   }
 
   function scheduleRefresh() {
-    setInterval(function () {
-      loadStatus();
-      checkStaleness(document.getElementById("last-updated").dataset.iso || "");
-    }, REFRESH_MS);
+    setInterval(loadStatus, REFRESH_MS);
   }
 
   /* ── Utility ─────────────────────────────────────────────────── */
@@ -698,9 +773,7 @@
   }
 
   /* ── Init ────────────────────────────────────────────────────── */
-  if (!checkSession()) {
-    authInput.focus();
-  }
+  if (!checkSession()) { authInput.focus(); }
 
 }());
 </script>
