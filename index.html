@@ -361,7 +361,7 @@
   /* ── Backlog panels ──────────────────────────────────────────── */
   .backlog-item {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 10px;
     padding: 5px 0;
     border-bottom: 1px solid var(--border);
@@ -370,9 +370,11 @@
   .backlog-item:last-child  { border-bottom: none; padding-bottom: 0; }
   .backlog-item:first-child { padding-top: 0; }
 
-  .backlog-id   { font-size: 0.75rem; font-weight: 700; color: var(--text-dim); min-width: 60px; }
-  .backlog-name { color: var(--text-muted); flex: 1; font-size: 0.875rem; }
-  .backlog-empty { font-size: 0.875rem; color: var(--text-dim); }
+  .backlog-id        { font-size: 0.75rem; font-weight: 700; color: var(--text-dim); min-width: 60px; padding-top: 1px; }
+  .backlog-name-wrap { flex: 1; }
+  .backlog-name      { color: var(--text-muted); font-size: 0.875rem; display: block; }
+  .backlog-note      { color: var(--text-dim); font-size: 0.75rem; margin-top: 2px; display: block; }
+  .backlog-empty     { font-size: 0.875rem; color: var(--text-dim); }
 
   /* ── Landscape tweaks ────────────────────────────────────────── */
   @media (orientation: landscape) {
@@ -714,9 +716,15 @@
     var html = "";
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
+      var nameWrap = '<div class="backlog-name-wrap">'
+                   + '<span class="backlog-name">' + escHtml(item.name) + '</span>';
+      if (item.notes) {
+        nameWrap += '<span class="backlog-note">' + escHtml(item.notes) + '</span>';
+      }
+      nameWrap += '</div>';
       html += '<div class="backlog-item">'
-            + '<span class="backlog-id">'   + escHtml(item.id)   + '</span>'
-            + '<span class="backlog-name">' + escHtml(item.name) + '</span>'
+            + '<span class="backlog-id">' + escHtml(item.id) + '</span>'
+            + nameWrap
             + '</div>';
     }
     body.innerHTML = html;
