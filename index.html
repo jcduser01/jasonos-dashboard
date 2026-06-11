@@ -419,11 +419,10 @@
 
   /* ── Config ──────────────────────────────────────────────────── */
   // SHA-256 hex of the access password.
-  // Default: hash of "jasonos" — REPLACE before launch.
-  // To generate: open browser console and run:
+  // To regenerate: open browser console and run:
   //   crypto.subtle.digest("SHA-256", new TextEncoder().encode("yourpassword"))
   //     .then(function(b){console.log(Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join(""))})
-  var PASSWORD_HASH = "6b62d7d9f5cb3b7c8cd66b4843e0f5b3d2b3c9d0e7a5b1f2c4d6e8f0a2b4c6d8";
+  var PASSWORD_HASH = "9ceac6324484d9a021adce9f1d6ed97b1dbdb0a68bb45b856edb9cdaf587fa2e";
 
   var STATUS_URL    = "status.json";
   var REFRESH_MS    = 15 * 60 * 1000; // 15 minutes
