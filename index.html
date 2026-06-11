@@ -739,8 +739,12 @@
   }
 
   /* ── Fetch & schedule ────────────────────────────────────────── */
+  var lastLoadTime = 0;
+  var MIN_REVISIT_MS = 5 * 60 * 1000; // skip re-fetch if loaded within 5 min
+
   function loadStatus() {
-    fetch(STATUS_URL + "?t=" + Date.now())
+    lastLoadTime = Date.now();
+    fetch(STATUS_URL + "?t=" + lastLoadTime)
       .then(function (res) {
         if (!res.ok) { throw new Error("HTTP " + res.status); }
         return res.json();
@@ -750,7 +754,24 @@
   }
 
   function scheduleRefresh() {
+    // Periodic timer (fires when tab stays visible)
     setInterval(loadStatus, REFRESH_MS);
+
+    // Visibility-based refresh — handles iOS Safari backgrounding/throttling.
+    // Fires when the user returns to the tab after it was hidden.
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible" &&
+          Date.now() - lastLoadTime >= MIN_REVISIT_MS) {
+        loadStatus();
+      }
+    });
+
+    // bfcache restore — fires when Safari restores a frozen page snapshot.
+    window.addEventListener("pageshow", function (e) {
+      if (e.persisted && Date.now() - lastLoadTime >= MIN_REVISIT_MS) {
+        loadStatus();
+      }
+    });
   }
 
   /* ── Utility ─────────────────────────────────────────────────── */
