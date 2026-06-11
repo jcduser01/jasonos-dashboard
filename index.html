@@ -443,7 +443,7 @@
     </div>
     <div class="ops-tile">
       <div class="ops-value" id="tile-active-val">—</div>
-      <div class="ops-label">Active</div>
+      <div class="ops-label">Current</div>
     </div>
     <div class="ops-tile">
       <div class="ops-value" id="tile-queued-val">—</div>
@@ -462,15 +462,15 @@
     </div>
   </div>
 
-  <!-- Active Initiative -->
+  <!-- Current Initiative -->
   <div id="active-panel" class="panel">
-    <div class="panel-label">Active</div>
+    <div class="panel-label">Current</div>
     <div id="active-body"></div>
   </div>
 
-  <!-- Queue -->
+  <!-- Next Queue -->
   <div id="queue-panel" class="panel">
-    <div class="panel-label">Queue</div>
+    <div class="panel-label">Next</div>
     <div id="queue-body"></div>
   </div>
 
@@ -654,7 +654,7 @@
     document.getElementById("progress-fill").style.width = pct + "%";
   }
 
-  function renderActive(initiative, queue) {
+  function renderActive(initiative) {
     var body = document.getElementById("active-body");
     if (initiative) {
       body.innerHTML = '<div class="initiative-id">'   + escHtml(initiative.id)   + '</div>'
@@ -662,21 +662,12 @@
                      + '<span class="initiative-status status-active">In Progress</span>';
       return;
     }
-    if (queue && queue.length > 0) {
-      var next = queue[0];
-      body.innerHTML = '<div class="initiative-id">'   + escHtml(next.id)   + '</div>'
-                     + '<div class="initiative-name">' + escHtml(next.name) + '</div>'
-                     + '<span class="initiative-status status-next">Up Next</span>';
-      return;
-    }
-    body.innerHTML = '<span class="status-none">No active initiative</span>';
+    body.innerHTML = '<span class="status-none">None.</span>';
   }
 
-  function renderQueue(queue, activeInitiative) {
+  function renderQueue(queue) {
     var body    = document.getElementById("queue-body");
-    var items   = queue || [];
-    var offset  = (!activeInitiative && items.length > 0) ? 1 : 0;
-    var display = items.slice(offset);
+    var display = queue || [];
     if (display.length === 0) {
       body.innerHTML = '<span class="queue-empty">Queue is empty</span>';
       return;
@@ -739,8 +730,8 @@
     checkStaleness(data.generated_at);
     renderCeoActions(data.ceo_actions);
     renderOpsStrip(data.stats, data.operational);
-    renderActive(data.active_initiative, data.queue);
-    renderQueue(data.queue, data.active_initiative);
+    renderActive(data.active_initiative);
+    renderQueue(data.queue);
     renderDirectors(data.directors);
     var backlog = data.backlog || {};
     renderBacklog(backlog.client_work,    "backlog-client-body");
