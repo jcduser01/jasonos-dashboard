@@ -1,17 +1,13 @@
 {
-  "generated_at": "2026-06-11T07:46:54Z",
+  "generated_at": "2026-06-11T08:09:08Z",
   "schema_version": "1",
   "stats": {
-    "done": 36,
+    "done": 37,
     "total": 44,
-    "active": 1,
+    "active": 0,
     "queued": 3
   },
-  "active_initiative": {
-    "id": "INI-045",
-    "name": "Digital Office Status Dashboard",
-    "status": "active"
-  },
+  "active_initiative": null,
   "queue": [
     {
       "id": "INI-042",
