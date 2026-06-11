@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T08:44:54Z",
+  "generated_at": "2026-06-11T08:58:20Z",
   "schema_version": "2",
   "stats": {
     "done": 37,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "days_since_session": 0,
+    "minutes_since_session": 538,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -34,25 +34,18 @@
       "position": 3
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Install launchd publisher",
-      "context": "INI-045 follow-on"
-    }
-  ],
+  "ceo_actions": [],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-10",
+      "last_active": "2026-06-10T18:48:20Z",
       "invocations_30d": 6
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-06-06",
+      "last_active": "2026-06-06T11:41:54Z",
       "invocations_30d": 1
     },
     {
