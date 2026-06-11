@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-11T14:44:52Z",
+  "generated_at": "2026-06-11T14:59:52Z",
   "schema_version": "2",
   "stats": {
-    "done": 37,
+    "done": 38,
     "total": 51,
     "active": 0,
     "queued": 3,
-    "backlog": 11
+    "backlog": 10
   },
   "operational": {
     "last_session_date": "2026-06-11",
-    "minutes_since_session": 884,
+    "minutes_since_session": 899,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -39,8 +39,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-10T18:48:20Z",
-      "invocations_30d": 6
+      "last_active": "2026-06-11T09:57:03Z",
+      "invocations_30d": 8
     },
     {
       "name": "operations-director",
@@ -128,10 +128,6 @@
       {
         "id": "INI-039",
         "name": "QMD Local Search Integration"
-      },
-      {
-        "id": "INI-052",
-        "name": "General Utility Prompts \u2014 Capability Integration"
       }
     ]
   }
