@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T17:26:48Z",
+  "generated_at": "2026-06-12T17:39:15Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -9,8 +9,8 @@
     "backlog": 18
   },
   "operational": {
-    "last_session_date": "2026-06-12T16:57:03Z",
-    "minutes_since_session": 29,
+    "last_session_date": "2026-06-12T17:35:57Z",
+    "minutes_since_session": 3,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -37,26 +37,20 @@
     {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "Review GAP-008 + PCR-KNOW-001 (CEO-authorized; drafted this session).",
-      "context": "CEO authorized registering the gap and drafting the PCR. Now filed: GAP-008 in `governance/policy-gap-register.md`; PCR-"
+      "label": "Review GAP-009 + PCR-KNOW-002 (drafted this session; pending CEO).",
+      "context": "Write-side complement to GAP-008. GAP-009 in `governance/policy-gap-register.md`; PCR-KNOW-002 in `governance/pcrs/open/"
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "KD ingest queued (CEO-authorized).",
-      "context": "`workloads/active/kd-ingest-human-amplification-memo.md` scopes the compiled-wiki pass that decomposes the memo into a s"
+      "label": "Dispatch KD ingest.",
+      "context": "`workloads/active/kd-ingest-human-amplification-memo.md` is queued. It decomposes the memo into a source summary + doctr"
     },
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "Source-folder clearing \u2014 DONE.",
-      "context": "CEO deleted `Airlock/JasonOS Philosophical Memo/` on 2026-06-12. Airlock transfer fully closed; artifact preserved in KB"
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Commit gate \u2014 HELD.",
-      "context": "Awaiting CEO direction to trigger the relay. Change set this session:"
+      "label": "Dashboard airlock file-count bug (open \u2014 Engineering).",
+      "context": "The status dashboard misreports the airlock file count \u2014 a repeat observation (noted in the prior session, reconfirmed t"
     }
   ],
   "directors": [
