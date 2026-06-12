@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T22:22:23Z",
+  "generated_at": "2026-06-12T22:36:32Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -9,8 +9,8 @@
     "backlog": 18
   },
   "operational": {
-    "last_session_date": "2026-06-12T13:30:00Z",
-    "minutes_since_session": 532,
+    "last_session_date": "2026-06-12T22:33:40Z",
+    "minutes_since_session": 2,
     "airlock_queue": 33,
     "airlock_bundles": 9
   },
@@ -20,26 +20,38 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Director sub-session permission gap (NEW \u2014 top priority; infra).",
-      "context": "Dispatched directors on the Mac mini do not inherit this project's full `/Volumes/SandboxData` access. KD run 1 could re"
+      "label": "KD ingest \u2014 re-dispatch (GAP-008). NOW UNBLOCKED.",
+      "context": "The permission half is solved: the Knowledge Director's jail (`/Volumes/SandboxData/.access/knowledge/`) grants `knowled"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "KD ingest \u2014 re-dispatch with extended timeout (GAP-008).",
-      "context": "Re-run reached the **600s timeout (SIGKILL), no pages written.** The grant appears to have worked (it ran the full durat"
+      "label": "Dashboard airlock-count fix \u2014 re-dispatch Engineering. NOW UNBLOCKED.",
+      "context": "Engineering's jail grants `bin/**` write, so the write-block that stopped it is gone. Root cause + fix already specified"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Dashboard airlock-count fix \u2014 apply it.",
-      "context": "Engineering confirmed root cause (`count_airlock()` non-recursive `iterdir()`; 8 bundles / 34 files) and specified the f"
+      "label": "Glance at the manifest diff (CEO-edit-only file).",
+      "context": "The access manifest is CEO-edit-only; the President edited it this session implementing your directed designs (removing "
     },
     {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "Minor \u2014 pcrs README drift.",
-      "context": "`governance/pcrs/README.md` still says `open/`/`addressed/`; actual dirs are `open/`/`closed/`/`rejected/`. Reconcile in"
+      "label": "Open manifest boundary calls (low priority).",
+      "context": "Tune manifest CONTENT, not the mechanism (amend + recompile): Creative-vs-Engineering on client-site repos, venture arti"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Minor \u2014 pcrs README drift (carried).",
+      "context": "`governance/pcrs/README.md` still says `open/`/`addressed/`; actual dirs are `open/`/`closed/`/`rejected/`."
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "Backup gap (carried, low priority).",
+      "context": "The git-relay and agent-dispatcher scripts + `bin/jasonos-access-compiler.py` are volume-only (Tier 2 \u2014 not in the repo)"
     }
   ],
   "directors": [
