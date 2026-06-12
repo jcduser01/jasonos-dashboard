@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T18:31:22Z",
+  "generated_at": "2026-06-12T18:41:49Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-12T13:30:00Z",
-    "minutes_since_session": 301,
+    "minutes_since_session": 311,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -36,12 +36,6 @@
     },
     {
       "id": "ACT-HO-4",
-      "category": "required",
-      "label": "Item C \u2014 relocate the portfolio to the KB?",
-      "context": "PA recommendation: **no \u2014 keep it in the governance repo as governance documentation.** The portfolio is operational tra"
-    },
-    {
-      "id": "ACT-HO-5",
       "category": "required",
       "label": "Minor \u2014 pcrs README drift.",
       "context": "`governance/pcrs/README.md` still says `open/`/`addressed/`; actual dirs are `open/`/`closed/`/`rejected/`. Reconcile in"
