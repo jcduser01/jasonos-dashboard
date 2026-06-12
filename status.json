@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T18:26:49Z",
+  "generated_at": "2026-06-12T18:31:22Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -9,8 +9,8 @@
     "backlog": 18
   },
   "operational": {
-    "last_session_date": "2026-06-12T17:35:57Z",
-    "minutes_since_session": 50,
+    "last_session_date": "2026-06-12T13:30:00Z",
+    "minutes_since_session": 301,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -19,38 +19,32 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Governance codification decision (revised \u2014 see refined recommendations below).",
-      "context": "The earlier pass proposed three governance changes. The Opus re-run reduces this to a single decision with a clear lead "
+      "label": "Director sub-session permission gap (NEW \u2014 top priority; infra).",
+      "context": "Dispatched directors on the Mac mini do not inherit this project's full `/Volumes/SandboxData` access. KD run 1 could re"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Brand-agnostic architecture \u2014 do NOT codify as a standing design standard yet.",
-      "context": "The memo itself says to treat early implementations as pilots, not permanent architectures. Recommendation: capture \"bra"
+      "label": "KD ingest \u2014 re-dispatch with extended timeout (GAP-008).",
+      "context": "Re-run reached the **600s timeout (SIGKILL), no pages written.** The grant appears to have worked (it ran the full durat"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Optional new parent initiative.",
-      "context": "Consider creating \"Human Amplification Capability \u2014 Architecture & Pilot\" as a parent tracking INI-057 as the first inst"
+      "label": "Dashboard airlock-count fix \u2014 apply it.",
+      "context": "Engineering confirmed root cause (`count_airlock()` non-recursive `iterdir()`; 8 bundles / 34 files) and specified the f"
     },
     {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "Review GAP-009 + PCR-KNOW-002 (drafted this session; pending CEO).",
-      "context": "Write-side complement to GAP-008. GAP-009 in `governance/policy-gap-register.md`; PCR-KNOW-002 in `governance/pcrs/open/"
+      "label": "Item C \u2014 relocate the portfolio to the KB?",
+      "context": "PA recommendation: **no \u2014 keep it in the governance repo as governance documentation.** The portfolio is operational tra"
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Dispatch KD ingest.",
-      "context": "`workloads/active/kd-ingest-human-amplification-memo.md` is queued. It decomposes the memo into a source summary + doctr"
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
-      "label": "Dashboard airlock file-count bug (open \u2014 Engineering).",
-      "context": "The status dashboard misreports the airlock file count \u2014 a repeat observation (noted in the prior session, reconfirmed t"
+      "label": "Minor \u2014 pcrs README drift.",
+      "context": "`governance/pcrs/README.md` still says `open/`/`addressed/`; actual dirs are `open/`/`closed/`/`rejected/`. Reconcile in"
     }
   ],
   "directors": [
