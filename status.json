@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T23:07:23Z",
+  "generated_at": "2026-06-12T23:22:23Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -9,8 +9,8 @@
     "backlog": 18
   },
   "operational": {
-    "last_session_date": "2026-06-12T22:33:40Z",
-    "minutes_since_session": 33,
+    "last_session_date": "2026-06-12T23:18:36Z",
+    "minutes_since_session": 3,
     "airlock_queue": 33,
     "airlock_bundles": 9
   },
@@ -20,46 +20,46 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "KD ingest \u2014 re-dispatch (GAP-008). NOW UNBLOCKED.",
-      "context": "The permission half is solved: the Knowledge Director's jail (`/Volumes/SandboxData/.access/knowledge/`) grants `knowled"
+      "label": "INI-009 activation decision (ESCALATED \u2014 top of queue).",
+      "context": "The Venture Director Investment Philosophy Framework is ingested. It materially advances INI-009 but does NOT fully unbl"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Dashboard airlock-count fix \u2014 re-dispatch Engineering. NOW UNBLOCKED.",
-      "context": "Engineering's jail grants `bin/**` write, so the write-block that stopped it is gone. Root cause + fix already specified"
+      "label": "KD ingest \u2014 re-dispatch (GAP-008). NOW UNBLOCKED.",
+      "context": "The permission half is solved: the Knowledge Director's jail (/Volumes/SandboxData/.access/knowledge/) grants knowledge/"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
+      "label": "Dashboard airlock-count fix \u2014 re-dispatch Engineering. NOW UNBLOCKED.",
+      "context": "Engineering's jail grants bin/** write, so the write-block that stopped it is gone. Root cause + fix already specified b"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "confirm",
       "label": "Glance at the manifest diff (CEO-edit-only file).",
       "context": "The access manifest is CEO-edit-only; the President edited it this session implementing your directed designs (removing "
     },
     {
-      "id": "ACT-HO-4",
-      "category": "required",
+      "id": "ACT-HO-5",
+      "category": "low",
       "label": "Open manifest boundary calls (low priority).",
       "context": "Tune manifest CONTENT, not the mechanism (amend + recompile): Creative-vs-Engineering on client-site repos, venture arti"
     },
     {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "Minor \u2014 pcrs README drift (carried).",
-      "context": "`governance/pcrs/README.md` still says `open/`/`addressed/`; actual dirs are `open/`/`closed/`/`rejected/`."
-    },
-    {
       "id": "ACT-HO-6",
-      "category": "required",
-      "label": "~~Backup gap (carried, low priority).~~ RESOLVED 2026-06-12 (commit `b5cb83ff`, pushed upstream + fork). All runtime scr",
-      "context": ""
+      "category": "low",
+      "label": "Minor \u2014 pcrs README drift (carried).",
+      "context": "governance/pcrs/README.md still says open//addressed/; actual dirs are open//closed//rejected/."
     }
   ],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-12T15:57:33Z",
-      "invocations_30d": 15
+      "last_active": "2026-06-12T18:11:33Z",
+      "invocations_30d": 16
     },
     {
       "name": "operations-director",

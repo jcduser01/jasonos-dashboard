@@ -175,13 +175,43 @@
   }
   .action-card:last-child { margin-bottom: 0; }
 
+  /* Low-priority cards: muted border, slightly reduced opacity */
+  .action-card.priority-low  { border-left-color: var(--border); opacity: 0.8; }
+  /* Confirm/info cards: accent-blue border */
+  .action-card.priority-confirm { border-left-color: var(--accent); }
+
+  /* ── Action category badges ──────────────────────────────────── */
+  /* Base badge style (shared) */
   .action-category {
-    font-size: 0.68rem;
+    display: inline-block;
+    font-size: 0.63rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+  /* required — orange/warn; high-contrast background */
+  .badge-required {
+    background: rgba(255, 159, 64, 0.15);
     color: var(--warn);
-    margin-bottom: 3px;
+  }
+  /* low — dim; visually receded */
+  .badge-low {
+    background: rgba(106, 106, 106, 0.15);
+    color: var(--text-dim);
+  }
+  /* confirm / info — accent blue */
+  .badge-confirm,
+  .badge-info {
+    background: rgba(74, 158, 255, 0.12);
+    color: var(--accent);
+  }
+  /* action — neutral fallback for portfolio-sourced items */
+  .badge-action {
+    background: rgba(76, 175, 125, 0.12);
+    color: var(--success);
   }
 
   .action-label {
@@ -578,6 +608,23 @@
 
   /* ── Renderers ───────────────────────────────────────────────── */
 
+  /* Map generator category values to display labels and card modifier classes.
+     Any unknown category falls back gracefully (badge class = "badge-" + cat,
+     card modifier omitted). */
+  var BADGE_LABELS = {
+    required: "REQUIRED",
+    low:      "LOW",
+    confirm:  "CONFIRM",
+    info:     "INFO",
+    action:   "ACTION"
+  };
+  var CARD_MODIFIERS = {
+    required: "",
+    low:      "priority-low",
+    confirm:  "priority-confirm",
+    info:     "priority-confirm"
+  };
+
   function renderCeoActions(actions) {
     var panel = document.getElementById("ceo-actions-panel");
     var body  = document.getElementById("ceo-actions-body");
@@ -589,11 +636,16 @@
     panel.classList.remove("empty");
     var html = "";
     for (var i = 0; i < actions.length; i++) {
-      var a = actions[i];
-      html += '<div class="action-card">';
-      if (a.category) {
-        html += '<div class="action-category">' + escHtml(a.category) + '</div>';
-      }
+      var a   = actions[i];
+      var cat = a.category || "required";
+      var mod = CARD_MODIFIERS.hasOwnProperty(cat) ? CARD_MODIFIERS[cat] : "";
+      var cardCls = "action-card" + (mod ? " " + mod : "");
+      html += '<div class="' + cardCls + '">';
+      /* Badge: category-specific class + human-readable label */
+      var badgeTxt = BADGE_LABELS.hasOwnProperty(cat)
+                     ? BADGE_LABELS[cat]
+                     : escHtml(cat).toUpperCase();
+      html += '<div class="action-category badge-' + escHtml(cat) + '">' + badgeTxt + '</div>';
       html += '<div class="action-label">' + escHtml(a.label || "") + '</div>';
       if (a.context) {
         html += '<div class="action-context">' + escHtml(a.context) + '</div>';
