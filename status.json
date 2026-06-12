@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T17:11:49Z",
+  "generated_at": "2026-06-12T17:26:48Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-12T16:57:03Z",
-    "minutes_since_session": 14,
+    "minutes_since_session": 29,
     "airlock_queue": 0
   },
   "active_initiative": null,
@@ -37,14 +37,26 @@
     {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "Source-folder clearing \u2014 DONE.",
-      "context": "CEO deleted `Airlock/JasonOS Philosophical Memo/` on 2026-06-12. Airlock transfer fully closed; artifact preserved in KB"
+      "label": "Review GAP-008 + PCR-KNOW-001 (CEO-authorized; drafted this session).",
+      "context": "CEO authorized registering the gap and drafting the PCR. Now filed: GAP-008 in `governance/policy-gap-register.md`; PCR-"
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Commit gate.",
-      "context": "Changed/added files this session: updated manifest `audit/airlock-manifests/2026-06-12-001.md`, new KB inbox artifact, t"
+      "label": "KD ingest queued (CEO-authorized).",
+      "context": "`workloads/active/kd-ingest-human-amplification-memo.md` scopes the compiled-wiki pass that decomposes the memo into a s"
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "Source-folder clearing \u2014 DONE.",
+      "context": "CEO deleted `Airlock/JasonOS Philosophical Memo/` on 2026-06-12. Airlock transfer fully closed; artifact preserved in KB"
+    },
+    {
+      "id": "ACT-HO-7",
+      "category": "required",
+      "label": "Commit gate \u2014 HELD.",
+      "context": "Awaiting CEO direction to trigger the relay. Change set this session:"
     }
   ],
   "directors": [
