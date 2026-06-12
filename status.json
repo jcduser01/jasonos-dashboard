@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T22:37:23Z",
+  "generated_at": "2026-06-12T22:52:23Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-12T22:33:40Z",
-    "minutes_since_session": 3,
+    "minutes_since_session": 18,
     "airlock_queue": 33,
     "airlock_bundles": 9
   },
@@ -50,8 +50,8 @@
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "Backup gap (carried, low priority).",
-      "context": "The git-relay and agent-dispatcher scripts + `bin/jasonos-access-compiler.py` are volume-only (Tier 2 \u2014 not in the repo)"
+      "label": "~~Backup gap (carried, low priority).~~ RESOLVED 2026-06-12 (commit `b5cb83ff`, pushed upstream + fork). All runtime scr",
+      "context": ""
     }
   ],
   "directors": [
