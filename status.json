@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T16:43:57Z",
+  "generated_at": "2026-06-12T16:56:48Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -9,13 +9,50 @@
     "backlog": 18
   },
   "operational": {
-    "last_session_date": "2026-06-12",
-    "minutes_since_session": 1003,
+    "last_session_date": "2026-06-12T18:00:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0
   },
   "active_initiative": null,
   "queue": [],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Model selection for this chunk",
+      "context": "\u2014 Chunk 1 was specified as Opus 4.8 High. This session ran on Sonnet 4.6. CEO to decide whether to re-run the memo analy"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Governance Proposal 1 \u2014 Foundational philosophy document",
+      "context": "\u2014 Approve creating `governance/organizational-philosophy.md` from the memo's content. CEO to confirm: (a) approve creati"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Governance Proposal 2 \u2014 Human Amplification as named principle",
+      "context": "\u2014 Approve codifying \"Human Amplification Principle\" in governance manual or Constitution. CEO to confirm location and wh"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "Governance Proposal 3 \u2014 Brand-agnostic architecture design standard",
+      "context": "\u2014 Approve adding a standing design standard for multi-brand systems. CEO to confirm location (governance manual vs. Engi"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Airlock folder clearing",
+      "context": "\u2014 `/Volumes/SandboxData/Airlock/JasonOS Philosophical Memo/` cannot be deleted by Cowork sandbox. CEO must clear manuall"
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "Commit gate",
+      "context": "\u2014 Manifest `audit/airlock-manifests/2026-06-12-001.md` is written but not committed. Once CEO approves governance propos"
+    }
+  ],
   "directors": [
     {
       "name": "engineering-director",
