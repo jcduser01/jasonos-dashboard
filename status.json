@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T00:37:32Z",
+  "generated_at": "2026-06-13T00:39:01Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-12T23:18:36Z",
-    "minutes_since_session": 78,
+    "minutes_since_session": 80,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -24,8 +24,8 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "INI-009 \u2014 ACTIVE (pulled to Current 2026-06-12, CEO approved). Open downstream CEO items below.",
-      "context": "Activation, disposition split, and mandate scope (a) all approved and executed this session. Dashboard published (commit"
+      "label": "INI-009 \u2014 ACTIVE; PCR approved + applied + committed; VD running, KD queued.",
+      "context": "Full activation executed this session and committed (68796240, pushed upstream + fork). State:"
     },
     {
       "id": "ACT-HO-2",
