@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T03:37:45Z",
+  "generated_at": "2026-06-13T03:52:45Z",
   "schema_version": "2",
   "stats": {
-    "done": 38,
+    "done": 39,
     "total": 58,
     "active": 1,
-    "queued": 1,
+    "queued": 0,
     "backlog": 18
   },
   "operational": {
     "last_session_date": "2026-06-12T22:36:42Z",
-    "minutes_since_session": 301,
+    "minutes_since_session": 316,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -19,14 +19,7 @@
     "name": "Venture Portfolio Activation",
     "status": "active"
   },
-  "queue": [
-    {
-      "id": "INI-058",
-      "name": "bbcre8s Codebase Scan & Analysis",
-      "status": "queued",
-      "position": 1
-    }
-  ],
+  "queue": [],
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
