@@ -1,22 +1,46 @@
 {
-  "generated_at": "2026-06-13T15:43:29Z",
+  "generated_at": "2026-06-13T17:48:19Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
-    "total": 66,
-    "active": 0,
-    "queued": 0,
+    "total": 67,
+    "active": 1,
+    "queued": 1,
     "backlog": 25
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 943,
+    "minutes_since_session": 1068,
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
-  "active_initiative": null,
-  "queue": [],
-  "ceo_actions": [],
+  "active_initiative": {
+    "id": "INI-059",
+    "name": "bbcre8s Website Redesign",
+    "status": "active"
+  },
+  "queue": [
+    {
+      "id": "INI-068",
+      "name": "bbcre8s Client Content Editing Tool",
+      "status": "queued",
+      "position": 1
+    }
+  ],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "INI-009 status reconciliation (low, housekeeping).",
+      "context": "The portfolio README body has shown INI-009 in Backlog (header note: \"moved from Current to Backlog\"), while its Stats l"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Dashboard refresh (low).",
+      "context": "The status dashboard regenerates from the portfolio via jasonos-status-generator; confirm it picks up INI-059 \u2192 Current "
+    }
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -69,6 +93,10 @@
   ],
   "backlog": {
     "client_work": [
+      {
+        "id": "INI-009",
+        "name": "Venture Portfolio Activation"
+      },
       {
         "id": "INI-041",
         "name": "Dyson Hope \u2014 Brand Design System"
@@ -126,11 +154,6 @@
         "name": "Dyson Hope \u2014 Music Culture Observation Engine"
       },
       {
-        "id": "INI-059",
-        "name": "bbcre8s Website Redesign",
-        "notes": "Pending: INI-058 complete; SECTION 3 needs a game plan with CEO"
-      },
-      {
         "id": "INI-064",
         "name": "Jason Cook Design \u2014 Blog Infrastructure"
       },
@@ -148,10 +171,6 @@
       }
     ],
     "digital_office": [
-      {
-        "id": "INI-009",
-        "name": "Venture Portfolio Activation"
-      },
       {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
