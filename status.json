@@ -4,7 +4,7 @@
   "stats": {
     "done": 40,
     "total": 66,
-    "active": 1,
+    "active": 0,
     "queued": 0,
     "backlog": 25
   },
@@ -14,11 +14,7 @@
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
-  "active_initiative": {
-    "id": "INI-009",
-    "name": "Venture Portfolio Activation",
-    "status": "active"
-  },
+  "active_initiative": null,
   "queue": [],
   "ceo_actions": [],
   "directors": [
@@ -152,6 +148,10 @@
       }
     ],
     "digital_office": [
+      {
+        "id": "INI-009",
+        "name": "Venture Portfolio Activation"
+      },
       {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
