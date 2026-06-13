@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T11:53:42Z",
+  "generated_at": "2026-06-13T12:08:43Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
-    "total": 59,
+    "total": 61,
     "active": 1,
     "queued": 0,
-    "backlog": 18
+    "backlog": 20
   },
   "operational": {
     "last_session_date": "2026-06-12T04:00Z",
-    "minutes_since_session": 1913,
+    "minutes_since_session": 1928,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -190,6 +190,14 @@
       {
         "id": "INI-060",
         "name": "Engineering Director \u2014 TDD and Systematic Debugging Discipline"
+      },
+      {
+        "id": "INI-061",
+        "name": "Engineering Director \u2014 Playwright as Standard Web Project Dependency"
+      },
+      {
+        "id": "INI-062",
+        "name": "Engineering Director \u2014 Context Budget Discipline and Verification Phase"
       }
     ]
   }
