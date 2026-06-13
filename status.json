@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T00:22:32Z",
+  "generated_at": "2026-06-13T00:23:59Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-12T23:18:36Z",
-    "minutes_since_session": 63,
+    "minutes_since_session": 65,
     "airlock_queue": 33,
     "airlock_bundles": 9
   },
@@ -24,8 +24,8 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "INI-009 activation decision (ESCALATED \u2014 top of queue).",
-      "context": "The Venture Director Investment Philosophy Framework is ingested. It materially advances INI-009 but does NOT fully unbl"
+      "label": "INI-009 \u2014 ACTIVE (pulled to Current 2026-06-12, CEO approved). Open downstream CEO items below.",
+      "context": "Activation, disposition split, and mandate scope (a) all approved and executed this session. Dashboard published (commit"
     },
     {
       "id": "ACT-HO-2",
