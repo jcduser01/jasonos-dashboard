@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T03:52:45Z",
+  "generated_at": "2026-06-13T04:07:46Z",
   "schema_version": "2",
   "stats": {
     "done": 39,
     "total": 58,
     "active": 1,
     "queued": 0,
-    "backlog": 18
+    "backlog": 17
   },
   "operational": {
     "last_session_date": "2026-06-12T22:36:42Z",
-    "minutes_since_session": 316,
+    "minutes_since_session": 331,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -129,10 +129,6 @@
       {
         "id": "INI-047",
         "name": "Dyson Hope \u2014 Promotion & Content Strategy Ingestion"
-      },
-      {
-        "id": "INI-048",
-        "name": "Music Culture Observation Engine \u2014 Concept Ingestion & Initiative Definition"
       },
       {
         "id": "INI-049",
