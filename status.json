@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T03:07:46Z",
+  "generated_at": "2026-06-13T03:22:07Z",
   "schema_version": "2",
   "stats": {
     "done": 38,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-12T23:18:36Z",
-    "minutes_since_session": 229,
+    "minutes_since_session": 243,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -24,8 +24,8 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "INI-009 \u2014 ACTIVE; PCR approved + applied + committed; VD running, KD queued.",
-      "context": "Full activation executed this session and committed (68796240, pushed upstream + fork). State:"
+      "label": "INI-009 \u2014 ACTIVE; activation deployed + committed; ONE open next-step.",
+      "context": "PCR-VENT-001 approved+applied (68796240); VD + KD runs complete; D1\u2013D5 deployed + committed (d2828d8b, pushed). Decision"
     },
     {
       "id": "ACT-HO-2",
