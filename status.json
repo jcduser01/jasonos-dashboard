@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T17:48:19Z",
+  "generated_at": "2026-06-13T23:10:57Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 1068,
+    "minutes_since_session": 1390,
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
@@ -37,8 +37,8 @@
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Dashboard refresh (low).",
-      "context": "The status dashboard regenerates from the portfolio via jasonos-status-generator; confirm it picks up INI-059 \u2192 Current "
+      "label": "INI-059 design direction \u2014 pending CEO/client decisions (none blocking client review).",
+      "context": "Client reviews the three treatments at bbcre8s.com/client-preview/ and picks a direction (or hybrid). Then: convey the l"
     }
   ],
   "directors": [
