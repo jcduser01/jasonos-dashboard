@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T15:38:51Z",
+  "generated_at": "2026-06-13T15:43:29Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 938,
+    "minutes_since_session": 943,
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
@@ -20,14 +20,7 @@
     "status": "active"
   },
   "queue": [],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Run relay activation script",
-      "context": "to reload launchd with v1.4 WatchPaths (queue directory). Until reloaded, old single-file trigger path is still watched;"
-    }
-  ],
+  "ceo_actions": [],
   "directors": [
     {
       "name": "engineering-director",
@@ -42,10 +35,10 @@
       "invocations_30d": 1
     },
     {
-      "name": "knowledge",
+      "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-12T20:23:25Z",
+      "invocations_30d": 7
     },
     {
       "name": "security-steward",
@@ -54,10 +47,10 @@
       "invocations_30d": 1
     },
     {
-      "name": "research",
+      "name": "research-director",
       "display": "Research",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-12T16:44:02Z",
+      "invocations_30d": 7
     },
     {
       "name": "financial-analysis",
@@ -66,10 +59,10 @@
       "invocations_30d": 0
     },
     {
-      "name": "venture",
+      "name": "venture-director",
       "display": "Venture",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-12T19:53:45Z",
+      "invocations_30d": 1
     },
     {
       "name": "creative",
