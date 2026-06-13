@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T11:38:43Z",
+  "generated_at": "2026-06-13T11:53:42Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
-    "total": 58,
+    "total": 59,
     "active": 1,
     "queued": 0,
-    "backlog": 17
+    "backlog": 18
   },
   "operational": {
     "last_session_date": "2026-06-12T04:00Z",
-    "minutes_since_session": 1898,
+    "minutes_since_session": 1913,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -186,6 +186,10 @@
         "id": "INI-039",
         "name": "QMD Local Search Integration",
         "notes": "Pull after: vault ~50 articles"
+      },
+      {
+        "id": "INI-060",
+        "name": "Engineering Director \u2014 TDD and Systematic Debugging Discipline"
       }
     ]
   }
