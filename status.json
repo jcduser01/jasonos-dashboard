@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T15:23:50Z",
+  "generated_at": "2026-06-13T15:38:51Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 923,
+    "minutes_since_session": 938,
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
@@ -23,15 +23,9 @@
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
-      "category": "low",
-      "label": "Creative\u2192Engineering Automator folder action (low priority).",
-      "context": "Build the outbox\u2192inbox folder action mirroring the Research\u2192KB pattern. Place a copy in operations/relays/. Engineering "
-    },
-    {
-      "id": "ACT-HO-2",
       "category": "required",
-      "label": "Concurrent-session write coordination (Engineering backlog).",
-      "context": "Two simultaneous Cowork/President sessions share one git working tree and session-handoff.md, causing: relay git add -A "
+      "label": "Run relay activation script",
+      "context": "to reload launchd with v1.4 WatchPaths (queue directory). Until reloaded, old single-file trigger path is still watched;"
     }
   ],
   "directors": [
