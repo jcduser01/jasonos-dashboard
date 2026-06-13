@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-06-13T23:28:15Z",
+  "generated_at": "2026-06-13T23:49:24Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
     "total": 68,
-    "active": 1,
+    "active": 2,
     "queued": 1,
-    "backlog": 26
+    "backlog": 25
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 1408,
+    "minutes_since_session": 1429,
     "airlock_queue": 29,
     "airlock_bundles": 6
   },
   "active_initiative": {
-    "id": "INI-059",
-    "name": "bbcre8s Website Redesign",
+    "id": "INI-041",
+    "name": "Dyson Hope \u2014 Brand Design System",
     "status": "active"
   },
   "queue": [
@@ -83,10 +83,6 @@
       {
         "id": "INI-009",
         "name": "Venture Portfolio Activation"
-      },
-      {
-        "id": "INI-041",
-        "name": "Dyson Hope \u2014 Brand Design System"
       },
       {
         "id": "INI-042",
