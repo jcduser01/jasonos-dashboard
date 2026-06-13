@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T12:23:47Z",
+  "generated_at": "2026-06-13T12:38:47Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
-    "total": 61,
+    "total": 62,
     "active": 1,
     "queued": 0,
-    "backlog": 20
+    "backlog": 21
   },
   "operational": {
     "last_session_date": "2026-06-12T04:00Z",
-    "minutes_since_session": 1943,
+    "minutes_since_session": 1958,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -198,6 +198,10 @@
       {
         "id": "INI-062",
         "name": "Engineering Director \u2014 Context Budget Discipline and Verification Phase"
+      },
+      {
+        "id": "INI-063",
+        "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock"
       }
     ]
   }
