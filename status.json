@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T23:21:48Z",
+  "generated_at": "2026-06-13T23:28:15Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
-    "total": 67,
+    "total": 68,
     "active": 1,
     "queued": 1,
-    "backlog": 25
+    "backlog": 26
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 1401,
+    "minutes_since_session": 1408,
     "airlock_queue": 29,
     "airlock_bundles": 6
   },
@@ -27,14 +27,7 @@
       "position": 1
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "INI-009 status reconciliation (low, housekeeping).",
-      "context": "The portfolio README body has shown INI-009 in Backlog (header note: \"moved from Current to Backlog\"), while its Stats l"
-    }
-  ],
+  "ceo_actions": [],
   "directors": [
     {
       "name": "engineering-director",
@@ -194,6 +187,10 @@
       {
         "id": "INI-063",
         "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock"
+      },
+      {
+        "id": "INI-069",
+        "name": "Director Invocation Master Log \u2014 Cowork-Direct Session Coverage"
       }
     ]
   }
