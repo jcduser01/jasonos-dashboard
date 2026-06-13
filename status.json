@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T14:38:49Z",
+  "generated_at": "2026-06-13T14:53:50Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
@@ -9,8 +9,8 @@
     "backlog": 25
   },
   "operational": {
-    "last_session_date": "2026-06-13T00:00:00Z",
-    "minutes_since_session": 878,
+    "last_session_date": "2026-06-13",
+    "minutes_since_session": 893,
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
@@ -24,8 +24,8 @@
     {
       "id": "ACT-HO-1",
       "category": "low",
-      "label": "Open manifest boundary calls (low priority).",
-      "context": "Tune manifest CONTENT, not the mechanism (amend + recompile): Creative-vs-Engineering on client-site repos, venture arti"
+      "label": "Creative\u2192Engineering Automator folder action (low priority).",
+      "context": "Build the outbox\u2192inbox folder action mirroring the Research\u2192KB pattern. Place a copy in operations/relays/. Engineering "
     },
     {
       "id": "ACT-HO-2",
