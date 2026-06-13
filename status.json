@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T14:08:49Z",
+  "generated_at": "2026-06-13T14:23:49Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
@@ -10,9 +10,9 @@
   },
   "operational": {
     "last_session_date": "2026-06-13T00:00:00Z",
-    "minutes_since_session": 848,
-    "airlock_queue": 32,
-    "airlock_bundles": 8
+    "minutes_since_session": 863,
+    "airlock_queue": 30,
+    "airlock_bundles": 7
   },
   "active_initiative": {
     "id": "INI-009",
@@ -23,39 +23,15 @@
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
-      "category": "required",
-      "label": "INI-009 \u2014 ACTIVE; activation deployed + committed; ONE open next-step.",
-      "context": "PCR-VENT-001 approved+applied (68796240); VD + KD runs complete; D1\u2013D5 deployed + committed (d2828d8b, pushed). Decision"
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "KD ingest \u2014 re-dispatch (GAP-008). NOW UNBLOCKED.",
-      "context": "The permission half is solved: the Knowledge Director's jail (/Volumes/SandboxData/.access/knowledge/) grants knowledge/"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "Dashboard airlock-count fix \u2014 re-dispatch Engineering. NOW UNBLOCKED.",
-      "context": "Engineering's jail grants bin/** write, so the write-block that stopped it is gone. Root cause + fix already specified b"
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "confirm",
-      "label": "Glance at the manifest diff (CEO-edit-only file).",
-      "context": "The access manifest is CEO-edit-only; the President edited it this session implementing your directed designs (removing "
-    },
-    {
-      "id": "ACT-HO-5",
       "category": "low",
       "label": "Open manifest boundary calls (low priority).",
       "context": "Tune manifest CONTENT, not the mechanism (amend + recompile): Creative-vs-Engineering on client-site repos, venture arti"
     },
     {
-      "id": "ACT-HO-6",
-      "category": "low",
-      "label": "Minor \u2014 pcrs README drift (carried).",
-      "context": "governance/pcrs/README.md still says open//addressed/; actual dirs are open//closed//rejected/."
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Concurrent-session write coordination (Engineering backlog).",
+      "context": "Two simultaneous Cowork/President sessions share one git working tree and session-handoff.md, causing: relay git add -A "
     }
   ],
   "directors": [
