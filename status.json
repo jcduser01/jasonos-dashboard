@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-13T13:53:49Z",
+  "generated_at": "2026-06-13T14:08:49Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
-    "total": 62,
+    "total": 66,
     "active": 1,
     "queued": 0,
-    "backlog": 21
+    "backlog": 25
   },
   "operational": {
     "last_session_date": "2026-06-13T00:00:00Z",
-    "minutes_since_session": 833,
+    "minutes_since_session": 848,
     "airlock_queue": 32,
     "airlock_bundles": 8
   },
@@ -170,6 +170,22 @@
         "id": "INI-059",
         "name": "bbcre8s Website Redesign",
         "notes": "Pending: INI-058 complete; SECTION 3 needs a game plan with CEO"
+      },
+      {
+        "id": "INI-064",
+        "name": "Jason Cook Design \u2014 Blog Infrastructure"
+      },
+      {
+        "id": "INI-065",
+        "name": "Dyson Hope \u2014 Blog Infrastructure"
+      },
+      {
+        "id": "INI-066",
+        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design"
+      },
+      {
+        "id": "INI-067",
+        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope"
       }
     ],
     "digital_office": [
