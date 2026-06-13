@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T23:10:57Z",
+  "generated_at": "2026-06-13T23:12:30Z",
   "schema_version": "2",
   "stats": {
     "done": 40,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 1390,
+    "minutes_since_session": 1392,
     "airlock_queue": 30,
     "airlock_bundles": 7
   },
@@ -33,12 +33,6 @@
       "category": "required",
       "label": "INI-009 status reconciliation (low, housekeeping).",
       "context": "The portfolio README body has shown INI-009 in Backlog (header note: \"moved from Current to Backlog\"), while its Stats l"
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "INI-059 design direction \u2014 pending CEO/client decisions (none blocking client review).",
-      "context": "Client reviews the three treatments at bbcre8s.com/client-preview/ and picks a direction (or hybrid). Then: convey the l"
     }
   ],
   "directors": [
