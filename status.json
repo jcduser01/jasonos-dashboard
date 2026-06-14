@@ -1,39 +1,37 @@
 {
-  "generated_at": "2026-06-14T17:35:23Z",
+  "generated_at": "2026-06-14T21:35:02Z",
   "schema_version": "3",
   "stats": {
-    "done": 41,
-    "total": 68,
-    "active": 1,
-    "queued": 1,
-    "backlog": 25
+    "done": 43,
+    "total": 69,
+    "active": 2,
+    "queued": 0,
+    "backlog": 23
   },
   "operational": {
     "last_session_date": "2026-06-14",
-    "minutes_since_session": 0,
+    "minutes_since_session": 1295,
     "airlock_queue": 29,
     "airlock_bundles": 6
   },
   "active_initiative": {
-    "id": "INI-059",
-    "name": "bbcre8s Website Redesign",
+    "id": "INI-042",
+    "name": "SIGIL.ZERO \u2014 Brand Design System",
     "status": "active"
   },
   "active_initiatives": [
     {
-      "id": "INI-059",
-      "name": "bbcre8s Website Redesign",
+      "id": "INI-042",
+      "name": "SIGIL.ZERO \u2014 Brand Design System",
+      "status": "active"
+    },
+    {
+      "id": "INI-050",
+      "name": "SIGIL.ZERO \u2014 Business Documentation Ingestion",
       "status": "active"
     }
   ],
-  "queue": [
-    {
-      "id": "INI-068",
-      "name": "bbcre8s Client Content Editing Tool",
-      "status": "queued",
-      "position": 1
-    }
-  ],
+  "queue": [],
   "ceo_actions": [],
   "directors": [
     {
@@ -92,83 +90,75 @@
         "name": "Venture Portfolio Activation"
       },
       {
-        "id": "INI-042",
-        "name": "SIGIL.ZERO — Brand Design System"
-      },
-      {
         "id": "INI-043",
-        "name": "Dish n' BEATS — Brand Design System"
+        "name": "Dish n' BEATS \u2014 Brand Design System"
       },
       {
         "id": "INI-046",
-        "name": "Dish n' BEATS — Business & Guide Document Ingestion"
+        "name": "Dish n' BEATS \u2014 Business & Guide Document Ingestion"
       },
       {
         "id": "INI-047",
-        "name": "Dyson Hope — Promotion & Content Strategy Ingestion"
+        "name": "Dyson Hope \u2014 Promotion & Content Strategy Ingestion"
       },
       {
         "id": "INI-049",
-        "name": "Ray Graystone — Literary Metafiction Knowledge Ingestion"
-      },
-      {
-        "id": "INI-050",
-        "name": "SIGIL.ZERO — Business Documentation Ingestion"
+        "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion"
       },
       {
         "id": "INI-051",
-        "name": "Temple of Unicorns — Brand & Style Guide Ingestion",
+        "name": "Temple of Unicorns \u2014 Brand & Style Guide Ingestion",
         "notes": "Pending: CEO context enriched; airlock ready"
       },
       {
         "id": "INI-053",
-        "name": "Temple of Unicorns — Relaunch Strategy & Positioning",
+        "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
         "notes": "Pending: INI-051 complete"
       },
       {
         "id": "INI-054",
-        "name": "Temple of Unicorns — Product Catalog Refresh"
+        "name": "Temple of Unicorns \u2014 Product Catalog Refresh"
       },
       {
         "id": "INI-055",
-        "name": "Temple of Unicorns — Shopify Site Redesign",
+        "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
         "notes": "Pending: INI-053 + INI-056 complete"
       },
       {
         "id": "INI-056",
-        "name": "Temple of Unicorns — Brand Design System",
+        "name": "Temple of Unicorns \u2014 Brand Design System",
         "notes": "Pending: INI-051 + INI-053 complete"
       },
       {
         "id": "INI-057",
-        "name": "Dyson Hope — Music Culture Observation Engine"
+        "name": "Dyson Hope \u2014 Music Culture Observation Engine"
       },
       {
         "id": "INI-064",
-        "name": "Jason Cook Design — Blog Infrastructure"
+        "name": "Jason Cook Design \u2014 Blog Infrastructure"
       },
       {
         "id": "INI-065",
-        "name": "Dyson Hope — Blog Infrastructure"
+        "name": "Dyson Hope \u2014 Blog Infrastructure"
       },
       {
         "id": "INI-066",
-        "name": "Human Creativity in the Age of AI — Jason Cook Design"
+        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design"
       },
       {
         "id": "INI-067",
-        "name": "Human Creativity in the Age of AI — Dyson Hope"
+        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope"
       }
     ],
     "digital_office": [
       {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
-        "notes": "Phase 3 complete — Phase 4 shelved pending second node"
+        "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node"
       },
       {
         "id": "INI-036",
-        "name": "ICM Workspace Architecture — Pilot Evaluation and Broader Rollout Decision"
+        "name": "ICM Workspace Architecture \u2014 Pilot Evaluation and Broader Rollout Decision"
       },
       {
         "id": "INI-039",
@@ -177,23 +167,23 @@
       },
       {
         "id": "INI-060",
-        "name": "Engineering Director — TDD and Systematic Debugging Discipline"
+        "name": "Engineering Director \u2014 TDD and Systematic Debugging Discipline"
       },
       {
         "id": "INI-061",
-        "name": "Engineering Director — Playwright as Standard Web Project Dependency"
+        "name": "Engineering Director \u2014 Playwright as Standard Web Project Dependency"
       },
       {
         "id": "INI-062",
-        "name": "Engineering Director — Context Budget Discipline and Verification Phase"
+        "name": "Engineering Director \u2014 Context Budget Discipline and Verification Phase"
       },
       {
         "id": "INI-063",
-        "name": "Sandbox Laboratory — Docker Experimental Environment with Egress Airlock"
+        "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock"
       },
       {
         "id": "INI-069",
-        "name": "Director Invocation Master Log — Cowork-Direct Session Coverage"
+        "name": "Director Invocation Master Log \u2014 Cowork-Direct Session Coverage"
       }
     ]
   }
