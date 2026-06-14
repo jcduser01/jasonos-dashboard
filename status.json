@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T01:23:54Z",
+  "generated_at": "2026-06-14T13:03:53Z",
   "schema_version": "3",
   "stats": {
     "done": 40,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 1523,
+    "minutes_since_session": 2223,
     "airlock_queue": 29,
     "airlock_bundles": 6
   },
@@ -72,7 +72,7 @@
       "invocations_30d": 7
     },
     {
-      "name": "financial-analysis",
+      "name": "financial-analysis-director",
       "display": "Financial Analysis",
       "last_active": null,
       "invocations_30d": 0
@@ -84,10 +84,10 @@
       "invocations_30d": 1
     },
     {
-      "name": "creative",
+      "name": "creative-director",
       "display": "Creative",
-      "last_active": "2026-06-13T19:00:00Z",
-      "invocations_30d": 3
+      "last_active": null,
+      "invocations_30d": 0
     }
   ],
   "backlog": {
