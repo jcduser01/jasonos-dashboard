@@ -683,15 +683,25 @@
       total > 0 ? done + "/" + total : "—";
   }
 
-  function renderActive(initiative) {
+  function renderActive(initiative, initiatives) {
     var body = document.getElementById("active-body");
-    if (initiative) {
-      body.innerHTML = '<div class="initiative-id">'   + escHtml(initiative.id)   + '</div>'
-                     + '<div class="initiative-name">' + escHtml(initiative.name) + '</div>'
-                     + '<span class="initiative-status status-active">In Progress</span>';
+    // Prefer the full list (schema v3); fall back to the singular field.
+    var list = (initiatives && initiatives.length)
+             ? initiatives
+             : (initiative ? [initiative] : []);
+    if (list.length === 0) {
+      body.innerHTML = '<span class="status-none">None.</span>';
       return;
     }
-    body.innerHTML = '<span class="status-none">None.</span>';
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+      html += '<div class="active-item"' + (i > 0 ? ' style="margin-top:14px"' : '') + '>'
+            +   '<div class="initiative-id">'   + escHtml(list[i].id)   + '</div>'
+            +   '<div class="initiative-name">' + escHtml(list[i].name) + '</div>'
+            +   '<span class="initiative-status status-active">In Progress</span>'
+            + '</div>';
+    }
+    body.innerHTML = html;
   }
 
   function renderQueue(queue) {
@@ -771,7 +781,7 @@
     checkStaleness(data.generated_at);
     renderCeoActions(data.ceo_actions);
     renderOpsStrip(data.stats, data.operational);
-    renderActive(data.active_initiative);
+    renderActive(data.active_initiative, data.active_initiatives);
     renderQueue(data.queue);
     renderDirectors(data.directors);
     var backlog = data.backlog || {};

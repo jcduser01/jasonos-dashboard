@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-13T23:49:24Z",
-  "schema_version": "2",
+  "generated_at": "2026-06-14T01:23:54Z",
+  "schema_version": "3",
   "stats": {
     "done": 40,
     "total": 68,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-13",
-    "minutes_since_session": 1429,
+    "minutes_since_session": 1523,
     "airlock_queue": 29,
     "airlock_bundles": 6
   },
@@ -19,6 +19,18 @@
     "name": "Dyson Hope \u2014 Brand Design System",
     "status": "active"
   },
+  "active_initiatives": [
+    {
+      "id": "INI-041",
+      "name": "Dyson Hope \u2014 Brand Design System",
+      "status": "active"
+    },
+    {
+      "id": "INI-059",
+      "name": "bbcre8s Website Redesign",
+      "status": "active"
+    }
+  ],
   "queue": [
     {
       "id": "INI-068",
