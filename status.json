@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-14T21:35:02Z",
+  "generated_at": "2026-06-14T21:56:29Z",
   "schema_version": "3",
   "stats": {
-    "done": 43,
+    "done": 44,
     "total": 69,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "backlog": 23
   },
   "operational": {
     "last_session_date": "2026-06-14",
-    "minutes_since_session": 1295,
-    "airlock_queue": 29,
-    "airlock_bundles": 6
+    "minutes_since_session": 1316,
+    "airlock_queue": 16,
+    "airlock_bundles": 5
   },
   "active_initiative": {
     "id": "INI-042",
@@ -23,11 +23,6 @@
     {
       "id": "INI-042",
       "name": "SIGIL.ZERO \u2014 Brand Design System",
-      "status": "active"
-    },
-    {
-      "id": "INI-050",
-      "name": "SIGIL.ZERO \u2014 Business Documentation Ingestion",
       "status": "active"
     }
   ],
