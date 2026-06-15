@@ -1,31 +1,21 @@
 {
-  "generated_at": "2026-06-14T21:56:29Z",
+  "generated_at": "2026-06-15T01:44:51Z",
   "schema_version": "3",
   "stats": {
-    "done": 44,
-    "total": 69,
-    "active": 1,
+    "done": 47,
+    "total": 68,
+    "active": 0,
     "queued": 0,
-    "backlog": 23
+    "backlog": 21
   },
   "operational": {
     "last_session_date": "2026-06-14",
-    "minutes_since_session": 1316,
-    "airlock_queue": 16,
-    "airlock_bundles": 5
+    "minutes_since_session": 1544,
+    "airlock_queue": 11,
+    "airlock_bundles": 2
   },
-  "active_initiative": {
-    "id": "INI-042",
-    "name": "SIGIL.ZERO \u2014 Brand Design System",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-042",
-      "name": "SIGIL.ZERO \u2014 Brand Design System",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [],
   "ceo_actions": [],
   "directors": [
@@ -89,21 +79,12 @@
         "name": "Dish n' BEATS \u2014 Brand Design System"
       },
       {
-        "id": "INI-046",
-        "name": "Dish n' BEATS \u2014 Business & Guide Document Ingestion"
-      },
-      {
         "id": "INI-047",
         "name": "Dyson Hope \u2014 Promotion & Content Strategy Ingestion"
       },
       {
         "id": "INI-049",
         "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion"
-      },
-      {
-        "id": "INI-051",
-        "name": "Temple of Unicorns \u2014 Brand & Style Guide Ingestion",
-        "notes": "Pending: CEO context enriched; airlock ready"
       },
       {
         "id": "INI-053",
