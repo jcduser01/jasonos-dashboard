@@ -1,22 +1,63 @@
 {
-  "generated_at": "2026-06-15T01:44:51Z",
+  "generated_at": "2026-06-15T12:40:05Z",
   "schema_version": "3",
   "stats": {
-    "done": 47,
+    "done": 48,
     "total": 68,
-    "active": 0,
-    "queued": 0,
-    "backlog": 21
+    "active": 1,
+    "queued": 5,
+    "backlog": 14
   },
   "operational": {
     "last_session_date": "2026-06-14",
-    "minutes_since_session": 1544,
-    "airlock_queue": 11,
-    "airlock_bundles": 2
+    "minutes_since_session": 2200,
+    "airlock_queue": 7,
+    "airlock_bundles": 1
   },
-  "active_initiative": null,
-  "active_initiatives": [],
-  "queue": [],
+  "active_initiative": {
+    "id": "INI-057",
+    "name": "Dyson Hope \u2014 Music Culture Observation Engine",
+    "status": "active"
+  },
+  "active_initiatives": [
+    {
+      "id": "INI-057",
+      "name": "Dyson Hope \u2014 Music Culture Observation Engine",
+      "status": "active"
+    }
+  ],
+  "queue": [
+    {
+      "id": "INI-049",
+      "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion",
+      "status": "queued",
+      "position": 1
+    },
+    {
+      "id": "INI-053",
+      "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+      "status": "queued",
+      "position": 2
+    },
+    {
+      "id": "INI-054",
+      "name": "Temple of Unicorns \u2014 Product Catalog Refresh",
+      "status": "queued",
+      "position": 3
+    },
+    {
+      "id": "INI-055",
+      "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
+      "status": "queued",
+      "position": 4
+    },
+    {
+      "id": "INI-056",
+      "name": "Temple of Unicorns \u2014 Brand Design System",
+      "status": "queued",
+      "position": 5
+    }
+  ],
   "ceo_actions": [],
   "directors": [
     {
@@ -77,37 +118,6 @@
       {
         "id": "INI-043",
         "name": "Dish n' BEATS \u2014 Brand Design System"
-      },
-      {
-        "id": "INI-047",
-        "name": "Dyson Hope \u2014 Promotion & Content Strategy Ingestion"
-      },
-      {
-        "id": "INI-049",
-        "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion"
-      },
-      {
-        "id": "INI-053",
-        "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
-        "notes": "Pending: INI-051 complete"
-      },
-      {
-        "id": "INI-054",
-        "name": "Temple of Unicorns \u2014 Product Catalog Refresh"
-      },
-      {
-        "id": "INI-055",
-        "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
-        "notes": "Pending: INI-053 + INI-056 complete"
-      },
-      {
-        "id": "INI-056",
-        "name": "Temple of Unicorns \u2014 Brand Design System",
-        "notes": "Pending: INI-051 + INI-053 complete"
-      },
-      {
-        "id": "INI-057",
-        "name": "Dyson Hope \u2014 Music Culture Observation Engine"
       },
       {
         "id": "INI-064",
