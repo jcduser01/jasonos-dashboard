@@ -1,61 +1,55 @@
 {
-  "generated_at": "2026-06-15T12:40:05Z",
+  "generated_at": "2026-06-16T01:29:13Z",
   "schema_version": "3",
   "stats": {
-    "done": 48,
+    "done": 49,
     "total": 68,
     "active": 1,
-    "queued": 5,
+    "queued": 4,
     "backlog": 14
   },
   "operational": {
-    "last_session_date": "2026-06-14",
-    "minutes_since_session": 2200,
+    "last_session_date": "2026-06-16T01:15:00Z",
+    "minutes_since_session": 14,
     "airlock_queue": 7,
     "airlock_bundles": 1
   },
   "active_initiative": {
-    "id": "INI-057",
-    "name": "Dyson Hope \u2014 Music Culture Observation Engine",
+    "id": "INI-049",
+    "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion",
     "status": "active"
   },
   "active_initiatives": [
     {
-      "id": "INI-057",
-      "name": "Dyson Hope \u2014 Music Culture Observation Engine",
+      "id": "INI-049",
+      "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion",
       "status": "active"
     }
   ],
   "queue": [
     {
-      "id": "INI-049",
-      "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion",
-      "status": "queued",
-      "position": 1
-    },
-    {
       "id": "INI-053",
       "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
       "status": "queued",
-      "position": 2
+      "position": 1
     },
     {
       "id": "INI-054",
       "name": "Temple of Unicorns \u2014 Product Catalog Refresh",
       "status": "queued",
-      "position": 3
+      "position": 2
     },
     {
       "id": "INI-055",
       "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
       "status": "queued",
-      "position": 4
+      "position": 3
     },
     {
       "id": "INI-056",
       "name": "Temple of Unicorns \u2014 Brand Design System",
       "status": "queued",
-      "position": 5
+      "position": 4
     }
   ],
   "ceo_actions": [],
