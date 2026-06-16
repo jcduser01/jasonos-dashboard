@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T17:01:33Z",
+  "generated_at": "2026-06-16T17:16:13Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
@@ -9,8 +9,8 @@
     "backlog": 20
   },
   "operational": {
-    "last_session_date": "2026-06-16T16:40:00Z",
-    "minutes_since_session": 21,
+    "last_session_date": "2026-06-16T17:15:00Z",
+    "minutes_since_session": 1,
     "airlock_queue": 11,
     "airlock_bundles": 1
   },
@@ -42,7 +42,38 @@
       "position": 4
     }
   ],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Formalize PCR-SEC-004",
+      "context": "commit the home-dir carve-out audit-record PCR (drop/subsume path #2, now confirmed unneeded) and have the Security Stew"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Deploy 3 backup prompts",
+      "context": "Claude Desktop \u2192 Scheduled tasks: install jasonos-operations-backup, jasonos-engineering-backup, jasonos-knowledge-backu"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Run 4 daemon activation scripts",
+      "context": "Mac-side, idempotent: jasonos-canonical-fetch-activate.command, jasonos-research-handoff-activate.command, jasonos-obser"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "low",
+      "label": "Client-repo .gitignore",
+      "context": "low priority; optional per-repo PRs under the fork model (code/dishnbeats, code/jasoncookdesign.github.io); pre-commit h"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "low",
+      "label": "Briefing-thinning transition",
+      "context": "low priority; retire the SEC-001/OPS-001 daily-briefing checks into the report-triage register after the sweep runs one "
+    }
+  ],
   "directors": [
     {
       "name": "engineering-director",
