@@ -1,31 +1,21 @@
 {
-  "generated_at": "2026-06-16T02:24:05Z",
+  "generated_at": "2026-06-16T04:50:47Z",
   "schema_version": "3",
   "stats": {
-    "done": 49,
-    "total": 68,
-    "active": 1,
-    "queued": 4,
-    "backlog": 14
+    "done": 50,
+    "total": 73,
+    "active": 0,
+    "queued": 5,
+    "backlog": 18
   },
   "operational": {
     "last_session_date": "2026-06-16T02:22:00Z",
-    "minutes_since_session": 2,
-    "airlock_queue": 7,
-    "airlock_bundles": 1
+    "minutes_since_session": 148,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-049",
-    "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-049",
-      "name": "Ray Graystone \u2014 Literary Metafiction Knowledge Ingestion",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [
     {
       "id": "INI-053",
@@ -50,6 +40,12 @@
       "name": "Temple of Unicorns \u2014 Brand Design System",
       "status": "queued",
       "position": 4
+    },
+    {
+      "id": "INI-072",
+      "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
+      "status": "queued",
+      "position": 5
     }
   ],
   "ceo_actions": [],
@@ -128,6 +124,16 @@
       {
         "id": "INI-067",
         "name": "Human Creativity in the Age of AI \u2014 Dyson Hope"
+      },
+      {
+        "id": "INI-073",
+        "name": "Ray Graystone \u2014 Voice & Register Pass",
+        "notes": "Pending: INI-072 (chapter map). Optional \u2014 pull when CEO is ready to test drafting."
+      },
+      {
+        "id": "INI-074",
+        "name": "Ray Graystone \u2014 Publication Path",
+        "notes": "Deferred \u2014 open only when a draft exists."
       }
     ],
     "digital_office": [
@@ -164,6 +170,14 @@
       {
         "id": "INI-069",
         "name": "Director Invocation Master Log \u2014 Cowork-Direct Session Coverage"
+      },
+      {
+        "id": "INI-070",
+        "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation"
+      },
+      {
+        "id": "INI-071",
+        "name": "Investment Discovery & Screening \u2014 Candidate Front Door"
       }
     ]
   }
