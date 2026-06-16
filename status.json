@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-16T19:14:29Z",
+  "generated_at": "2026-06-16T19:29:29Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
-    "total": 74,
+    "total": 75,
     "active": 0,
     "queued": 4,
-    "backlog": 20
+    "backlog": 21
   },
   "operational": {
     "last_session_date": "2026-06-16T17:15:00Z",
-    "minutes_since_session": 119,
+    "minutes_since_session": 134,
     "airlock_queue": 11,
     "airlock_bundles": 1
   },
@@ -206,6 +206,10 @@
       {
         "id": "INI-075",
         "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core"
+      },
+      {
+        "id": "INI-076",
+        "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini"
       }
     ]
   }
