@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-16T04:50:47Z",
+  "generated_at": "2026-06-16T05:00:08Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
     "total": 73,
     "active": 0,
-    "queued": 5,
-    "backlog": 18
+    "queued": 4,
+    "backlog": 19
   },
   "operational": {
-    "last_session_date": "2026-06-16T02:22:00Z",
-    "minutes_since_session": 148,
+    "last_session_date": "2026-06-16T05:00:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -40,12 +40,6 @@
       "name": "Temple of Unicorns \u2014 Brand Design System",
       "status": "queued",
       "position": 4
-    },
-    {
-      "id": "INI-072",
-      "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
-      "status": "queued",
-      "position": 5
     }
   ],
   "ceo_actions": [],
@@ -124,6 +118,11 @@
       {
         "id": "INI-067",
         "name": "Human Creativity in the Age of AI \u2014 Dyson Hope"
+      },
+      {
+        "id": "INI-072",
+        "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
+        "notes": "Recommended next pull for the Ray Graystone track; reads from project-bible.md"
       },
       {
         "id": "INI-073",
