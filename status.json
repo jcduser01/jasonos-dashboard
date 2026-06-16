@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T22:29:31Z",
+  "generated_at": "2026-06-16T22:31:32Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-16T22:00:00Z",
-    "minutes_since_session": 29,
+    "minutes_since_session": 31,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -75,21 +75,9 @@
     },
     {
       "id": "ACT-HO-6",
-      "category": "required",
-      "label": "Operations \u2014 Drive backup upload failure",
-      "context": "recurring"
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Client-repo .gitignore",
-      "context": "CLOSED, no action (2026-06-16): pre-commit hooks are the control; per-repo .gitignore PRs are cosmetic. Reopen only if a"
-    },
-    {
-      "id": "ACT-HO-8",
-      "category": "required",
+      "category": "low",
       "label": "Briefing-thinning transition",
-      "context": "DEFERRED to 2026-06-23: retire the SEC-001/OPS-001 daily-briefing checks into the report-triage register after one clean"
+      "context": "low priority"
     }
   ],
   "directors": [
