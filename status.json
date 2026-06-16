@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T20:29:29Z",
+  "generated_at": "2026-06-16T20:41:31Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
@@ -9,8 +9,8 @@
     "backlog": 21
   },
   "operational": {
-    "last_session_date": "2026-06-16T17:15:00Z",
-    "minutes_since_session": 194,
+    "last_session_date": "2026-06-16T20:40:00Z",
+    "minutes_since_session": 1,
     "airlock_queue": 11,
     "airlock_bundles": 1
   },
@@ -45,15 +45,69 @@
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
-      "category": "low",
-      "label": "Client-repo .gitignore",
-      "context": "low priority; optional per-repo PRs under the fork model (code/dishnbeats, code/jasoncookdesign.github.io); pre-commit h"
+      "category": "required",
+      "label": "PCR-GOV-001",
+      "context": "Near-miss tracking: add a pre-incident severity level + report variant + Steward review. Recommendation: approve all thr"
     },
     {
       "id": "ACT-HO-2",
-      "category": "low",
+      "category": "required",
+      "label": "PCR-GOV-002",
+      "context": "Director log-entry format standard. Recommendation: approve all three changes."
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "REM-001",
+      "context": "Stale untracked workload file workloads/active/eng-fix-dashboard-publisher-and-obs-batch.md (completed copy exists). Dec"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "INI-070",
+      "context": "Equity Research macro skill: authorize a PCR for the new equity-research.md capability before Engineering builds it."
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "INI-071",
+      "context": "Investment Discovery & Screening: confirm fast-follow scope (gated on INI-070 core proven)."
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "INI-009",
+      "context": "Venture Portfolio Activation: approve the Capital Allocation carve-out PCR before the Venture Director operates that sco"
+    },
+    {
+      "id": "ACT-HO-7",
+      "category": "required",
+      "label": "Operations \u2014 Drive backup upload failure",
+      "context": "recurring"
+    },
+    {
+      "id": "ACT-HO-8",
+      "category": "required",
+      "label": "Airlock",
+      "context": "Airlock/backup-staging/ holds the staged 749 KB snapshot + build scripts (pending the INI-075 decision above; clear afte"
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "KB inbox",
+      "context": "knowledge/jasonos-vault/inbox/ holds 3 staged files + the ray-graystone-INI-049/ staging dir (INI-049 closed); safe to d"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "Client-repo .gitignore",
+      "context": "optional per-repo PRs under the fork model (code/dishnbeats, code/jasoncookdesign.github.io); pre-commit hooks already i"
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
       "label": "Briefing-thinning transition",
-      "context": "low priority; retire the SEC-001/OPS-001 daily-briefing checks into the report-triage register after the sweep runs one "
+      "context": "retire the SEC-001/OPS-001 daily-briefing checks into the report-triage register after the sweep runs one clean weekly c"
     }
   ],
   "directors": [
