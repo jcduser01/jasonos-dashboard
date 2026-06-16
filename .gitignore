@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build output
+dist/
+build/
+.cache/
+
+# Logs
+*.log
+
+# Python bytecode (generator scripts)
+__pycache__/
+*.py[cod]
+
+# Environment
+.env
+.env.*
+
+# Secrets (PCR-SEC-002 — never tracked)
+.jasonos-secrets
+*.secrets
