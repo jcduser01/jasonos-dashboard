@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T14:15:44Z",
+  "generated_at": "2026-06-17T14:30:44Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T06:24:34Z",
-    "minutes_since_session": 471,
+    "minutes_since_session": 486,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -138,7 +138,7 @@
       "id": "ACT-INI-075",
       "category": "required",
       "label": "INI-075",
-      "context": "In Current. CEO decided 2026-06-17: D1 = user OAuth + drive.file scope; D2 = short credential PCR enacted with the build. Security Steward dispatched to validate Option B (build gate). On Steward clea"
+      "context": "Security Steward CLEARED the Phase-2 build gate 2026-06-17 (no High/Critical; controls RC-1..RC-6, D1=Option B validated). CEO action: one-time Google OAuth consent (jcduser01, drive.file scope only) "
     },
     {
       "id": "ACT-HO-1",
