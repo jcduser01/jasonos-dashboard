@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T04:44:59Z",
+  "generated_at": "2026-06-17T04:52:20Z",
   "schema_version": "4",
   "generator_version": "2.1",
   "stats": {
@@ -11,7 +11,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 110,
+    "minutes_since_session": 117,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -70,25 +70,25 @@
       "id": "ACT-INI-009",
       "category": "required",
       "label": "INI-009",
-      "context": "Venture Portfolio Activation \u2014 approve the Capital Allocation carve-out PCR before the Venture Director operates that scope."
+      "context": "Approve the Capital Allocation carve-out PCR before the Venture Director operates that scope."
     },
     {
       "id": "ACT-INI-070",
       "category": "required",
       "label": "INI-070",
-      "context": "Equity Research macro skill \u2014 authorize the PCR for the new equity-research.md capability before Engineering builds it."
+      "context": "Authorize a PCR for the new equity-research.md capability before Engineering builds the skill."
     },
     {
       "id": "ACT-INI-071",
       "category": "required",
       "label": "INI-071",
-      "context": "Investment Discovery & Screening \u2014 confirm fast-follow scope (gated on INI-070 core proven)."
+      "context": "Confirm fast-follow scope (gated on INI-070 core proven)."
     },
     {
       "id": "ACT-INI-075",
       "category": "required",
       "label": "INI-075",
-      "context": "Drive uploader \u2014 architecture approved; pull from Backlog to Current to build (gate = Phase-1 Drive-credential Security Steward review)."
+      "context": "Architecture approved; pull from Backlog to Current to build (gate = Phase-1 Drive-credential Security Steward review)."
     },
     {
       "id": "ACT-HO-1",
