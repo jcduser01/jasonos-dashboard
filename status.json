@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T03:03:50Z",
+  "generated_at": "2026-06-17T03:07:05Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 8,
+    "minutes_since_session": 12,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -52,29 +52,35 @@
     {
       "id": "ACT-HO-2",
       "category": "required",
+      "label": "PCR-OPS-010",
+      "context": "DoD verification before initiative closure: add a DoD-verification step to the Initiative Closure Protocol requiring evi"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
       "label": "INI-070",
       "context": "Equity Research macro skill: authorize a PCR for the new equity-research.md capability before Engineering builds it."
     },
     {
-      "id": "ACT-HO-3",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "INI-071",
       "context": "Investment Discovery & Screening: confirm fast-follow scope (gated on INI-070 core proven)."
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-5",
       "category": "required",
       "label": "INI-009",
       "context": "Venture Portfolio Activation: approve the Capital Allocation carve-out PCR before the Venture Director operates that sco"
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "INI-075",
       "context": "Drive uploader: architecture path approved (precommand-invoked direct-to-Drive uploader); still Backlog \u2014 pulling it to "
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-7",
       "category": "low",
       "label": "Briefing-thinning transition",
       "context": "low priority"
