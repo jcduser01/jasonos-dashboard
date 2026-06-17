@@ -1,17 +1,18 @@
 {
-  "generated_at": "2026-06-17T05:45:00Z",
-  "schema_version": "4",
-  "generator_version": "2.1",
+  "generated_at": "2026-06-17T05:47:49Z",
+  "schema_version": "5",
+  "generator_version": "2.2",
   "stats": {
     "done": 56,
     "total": 79,
     "active": 1,
     "queued": 4,
-    "backlog": 18
+    "paused": 2,
+    "backlog": 16
   },
   "operational": {
     "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 170,
+    "minutes_since_session": 172,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -99,12 +100,13 @@
   ],
   "handoff_drift": {},
   "status_drift": [],
+  "category_drift": [],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-13T23:10:44Z",
-      "invocations_30d": 22
+      "last_active": "2026-06-16T23:59:40Z",
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
@@ -145,35 +147,45 @@
     {
       "name": "creative-director",
       "display": "Creative",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-13T19:00:00Z",
+      "invocations_30d": 3
     }
   ],
-  "backlog": {
+  "paused": {
     "client_work": [
-      {
-        "id": "INI-009",
-        "name": "Venture Portfolio Activation"
-      },
       {
         "id": "INI-043",
         "name": "Dish n' BEATS \u2014 Brand Design System"
-      },
+      }
+    ],
+    "infrastructure": [
+      {
+        "id": "INI-011",
+        "name": "Distributed Compute Architecture",
+        "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node"
+      }
+    ]
+  },
+  "backlog": {
+    "client_work": [
       {
         "id": "INI-064",
         "name": "Jason Cook Design \u2014 Blog Infrastructure"
       },
       {
         "id": "INI-065",
-        "name": "Dyson Hope \u2014 Blog Infrastructure"
+        "name": "Dyson Hope \u2014 Blog Infrastructure",
+        "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
       },
       {
         "id": "INI-066",
-        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design"
+        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
+        "notes": "Pending: INI-064 (blog infrastructure) for publication; drafting unblocked"
       },
       {
         "id": "INI-067",
-        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope"
+        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
+        "notes": "Pending: INI-065 (blog infrastructure) for written supplement; video drafting unblocked"
       },
       {
         "id": "INI-072",
@@ -191,11 +203,11 @@
         "notes": "Deferred \u2014 open only when a draft exists."
       }
     ],
-    "digital_office": [
+    "infrastructure": [
       {
-        "id": "INI-011",
-        "name": "Distributed Compute Architecture",
-        "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node"
+        "id": "INI-009",
+        "name": "Venture Portfolio Activation",
+        "notes": "Capital Allocation carve-out PCR required before VD operates that scope"
       },
       {
         "id": "INI-039",
@@ -208,27 +220,33 @@
       },
       {
         "id": "INI-070",
-        "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation"
+        "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
+        "notes": "New capability `equity-research.md` via PCR; soft dependency: INI-009"
       },
       {
         "id": "INI-071",
-        "name": "Investment Discovery & Screening \u2014 Candidate Front Door"
+        "name": "Investment Discovery & Screening \u2014 Candidate Front Door",
+        "notes": "Pending: INI-070 core proven (fast-follow)"
       },
       {
         "id": "INI-075",
-        "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core"
+        "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core",
+        "notes": "Pending: Drive credential model + Security Steward review; builds on PCR-OPS-003"
       },
       {
         "id": "INI-076",
-        "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini"
+        "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
+        "notes": "Enables: INI-011 Phase 4 routing model; INI-039 embedding layer"
       },
       {
         "id": "INI-079",
-        "name": "PCR Enactment Pre-Flight Verification"
+        "name": "PCR Enactment Pre-Flight Verification",
+        "notes": "Form: checklist item (decided 2026-06-16)"
       },
       {
         "id": "INI-080",
-        "name": "Definition-of-Done Verification Before Initiative Closure"
+        "name": "Definition-of-Done Verification Before Initiative Closure",
+        "notes": "Form: checklist item (decided 2026-06-16)"
       }
     ]
   }
