@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-17T14:00:28Z",
+  "generated_at": "2026-06-17T14:15:44Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 56,
     "total": 79,
-    "active": 4,
+    "active": 6,
     "queued": 4,
     "paused": 2,
-    "backlog": 13
+    "backlog": 11
   },
   "operational": {
     "last_session_date": "2026-06-17T06:24:34Z",
-    "minutes_since_session": 455,
-    "airlock_queue": 3,
-    "airlock_bundles": 1
+    "minutes_since_session": 471,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-060",
@@ -28,8 +28,18 @@
       "status": "active"
     },
     {
+      "id": "INI-063",
+      "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
+      "status": "active"
+    },
+    {
       "id": "INI-075",
       "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core",
+      "status": "active"
+    },
+    {
+      "id": "INI-076",
+      "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
       "status": "active"
     },
     {
@@ -171,8 +181,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-06-12T16:05:25Z",
-      "invocations_30d": 1
+      "last_active": "2026-06-17T09:08:59Z",
+      "invocations_30d": 2
     },
     {
       "name": "research-director",
@@ -263,10 +273,6 @@
         "notes": "Pull after: vault ~50 articles"
       },
       {
-        "id": "INI-063",
-        "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock"
-      },
-      {
         "id": "INI-070",
         "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
         "notes": "New capability `equity-research.md` via PCR; soft dependency: INI-009"
@@ -275,11 +281,6 @@
         "id": "INI-071",
         "name": "Investment Discovery & Screening \u2014 Candidate Front Door",
         "notes": "Pending: INI-070 core proven (fast-follow)"
-      },
-      {
-        "id": "INI-076",
-        "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
-        "notes": "Enables: INI-011 Phase 4 routing model; INI-039 embedding layer"
       }
     ]
   }
