@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-17T03:44:58Z",
+  "generated_at": "2026-06-17T03:59:58Z",
   "schema_version": "3",
   "stats": {
-    "done": 51,
-    "total": 77,
+    "done": 55,
+    "total": 79,
     "active": 0,
     "queued": 4,
-    "backlog": 17
+    "backlog": 19
   },
   "operational": {
     "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 50,
+    "minutes_since_session": 65,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -84,6 +84,18 @@
       "category": "low",
       "label": "Briefing-thinning transition",
       "context": "low priority"
+    },
+    {
+      "id": "ACT-INI-079",
+      "category": "action",
+      "label": "decided",
+      "context": ""
+    },
+    {
+      "id": "ACT-INI-080",
+      "category": "action",
+      "label": "decided",
+      "context": ""
     }
   ],
   "directors": [
@@ -212,6 +224,14 @@
       {
         "id": "INI-078",
         "name": "Dashboard Generator \u2014 Direct Source Reading for CEO Actions"
+      },
+      {
+        "id": "INI-079",
+        "name": "PCR Enactment Pre-Flight Verification"
+      },
+      {
+        "id": "INI-080",
+        "name": "Definition-of-Done Verification Before Initiative Closure"
       }
     ]
   }
