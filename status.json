@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T13:30:27Z",
+  "generated_at": "2026-06-17T13:45:27Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T06:24:34Z",
-    "minutes_since_session": 425,
+    "minutes_since_session": 440,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -71,6 +71,18 @@
   ],
   "ceo_actions": [
     {
+      "id": "ACT-PCR-OPS-012",
+      "category": "required",
+      "label": "PCR-OPS-012",
+      "context": "Risk-Class Staging Lanes for Concurrent Git (Audit-Before-Promotion)"
+    },
+    {
+      "id": "ACT-PCR-OPS-013",
+      "category": "required",
+      "label": "PCR-OPS-013",
+      "context": "Backup Coverage Freshness \u2014 Glob-with-Denylist Scope + Shared Coverage-Reconciliation"
+    },
+    {
       "id": "ACT-GAP-019",
       "category": "required",
       "label": "GAP-019",
@@ -128,7 +140,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 3,
-      "files": 0
+      "files": 2
     },
     "gaps": {
       "handoff": 0,
