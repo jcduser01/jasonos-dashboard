@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-06-17T04:15:01Z",
-  "schema_version": "3",
+  "generated_at": "2026-06-17T04:27:22Z",
+  "schema_version": "4",
+  "generator_version": "2.0",
   "stats": {
     "done": 55,
     "total": 79,
@@ -10,7 +11,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 80,
+    "minutes_since_session": 92,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -44,60 +45,49 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-HO-1",
+      "id": "ACT-PCR-OPS-009",
       "category": "required",
       "label": "PCR-OPS-009",
-      "context": "PCR-enactment pre-flight verification: verify a PCR's Documents-Affected list against the actual repo structure before a"
+      "context": "PCR Enactment Pre-Flight Verification"
     },
     {
-      "id": "ACT-HO-2",
+      "id": "ACT-PCR-OPS-010",
       "category": "required",
       "label": "PCR-OPS-010",
-      "context": "DoD verification before initiative closure: add a DoD-verification step to the Initiative Closure Protocol requiring evi"
+      "context": "Definition-of-Done Verification Before Initiative Closure"
     },
     {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "INI-070",
-      "context": "Equity Research macro skill: authorize a PCR for the new equity-research.md capability before Engineering builds it."
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "INI-071",
-      "context": "Investment Discovery & Screening: confirm fast-follow scope (gated on INI-070 core proven)."
-    },
-    {
-      "id": "ACT-HO-5",
+      "id": "ACT-INI-009",
       "category": "required",
       "label": "INI-009",
-      "context": "Venture Portfolio Activation: approve the Capital Allocation carve-out PCR before the Venture Director operates that sco"
+      "context": "Venture Portfolio Activation \u2014 approve the Capital Allocation carve-out PCR before the Venture Director operates that scope."
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-INI-070",
+      "category": "required",
+      "label": "INI-070",
+      "context": "Equity Research macro skill \u2014 authorize the PCR for the new equity-research.md capability before Engineering builds it."
+    },
+    {
+      "id": "ACT-INI-071",
+      "category": "required",
+      "label": "INI-071",
+      "context": "Investment Discovery & Screening \u2014 confirm fast-follow scope (gated on INI-070 core proven)."
+    },
+    {
+      "id": "ACT-INI-075",
       "category": "required",
       "label": "INI-075",
-      "context": "Drive uploader: architecture path approved (precommand-invoked direct-to-Drive uploader); still Backlog \u2014 pulling it to "
+      "context": "Drive uploader \u2014 architecture approved; pull from Backlog to Current to build (gate = Phase-1 Drive-credential Security Steward review)."
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-1",
       "category": "low",
       "label": "Briefing-thinning transition",
       "context": "low priority"
-    },
-    {
-      "id": "ACT-INI-079",
-      "category": "action",
-      "label": "decided",
-      "context": ""
-    },
-    {
-      "id": "ACT-INI-080",
-      "category": "action",
-      "label": "decided",
-      "context": ""
     }
   ],
+  "handoff_drift": {},
   "directors": [
     {
       "name": "engineering-director",
