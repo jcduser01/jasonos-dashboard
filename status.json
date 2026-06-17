@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T02:59:57Z",
+  "generated_at": "2026-06-17T03:03:50Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
@@ -10,7 +10,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 5,
+    "minutes_since_session": 8,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -78,120 +78,6 @@
       "category": "low",
       "label": "Briefing-thinning transition",
       "context": "low priority"
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "PCR-GOV-001 review",
-      "context": "Near-miss tracking PCR awaiting CEO approve/reject/defer. At governance/pcrs/open/PCR-GOV-001-near-miss-tracking.md"
-    },
-    {
-      "id": "ACT-HO-8",
-      "category": "required",
-      "label": "PCR-GOV-002 review",
-      "context": "Director log format standard PCR awaiting CEO approve/reject/defer. At governance/pcrs/open/PCR-GOV-002-director-log-for"
-    },
-    {
-      "id": "ACT-HO-9",
-      "category": "required",
-      "label": "PCR-FIN-001 file relocation",
-      "context": "Phase 1 committed (87dc9ea) but physical PCR file remains at governance/pcrs/open/ due to relay pathspec bug (precommand"
-    },
-    {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "PCR-GOV-001 \u2014 Approve/reject/defer",
-      "context": "Near-miss tracking: adds a pre-incident severity level to incident tables in governance-manual.md and sandbox-operating-"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "PCR-GOV-002 \u2014 Approve/reject/defer",
-      "context": "Director log format standard: creates operations/log-entry-standard.md defining required entry fields (timestamp, action"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "PCR-GOV-003 \u2014 Approve/reject/defer",
-      "context": "Gap register restructure: replaces the monolithic governance/policy-gap-register.md with individual files under governan"
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "confirm",
-      "label": "Review PCR-GOV-001",
-      "context": "Near-miss tracking: add Near-Miss severity level to incident tables in governance/governance-manual.md + operations/sand"
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "confirm",
-      "label": "Review PCR-GOV-002",
-      "context": "Director log format standard: create operations/log-entry-standard.md (4-field format); add pointer to governance-manual"
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "PCR-OPS-008",
-      "context": "Review the asset\u2194deployed-task drift-detection stub: approve the standing drift check + deploy-convention update across "
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "low",
-      "label": "REM-001 cleanup",
-      "context": "Authorize Engineering Director to delete stale workloads/active/eng-fix-dashboard-publisher-and-obs-batch.md via relay c"
-    },
-    {
-      "id": "ACT-HO-17",
-      "category": "required",
-      "label": "Redeploy the ED subagent definition",
-      "context": "so the load-time discipline pointer goes live: cp /Volumes/SandboxData/agents/engineering-director.md ~/.claude/agents/e"
-    },
-    {
-      "id": "ACT-HO-18",
-      "category": "required",
-      "label": "Live behavioral validation (Phase 3 finish)",
-      "context": "run one ED coding task on the Mac mini and confirm TDD + systematic-debugging behavior is observable; report any complia"
-    },
-    {
-      "id": "ACT-HO-19",
-      "category": "required",
-      "label": "Governance-repo drift cleanup",
-      "context": "approve committing the six stale open/ deletions (5 PCRs + GAP-017) and dispositioning the relay git-mv-deletion defect "
-    },
-    {
-      "id": "ACT-HO-20",
-      "category": "required",
-      "label": "Decide the INI-060 enforcement path",
-      "context": "a"
-    },
-    {
-      "id": "ACT-HO-21",
-      "category": "required",
-      "label": "Install the enforcement layer on the Mac mini",
-      "context": "run /Volumes/SandboxData/Governance/digital-organization-governance/operations/bin/jasonos-tdd-guard-activate.command, t"
-    },
-    {
-      "id": "ACT-HO-22",
-      "category": "required",
-      "label": "Re-validate INI-060",
-      "context": "re-run the controlled validation task (/Users/jcduser01/Claude/Projects/JasonOS/INI-060-ED-validation-task.md). Close IN"
-    },
-    {
-      "id": "ACT-HO-23",
-      "category": "required",
-      "label": "INI-060 \u2014 redeploy + re-validate (to close)",
-      "context": "run agents/install-all.sh on the mini to redeploy the updated ED subagent def, then run the Enforcement Probe + validati"
-    },
-    {
-      "id": "ACT-HO-24",
-      "category": "required",
-      "label": "PCR-OPS-010 (Draft)",
-      "context": "DoD verification before initiative closure: approve adding a DoD-verification step to the Initiative Closure Protocol; c"
-    },
-    {
-      "id": "ACT-HO-25",
-      "category": "required",
-      "label": "PCR-OPS-009 (Draft, pre-existing)",
-      "context": "PCR-enactment pre-flight verification: approve + choose form (checklist vs. scripted gate)."
     }
   ],
   "directors": [
