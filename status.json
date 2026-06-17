@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T13:45:27Z",
+  "generated_at": "2026-06-17T14:00:28Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T06:24:34Z",
-    "minutes_since_session": 440,
+    "minutes_since_session": 455,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -128,7 +128,7 @@
       "id": "ACT-INI-075",
       "category": "required",
       "label": "INI-075",
-      "context": "In Current (pulled 2026-06-17). Security Steward Drive-credential review ordered (build gate, workload dispatched). After the review, CEO decides D1 (service account vs. user OAuth) + D2 (new-credenti"
+      "context": "In Current. CEO decided 2026-06-17: D1 = user OAuth + drive.file scope; D2 = short credential PCR enacted with the build. Security Steward dispatched to validate Option B (build gate). On Steward clea"
     },
     {
       "id": "ACT-HO-1",
