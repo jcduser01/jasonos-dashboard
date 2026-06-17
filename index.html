@@ -405,6 +405,8 @@
     #queue-panel           { flex: 1; min-width: 200px; }
     #directors-panel       { width: 100%; }
 
+    #paused-client-panel   { flex: 1; min-width: 200px; }
+    #paused-infra-panel    { flex: 1; min-width: 200px; }
     #backlog-client-panel  { flex: 1; min-width: 200px; }
     #backlog-digital-panel { flex: 1; min-width: 200px; }
   }
@@ -487,15 +489,27 @@
     <div id="directors-body"></div>
   </div>
 
+  <!-- Paused: Client Work (hidden when empty) -->
+  <div id="paused-client-panel" class="panel" style="display:none;">
+    <div class="panel-label">Paused — Client Work</div>
+    <div id="paused-client-body"></div>
+  </div>
+
+  <!-- Paused: Infrastructure (hidden when empty) -->
+  <div id="paused-infra-panel" class="panel" style="display:none;">
+    <div class="panel-label">Paused — Infrastructure</div>
+    <div id="paused-infra-body"></div>
+  </div>
+
   <!-- Backlog: Client Work -->
   <div id="backlog-client-panel" class="panel">
     <div class="panel-label">Client Work Backlog</div>
     <div id="backlog-client-body"></div>
   </div>
 
-  <!-- Backlog: Digital Office -->
+  <!-- Backlog: Infrastructure -->
   <div id="backlog-digital-panel" class="panel">
-    <div class="panel-label">Digital Office Backlog</div>
+    <div class="panel-label">Infrastructure Backlog</div>
     <div id="backlog-digital-body"></div>
   </div>
 
@@ -784,9 +798,25 @@
     renderActive(data.active_initiative, data.active_initiatives);
     renderQueue(data.queue);
     renderDirectors(data.directors);
+    renderPaused(data.paused || {});
     var backlog = data.backlog || {};
-    renderBacklog(backlog.client_work,    "backlog-client-body");
-    renderBacklog(backlog.digital_office, "backlog-digital-body");
+    renderBacklog(backlog.client_work,                            "backlog-client-body");
+    renderBacklog(backlog.infrastructure || backlog.digital_office, "backlog-digital-body");
+  }
+
+  /* Paused initiatives — own container between Next and Backlog, split by
+     category. Each panel is shown only when it has items. */
+  function renderPaused(paused) {
+    var groups = [
+      { items: paused.client_work,                          panel: "paused-client-panel", body: "paused-client-body" },
+      { items: paused.infrastructure || paused.digital_office, panel: "paused-infra-panel",  body: "paused-infra-body" }
+    ];
+    groups.forEach(function (g) {
+      var items = g.items || [];
+      var panelEl = document.getElementById(g.panel);
+      if (panelEl) panelEl.style.display = items.length ? "" : "none";
+      if (items.length) renderBacklog(items, g.body);
+    });
   }
 
   /* ── Fetch & schedule ────────────────────────────────────────── */
