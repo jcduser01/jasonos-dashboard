@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-17T13:00:25Z",
+  "generated_at": "2026-06-17T13:15:34Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 56,
     "total": 79,
-    "active": 1,
+    "active": 4,
     "queued": 4,
     "paused": 2,
-    "backlog": 16
+    "backlog": 13
   },
   "operational": {
     "last_session_date": "2026-06-17T06:24:34Z",
-    "minutes_since_session": 395,
+    "minutes_since_session": 411,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -25,6 +25,21 @@
     {
       "id": "INI-060",
       "name": "Engineering Director \u2014 TDD and Systematic Debugging Discipline",
+      "status": "active"
+    },
+    {
+      "id": "INI-075",
+      "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core",
+      "status": "active"
+    },
+    {
+      "id": "INI-079",
+      "name": "PCR Enactment Pre-Flight Verification",
+      "status": "active"
+    },
+    {
+      "id": "INI-080",
+      "name": "Definition-of-Done Verification Before Initiative Closure",
       "status": "active"
     }
   ],
@@ -55,24 +70,6 @@
     }
   ],
   "ceo_actions": [
-    {
-      "id": "ACT-PCR-OPS-009",
-      "category": "required",
-      "label": "PCR-OPS-009",
-      "context": "PCR Enactment Pre-Flight Verification"
-    },
-    {
-      "id": "ACT-PCR-OPS-010",
-      "category": "required",
-      "label": "PCR-OPS-010",
-      "context": "Definition-of-Done Verification Before Initiative Closure"
-    },
-    {
-      "id": "ACT-PCR-OPS-011",
-      "category": "required",
-      "label": "PCR-OPS-011",
-      "context": "Initiative Data Contract + Shared-Contract Change Discipline"
-    },
     {
       "id": "ACT-REM-002",
       "category": "required",
@@ -113,7 +110,7 @@
       "id": "ACT-INI-075",
       "category": "required",
       "label": "INI-075",
-      "context": "Architecture approved; pull from Backlog to Current to build (gate = Phase-1 Drive-credential Security Steward review)."
+      "context": "In Current (pulled 2026-06-17). Security Steward Drive-credential review ordered (build gate, workload dispatched). After the review, CEO decides D1 (service account vs. user OAuth) + D2 (new-credenti"
     },
     {
       "id": "ACT-HO-1",
@@ -122,7 +119,12 @@
       "context": "low priority"
     }
   ],
-  "handoff_drift": {},
+  "handoff_drift": {
+    "pcrs": {
+      "handoff": 3,
+      "files": 0
+    }
+  },
   "status_drift": [],
   "category_drift": [],
   "directors": [
@@ -253,24 +255,9 @@
         "notes": "Pending: INI-070 core proven (fast-follow)"
       },
       {
-        "id": "INI-075",
-        "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core",
-        "notes": "Pending: Drive credential model + Security Steward review; builds on PCR-OPS-003"
-      },
-      {
         "id": "INI-076",
         "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
         "notes": "Enables: INI-011 Phase 4 routing model; INI-039 embedding layer"
-      },
-      {
-        "id": "INI-079",
-        "name": "PCR Enactment Pre-Flight Verification",
-        "notes": "Form: checklist item (decided 2026-06-16)"
-      },
-      {
-        "id": "INI-080",
-        "name": "Definition-of-Done Verification Before Initiative Closure",
-        "notes": "Form: checklist item (decided 2026-06-16)"
       }
     ]
   }
