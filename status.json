@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T02:44:57Z",
+  "generated_at": "2026-06-17T02:56:03Z",
   "schema_version": "3",
   "stats": {
     "done": 50,
@@ -9,8 +9,8 @@
     "backlog": 21
   },
   "operational": {
-    "last_session_date": "2026-06-16T23:28:35Z",
-    "minutes_since_session": 196,
+    "last_session_date": "2026-06-17T02:54:51Z",
+    "minutes_since_session": 1,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -156,6 +156,42 @@
       "category": "required",
       "label": "Governance-repo drift cleanup",
       "context": "approve committing the six stale open/ deletions (5 PCRs + GAP-017) and dispositioning the relay git-mv-deletion defect "
+    },
+    {
+      "id": "ACT-HO-20",
+      "category": "required",
+      "label": "Decide the INI-060 enforcement path",
+      "context": "a"
+    },
+    {
+      "id": "ACT-HO-21",
+      "category": "required",
+      "label": "Install the enforcement layer on the Mac mini",
+      "context": "run /Volumes/SandboxData/Governance/digital-organization-governance/operations/bin/jasonos-tdd-guard-activate.command, t"
+    },
+    {
+      "id": "ACT-HO-22",
+      "category": "required",
+      "label": "Re-validate INI-060",
+      "context": "re-run the controlled validation task (/Users/jcduser01/Claude/Projects/JasonOS/INI-060-ED-validation-task.md). Close IN"
+    },
+    {
+      "id": "ACT-HO-23",
+      "category": "required",
+      "label": "INI-060 \u2014 redeploy + re-validate (to close)",
+      "context": "run agents/install-all.sh on the mini to redeploy the updated ED subagent def, then run the Enforcement Probe + validati"
+    },
+    {
+      "id": "ACT-HO-24",
+      "category": "required",
+      "label": "PCR-OPS-010 (Draft)",
+      "context": "DoD verification before initiative closure: approve adding a DoD-verification step to the Initiative Closure Protocol; c"
+    },
+    {
+      "id": "ACT-HO-25",
+      "category": "required",
+      "label": "PCR-OPS-009 (Draft, pre-existing)",
+      "context": "PCR-enactment pre-flight verification: approve + choose form (checklist vs. scripted gate)."
     }
   ],
   "directors": [
