@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T14:30:44Z",
+  "generated_at": "2026-06-17T14:45:44Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-17T06:24:34Z",
-    "minutes_since_session": 486,
+    "minutes_since_session": 501,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -93,6 +93,12 @@
       "context": "Backup Coverage Freshness \u2014 Glob-with-Denylist Scope + Shared Coverage-Reconciliation"
     },
     {
+      "id": "ACT-PCR-OPS-014",
+      "category": "required",
+      "label": "PCR-OPS-014",
+      "context": "Agent Dispatcher \u2014 Per-Request Queue + Guaranteed Drain (Concurrency Isolation)"
+    },
+    {
       "id": "ACT-GAP-019",
       "category": "required",
       "label": "GAP-019",
@@ -148,10 +154,6 @@
     }
   ],
   "handoff_drift": {
-    "pcrs": {
-      "handoff": 3,
-      "files": 2
-    },
     "gaps": {
       "handoff": 0,
       "files": 1
@@ -163,8 +165,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-16T23:59:40Z",
-      "invocations_30d": 25
+      "last_active": "2026-06-17T09:43:06Z",
+      "invocations_30d": 26
     },
     {
       "name": "operations-director",
