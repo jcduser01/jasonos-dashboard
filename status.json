@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T08:45:10Z",
+  "generated_at": "2026-06-17T09:00:10Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 16
   },
   "operational": {
-    "last_session_date": "2026-06-17T02:54:51Z",
-    "minutes_since_session": 350,
+    "last_session_date": "2026-06-17T06:24:34Z",
+    "minutes_since_session": 155,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -122,12 +122,7 @@
       "context": "low priority"
     }
   ],
-  "handoff_drift": {
-    "pcrs": {
-      "handoff": 2,
-      "files": 3
-    }
-  },
+  "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
   "directors": [
