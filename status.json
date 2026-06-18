@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-18T18:18:01Z",
+  "generated_at": "2026-06-18T18:32:56Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 61,
+    "done": 62,
     "total": 84,
-    "active": 5,
+    "active": 4,
     "queued": 4,
     "paused": 11,
     "backlog": 3
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 932,
+    "minutes_since_session": 946,
     "airlock_queue": 1,
     "airlock_bundles": 1
   },
@@ -35,11 +35,6 @@
     {
       "id": "INI-076",
       "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
-      "status": "active"
-    },
-    {
-      "id": "INI-082",
-      "name": "Backup Coverage Freshness \u2014 Glob-with-Denylist + Shared Reconciliation",
       "status": "active"
     },
     {
