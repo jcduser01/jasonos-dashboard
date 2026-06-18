@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-18T19:33:07Z",
+  "generated_at": "2026-06-18T19:44:49Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 62,
     "total": 85,
-    "active": 5,
+    "active": 6,
     "queued": 4,
     "paused": 11,
-    "backlog": 3
+    "backlog": 2
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 1007,
+    "minutes_since_session": 1018,
     "airlock_queue": 1,
     "airlock_bundles": 1
   },
@@ -40,6 +40,11 @@
     {
       "id": "INI-084",
       "name": "Dashboard Waiting-On Clarity \u2014 Structured blocked_by + waiting_on + Drift Guard",
+      "status": "active"
+    },
+    {
+      "id": "INI-085",
+      "name": "Video Pipeline \u2014 AI Pre-Editing Pipeline for Instagram Reels",
       "status": "active"
     },
     {
@@ -224,12 +229,6 @@
         "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-085",
-        "name": "Video Pipeline \u2014 AI Pre-Editing Pipeline for Instagram Reels",
-        "notes": "Shaped with the CEO in a Cowork session (brief: architecture/video-pipeline/shaping-brief.md). CEO-operated tooling: code is governed, executed via narrowly-scoped Claude Code on the daily driver Ono-Sendai, OUTSIDE the director perimeter. Held in Backlog 2026-06-18 \u2014 CEO pulls when ready. NOT suitable for the batch-engineering runner: Phase 1 scaffolds a NEW external repo code/video-pipeline (push: fork), outside the runner's governance-staged-lane contract; dispatch to Engineering directly on pull."
-      }
-    ]
+    "infrastructure": []
   }
 }
