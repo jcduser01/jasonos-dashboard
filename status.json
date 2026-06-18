@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T03:31:23Z",
+  "generated_at": "2026-06-18T03:39:41Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 45,
+    "minutes_since_session": 53,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -75,24 +75,6 @@
       "category": "required",
       "label": "GAP-019",
       "context": "Backup coverage is a static allowlist; new knowledge material silently falls out of scope"
-    },
-    {
-      "id": "ACT-REM-002",
-      "category": "required",
-      "label": "REM-002",
-      "context": "KB weekly Drive backup blocked by inline-upload transport ceiling"
-    },
-    {
-      "id": "ACT-REM-003",
-      "category": "required",
-      "label": "REM-003",
-      "context": "Logs backup: per-file rotation does not bound aggregate volume; no faithful sandbox transport; junk files in source_spec"
-    },
-    {
-      "id": "ACT-REM-004",
-      "category": "required",
-      "label": "REM-004",
-      "context": "KB backup workload under-specifies scope: `decisions/` and `clients/` are not backed up"
     },
     {
       "id": "ACT-HO-1",
