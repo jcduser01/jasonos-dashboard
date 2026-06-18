@@ -2,6 +2,11 @@
 
 Static GitHub Pages dashboard for passive CEO monitoring of the JasonOS digital office. Served at `https://jcduser01.github.io/jasonos-dashboard/`.
 
+Two renderers share one data source (`status.json`):
+
+- **Standard** — `index.html` at the site root (`/`). Single-column, mobile-first, tuned for dated/low-spec devices (iPad Mini 2, Safari 12 / WebKit 607).
+- **Pro** — `pro/index.html` at `/pro/`. Fluid widescreen layout tuned for 1920×1080 modern browsers; more content above the fold, responsive down to phone width, with a light/dark toggle. See [Renderers](#renderers).
+
 ## Architecture
 
 ```
@@ -14,9 +19,29 @@ Mac mini (JasonOS)
 
 GitHub Pages
   └── https://jcduser01.github.io/jasonos-dashboard/
-        index.html fetches status.json on load + every 15 min
-        iPad Mini (Safari 12 / WebKit 607) reads the result
+        index.html      fetches status.json     on load + every 15 min   (standard)
+        pro/index.html  fetches ../status.json  on load + every 15 min   (pro)
+        clients read the result (standard: iPad Mini / Safari 12; pro: modern desktop)
 ```
+
+## Renderers
+
+Both renderers are pure static HTML/CSS/JS and consume the **same** `status.json` — the generator is unchanged and serves both. Adding or editing a renderer never requires a generator change.
+
+### Standard (`/`)
+Single-column, mobile-first. Optimized to fit an iPad Mini 2 in portrait. Landscape gets a light flex-wrap pass. This is the conservative target: no CSS Grid dependence beyond simple cases, large tap targets, minimal layout risk on old WebKit.
+
+### Pro (`/pro/`)
+Widescreen layout optimized for 1920×1080, fluid at any reasonable size.
+
+- **Shell** — a two-column flex layout: a fluid `#main` column plus a `position: sticky` rail (`clamp(360px, 25vw, 470px)`) that keeps **CEO Actions** and **Director Activity** in view while the main column scrolls. Below 1180px the rail drops beneath the main column.
+- **Above the fold** — KPI strip (6 tiles, including **Paused** which reads the existing `stats.paused`), then **Current** as a card grid, then a lower zone of **Next + Paused** stacked beside the **Client** and **Infrastructure** backlogs (each backlog in its own column so tall lists pack left-to-right instead of wrapping into a gap).
+- **Theme** — light/dark toggle in the header. Preference is stored in `localStorage` under `jasonos_theme`; with no stored preference it follows the OS `prefers-color-scheme`. Light/dark are defined as CSS custom-property sets on `:root` / `:root[data-theme="light"]`.
+- **Data path** — because the page lives one directory down, it fetches `../status.json`.
+
+Renderer-only fields (no generator dependency): the Pro renderer reuses every render function from the standard renderer verbatim, including its schema fallbacks (`backlog.infrastructure || backlog.digital_office`, `active_initiatives` → `active_initiative`, absent `paused`). It degrades gracefully against older schema shapes.
+
+Both renderers share the same `PASSWORD_HASH` and auth gate (see [Password Setup](#password-setup)).
 
 ## status.json Schema (version 1)
 

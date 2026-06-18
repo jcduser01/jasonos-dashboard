@@ -22,6 +22,23 @@
     --gap:         16px;
     --rail:        clamp(360px, 25vw, 470px);
     --maxw:        2100px;
+    color-scheme: dark;
+  }
+
+  /* ── Light theme overrides ───────────────────────────────────── */
+  :root[data-theme="light"] {
+    --bg:          #eef1f5;
+    --surface:     #ffffff;
+    --surface-2:   #f1f3f7;
+    --border:      #d7dce3;
+    --text:        #1a1d22;
+    --text-muted:  #5a626d;
+    --text-dim:    #8b929c;
+    --accent:      #1f6feb;
+    --warn:        #b76b00;
+    --danger:      #d12f2f;
+    --success:     #1f7a4d;
+    color-scheme: light;
   }
 
   /* ── Reset ───────────────────────────────────────────────────── */
@@ -97,10 +114,11 @@
 
   /* ── Header strip ────────────────────────────────────────────── */
   #header {
-    display: flex; align-items: baseline;
+    display: flex; align-items: center;
     justify-content: space-between; gap: 12px;
   }
-  #header-left { display: flex; align-items: baseline; gap: 12px; }
+  #header-left  { display: flex; align-items: baseline; gap: 12px; }
+  #header-right { display: flex; align-items: center; gap: 14px; }
   #header-title {
     font-size: 1.25rem; font-weight: 700; letter-spacing: 0.02em;
     color: var(--text);
@@ -115,6 +133,20 @@
     background: var(--warn); color: #000;
     padding: 2px 7px; border-radius: 4px; margin-left: 8px;
   }
+
+  /* ── Theme toggle ────────────────────────────────────────────── */
+  #theme-toggle {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text-muted);
+    cursor: pointer; padding: 7px; line-height: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  #theme-toggle:hover { color: var(--text); border-color: var(--accent); }
+  #theme-toggle svg { width: 17px; height: 17px; display: block; }
+  .icon-moon { display: none; }
+  :root[data-theme="light"] .icon-sun  { display: none; }
+  :root[data-theme="light"] .icon-moon { display: block; }
 
   /* ── Cards / panels ──────────────────────────────────────────── */
   .panel {
@@ -192,12 +224,22 @@
   .status-next   { background: rgba(76, 175, 125, 0.15); color: var(--success); }
   .status-none   { color: var(--text-muted); font-size: 0.9rem; }
 
-  /* ── Lower grid (queue / paused / backlog) ───────────────────── */
+  /* ── Lower zone (queue / paused / backlog) ───────────────────── */
+  /* Explicit balanced columns: the two tall backlogs each own a column
+     instead of wrapping, so the section packs left-to-right with no void.
+     Column 1 stacks the shorter Next + Paused panels. */
   #lower-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--gap);
-    align-items: start;
+    align-items: flex-start;
+  }
+  .lcol {
+    flex: 1 1 320px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
   }
 
   /* Queue */
@@ -323,9 +365,15 @@
         <div id="header-title">JasonOS</div>
         <div id="header-sub">Executive Briefing</div>
       </div>
-      <div id="header-meta">
-        <span id="last-updated">—</span>
-        <span id="staleness-badge">STALE</span>
+      <div id="header-right">
+        <div id="header-meta">
+          <span id="last-updated">—</span>
+          <span id="staleness-badge">STALE</span>
+        </div>
+        <button id="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle light / dark">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
       </div>
     </div>
 
@@ -347,32 +395,41 @@
       <div id="active-body"></div>
     </div>
 
-    <!-- Lower grid: queue + paused + backlog -->
+    <!-- Lower zone: column 1 = Next + Paused (short, stacked);
+         column 2 = Client backlog; column 3 = Infrastructure backlog. -->
     <div id="lower-grid">
-      <div id="queue-panel" class="panel">
-        <div class="panel-label">Next</div>
-        <div id="queue-body"></div>
+
+      <div class="lcol">
+        <div id="queue-panel" class="panel">
+          <div class="panel-label">Next</div>
+          <div id="queue-body"></div>
+        </div>
+
+        <div id="paused-client-panel" class="panel" style="display:none;">
+          <div class="panel-label">Paused — Client Work</div>
+          <div id="paused-client-body"></div>
+        </div>
+
+        <div id="paused-infra-panel" class="panel" style="display:none;">
+          <div class="panel-label">Paused — Infrastructure</div>
+          <div id="paused-infra-body"></div>
+        </div>
       </div>
 
-      <div id="paused-client-panel" class="panel" style="display:none;">
-        <div class="panel-label">Paused — Client Work</div>
-        <div id="paused-client-body"></div>
+      <div class="lcol">
+        <div id="backlog-client-panel" class="panel">
+          <div class="panel-label">Client Work Backlog</div>
+          <div id="backlog-client-body"></div>
+        </div>
       </div>
 
-      <div id="paused-infra-panel" class="panel" style="display:none;">
-        <div class="panel-label">Paused — Infrastructure</div>
-        <div id="paused-infra-body"></div>
+      <div class="lcol">
+        <div id="backlog-digital-panel" class="panel">
+          <div class="panel-label">Infrastructure Backlog</div>
+          <div id="backlog-digital-body"></div>
+        </div>
       </div>
 
-      <div id="backlog-client-panel" class="panel">
-        <div class="panel-label">Client Work Backlog</div>
-        <div id="backlog-client-body"></div>
-      </div>
-
-      <div id="backlog-digital-panel" class="panel">
-        <div class="panel-label">Infrastructure Backlog</div>
-        <div id="backlog-digital-body"></div>
-      </div>
     </div>
 
   </div><!-- /#main -->
@@ -401,6 +458,35 @@
   var STATUS_URL    = "../status.json";          /* pro/ lives one level below the artifact */
   var REFRESH_MS    = 15 * 60 * 1000;
   var STALE_MS      = 2  * 60 * 60 * 1000;
+
+  /* ── Theme (light / dark) ────────────────────────────────────── */
+  var THEME_KEY    = "jasonos_theme";
+  var themeToggle  = document.getElementById("theme-toggle");
+
+  function applyTheme(t) {
+    if (t === "light") { document.documentElement.setAttribute("data-theme", "light"); }
+    else               { document.documentElement.removeAttribute("data-theme"); }
+  }
+
+  function initTheme() {
+    var saved = null;
+    try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
+    if (saved === "light" || saved === "dark") { applyTheme(saved); return; }
+    var prefersLight = window.matchMedia &&
+                       window.matchMedia("(prefers-color-scheme: light)").matches;
+    applyTheme(prefersLight ? "light" : "dark");
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var isLight = document.documentElement.getAttribute("data-theme") === "light";
+      var next = isLight ? "dark" : "light";
+      applyTheme(next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    });
+  }
+
+  initTheme();
 
   /* ── Auth ────────────────────────────────────────────────────── */
   var authOverlay = document.getElementById("auth-overlay");
