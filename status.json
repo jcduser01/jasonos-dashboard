@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T02:46:22Z",
+  "generated_at": "2026-06-18T02:57:05Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -7,12 +7,12 @@
     "total": 82,
     "active": 5,
     "queued": 4,
-    "paused": 2,
-    "backlog": 11
+    "paused": 11,
+    "backlog": 2
   },
   "operational": {
-    "last_session_date": "2026-06-18T02:33:00Z",
-    "minutes_since_session": 13,
+    "last_session_date": "2026-06-18T02:46:00Z",
+    "minutes_since_session": 11,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -100,30 +100,6 @@
       "context": "KB backup workload under-specifies scope: `decisions/` and `clients/` are not backed up"
     },
     {
-      "id": "ACT-INI-009",
-      "category": "required",
-      "label": "INI-009",
-      "context": "Approve the Capital Allocation carve-out PCR before the Venture Director operates that scope."
-    },
-    {
-      "id": "ACT-INI-070",
-      "category": "required",
-      "label": "INI-070",
-      "context": "Authorize a PCR for the new equity-research.md capability before Engineering builds the skill."
-    },
-    {
-      "id": "ACT-INI-071",
-      "category": "required",
-      "label": "INI-071",
-      "context": "Confirm fast-follow scope (gated on INI-070 core proven)."
-    },
-    {
-      "id": "ACT-INI-075",
-      "category": "required",
-      "label": "INI-075",
-      "context": "Phase 2 LIVE PILOT validated 2026-06-17 (engineering target uploaded to Drive, RC-1..RC-6 confirmed live, snapshot parity OK). No open CEO gate. Next: schedule Phase 3 (rotation pre-phase + operations"
-    },
-    {
       "id": "ACT-HO-1",
       "category": "low",
       "label": "Briefing-thinning transition",
@@ -197,13 +173,58 @@
       {
         "id": "INI-043",
         "name": "Dish n' BEATS \u2014 Brand Design System"
+      },
+      {
+        "id": "INI-066",
+        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
+        "notes": "Paused 2026-06-17 (dependency on INI-064, blog infrastructure). Drafting unblocked"
+      },
+      {
+        "id": "INI-067",
+        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
+        "notes": "Paused 2026-06-17 (dependency on INI-065, blog infrastructure). Video drafting unblocked"
+      },
+      {
+        "id": "INI-072",
+        "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
+        "notes": "Paused 2026-06-17 (prioritized below other client work). Recommended next pull for the Ray Graystone track; reads from project-bible.md"
+      },
+      {
+        "id": "INI-073",
+        "name": "Ray Graystone \u2014 Voice & Register Pass",
+        "notes": "Paused 2026-06-17 (dependency on INI-072, now paused). Optional \u2014 pull when CEO is ready to test drafting."
+      },
+      {
+        "id": "INI-074",
+        "name": "Ray Graystone \u2014 Publication Path",
+        "notes": "Paused 2026-06-17 (deferred until a draft exists)."
       }
     ],
     "infrastructure": [
       {
+        "id": "INI-009",
+        "name": "Venture Portfolio Activation",
+        "notes": "Paused 2026-06-17 (not ready for funding yet). Capital Allocation carve-out PCR required before VD operates that scope"
+      },
+      {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
         "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node"
+      },
+      {
+        "id": "INI-039",
+        "name": "QMD Local Search Integration",
+        "notes": "Paused 2026-06-17 (waiting for more wiki volume). Pull after: vault ~50 articles"
+      },
+      {
+        "id": "INI-070",
+        "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
+        "notes": "Paused 2026-06-17 (soft dependency on INI-009, now paused). New capability `equity-research.md` via PCR"
+      },
+      {
+        "id": "INI-071",
+        "name": "Investment Discovery & Screening \u2014 Candidate Front Door",
+        "notes": "Paused 2026-06-17 (dependency on INI-070, now paused). Fast-follow once INI-070 core proven"
       }
     ]
   },
@@ -217,54 +238,8 @@
         "id": "INI-065",
         "name": "Dyson Hope \u2014 Blog Infrastructure",
         "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
-      },
-      {
-        "id": "INI-066",
-        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
-        "notes": "Pending: INI-064 (blog infrastructure) for publication; drafting unblocked"
-      },
-      {
-        "id": "INI-067",
-        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
-        "notes": "Pending: INI-065 (blog infrastructure) for written supplement; video drafting unblocked"
-      },
-      {
-        "id": "INI-072",
-        "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
-        "notes": "Recommended next pull for the Ray Graystone track; reads from project-bible.md"
-      },
-      {
-        "id": "INI-073",
-        "name": "Ray Graystone \u2014 Voice & Register Pass",
-        "notes": "Pending: INI-072 (chapter map). Optional \u2014 pull when CEO is ready to test drafting."
-      },
-      {
-        "id": "INI-074",
-        "name": "Ray Graystone \u2014 Publication Path",
-        "notes": "Deferred \u2014 open only when a draft exists."
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-009",
-        "name": "Venture Portfolio Activation",
-        "notes": "Capital Allocation carve-out PCR required before VD operates that scope"
-      },
-      {
-        "id": "INI-039",
-        "name": "QMD Local Search Integration",
-        "notes": "Pull after: vault ~50 articles"
-      },
-      {
-        "id": "INI-070",
-        "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
-        "notes": "New capability `equity-research.md` via PCR; soft dependency: INI-009"
-      },
-      {
-        "id": "INI-071",
-        "name": "Investment Discovery & Screening \u2014 Candidate Front Door",
-        "notes": "Pending: INI-070 core proven (fast-follow)"
-      }
-    ]
+    "infrastructure": []
   }
 }
