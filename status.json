@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-18T03:39:41Z",
+  "generated_at": "2026-06-18T03:46:23Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 61,
-    "total": 82,
-    "active": 4,
+    "total": 83,
+    "active": 5,
     "queued": 4,
     "paused": 11,
     "backlog": 2
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 53,
-    "airlock_queue": 0,
+    "minutes_since_session": 60,
+    "airlock_queue": 1,
     "airlock_bundles": 0
   },
   "active_initiative": {
@@ -40,6 +40,11 @@
     {
       "id": "INI-082",
       "name": "Backup Coverage Freshness \u2014 Glob-with-Denylist + Shared Reconciliation",
+      "status": "active"
+    },
+    {
+      "id": "INI-084",
+      "name": "Dashboard Waiting-On Clarity \u2014 Structured blocked_by + waiting_on + Drift Guard",
       "status": "active"
     }
   ],
