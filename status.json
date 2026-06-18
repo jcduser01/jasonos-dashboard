@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-18T03:16:23Z",
+  "generated_at": "2026-06-18T03:19:49Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 60,
+    "done": 61,
     "total": 82,
-    "active": 5,
+    "active": 4,
     "queued": 4,
     "paused": 11,
     "backlog": 2
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 30,
+    "minutes_since_session": 33,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,11 +35,6 @@
     {
       "id": "INI-076",
       "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
-      "status": "active"
-    },
-    {
-      "id": "INI-081",
-      "name": "Git Risk-Class Staging Lanes \u2014 Relay Branch Lifecycle + Push Interlock",
       "status": "active"
     },
     {
