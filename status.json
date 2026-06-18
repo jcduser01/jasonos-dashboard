@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T06:01:41Z",
+  "generated_at": "2026-06-18T17:18:00Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,9 +12,9 @@
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 195,
-    "airlock_queue": 0,
-    "airlock_bundles": 0
+    "minutes_since_session": 872,
+    "airlock_queue": 4,
+    "airlock_bundles": 2
   },
   "active_initiative": {
     "id": "INI-063",
@@ -82,6 +82,42 @@
       "context": "Backup coverage is a static allowlist; new knowledge material silently falls out of scope"
     },
     {
+      "id": "ACT-REM-005",
+      "category": "required",
+      "label": "REM-005",
+      "context": "Recurring operations backup upload blockage (2026-06-17 + 2026-06-18)"
+    },
+    {
+      "id": "ACT-REM-006",
+      "category": "required",
+      "label": "REM-006",
+      "context": "INI-075 Phase 2 live pilot blocked by engineering jail permissions gap"
+    },
+    {
+      "id": "ACT-REM-007",
+      "category": "required",
+      "label": "REM-007",
+      "context": "Policy sync log silent for 2+ days (2026-06-17 and 2026-06-18 entries absent)"
+    },
+    {
+      "id": "ACT-REM-008",
+      "category": "required",
+      "label": "REM-008",
+      "context": "INI-083-F001: Dispatcher stranded .processing files not recovered on SIGKILL"
+    },
+    {
+      "id": "ACT-REM-009",
+      "category": "required",
+      "label": "REM-009",
+      "context": "INI076-F002: Ollama launch agent auto-updates outside JasonOS change control"
+    },
+    {
+      "id": "ACT-REM-010",
+      "category": "required",
+      "label": "REM-010",
+      "context": "INI-063 Phase 1 GREEN test deferred: Docker Desktop not running"
+    },
+    {
       "id": "ACT-HO-1",
       "category": "low",
       "label": "Briefing-thinning transition",
@@ -104,8 +140,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-17T12:54:03Z",
-      "invocations_30d": 27
+      "last_active": "2026-06-18T12:02:31Z",
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
