@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-18T05:46:40Z",
+  "generated_at": "2026-06-18T05:54:00Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 61,
-    "total": 83,
-    "active": 5,
+    "total": 84,
+    "active": 6,
     "queued": 4,
     "paused": 11,
     "backlog": 2
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 180,
-    "airlock_queue": 6,
-    "airlock_bundles": 1
+    "minutes_since_session": 188,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-063",
@@ -45,6 +45,11 @@
     {
       "id": "INI-084",
       "name": "Dashboard Waiting-On Clarity \u2014 Structured blocked_by + waiting_on + Drift Guard",
+      "status": "active"
+    },
+    {
+      "id": "INI-085",
+      "name": "Video Pipeline \u2014 AI Pre-Editing Pipeline for Instagram Reels",
       "status": "active"
     }
   ],
