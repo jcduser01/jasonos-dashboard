@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-18T18:48:02Z",
+  "generated_at": "2026-06-18T19:03:02Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 62,
-    "total": 84,
-    "active": 4,
+    "total": 85,
+    "active": 5,
     "queued": 4,
     "paused": 11,
     "backlog": 3
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 962,
+    "minutes_since_session": 977,
     "airlock_queue": 1,
     "airlock_bundles": 1
   },
@@ -40,6 +40,11 @@
     {
       "id": "INI-084",
       "name": "Dashboard Waiting-On Clarity \u2014 Structured blocked_by + waiting_on + Drift Guard",
+      "status": "active"
+    },
+    {
+      "id": "INI-086",
+      "name": "Engineering Jail \u2014 Drive Backup Runner Bash Allow (PCR-OPS-016)",
       "status": "active"
     }
   ],
@@ -71,16 +76,10 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-GAP-019",
+      "id": "ACT-PCR-OPS-016",
       "category": "required",
-      "label": "GAP-019",
-      "context": "Backup coverage is a static allowlist; new knowledge material silently falls out of scope"
-    },
-    {
-      "id": "ACT-REM-006",
-      "category": "required",
-      "label": "REM-006",
-      "context": "INI-075 Phase 2 live pilot blocked by engineering jail permissions gap"
+      "label": "PCR-OPS-016",
+      "context": "Engineering Jail \u2014 Drive Backup Runner Bash Allow"
     },
     {
       "id": "ACT-REM-008",
@@ -98,10 +97,6 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 3,
-      "files": 0
-    },
-    "gaps": {
-      "handoff": 0,
       "files": 1
     }
   },
