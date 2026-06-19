@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-19T06:04:05Z",
+  "generated_at": "2026-06-19T17:01:13Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 62,
-    "total": 85,
+    "total": 86,
     "active": 6,
     "queued": 4,
     "paused": 11,
-    "backlog": 2
+    "backlog": 3
   },
   "operational": {
-    "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 1638,
+    "last_session_date": "2026-06-19T05:38:54Z",
+    "minutes_since_session": 682,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -99,15 +99,33 @@
       "context": "INI-083-F001: Dispatcher stranded .processing files not recovered on SIGKILL"
     },
     {
+      "id": "ACT-REM-011",
+      "category": "required",
+      "label": "REM-011",
+      "context": "jasonos-operations-backup deployed scheduled-task prompt still names retired single-file relay trigger"
+    },
+    {
+      "id": "ACT-REM-012",
+      "category": "required",
+      "label": "REM-012",
+      "context": "GAP-019 `open/` copy deleted locally but not propagated to upstream (governance repo divergence)"
+    },
+    {
       "id": "ACT-HO-1",
       "category": "low",
       "label": "Briefing-thinning transition",
       "context": "low priority"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Open/merge the PR fork\u2192canonical (jasoncookdesign) for video-pipeline",
+      "context": "fork is ahead by 80647d06 (Phases 1-3 already merged). This is the one concrete prerequisite still in the CEO's hands; t"
     }
   ],
   "handoff_drift": {
     "pcrs": {
-      "handoff": 3,
+      "handoff": 5,
       "files": 2
     }
   },
@@ -235,6 +253,12 @@
         "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
       }
     ],
-    "infrastructure": []
+    "infrastructure": [
+      {
+        "id": "INI-087",
+        "name": "Video-Pipeline Control Tower & Previewer GUI",
+        "notes": "Desktop GUI companion to the video-pipeline CLI (INI-085). Shaped end-to-end with the CEO in a Cowork session 2026-06-19; full architecture in architecture/video-pipeline/control-tower-sadd.md. The CLI stays first-class \u2014 the GUI is a schema-driven view (command library + live runner + layer previewer) that teaches the CLI rather than hiding it. Shell decided: Tauri (Rust core + WKWebView), Mac-first. Live compositing eliminated by design (the pipeline emits a flattened composite; the previewer is single-<video> source-switching), which removed the WebCodecs risk and made the app OS-agnostic. Hard subsystem = the schema-derived dependency scheduler (skip-rewire vs fail-cascade, bounded parallelism). CEO-operated tooling: code is governed, executed via narrowly-scoped Claude Code on the operating machine, OUTSIDE the director perimeter \u2014 same posture as INI-085."
+      }
+    ]
   }
 }
