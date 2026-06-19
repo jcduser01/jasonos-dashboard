@@ -386,6 +386,8 @@
   .backlog-name-wrap { flex: 1; }
   .backlog-name      { color: var(--text-muted); font-size: 0.875rem; display: block; }
   .backlog-note      { color: var(--text-dim); font-size: 0.75rem; margin-top: 2px; display: block; }
+  /* INI-084 / PCR-OPS-015 — waiting-on line on Paused (and any waiting) cards */
+  .backlog-waiting   { color: var(--accent); font-size: 0.75rem; margin-top: 2px; display: block; }
   .backlog-empty     { font-size: 0.875rem; color: var(--text-dim); }
 
   /* ── Landscape tweaks ────────────────────────────────────────── */
@@ -775,6 +777,9 @@
       var item = items[i];
       var nameWrap = '<div class="backlog-name-wrap">'
                    + '<span class="backlog-name">' + escHtml(item.name) + '</span>';
+      if (item.waiting_on) {
+        nameWrap += '<span class="backlog-waiting">' + escHtml(item.waiting_on) + '</span>';
+      }
       if (item.notes) {
         nameWrap += '<span class="backlog-note">' + escHtml(item.notes) + '</span>';
       }
