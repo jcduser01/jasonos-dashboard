@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-19T21:36:04Z",
+  "generated_at": "2026-06-19T21:51:05Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 64,
     "total": 86,
-    "active": 4,
+    "active": 5,
     "queued": 4,
     "paused": 11,
-    "backlog": 3
+    "backlog": 2
   },
   "operational": {
     "last_session_date": "2026-06-19T05:38:54Z",
-    "minutes_since_session": 957,
+    "minutes_since_session": 972,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -40,6 +40,11 @@
     {
       "id": "INI-086",
       "name": "Engineering Jail \u2014 Drive Backup Runner Bash Allow (PCR-OPS-016)",
+      "status": "active"
+    },
+    {
+      "id": "INI-087",
+      "name": "Video-Pipeline Control Tower & Previewer GUI",
       "status": "active"
     }
   ],
@@ -233,12 +238,6 @@
         "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-087",
-        "name": "Video-Pipeline Control Tower & Previewer GUI",
-        "notes": "Desktop GUI companion to the video-pipeline CLI (INI-085). Shaped end-to-end with the CEO in a Cowork session 2026-06-19; full architecture in architecture/video-pipeline/control-tower-sadd.md. The CLI stays first-class \u2014 the GUI is a schema-driven view (command library + live runner + layer previewer) that teaches the CLI rather than hiding it. Shell decided: Tauri (Rust core + WKWebView), Mac-first. Live compositing eliminated by design (the pipeline emits a flattened composite; the previewer is single-<video> source-switching), which removed the WebCodecs risk and made the app OS-agnostic. Hard subsystem = the schema-derived dependency scheduler (skip-rewire vs fail-cascade, bounded parallelism). CEO-operated tooling: code is governed, executed via narrowly-scoped Claude Code on the operating machine, OUTSIDE the director perimeter \u2014 same posture as INI-085."
-      }
-    ]
+    "infrastructure": []
   }
 }
