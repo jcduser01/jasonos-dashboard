@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T00:48:39Z",
+  "generated_at": "2026-06-19T01:03:40Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-18T02:46:00Z",
-    "minutes_since_session": 1322,
+    "minutes_since_session": 1337,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -87,6 +87,12 @@
       "context": "Engineering Jail \u2014 Drive Backup Runner Bash Allow"
     },
     {
+      "id": "ACT-PCR-OPS-018",
+      "category": "required",
+      "label": "PCR-OPS-018",
+      "context": "Governance repo push-mode guardrail"
+    },
+    {
       "id": "ACT-REM-008",
       "category": "required",
       "label": "REM-008",
@@ -102,7 +108,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 3,
-      "files": 1
+      "files": 2
     }
   },
   "status_drift": [],
