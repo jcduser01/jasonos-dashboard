@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T19:50:57Z",
+  "generated_at": "2026-06-19T19:58:16Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-19T05:38:54Z",
-    "minutes_since_session": 852,
+    "minutes_since_session": 859,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -79,19 +79,15 @@
       "id": "ACT-PCR-OPS-016",
       "category": "required",
       "label": "PCR-OPS-016",
-      "context": "Engineering Jail \u2014 Drive Backup Runner Bash Allow"
-    },
-    {
-      "id": "ACT-PCR-OPS-018",
-      "category": "required",
-      "label": "PCR-OPS-018",
-      "context": "Governance repo push-mode guardrail"
+      "context": "Security Steward clears the widened engineering-jail allow-set, then the access compiler is rerun and the Engineering Director dry-run verification passes (INI-086 \u2014 manifest change staged 2026-06-19;",
+      "waiting_on": "Security Steward clears the widened engineering-jail allow-set, then the access compiler is rerun and the Engineering Director dry-run verification passes (INI-086 \u2014 manifest change staged 2026-06-19; recompile + verification pending on the mini)."
     },
     {
       "id": "ACT-REM-008",
       "category": "required",
       "label": "REM-008",
-      "context": "INI-083-F001: Dispatcher stranded .processing files not recovered on SIGKILL"
+      "context": "INI-083-F001: Dispatcher stranded .processing files not recovered on SIGKILL",
+      "waiting_on": null
     },
     {
       "id": "ACT-HO-1",
@@ -109,11 +105,14 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 5,
-      "files": 2
+      "files": 1
     }
   },
   "status_drift": [],
   "category_drift": [],
+  "waiting_on_drift": [
+    "REM-008"
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -168,59 +167,70 @@
     "client_work": [
       {
         "id": "INI-043",
-        "name": "Dish n' BEATS \u2014 Brand Design System"
+        "name": "Dish n' BEATS \u2014 Brand Design System",
+        "waiting_on": "CEO to pull into Current (client-work prioritization; begins at Phase 3, parallel with INI-042)"
       },
       {
         "id": "INI-066",
         "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
-        "notes": "Paused 2026-06-17 (dependency on INI-064, blog infrastructure). Drafting unblocked"
+        "notes": "Paused 2026-06-17 (dependency on INI-064, blog infrastructure). Drafting unblocked",
+        "waiting_on": "Waiting on INI-064 (Backlog); blog infrastructure; drafting itself is unblocked"
       },
       {
         "id": "INI-067",
         "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
-        "notes": "Paused 2026-06-17 (dependency on INI-065, blog infrastructure). Video drafting unblocked"
+        "notes": "Paused 2026-06-17 (dependency on INI-065, blog infrastructure). Video drafting unblocked",
+        "waiting_on": "Waiting on INI-065 (Backlog); blog infrastructure; video drafting itself is unblocked"
       },
       {
         "id": "INI-072",
         "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
-        "notes": "Paused 2026-06-17 (prioritized below other client work). Recommended next pull for the Ray Graystone track; reads from project-bible.md"
+        "notes": "Paused 2026-06-17 (prioritized below other client work). Recommended next pull for the Ray Graystone track; reads from project-bible.md",
+        "waiting_on": "CEO to pull the Ray Graystone track (currently prioritized below other client work)"
       },
       {
         "id": "INI-073",
         "name": "Ray Graystone \u2014 Voice & Register Pass",
-        "notes": "Paused 2026-06-17 (dependency on INI-072, now paused). Optional \u2014 pull when CEO is ready to test drafting."
+        "notes": "Paused 2026-06-17 (dependency on INI-072, now paused). Optional \u2014 pull when CEO is ready to test drafting.",
+        "waiting_on": "Waiting on INI-072 (Paused); CEO ready to test drafting (optional)"
       },
       {
         "id": "INI-074",
         "name": "Ray Graystone \u2014 Publication Path",
-        "notes": "Paused 2026-06-17 (deferred until a draft exists)."
+        "notes": "Paused 2026-06-17 (deferred until a draft exists).",
+        "waiting_on": "a Ray Graystone draft to exist (deferred until then)"
       }
     ],
     "infrastructure": [
       {
         "id": "INI-009",
         "name": "Venture Portfolio Activation",
-        "notes": "Paused 2026-06-17 (not ready for funding yet). Capital Allocation carve-out PCR required before VD operates that scope"
+        "notes": "Paused 2026-06-17 (not ready for funding yet). Capital Allocation carve-out PCR required before VD operates that scope",
+        "waiting_on": "Capital Allocation carve-out PCR approval before the Venture Director operates that scope; not ready for funding yet"
       },
       {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
-        "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node"
+        "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node",
+        "waiting_on": "a second physical node (hardware acquisition) before Phase 4"
       },
       {
         "id": "INI-039",
         "name": "QMD Local Search Integration",
-        "notes": "Paused 2026-06-17 (waiting for more wiki volume). Pull after: vault ~50 articles"
+        "notes": "Paused 2026-06-17 (waiting for more wiki volume). Pull after: vault ~50 articles",
+        "waiting_on": "more wiki volume (vault ~50 articles)"
       },
       {
         "id": "INI-070",
         "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
-        "notes": "Paused 2026-06-17 (soft dependency on INI-009, now paused). New capability `equity-research.md` via PCR"
+        "notes": "Paused 2026-06-17 (soft dependency on INI-009, now paused). New capability `equity-research.md` via PCR",
+        "waiting_on": "Waiting on INI-009 (Paused); a PCR authorizing the new equity-research.md capability before Engineering builds the skill"
       },
       {
         "id": "INI-071",
         "name": "Investment Discovery & Screening \u2014 Candidate Front Door",
-        "notes": "Paused 2026-06-17 (dependency on INI-070, now paused). Fast-follow once INI-070 core proven"
+        "notes": "Paused 2026-06-17 (dependency on INI-070, now paused). Fast-follow once INI-070 core proven",
+        "waiting_on": "Waiting on INI-070 (Paused); INI-070 core proven (fast-follow)"
       }
     ]
   },
