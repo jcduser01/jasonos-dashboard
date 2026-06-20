@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T08:38:32Z",
+  "generated_at": "2026-06-20T08:53:37Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-19T05:38:54Z",
-    "minutes_since_session": 1619,
+    "minutes_since_session": 1634,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -88,6 +88,20 @@
       "label": "REM-008",
       "context": "INI-083-F001: Dispatcher stranded .processing files not recovered on SIGKILL",
       "waiting_on": "Engineering Director's next dispatcher patch cycle \u2014 startup orphan scan that re-queues or terminally errors stranded `.processing` files (INI-083-F001 remediation). No CEO action required; Engineering Director authority within dispatcher scope."
+    },
+    {
+      "id": "ACT-REM-013",
+      "category": "required",
+      "label": "REM-013",
+      "context": "Governance `.gitignore` omits `__pycache__/` and `operations/.git-commit-queue/` (recurring policy-sync status noise)",
+      "waiting_on": "President Agent committing the two `.gitignore` patterns via the git-commit-relay (`push: true`); after that, the three artifacts no longer appear in policy-sync untracked output. No CEO action required (President Agent operational-hygiene authority)."
+    },
+    {
+      "id": "ACT-REM-014",
+      "category": "required",
+      "label": "REM-014",
+      "context": "PCR-OPS-016 / access-manifest `JASONOS_DRIVE_BACKUP_ALLOW_LIVE=1` comment wording inverted (Steward LOW, documentation-only)",
+      "waiting_on": "Decide Option A (formal PCR-OPS-016 amendment) vs Option B (direct comment fix logged against PCR-OPS-016) for correcting the inverted `JASONOS_DRIVE_BACKUP_ALLOW_LIVE=1` comment wording in PCR-OPS-016 + `access-manifest.yaml` (documentation-only; allow-set unchanged)."
     },
     {
       "id": "ACT-HO-1",
