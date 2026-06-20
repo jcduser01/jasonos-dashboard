@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-20T17:10:26Z",
+  "generated_at": "2026-06-20T17:13:09Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 64,
     "total": 86,
-    "active": 5,
+    "active": 4,
     "queued": 4,
     "paused": 11,
     "backlog": 2
   },
   "operational": {
     "last_session_date": "2026-06-19T16:57:56Z",
-    "minutes_since_session": 1452,
+    "minutes_since_session": 1455,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,11 +35,6 @@
     {
       "id": "INI-076",
       "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
-      "status": "active"
-    },
-    {
-      "id": "INI-086",
-      "name": "Engineering Jail \u2014 Drive Backup Runner Bash Allow (PCR-OPS-016)",
       "status": "active"
     },
     {
@@ -76,13 +71,6 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-PCR-OPS-016",
-      "category": "required",
-      "label": "PCR-OPS-016",
-      "context": "Security Steward clears the widened engineering-jail allow-set, then the access compiler is rerun and the Engineering Director dry-run verification passes (INI-086 \u2014 manifest change staged 2026-06-19;",
-      "waiting_on": "Security Steward clears the widened engineering-jail allow-set, then the access compiler is rerun and the Engineering Director dry-run verification passes (INI-086 \u2014 manifest change staged 2026-06-19; recompile + verification pending on the mini)."
-    },
-    {
       "id": "ACT-REM-008",
       "category": "required",
       "label": "REM-008",
@@ -113,10 +101,15 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 2,
-      "files": 1
+      "files": 0
     }
   },
-  "status_drift": [],
+  "status_drift": [
+    {
+      "id": "INI-086",
+      "status": "Complete"
+    }
+  ],
   "category_drift": [],
   "waiting_on_drift": [],
   "directors": [
