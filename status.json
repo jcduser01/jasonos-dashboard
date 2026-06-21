@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-21T16:27:55Z",
+  "generated_at": "2026-06-21T16:42:55Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 65,
-    "total": 86,
+    "total": 87,
     "active": 3,
     "queued": 4,
     "paused": 11,
-    "backlog": 2
+    "backlog": 3
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 567,
+    "minutes_since_session": 582,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -98,7 +98,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 25
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
@@ -226,6 +226,12 @@
         "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
       }
     ],
-    "infrastructure": []
+    "infrastructure": [
+      {
+        "id": "INI-088",
+        "name": "Subtitle Rendering Controls \u2014 CLI + GUI Caption Styling",
+        "notes": "9 subtitle knobs surfaced as per-run flags w/ sensible defaults. 5 already exist on CaptionStyle (unsurfaced); background trio + horizontal offset are net-new. Verification = preview-frames + Mac-side dispatcher render returning PNG frame-grabs Claude reads (sandbox can't render Remotion). Extends INI-085 (captions) + INI-087 (control-tower GUI). Scoped w/ Engineering Director 2026-06-21; all design decisions resolved."
+      }
+    ]
   }
 }
