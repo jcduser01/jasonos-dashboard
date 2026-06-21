@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T14:57:43Z",
+  "generated_at": "2026-06-21T15:12:43Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 477,
+    "minutes_since_session": 492,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -73,20 +73,6 @@
       "waiting_on": "Engineering Director's next dispatcher patch cycle \u2014 startup orphan scan that re-queues or terminally errors stranded `.processing` files (INI-083-F001 remediation). No CEO action required; Engineering Director authority within dispatcher scope."
     },
     {
-      "id": "ACT-REM-014",
-      "category": "required",
-      "label": "REM-014",
-      "context": "PCR-OPS-016 / access-manifest `JASONOS_DRIVE_BACKUP_ALLOW_LIVE=1` comment wording inverted (Steward LOW, documentation-only)",
-      "waiting_on": "Decide Option A (formal PCR-OPS-016 amendment) vs Option B (direct comment fix logged against PCR-OPS-016) for correcting the inverted `JASONOS_DRIVE_BACKUP_ALLOW_LIVE=1` comment wording in PCR-OPS-016 + `access-manifest.yaml` (documentation-only; allow-set unchanged)."
-    },
-    {
-      "id": "ACT-REM-015",
-      "category": "required",
-      "label": "REM-015",
-      "context": "Direct git write from sandbox (Source Control Policy Rule 1 violation) left stale `.git/index.lock` \u2014 recurring class",
-      "waiting_on": "Decide whether to pursue Option B (a generator-level sandbox guard that intercepts/auto-routes direct git writes to the relay) for the recurring direct-git Rule 1 violation class, or close REM-015 accepting the relay-absorbed recurrence as known risk. The 2026-06-21 instance is already remediated (commit `714b478` via relay; stale `.git/index.lock` cleared; no CEO action needed)."
-    },
-    {
       "id": "ACT-HO-1",
       "category": "required",
       "label": "Briefing-thinning transition",
@@ -118,7 +104,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 25
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
