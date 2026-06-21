@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T19:13:04Z",
+  "generated_at": "2026-06-21T19:17:21Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 732,
+    "minutes_since_session": 736,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -60,14 +60,7 @@
       "position": 5
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Briefing-thinning transition",
-      "context": "DEFERRED to 2026-06-23: retire the SEC-001/OPS-001 daily-briefing checks into the report-triage register after one clean"
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [
     {
