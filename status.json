@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-21T17:12:56Z",
+  "generated_at": "2026-06-21T17:27:57Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 65,
-    "total": 87,
+    "total": 88,
     "active": 3,
     "queued": 4,
     "paused": 11,
-    "backlog": 3
+    "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 612,
+    "minutes_since_session": 627,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -86,7 +86,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 25
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
@@ -219,6 +219,11 @@
         "id": "INI-088",
         "name": "Subtitle Rendering Controls \u2014 CLI + GUI Caption Styling",
         "notes": "9 subtitle knobs surfaced as per-run flags w/ sensible defaults. 5 already exist on CaptionStyle (unsurfaced); background trio + horizontal offset are net-new. Verification = preview-frames + Mac-side dispatcher render returning PNG frame-grabs Claude reads (sandbox can't render Remotion). Extends INI-085 (captions) + INI-087 (control-tower GUI). Scoped w/ Engineering Director 2026-06-21; all design decisions resolved."
+      },
+      {
+        "id": "INI-089",
+        "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
+        "notes": "One primitive (timed/placed overlay layer + occupancy descriptor + editable overlay.def) feeding thin producers, in three phases: A \u2014 primitive + image/video producers; B \u2014 generated source-card (Chrome/Jina \u2192 content JSON \u2192 Remotion); C \u2014 self-commentary composite (MediaPipe SelfieSegmentation default, green-screen-assisted, matte=none rerender \u2192 Premiere chroma key). Transcript\u2192window alignment is the time-saver; reuses the cut-time remap + GUI schema seam. Verification = preview-frames + Mac-side render acceptance (sandbox can't render). Coordinates with INI-088 (shared schema/golden-argv, placement.py, the preview-frames seam). Cashes INI-085's reserved Phase 6. Scoped w/ CEO 2026-06-21; build order + matte resolved."
       }
     ]
   }
