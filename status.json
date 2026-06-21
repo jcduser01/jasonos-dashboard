@@ -1,32 +1,27 @@
 {
-  "generated_at": "2026-06-21T18:28:03Z",
+  "generated_at": "2026-06-21T18:40:47Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 65,
     "total": 88,
     "active": 3,
-    "queued": 4,
+    "queued": 5,
     "paused": 10,
-    "backlog": 5
+    "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 687,
+    "minutes_since_session": 700,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-063",
-    "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
+    "id": "INI-075",
+    "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core",
     "status": "active"
   },
   "active_initiatives": [
-    {
-      "id": "INI-063",
-      "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
-      "status": "active"
-    },
     {
       "id": "INI-075",
       "name": "Drive Backup Runner \u2014 Code-ified Config-Driven Deterministic Core",
@@ -36,32 +31,43 @@
       "id": "INI-076",
       "name": "Local Inference Infrastructure \u2014 Ollama on Mac Mini",
       "status": "active"
+    },
+    {
+      "id": "INI-088",
+      "name": "Subtitle Rendering Controls \u2014 CLI + GUI Caption Styling",
+      "status": "active"
     }
   ],
   "queue": [
     {
-      "id": "INI-053",
-      "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+      "id": "INI-089",
+      "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
       "status": "queued",
       "position": 1
     },
     {
-      "id": "INI-054",
-      "name": "Temple of Unicorns \u2014 Product Catalog Refresh",
+      "id": "INI-064",
+      "name": "Jason Cook Design \u2014 Blog Infrastructure",
       "status": "queued",
       "position": 2
     },
     {
-      "id": "INI-055",
-      "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
+      "id": "INI-065",
+      "name": "Dyson Hope \u2014 Blog Infrastructure",
       "status": "queued",
       "position": 3
     },
     {
-      "id": "INI-056",
-      "name": "Temple of Unicorns \u2014 Brand Design System",
+      "id": "INI-066",
+      "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
       "status": "queued",
       "position": 4
+    },
+    {
+      "id": "INI-067",
+      "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
+      "status": "queued",
+      "position": 5
     }
   ],
   "ceo_actions": [
@@ -139,12 +145,6 @@
         "waiting_on": "CEO to pull into Current (client-work prioritization; begins at Phase 3, parallel with INI-042)"
       },
       {
-        "id": "INI-067",
-        "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
-        "notes": "Paused 2026-06-17 (dependency on INI-065, blog infrastructure). Video drafting unblocked",
-        "waiting_on": "Waiting on INI-065 (Backlog); blog infrastructure; video drafting itself is unblocked"
-      },
-      {
         "id": "INI-072",
         "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
         "notes": "Paused 2026-06-17 (prioritized below other client work). Recommended next pull for the Ray Graystone track; reads from project-bible.md",
@@ -183,6 +183,12 @@
         "waiting_on": "more wiki volume (vault ~50 articles)"
       },
       {
+        "id": "INI-063",
+        "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
+        "notes": "Paused 2026-06-21 (CEO reprioritization; Phase 1 dispatched). Re-enters at Current when pulled.",
+        "waiting_on": "CEO to re-pull into Current (deprioritized 2026-06-21)"
+      },
+      {
         "id": "INI-070",
         "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
         "notes": "Paused 2026-06-17 (soft dependency on INI-009, now paused). New capability `equity-research.md` via PCR",
@@ -199,32 +205,25 @@
   "backlog": {
     "client_work": [
       {
-        "id": "INI-064",
-        "name": "Jason Cook Design \u2014 Blog Infrastructure"
+        "id": "INI-053",
+        "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+        "notes": "Pending: INI-051 complete"
       },
       {
-        "id": "INI-065",
-        "name": "Dyson Hope \u2014 Blog Infrastructure",
-        "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
+        "id": "INI-054",
+        "name": "Temple of Unicorns \u2014 Product Catalog Refresh"
       },
       {
-        "id": "INI-066",
-        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
-        "notes": "Backlog 2026-06-21: first draft written (CEO-held), realized as the Image Foundry case study \u2014 delegating a creative director's quality gate to AI and finding discernment doesn't transfer. Drafting complete pending CEO final approval; publication gated on INI-064 (blog infrastructure).",
-        "waiting_on": "Waiting on INI-064 (Backlog); INI-064 (blog infrastructure) before publication; first draft already written"
+        "id": "INI-055",
+        "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
+        "notes": "Pending: INI-053 + INI-056 complete"
+      },
+      {
+        "id": "INI-056",
+        "name": "Temple of Unicorns \u2014 Brand Design System",
+        "notes": "Pending: INI-051 + INI-053 complete"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-088",
-        "name": "Subtitle Rendering Controls \u2014 CLI + GUI Caption Styling",
-        "notes": "9 subtitle knobs surfaced as per-run flags w/ sensible defaults. 5 already exist on CaptionStyle (unsurfaced); background trio + horizontal offset are net-new. Verification = preview-frames + Mac-side dispatcher render returning PNG frame-grabs Claude reads (sandbox can't render Remotion). Extends INI-085 (captions) + INI-087 (control-tower GUI). Scoped w/ Engineering Director 2026-06-21; all design decisions resolved."
-      },
-      {
-        "id": "INI-089",
-        "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
-        "notes": "One primitive (timed/placed overlay layer + occupancy descriptor + editable overlay.def) feeding thin producers, in three phases: A \u2014 primitive + image/video producers; B \u2014 generated source-card (Chrome/Jina \u2192 content JSON \u2192 Remotion); C \u2014 self-commentary composite (MediaPipe SelfieSegmentation default, green-screen-assisted, matte=none rerender \u2192 Premiere chroma key). Transcript\u2192window alignment is the time-saver; reuses the cut-time remap + GUI schema seam. Verification = preview-frames + Mac-side render acceptance (sandbox can't render). Coordinates with INI-088 (shared schema/golden-argv, placement.py, the preview-frames seam). Cashes INI-085's reserved Phase 6. Scoped w/ CEO 2026-06-21; build order + matte resolved."
-      }
-    ]
+    "infrastructure": []
   }
 }
