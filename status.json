@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T18:13:03Z",
+  "generated_at": "2026-06-21T18:28:03Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -7,12 +7,12 @@
     "total": 88,
     "active": 3,
     "queued": 4,
-    "paused": 11,
-    "backlog": 4
+    "paused": 10,
+    "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 672,
+    "minutes_since_session": 687,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -139,12 +139,6 @@
         "waiting_on": "CEO to pull into Current (client-work prioritization; begins at Phase 3, parallel with INI-042)"
       },
       {
-        "id": "INI-066",
-        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
-        "notes": "Paused 2026-06-17 (dependency on INI-064, blog infrastructure). Drafting unblocked",
-        "waiting_on": "Waiting on INI-064 (Backlog); blog infrastructure; drafting itself is unblocked"
-      },
-      {
         "id": "INI-067",
         "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
         "notes": "Paused 2026-06-17 (dependency on INI-065, blog infrastructure). Video drafting unblocked",
@@ -212,6 +206,12 @@
         "id": "INI-065",
         "name": "Dyson Hope \u2014 Blog Infrastructure",
         "notes": "Soft dependency: INI-064 (architecture pattern reuse)"
+      },
+      {
+        "id": "INI-066",
+        "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
+        "notes": "Backlog 2026-06-21: first draft written (CEO-held), realized as the Image Foundry case study \u2014 delegating a creative director's quality gate to AI and finding discernment doesn't transfer. Drafting complete pending CEO final approval; publication gated on INI-064 (blog infrastructure).",
+        "waiting_on": "Waiting on INI-064 (Backlog); INI-064 (blog infrastructure) before publication; first draft already written"
       }
     ],
     "infrastructure": [
