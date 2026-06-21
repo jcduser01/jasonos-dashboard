@@ -225,9 +225,9 @@
   .status-none   { color: var(--text-muted); font-size: 0.9rem; }
 
   /* ── Lower zone (queue / paused / backlog) ───────────────────── */
-  /* Explicit balanced columns: the two tall backlogs each own a column
-     instead of wrapping, so the section packs left-to-right with no void.
-     Column 1 stacks the shorter Next + Paused panels. */
+  /* Organized by work type: each backlog owns a column with its matching
+     Paused panel stacked beneath it. Column 1 = Next; column 2 = Client
+     backlog + Paused client; column 3 = Infrastructure backlog + Paused infra. */
   #lower-grid {
     display: flex;
     flex-wrap: wrap;
@@ -395,24 +395,15 @@
       <div id="active-body"></div>
     </div>
 
-    <!-- Lower zone: column 1 = Next + Paused (short, stacked);
-         column 2 = Client backlog; column 3 = Infrastructure backlog. -->
+    <!-- Lower zone, organized by work type: column 1 = Next;
+         column 2 = Client backlog + Paused client work;
+         column 3 = Infrastructure backlog + Paused infrastructure. -->
     <div id="lower-grid">
 
       <div class="lcol">
         <div id="queue-panel" class="panel">
           <div class="panel-label">Next</div>
           <div id="queue-body"></div>
-        </div>
-
-        <div id="paused-client-panel" class="panel" style="display:none;">
-          <div class="panel-label">Paused — Client Work</div>
-          <div id="paused-client-body"></div>
-        </div>
-
-        <div id="paused-infra-panel" class="panel" style="display:none;">
-          <div class="panel-label">Paused — Infrastructure</div>
-          <div id="paused-infra-body"></div>
         </div>
       </div>
 
@@ -421,12 +412,22 @@
           <div class="panel-label">Client Work Backlog</div>
           <div id="backlog-client-body"></div>
         </div>
+
+        <div id="paused-client-panel" class="panel" style="display:none;">
+          <div class="panel-label">Paused — Client Work</div>
+          <div id="paused-client-body"></div>
+        </div>
       </div>
 
       <div class="lcol">
         <div id="backlog-digital-panel" class="panel">
           <div class="panel-label">Infrastructure Backlog</div>
           <div id="backlog-digital-body"></div>
+        </div>
+
+        <div id="paused-infra-panel" class="panel" style="display:none;">
+          <div class="panel-label">Paused — Infrastructure</div>
+          <div id="paused-infra-body"></div>
         </div>
       </div>
 
