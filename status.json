@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T14:42:42Z",
+  "generated_at": "2026-06-21T14:57:43Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 462,
+    "minutes_since_session": 477,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -73,13 +73,6 @@
       "waiting_on": "Engineering Director's next dispatcher patch cycle \u2014 startup orphan scan that re-queues or terminally errors stranded `.processing` files (INI-083-F001 remediation). No CEO action required; Engineering Director authority within dispatcher scope."
     },
     {
-      "id": "ACT-REM-013",
-      "category": "required",
-      "label": "REM-013",
-      "context": "Governance `.gitignore` omits `__pycache__/` and `operations/.git-commit-queue/` (recurring policy-sync status noise)",
-      "waiting_on": "President Agent committing the two `.gitignore` patterns via the git-commit-relay (`push: true`); after that, the three artifacts no longer appear in policy-sync untracked output. No CEO action required (President Agent operational-hygiene authority)."
-    },
-    {
       "id": "ACT-REM-014",
       "category": "required",
       "label": "REM-014",
@@ -125,7 +118,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
