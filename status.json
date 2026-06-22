@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T08:28:42Z",
+  "generated_at": "2026-06-22T08:43:47Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-21T07:00:24Z",
-    "minutes_since_session": 1528,
+    "minutes_since_session": 1543,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -54,7 +54,29 @@
       "position": 4
     }
   ],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-REM-016",
+      "category": "required",
+      "label": "REM-016",
+      "context": "git-relay lock-contention burst (2026-06-21 16:13\u201318:49 UTC; 259 lock-acquire failures)",
+      "waiting_on": "Decide whether to task Engineering with the relay lock-contention investigation (backoff + lock-TTL + consecutive-failure alert, Option A) or accept it as a self-clearing transient to monitor (Option B)."
+    },
+    {
+      "id": "ACT-REM-017",
+      "category": "required",
+      "label": "REM-017",
+      "context": "Two parallel weekly knowledge-backup paths report independently (single-source reconciliation)",
+      "waiting_on": "Confirm which knowledge-backup path is authoritative, and whether to retire the legacy inline \"Weekly KB Vault Backup\" task (Option A) or keep both as documented redundancy (Option B)."
+    },
+    {
+      "id": "ACT-REM-018",
+      "category": "required",
+      "label": "REM-018",
+      "context": "Dashboard-publisher email heartbeat (~34/day to CEO) \u2014 throttle review (cost/noise)",
+      "waiting_on": "Confirm whether the ~15-min dashboard-publisher email to your address is intended, or should be throttled to send-on-change / a daily digest (Option A vs Option B)."
+    }
+  ],
   "handoff_drift": {},
   "status_drift": [
     {
