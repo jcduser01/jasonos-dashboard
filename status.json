@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T14:29:17Z",
+  "generated_at": "2026-06-22T14:37:14Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 4
   },
   "operational": {
-    "last_session_date": "2026-06-21T19:00:00Z",
-    "minutes_since_session": 1169,
+    "last_session_date": "2026-06-22T14:35:23Z",
+    "minutes_since_session": 1,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -54,38 +54,7 @@
       "position": 4
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Merge the video-pipeline fork\u2192canonical PR (f9f329be, INI-088 Phase 1 caption style flags + preview seam).",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Merge the video-pipeline-gui fork\u2192canonical PR (07ba56c2, regenerated schema + golden-argv fixtures).",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "Run the INI-088 Phase 1 Mac-side frame-grab verification: bash /Volumes/SandboxData/temp/ini088-verify/run-verify.sh (ne",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "Merge the latest video-pipeline fork\u2192canonical PR (Phase 2\u20134 commits: 271eb898, 262dd67b, 17b47bd7).",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "Merge the latest video-pipeline-gui fork\u2192canonical PR (Phase 2\u20133 fixture commits: e83d47ea, 79322c1b).",
-      "context": ""
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [
     {
