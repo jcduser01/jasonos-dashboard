@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-22T22:17:40Z",
+  "generated_at": "2026-06-22T23:48:08Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 68,
-    "total": 89,
-    "active": 2,
+    "total": 90,
+    "active": 3,
     "queued": 4,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-22T14:35:23Z",
-    "minutes_since_session": 462,
+    "minutes_since_session": 552,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -30,6 +30,11 @@
     {
       "id": "INI-090",
       "name": "Video Pipeline \u2014 Multi-Target Reframe: Format Presets, Resolution Tiers & Composition Profile",
+      "status": "active"
+    },
+    {
+      "id": "INI-091",
+      "name": "Video Pipeline \u2014 Interactive Reframe: Direct-Manipulation Crop + Project Target + Optional Safe Zones",
       "status": "active"
     }
   ],
@@ -74,7 +79,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 25
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
