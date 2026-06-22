@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-22T18:17:35Z",
+  "generated_at": "2026-06-22T18:39:57Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 68,
     "total": 89,
-    "active": 1,
+    "active": 2,
     "queued": 4,
     "paused": 10,
-    "backlog": 5
+    "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-22T14:35:23Z",
-    "minutes_since_session": 222,
+    "minutes_since_session": 244,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -25,6 +25,11 @@
     {
       "id": "INI-089",
       "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
+      "status": "active"
+    },
+    {
+      "id": "INI-090",
+      "name": "Video Pipeline \u2014 Multi-Target Reframe: Format Presets, Resolution Tiers & Composition Profile",
       "status": "active"
     }
   ],
@@ -201,12 +206,6 @@
         "notes": "Pending: INI-051 + INI-053 complete"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-090",
-        "name": "Video Pipeline \u2014 Multi-Target Reframe: Format Presets, Resolution Tiers & Composition Profile",
-        "notes": "Multi-target reframe \u2014 7 aspect-format presets + resolution tiers/Auto resolver + composition profile (subject-dodge + framing-intent presets). Spec locked w/ CEO 2026-06-22; coordinates with INI-089 (dodge/occupancy seam). Ready to pull."
-      }
-    ]
+    "infrastructure": []
   }
 }
