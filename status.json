@@ -1,27 +1,32 @@
 {
-  "generated_at": "2026-06-23T20:48:22Z",
+  "generated_at": "2026-06-23T22:18:23Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 74,
-    "total": 94,
-    "active": 4,
-    "queued": 2,
+    "total": 96,
+    "active": 5,
+    "queued": 1,
     "paused": 10,
-    "backlog": 4
+    "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-06-23T19:21:51Z",
-    "minutes_since_session": 86,
+    "minutes_since_session": 176,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-089",
-    "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
+    "id": "INI-066",
+    "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
     "status": "active"
   },
   "active_initiatives": [
+    {
+      "id": "INI-066",
+      "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
+      "status": "active"
+    },
     {
       "id": "INI-089",
       "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
@@ -45,16 +50,10 @@
   ],
   "queue": [
     {
-      "id": "INI-066",
-      "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
-      "status": "queued",
-      "position": 1
-    },
-    {
       "id": "INI-067",
       "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
       "status": "queued",
-      "position": 2
+      "position": 1
     }
   ],
   "ceo_actions": [
@@ -216,6 +215,14 @@
         "id": "INI-056",
         "name": "Temple of Unicorns \u2014 Brand Design System",
         "notes": "Pending: INI-051 + INI-053 complete"
+      },
+      {
+        "id": "INI-096",
+        "name": "Dyson Hope \u2014 Cal.com Scheduling Integration"
+      },
+      {
+        "id": "INI-097",
+        "name": "Jason Cook Design \u2014 Cal.com Scheduling Integration"
       }
     ],
     "infrastructure": []
