@@ -1,32 +1,27 @@
 {
-  "generated_at": "2026-06-23T19:22:18Z",
+  "generated_at": "2026-06-23T19:52:56Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 71,
+    "done": 72,
     "total": 94,
-    "active": 5,
+    "active": 4,
     "queued": 3,
     "paused": 10,
     "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-06-23T19:21:51Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 31,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-064",
-    "name": "Jason Cook Design \u2014 Blog Infrastructure",
+    "id": "INI-089",
+    "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
     "status": "active"
   },
   "active_initiatives": [
-    {
-      "id": "INI-064",
-      "name": "Jason Cook Design \u2014 Blog Infrastructure",
-      "status": "active"
-    },
     {
       "id": "INI-089",
       "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
