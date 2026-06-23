@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T20:09:29Z",
+  "generated_at": "2026-06-23T20:18:18Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-23T19:21:51Z",
-    "minutes_since_session": 47,
+    "minutes_since_session": 56,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
