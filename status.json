@@ -1,27 +1,32 @@
 {
-  "generated_at": "2026-06-23T16:18:13Z",
+  "generated_at": "2026-06-23T18:15:10Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 71,
     "total": 93,
-    "active": 4,
-    "queued": 4,
+    "active": 5,
+    "queued": 3,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 514,
+    "minutes_since_session": 631,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-089",
-    "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
+    "id": "INI-064",
+    "name": "Jason Cook Design \u2014 Blog Infrastructure",
     "status": "active"
   },
   "active_initiatives": [
+    {
+      "id": "INI-064",
+      "name": "Jason Cook Design \u2014 Blog Infrastructure",
+      "status": "active"
+    },
     {
       "id": "INI-089",
       "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
@@ -45,28 +50,22 @@
   ],
   "queue": [
     {
-      "id": "INI-064",
-      "name": "Jason Cook Design \u2014 Blog Infrastructure",
-      "status": "queued",
-      "position": 1
-    },
-    {
       "id": "INI-065",
       "name": "Dyson Hope \u2014 Blog Infrastructure",
       "status": "queued",
-      "position": 2
+      "position": 1
     },
     {
       "id": "INI-066",
       "name": "Human Creativity in the Age of AI \u2014 Jason Cook Design",
       "status": "queued",
-      "position": 3
+      "position": 2
     },
     {
       "id": "INI-067",
       "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
       "status": "queued",
-      "position": 4
+      "position": 3
     }
   ],
   "ceo_actions": [],
