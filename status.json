@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-23T15:47:45Z",
+  "generated_at": "2026-06-23T16:01:40Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 69,
+    "done": 70,
     "total": 92,
-    "active": 5,
+    "active": 4,
     "queued": 4,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 483,
+    "minutes_since_session": 497,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -40,11 +40,6 @@
     {
       "id": "INI-092",
       "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
-      "status": "active"
-    },
-    {
-      "id": "INI-093",
-      "name": "Pathspec/.gitignore Contradiction Guard \u2014 Close the REM-019 Class",
       "status": "active"
     }
   ],
@@ -84,7 +79,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
