@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-23T20:18:18Z",
+  "generated_at": "2026-06-23T20:43:17Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 72,
+    "done": 73,
     "total": 94,
-    "active": 6,
+    "active": 5,
     "queued": 2,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-23T19:21:51Z",
-    "minutes_since_session": 56,
+    "minutes_since_session": 81,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -45,11 +45,6 @@
     {
       "id": "INI-092",
       "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
-      "status": "active"
-    },
-    {
-      "id": "INI-095",
-      "name": "Documentation Index Rollout \u2014 DOCS.md + Doc-Currency Pass Across Existing Code-Doc Repos",
       "status": "active"
     }
   ],
