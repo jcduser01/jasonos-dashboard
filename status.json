@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-23T19:52:56Z",
+  "generated_at": "2026-06-23T19:53:54Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 72,
     "total": 94,
-    "active": 4,
+    "active": 5,
     "queued": 3,
     "paused": 10,
-    "backlog": 5
+    "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-23T19:21:51Z",
-    "minutes_since_session": 31,
+    "minutes_since_session": 32,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -41,6 +41,11 @@
       "id": "INI-092",
       "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
       "status": "active"
+    },
+    {
+      "id": "INI-095",
+      "name": "Documentation Index Rollout \u2014 DOCS.md + Doc-Currency Pass Across Existing Code-Doc Repos",
+      "status": "active"
     }
   ],
   "queue": [
@@ -64,12 +69,6 @@
     }
   ],
   "ceo_actions": [
-    {
-      "id": "ACT-INI-095",
-      "category": "required",
-      "label": "INI-095",
-      "context": "CEO to pull into Current to execute the rollout (sigilzero-ai, observation-engine, tradespec, bbcre8s) + the forward-coverage policy refinement"
-    },
     {
       "id": "ACT-HO-1",
       "category": "required",
@@ -230,12 +229,6 @@
         "notes": "Pending: INI-051 + INI-053 complete"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-095",
-        "name": "Documentation Index Rollout \u2014 DOCS.md + Doc-Currency Pass Across Existing Code-Doc Repos",
-        "notes": "Rolls PCR-ENG-010 out to the existing code-documentation repos: DOCS.md index + a staleness/currency pass in sigilzero-ai, observation-engine, tradespec, bbcre8s; plus a forward-coverage policy refinement distinguishing code-doc repos (in scope) from content/data repos (out of scope). Resolves the implementation side of GAP-023."
-      }
-    ]
+    "infrastructure": []
   }
 }
