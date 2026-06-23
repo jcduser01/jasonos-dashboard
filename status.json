@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T10:18:06Z",
+  "generated_at": "2026-06-23T12:18:12Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 154,
+    "minutes_since_session": 274,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -102,7 +102,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
