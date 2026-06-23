@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T12:18:12Z",
+  "generated_at": "2026-06-23T13:25:51Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 274,
+    "minutes_since_session": 341,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -75,18 +75,6 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Clean up the orphaned src/plan.ts + src/packaging.ts in the video-pipeline-gui working tree (deliberately removed in pri",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Optional: add ports.ubuntu.com to the egress allowlist so the sandbox UI dev loop uses real X libs instead of the libXda",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
       "label": "Fix ops-backup pathspec/.gitignore contradiction",
       "context": "The jasonos-operations-backup scheduled task will report status=error on every run (both targets) until reconciled, desp"
     }
@@ -102,7 +90,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 25
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
