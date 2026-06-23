@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-23T13:54:31Z",
+  "generated_at": "2026-06-23T14:09:51Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 69,
-    "total": 90,
-    "active": 3,
+    "total": 92,
+    "active": 5,
     "queued": 4,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 370,
+    "minutes_since_session": 385,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,6 +35,16 @@
     {
       "id": "INI-091",
       "name": "Video Pipeline \u2014 Interactive Reframe: Direct-Manipulation Crop + Project Target + Optional Safe Zones",
+      "status": "active"
+    },
+    {
+      "id": "INI-092",
+      "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
+      "status": "active"
+    },
+    {
+      "id": "INI-093",
+      "name": "Pathspec/.gitignore Contradiction Guard \u2014 Close the REM-019 Class",
       "status": "active"
     }
   ],
@@ -66,6 +76,20 @@
   ],
   "ceo_actions": [
     {
+      "id": "ACT-PCR-OPS-019",
+      "category": "required",
+      "label": "PCR-OPS-019",
+      "context": "None pending \u2014 CEO directed file + enact with elevated autonomy; executed this session.",
+      "waiting_on": "None pending \u2014 CEO directed file + enact with elevated autonomy; executed this session."
+    },
+    {
+      "id": "ACT-GAP-021",
+      "category": "required",
+      "label": "GAP-021",
+      "context": "PCR-OPS-019 (CEO-directed 2026-06-23: file + enact same session).",
+      "waiting_on": "PCR-OPS-019 (CEO-directed 2026-06-23: file + enact same session)."
+    },
+    {
       "id": "ACT-REM-019",
       "category": "required",
       "label": "REM-019",
@@ -73,7 +97,16 @@
       "waiting_on": null
     }
   ],
-  "handoff_drift": {},
+  "handoff_drift": {
+    "pcrs": {
+      "handoff": 0,
+      "files": 1
+    },
+    "gaps": {
+      "handoff": 0,
+      "files": 1
+    }
+  },
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
