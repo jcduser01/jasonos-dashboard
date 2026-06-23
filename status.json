@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T15:45:52Z",
+  "generated_at": "2026-06-23T15:47:45Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 481,
+    "minutes_since_session": 483,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -74,44 +74,11 @@
       "position": 4
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-PCR-OPS-019",
-      "category": "required",
-      "label": "PCR-OPS-019",
-      "context": "None pending \u2014 CEO directed file + enact with elevated autonomy; executed this session.",
-      "waiting_on": "None pending \u2014 CEO directed file + enact with elevated autonomy; executed this session."
-    },
-    {
-      "id": "ACT-GAP-021",
-      "category": "required",
-      "label": "GAP-021",
-      "context": "PCR-OPS-019 (CEO-directed 2026-06-23: file + enact same session).",
-      "waiting_on": "PCR-OPS-019 (CEO-directed 2026-06-23: file + enact same session)."
-    },
-    {
-      "id": "ACT-REM-019",
-      "category": "required",
-      "label": "REM-019",
-      "context": "operations-backup relay commit fails every run: task pathspec targets a now-gitignored path (`operations/backup-last-run/`)",
-      "waiting_on": null
-    }
-  ],
-  "handoff_drift": {
-    "pcrs": {
-      "handoff": 0,
-      "files": 1
-    },
-    "gaps": {
-      "handoff": 0,
-      "files": 1
-    }
-  },
+  "ceo_actions": [],
+  "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "REM-019"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
