@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T13:25:51Z",
+  "generated_at": "2026-06-23T13:54:31Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-23T07:44:00Z",
-    "minutes_since_session": 341,
+    "minutes_since_session": 370,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -71,12 +71,6 @@
       "label": "REM-019",
       "context": "operations-backup relay commit fails every run: task pathspec targets a now-gitignored path (`operations/backup-last-run/`)",
       "waiting_on": null
-    },
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Fix ops-backup pathspec/.gitignore contradiction",
-      "context": "The jasonos-operations-backup scheduled task will report status=error on every run (both targets) until reconciled, desp"
     }
   ],
   "handoff_drift": {},
