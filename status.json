@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-23T23:59:25Z",
+  "generated_at": "2026-06-24T00:13:17Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 74,
     "total": 96,
-    "active": 5,
+    "active": 7,
     "queued": 1,
     "paused": 10,
-    "backlog": 6
+    "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-23T20:45:00Z",
-    "minutes_since_session": 194,
+    "minutes_since_session": 208,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -46,6 +46,16 @@
       "id": "INI-092",
       "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
       "status": "active"
+    },
+    {
+      "id": "INI-096",
+      "name": "Dyson Hope \u2014 Cal.com Scheduling Integration",
+      "status": "active"
+    },
+    {
+      "id": "INI-097",
+      "name": "Jason Cook Design \u2014 Cal.com Scheduling Integration",
+      "status": "active"
     }
   ],
   "queue": [
@@ -56,7 +66,14 @@
       "position": 1
     }
   ],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-INI-097",
+      "category": "required",
+      "label": "INI-097",
+      "context": "Merge the jcduser01 \u2192 jasoncookdesign PR, then verify https://jasoncookdesign.com/#calendar shows the live Cal.com embed and the /calendar/ routes redirect per the mapping table."
+    }
+  ],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
@@ -196,14 +213,6 @@
         "id": "INI-056",
         "name": "Temple of Unicorns \u2014 Brand Design System",
         "notes": "Pending: INI-051 + INI-053 complete"
-      },
-      {
-        "id": "INI-096",
-        "name": "Dyson Hope \u2014 Cal.com Scheduling Integration"
-      },
-      {
-        "id": "INI-097",
-        "name": "Jason Cook Design \u2014 Cal.com Scheduling Integration"
       }
     ],
     "infrastructure": []
