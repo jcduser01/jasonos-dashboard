@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T08:18:45Z",
+  "generated_at": "2026-06-24T10:18:45Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-23T20:45:00Z",
-    "minutes_since_session": 693,
+    "minutes_since_session": 813,
     "airlock_queue": 50,
     "airlock_bundles": 2
   },
@@ -56,11 +56,29 @@
       "position": 1
     }
   ],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-REM-020",
+      "category": "required",
+      "label": "REM-020",
+      "context": "commit-queue triggers emitted to governance-repo-root `.git-commit-queue/` (unwatched path): 4 orphaned/unprocessed triggers + untracked working-tree pollution",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-REM-021",
+      "category": "required",
+      "label": "REM-021",
+      "context": "`jasonos-knowledge-backup` task prompt names a non-existent knowledge-specific audit JSONL path (runner writes to shared engineering audit)",
+      "waiting_on": null
+    }
+  ],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "REM-020",
+    "REM-021"
+  ],
   "directors": [
     {
       "name": "engineering-director",
