@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-25T20:52:47Z",
+  "generated_at": "2026-06-25T21:40:09Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 77,
-    "total": 99,
-    "active": 5,
+    "total": 100,
+    "active": 6,
     "queued": 1,
     "paused": 10,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-06-25T19:15:31Z",
-    "minutes_since_session": 97,
+    "minutes_since_session": 144,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -45,6 +45,11 @@
     {
       "id": "INI-092",
       "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
+      "status": "active"
+    },
+    {
+      "id": "INI-101",
+      "name": "Dyson Hope Blog Drip Pipeline \u2014 Reddit-Corpus Seed Queue, Voiced Drafting & Reel Companion",
       "status": "active"
     }
   ],
