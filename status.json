@@ -1,27 +1,32 @@
 {
-  "generated_at": "2026-06-25T20:19:55Z",
+  "generated_at": "2026-06-25T20:52:47Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 77,
     "total": 99,
-    "active": 4,
-    "queued": 2,
+    "active": 5,
+    "queued": 1,
     "paused": 10,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-06-25T19:15:31Z",
-    "minutes_since_session": 64,
+    "minutes_since_session": 97,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-089",
-    "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
+    "id": "INI-067",
+    "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
     "status": "active"
   },
   "active_initiatives": [
+    {
+      "id": "INI-067",
+      "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
+      "status": "active"
+    },
     {
       "id": "INI-089",
       "name": "Video Pipeline \u2014 Overlay Subsystem (timed/placed overlays + producers)",
@@ -45,16 +50,10 @@
   ],
   "queue": [
     {
-      "id": "INI-067",
-      "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
-      "status": "queued",
-      "position": 1
-    },
-    {
       "id": "INI-100",
       "name": "Reddit Source Re-enablement \u2014 Unauthenticated .json Access + Reaction-Worthiness Relevance Funnel",
       "status": "queued",
-      "position": 2
+      "position": 1
     }
   ],
   "ceo_actions": [
