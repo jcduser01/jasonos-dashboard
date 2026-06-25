@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-25T22:01:30Z",
+  "generated_at": "2026-06-25T22:07:17Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 77,
-    "total": 100,
+    "total": 101,
     "active": 6,
-    "queued": 1,
+    "queued": 2,
     "paused": 10,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-06-25T19:15:31Z",
-    "minutes_since_session": 165,
+    "minutes_since_session": 171,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -55,10 +55,16 @@
   ],
   "queue": [
     {
+      "id": "INI-102",
+      "name": "Relay Misplaced-Trigger Detective \u2014 Catch Wrong-Path Queue Emissions Before They Silently Drop",
+      "status": "queued",
+      "position": 1
+    },
+    {
       "id": "INI-100",
       "name": "Reddit Source Re-enablement \u2014 Unauthenticated .json Access + Reaction-Worthiness Relevance Funnel",
       "status": "queued",
-      "position": 1
+      "position": 2
     }
   ],
   "ceo_actions": [
