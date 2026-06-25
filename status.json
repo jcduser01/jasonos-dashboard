@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-25T18:19:49Z",
+  "generated_at": "2026-06-25T19:22:31Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 76,
-    "total": 96,
+    "total": 99,
     "active": 5,
-    "queued": 1,
+    "queued": 2,
     "paused": 10,
-    "backlog": 4
+    "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-06-23T20:45:00Z",
-    "minutes_since_session": 2734,
-    "airlock_queue": 50,
-    "airlock_bundles": 2
+    "last_session_date": "2026-06-25T19:15:31Z",
+    "minutes_since_session": 7,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-066",
@@ -54,6 +54,12 @@
       "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
       "status": "queued",
       "position": 1
+    },
+    {
+      "id": "INI-100",
+      "name": "Reddit Source Re-enablement \u2014 Unauthenticated .json Access + Reaction-Worthiness Relevance Funnel",
+      "status": "queued",
+      "position": 2
     }
   ],
   "ceo_actions": [
@@ -70,6 +76,26 @@
       "label": "REM-021",
       "context": "`jasonos-knowledge-backup` task prompt names a non-existent knowledge-specific audit JSONL path (runner writes to shared engineering audit)",
       "waiting_on": null
+    },
+    {
+      "id": "ACT-REM-022",
+      "category": "required",
+      "label": "REM-022",
+      "context": "PCR-BC-003 closure half-committed: `open/` copy deleted locally but not committed (governance repo divergence, recurring class)",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-REM-023",
+      "category": "required",
+      "label": "REM-023",
+      "context": "BC-currency: `com.jasonos.freefs-mirror` daemon registered but its driving artifacts (plist + `.ffs_batch`) are host-local with no repo/backup source",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Replace blog placeholder images (Dyson Hope blog) \u2014 deferred by CEO.",
+      "context": "Two republished posts carry 9 image placeholders (8 to source + the kept Unsplash hero). Sampling post: hero, Fairlight "
     }
   ],
   "handoff_drift": {},
@@ -77,14 +103,16 @@
   "category_drift": [],
   "waiting_on_drift": [
     "REM-020",
-    "REM-021"
+    "REM-021",
+    "REM-022",
+    "REM-023"
   ],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
@@ -216,6 +244,17 @@
         "notes": "Pending: INI-051 + INI-053 complete"
       }
     ],
-    "infrastructure": []
+    "infrastructure": [
+      {
+        "id": "INI-098",
+        "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
+        "notes": "Make Ono-Sendai a pre-provisioned warm standby JasonOS can fully migrate to during a declared continuity event (JasonOS Sandbox unavailable/impaired) and migrate back. Authorized by PCR-BC-003 (approved 2026-06-25; policy layer enacted). Exceptional-use only \u2014 NOT regular operations. Ready to pull (Backlog); Security Steward review is a hard gate before first reliance. Single-primary: JasonOS Sandbox is OFF for the migration window. Scope: host provisioning, host-local config under version control, a Mode 3 promote/demote procedure, Security Steward review, and a failover drill."
+      },
+      {
+        "id": "INI-099",
+        "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
+        "notes": "Convert the INI-075 knowledge backup runner output from a dated concatenated CONFIDENTIAL snapshot to a ONE-WAY folder-tree mirror in the CONFIDENTIAL Drive folder, so the KB is browsable on Drive web and pullable intact during a relocation (Mode 1) with no second-account Drive sync app. One-way only \u2014 preserves backup integrity; two-way is explicitly rejected. Confidentiality rides the existing folder ACL. Enables the relocation procedure's KB-access target; resolves a PCR-BC-002 follow-on. Open design decision at kickoff: point-in-time history + deletion handling."
+      }
+    ]
   }
 }
