@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T21:40:09Z",
+  "generated_at": "2026-06-25T22:01:30Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-25T19:15:31Z",
-    "minutes_since_session": 144,
+    "minutes_since_session": 165,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -63,34 +63,6 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-REM-020",
-      "category": "required",
-      "label": "REM-020",
-      "context": "commit-queue triggers emitted to governance-repo-root `.git-commit-queue/` (unwatched path): 4 orphaned/unprocessed triggers + untracked working-tree pollution",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-021",
-      "category": "required",
-      "label": "REM-021",
-      "context": "`jasonos-knowledge-backup` task prompt names a non-existent knowledge-specific audit JSONL path (runner writes to shared engineering audit)",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-022",
-      "category": "required",
-      "label": "REM-022",
-      "context": "PCR-BC-003 closure half-committed: `open/` copy deleted locally but not committed (governance repo divergence, recurring class)",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-023",
-      "category": "required",
-      "label": "REM-023",
-      "context": "BC-currency: `com.jasonos.freefs-mirror` daemon registered but its driving artifacts (plist + `.ffs_batch`) are host-local with no repo/backup source",
-      "waiting_on": null
-    },
-    {
       "id": "ACT-HO-1",
       "category": "required",
       "label": "Replace blog placeholder images (Dyson Hope blog) \u2014 deferred by CEO.",
@@ -100,12 +72,7 @@
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "REM-020",
-    "REM-021",
-    "REM-022",
-    "REM-023"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
