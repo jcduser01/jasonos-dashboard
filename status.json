@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T08:20:16Z",
+  "generated_at": "2026-06-26T10:20:21Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-25T19:15:31Z",
-    "minutes_since_session": 784,
+    "minutes_since_session": 904,
     "airlock_queue": 26,
     "airlock_bundles": 1
   },
@@ -54,6 +54,13 @@
   ],
   "ceo_actions": [
     {
+      "id": "ACT-REM-024",
+      "category": "required",
+      "label": "REM-024",
+      "context": "operations-infra coverage_drift: stray git-tracked duplicate of the freefs-mirror host-daemon artifacts (canonical home is `operations/bin/host-daemons/`)",
+      "waiting_on": null
+    },
+    {
       "id": "ACT-HO-1",
       "category": "required",
       "label": "Replace blog placeholder images (Dyson Hope blog) \u2014 deferred by CEO.",
@@ -63,7 +70,9 @@
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "REM-024"
+  ],
   "directors": [
     {
       "name": "engineering-director",
