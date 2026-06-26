@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-26T19:19:19Z",
+  "generated_at": "2026-06-26T20:05:59Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 78,
+    "done": 79,
     "total": 98,
-    "active": 2,
+    "active": 1,
     "queued": 2,
     "paused": 10,
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-06-26T19:13:32Z",
-    "minutes_since_session": 5,
+    "last_session_date": "2026-06-26T19:54:32Z",
+    "minutes_since_session": 11,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -25,11 +25,6 @@
     {
       "id": "INI-067",
       "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
-      "status": "active"
-    },
-    {
-      "id": "INI-092",
-      "name": "Voiced Creative Writing Capability \u2014 Voice Profiles, Format Contracts & the Dyson Hope Reels First Job",
       "status": "active"
     }
   ],
@@ -49,82 +44,22 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-PCR-OPS-024",
-      "category": "required",
-      "label": "PCR-OPS-024",
-      "context": "Repository class model + canonical-only push mode",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-025",
-      "category": "required",
-      "label": "REM-025",
-      "context": "jasonos-dashboard push broken: HTTPS remote, no credential in relay context (CEO expected SSH)",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-024",
-      "category": "required",
-      "label": "REM-024",
-      "context": "operations-infra coverage_drift: stray git-tracked duplicate of the freefs-mirror host-daemon artifacts (canonical home is `operations/bin/host-daemons/`)",
-      "waiting_on": null
-    },
-    {
       "id": "ACT-HO-1",
       "category": "required",
       "label": "Replace blog placeholder images (Dyson Hope blog) \u2014 deferred by CEO.",
       "context": "Two republished posts carry 9 image placeholders (8 to source + the kept Unsplash hero). Sampling post: hero, Fairlight "
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Dashboard-push credential (REM-025, look-into)",
-      "context": "the jasonos-dashboard repo push fails (could not read Username for github.com; 11\u00d7 in git-relay.log); remote dashboard i"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "\"Run now\" on dh-blog-drip",
-      "context": "pre-approve its bash/Composio tool grants so the first real fire (2026-06-29) doesn't pause on a permission prompt."
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "(Optional) Hand-tune tags/excerpt",
-      "context": "for the 9 stock posts \u2014 currently auto-derived (first-paragraph excerpt + topic tag); PA can craft per-post on request."
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "(Optional) Revert #2",
-      "context": "if you'd rather space the launch cadence (single git revert on 55b3483)."
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
-      "label": "Activate the staged relay on the mini (PCR-OPS-024).",
-      "context": "Run /Volumes/SandboxData/bin/jasonos-git-relay-activate.command + cp /Volumes/SandboxData/bin/commit_via_relay.py ~/bin/"
     }
   ],
-  "handoff_drift": {
-    "pcrs": {
-      "handoff": 0,
-      "files": 1
-    }
-  },
+  "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "PCR-OPS-024",
-    "REM-024",
-    "REM-025"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
