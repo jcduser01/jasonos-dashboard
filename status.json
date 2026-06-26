@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-26T20:20:38Z",
+  "generated_at": "2026-06-26T21:02:37Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 79,
     "total": 98,
-    "active": 1,
-    "queued": 2,
+    "active": 4,
+    "queued": 0,
     "paused": 10,
-    "backlog": 6
+    "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 26,
+    "minutes_since_session": 68,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -26,22 +26,24 @@
       "id": "INI-067",
       "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
       "status": "active"
-    }
-  ],
-  "queue": [
+    },
     {
-      "id": "INI-102",
-      "name": "Relay Misplaced-Trigger Detective \u2014 Catch Wrong-Path Queue Emissions Before They Silently Drop",
-      "status": "queued",
-      "position": 1
+      "id": "INI-099",
+      "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
+      "status": "active"
     },
     {
       "id": "INI-100",
       "name": "Reddit Source Re-enablement \u2014 Unauthenticated .json Access + Reaction-Worthiness Relevance Funnel",
-      "status": "queued",
-      "position": 2
+      "status": "active"
+    },
+    {
+      "id": "INI-102",
+      "name": "Relay Misplaced-Trigger Detective \u2014 Catch Wrong-Path Queue Emissions Before They Silently Drop",
+      "status": "active"
     }
   ],
+  "queue": [],
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
@@ -196,11 +198,6 @@
         "id": "INI-098",
         "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
         "notes": "Make Ono-Sendai a pre-provisioned warm standby JasonOS can fully migrate to during a declared continuity event (JasonOS Sandbox unavailable/impaired) and migrate back. Authorized by PCR-BC-003 (approved 2026-06-25; policy layer enacted). Exceptional-use only \u2014 NOT regular operations. Ready to pull (Backlog); Security Steward review is a hard gate before first reliance. Single-primary: JasonOS Sandbox is OFF for the migration window. Scope: host provisioning, host-local config under version control, a Mode 3 promote/demote procedure, Security Steward review, and a failover drill."
-      },
-      {
-        "id": "INI-099",
-        "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
-        "notes": "Convert the INI-075 knowledge backup runner output from a dated concatenated CONFIDENTIAL snapshot to a ONE-WAY folder-tree mirror in the CONFIDENTIAL Drive folder, so the KB is browsable on Drive web and pullable intact during a relocation (Mode 1) with no second-account Drive sync app. One-way only \u2014 preserves backup integrity; two-way is explicitly rejected. Confidentiality rides the existing folder ACL. Enables the relocation procedure's KB-access target; resolves a PCR-BC-002 follow-on. Open design decision at kickoff: point-in-time history + deletion handling."
       }
     ]
   }
