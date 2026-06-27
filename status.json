@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-27T00:22:55Z",
+  "generated_at": "2026-06-27T00:34:44Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 80,
     "total": 99,
-    "active": 4,
-    "queued": 1,
+    "active": 5,
+    "queued": 0,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 268,
+    "minutes_since_session": 280,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -25,6 +25,11 @@
     {
       "id": "INI-067",
       "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
+      "status": "active"
+    },
+    {
+      "id": "INI-098",
+      "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
       "status": "active"
     },
     {
@@ -43,14 +48,7 @@
       "status": "active"
     }
   ],
-  "queue": [
-    {
-      "id": "INI-098",
-      "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
-      "status": "queued",
-      "position": 1
-    }
-  ],
+  "queue": [],
   "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [],
