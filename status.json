@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-27T08:02:55Z",
+  "generated_at": "2026-06-27T08:49:54Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 82,
-    "total": 100,
-    "active": 3,
-    "queued": 1,
+    "done": 83,
+    "total": 101,
+    "active": 2,
+    "queued": 2,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 728,
+    "minutes_since_session": 775,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -31,11 +31,6 @@
       "id": "INI-100",
       "name": "Reddit Source Re-enablement \u2014 Unauthenticated .json Access + Reaction-Worthiness Relevance Funnel",
       "status": "active"
-    },
-    {
-      "id": "INI-102",
-      "name": "Relay Misplaced-Trigger Detective \u2014 Catch Wrong-Path Queue Emissions Before They Silently Drop",
-      "status": "active"
     }
   ],
   "queue": [
@@ -44,6 +39,12 @@
       "name": "Airlock Monitor Idempotency \u2014 Shared Processed-Marker Contract + Gmail Manifest Cross-Reference",
       "status": "queued",
       "position": 1
+    },
+    {
+      "id": "INI-106",
+      "name": "Durable Playwright Runtime Harness for Cowork/Sandbox + Dynamic-Behavior Static-Site Classification",
+      "status": "queued",
+      "position": 2
     }
   ],
   "ceo_actions": [
@@ -60,6 +61,13 @@
       "label": "GAP-026",
       "context": "CEO directed (2026-06-27): register the gap and create a follow-on INI in the Next queue to resolve it.",
       "waiting_on": "CEO directed (2026-06-27): register the gap and create a follow-on INI in the Next queue to resolve it."
+    },
+    {
+      "id": "ACT-REM-026",
+      "category": "required",
+      "label": "REM-026",
+      "context": "Gmail airlock in-session ingestion omits `airlock-processed` label \u2192 scheduled monitor re-processes already-ingested threads (duplicate KB entries + manifests + spurious Class-D escalation)",
+      "waiting_on": null
     }
   ],
   "handoff_drift": {
@@ -75,14 +83,15 @@
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
-    "PCR-ENG-011"
+    "PCR-ENG-011",
+    "REM-026"
   ],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
