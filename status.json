@@ -1,45 +1,30 @@
 {
-  "generated_at": "2026-06-27T18:17:47Z",
+  "generated_at": "2026-06-27T20:17:47Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 83,
-    "total": 101,
-    "active": 4,
+    "done": 85,
+    "total": 100,
+    "active": 1,
     "queued": 4,
     "paused": 10,
     "backlog": 0
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 618,
+    "minutes_since_session": 738,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-098",
-    "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
+    "id": "INI-099",
+    "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
     "status": "active"
   },
   "active_initiatives": [
     {
-      "id": "INI-098",
-      "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
-      "status": "active"
-    },
-    {
       "id": "INI-099",
       "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
-      "status": "active"
-    },
-    {
-      "id": "INI-105",
-      "name": "Airlock Monitor Idempotency \u2014 Shared Processed-Marker Contract + Gmail Manifest Cross-Reference",
-      "status": "active"
-    },
-    {
-      "id": "INI-106",
-      "name": "Durable Playwright Runtime Harness for Cowork/Sandbox + Dynamic-Behavior Static-Site Classification",
       "status": "active"
     }
   ],
@@ -71,61 +56,16 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-PCR-OPS-026",
-      "category": "required",
-      "label": "PCR-OPS-026",
-      "context": "",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-GAP-026",
-      "category": "required",
-      "label": "GAP-026",
-      "context": "CEO directed (2026-06-27): register the gap and create a follow-on INI in the Next queue to resolve it.",
-      "waiting_on": "CEO directed (2026-06-27): register the gap and create a follow-on INI in the Next queue to resolve it."
-    },
-    {
-      "id": "ACT-REM-026",
-      "category": "required",
-      "label": "REM-026",
-      "context": "Gmail airlock in-session ingestion omits `airlock-processed` label \u2192 scheduled monitor re-processes already-ingested threads (duplicate KB entries + manifests + spurious Class-D escalation)",
-      "waiting_on": null
-    },
-    {
       "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Decide PCR-ENG-011 (durable Playwright runtime harness)",
-      "context": "approve/decline the vendored, pinned Chromium + libXdamage stub + launch wrapper + tests/e2e/ template on SandboxData; d"
-    },
-    {
-      "id": "ACT-HO-2",
       "category": "required",
       "label": "(Optional) Manual-hotfix promotion policy",
       "context": "decide whether to file a PCR allowing PA-authored, CEO-authorized hotfixes to a Class 3 repo to push:true direct-to-cano"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "Resolve the open staged-batch interlock (staged/batch-eng-2026-06-27)",
-      "context": "it holds one inert commit (7e55c6b INI-099 KB drive-backup folder-tree mirror) and is currently blocking ALL relay push:"
     }
   ],
-  "handoff_drift": {
-    "pcrs": {
-      "handoff": 0,
-      "files": 1
-    },
-    "gaps": {
-      "handoff": 0,
-      "files": 1
-    }
-  },
+  "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "PCR-OPS-026",
-    "REM-026"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
