@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-27T00:20:39Z",
+  "generated_at": "2026-06-27T00:22:55Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 79,
+    "done": 80,
     "total": 99,
-    "active": 5,
+    "active": 4,
     "queued": 1,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 266,
+    "minutes_since_session": 268,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -40,11 +40,6 @@
     {
       "id": "INI-102",
       "name": "Relay Misplaced-Trigger Detective \u2014 Catch Wrong-Path Queue Emissions Before They Silently Drop",
-      "status": "active"
-    },
-    {
-      "id": "INI-103",
-      "name": "Financial Analysis Director: Monarch Money Integration \u2014 Weekly Digest and On-Demand Query",
       "status": "active"
     }
   ],
