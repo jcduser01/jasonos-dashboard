@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-27T08:49:54Z",
+  "generated_at": "2026-06-27T09:12:52Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 83,
-    "total": 101,
-    "active": 2,
-    "queued": 2,
+    "total": 100,
+    "active": 3,
+    "queued": 4,
     "paused": 10,
-    "backlog": 4
+    "backlog": 0
   },
   "operational": {
-    "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 775,
+    "last_session_date": "2026-06-27T07:58:48Z",
+    "minutes_since_session": 74,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -28,23 +28,40 @@
       "status": "active"
     },
     {
-      "id": "INI-100",
-      "name": "Reddit Source Re-enablement \u2014 Unauthenticated .json Access + Reaction-Worthiness Relevance Funnel",
+      "id": "INI-105",
+      "name": "Airlock Monitor Idempotency \u2014 Shared Processed-Marker Contract + Gmail Manifest Cross-Reference",
+      "status": "active"
+    },
+    {
+      "id": "INI-106",
+      "name": "Durable Playwright Runtime Harness for Cowork/Sandbox + Dynamic-Behavior Static-Site Classification",
       "status": "active"
     }
   ],
   "queue": [
     {
-      "id": "INI-105",
-      "name": "Airlock Monitor Idempotency \u2014 Shared Processed-Marker Contract + Gmail Manifest Cross-Reference",
+      "id": "INI-053",
+      "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
       "status": "queued",
       "position": 1
     },
     {
-      "id": "INI-106",
-      "name": "Durable Playwright Runtime Harness for Cowork/Sandbox + Dynamic-Behavior Static-Site Classification",
+      "id": "INI-054",
+      "name": "Temple of Unicorns \u2014 Product Catalog Refresh",
       "status": "queued",
       "position": 2
+    },
+    {
+      "id": "INI-055",
+      "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
+      "status": "queued",
+      "position": 3
+    },
+    {
+      "id": "INI-056",
+      "name": "Temple of Unicorns \u2014 Brand Design System",
+      "status": "queued",
+      "position": 4
     }
   ],
   "ceo_actions": [
@@ -68,6 +85,24 @@
       "label": "REM-026",
       "context": "Gmail airlock in-session ingestion omits `airlock-processed` label \u2192 scheduled monitor re-processes already-ingested threads (duplicate KB entries + manifests + spurious Class-D escalation)",
       "waiting_on": null
+    },
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Decide PCR-ENG-011 (durable Playwright runtime harness)",
+      "context": "approve/decline the vendored, pinned Chromium + libXdamage stub + launch wrapper + tests/e2e/ template on SandboxData; d"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "(Optional) Manual-hotfix promotion policy",
+      "context": "decide whether to file a PCR allowing PA-authored, CEO-authorized hotfixes to a Class 3 repo to push:true direct-to-cano"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Resolve the open staged-batch interlock (staged/batch-eng-2026-06-27)",
+      "context": "it holds one inert commit (7e55c6b INI-099 KB drive-backup folder-tree mirror) and is currently blocking ALL relay push:"
     }
   ],
   "handoff_drift": {
@@ -202,27 +237,7 @@
     ]
   },
   "backlog": {
-    "client_work": [
-      {
-        "id": "INI-053",
-        "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
-        "notes": "Pending: INI-051 complete"
-      },
-      {
-        "id": "INI-054",
-        "name": "Temple of Unicorns \u2014 Product Catalog Refresh"
-      },
-      {
-        "id": "INI-055",
-        "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
-        "notes": "Pending: INI-053 + INI-056 complete"
-      },
-      {
-        "id": "INI-056",
-        "name": "Temple of Unicorns \u2014 Brand Design System",
-        "notes": "Pending: INI-051 + INI-053 complete"
-      }
-    ],
+    "client_work": [],
     "infrastructure": []
   }
 }
