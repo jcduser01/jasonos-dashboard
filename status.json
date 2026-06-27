@@ -1,32 +1,27 @@
 {
-  "generated_at": "2026-06-27T05:03:27Z",
+  "generated_at": "2026-06-27T05:13:42Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 81,
+    "done": 82,
     "total": 99,
-    "active": 4,
+    "active": 3,
     "queued": 0,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 548,
+    "minutes_since_session": 559,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-067",
-    "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
+    "id": "INI-099",
+    "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
     "status": "active"
   },
   "active_initiatives": [
-    {
-      "id": "INI-067",
-      "name": "Human Creativity in the Age of AI \u2014 Dyson Hope",
-      "status": "active"
-    },
     {
       "id": "INI-099",
       "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
