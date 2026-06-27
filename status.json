@@ -1,27 +1,32 @@
 {
-  "generated_at": "2026-06-27T09:12:52Z",
+  "generated_at": "2026-06-27T16:17:46Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 83,
-    "total": 100,
-    "active": 3,
+    "total": 101,
+    "active": 4,
     "queued": 4,
     "paused": 10,
     "backlog": 0
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 74,
+    "minutes_since_session": 498,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
-    "id": "INI-099",
-    "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
+    "id": "INI-098",
+    "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
     "status": "active"
   },
   "active_initiatives": [
+    {
+      "id": "INI-098",
+      "name": "Ono-Sendai Warm-Standby Host \u2014 Provision Ono-Sendai for full JasonOS failover during a declared continuity event",
+      "status": "active"
+    },
     {
       "id": "INI-099",
       "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
@@ -66,10 +71,10 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-PCR-ENG-011",
+      "id": "ACT-PCR-OPS-026",
       "category": "required",
-      "label": "PCR-ENG-011",
-      "context": "Durable Playwright Runtime Harness for the Cowork/Sandbox Environment",
+      "label": "PCR-OPS-026",
+      "context": "",
       "waiting_on": null
     },
     {
@@ -118,7 +123,7 @@
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
-    "PCR-ENG-011",
+    "PCR-OPS-026",
     "REM-026"
   ],
   "directors": [
@@ -126,7 +131,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 25
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
