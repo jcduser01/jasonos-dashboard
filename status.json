@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-27T06:17:49Z",
+  "generated_at": "2026-06-27T08:02:55Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 82,
-    "total": 99,
+    "total": 100,
     "active": 3,
-    "queued": 0,
+    "queued": 1,
     "paused": 10,
     "backlog": 4
   },
   "operational": {
     "last_session_date": "2026-06-26T19:54:32Z",
-    "minutes_since_session": 623,
+    "minutes_since_session": 728,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -38,12 +38,45 @@
       "status": "active"
     }
   ],
-  "queue": [],
-  "ceo_actions": [],
-  "handoff_drift": {},
+  "queue": [
+    {
+      "id": "INI-105",
+      "name": "Airlock Monitor Idempotency \u2014 Shared Processed-Marker Contract + Gmail Manifest Cross-Reference",
+      "status": "queued",
+      "position": 1
+    }
+  ],
+  "ceo_actions": [
+    {
+      "id": "ACT-PCR-ENG-011",
+      "category": "required",
+      "label": "PCR-ENG-011",
+      "context": "Durable Playwright Runtime Harness for the Cowork/Sandbox Environment",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-GAP-026",
+      "category": "required",
+      "label": "GAP-026",
+      "context": "CEO directed (2026-06-27): register the gap and create a follow-on INI in the Next queue to resolve it.",
+      "waiting_on": "CEO directed (2026-06-27): register the gap and create a follow-on INI in the Next queue to resolve it."
+    }
+  ],
+  "handoff_drift": {
+    "pcrs": {
+      "handoff": 0,
+      "files": 1
+    },
+    "gaps": {
+      "handoff": 0,
+      "files": 1
+    }
+  },
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "PCR-ENG-011"
+  ],
   "directors": [
     {
       "name": "engineering-director",
