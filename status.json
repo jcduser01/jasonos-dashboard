@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T20:17:47Z",
+  "generated_at": "2026-06-27T22:17:48Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 738,
+    "minutes_since_session": 859,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -54,14 +54,7 @@
       "position": 4
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "(Optional) Manual-hotfix promotion policy",
-      "context": "decide whether to file a PCR allowing PA-authored, CEO-authorized hotfixes to a Class 3 repo to push:true direct-to-cano"
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
