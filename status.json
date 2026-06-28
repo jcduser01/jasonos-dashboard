@@ -1,33 +1,23 @@
 {
-  "generated_at": "2026-06-28T04:17:50Z",
+  "generated_at": "2026-06-28T04:54:00Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 85,
+    "done": 86,
     "total": 100,
-    "active": 1,
+    "active": 0,
     "queued": 4,
     "paused": 10,
     "backlog": 0
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 1219,
+    "minutes_since_session": 1255,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-099",
-    "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-099",
-      "name": "KB Drive Backup \u2014 Snapshot \u2192 One-Way Folder-Tree Mirror (browsable + relocation-pullable)",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [
     {
       "id": "INI-053",
