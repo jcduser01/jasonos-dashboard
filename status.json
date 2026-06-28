@@ -1,53 +1,51 @@
 {
-  "generated_at": "2026-06-28T16:17:52Z",
+  "generated_at": "2026-06-28T17:23:18Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 87,
+    "done": 88,
     "total": 102,
-    "active": 0,
-    "queued": 5,
+    "active": 1,
+    "queued": 3,
     "paused": 10,
     "backlog": 0
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 1939,
+    "minutes_since_session": 2004,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": null,
-  "active_initiatives": [],
-  "queue": [
+  "active_initiative": {
+    "id": "INI-107",
+    "name": "Knowledge-Backup Prompt Sync to INI-099 Mirror Model",
+    "status": "active"
+  },
+  "active_initiatives": [
     {
       "id": "INI-107",
       "name": "Knowledge-Backup Prompt Sync to INI-099 Mirror Model",
-      "status": "queued",
-      "position": 1
-    },
-    {
-      "id": "INI-108",
-      "name": "Business-Continuity Currency \u2014 Scheduled-Task Recovery Completeness",
-      "status": "queued",
-      "position": 2
-    },
+      "status": "active"
+    }
+  ],
+  "queue": [
     {
       "id": "INI-053",
       "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
       "status": "queued",
-      "position": 3
+      "position": 1
     },
     {
       "id": "INI-055",
       "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
       "status": "queued",
-      "position": 4
+      "position": 2
     },
     {
       "id": "INI-056",
       "name": "Temple of Unicorns \u2014 Brand Design System",
       "status": "queued",
-      "position": 5
+      "position": 3
     }
   ],
   "ceo_actions": [
@@ -56,23 +54,13 @@
       "category": "required",
       "label": "REM-027",
       "context": "jasonos-knowledge-backup deployed prompt Step 4 keys on retired `upload_success`; INI-099 mirror now emits `mirror_success` (deployed-vs-canonical drift)",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-028",
-      "category": "required",
-      "label": "REM-028",
-      "context": "BC-currency: sandbox-rebuild Step 7 (\"recreate the 9\") omits 2 live scheduled tasks (`jasonos-financial-digest`, `dh-blog-drip`) \u2014 no schedule-recovery path",
-      "waiting_on": null
+      "waiting_on": "INI-107 (Current) \u2014 Phase 3 verification at the next scheduled knowledge-backup run (2026-06-29). |"
     }
   ],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "REM-027",
-    "REM-028"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
