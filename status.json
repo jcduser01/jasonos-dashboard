@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T17:23:18Z",
+  "generated_at": "2026-06-28T17:25:35Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 2004,
+    "minutes_since_session": 2006,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -54,7 +54,7 @@
       "category": "required",
       "label": "REM-027",
       "context": "jasonos-knowledge-backup deployed prompt Step 4 keys on retired `upload_success`; INI-099 mirror now emits `mirror_success` (deployed-vs-canonical drift)",
-      "waiting_on": "INI-107 (Current) \u2014 Phase 3 verification at the next scheduled knowledge-backup run (2026-06-29). |"
+      "waiting_on": "INI-107 (Current) \u2014 Phase 3 verification at the next scheduled knowledge-backup run (2026-06-29)."
     }
   ],
   "handoff_drift": {},
