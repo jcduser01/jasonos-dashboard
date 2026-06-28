@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-28T18:17:53Z",
+  "generated_at": "2026-06-28T18:21:15Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
     "done": 88,
-    "total": 102,
+    "total": 103,
     "active": 1,
     "queued": 3,
     "paused": 10,
-    "backlog": 0
+    "backlog": 1
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 2059,
+    "minutes_since_session": 2062,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -177,7 +177,13 @@
     ]
   },
   "backlog": {
-    "client_work": [],
+    "client_work": [
+      {
+        "id": "INI-109",
+        "name": "Temple of Unicorns \u2014 Product Pipeline Automation",
+        "notes": "Pending: other ToU initiatives (INI-053/055/056) to land before scheduling; CEO parked in Backlog 2026-06-28 to let the relaunch dust settle"
+      }
+    ],
     "infrastructure": []
   }
 }
