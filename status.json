@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T08:17:57Z",
+  "generated_at": "2026-06-29T10:17:57Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 2899,
+    "minutes_since_session": 3019,
     "airlock_queue": 2,
     "airlock_bundles": 0
   },
@@ -50,17 +50,19 @@
   ],
   "ceo_actions": [
     {
-      "id": "ACT-REM-027",
+      "id": "ACT-REM-029",
       "category": "required",
-      "label": "REM-027",
-      "context": "jasonos-knowledge-backup deployed prompt Step 4 keys on retired `upload_success`; INI-099 mirror now emits `mirror_success` (deployed-vs-canonical drift)",
-      "waiting_on": "INI-107 (Current) \u2014 Phase 3 verification at the next scheduled knowledge-backup run (2026-06-29)."
+      "label": "REM-029",
+      "context": "Relay precommand embeds per-session sandbox mount paths (`/sessions/<id>/mnt/SandboxData/\u2026`) \u2192 `git add` ERROR on the PCR-OPS-022 CEO-override closure",
+      "waiting_on": null
     }
   ],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "REM-029"
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -95,8 +97,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-06-27T00:11:00Z",
-      "invocations_30d": 1
+      "last_active": "2026-06-29T09:15:00Z",
+      "invocations_30d": 2
     },
     {
       "name": "venture-director",
