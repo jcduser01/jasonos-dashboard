@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-29T06:17:56Z",
+  "generated_at": "2026-06-29T08:17:57Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 88,
-    "total": 103,
+    "done": 89,
+    "total": 104,
     "active": 1,
     "queued": 3,
     "paused": 10,
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-27T07:58:48Z",
-    "minutes_since_session": 2779,
+    "minutes_since_session": 2899,
     "airlock_queue": 2,
     "airlock_bundles": 0
   },
