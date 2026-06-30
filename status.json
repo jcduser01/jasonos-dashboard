@@ -1,33 +1,23 @@
 {
-  "generated_at": "2026-06-30T14:18:05Z",
+  "generated_at": "2026-06-30T15:19:55Z",
   "schema_version": "5",
   "generator_version": "2.2",
   "stats": {
-    "done": 89,
+    "done": 90,
     "total": 108,
-    "active": 1,
+    "active": 0,
     "queued": 3,
     "paused": 10,
     "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-06-29T13:05:56Z",
-    "minutes_since_session": 1512,
+    "minutes_since_session": 1573,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
-  "active_initiative": {
-    "id": "INI-107",
-    "name": "Knowledge-Backup Prompt Sync to INI-099 Mirror Model",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-107",
-      "name": "Knowledge-Backup Prompt Sync to INI-099 Mirror Model",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [
     {
       "id": "INI-053",
@@ -48,27 +38,17 @@
       "position": 3
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-REM-029",
-      "category": "required",
-      "label": "REM-029",
-      "context": "Relay precommand embeds per-session sandbox mount paths (`/sessions/<id>/mnt/SandboxData/\u2026`) \u2192 `git add` ERROR on the PCR-OPS-022 CEO-override closure",
-      "waiting_on": null
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "REM-029"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
