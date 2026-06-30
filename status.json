@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T20:38:24Z",
+  "generated_at": "2026-06-30T20:42:43Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-06-29T13:05:56Z",
-    "minutes_since_session": 1892,
+    "minutes_since_session": 1896,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -36,14 +36,7 @@
       "position": 1
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-INI-115",
-      "category": "required",
-      "label": "INI-115",
-      "context": "Built + verified in-sandbox (all DoD items). Final step: run /Volumes/SandboxData/bin/ini115-deploy.command (deploys publisher v2.0 + compactor v1.3, re-bootstraps the daemon), confirm the dashboard-p"
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
