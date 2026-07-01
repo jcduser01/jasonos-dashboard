@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T16:37:01Z",
+  "generated_at": "2026-07-01T17:05:34Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,28 +12,18 @@
   },
   "operational": {
     "last_session_date": "2026-06-29T13:05:56Z",
-    "minutes_since_session": 3091,
+    "minutes_since_session": 3119,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": null,
   "active_initiatives": [],
   "queue": [],
-  "ceo_actions": [
-    {
-      "id": "ACT-REM-030",
-      "category": "required",
-      "label": "REM-030",
-      "context": "INI-116 post-cutover: relay default-repo git-phase fails (frozen legacy governance dir has a stale/404 `upstream`) + audit checkers hardcode the legacy dir \u2192 they verify the frozen monolith, not the l",
-      "waiting_on": null
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "REM-030"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
