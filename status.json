@@ -1,31 +1,24 @@
 {
-  "generated_at": "2026-07-01T14:10:46Z",
+  "generated_at": "2026-07-01T14:36:50Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
-    "done": 91,
+    "done": 92,
     "total": 110,
     "active": 0,
-    "queued": 1,
+    "queued": 0,
     "paused": 10,
     "backlog": 8
   },
   "operational": {
     "last_session_date": "2026-06-29T13:05:56Z",
-    "minutes_since_session": 2944,
+    "minutes_since_session": 2970,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": null,
   "active_initiatives": [],
-  "queue": [
-    {
-      "id": "INI-116",
-      "name": "Executive Operations Split \u2014 Governance/Operations Repo Separation",
-      "status": "queued",
-      "position": 1
-    }
-  ],
+  "queue": [],
   "ceo_actions": [
     {
       "id": "ACT-REM-030",
