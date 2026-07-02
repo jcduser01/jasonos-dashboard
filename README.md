@@ -16,6 +16,7 @@ Mac mini (JasonOS)
         writes: /Volumes/SandboxData/code/jasonos-dashboard/status.json
         cadence: every 15 min (launchd) + session close (President Agent)
         → git relay commits + pushes to origin
+              └── push triggers .github/workflows/deploy-pages.yml → deploys to GitHub Pages
 
 GitHub Pages
   └── https://jcduser01.github.io/jasonos-dashboard/
@@ -128,4 +129,6 @@ push: true
 
 ## GitHub Pages Configuration
 
-Settings → Pages → Source: **Deploy from a branch** → Branch: `main` / Folder: `/ (root)`.
+Settings → Pages → Source: **GitHub Actions**.
+
+Deployment runs via `.github/workflows/deploy-pages.yml`: on every push to `main` it uploads the repo root as the Pages artifact and deploys it. A `concurrency: pages` group collapses the status generator's rapid publish pushes into a single always-latest deployment. This replaces the legacy "Deploy from a branch" flow, which spawned one deployment per push and stacked overlapping deploys — the cause of the deploy-step timeouts observed under rapid publishing.
