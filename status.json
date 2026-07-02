@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T19:02:36Z",
+  "generated_at": "2026-07-02T19:30:46Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,8 +12,8 @@
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 257,
-    "airlock_queue": 2,
+    "minutes_since_session": 285,
+    "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
@@ -29,42 +29,11 @@
     }
   ],
   "queue": [],
-  "ceo_actions": [
-    {
-      "id": "ACT-PCR-VENT-002",
-      "category": "required",
-      "label": "PCR-VENT-002",
-      "context": "",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-PCR-VENT-003",
-      "category": "required",
-      "label": "PCR-VENT-003",
-      "context": "",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-PCR-VENT-004",
-      "category": "required",
-      "label": "PCR-VENT-004",
-      "context": "",
-      "waiting_on": null
-    }
-  ],
-  "handoff_drift": {
-    "pcrs": {
-      "handoff": 0,
-      "files": 3
-    }
-  },
+  "ceo_actions": [],
+  "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "PCR-VENT-002",
-    "PCR-VENT-003",
-    "PCR-VENT-004"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
@@ -99,8 +68,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-06-29T09:15:00Z",
-      "invocations_30d": 2
+      "last_active": "2026-07-02T19:11:17Z",
+      "invocations_30d": 3
     },
     {
       "name": "venture-director",
