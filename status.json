@@ -1,42 +1,25 @@
 {
-  "generated_at": "2026-07-02T17:10:42Z",
+  "generated_at": "2026-07-02T17:36:24Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
-    "done": 95,
+    "done": 96,
     "total": 112,
-    "active": 1,
+    "active": 0,
     "queued": 0,
     "paused": 10,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 145,
+    "minutes_since_session": 171,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-113",
-    "name": "Jason Cook Design \u2014 Policy Drafting",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-113",
-      "name": "Jason Cook Design \u2014 Policy Drafting",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [],
-  "ceo_actions": [
-    {
-      "id": "ACT-INI-113",
-      "category": "required",
-      "label": "INI-113",
-      "context": "Batch 3 in progress (Current). CEO strategy input session is live this session; ratification decision (DEC-JCD-005) will be requested in-session once the draft is presented. No async board action pend"
-    }
-  ],
+  "ceo_actions": [],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
