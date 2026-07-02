@@ -1,33 +1,23 @@
 {
-  "generated_at": "2026-07-02T10:41:43Z",
+  "generated_at": "2026-07-02T11:39:33Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 95,
     "total": 112,
-    "active": 1,
+    "active": 0,
     "queued": 0,
-    "paused": 10,
+    "paused": 11,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-07-01T14:07:00Z",
-    "minutes_since_session": 1234,
+    "minutes_since_session": 1292,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-113",
-    "name": "Jason Cook Design \u2014 Policy Drafting",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-113",
-      "name": "Jason Cook Design \u2014 Policy Drafting",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [],
   "ceo_actions": [
     {
@@ -36,12 +26,6 @@
       "label": "REM-032",
       "context": "Unpushed local governance commit: `24e437a` (backfill PCR-OPS-031 enacting commit hash) is ahead of origin/main \u2014 canonical governance repo diverged (recurring unpushed-commit class)",
       "waiting_on": null
-    },
-    {
-      "id": "ACT-INI-113",
-      "category": "required",
-      "label": "INI-113",
-      "context": "Line-item ratify the Phase 0 + Batch 1 package drafted in the JCD repo (INI-JCD-002): Constitution v0.3 editorial pass (PROP-JCD-001), OD-013 JasonOS-authority resolution (PROP-JCD-002 / DEC-JCD-001),"
     },
     {
       "id": "ACT-HO-1",
@@ -54,6 +38,7 @@
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
+    "INI-113",
     "REM-032"
   ],
   "directors": [
@@ -130,6 +115,11 @@
         "name": "Ray Graystone \u2014 Publication Path",
         "notes": "Paused 2026-06-17 (deferred until a draft exists).",
         "waiting_on": "a Ray Graystone draft to exist (deferred until then)"
+      },
+      {
+        "id": "INI-113",
+        "name": "Jason Cook Design \u2014 Policy Drafting",
+        "notes": "Paused 2026-07-01 between batches (model C). Batch 1 + Phase 0 RATIFIED: Constitution v0.3 (DEC-JCD-002), OD-013/DEC-JCD-001, and 7 decision-system policies at v1.0 (DEC-JCD-003; R&D OD-002 enacted as a 10/15/20% adaptive floor). Re-enters Current when the CEO pulls Batch 2 (domain policies) or Batch 3 (Strategy, last \u2014 closes the INI-111 seam)."
       }
     ],
     "infrastructure": [
