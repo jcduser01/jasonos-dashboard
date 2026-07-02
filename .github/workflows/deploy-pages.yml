@@ -1,0 +1,55 @@
+# Deploy the static dashboard to GitHub Pages.
+#
+# Replaces the legacy "Deploy from a branch" (pages-build-deployment) flow.
+# The concurrency block collapses the auto-publish daemon's rapid-fire pushes
+# into a single always-latest deployment, eliminating the stacked/overlapping
+# deploys that pile up under the branch-deploy model.
+#
+# ACTIVATION (required — the workflow is inert until this is done):
+#   Repo → Settings → Pages → Build and deployment → Source → "GitHub Actions".
+# Until the source is switched, actions/deploy-pages will error, so land this
+# file and flip the setting together (see cutover steps in chat).
+
+name: Deploy dashboard to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least-privilege token: read the repo, write the Pages deployment.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time. A burst of pushes collapses to "the one running now
+# + the newest queued"; intermediate queued runs are skipped. cancel-in-progress
+# is false so a live production deploy is never killed mid-flight. Switch to true
+# if you'd rather always ship the freshest commit and don't mind cancelling an
+# in-flight deploy (fine for an idempotent status dashboard).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
