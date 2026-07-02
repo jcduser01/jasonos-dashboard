@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T13:53:13Z",
+  "generated_at": "2026-07-02T14:45:13Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-01T14:07:00Z",
-    "minutes_since_session": 1426,
+    "minutes_since_session": 1478,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -31,13 +31,6 @@
   "queue": [],
   "ceo_actions": [
     {
-      "id": "ACT-REM-032",
-      "category": "required",
-      "label": "REM-032",
-      "context": "Unpushed local governance commit: `24e437a` (backfill PCR-OPS-031 enacting commit hash) is ahead of origin/main \u2014 canonical governance repo diverged (recurring unpushed-commit class)",
-      "waiting_on": null
-    },
-    {
       "id": "ACT-INI-113",
       "category": "required",
       "label": "INI-113",
@@ -53,9 +46,7 @@
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "REM-032"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
