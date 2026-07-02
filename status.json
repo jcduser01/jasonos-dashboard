@@ -1,29 +1,70 @@
 {
-  "generated_at": "2026-07-02T17:36:24Z",
+  "generated_at": "2026-07-02T19:02:25Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 96,
     "total": 112,
-    "active": 0,
+    "active": 1,
     "queued": 0,
     "paused": 10,
-    "backlog": 6
+    "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 171,
-    "airlock_queue": 0,
+    "minutes_since_session": 257,
+    "airlock_queue": 2,
     "airlock_bundles": 0
   },
-  "active_initiative": null,
-  "active_initiatives": [],
+  "active_initiative": {
+    "id": "INI-111",
+    "name": "Venture Opportunity Engine",
+    "status": "active"
+  },
+  "active_initiatives": [
+    {
+      "id": "INI-111",
+      "name": "Venture Opportunity Engine",
+      "status": "active"
+    }
+  ],
   "queue": [],
-  "ceo_actions": [],
-  "handoff_drift": {},
+  "ceo_actions": [
+    {
+      "id": "ACT-PCR-VENT-002",
+      "category": "required",
+      "label": "PCR-VENT-002",
+      "context": "",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-PCR-VENT-003",
+      "category": "required",
+      "label": "PCR-VENT-003",
+      "context": "",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-PCR-VENT-004",
+      "category": "required",
+      "label": "PCR-VENT-004",
+      "context": "",
+      "waiting_on": null
+    }
+  ],
+  "handoff_drift": {
+    "pcrs": {
+      "handoff": 0,
+      "files": 3
+    }
+  },
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "PCR-VENT-002",
+    "PCR-VENT-003",
+    "PCR-VENT-004"
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -166,11 +207,6 @@
         "name": "Jason Cook Design \u2014 Website Repositioning"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-111",
-        "name": "Venture Opportunity Engine"
-      }
-    ]
+    "infrastructure": []
   }
 }
