@@ -1,25 +1,42 @@
 {
-  "generated_at": "2026-07-02T00:28:26Z",
+  "generated_at": "2026-07-02T01:03:18Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 93,
     "total": 111,
-    "active": 0,
+    "active": 1,
     "queued": 0,
     "paused": 10,
-    "backlog": 8
+    "backlog": 7
   },
   "operational": {
     "last_session_date": "2026-06-29T13:05:56Z",
-    "minutes_since_session": 3562,
+    "minutes_since_session": 3597,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": null,
-  "active_initiatives": [],
+  "active_initiative": {
+    "id": "INI-112",
+    "name": "Jason Cook Design \u2014 Governance Foundation",
+    "status": "active"
+  },
+  "active_initiatives": [
+    {
+      "id": "INI-112",
+      "name": "Jason Cook Design \u2014 Governance Foundation",
+      "status": "active"
+    }
+  ],
   "queue": [],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-INI-112",
+      "category": "required",
+      "label": "INI-112",
+      "context": "Provision SSH deploy key (write access) for github.com/jasoncookdesign/jason-cook-design-management per the per-repo-deploy-key pattern; see President Agent's flagged key requirements."
+    }
+  ],
   "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
@@ -160,10 +177,6 @@
         "id": "INI-109",
         "name": "Temple of Unicorns \u2014 Product Pipeline Automation",
         "notes": "Pending: other ToU initiatives (INI-053/055/056) to land before scheduling; CEO parked in Backlog 2026-06-28 to let the relaunch dust settle"
-      },
-      {
-        "id": "INI-112",
-        "name": "Jason Cook Design \u2014 Governance Foundation"
       },
       {
         "id": "INI-113",
