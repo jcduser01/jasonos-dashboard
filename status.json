@@ -1,33 +1,23 @@
 {
-  "generated_at": "2026-07-01T23:27:45Z",
+  "generated_at": "2026-07-02T00:25:32Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
-    "done": 92,
+    "done": 93,
     "total": 111,
-    "active": 1,
+    "active": 0,
     "queued": 0,
     "paused": 10,
     "backlog": 8
   },
   "operational": {
     "last_session_date": "2026-06-29T13:05:56Z",
-    "minutes_since_session": 3501,
+    "minutes_since_session": 3559,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-117",
-    "name": "Script Governance \u2014 Registry, Placement Discipline, and Coverage",
-    "status": "active"
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-117",
-      "name": "Script Governance \u2014 Registry, Placement Discipline, and Coverage",
-      "status": "active"
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [],
   "ceo_actions": [],
   "handoff_drift": {},
