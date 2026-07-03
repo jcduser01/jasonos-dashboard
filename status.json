@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T07:34:53Z",
+  "generated_at": "2026-07-03T08:44:01Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 1009,
+    "minutes_since_session": 1079,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -43,10 +43,10 @@
       "waiting_on": null
     },
     {
-      "id": "ACT-PCR-FIN-003",
+      "id": "ACT-PCR-KNOW-005",
       "category": "required",
-      "label": "PCR-FIN-003",
-      "context": "",
+      "label": "PCR-KNOW-005",
+      "context": "Doctrine-Ratification Reconciliation Sweep",
       "waiting_on": null
     },
     {
@@ -55,6 +55,13 @@
       "label": "GAP-027",
       "context": "INI-119 \u2014 pull into Current when ready to build the KB inbox-aging + vault-structure completeness checker.",
       "waiting_on": "INI-119 \u2014 pull into Current when ready to build the KB inbox-aging + vault-structure completeness checker."
+    },
+    {
+      "id": "ACT-GAP-028",
+      "category": "required",
+      "label": "GAP-028",
+      "context": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decis",
+      "waiting_on": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decision log and forecast variance-history accrue meaningful non-reconstructible entries."
     }
   ],
   "handoff_drift": {
@@ -64,14 +71,14 @@
     },
     "gaps": {
       "handoff": 0,
-      "files": 1
+      "files": 2
     }
   },
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
     "PCR-ENG-013",
-    "PCR-FIN-003"
+    "PCR-KNOW-005"
   ],
   "directors": [
     {
