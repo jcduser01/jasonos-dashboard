@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T06:14:25Z",
+  "generated_at": "2026-07-03T06:37:56Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 929,
+    "minutes_since_session": 952,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -31,6 +31,13 @@
   "queue": [],
   "ceo_actions": [
     {
+      "id": "ACT-PCR-ENG-013",
+      "category": "required",
+      "label": "PCR-ENG-013",
+      "context": "close-initiative.sh provenance / permission resilience",
+      "waiting_on": null
+    },
+    {
       "id": "ACT-PCR-FIN-003",
       "category": "required",
       "label": "PCR-FIN-003",
@@ -48,7 +55,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 0,
-      "files": 1
+      "files": 2
     },
     "gaps": {
       "handoff": 0,
@@ -58,6 +65,7 @@
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
+    "PCR-ENG-013",
     "PCR-FIN-003"
   ],
   "directors": [
