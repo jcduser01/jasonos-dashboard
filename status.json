@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T22:25:20Z",
+  "generated_at": "2026-07-03T00:25:21Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 460,
+    "minutes_since_session": 580,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -31,16 +31,30 @@
   "queue": [],
   "ceo_actions": [
     {
+      "id": "ACT-PCR-VENT-005",
+      "category": "required",
+      "label": "PCR-VENT-005",
+      "context": "",
+      "waiting_on": null
+    },
+    {
       "id": "ACT-INI-111",
       "category": "required",
       "label": "INI-111",
       "context": "Obtain a sam.gov API key (SAM.gov account \u2192 Account Details; register against an entity for the usable request tier) and add SAMGOV_API_KEY to .jasonos-secrets, then run the activation command \u2014 to ta"
     }
   ],
-  "handoff_drift": {},
+  "handoff_drift": {
+    "pcrs": {
+      "handoff": 0,
+      "files": 1
+    }
+  },
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "PCR-VENT-005"
+  ],
   "directors": [
     {
       "name": "engineering-director",
