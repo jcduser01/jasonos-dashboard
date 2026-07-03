@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T08:44:11Z",
+  "generated_at": "2026-07-03T10:44:12Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 1079,
+    "last_session_date": "2026-07-03T05:01:30Z",
+    "minutes_since_session": 342,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -62,15 +62,53 @@
       "label": "GAP-028",
       "context": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decis",
       "waiting_on": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decision log and forecast variance-history accrue meaningful non-reconstructible entries."
+    },
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Provision the privacy.com card for the Venture engine \u2014 when the first paid dependency lands (deferred by CEO).",
+      "context": "Recommended settings: per-transaction $50, monthly ceiling $500 (coarse backstop; engine policy enforces the true rollin"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Take the staged sam.gov poller live \u2014 obtain a sam.gov API key.",
+      "context": "Register/log into a SAM.gov account \u2192 Account Details \u2192 generate key; associate the account with a registered entity to "
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Authorize the governance commit",
+      "context": "GAP-027, INI-119, and gaps/INDEX.md are written to disk in the operations repo but uncommitted; portfolio README regener"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "Medical/financial power of attorney check",
+      "context": "separate documents from the will/beneficiary (which CEO confirmed are fine as-is); currency not yet confirmed. No urgenc"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Concentration-risk rule",
+      "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's own operating model. Open, not prioritized; no a"
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "Evaluate canonizing the projection-dirty publisher-trigger",
+      "context": "touch an empty file in /Volumes/SandboxData/Logs/.projection-dirty/ signals the dashboard publisher to regenerate the po"
+    },
+    {
+      "id": "ACT-HO-7",
+      "category": "required",
+      "label": "Handle the relay-CLI timeout vs. Cowork bash-cap friction",
+      "context": "commit_via_relay.py default --timeout is 90s but the Cowork bash tool caps at 45s, so relay commits from the sandbox mus"
     }
   ],
   "handoff_drift": {
-    "pcrs": {
-      "handoff": 0,
-      "files": 2
-    },
     "gaps": {
-      "handoff": 0,
+      "handoff": 1,
       "files": 2
     }
   },
