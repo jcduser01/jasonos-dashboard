@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-03T18:03:01Z",
+  "generated_at": "2026-07-03T18:20:33Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 98,
-    "total": 111,
-    "active": 1,
+    "total": 112,
+    "active": 2,
     "queued": 0,
     "paused": 7,
     "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 781,
+    "minutes_since_session": 799,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -25,6 +25,11 @@
     {
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
+      "status": "active"
+    },
+    {
+      "id": "INI-121",
+      "name": "Financial-State Store Durability Mirror",
       "status": "active"
     }
   ],
@@ -45,18 +50,17 @@
       "waiting_on": null
     },
     {
-      "id": "ACT-GAP-027",
-      "category": "required",
-      "label": "GAP-027",
-      "context": "INI-119 \u2014 pull into Current when ready to build the KB inbox-aging + vault-structure completeness checker.",
-      "waiting_on": "INI-119 \u2014 pull into Current when ready to build the KB inbox-aging + vault-structure completeness checker."
-    },
-    {
       "id": "ACT-GAP-028",
       "category": "required",
       "label": "GAP-028",
       "context": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decis",
       "waiting_on": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decision log and forecast variance-history accrue meaningful non-reconstructible entries."
+    },
+    {
+      "id": "ACT-INI-121",
+      "category": "required",
+      "label": "INI-121",
+      "context": "Provision (or confirm reuse of) a dedicated owner-only CONFIDENTIAL Drive folder as the financial-state mirror target, then the mirror can go live."
     },
     {
       "id": "ACT-HO-1",
@@ -101,12 +105,7 @@
       "context": "commit_via_relay.py default --timeout is 90s but the Cowork bash tool caps at 45s, so relay commits from the sandbox mus"
     }
   ],
-  "handoff_drift": {
-    "gaps": {
-      "handoff": 1,
-      "files": 2
-    }
-  },
+  "handoff_drift": {},
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
