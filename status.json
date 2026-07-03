@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-03T04:35:46Z",
+  "generated_at": "2026-07-03T04:39:35Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 96,
-    "total": 113,
-    "active": 1,
-    "queued": 0,
+    "total": 114,
+    "active": 2,
+    "queued": 1,
     "paused": 10,
-    "backlog": 6
+    "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 830,
+    "minutes_since_session": 834,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -26,25 +26,42 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
+    },
+    {
+      "id": "INI-119",
+      "name": "KB Inbox Aging + Vault-Structure Completeness Checker",
+      "status": "active"
     }
   ],
-  "queue": [],
+  "queue": [
+    {
+      "id": "INI-120",
+      "name": "Financial Intelligence Layer \u2014 Decision-Intelligent CFO Cockpit (Financial Dashboard v2.0)",
+      "status": "queued",
+      "position": 1
+    }
+  ],
   "ceo_actions": [
+    {
+      "id": "ACT-PCR-FIN-003",
+      "category": "required",
+      "label": "PCR-FIN-003",
+      "context": "",
+      "waiting_on": null
+    },
     {
       "id": "ACT-GAP-027",
       "category": "required",
       "label": "GAP-027",
       "context": "INI-119 \u2014 pull into Current when ready to build the KB inbox-aging + vault-structure completeness checker.",
       "waiting_on": "INI-119 \u2014 pull into Current when ready to build the KB inbox-aging + vault-structure completeness checker."
-    },
-    {
-      "id": "ACT-INI-119",
-      "category": "required",
-      "label": "INI-119",
-      "context": "Decide: one checker/INI covering both facets (recommended), or split into two. See GAP-027."
     }
   ],
   "handoff_drift": {
+    "pcrs": {
+      "handoff": 0,
+      "files": 1
+    },
     "gaps": {
       "handoff": 0,
       "files": 1
@@ -52,7 +69,9 @@
   },
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "PCR-FIN-003"
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -195,11 +214,6 @@
         "name": "Jason Cook Design \u2014 Website Repositioning"
       }
     ],
-    "infrastructure": [
-      {
-        "id": "INI-119",
-        "name": "KB Inbox Aging + Vault-Structure Completeness Checker"
-      }
-    ]
+    "infrastructure": []
   }
 }
