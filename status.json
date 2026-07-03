@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-03T05:01:27Z",
+  "generated_at": "2026-07-03T06:14:16Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 97,
-    "total": 114,
+    "total": 111,
     "active": 1,
     "queued": 0,
-    "paused": 10,
+    "paused": 7,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 856,
+    "minutes_since_session": 929,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -138,12 +138,6 @@
     ],
     "infrastructure": [
       {
-        "id": "INI-009",
-        "name": "Venture Portfolio Activation",
-        "notes": "Paused 2026-06-17 (not ready for funding yet). Capital Allocation carve-out PCR required before VD operates that scope",
-        "waiting_on": "Capital Allocation carve-out PCR approval before the Venture Director operates that scope; not ready for funding yet"
-      },
-      {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
         "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node",
@@ -160,18 +154,6 @@
         "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
         "notes": "Paused 2026-06-21 (CEO reprioritization; Phase 1 dispatched). Re-enters at Current when pulled.",
         "waiting_on": "CEO to re-pull into Current (deprioritized 2026-06-21)"
-      },
-      {
-        "id": "INI-070",
-        "name": "Equity Research \u2014 Unified Macro Skill for Capital Allocation Evaluation",
-        "notes": "Paused 2026-06-17 (soft dependency on INI-009, now paused). New capability `equity-research.md` via PCR",
-        "waiting_on": "Waiting on INI-009 (Paused); a PCR authorizing the new equity-research.md capability before Engineering builds the skill"
-      },
-      {
-        "id": "INI-071",
-        "name": "Investment Discovery & Screening \u2014 Candidate Front Door",
-        "notes": "Paused 2026-06-17 (dependency on INI-070, now paused). Fast-follow once INI-070 core proven",
-        "waiting_on": "Waiting on INI-070 (Paused); INI-070 core proven (fast-follow)"
       }
     ]
   },
