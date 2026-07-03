@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-03T04:53:02Z",
+  "generated_at": "2026-07-03T05:01:27Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 97,
     "total": 114,
     "active": 1,
-    "queued": 1,
+    "queued": 0,
     "paused": 10,
-    "backlog": 5
+    "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-07-02T14:45:00Z",
-    "minutes_since_session": 848,
+    "minutes_since_session": 856,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -28,14 +28,7 @@
       "status": "active"
     }
   ],
-  "queue": [
-    {
-      "id": "INI-120",
-      "name": "Financial Intelligence Layer \u2014 Decision-Intelligent CFO Cockpit (Financial Dashboard v2.0)",
-      "status": "queued",
-      "position": 1
-    }
-  ],
+  "queue": [],
   "ceo_actions": [
     {
       "id": "ACT-PCR-FIN-003",
@@ -209,6 +202,12 @@
         "name": "Jason Cook Design \u2014 Website Repositioning"
       }
     ],
-    "infrastructure": []
+    "infrastructure": [
+      {
+        "id": "INI-120",
+        "name": "Financial Intelligence Layer \u2014 Decision-Intelligent CFO Cockpit (Financial Dashboard v2.0)",
+        "notes": "Governance-first. Phase 1 is a CEO-ratified hard gate (PCR-FIN-003 + Security Steward review of the persistent Class-C state store) before any build. Elevates the Financial Analysis Directorate from on-demand digest to a standing financial-intelligence layer. Two-track build: Engineering owns the renderer/data-contract/deterministic engine/state store; the Financial Analysis Director owns the cognition playbook + register content. v2.0 scope is bounded; v2.1+ parked in knowledge/jasonos-vault/finance/financial-intelligence-layer-post-v2-scope.md. Source directive: outside-consultant PRD, evaluated + adapted to JasonOS architecture in CEO+PA inception 2026-07-02."
+      }
+    ]
   }
 }
