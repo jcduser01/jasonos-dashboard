@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T20:53:14Z",
+  "generated_at": "2026-07-04T21:02:05Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T20:52:00Z",
-    "minutes_since_session": 1,
+    "minutes_since_session": 10,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -41,13 +41,6 @@
       "label": "PCR-ENG-014",
       "context": "Adopt shadcn/ui + Next.js as the Default Stack for App-Like Front Ends",
       "waiting_on": null
-    },
-    {
-      "id": "ACT-GAP-029",
-      "category": "required",
-      "label": "GAP-029",
-      "context": "None \u2014 the trust-restore authorization this line originally requested was already given and executed 2026-07-03 (see Resolution notes below). Remaining work is Engineering-owned (compiler trust-establ",
-      "waiting_on": "None \u2014 the trust-restore authorization this line originally requested was already given and executed 2026-07-03 (see Resolution notes below). Remaining work is Engineering-owned (compiler trust-establishment + detection, a follow-on PCR candidate); no further CEO decision is pending here."
     },
     {
       "id": "ACT-HO-1",
@@ -102,6 +95,10 @@
     "pcrs": {
       "handoff": 3,
       "files": 1
+    },
+    "gaps": {
+      "handoff": 1,
+      "files": 0
     }
   },
   "status_drift": [],
