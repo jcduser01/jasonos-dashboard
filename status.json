@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T20:51:33Z",
+  "generated_at": "2026-07-04T20:53:03Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 7
   },
   "operational": {
-    "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 2390,
+    "last_session_date": "2026-07-04T20:52:00Z",
+    "minutes_since_session": 1,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -64,37 +64,43 @@
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Authorize the governance commit",
-      "context": "GAP-027, INI-119, and gaps/INDEX.md are written to disk in the operations repo but uncommitted; portfolio README regener"
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
       "label": "Medical/financial power of attorney check",
       "context": "separate documents from the will/beneficiary (which CEO confirmed are fine as-is); currency not yet confirmed. No urgenc"
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's own operating model. Open, not prioritized; no a"
     },
     {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Handle the relay-CLI timeout vs. Cowork bash-cap friction",
+      "context": "commit_via_relay.py default --timeout is 90s but the Cowork bash tool caps at 45s, so relay commits from the sandbox mus"
+    },
+    {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "Evaluate canonizing the projection-dirty publisher-trigger",
-      "context": "touch an empty file in /Volumes/SandboxData/Logs/.projection-dirty/ signals the dashboard publisher to regenerate the po"
+      "label": "Planning Mode \u2014 define product requirements",
+      "context": "deferred to a later session; needs a substantive definition (what does it toggle \u2014 scenario overlay? editable assumption"
     },
     {
       "id": "ACT-HO-7",
       "category": "required",
-      "label": "Handle the relay-CLI timeout vs. Cowork bash-cap friction",
-      "context": "commit_via_relay.py default --timeout is 90s but the Cowork bash tool caps at 45s, so relay commits from the sandbox mus"
+      "label": "Client-server architecture + security + write-back",
+      "context": "CEO's parallel thread; its output augments INI-123 and seeds the separate Phase-D client-server initiative (write-back g"
+    },
+    {
+      "id": "ACT-HO-8",
+      "category": "required",
+      "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
+      "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
     }
   ],
   "handoff_drift": {
     "pcrs": {
-      "handoff": 2,
+      "handoff": 3,
       "files": 1
     }
   },
