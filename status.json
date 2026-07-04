@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T23:47:40Z",
+  "generated_at": "2026-07-04T23:54:59Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 112,
+    "minutes_since_session": 119,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,6 +35,13 @@
   ],
   "queue": [],
   "ceo_actions": [
+    {
+      "id": "ACT-GAP-035",
+      "category": "required",
+      "label": "GAP-035",
+      "context": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required.",
+      "waiting_on": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required."
+    },
     {
       "id": "ACT-HO-1",
       "category": "required",
@@ -97,7 +104,7 @@
     },
     "gaps": {
       "handoff": 3,
-      "files": 0
+      "files": 1
     }
   },
   "status_drift": [],
