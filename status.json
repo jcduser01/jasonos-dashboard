@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T22:47:22Z",
+  "generated_at": "2026-07-04T22:59:39Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 52,
+    "minutes_since_session": 64,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -243,8 +243,8 @@
       },
       {
         "id": "INI-125",
-        "name": "Cowork Auto-Memory \u2192 governance/memory/ Curated Migration",
-        "notes": "BACKLOG 2026-07-04 (follow-on from PCR-OPS-033 \u00a7 6a). PCR-OPS-033 made governance/memory/ (Operations repo) the canonical, environment-agnostic store for JasonOS organizational memory and retired Cowork's proprietary auto-memory as authoritative going forward. This initiative migrates the RELEVANT historical content out of the ~179-file Cowork auto-memory store into governance/memory/ \u2014 a CURATED pass, not a 1:1 copy. Real scope discovered while drafting the PCR (original ~35 estimate was wrong): the 179 files mix genuine JasonOS-org-operational knowledge (migrate) with client/creative-pipeline entries, personal identities, and stale per-initiative retrospectives that should already have been deleted under the no-duplicate-portfolio-memory rule (do NOT migrate \u2014 evaluate for deletion or relocation to the appropriate KB/vault surface per policies/knowledge/information-placement-policy.md). A blind copy would import stale material into the new store on day one. Explicitly NOT part of PCR-OPS-033's own completion \u2014 the PCR only repointed future writes; this moves the backlog."
+        "name": "Cowork Auto-Memory Migration \u2192 governance/memory/ + Terminal Closure Decoupling",
+        "notes": "BACKLOG 2026-07-04 (follow-on from PCR-OPS-033 \u00a7 6a). PCR-OPS-033 made governance/memory/ (Operations repo) the canonical, environment-agnostic store for JasonOS organizational memory and retired Cowork's proprietary auto-memory as authoritative going forward. This initiative migrates the RELEVANT historical content out of the ~179-file Cowork auto-memory store into governance/memory/ \u2014 a CURATED pass, not a 1:1 copy. Real scope discovered while drafting the PCR (original ~35 estimate was wrong): the 179 files mix genuine JasonOS-org-operational knowledge (migrate) with client/creative-pipeline entries, personal identities, and stale per-initiative retrospectives that should already have been deleted under the no-duplicate-portfolio-memory rule (do NOT migrate \u2014 evaluate for deletion or relocation to the appropriate KB/vault surface per policies/knowledge/information-placement-policy.md). A blind copy would import stale material into the new store on day one. Explicitly NOT part of PCR-OPS-033's own completion \u2014 the PCR only repointed future writes; this moves the backlog. SCOPE EXPANDED 2026-07-04 (CEO direction): once the store is terminal-reachable, the Initiative Closure Protocol's sole remaining Cowork dependency (step 2b memory reconciliation, PCR-OPS-032) disappears \u2014 so this initiative also carries the closure decoupling to completion: audit the whole closure workflow for any other Cowork-only tie, then land a PCR (CEO-ratified) that repoints prepare-close.py step 2b at governance/memory/ and reverses the closure-is-Cowork-only rule PCR-OPS-033 just enacted. The migration is INI work; the policy flip is PCR-gated and DoD-gated on the migration being verified complete."
       }
     ]
   }
