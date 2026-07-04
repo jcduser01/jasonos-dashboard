@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-04T19:23:07Z",
+  "generated_at": "2026-07-04T20:05:33Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 99,
-    "total": 113,
+    "total": 114,
     "active": 1,
     "queued": 0,
     "paused": 7,
-    "backlog": 6
+    "backlog": 7
   },
   "operational": {
     "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 2301,
+    "minutes_since_session": 2344,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -30,13 +30,6 @@
   ],
   "queue": [],
   "ceo_actions": [
-    {
-      "id": "ACT-PCR-ENG-013",
-      "category": "required",
-      "label": "PCR-ENG-013",
-      "context": "close-initiative.sh provenance / permission resilience",
-      "waiting_on": null
-    },
     {
       "id": "ACT-GAP-029",
       "category": "required",
@@ -90,14 +83,12 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 2,
-      "files": 1
+      "files": 0
     }
   },
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [
-    "PCR-ENG-013"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
@@ -228,6 +219,11 @@
         "id": "INI-122",
         "name": "Financial-State Mirror \u2014 Archive-Mode Upgrade",
         "notes": "BACKLOG 2026-07-03. INI-121 fast-follow. The financial-state mirror went live in history_mode: live (disk-loss backstop). Upgrade to history_mode: archive so an errant single-entry delete in the memory-bearing store is recoverable. Small, contained config change. Dependency: a dedicated _archive subfolder inside the CONFIDENTIAL folder 1SbNoX\u2026 (creatable via the Drive connector or by the CEO)."
+      },
+      {
+        "id": "INI-123",
+        "name": "CFO Cockpit Application \u2014 Client-Side App + Read-Only Detail Views (v2.1)",
+        "notes": "BACKLOG 2026-07-04 (CEO+PA inception). Post-v2.0 (v2.1) build of the CFO Cockpit as a client-side application over the existing v2 JSON contract \u2014 CEO-ratified architecture B. Realizes scope parked by INI-120 (Complete). SCOPE = Phases A\u2013C only: (A) populate the 6 data slots so the existing cards' charts light up [Finance lead, NO architecture dependency \u2014 can start immediately]; (B) app shell + sidebar/drill-down navigation + mode switching [Eng]; (C) read-only detail views (Cash & Runway, Decisions, Forecast, Accounts, Business Lines, Transactions, Reports, Policies, Settings-RO) [Eng]. Phase D (interactivity, Planning Mode, write-back) is SPLIT to a separate CLIENT-SERVER initiative \u2014 a parallel CEO architecture + security thread will augment this file and seed that split. Ratified decisions: architecture B; no separate Dashboard view (CFO Cockpit is home); Planning Mode + write-back deferred (controls read '(coming soon)'). The horizontal scanning redesign of the cockpit page itself already shipped against INI-120's renderer."
       }
     ]
   }
