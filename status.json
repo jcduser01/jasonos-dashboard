@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-04T17:57:41Z",
+  "generated_at": "2026-07-04T18:08:45Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 99,
-    "total": 112,
+    "total": 113,
     "active": 1,
     "queued": 0,
     "paused": 7,
-    "backlog": 5
+    "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 2216,
+    "minutes_since_session": 2227,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -99,8 +99,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-06-18T12:02:31Z",
-      "invocations_30d": 28
+      "last_active": "2026-07-04T13:04:43Z",
+      "invocations_30d": 29
     },
     {
       "name": "operations-director",
@@ -220,6 +220,12 @@
         "notes": "Densified & hardened (2 adversarial rounds) 2026-07-03; no longer doctrine-gated; awaiting CEO pull. Pending: Phase 1.5 voice probe + \u22651 fit-proof launch case."
       }
     ],
-    "infrastructure": []
+    "infrastructure": [
+      {
+        "id": "INI-122",
+        "name": "Financial-State Mirror \u2014 Archive-Mode Upgrade",
+        "notes": "BACKLOG 2026-07-03. INI-121 fast-follow. The financial-state mirror went live in history_mode: live (disk-loss backstop). Upgrade to history_mode: archive so an errant single-entry delete in the memory-bearing store is recoverable. Small, contained config change. Dependency: a dedicated _archive subfolder inside the CONFIDENTIAL folder 1SbNoX\u2026 (creatable via the Drive connector or by the CEO)."
+      }
+    ]
   }
 }
