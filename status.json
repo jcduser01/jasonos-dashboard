@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-04T16:40:22Z",
+  "generated_at": "2026-07-04T17:57:32Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
-    "done": 98,
+    "done": 99,
     "total": 112,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "paused": 7,
     "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 2138,
+    "minutes_since_session": 2216,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -26,11 +26,6 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
-    },
-    {
-      "id": "INI-121",
-      "name": "Financial-State Store Durability Mirror",
-      "status": "active"
     }
   ],
   "queue": [],
@@ -41,19 +36,6 @@
       "label": "PCR-ENG-013",
       "context": "close-initiative.sh provenance / permission resilience",
       "waiting_on": null
-    },
-    {
-      "id": "ACT-GAP-028",
-      "category": "required",
-      "label": "GAP-028",
-      "context": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decis",
-      "waiting_on": "Authorize (or decline) a Class-C-appropriate one-way mirror of `financial/state/` to the existing encrypted CONFIDENTIAL Drive folder pattern (INI-099 KB-mirror model), to be stood up before the decision log and forecast variance-history accrue meaningful non-reconstructible entries."
-    },
-    {
-      "id": "ACT-INI-121",
-      "category": "required",
-      "label": "INI-121",
-      "context": "Provision (or confirm reuse of) a dedicated owner-only CONFIDENTIAL Drive folder as the financial-state mirror target, then the mirror can go live."
     },
     {
       "id": "ACT-HO-1",
@@ -102,6 +84,10 @@
     "pcrs": {
       "handoff": 2,
       "files": 1
+    },
+    "gaps": {
+      "handoff": 1,
+      "files": 0
     }
   },
   "status_drift": [],
