@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T18:08:54Z",
+  "generated_at": "2026-07-04T18:14:03Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 2227,
+    "minutes_since_session": 2232,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -36,6 +36,13 @@
       "label": "PCR-ENG-013",
       "context": "close-initiative.sh provenance / permission resilience",
       "waiting_on": null
+    },
+    {
+      "id": "ACT-GAP-029",
+      "category": "required",
+      "label": "GAP-029",
+      "context": "Authorize restoring workspace trust for the director jails \u2014 set `hasTrustDialogAccepted: true` for each `/Volumes/SandboxData/.access/<director>` project in `/Users/jcduser01/.claude.json` (or accept",
+      "waiting_on": "Authorize restoring workspace trust for the director jails \u2014 set `hasTrustDialogAccepted: true` for each `/Volumes/SandboxData/.access/<director>` project in `/Users/jcduser01/.claude.json` (or accept the trust dialog interactively once per jail). This file is in the CEO home directory, **outside** the governed SandboxData domain, so the President Agent will not modify it without direction. The President Agent can execute the edit via a Mac-side relay precommand on authorization."
     },
     {
       "id": "ACT-HO-1",
@@ -84,10 +91,6 @@
     "pcrs": {
       "handoff": 2,
       "files": 1
-    },
-    "gaps": {
-      "handoff": 1,
-      "files": 0
     }
   },
   "status_drift": [],
