@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-04T20:05:41Z",
+  "generated_at": "2026-07-04T20:50:08Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 99,
-    "total": 114,
-    "active": 1,
+    "total": 115,
+    "active": 2,
     "queued": 0,
     "paused": 7,
     "backlog": 7
   },
   "operational": {
     "last_session_date": "2026-07-03T05:01:30Z",
-    "minutes_since_session": 2344,
+    "minutes_since_session": 2388,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -26,16 +26,28 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
+    },
+    {
+      "id": "INI-123",
+      "name": "CFO Cockpit Application \u2014 Client-Side App + Read-Only Detail Views (v2.1)",
+      "status": "active"
     }
   ],
   "queue": [],
   "ceo_actions": [
     {
+      "id": "ACT-PCR-ENG-014",
+      "category": "required",
+      "label": "PCR-ENG-014",
+      "context": "Adopt shadcn/ui + Next.js as the Default Stack for App-Like Front Ends",
+      "waiting_on": null
+    },
+    {
       "id": "ACT-GAP-029",
       "category": "required",
       "label": "GAP-029",
-      "context": "Authorize restoring workspace trust for the director jails \u2014 set `hasTrustDialogAccepted: true` for each `/Volumes/SandboxData/.access/<director>` project in `/Users/jcduser01/.claude.json` (or accept",
-      "waiting_on": "Authorize restoring workspace trust for the director jails \u2014 set `hasTrustDialogAccepted: true` for each `/Volumes/SandboxData/.access/<director>` project in `/Users/jcduser01/.claude.json` (or accept the trust dialog interactively once per jail). This file is in the CEO home directory, **outside** the governed SandboxData domain, so the President Agent will not modify it without direction. The President Agent can execute the edit via a Mac-side relay precommand on authorization."
+      "context": "None \u2014 the trust-restore authorization this line originally requested was already given and executed 2026-07-03 (see Resolution notes below). Remaining work is Engineering-owned (compiler trust-establ",
+      "waiting_on": "None \u2014 the trust-restore authorization this line originally requested was already given and executed 2026-07-03 (see Resolution notes below). Remaining work is Engineering-owned (compiler trust-establishment + detection, a follow-on PCR candidate); no further CEO decision is pending here."
     },
     {
       "id": "ACT-HO-1",
@@ -83,12 +95,14 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 2,
-      "files": 0
+      "files": 1
     }
   },
   "status_drift": [],
   "category_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "PCR-ENG-014"
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -221,9 +235,9 @@
         "notes": "BACKLOG 2026-07-03. INI-121 fast-follow. The financial-state mirror went live in history_mode: live (disk-loss backstop). Upgrade to history_mode: archive so an errant single-entry delete in the memory-bearing store is recoverable. Small, contained config change. Dependency: a dedicated _archive subfolder inside the CONFIDENTIAL folder 1SbNoX\u2026 (creatable via the Drive connector or by the CEO)."
       },
       {
-        "id": "INI-123",
-        "name": "CFO Cockpit Application \u2014 Client-Side App + Read-Only Detail Views (v2.1)",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA inception). Post-v2.0 (v2.1) build of the CFO Cockpit as a client-side application over the existing v2 JSON contract \u2014 CEO-ratified architecture B. Realizes scope parked by INI-120 (Complete). SCOPE = Phases A\u2013C only: (A) populate the 6 data slots so the existing cards' charts light up [Finance lead, NO architecture dependency \u2014 can start immediately]; (B) app shell + sidebar/drill-down navigation + mode switching [Eng]; (C) read-only detail views (Cash & Runway, Decisions, Forecast, Accounts, Business Lines, Transactions, Reports, Policies, Settings-RO) [Eng]. Phase D (interactivity, Planning Mode, write-back) is SPLIT to a separate CLIENT-SERVER initiative \u2014 a parallel CEO architecture + security thread will augment this file and seed that split. Ratified decisions: architecture B; no separate Dashboard view (CFO Cockpit is home); Planning Mode + write-back deferred (controls read '(coming soon)'). The horizontal scanning redesign of the cockpit page itself already shipped against INI-120's renderer."
+        "id": "INI-124",
+        "name": "CFO Cockpit Client-Server Phase \u2014 HYOK-Encrypted Hosting + shadcn/ui Front-End Rebuild",
+        "notes": "BACKLOG 2026-07-04 (CEO+PA architecture/security thread, resolved same day as INI-123's closing note). Realizes the Phase D carve-out INI-123 explicitly deferred: interactivity + write-back requiring a live backend. Architecture = HYOK (Hold-Your-Own-Key): Vercel-hosted app + managed Postgres store the v2 contract as field-level envelope-encrypted records; Clerk auth with mandatory server-side session verification; a key-custody service on the Mac mini reachable only via a narrowly-scoped tunnel holds the master key \u2014 ciphertext may live in someone else's cloud, the key never does. CEO also directed the front end be REBUILT on shadcn/ui (Next.js + Tailwind + shadcn component library, shadcn MCP available for build sessions) rather than carried forward as the plain HTML/CSS shell INI-123 ships \u2014 this is the first JasonOS surface with a real React build pipeline, adopted deliberately as the go-to pattern for future app-like (not document-like) surfaces. Includes, as a first-class deliverable: a synthetic-data build discipline + credential-revocation/cutover runbook, reusable beyond this build as a JCD client-engagement asset (candidate anonymized case study)."
       }
     ]
   }
