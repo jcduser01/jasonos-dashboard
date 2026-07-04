@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T22:26:26Z",
+  "generated_at": "2026-07-04T22:47:22Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 31,
+    "minutes_since_session": 52,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -30,6 +30,13 @@
   ],
   "queue": [],
   "ceo_actions": [
+    {
+      "id": "ACT-GAP-034",
+      "category": "required",
+      "label": "GAP-034",
+      "context": "Decide whether to extend `check-script-registry-coverage.py` to cover `~/bin` copies, and how to mark the ones that are intentionally divergent (see Proposed resolution).",
+      "waiting_on": "Decide whether to extend `check-script-registry-coverage.py` to cover `~/bin` copies, and how to mark the ones that are intentionally divergent (see Proposed resolution)."
+    },
     {
       "id": "ACT-HO-1",
       "category": "required",
@@ -92,7 +99,7 @@
     },
     "gaps": {
       "handoff": 3,
-      "files": 0
+      "files": 1
     }
   },
   "status_drift": [],
