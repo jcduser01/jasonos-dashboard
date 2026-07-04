@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T21:50:44Z",
+  "generated_at": "2026-07-04T22:04:51Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 7
   },
   "operational": {
-    "last_session_date": "2026-07-04T21:10:00Z",
-    "minutes_since_session": 40,
+    "last_session_date": "2026-07-04T21:55:00Z",
+    "minutes_since_session": 9,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -91,6 +91,18 @@
       "category": "required",
       "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
       "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "Approve/publish PCR-OPS-033",
+      "context": "or direct further changes"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "Cowork-memory migration scope",
+      "context": "when ready, decide the curation boundary (which of the ~179 Cowork memory files are JasonOS-org-operational vs. out of s"
     }
   ],
   "handoff_drift": {
@@ -99,7 +111,7 @@
       "files": 2
     },
     "gaps": {
-      "handoff": 1,
+      "handoff": 3,
       "files": 0
     }
   },
