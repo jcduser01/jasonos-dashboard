@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T07:58:58Z",
+  "generated_at": "2026-07-05T08:14:04Z",
   "schema_version": "5",
-  "generator_version": "2.3",
+  "generator_version": "2.4",
   "stats": {
-    "done": 103,
+    "done": 104,
     "total": 120,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "paused": 7,
     "backlog": 8
   },
   "operational": {
     "last_session_date": "2026-07-05T05:45:00Z",
-    "minutes_since_session": 133,
+    "minutes_since_session": 149,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -25,11 +25,6 @@
     {
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
-      "status": "active"
-    },
-    {
-      "id": "INI-128",
-      "name": "Batch Runner \u2014 Work-Item Execution Contract implementation (PCR-GOV-004 Change 3)",
       "status": "active"
     }
   ],
@@ -169,6 +164,7 @@
   },
   "status_drift": [],
   "category_drift": [],
+  "contract_drift": [],
   "waiting_on_drift": [
     "PCR-GOV-004",
     "PCR-OPS-035",
