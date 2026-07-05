@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T06:59:23Z",
+  "generated_at": "2026-07-05T07:11:16Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
-    "done": 102,
+    "done": 103,
     "total": 120,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "paused": 7,
     "backlog": 9
   },
   "operational": {
     "last_session_date": "2026-07-04T22:26:43Z",
-    "minutes_since_session": 512,
+    "minutes_since_session": 524,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -25,11 +25,6 @@
     {
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
-      "status": "active"
-    },
-    {
-      "id": "INI-129",
-      "name": "Memory-Routing Guardrail \u2014 Retire the Harness Default for JasonOS Memory (GAP-037)",
       "status": "active"
     }
   ],
@@ -76,6 +71,13 @@
       "label": "GAP-036",
       "context": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries.",
       "waiting_on": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries. See Decision required."
+    },
+    {
+      "id": "ACT-GAP-040",
+      "category": "required",
+      "label": "GAP-040",
+      "context": "**Decide the rule** \u2014 under an \"execute end-to-end / Execute INI-NNN + elevated autonomy\" grant, may the PA self-enact a PCR whose normative content is fully entailed by an already-ratified decision (",
+      "waiting_on": "**Decide the rule** \u2014 under an \"execute end-to-end / Execute INI-NNN + elevated autonomy\" grant, may the PA self-enact a PCR whose normative content is fully entailed by an already-ratified decision (adds no new obligation), or must every PCR always go to explicit CEO approval before enactment?"
     },
     {
       "id": "ACT-HO-1",
@@ -142,6 +144,12 @@
       "category": "required",
       "label": "Optional now",
       "context": "queue the Route: Queue-ready gaps (GAP-029 Steward-gated / GAP-031 / GAP-032) to the batch runner."
+    },
+    {
+      "id": "ACT-HO-12",
+      "category": "required",
+      "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
+      "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
     }
   ],
   "handoff_drift": {
@@ -151,7 +159,7 @@
     },
     "gaps": {
       "handoff": 5,
-      "files": 2
+      "files": 3
     }
   },
   "status_drift": [],
