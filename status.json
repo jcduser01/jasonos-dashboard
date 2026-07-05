@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T05:14:47Z",
+  "generated_at": "2026-07-05T05:15:56Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T22:26:43Z",
-    "minutes_since_session": 408,
+    "minutes_since_session": 409,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -64,6 +64,13 @@
       "waiting_on": null
     },
     {
+      "id": "ACT-PCR-OPS-039",
+      "category": "required",
+      "label": "PCR-OPS-039",
+      "context": "Memory-routing guardrail \u2014 the authoritative-store rule overrides the harness default (GAP-037)",
+      "waiting_on": null
+    },
+    {
       "id": "ACT-GAP-035",
       "category": "required",
       "label": "GAP-035",
@@ -76,6 +83,12 @@
       "label": "GAP-036",
       "context": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries.",
       "waiting_on": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries. See Decision required."
+    },
+    {
+      "id": "ACT-INI-129",
+      "category": "required",
+      "label": "INI-129",
+      "context": "Approve PCR-OPS-039 (memory-routing guardrail \u2014 rule text + 3 placements). This is the Phase 1 enactment gate; on approval the PA writes the rule into roles/president-agent.md + governance/memory/READ"
     },
     {
       "id": "ACT-HO-1",
@@ -147,7 +160,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 6,
-      "files": 4
+      "files": 5
     },
     "gaps": {
       "handoff": 5,
@@ -160,7 +173,8 @@
     "PCR-GOV-004",
     "PCR-OPS-035",
     "PCR-OPS-037",
-    "PCR-OPS-038"
+    "PCR-OPS-038",
+    "PCR-OPS-039"
   ],
   "directors": [
     {
