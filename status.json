@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T07:11:16Z",
+  "generated_at": "2026-07-05T07:58:48Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 103,
     "total": 120,
-    "active": 1,
+    "active": 2,
     "queued": 0,
     "paused": 7,
-    "backlog": 9
+    "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-04T22:26:43Z",
-    "minutes_since_session": 524,
+    "last_session_date": "2026-07-05T05:45:00Z",
+    "minutes_since_session": 133,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -25,6 +25,11 @@
     {
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
+      "status": "active"
+    },
+    {
+      "id": "INI-128",
+      "name": "Batch Runner \u2014 Work-Item Execution Contract implementation (PCR-GOV-004 Change 3)",
       "status": "active"
     }
   ],
@@ -310,11 +315,6 @@
         "id": "INI-127",
         "name": "Environment-Portability Completion \u2014 Connector-Layer Portability + Cowork-Coupling Drift Sweep",
         "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed inception (strategic thread following INI-125 close). Completes the environment-portability program INI-125 advanced: the governance/state layer is now fully portable (any CEO-approved agent, any JasonOS host); this initiative extends the SAME relocate-the-resource pattern to the connector layer (Phase B, item 2) so the only Cowork-tied jobs are Cowork-by-nature (presentation/interaction), not accidents of where a credential happens to live \u2014 and reconciles the written record to the new reality (Phase A, item 4, the drift sweep). Guiding test (from the INI-125 retro discussion): a job is environment-bound iff it depends on a resource that exists in only one environment; the fix is always to relocate that resource to a shared substrate and repoint the consumer. Deliberately excludes the presentation/interaction layer, which stays Cowork-only BY DESIGN. Bounded, not program-scale: Phase B provisions the connectors JasonOS operationally depends on (Gmail + Drive path), classifies the rest, and parks broad per-connector provisioning as on-demand follow-ons."
-      },
-      {
-        "id": "INI-128",
-        "name": "Batch Runner \u2014 Work-Item Execution Contract implementation (PCR-GOV-004 Change 3)",
-        "notes": "Implements the runner/relay behavior half of PCR-GOV-004 (documentation half approved 2026-07-04). Security-Steward-gated: touches the relay push interlock."
       }
     ]
   }
