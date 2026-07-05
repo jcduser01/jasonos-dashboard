@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T05:35:40Z",
+  "generated_at": "2026-07-05T05:38:38Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T22:26:43Z",
-    "minutes_since_session": 428,
+    "minutes_since_session": 431,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -76,12 +76,6 @@
       "label": "GAP-036",
       "context": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries.",
       "waiting_on": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries. See Decision required."
-    },
-    {
-      "id": "ACT-INI-129",
-      "category": "required",
-      "label": "INI-129",
-      "context": "None pending \u2014 PCR-OPS-039 approved & enacted 2026-07-05 (Phase 1 done). Security Steward review of the Phase 2 detective is dispatched; on its return, review the Steward invocation record (audit-inde"
     },
     {
       "id": "ACT-HO-1",
