@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T08:14:11Z",
+  "generated_at": "2026-07-05T08:18:27Z",
   "schema_version": "5",
   "generator_version": "2.4",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-05T05:45:00Z",
-    "minutes_since_session": 149,
+    "minutes_since_session": 153,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -30,13 +30,6 @@
   ],
   "queue": [],
   "ceo_actions": [
-    {
-      "id": "ACT-PCR-GOV-004",
-      "category": "required",
-      "label": "PCR-GOV-004",
-      "context": "",
-      "waiting_on": null
-    },
     {
       "id": "ACT-PCR-OPS-035",
       "category": "required",
@@ -155,7 +148,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 6,
-      "files": 4
+      "files": 3
     },
     "gaps": {
       "handoff": 5,
@@ -166,7 +159,6 @@
   "category_drift": [],
   "contract_drift": [],
   "waiting_on_drift": [
-    "PCR-GOV-004",
     "PCR-OPS-035",
     "PCR-OPS-037",
     "PCR-OPS-038"
