@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T08:42:17Z",
+  "generated_at": "2026-07-05T10:38:23Z",
   "schema_version": "5",
   "generator_version": "2.4",
   "stats": {
     "done": 104,
-    "total": 120,
+    "total": 121,
     "active": 1,
     "queued": 0,
     "paused": 7,
-    "backlog": 8
+    "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-05T05:45:00Z",
-    "minutes_since_session": 177,
+    "last_session_date": "2026-07-05T08:25:28Z",
+    "minutes_since_session": 132,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -30,6 +30,13 @@
   ],
   "queue": [],
   "ceo_actions": [
+    {
+      "id": "ACT-PCR-GOV-005",
+      "category": "required",
+      "label": "PCR-GOV-005",
+      "context": "",
+      "waiting_on": null
+    },
     {
       "id": "ACT-PCR-OPS-035",
       "category": "required",
@@ -143,22 +150,34 @@
       "category": "required",
       "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
       "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "None this session. (GAP-041 is engineering-owned, no CEO decision.)",
+      "context": ""
     }
   ],
   "handoff_drift": {
     "pcrs": {
       "handoff": 6,
-      "files": 3
+      "files": 4
     },
     "gaps": {
-      "handoff": 5,
+      "handoff": 6,
       "files": 3
     }
   },
   "status_drift": [],
-  "category_drift": [],
+  "category_drift": [
+    {
+      "id": "INI-130",
+      "category": "governance"
+    }
+  ],
   "contract_drift": [],
   "waiting_on_drift": [
+    "PCR-GOV-005",
     "PCR-OPS-035",
     "PCR-OPS-037",
     "PCR-OPS-038"
@@ -218,25 +237,44 @@
       {
         "id": "INI-043",
         "name": "Dish n' BEATS \u2014 Brand Design System",
-        "waiting_on": "CEO to pull into Current (client-work prioritization; begins at Phase 3, parallel with INI-042)"
+        "waiting_on": "CEO to pull into Current (client-work prioritization; begins at Phase 3, parallel with INI-042)",
+        "contract": {
+          "route": "CEO-first",
+          "stop_line": "Phase 3 canonization is COMPLETE and the seven canonical docs are pending CEO review; the CEO must approve the canonical doc set before Phase 4 (AI-assisted exploration) begins. The first actionable step is that blocking CEO approval, so there is no runner-buildable slice ahead of it. Post-approval, Phase 4 exploration (Creative-Director-led AI mockups within canonical constraints) is next; the three known codebase bugs folded into Phase 6 (missing rel=stylesheet, unclosed anchor, no favicon) are a small independent fix a runner could stage, but they are sequenced into implementation after design selection."
+        }
       },
       {
         "id": "INI-072",
         "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
         "notes": "Paused 2026-06-17 (prioritized below other client work). Recommended next pull for the Ray Graystone track; reads from project-bible.md",
-        "waiting_on": "CEO to pull the Ray Graystone track (currently prioritized below other client work)"
+        "waiting_on": "CEO to pull the Ray Graystone track (currently prioritized below other client work)",
+        "contract": {
+          "route": "Operational",
+          "stop_line": "This is interactive creative-structure work \u2014 reading the partial manuscript as a quarry, ranking Cerime chapters by metafictional usefulness, designing the interleave / marginalia arc / frame-permeability gradient, and resolving deferred bible decisions with the CEO (Phase 3 Creative + CEO, Phase 4 CEO review). It is Creative-Director + CEO interactive execution against the project bible, not a batch-runner build, and there is no runner-buildable slice; it is routed to interactive creative execution. The track is Paused pending a CEO pull."
+        }
       },
       {
         "id": "INI-073",
         "name": "Ray Graystone \u2014 Voice & Register Pass",
         "notes": "Paused 2026-06-17 (dependency on INI-072, now paused). Optional \u2014 pull when CEO is ready to test drafting.",
-        "waiting_on": "Waiting on INI-072 (Paused); CEO ready to test drafting (optional)"
+        "waiting_on": "Waiting on INI-072 (Paused); CEO ready to test drafting (optional)",
+        "contract": {
+          "route": "Operational",
+          "stop_line": "Blocked by INI-072 (Chapter Map & Dossier Architecture), which identifies the keystone chapters this pass calibrates against and is itself Paused. The work is also CEO-authored creative prose (the CEO writes the two-register calibration; the AI-draft-in-voice trial is explicitly optional and interactive) \u2014 an interactive creative-execution track, not a batch-runner build. No runner-buildable slice ahead of the INI-072 dependency and the CEO's own drafting.",
+          "depends_on": [
+            "INI-072"
+          ]
+        }
       },
       {
         "id": "INI-074",
         "name": "Ray Graystone \u2014 Publication Path",
         "notes": "Paused 2026-06-17 (deferred until a draft exists).",
-        "waiting_on": "a Ray Graystone draft to exist (deferred until then)"
+        "waiting_on": "a Ray Graystone draft to exist (deferred until then)",
+        "contract": {
+          "route": "CEO-first",
+          "stop_line": "Hard dependency \u2014 a completed or substantially drafted manuscript must exist before this initiative opens (\"Do not pull before then\"), and market research is performed at pull time because the publishing landscape shifts. The first actionable step (Phase 1 positioning + comp set) is blocked on the unmet manuscript gate; there is no runner-buildable slice ahead of it. Post-unblock, Phase 1 (comp set + literary-metafiction positioning, current-market route research) is the first slice."
+        }
       }
     ],
     "infrastructure": [
@@ -244,19 +282,32 @@
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
         "notes": "Phase 3 complete \u2014 Phase 4 shelved pending second node",
-        "waiting_on": "a second physical node (hardware acquisition) before Phase 4"
+        "waiting_on": "a second physical node (hardware acquisition) before Phase 4",
+        "contract": {
+          "route": "CEO-first",
+          "stop_line": "Phases 2 (worker taxonomy) and 3 (broker implementation + Security-Steward-approved go-live) are COMPLETE; the broker is active. The only remaining work is Phase 4 (Remote Node Integration, PROP-004), which is hard-blocked on a second physical compute node (hardware acquisition) plus CEO decisions Q3 (node type) and Q4 (cost) \u2014 an unmet external/hardware gate leading the remaining work. No runner-buildable slice exists ahead of it. Post-unblock, Phase 4 (HMAC auth infra, Tailscale channel, remote worker registry entry, dispatcher remote-execution path) is the slice."
+        }
       },
       {
         "id": "INI-039",
         "name": "QMD Local Search Integration",
         "notes": "Paused 2026-06-17 (waiting for more wiki volume). Pull after: vault ~50 articles",
-        "waiting_on": "more wiki volume (vault ~50 articles)"
+        "waiting_on": "more wiki volume (vault ~50 articles)",
+        "contract": {
+          "route": "CEO-first",
+          "stop_line": "The initiative's own Pull Trigger is an explicit leading gate \u2014 \"Do not pull until the vault reaches ~50 articles or the Knowledge Director reports index.md retrieval is degrading,\" and the approval-gate table requires CEO approval of the pull before Phase 1 begins. The first actionable step is that scale-gated CEO pull; there is no runner-buildable slice ahead of it. Post-unblock, Phase 1 (install QMD on the mini, configure a collection over the vault, run the embed pass against the already-resident nomic-embed model) is the first buildable slice."
+        }
       },
       {
         "id": "INI-063",
         "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
         "notes": "Paused 2026-06-21 (CEO reprioritization; Phase 1 dispatched). Re-enters at Current when pulled.",
-        "waiting_on": "CEO to re-pull into Current (deprioritized 2026-06-21)"
+        "waiting_on": "CEO to re-pull into Current (deprioritized 2026-06-21)",
+        "contract": {
+          "route": "Draft-only",
+          "runner_scope": "Phase 2 (Egress Airlock Design) drafting slice \u2014 Phase 1 (container images + iptables egress + session lifecycle) is COMPLETE. Draft the egress-airlock procedure at policies/security/sandbox-egress-airlock.md (dedicated egress directory distinct from the CEO airlock, docker cp demand-pull output primitive, the Security Steward harm-check criteria, and the clean/conditional/rejected admission outcomes) and the corresponding Security Steward role-definition update granting sandbox-egress review authority. Staged as a governance draft for review.",
+          "stop_line": "The egress-airlock procedure and the SS role-definition change are Security-Steward + CEO governance artifacts \u2014 stage the draft and halt at review/approval; do not enact. Phase 3 (operational validation) is a live pilot requiring a running container and CEO/ED operation, and the initiative is Paused pending a CEO re-pull into Current. Do not run the pilot or enact policy without the Steward review and CEO sign-off."
+        }
       }
     ]
   },
@@ -265,44 +316,99 @@
       {
         "id": "INI-053",
         "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
-        "notes": "Pending: INI-051 complete"
+        "notes": "Pending: INI-051 complete",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue scan, and a concise gap-summary diagnosis memo. Staged as a research artifact for CEO review.",
+          "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is staged \u2014 do not author positioning without the CEO."
+        }
       },
       {
         "id": "INI-055",
         "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
-        "notes": "Pending: INI-053 + INI-056 complete"
+        "notes": "Pending: INI-053 + INI-056 complete",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Phase 1 (Site Audit) only \u2014 the initiative states Phase 1 can be pulled independently. Audit the live templeofunicorns.com storefront against DTC-apparel conversion and brand best practice (UX, brand expression, copy, technical/mobile/trust signals) and produce a prioritized gap list classified as quick wins / design changes / structural changes. Staged as an audit report for CEO review.",
+          "stop_line": "Phase 2 (Design Direction) must be grounded in INI-053 strategy + INI-056 design system and the CEO approves the design direction before Phase 3 implementation; Phase 3 touches the live Shopify theme. Halt after the Phase 1 audit report \u2014 do not set design direction or touch the storefront without CEO sign-off."
+        }
       },
       {
         "id": "INI-056",
         "name": "Temple of Unicorns \u2014 Brand Design System",
-        "notes": "Pending: INI-051 + INI-053 complete"
+        "notes": "Pending: INI-051 + INI-053 complete",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Phase 1 (Brand Audit & Inventory) only \u2014 working from the INI-051 guide outputs and the live templeofunicorns.com site, inventory the existing brand identity (documented / implied / missing), catalogue the current design vocabulary (color, type, illustration style, motifs, references), flag gaps and contradictions between the guides and the live site, and produce a brand audit memo. Staged for CEO review.",
+          "stop_line": "Phase 2 (Canonization) must align with INI-053's CEO-approved positioning and the canonical doc set is CEO-approval-gated before Phase 3; halt after the Phase 1 audit memo. Do not author the canonical doc set without INI-053 positioning + CEO sign-off."
+        }
       },
       {
         "id": "INI-109",
         "name": "Temple of Unicorns \u2014 Product Pipeline Automation",
-        "notes": "Pending: other ToU initiatives (INI-053/055/056) to land before scheduling; CEO parked in Backlog 2026-06-28 to let the relaunch dust settle"
+        "notes": "Pending: other ToU initiatives (INI-053/055/056) to land before scheduling; CEO parked in Backlog 2026-06-28 to let the relaunch dust settle",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Phase 1 documentation slice only \u2014 define and document the product-intent manifest schema (design-file ref, blank + colorways, placement spec, product name, copy, garment-type tag, section tags) including the per-garment-type margin table and nearest-$5 rounding rule, plus a written verification of Printful-connector field-ownership (which fields the connector pushes/overwrites vs. which Stage 2 may safely own). No credential, no live API call.",
+          "stop_line": "The Printful API connection and design-file read access require a CEO-provisioned Printful credential (Article XI \u2014 agents cannot open accounts) and Security Steward credential/egress sign-off before the connection goes live; halt after the manifest-schema + field-ownership docs are staged. Stage 1/2 automation and the first real run are past this stop."
+        }
       },
       {
         "id": "INI-114",
         "name": "Jason Cook Design \u2014 Website Repositioning",
-        "notes": "Densified & hardened (2 adversarial rounds) 2026-07-03; no longer doctrine-gated; awaiting CEO pull. Pending: Phase 1.5 voice probe + \u22651 fit-proof launch case."
+        "notes": "Densified & hardened (2 adversarial rounds) 2026-07-03; no longer doctrine-gated; awaiting CEO pull. Pending: Phase 1.5 voice probe + \u22651 fit-proof launch case.",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE. Draft one page of real copy (homepage hook + the paid-diagnostic offer) in Jason's register against the governed IA, to falsify the no-handoff hook cheaply before design spend. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
+          "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build carries a launch gate of \u22651 delivered, anonymized fit-proof (paid-diagnostic) case that does not yet exist. Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and the CEO's launch-floor acceptance."
+        }
       }
     ],
     "infrastructure": [
       {
         "id": "INI-124",
         "name": "CFO Cockpit Client-Server Phase \u2014 HYOK-Encrypted Hosting + shadcn/ui Front-End Rebuild",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA architecture/security thread, resolved same day as INI-123's closing note). Realizes the Phase D carve-out INI-123 explicitly deferred: interactivity + write-back requiring a live backend. Architecture = HYOK (Hold-Your-Own-Key): Vercel-hosted app + managed Postgres store the v2 contract as field-level envelope-encrypted records; Clerk auth with mandatory server-side session verification; a key-custody service on the Mac mini reachable only via a narrowly-scoped tunnel holds the master key \u2014 ciphertext may live in someone else's cloud, the key never does. CEO also directed the front end be REBUILT on shadcn/ui (Next.js + Tailwind + shadcn component library, shadcn MCP available for build sessions) rather than carried forward as the plain HTML/CSS shell INI-123 ships \u2014 this is the first JasonOS surface with a real React build pipeline, adopted deliberately as the go-to pattern for future app-like (not document-like) surfaces. Includes, as a first-class deliverable: a synthetic-data build discipline + credential-revocation/cutover runbook, reusable beyond this build as a JCD client-engagement asset (candidate anonymized case study). FOUNDATION-PREP 2026-07-04: amended to prepare the foundation for INI-126 (CFO Cockpit Planning Mode) \u2014 six requirement deltas folded in (\u00a7 Planning-Mode foundation requirements): engine-as-callable-service, session-scoped decrypt for the bounded solver, a mutable scenario record type + early write path widening the PCR-FIN-003 amendment, a mini-side export path, a mini-authoritative data-topology constraint, and generator-first composable engine-input machinery. Stale INI-123 'Backlog' sibling refs corrected to Complete."
+        "notes": "BACKLOG 2026-07-04 (CEO+PA architecture/security thread, resolved same day as INI-123's closing note). Realizes the Phase D carve-out INI-123 explicitly deferred: interactivity + write-back requiring a live backend. Architecture = HYOK (Hold-Your-Own-Key): Vercel-hosted app + managed Postgres store the v2 contract as field-level envelope-encrypted records; Clerk auth with mandatory server-side session verification; a key-custody service on the Mac mini reachable only via a narrowly-scoped tunnel holds the master key \u2014 ciphertext may live in someone else's cloud, the key never does. CEO also directed the front end be REBUILT on shadcn/ui (Next.js + Tailwind + shadcn component library, shadcn MCP available for build sessions) rather than carried forward as the plain HTML/CSS shell INI-123 ships \u2014 this is the first JasonOS surface with a real React build pipeline, adopted deliberately as the go-to pattern for future app-like (not document-like) surfaces. Includes, as a first-class deliverable: a synthetic-data build discipline + credential-revocation/cutover runbook, reusable beyond this build as a JCD client-engagement asset (candidate anonymized case study). FOUNDATION-PREP 2026-07-04: amended to prepare the foundation for INI-126 (CFO Cockpit Planning Mode) \u2014 six requirement deltas folded in (\u00a7 Planning-Mode foundation requirements): engine-as-callable-service, session-scoped decrypt for the bounded solver, a mutable scenario record type + early write path widening the PCR-FIN-003 amendment, a mini-side export path, a mini-authoritative data-topology constraint, and generator-first composable engine-input machinery. Stale INI-123 'Backlog' sibling refs corrected to Complete.",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Phase 2 (front-end rebuild) only \u2014 stand up the Next.js + shadcn/ui app and port the cockpit home view and all nine INI-123 read-only detail views to the new shell, reading the same v2 JSON contract INI-123 reads against static/local contract files (no server, no write path, no encryption yet). DoD is shadcn/Next.js parity with INI-123's shipped shell, coverage-honesty caveats carried over, no fabricated data. This is the first application of the PCR-ENG-014 governed front-end default.",
+          "stop_line": "Phase 1 is a hard governance gate before any write path exists \u2014 the PCR-FIN-003 amendment (cloud-hosted encrypted mutable derived state + HYOK + write mutation surface) is CEO-approval-gated, and a Security Steward review of the full path (Vercel/DB/Clerk/tunnel/key-custody) must clear before Phases 4/5. Halt after Phase 2; do not build auth-gated data access, HYOK encryption, or write-back without the PCR amendment enacted and the Steward review recorded."
+        }
       },
       {
         "id": "INI-126",
         "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as Phase D. Full requirements spec: knowledge/jasonos-vault/finance/planning-mode-requirements.md (Class C). CAPABILITY = define a scenario \u2192 evaluate \u2192 discard OR operationalize (append the decision queue + write a Cowork handoff brief; the app stages and writes materials, the President Agent drafts the plan in Cowork \u2014 the app never authors the plan). Two SEGREGATED modes sharing the engine: FORWARD ('what happens by date Y if I set levers X?', call-once) and BACKWARD, a BOUNDED solver \u2014 solve-for-date (forward + threshold detection, call-once) and solve-for-magnitude (fix target+date, ONE free action-lever, 1-D bisection, call-loop ~20-40 evals). Hard rail: exactly ONE free variable per query, ENFORCED not warned (a point answer, never a curve); a second variable is a separate exercise the app supports via CLONE. Non-monotonic RESULT CONTRACT (reached?, first-crossing, sustained-through-horizon?, revert date, not-reached) with absorbing-vs-oscillating metric classification + a target durability qualifier. THREE-TIER composable lever taxonomy (composable parts \u2192 primitives [the closed engine hypothetical-input contract] \u2192 composite templates, in scope v1) on an orthogonal action/assumption axis; posture is a composite macro, not a primitive; Planning Mode overlays hypotheticals on the model, never edits it. DEPENDS ON INI-124 delivering the foundation (engine-as-callable-service, session-scoped decrypt, scenario record type + write path, mini-side export) \u2014 the six requirement deltas are folded into INI-124 as of this filing. Sequenced AFTER INI-124."
+        "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as Phase D. Full requirements spec: knowledge/jasonos-vault/finance/planning-mode-requirements.md (Class C). CAPABILITY = define a scenario \u2192 evaluate \u2192 discard OR operationalize (append the decision queue + write a Cowork handoff brief; the app stages and writes materials, the President Agent drafts the plan in Cowork \u2014 the app never authors the plan). Two SEGREGATED modes sharing the engine: FORWARD ('what happens by date Y if I set levers X?', call-once) and BACKWARD, a BOUNDED solver \u2014 solve-for-date (forward + threshold detection, call-once) and solve-for-magnitude (fix target+date, ONE free action-lever, 1-D bisection, call-loop ~20-40 evals). Hard rail: exactly ONE free variable per query, ENFORCED not warned (a point answer, never a curve); a second variable is a separate exercise the app supports via CLONE. Non-monotonic RESULT CONTRACT (reached?, first-crossing, sustained-through-horizon?, revert date, not-reached) with absorbing-vs-oscillating metric classification + a target durability qualifier. THREE-TIER composable lever taxonomy (composable parts \u2192 primitives [the closed engine hypothetical-input contract] \u2192 composite templates, in scope v1) on an orthogonal action/assumption axis; posture is a composite macro, not a primitive; Planning Mode overlays hypotheticals on the model, never edits it. DEPENDS ON INI-124 delivering the foundation (engine-as-callable-service, session-scoped decrypt, scenario record type + write path, mini-side export) \u2014 the six requirement deltas are folded into INI-124 as of this filing. Sequenced AFTER INI-124.",
+        "contract": {
+          "route": "CEO-first",
+          "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-side export, data-topology invariant, composable input layer) and the Security Steward has reviewed the Planning-Mode compute/solver/export path. The first actionable step is therefore blocked on the unmet INI-124 dependency; there is no runner-buildable slice ahead of it. Post-unblock, the first buildable slice is Phase 2 (forward modeling + scenario persistence over the composable input layer).",
+          "depends_on": [
+            "INI-124"
+          ]
+        }
       },
       {
         "id": "INI-127",
         "name": "Environment-Portability Completion \u2014 Connector-Layer Portability + Cowork-Coupling Drift Sweep",
-        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed inception (strategic thread following INI-125 close). Completes the environment-portability program INI-125 advanced: the governance/state layer is now fully portable (any CEO-approved agent, any JasonOS host); this initiative extends the SAME relocate-the-resource pattern to the connector layer (Phase B, item 2) so the only Cowork-tied jobs are Cowork-by-nature (presentation/interaction), not accidents of where a credential happens to live \u2014 and reconciles the written record to the new reality (Phase A, item 4, the drift sweep). Guiding test (from the INI-125 retro discussion): a job is environment-bound iff it depends on a resource that exists in only one environment; the fix is always to relocate that resource to a shared substrate and repoint the consumer. Deliberately excludes the presentation/interaction layer, which stays Cowork-only BY DESIGN. Bounded, not program-scale: Phase B provisions the connectors JasonOS operationally depends on (Gmail + Drive path), classifies the rest, and parks broad per-connector provisioning as on-demand follow-ons."
+        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed inception (strategic thread following INI-125 close). Completes the environment-portability program INI-125 advanced: the governance/state layer is now fully portable (any CEO-approved agent, any JasonOS host); this initiative extends the SAME relocate-the-resource pattern to the connector layer (Phase B, item 2) so the only Cowork-tied jobs are Cowork-by-nature (presentation/interaction), not accidents of where a credential happens to live \u2014 and reconciles the written record to the new reality (Phase A, item 4, the drift sweep). Guiding test (from the INI-125 retro discussion): a job is environment-bound iff it depends on a resource that exists in only one environment; the fix is always to relocate that resource to a shared substrate and repoint the consumer. Deliberately excludes the presentation/interaction layer, which stays Cowork-only BY DESIGN. Bounded, not program-scale: Phase B provisions the connectors JasonOS operationally depends on (Gmail + Drive path), classifies the rest, and parks broad per-connector provisioning as on-demand follow-ons.",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Phase A only (the Cowork-coupling drift sweep) \u2014 enumerate every repo reference to now-falsified environment coupling (\"Cowork-only\", \"may only be executed from a Cowork session\", \"must not run closure / defer to Cowork\", the Cowork auto-memory store as authoritative, memory-writes-go-to-Cowork, and similar) across both repos, Logs/ runbooks, scheduled-task SKILL.md assets, capability/role docs, CLAUDE.md files, and the knowledge/placement policies; classify each hit as (i) now-false, (ii) still-true Cowork-by-nature, or (iii) historical record; and produce the findings manifest (reference \u2192 classification \u2192 disposition). Carry the (ii)-class hits forward as the Phase B connector inventory. No rewrites in this slice.",
+          "stop_line": "CEO sign-off before any rewrite \u2014 stage the findings manifest and halt; do not fix (i)-class references or resolve ambiguous (ii)-vs-(i) calls until the CEO signs off. Phase B (connector provisioning, Steward review, runbook repointing) is entirely outside this slice \u2014 it needs CEO credential-provisioning (Article XI) and a per-runner Security Steward review."
+        }
+      },
+      {
+        "id": "INI-130",
+        "name": "Work-Item Model Convergence \u2014 Canonical Taxonomy, Unified Conventions, Template Layer, Generated Indexes, REM Binding, and the JasonOS-Work-Readiness Surface",
+        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed, hand-selected into the batch-engineering queue (INIs are not auto-gathered; the CEO named this one explicitly). Executes the work-item model ratified by PCR-GOV-005 (all nine Changes, decision G) against GAP-042 (widened). Round one ships the dashboard JasonOS-work-readiness panel \u2014 the visibility half of the 'buried JasonOS actions' fix (the daily briefing already carries the reporting half as of 2026-07-05). DEPENDS ON PCR-GOV-005 publish: the runner defers this item until the PCR is promoted, so building never pre-empts CEO ratification of the model (vocabulary, folder scheme, PROP retirement). Decisions carried in: A declined/resolved, B portfolio/open/, C retire PROP, D REM stays in Logs/, E Runner scope <- marked chosen_option (bare None until marked), F GAP-042 closes on PCR-GOV-005 publish, G all nine Changes in one INI. Source analysis: the Work-Item Operational-Hygiene Audit 2026-07-05 (airlock AIRLOCK-2026-07-05-001).",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Phase 1 (round one) \u2014 build the dashboard JasonOS-work-readiness panel (the inverse of the CEO-Actions panel: a standing render of the contract dry-run over open non-INI items \u2014 eligible-now / blocked-needs-decision / contract-quality-gaps), the templates/ layer (per-type stubs with contract fields pre-stamped, fixing the dangling workloads/README.md reference), the REM contract binding in operations/work-item-execution-contract.md (D: REM stays in Logs/; E: Runner scope <- marked chosen_option, bare None until marked, plus the chosen_option schema marker), and the born-conformant conformance check (report-triage extension flagging any open GAP/PCR/REM or CEO-queued INI with empty Runner scope or a malformed/parenthetical label). Scaffold the unified generated-index generator. Ships the readiness panel first.",
+          "stop_line": "Phase 1 halts for Security Steward review before go-live (the conformance check touches the commit/report-triage path; the dashboard gains a new panel + data read). Phase 2 \u2014 the canonical taxonomy doc (governance/work-item-taxonomy.md), the declined/resolved vocabulary migration, the portfolio/open/ cutover, the generated-index cutover across all types, and PROP retirement \u2014 involves folder-rename migrations of governed artifacts and is staged + CEO-reviewed, never run past this line.",
+          "depends_on": [
+            "PCR-GOV-005"
+          ]
+        }
       }
     ]
   }
