@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T03:00:52Z",
+  "generated_at": "2026-07-05T03:24:30Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 102,
-    "total": 117,
+    "total": 118,
     "active": 1,
     "queued": 0,
     "paused": 7,
-    "backlog": 7
+    "backlog": 8
   },
   "operational": {
     "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 305,
+    "minutes_since_session": 329,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -249,6 +249,11 @@
         "id": "INI-126",
         "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
         "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as Phase D. Full requirements spec: knowledge/jasonos-vault/finance/planning-mode-requirements.md (Class C). CAPABILITY = define a scenario \u2192 evaluate \u2192 discard OR operationalize (append the decision queue + write a Cowork handoff brief; the app stages and writes materials, the President Agent drafts the plan in Cowork \u2014 the app never authors the plan). Two SEGREGATED modes sharing the engine: FORWARD ('what happens by date Y if I set levers X?', call-once) and BACKWARD, a BOUNDED solver \u2014 solve-for-date (forward + threshold detection, call-once) and solve-for-magnitude (fix target+date, ONE free action-lever, 1-D bisection, call-loop ~20-40 evals). Hard rail: exactly ONE free variable per query, ENFORCED not warned (a point answer, never a curve); a second variable is a separate exercise the app supports via CLONE. Non-monotonic RESULT CONTRACT (reached?, first-crossing, sustained-through-horizon?, revert date, not-reached) with absorbing-vs-oscillating metric classification + a target durability qualifier. THREE-TIER composable lever taxonomy (composable parts \u2192 primitives [the closed engine hypothetical-input contract] \u2192 composite templates, in scope v1) on an orthogonal action/assumption axis; posture is a composite macro, not a primitive; Planning Mode overlays hypotheticals on the model, never edits it. DEPENDS ON INI-124 delivering the foundation (engine-as-callable-service, session-scoped decrypt, scenario record type + write path, mini-side export) \u2014 the six requirement deltas are folded into INI-124 as of this filing. Sequenced AFTER INI-124."
+      },
+      {
+        "id": "INI-127",
+        "name": "Environment-Portability Completion \u2014 Connector-Layer Portability + Cowork-Coupling Drift Sweep",
+        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed inception (strategic thread following INI-125 close). Completes the environment-portability program INI-125 advanced: the governance/state layer is now fully portable (any CEO-approved agent, any JasonOS host); this initiative extends the SAME relocate-the-resource pattern to the connector layer (Phase B, item 2) so the only Cowork-tied jobs are Cowork-by-nature (presentation/interaction), not accidents of where a credential happens to live \u2014 and reconciles the written record to the new reality (Phase A, item 4, the drift sweep). Guiding test (from the INI-125 retro discussion): a job is environment-bound iff it depends on a resource that exists in only one environment; the fix is always to relocate that resource to a shared substrate and repoint the consumer. Deliberately excludes the presentation/interaction layer, which stays Cowork-only BY DESIGN. Bounded, not program-scale: Phase B provisions the connectors JasonOS operationally depends on (Gmail + Drive path), classifies the rest, and parks broad per-connector provisioning as on-demand follow-ons."
       }
     ]
   }
