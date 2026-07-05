@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T04:49:55Z",
+  "generated_at": "2026-07-05T05:13:51Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
     "done": 102,
-    "total": 119,
+    "total": 120,
     "active": 1,
     "queued": 0,
     "paused": 7,
-    "backlog": 9
+    "backlog": 10
   },
   "operational": {
     "last_session_date": "2026-07-04T22:26:43Z",
-    "minutes_since_session": 383,
+    "minutes_since_session": 407,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -302,6 +302,11 @@
         "id": "INI-128",
         "name": "Batch Runner \u2014 Work-Item Execution Contract implementation (PCR-GOV-004 Change 3)",
         "notes": "Implements the runner/relay behavior half of PCR-GOV-004 (documentation half approved 2026-07-04). Security-Steward-gated: touches the relay push interlock."
+      },
+      {
+        "id": "INI-129",
+        "name": "Memory-Routing Guardrail \u2014 Retire the Harness Default for JasonOS Memory (GAP-037)",
+        "notes": "BACKLOG 2026-07-05 \u2014 closes GAP-037. INI-125 relocated JasonOS memory to repo-resident governance/memory/ and repointed the Session Closing Protocol, but the Cowork HARNESS's own built-in memory mechanism still defaults to the retired auto-memory directory (spaces/<id>/memory/). Correct placement is therefore procedural (an agent following the Session Closing Protocol), not structural \u2014 nothing stops a harness-default write from landing silently in the de-authorized, environment-local store, invisible to terminal Claude Code and every other harness. This initiative converts that discipline dependency into (Phase 1) a single overriding operating rule authored as a PCR, and (Phase 2) a detective that turns any misroute into a loud signal; (Phase 3) escalates the one thing the repo cannot fix \u2014 whether the harness memory path is reconfigurable \u2014 to the CEO. Route Draft-only: the durable fix is the guardrail PCR (CEO approval closes it); the detective is a Queue-ready engineering follow-on; harness reconfigurability is an external CEO/product-side call. Filing this INI does NOT close GAP-037 (per feedback_rem_gap_open_until_fulfilled) \u2014 GAP-037 stays Open until the guardrail + detective are enacted. Sibling to GAP-036 (concurrent-write coordination for the same store) and adjacent to INI-127 Phase A (Cowork-coupling drift sweep)."
       }
     ]
   }
