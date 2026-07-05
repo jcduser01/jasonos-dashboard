@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T02:56:22Z",
+  "generated_at": "2026-07-05T03:00:43Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
-    "done": 101,
+    "done": 102,
     "total": 117,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "paused": 7,
     "backlog": 7
   },
   "operational": {
     "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 301,
+    "minutes_since_session": 305,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -25,11 +25,6 @@
     {
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
-      "status": "active"
-    },
-    {
-      "id": "INI-125",
-      "name": "Cowork Auto-Memory Migration \u2192 governance/memory/ + Terminal Closure Decoupling",
       "status": "active"
     }
   ],
@@ -48,12 +43,6 @@
       "label": "GAP-035",
       "context": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required.",
       "waiting_on": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required."
-    },
-    {
-      "id": "ACT-INI-125",
-      "category": "required",
-      "label": "INI-125",
-      "context": "PCR-OPS-036 ratified + enacted (genericized per CEO). ONE open DoD item remains: run the end-to-end terminal test-close of a throwaway INI from a non-Cowork session on a JasonOS host, observing step 2"
     },
     {
       "id": "ACT-HO-1",
