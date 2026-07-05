@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T14:38:21Z",
+  "generated_at": "2026-07-05T17:16:49Z",
   "schema_version": "5",
   "generator_version": "2.4",
   "stats": {
     "done": 104,
-    "total": 121,
+    "total": 122,
     "active": 1,
     "queued": 0,
     "paused": 7,
-    "backlog": 9
+    "backlog": 10
   },
   "operational": {
     "last_session_date": "2026-07-05T08:25:28Z",
-    "minutes_since_session": 372,
+    "minutes_since_session": 531,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -31,31 +31,10 @@
   "queue": [],
   "ceo_actions": [
     {
-      "id": "ACT-PCR-GOV-005",
+      "id": "ACT-PCR-OPS-040",
       "category": "required",
-      "label": "PCR-GOV-005",
-      "context": "",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-PCR-OPS-035",
-      "category": "required",
-      "label": "PCR-OPS-035",
-      "context": "Post-Split Dead-Path Drift \u2014 Systematic Sweep + Standing Check",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-PCR-OPS-037",
-      "category": "required",
-      "label": "PCR-OPS-037",
-      "context": "Partial-enactment PCR lifecycle (doc half enacted, code half pending)",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-PCR-OPS-038",
-      "category": "required",
-      "label": "PCR-OPS-038",
-      "context": "Durable runner doctrine lives in an untracked, unbacked-up file",
+      "label": "PCR-OPS-040",
+      "context": "\"CEO action: None \u2014 &lt;reason&gt;\" sentinel convention for gaps and PCRs",
       "waiting_on": null
     },
     {
@@ -161,7 +140,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 6,
-      "files": 4
+      "files": 1
     },
     "gaps": {
       "handoff": 6,
@@ -177,10 +156,7 @@
   ],
   "contract_drift": [],
   "waiting_on_drift": [
-    "PCR-GOV-005",
-    "PCR-OPS-035",
-    "PCR-OPS-037",
-    "PCR-OPS-038"
+    "PCR-OPS-040"
   ],
   "directors": [
     {
@@ -408,6 +384,16 @@
           "depends_on": [
             "PCR-GOV-005"
           ]
+        }
+      },
+      {
+        "id": "INI-131",
+        "name": "Post-Split Dead-Path Reconciliation Sweep + Standing Drift-Check (dead-monolith-path + config path-exists validation)",
+        "notes": "BACKLOG 2026-07-05 \u2014 filed per PCR-OPS-035's CEO decision (2026-07-05): home = file one new initiative doing both the one-time sweep and the standing drift-check (not folding into the already-Complete INI-116); scope extended to also validate config path-exists, not just the dead-path string. Source: PCR-OPS-035 (closed, this filing is its disposition), surfaced during INI-122 execution when a stale run.sh/dispatch.py REPO= path (already fixed under INI-122, ops ddc2fb4/6e2d5338) turned out not to be isolated \u2014 a sweep found 68 live references to the dead path, an unknown subset load-bearing. Backlog->Current pull is a separate future CEO decision.",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (excluding _archived/, .git/, temp/); classify each as load-bearing (executable/config/plist/scheduled-task path resolution) vs. historical/cosmetic (narrative, closed records, comments); repoint every load-bearing reference to the correct post-split repo path; produce a before/after diff as evidence. Phase 2 (standing check): add a report-triage step (alongside the existing script-registry + scheduled-task coverage checkers) that greps the live surface for references to the archived monolith path and surfaces any load-bearing hit as a drift signal; extend it with a lightweight path-exists validation for known config path fields (e.g. log_path) so a field pointing at a nonexistent directory is also caught.",
+          "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case new information changes this."
         }
       }
     ]
