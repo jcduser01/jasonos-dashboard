@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T00:00:54Z",
+  "generated_at": "2026-07-05T00:45:43Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 125,
+    "minutes_since_session": 170,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -43,11 +43,24 @@
       "waiting_on": null
     },
     {
+      "id": "ACT-PCR-OPS-036",
+      "category": "required",
+      "label": "PCR-OPS-036",
+      "context": "",
+      "waiting_on": null
+    },
+    {
       "id": "ACT-GAP-035",
       "category": "required",
       "label": "GAP-035",
       "context": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required.",
       "waiting_on": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required."
+    },
+    {
+      "id": "ACT-INI-125",
+      "category": "required",
+      "label": "INI-125",
+      "context": "Ratify PCR-OPS-036 (closure-protocol terminal decoupling), then run the terminal test-close of a throwaway INI to discharge the Phase 6 DoD. Migration half (Phases 1-4) is complete + verified."
     },
     {
       "id": "ACT-HO-1",
@@ -107,7 +120,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 3,
-      "files": 1
+      "files": 2
     },
     "gaps": {
       "handoff": 3,
@@ -117,7 +130,8 @@
   "status_drift": [],
   "category_drift": [],
   "waiting_on_drift": [
-    "PCR-OPS-035"
+    "PCR-OPS-035",
+    "PCR-OPS-036"
   ],
   "directors": [
     {
