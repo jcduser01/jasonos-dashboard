@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T04:26:50Z",
+  "generated_at": "2026-07-05T04:49:47Z",
   "schema_version": "5",
   "generator_version": "2.3",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-04T21:55:00Z",
-    "minutes_since_session": 391,
+    "last_session_date": "2026-07-04T22:26:43Z",
+    "minutes_since_session": 383,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -42,6 +42,20 @@
       "category": "required",
       "label": "PCR-OPS-035",
       "context": "Post-Split Dead-Path Drift \u2014 Systematic Sweep + Standing Check",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-PCR-OPS-037",
+      "category": "required",
+      "label": "PCR-OPS-037",
+      "context": "Partial-enactment PCR lifecycle (doc half enacted, code half pending)",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-PCR-OPS-038",
+      "category": "required",
+      "label": "PCR-OPS-038",
+      "context": "Durable runner doctrine lives in an untracked, unbacked-up file",
       "waiting_on": null
     },
     {
@@ -85,41 +99,53 @@
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Handle the relay-CLI timeout vs. Cowork bash-cap friction",
-      "context": "commit_via_relay.py default --timeout is 90s but the Cowork bash tool caps at 45s, so relay commits from the sandbox mus"
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
       "label": "Planning Mode \u2014 define product requirements",
       "context": "deferred to a later session; needs a substantive definition (what does it toggle \u2014 scenario overlay? editable assumption"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
       "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
     },
     {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "Approve/publish PCR-OPS-033",
       "context": "or direct further changes"
     },
     {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "Cowork-memory migration scope",
       "context": "when ready, decide the curation boundary (which of the ~179 Cowork memory files are JasonOS-org-operational vs. out of s"
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "Double-check recently-created operations/bin/ scripts are in the script registry",
+      "context": "check-script-registry-coverage.py Direction 1 currently flags two unregistered scripts, jasonos-cockpit-app.py and jason"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "Decide the home for the dead-path fix (PCR-OPS-035)",
+      "context": "(a) fold the one-time sweep into INI-116 Phase 4, (b) file a new standing drift-check initiative, or (c) both (recommend"
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
+      "label": "Optional now",
+      "context": "queue the Route: Queue-ready gaps (GAP-029 Steward-gated / GAP-031 / GAP-032) to the batch runner."
     }
   ],
   "handoff_drift": {
     "pcrs": {
-      "handoff": 3,
-      "files": 2
+      "handoff": 6,
+      "files": 4
     },
     "gaps": {
-      "handoff": 3,
+      "handoff": 5,
       "files": 2
     }
   },
@@ -127,7 +153,9 @@
   "category_drift": [],
   "waiting_on_drift": [
     "PCR-GOV-004",
-    "PCR-OPS-035"
+    "PCR-OPS-035",
+    "PCR-OPS-037",
+    "PCR-OPS-038"
   ],
   "directors": [
     {
