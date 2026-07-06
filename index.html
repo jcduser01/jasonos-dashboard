@@ -338,6 +338,7 @@
   }
   .wr-eligible .wr-group-label { color: var(--success); }
   .wr-blocked  .wr-group-label { color: var(--warn); }
+  .wr-progress .wr-group-label { color: var(--accent); }
   .wr-gap      .wr-group-label { color: var(--text-dim); }
   .wr-count { font-weight: 700; opacity: 0.65; margin-left: 3px; }
   .wr-item { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; font-size: 0.82rem; }
@@ -790,11 +791,16 @@
     body.innerHTML = html;
   }
 
-  /* JasonOS Work Readiness (INI-130 Change 9) — the inverse of the CEO-Actions
-     panel: a standing render of the runner's contract dry-run over open
-     non-INI items, in three buckets (eligible-now / blocked-needs-decision /
-     contract-quality-gaps). Degrades gracefully: hidden when the field is
-     absent (the dormant, pre-Steward-sign-off state — the generator's
+  /* JasonOS Work Readiness (INI-130 Change 9, GAP-056 revision) — the inverse
+     of the CEO-Actions panel: a standing render of the runner's contract
+     dry-run over open non-INI items, in four buckets (eligible-now /
+     in-progress-not-ceo-blocked / blocked-needs-decision /
+     contract-quality-gaps). "Blocked — needs decision" is reserved for items
+     whose own CEO-action/decision-required field states a CEO decision is
+     actually pending (GAP-056 fix — previously any Draft-only or
+     stop-lined Queue-ready item landed here regardless of what the item
+     itself said). Degrades gracefully: hidden when the field is absent (the
+     dormant, pre-Steward-sign-off state — the generator's
      read_work_readiness() wiring is commented until go-live). */
   function renderWorkReadiness(wr) {
     var panel = document.getElementById("work-readiness-panel");
@@ -803,9 +809,10 @@
     if (wr === undefined || wr === null) { panel.style.display = "none"; return; }
     panel.style.display = "";
     var buckets = [
-      { key: "eligible_now",            label: "Eligible now",            cls: "wr-eligible" },
-      { key: "blocked_needs_decision",  label: "Blocked — needs decision", cls: "wr-blocked" },
-      { key: "contract_quality_gaps",   label: "Contract gaps",           cls: "wr-gap" }
+      { key: "eligible_now",            label: "Eligible now",                       cls: "wr-eligible" },
+      { key: "in_progress_not_ceo",     label: "In progress — no CEO decision needed", cls: "wr-progress" },
+      { key: "blocked_needs_decision",  label: "Blocked — needs decision",           cls: "wr-blocked" },
+      { key: "contract_quality_gaps",   label: "Contract gaps",                      cls: "wr-gap" }
     ];
     var html = "";
     for (var b = 0; b < buckets.length; b++) {
