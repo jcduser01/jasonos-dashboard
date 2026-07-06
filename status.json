@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T20:20:41Z",
+  "generated_at": "2026-07-06T20:23:57Z",
   "schema_version": "5",
   "generator_version": "2.7",
   "stats": {
@@ -51,13 +51,6 @@
   "queue": [],
   "ceo_actions": [
     {
-      "id": "ACT-GAP-040",
-      "category": "required",
-      "label": "GAP-040",
-      "context": "**Decide the rule** \u2014 under an \"execute end-to-end / Execute INI-NNN + elevated autonomy\" grant, may the PA self-enact a PCR whose normative content is fully entailed by an already-ratified decision (",
-      "waiting_on": "**Decide the rule** \u2014 under an \"execute end-to-end / Execute INI-NNN + elevated autonomy\" grant, may the PA self-enact a PCR whose normative content is fully entailed by an already-ratified decision (adds no new obligation), or must every PCR always go to explicit CEO approval before enactment?"
-    },
-    {
       "id": "ACT-GAP-053",
       "category": "required",
       "label": "GAP-053",
@@ -68,7 +61,7 @@
   "handoff_drift": {
     "gaps": {
       "handoff": 0,
-      "files": 2
+      "files": 1
     }
   },
   "status_drift": [],
@@ -403,6 +396,6 @@
     ],
     "blocked_needs_decision": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-06T20:20:41.704267+00:00"
+    "generated_at": "2026-07-06T20:23:57.340796+00:00"
   }
 }
