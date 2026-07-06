@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-06T20:23:57Z",
+  "generated_at": "2026-07-06T20:28:10Z",
   "schema_version": "5",
-  "generator_version": "2.7",
+  "generator_version": "2.8",
   "stats": {
     "done": 106,
     "total": 124,
@@ -308,6 +308,7 @@
   "batch_queue": [],
   "jasonos_work_readiness": {
     "eligible_now": [],
+    "fully_executable": [],
     "in_progress_not_ceo": [
       {
         "id": "GAP-029",
@@ -394,8 +395,95 @@
         "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th"
       }
     ],
+    "partially_executable": [
+      {
+        "id": "GAP-029",
+        "route": "Queue-ready",
+        "runner_scope": "add a workspace-trust establishment + verification step to the access-compiler deploy path (`operations/bin/jasonos-access-compiler.py` `write_jail`), plus a report-triage / Security-Steward check tha",
+        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy."
+      },
+      {
+        "id": "GAP-033",
+        "route": "Operational",
+        "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
+        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own"
+      },
+      {
+        "id": "GAP-038",
+        "route": "Queue-ready",
+        "runner_scope": "diagnose why the dispatched `claude --agent security-steward` context lacks write to `/Volumes/SandboxData/Logs/` (FDA vs `--permission-mode`/allowed-tools vs writable-root scope); scope the minimal w",
+        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h"
+      },
+      {
+        "id": "GAP-039",
+        "route": "Queue-ready",
+        "runner_scope": "diagnose why the procedure is bypassable and un-enforced; draft the commit-time gate (pre-commit hook refusing a new `operations/bin/` file without a same-commit registry row) + the report-triage esca",
+        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi"
+      },
+      {
+        "id": "GAP-044",
+        "route": "Queue-ready",
+        "runner_scope": "Diagnose why the dispatcher's per-director advisory lock (`.agent-lock-<director>/`) and paired `.result` file are not cleaned up / finalized when the spawned `claude` subprocess exits abnormally (cra",
+        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and "
+      },
+      {
+        "id": "GAP-045",
+        "route": "Queue-ready",
+        "runner_scope": "Fix the dispatcher's trigger-file parser so a `task:` value is either (a) explicitly single-line only, with the parser **rejecting** (not silently truncating) any trigger whose `task:` line is followe",
+        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja"
+      },
+      {
+        "id": "GAP-046",
+        "route": "Draft-only",
+        "runner_scope": "Document the ordering hazard and the safe pattern in the `git-commit-relay.md` workload runbook: precommand always executes before any `branch:`-triggered checkout, so a precommand that mutates a trac",
+        "stop_line": "None \u2014 documentation only."
+      },
+      {
+        "id": "GAP-048",
+        "route": "Queue-ready",
+        "runner_scope": "Two coupled deficiencies on the same untracked, hand-maintained, multi-writer file. **(A) Reconciliation-on-interactive-close.** Add a mandatory **queue-reconciliation step** to `operations/batch-runn",
+        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina"
+      },
+      {
+        "id": "GAP-050",
+        "route": "Queue-ready",
+        "runner_scope": "Extend the dependency resolver in `operations/bin/jasonos-work-item-runner.py` (`plan`/`report`) so a `depends_on` target that resolves to a **published/terminal state** \u2014 a PCR or GAP in `closed/`, a",
+        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite)."
+      },
+      {
+        "id": "GAP-051",
+        "route": "Queue-ready",
+        "runner_scope": "In the split-repo arms of the push guardrail \u2014 both the client `_guard_push_mode()` in `commit_via_relay.py` and the worker `jasonos-governance` / `jasonos-operations` `case` arms in `jasonos-git-rela",
+        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049."
+      },
+      {
+        "id": "GAP-052",
+        "route": "Queue-ready",
+        "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
+        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path."
+      },
+      {
+        "id": "GAP-053",
+        "route": "Draft-only",
+        "runner_scope": "Document, in the git-commit-relay / Steward-dispatch runbook, the sanctioned procedure for a dispatched-Steward review of a staged lane: before dispatch, materialize the lane files into the working tr",
+        "stop_line": "None \u2014 documentation only."
+      },
+      {
+        "id": "GAP-054",
+        "route": "Queue-ready",
+        "runner_scope": "Make `commit_via_relay.py`'s `QUEUE_DIR` resolution correct (or fail-loud) for the `~/bin` deployment location, not just `SandboxData/bin`. GAP-041 hard-codes the assumption \"the deployed copy always ",
+        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR."
+      },
+      {
+        "id": "GAP-055",
+        "route": "Queue-ready",
+        "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
+        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th"
+      }
+    ],
     "blocked_needs_decision": [],
+    "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-06T20:23:57.340796+00:00"
+    "generated_at": "2026-07-06T20:28:10.727557+00:00"
   }
 }

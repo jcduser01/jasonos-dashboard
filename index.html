@@ -339,6 +339,7 @@
   .wr-eligible .wr-group-label { color: var(--success); }
   .wr-blocked  .wr-group-label { color: var(--warn); }
   .wr-progress .wr-group-label { color: var(--accent); }
+  .wr-notexec  .wr-group-label { color: var(--text-dim); }
   .wr-gap      .wr-group-label { color: var(--text-dim); }
   .wr-count { font-weight: 700; opacity: 0.65; margin-left: 3px; }
   .wr-item { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; font-size: 0.82rem; }
@@ -791,17 +792,24 @@
     body.innerHTML = html;
   }
 
-  /* JasonOS Work Readiness (INI-130 Change 9, GAP-056 revision) — the inverse
-     of the CEO-Actions panel: a standing render of the runner's contract
-     dry-run over open non-INI items, in four buckets (eligible-now /
-     in-progress-not-ceo-blocked / blocked-needs-decision /
-     contract-quality-gaps). "Blocked — needs decision" is reserved for items
-     whose own CEO-action/decision-required field states a CEO decision is
-     actually pending (GAP-056 fix — previously any Draft-only or
-     stop-lined Queue-ready item landed here regardless of what the item
-     itself said). Degrades gracefully: hidden when the field is absent (the
-     dormant, pre-Steward-sign-off state — the generator's
-     read_work_readiness() wiring is commented until go-live). */
+  /* JasonOS Work Readiness (INI-130 Change 9, GAP-056 + v2.8 revision) — the
+     inverse of the CEO-Actions panel: a standing render of the runner's
+     contract dry-run over open non-INI items, in five buckets. Two axes:
+     (1) CEO-relevance — is a CEO decision actually pending, checked first
+     and taking precedence; (2) completability — how much of the item can
+     the runner finish before it has to halt at a stop-line:
+       - Fully executable        — no stop-line at all; runs start to finish.
+       - Partially executable    — a stop-line exists but is NOT the leading
+         action; real work exists ahead of it (not CEO-blocked).
+       - Blocked — needs decision — a CEO decision is genuinely pending
+         (checked first; wins regardless of how much prep work exists).
+       - Not executable (leading stop) — the stop IS the first action (bare
+         `Runner scope: None`) and it isn't a CEO call either — an unmet
+         external/environment gate. Previously silently dropped; now shown.
+       - Contract gaps            — malformed/missing contract fields.
+     Degrades gracefully: hidden when the field is absent (the dormant,
+     pre-Steward-sign-off state — the generator's read_work_readiness()
+     wiring is commented until go-live). */
   function renderWorkReadiness(wr) {
     var panel = document.getElementById("work-readiness-panel");
     var body  = document.getElementById("work-readiness-body");
@@ -809,10 +817,11 @@
     if (wr === undefined || wr === null) { panel.style.display = "none"; return; }
     panel.style.display = "";
     var buckets = [
-      { key: "eligible_now",            label: "Eligible now",                       cls: "wr-eligible" },
-      { key: "in_progress_not_ceo",     label: "In progress — no CEO decision needed", cls: "wr-progress" },
-      { key: "blocked_needs_decision",  label: "Blocked — needs decision",           cls: "wr-blocked" },
-      { key: "contract_quality_gaps",   label: "Contract gaps",                      cls: "wr-gap" }
+      { key: "fully_executable",            label: "Fully executable",                    cls: "wr-eligible" },
+      { key: "partially_executable",        label: "Partially executable",                cls: "wr-progress" },
+      { key: "blocked_needs_decision",      label: "Blocked — needs decision",            cls: "wr-blocked" },
+      { key: "not_executable_leading_stop", label: "Not executable (leading stop)",       cls: "wr-notexec" },
+      { key: "contract_quality_gaps",       label: "Contract gaps",                       cls: "wr-gap" }
     ];
     var html = "";
     for (var b = 0; b < buckets.length; b++) {
