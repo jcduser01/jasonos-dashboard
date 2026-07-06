@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T08:50:52Z",
+  "generated_at": "2026-07-06T08:52:06Z",
   "schema_version": "5",
   "generator_version": "2.6",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-06T08:40Z",
-    "minutes_since_session": 10,
+    "minutes_since_session": 12,
     "airlock_queue": 2,
     "airlock_bundles": 1
   },
@@ -87,6 +87,12 @@
       "label": "REM-047",
       "context": "INI-116 post-split stale legacy-repo pointers (residual): the archived digital-organization-governance clone keeps a dead `upstream` remote and ~6 non-relay scripts hardcode its now-moved path \u2014 Stewa",
       "waiting_on": null
+    },
+    {
+      "id": "ACT-INI-130",
+      "category": "required",
+      "label": "INI-130",
+      "context": "INI-130 Phase 1 is complete and live (Steward-cleared). Acknowledge Phase-1 completion, and decide whether/when to schedule Phase 2 \u2014 the taxonomy/vocabulary/folder-migration half (a separate staged, "
     },
     {
       "id": "ACT-HO-1",
@@ -575,6 +581,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-06T08:50:52.600144+00:00"
+    "generated_at": "2026-07-06T08:52:06.783425+00:00"
   }
 }
