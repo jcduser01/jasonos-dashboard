@@ -269,6 +269,26 @@
   .batch-id  { font-weight: 700; color: var(--text-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   .batch-empty { font-size: 0.85rem; color: var(--text-dim); }
 
+  /* JasonOS Work Readiness (INI-130 Change 9) */
+  .wr-group { padding: 7px 0; border-bottom: 1px solid var(--border); }
+  .wr-group:first-child { padding-top: 0; }
+  .wr-group:last-child  { border-bottom: none; padding-bottom: 0; }
+  .wr-group-label {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.04em; margin-bottom: 5px;
+  }
+  .wr-eligible .wr-group-label { color: var(--success); }
+  .wr-blocked  .wr-group-label { color: var(--warn); }
+  .wr-gap      .wr-group-label { color: var(--text-dim); }
+  .wr-count { font-weight: 700; opacity: 0.65; margin-left: 3px; }
+  .wr-item { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; font-size: 0.82rem; }
+  .wr-id {
+    font-weight: 700; color: var(--text-muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .wr-meta  { font-size: 0.72rem; color: var(--text-dim); }
+  .wr-empty { font-size: 0.8rem; color: var(--text-dim); }
+
   /* Backlog + paused lists */
   .backlog-item {
     display: flex; align-items: flex-start; gap: 10px;
@@ -422,6 +442,14 @@
         <div id="batch-queue-panel" class="panel">
           <div class="panel-label">Batch Execution Queue</div>
           <div id="batch-queue-body"></div>
+        </div>
+
+        <!-- JasonOS Work Readiness (INI-130 Change 9) — inverse of CEO Actions.
+             Hidden until the generator ships jasonos_work_readiness
+             (Security-Steward-gated go-live). -->
+        <div id="work-readiness-panel" class="panel" style="display:none;">
+          <div class="panel-label">JasonOS Work Readiness</div>
+          <div id="work-readiness-body"></div>
         </div>
       </div>
 
@@ -731,6 +759,56 @@
     body.innerHTML = html;
   }
 
+  /* JasonOS Work Readiness (INI-130 Change 9) — the inverse of the CEO-Actions
+     panel: a standing render of the runner's contract dry-run over open
+     non-INI items, in three buckets (eligible-now / blocked-needs-decision /
+     contract-quality-gaps). Hidden when the field is absent (the dormant,
+     pre-Steward-sign-off state — the generator's read_work_readiness() wiring
+     is commented until go-live). */
+  function renderWorkReadiness(wr) {
+    var panel = document.getElementById("work-readiness-panel");
+    var body  = document.getElementById("work-readiness-body");
+    if (!panel || !body) return;
+    if (wr === undefined || wr === null) { panel.style.display = "none"; return; }
+    panel.style.display = "";
+    var buckets = [
+      { key: "eligible_now",            label: "Eligible now",            cls: "wr-eligible" },
+      { key: "blocked_needs_decision",  label: "Blocked — needs decision", cls: "wr-blocked" },
+      { key: "contract_quality_gaps",   label: "Contract gaps",           cls: "wr-gap" }
+    ];
+    var html = "";
+    for (var b = 0; b < buckets.length; b++) {
+      var bk    = buckets[b];
+      var items = wr[bk.key] || [];
+      html += '<div class="wr-group ' + bk.cls + '">'
+            + '<div class="wr-group-label">' + escHtml(bk.label)
+            + '<span class="wr-count">' + items.length + '</span></div>';
+      if (items.length === 0) {
+        html += '<span class="wr-empty">None</span>';
+      } else {
+        for (var i = 0; i < items.length; i++) {
+          var it = items[i];
+          if (bk.key === "contract_quality_gaps") {
+            var fname  = String(it.file || it.id || "").split("/").pop();
+            var defect = String(it.type || "").replace(/_/g, " ");
+            var meta   = [it.field, defect].filter(Boolean).join(" · ");
+            html += '<div class="wr-item">'
+                  + '<span class="wr-id">'   + escHtml(fname) + '</span>'
+                  + '<span class="wr-meta">' + escHtml(meta)  + '</span>'
+                  + '</div>';
+          } else {
+            html += '<div class="wr-item">'
+                  + '<span class="wr-id">'   + escHtml(it.id || "")    + '</span>'
+                  + '<span class="wr-meta">' + escHtml(it.route || "") + '</span>'
+                  + '</div>';
+          }
+        }
+      }
+      html += '</div>';
+    }
+    body.innerHTML = html;
+  }
+
   function renderDirectors(directors) {
     var body = document.getElementById("directors-body");
     if (!directors || directors.length === 0) {
@@ -806,6 +884,7 @@
     renderActive(data.active_initiative, data.active_initiatives);
     renderQueue(data.queue);
     renderBatchQueue(data.batch_queue);
+    renderWorkReadiness(data.jasonos_work_readiness);
     renderDirectors(data.directors);
     renderPaused(data.paused || {});
     var backlog = data.backlog || {};
