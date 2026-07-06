@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-06T05:36:25Z",
+  "generated_at": "2026-07-06T06:12:37Z",
   "schema_version": "5",
-  "generator_version": "2.4",
+  "generator_version": "2.5",
   "stats": {
     "done": 104,
     "total": 123,
@@ -12,8 +12,8 @@
   },
   "operational": {
     "last_session_date": "2026-07-06T00:11Z",
-    "minutes_since_session": 325,
-    "airlock_queue": 1,
+    "minutes_since_session": 361,
+    "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
@@ -132,12 +132,6 @@
       "category": "required",
       "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
       "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "required",
-      "label": "None this session. (GAP-041 is engineering-owned, no CEO decision.)",
-      "context": ""
     }
   ],
   "handoff_drift": {
@@ -349,7 +343,7 @@
       {
         "id": "INI-124",
         "name": "CFO Cockpit Client-Server Phase \u2014 HYOK-Encrypted Hosting + shadcn/ui Front-End Rebuild",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA architecture/security thread, resolved same day as INI-123's closing note). Realizes the Phase D carve-out INI-123 explicitly deferred: interactivity + write-back requiring a live backend. Architecture = HYOK (Hold-Your-Own-Key): Vercel-hosted app + managed Postgres store the v2 contract as field-level envelope-encrypted records; Clerk auth with mandatory server-side session verification; a key-custody service on the Mac mini reachable only via a narrowly-scoped tunnel holds the master key \u2014 ciphertext may live in someone else's cloud, the key never does. CEO also directed the front end be REBUILT on shadcn/ui (Next.js + Tailwind + shadcn component library, shadcn MCP available for build sessions) rather than carried forward as the plain HTML/CSS shell INI-123 ships \u2014 this is the first JasonOS surface with a real React build pipeline, adopted deliberately as the go-to pattern for future app-like (not document-like) surfaces. Includes, as a first-class deliverable: a synthetic-data build discipline + credential-revocation/cutover runbook, reusable beyond this build as a JCD client-engagement asset (candidate anonymized case study). FOUNDATION-PREP 2026-07-04: amended to prepare the foundation for INI-126 (CFO Cockpit Planning Mode) \u2014 six requirement deltas folded in (\u00a7 Planning-Mode foundation requirements): engine-as-callable-service, session-scoped decrypt for the bounded solver, a mutable scenario record type + early write path widening the PCR-FIN-003 amendment, a mini-side export path, a mini-authoritative data-topology constraint, and generator-first composable engine-input machinery. Stale INI-123 'Backlog' sibling refs corrected to Complete.",
+        "notes": "BACKLOG 2026-07-04 (CEO+PA architecture/security thread, resolved same day as INI-123's closing note). Realizes the Phase D carve-out INI-123 explicitly deferred: interactivity + write-back\u2026",
         "contract": {
           "route": "CEO-first",
           "runner_scope": "Phase 2 (front-end rebuild) only \u2014 stand up the Next.js + shadcn/ui app and port the cockpit home view and all nine INI-123 read-only detail views to the new shell, reading the same v2 JSON contract INI-123 reads against static/local contract files (no server, no write path, no encryption yet). DoD is shadcn/Next.js parity with INI-123's shipped shell, coverage-honesty caveats carried over, no fabricated data. This is the first application of the PCR-ENG-014 governed front-end default.",
@@ -359,7 +353,7 @@
       {
         "id": "INI-126",
         "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as Phase D. Full requirements spec: knowledge/jasonos-vault/finance/planning-mode-requirements.md (Class C). CAPABILITY = define a scenario \u2192 evaluate \u2192 discard OR operationalize (append the decision queue + write a Cowork handoff brief; the app stages and writes materials, the President Agent drafts the plan in Cowork \u2014 the app never authors the plan). Two SEGREGATED modes sharing the engine: FORWARD ('what happens by date Y if I set levers X?', call-once) and BACKWARD, a BOUNDED solver \u2014 solve-for-date (forward + threshold detection, call-once) and solve-for-magnitude (fix target+date, ONE free action-lever, 1-D bisection, call-loop ~20-40 evals). Hard rail: exactly ONE free variable per query, ENFORCED not warned (a point answer, never a curve); a second variable is a separate exercise the app supports via CLONE. Non-monotonic RESULT CONTRACT (reached?, first-crossing, sustained-through-horizon?, revert date, not-reached) with absorbing-vs-oscillating metric classification + a target durability qualifier. THREE-TIER composable lever taxonomy (composable parts \u2192 primitives [the closed engine hypothetical-input contract] \u2192 composite templates, in scope v1) on an orthogonal action/assumption axis; posture is a composite macro, not a primitive; Planning Mode overlays hypotheticals on the model, never edits it. DEPENDS ON INI-124 delivering the foundation (engine-as-callable-service, session-scoped decrypt, scenario record type + write path, mini-side export) \u2014 the six requirement deltas are folded into INI-124 as of this filing. Sequenced AFTER INI-124.",
+        "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as\u2026",
         "contract": {
           "route": "CEO-first",
           "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-side export, data-topology invariant, composable input layer) and the Security Steward has reviewed the Planning-Mode compute/solver/export path. The first actionable step is therefore blocked on the unmet INI-124 dependency; there is no runner-buildable slice ahead of it. Post-unblock, the first buildable slice is Phase 2 (forward modeling + scenario persistence over the composable input layer).",
@@ -371,7 +365,7 @@
       {
         "id": "INI-127",
         "name": "Environment-Portability Completion \u2014 Connector-Layer Portability + Cowork-Coupling Drift Sweep",
-        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed inception (strategic thread following INI-125 close). Completes the environment-portability program INI-125 advanced: the governance/state layer is now fully portable (any CEO-approved agent, any JasonOS host); this initiative extends the SAME relocate-the-resource pattern to the connector layer (Phase B, item 2) so the only Cowork-tied jobs are Cowork-by-nature (presentation/interaction), not accidents of where a credential happens to live \u2014 and reconciles the written record to the new reality (Phase A, item 4, the drift sweep). Guiding test (from the INI-125 retro discussion): a job is environment-bound iff it depends on a resource that exists in only one environment; the fix is always to relocate that resource to a shared substrate and repoint the consumer. Deliberately excludes the presentation/interaction layer, which stays Cowork-only BY DESIGN. Bounded, not program-scale: Phase B provisions the connectors JasonOS operationally depends on (Gmail + Drive path), classifies the rest, and parks broad per-connector provisioning as on-demand follow-ons.",
+        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed inception (strategic thread following INI-125 close). Completes the environment-portability program INI-125 advanced: the governance/state layer is now fully\u2026",
         "contract": {
           "route": "Queue-ready",
           "runner_scope": "Phase A only (the Cowork-coupling drift sweep) \u2014 enumerate every repo reference to now-falsified environment coupling (\"Cowork-only\", \"may only be executed from a Cowork session\", \"must not run closure / defer to Cowork\", the Cowork auto-memory store as authoritative, memory-writes-go-to-Cowork, and similar) across both repos, Logs/ runbooks, scheduled-task SKILL.md assets, capability/role docs, CLAUDE.md files, and the knowledge/placement policies; classify each hit as (i) now-false, (ii) still-true Cowork-by-nature, or (iii) historical record; and produce the findings manifest (reference \u2192 classification \u2192 disposition). Carry the (ii)-class hits forward as the Phase B connector inventory. No rewrites in this slice.",
@@ -381,7 +375,7 @@
       {
         "id": "INI-130",
         "name": "Work-Item Model Convergence \u2014 Canonical Taxonomy, Unified Conventions, Template Layer, Generated Indexes, REM Binding, and the JasonOS-Work-Readiness Surface",
-        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed, hand-selected into the batch-engineering queue (INIs are not auto-gathered; the CEO named this one explicitly). Executes the work-item model ratified by PCR-GOV-005 (all nine Changes, decision G) against GAP-042 (widened). Round one ships the dashboard JasonOS-work-readiness panel \u2014 the visibility half of the 'buried JasonOS actions' fix (the daily briefing already carries the reporting half as of 2026-07-05). DEPENDS ON PCR-GOV-005 publish: the runner defers this item until the PCR is promoted, so building never pre-empts CEO ratification of the model (vocabulary, folder scheme, PROP retirement). Decisions carried in: A declined/resolved, B portfolio/open/, C retire PROP, D REM stays in Logs/, E Runner scope <- marked chosen_option (bare None until marked), F GAP-042 closes on PCR-GOV-005 publish, G all nine Changes in one INI. Source analysis: the Work-Item Operational-Hygiene Audit 2026-07-05 (airlock AIRLOCK-2026-07-05-001).",
+        "notes": "BACKLOG 2026-07-05 \u2014 CEO-directed, hand-selected into the batch-engineering queue (INIs are not auto-gathered; the CEO named this one explicitly). Executes the work-item model ratified by\u2026",
         "contract": {
           "route": "Queue-ready",
           "runner_scope": "Phase 1 (round one) \u2014 build the dashboard JasonOS-work-readiness panel (the inverse of the CEO-Actions panel: a standing render of the contract dry-run over open non-INI items \u2014 eligible-now / blocked-needs-decision / contract-quality-gaps), the templates/ layer (per-type stubs with contract fields pre-stamped, fixing the dangling workloads/README.md reference), the REM contract binding in operations/work-item-execution-contract.md (D: REM stays in Logs/; E: Runner scope <- marked chosen_option, bare None until marked, plus the chosen_option schema marker), and the born-conformant conformance check (report-triage extension flagging any open GAP/PCR/REM or CEO-queued INI with empty Runner scope or a malformed/parenthetical label). Scaffold the unified generated-index generator. Ships the readiness panel first.",
@@ -394,7 +388,7 @@
       {
         "id": "INI-132",
         "name": "Batch Execution Harness \u2014 Four-Role Adversarial Build Loop with Mechanical Gates and Batch-Class Profiles",
-        "notes": "BACKLOG 2026-07-05 \u2014 designed with the CEO in a strategic-thought-partner session following the batch-engineering quality review of the 2026-07-05 runs (Logs/batch-engineering-quality-review-2026-07-05.md). That review found the DELIVERABLES sound (14/15 Solid, stop-line discipline strong) but surfaced two systemic PROCESS gaps \u2014 zero automated tests on code-touching items (which directly caused the GAP-041 hardcoded-path regression) and an audit blackout (6 passes, only 2 logged), plus mislabeled commits reaching canonical. This initiative rebuilds batch execution to close those gaps by construction. Architecture converged over the session: (1) execution moves from a scheduled task to a SKILL so reasoning level is chosen per run, not pinned at first run; (2) four specialized roles \u2014 admitter / engineer / reviewer / orchestrator \u2014 with the orchestrator owning the commit-vs-escalate decision so a reasoning error in the reviewer OR thin proof-of-quality still can't reach canonical; (3) mechanical gates as a deterministic fail-closed layer BEFORE the reviewer (CI-vs-code-review separation); (4) a batch-class profile taxonomy where the admitter classifies each (homogeneous, never-mixed) batch and that class selects engineer tier + review intensity + promotion policy, making 'auto-commit to canonical' a property of the routine class rather than a global switch. Substrate decision: target B (autonomous mini harness, tier chosen per batch-invocation) built through a C on-ramp (run the whole loop in-session first to earn trust in the gates before going unattended). Reuses heavily: INI-128 runner engine (jasonos-work-item-runner.py \u2014 admissibility, dependency topo-sort, stop-line enforcement, per-item run report), INI-130 conformance check (check-work-item-contract-conformance.py) + templates, the Security Steward dispatch pattern (jasonos-agent-dispatcher.sh + .agent-invoke-queue + jasonos-security-steward-review.SKILL.md) as the independent-reviewer precedent, the relay (commit_via_relay.py / jasonos-git-relay.sh v1.11 item-selective promotion), and the existing check-* gate scripts. Backlog->Current pull is a separate CEO decision.",
+        "notes": "BACKLOG 2026-07-05 \u2014 designed with the CEO in a strategic-thought-partner session following the batch-engineering quality review of the 2026-07-05 runs (Logs/batch-engineering-quality-review-2026-07-0\u2026",
         "contract": {
           "route": "Queue-ready",
           "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bundle \u2014 assemble the existing check-* scripts + a code-touched-implies-test-present-and-green check into one fail-closed promotion-gate stage that emits a machine-readable gate result), and Phase 2 (reviewer role \u2014 generalize the Security Steward dispatch pattern into an independent, clean-context code/doc reviewer emitting a structured verdict; validate it manually against the 2026-07-05 batch). Each phase stages one atomic commit and halts at its own stop-line. Phases 3\u20137 (promotion-policy PCR, orchestrator loop, admitter, engineer repackage, substrate promotion to autonomous) carry their own contracts below and are NOT part of this admissible slice \u2014 several halt at CEO/Steward gates by design.",
@@ -402,5 +396,71 @@
         }
       }
     ]
-  }
+  },
+  "batch_queue": [
+    {
+      "position": 1,
+      "id": "PCR-OPS-035"
+    },
+    {
+      "position": 2,
+      "id": "PCR-OPS-037"
+    },
+    {
+      "position": 3,
+      "id": "PCR-OPS-038"
+    },
+    {
+      "position": 4,
+      "id": "GAP-029"
+    },
+    {
+      "position": 5,
+      "id": "GAP-030"
+    },
+    {
+      "position": 6,
+      "id": "GAP-031"
+    },
+    {
+      "position": 7,
+      "id": "GAP-032"
+    },
+    {
+      "position": 8,
+      "id": "GAP-038"
+    },
+    {
+      "position": 9,
+      "id": "GAP-039"
+    },
+    {
+      "position": 10,
+      "id": "GAP-041"
+    },
+    {
+      "position": 11,
+      "id": "INI-127"
+    },
+    {
+      "position": 12,
+      "id": "REM-037"
+    },
+    {
+      "position": 13,
+      "id": "REM-038"
+    },
+    {
+      "position": 14,
+      "id": "REM-039"
+    },
+    {
+      "position": 15,
+      "id": "REM-041"
+    },
+    {
+      "position": 16,
+      "id": "INI-130"
+    }
+  ]
 }

@@ -316,6 +316,18 @@
   .queue-name { color: var(--text); flex: 1; font-weight: 500; }
   .queue-empty { font-size: 0.9rem; color: var(--text-muted); }
 
+  /* Batch Execution Queue — IDs only, in order (beneath Next). */
+  .batch-item {
+    display: flex; align-items: baseline; gap: 10px;
+    padding: 5px 0; border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .batch-item:last-child  { border-bottom: none; padding-bottom: 0; }
+  .batch-item:first-child { padding-top: 0; }
+  .batch-pos { font-size: 0.72rem; font-weight: 700; color: var(--text-dim); min-width: 18px; text-align: right; }
+  .batch-id  { font-weight: 700; color: var(--text-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .batch-empty { font-size: 0.85rem; color: var(--text-dim); }
+
   /* ── Director Activity ───────────────────────────────────────── */
   .director-row {
     display: flex;
@@ -483,6 +495,12 @@
   <div id="queue-panel" class="panel">
     <div class="panel-label">Next</div>
     <div id="queue-body"></div>
+  </div>
+
+  <!-- Batch Execution Queue -->
+  <div id="batch-queue-panel" class="panel">
+    <div class="panel-label">Batch Execution Queue</div>
+    <div id="batch-queue-body"></div>
   </div>
 
   <!-- Director Activity -->
@@ -720,6 +738,30 @@
     body.innerHTML = html;
   }
 
+  /* Batch Execution Queue — ordered item IDs the batch runner will process
+     next. IDs only, in order; duplication with other panels is expected.
+     Degrades gracefully: hidden if the field is absent (older status.json). */
+  function renderBatchQueue(queue) {
+    var panel = document.getElementById("batch-queue-panel");
+    var body  = document.getElementById("batch-queue-body");
+    if (!panel || !body) return;
+    if (queue === undefined || queue === null) { panel.style.display = "none"; return; }
+    panel.style.display = "";
+    var list = queue || [];
+    if (list.length === 0) {
+      body.innerHTML = '<span class="batch-empty">Empty</span>';
+      return;
+    }
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+      html += '<div class="batch-item">'
+            + '<span class="batch-pos">' + escHtml(String(list[i].position || (i + 1))) + '</span>'
+            + '<span class="batch-id">'  + escHtml(list[i].id) + '</span>'
+            + '</div>';
+    }
+    body.innerHTML = html;
+  }
+
   function renderQueue(queue) {
     var body    = document.getElementById("queue-body");
     var display = queue || [];
@@ -802,6 +844,7 @@
     renderOpsStrip(data.stats, data.operational);
     renderActive(data.active_initiative, data.active_initiatives);
     renderQueue(data.queue);
+    renderBatchQueue(data.batch_queue);
     renderDirectors(data.directors);
     renderPaused(data.paused || {});
     var backlog = data.backlog || {};
