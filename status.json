@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T22:13:35Z",
+  "generated_at": "2026-07-06T22:22:24Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T10:25Z",
-    "minutes_since_session": 708,
+    "last_session_date": "2026-07-06T22:21:49Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -77,74 +77,20 @@
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Planning Mode \u2014 define product requirements",
-      "context": "deferred to a later session; needs a substantive definition (what does it toggle \u2014 scenario overlay? editable assumption"
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
       "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
       "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
     },
     {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Approve/publish PCR-OPS-033",
-      "context": "or direct further changes"
-    },
-    {
-      "id": "ACT-HO-8",
-      "category": "required",
-      "label": "Cowork-memory migration scope",
-      "context": "when ready, decide the curation boundary (which of the ~179 Cowork memory files are JasonOS-org-operational vs. out of s"
-    },
-    {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "Double-check recently-created operations/bin/ scripts are in the script registry",
       "context": "check-script-registry-coverage.py Direction 1 currently flags two unregistered scripts, jasonos-cockpit-app.py and jason"
     },
     {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "Decide the home for the dead-path fix (PCR-OPS-035)",
-      "context": "(a) fold the one-time sweep into INI-116 Phase 4, (b) file a new standing drift-check initiative, or (c) both (recommend"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "Optional now",
-      "context": "queue the Route: Queue-ready gaps (GAP-029 Steward-gated / GAP-031 / GAP-032) to the batch runner."
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
-      "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "confirm",
-      "label": "Confirm relay v1.12 live deploy",
-      "context": "commands were given this session (cp canonical jasonos-git-relay.sh \u2192 SandboxData/bin/, then run jasonos-git-relay-activ"
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "Host-native airlock pipeline (follow-on initiative)",
-      "context": "decide whether/when to file the scoped initiative wiring the Mac-native read runner into the full airlock pipeline (fetc"
-    },
-    {
-      "id": "ACT-HO-15",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "(Long-horizon)",
       "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if/when a JasonOS domain identity earns its k"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "Pre-existing CEO-first (unchanged)",
-      "context": "GAP-040 (PA self-enact hardening-only PCR?), GAP-036 (governance/memory concurrent-write coordination), GAP-035 (Backlog"
     }
   ],
   "status_drift": [],
@@ -552,13 +498,6 @@
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
       },
       {
-        "id": "INI-131",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (exclud",
-        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case "
-      },
-      {
         "id": "INI-132",
         "type": "INI",
         "route": "Queue-ready",
@@ -736,13 +675,6 @@
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
       },
       {
-        "id": "INI-131",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (exclud",
-        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case "
-      },
-      {
         "id": "INI-132",
         "type": "INI",
         "route": "Queue-ready",
@@ -813,6 +745,13 @@
         "route": "CEO-first",
         "runner_scope": "",
         "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-si"
+      },
+      {
+        "id": "INI-131",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (exclud",
+        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case "
       }
     ],
     "not_executable_leading_stop": [
@@ -846,6 +785,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-06T22:13:35.373195+00:00"
+    "generated_at": "2026-07-06T22:22:24.753436+00:00"
   }
 }
