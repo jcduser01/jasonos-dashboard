@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-06T20:28:10Z",
+  "generated_at": "2026-07-06T21:08:16Z",
   "schema_version": "5",
-  "generator_version": "2.8",
+  "generator_version": "2.9",
   "stats": {
     "done": 106,
     "total": 124,
@@ -11,8 +11,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": null,
-    "minutes_since_session": null,
+    "last_session_date": "2026-07-06T10:25Z",
+    "minutes_since_session": 643,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -51,19 +51,102 @@
   "queue": [],
   "ceo_actions": [
     {
-      "id": "ACT-GAP-053",
+      "id": "ACT-HO-1",
       "category": "required",
-      "label": "GAP-053",
-      "context": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives only on a staged lane",
-      "waiting_on": null
+      "label": "Provision the privacy.com card for the Venture engine \u2014 when the first paid dependency lands (deferred by CEO).",
+      "context": "Recommended settings: per-transaction $50, monthly ceiling $500 (coarse backstop; engine policy enforces the true rollin"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Take the staged sam.gov poller live \u2014 obtain a sam.gov API key.",
+      "context": "Register/log into a SAM.gov account \u2192 Account Details \u2192 generate key; associate the account with a registered entity to "
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Medical/financial power of attorney check",
+      "context": "separate documents from the will/beneficiary (which CEO confirmed are fine as-is); currency not yet confirmed. No urgenc"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "Concentration-risk rule",
+      "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's own operating model. Open, not prioritized; no a"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Planning Mode \u2014 define product requirements",
+      "context": "deferred to a later session; needs a substantive definition (what does it toggle \u2014 scenario overlay? editable assumption"
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
+      "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
+    },
+    {
+      "id": "ACT-HO-7",
+      "category": "required",
+      "label": "Approve/publish PCR-OPS-033",
+      "context": "or direct further changes"
+    },
+    {
+      "id": "ACT-HO-8",
+      "category": "required",
+      "label": "Cowork-memory migration scope",
+      "context": "when ready, decide the curation boundary (which of the ~179 Cowork memory files are JasonOS-org-operational vs. out of s"
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "Double-check recently-created operations/bin/ scripts are in the script registry",
+      "context": "check-script-registry-coverage.py Direction 1 currently flags two unregistered scripts, jasonos-cockpit-app.py and jason"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "Decide the home for the dead-path fix (PCR-OPS-035)",
+      "context": "(a) fold the one-time sweep into INI-116 Phase 4, (b) file a new standing drift-check initiative, or (c) both (recommend"
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
+      "label": "Optional now",
+      "context": "queue the Route: Queue-ready gaps (GAP-029 Steward-gated / GAP-031 / GAP-032) to the batch runner."
+    },
+    {
+      "id": "ACT-HO-12",
+      "category": "required",
+      "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
+      "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "confirm",
+      "label": "Confirm relay v1.12 live deploy",
+      "context": "commands were given this session (cp canonical jasonos-git-relay.sh \u2192 SandboxData/bin/, then run jasonos-git-relay-activ"
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Host-native airlock pipeline (follow-on initiative)",
+      "context": "decide whether/when to file the scoped initiative wiring the Mac-native read runner into the full airlock pipeline (fetc"
+    },
+    {
+      "id": "ACT-HO-15",
+      "category": "required",
+      "label": "(Long-horizon)",
+      "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if/when a JasonOS domain identity earns its k"
+    },
+    {
+      "id": "ACT-HO-16",
+      "category": "required",
+      "label": "Pre-existing CEO-first (unchanged)",
+      "context": "GAP-040 (PA self-enact hardening-only PCR?), GAP-036 (governance/memory concurrent-write coordination), GAP-035 (Backlog"
     }
   ],
-  "handoff_drift": {
-    "gaps": {
-      "handoff": 0,
-      "files": 1
-    }
-  },
   "status_drift": [],
   "category_drift": [
     {
@@ -72,57 +155,54 @@
     }
   ],
   "contract_drift": [],
-  "waiting_on_drift": [
-    "GAP-053"
-  ],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-07-04T13:35:52Z",
+      "invocations_30d": 29
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": null,
+      "last_active": "2026-06-06T11:41:54Z",
       "invocations_30d": 0
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-12T20:23:25Z",
+      "invocations_30d": 7
     },
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-07-06T03:42:38Z",
+      "invocations_30d": 13
     },
     {
       "name": "research-director",
       "display": "Research",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-12T16:44:02Z",
+      "invocations_30d": 7
     },
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-07-06T12:00:30Z",
+      "invocations_30d": 5
     },
     {
       "name": "venture-director",
       "display": "Venture",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-12T19:53:45Z",
+      "invocations_30d": 1
     },
     {
       "name": "creative-director",
       "display": "Creative",
-      "last_active": null,
-      "invocations_30d": 0
+      "last_active": "2026-06-13T19:00:00Z",
+      "invocations_30d": 3
     }
   ],
   "paused": {
@@ -312,178 +392,460 @@
     "in_progress_not_ceo": [
       {
         "id": "GAP-029",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "add a workspace-trust establishment + verification step to the access-compiler deploy path (`operations/bin/jasonos-access-compiler.py` `write_jail`), plus a report-triage / Security-Steward check tha",
-        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy."
+        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy.",
+        "description": "Director subagent execution layer is blocked: jail workspaces are untrusted, so Claude Code\u2026"
       },
       {
         "id": "GAP-033",
+        "type": "GAP",
         "route": "Operational",
         "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
-        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own"
+        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own",
+        "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
       },
       {
         "id": "GAP-038",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "diagnose why the dispatched `claude --agent security-steward` context lacks write to `/Volumes/SandboxData/Logs/` (FDA vs `--permission-mode`/allowed-tools vs writable-root scope); scope the minimal w",
-        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h"
+        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h",
+        "description": "A dispatched Security Steward cannot write its own review outputs to Logs/, forcing manual PA\u2026"
       },
       {
         "id": "GAP-039",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "diagnose why the procedure is bypassable and un-enforced; draft the commit-time gate (pre-commit hook refusing a new `operations/bin/` file without a same-commit registry row) + the report-triage esca",
-        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi"
+        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi",
+        "description": "New automation can enter operations/bin/ without following the script-build-procedure runbook; the\u2026"
       },
       {
         "id": "GAP-044",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Diagnose why the dispatcher's per-director advisory lock (`.agent-lock-<director>/`) and paired `.result` file are not cleaned up / finalized when the spawned `claude` subprocess exits abnormally (cra",
-        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and "
+        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and ",
+        "description": "JasonOS mkdir-based advisory locks have no orphan recovery when the owning process dies abnormally\u2026"
       },
       {
         "id": "GAP-045",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Fix the dispatcher's trigger-file parser so a `task:` value is either (a) explicitly single-line only, with the parser **rejecting** (not silently truncating) any trigger whose `task:` line is followe",
-        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja"
+        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja",
+        "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
       },
       {
         "id": "GAP-046",
+        "type": "GAP",
         "route": "Draft-only",
         "runner_scope": "Document the ordering hazard and the safe pattern in the `git-commit-relay.md` workload runbook: precommand always executes before any `branch:`-triggered checkout, so a precommand that mutates a trac",
-        "stop_line": "None \u2014 documentation only."
+        "stop_line": "None \u2014 documentation only.",
+        "description": "Relay precommand always runs before a branch:-targeted checkout, an ordering hazard with no\u2026"
       },
       {
         "id": "GAP-048",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Two coupled deficiencies on the same untracked, hand-maintained, multi-writer file. **(A) Reconciliation-on-interactive-close.** Add a mandatory **queue-reconciliation step** to `operations/batch-runn",
-        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina"
+        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina",
+        "description": "Batch-engineering queue has no reconciliation-on-interactive-close and no multi-writer\u2026"
       },
       {
         "id": "GAP-050",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Extend the dependency resolver in `operations/bin/jasonos-work-item-runner.py` (`plan`/`report`) so a `depends_on` target that resolves to a **published/terminal state** \u2014 a PCR or GAP in `closed/`, a",
-        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite)."
+        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite).",
+        "description": "Runner does not auto-satisfy a depends_on target that is already published; it defers unless\u2026"
       },
       {
         "id": "GAP-051",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "In the split-repo arms of the push guardrail \u2014 both the client `_guard_push_mode()` in `commit_via_relay.py` and the worker `jasonos-governance` / `jasonos-operations` `case` arms in `jasonos-git-rela",
-        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049."
+        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049.",
+        "description": "The relay push-mode guardrail (client + worker) does not pre-refuse push:canonical for the\u2026"
       },
       {
         "id": "GAP-052",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
-        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path."
+        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
+        "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
       },
       {
         "id": "GAP-053",
+        "type": "GAP",
         "route": "Draft-only",
         "runner_scope": "Document, in the git-commit-relay / Steward-dispatch runbook, the sanctioned procedure for a dispatched-Steward review of a staged lane: before dispatch, materialize the lane files into the working tr",
-        "stop_line": "None \u2014 documentation only."
+        "stop_line": "None \u2014 documentation only.",
+        "description": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives\u2026"
       },
       {
         "id": "GAP-054",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Make `commit_via_relay.py`'s `QUEUE_DIR` resolution correct (or fail-loud) for the `~/bin` deployment location, not just `SandboxData/bin`. GAP-041 hard-codes the assumption \"the deployed copy always ",
-        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR."
+        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR.",
+        "description": "The ~/bin deployment of commit_via_relay.py resolves QUEUE_DIR to ~/.git-commit-queue (outside the\u2026"
       },
       {
         "id": "GAP-055",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
-        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th"
+        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th",
+        "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
+      },
+      {
+        "id": "REM-038",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Capture the deployed prompt (`~/Claude/Scheduled/jasonos-venture-engine-registration-check/SKILL.md`) verbatim into the canonical asset `operations/assets/jasonos-venture-engine-registration-check.SKI",
+        "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
+      },
+      {
+        "id": "REM-046",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Re-deploy the canonical `operations/bin/jasonos-access-compiler.py` to the `~/bin/jasonos-access-compiler.py` live path (Mac-side copy, outside the repo tree), confirming the GAP-029 workspace-trust c",
+        "stop_line": "None \u2014 routine deployed-copy sync, Engineering-owned, no CEO or Steward gate (the GAP-029 code was already Steward-reviewed)."
+      },
+      {
+        "id": "INI-053",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue sc",
+        "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is s"
+      },
+      {
+        "id": "INI-055",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (Site Audit) only \u2014 the initiative states Phase 1 can be pulled independently. Audit the live templeofunicorns.com storefront against DTC-apparel conversion and brand best practice (UX, brand ",
+        "stop_line": "Phase 2 (Design Direction) must be grounded in INI-053 strategy + INI-056 design system and the CEO approves the design direction before Phase 3 implementation; Phase 3 touches the live Shopify theme."
+      },
+      {
+        "id": "INI-056",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (Brand Audit & Inventory) only \u2014 working from the INI-051 guide outputs and the live templeofunicorns.com site, inventory the existing brand identity (documented / implied / missing), catalogu",
+        "stop_line": "Phase 2 (Canonization) must align with INI-053's CEO-approved positioning and the canonical doc set is CEO-approval-gated before Phase 3; halt after the Phase 1 audit memo. Do not author the canonical"
+      },
+      {
+        "id": "INI-063",
+        "type": "INI",
+        "route": "Draft-only",
+        "runner_scope": "Phase 2 (Egress Airlock Design) drafting slice \u2014 Phase 1 (container images + iptables egress + session lifecycle) is COMPLETE. Draft the egress-airlock procedure at policies/security/sandbox-egress-ai",
+        "stop_line": "The egress-airlock procedure and the SS role-definition change are Security-Steward + CEO governance artifacts \u2014 stage the draft and halt at review/approval; do not enact. Phase 3 (operational validat"
+      },
+      {
+        "id": "INI-111",
+        "type": "INI",
+        "route": "Operational",
+        "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists ",
+        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
+      },
+      {
+        "id": "INI-131",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (exclud",
+        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case "
+      },
+      {
+        "id": "INI-132",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bun",
+        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-c"
+      },
+      {
+        "id": "INI-133",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Build the host-native Channel-1 airlock pipeline that consumes the INI-127 Gmail read runner's quarantine records and carries a message end-to-end (classify per airlock policy A/B/C/D \u2192 manifest \u2192 rou",
+        "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flag"
       }
     ],
     "partially_executable": [
       {
         "id": "GAP-029",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "add a workspace-trust establishment + verification step to the access-compiler deploy path (`operations/bin/jasonos-access-compiler.py` `write_jail`), plus a report-triage / Security-Steward check tha",
-        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy."
+        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy.",
+        "description": "Director subagent execution layer is blocked: jail workspaces are untrusted, so Claude Code\u2026"
       },
       {
         "id": "GAP-033",
+        "type": "GAP",
         "route": "Operational",
         "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
-        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own"
+        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own",
+        "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
       },
       {
         "id": "GAP-038",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "diagnose why the dispatched `claude --agent security-steward` context lacks write to `/Volumes/SandboxData/Logs/` (FDA vs `--permission-mode`/allowed-tools vs writable-root scope); scope the minimal w",
-        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h"
+        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h",
+        "description": "A dispatched Security Steward cannot write its own review outputs to Logs/, forcing manual PA\u2026"
       },
       {
         "id": "GAP-039",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "diagnose why the procedure is bypassable and un-enforced; draft the commit-time gate (pre-commit hook refusing a new `operations/bin/` file without a same-commit registry row) + the report-triage esca",
-        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi"
+        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi",
+        "description": "New automation can enter operations/bin/ without following the script-build-procedure runbook; the\u2026"
       },
       {
         "id": "GAP-044",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Diagnose why the dispatcher's per-director advisory lock (`.agent-lock-<director>/`) and paired `.result` file are not cleaned up / finalized when the spawned `claude` subprocess exits abnormally (cra",
-        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and "
+        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and ",
+        "description": "JasonOS mkdir-based advisory locks have no orphan recovery when the owning process dies abnormally\u2026"
       },
       {
         "id": "GAP-045",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Fix the dispatcher's trigger-file parser so a `task:` value is either (a) explicitly single-line only, with the parser **rejecting** (not silently truncating) any trigger whose `task:` line is followe",
-        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja"
+        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja",
+        "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
       },
       {
         "id": "GAP-046",
+        "type": "GAP",
         "route": "Draft-only",
         "runner_scope": "Document the ordering hazard and the safe pattern in the `git-commit-relay.md` workload runbook: precommand always executes before any `branch:`-triggered checkout, so a precommand that mutates a trac",
-        "stop_line": "None \u2014 documentation only."
+        "stop_line": "None \u2014 documentation only.",
+        "description": "Relay precommand always runs before a branch:-targeted checkout, an ordering hazard with no\u2026"
       },
       {
         "id": "GAP-048",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Two coupled deficiencies on the same untracked, hand-maintained, multi-writer file. **(A) Reconciliation-on-interactive-close.** Add a mandatory **queue-reconciliation step** to `operations/batch-runn",
-        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina"
+        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina",
+        "description": "Batch-engineering queue has no reconciliation-on-interactive-close and no multi-writer\u2026"
       },
       {
         "id": "GAP-050",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Extend the dependency resolver in `operations/bin/jasonos-work-item-runner.py` (`plan`/`report`) so a `depends_on` target that resolves to a **published/terminal state** \u2014 a PCR or GAP in `closed/`, a",
-        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite)."
+        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite).",
+        "description": "Runner does not auto-satisfy a depends_on target that is already published; it defers unless\u2026"
       },
       {
         "id": "GAP-051",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "In the split-repo arms of the push guardrail \u2014 both the client `_guard_push_mode()` in `commit_via_relay.py` and the worker `jasonos-governance` / `jasonos-operations` `case` arms in `jasonos-git-rela",
-        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049."
+        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049.",
+        "description": "The relay push-mode guardrail (client + worker) does not pre-refuse push:canonical for the\u2026"
       },
       {
         "id": "GAP-052",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
-        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path."
+        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
+        "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
       },
       {
         "id": "GAP-053",
+        "type": "GAP",
         "route": "Draft-only",
         "runner_scope": "Document, in the git-commit-relay / Steward-dispatch runbook, the sanctioned procedure for a dispatched-Steward review of a staged lane: before dispatch, materialize the lane files into the working tr",
-        "stop_line": "None \u2014 documentation only."
+        "stop_line": "None \u2014 documentation only.",
+        "description": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives\u2026"
       },
       {
         "id": "GAP-054",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Make `commit_via_relay.py`'s `QUEUE_DIR` resolution correct (or fail-loud) for the `~/bin` deployment location, not just `SandboxData/bin`. GAP-041 hard-codes the assumption \"the deployed copy always ",
-        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR."
+        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR.",
+        "description": "The ~/bin deployment of commit_via_relay.py resolves QUEUE_DIR to ~/.git-commit-queue (outside the\u2026"
       },
       {
         "id": "GAP-055",
+        "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
-        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th"
+        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th",
+        "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
+      },
+      {
+        "id": "REM-038",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Capture the deployed prompt (`~/Claude/Scheduled/jasonos-venture-engine-registration-check/SKILL.md`) verbatim into the canonical asset `operations/assets/jasonos-venture-engine-registration-check.SKI",
+        "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
+      },
+      {
+        "id": "REM-046",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Re-deploy the canonical `operations/bin/jasonos-access-compiler.py` to the `~/bin/jasonos-access-compiler.py` live path (Mac-side copy, outside the repo tree), confirming the GAP-029 workspace-trust c",
+        "stop_line": "None \u2014 routine deployed-copy sync, Engineering-owned, no CEO or Steward gate (the GAP-029 code was already Steward-reviewed)."
+      },
+      {
+        "id": "INI-053",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue sc",
+        "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is s"
+      },
+      {
+        "id": "INI-055",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (Site Audit) only \u2014 the initiative states Phase 1 can be pulled independently. Audit the live templeofunicorns.com storefront against DTC-apparel conversion and brand best practice (UX, brand ",
+        "stop_line": "Phase 2 (Design Direction) must be grounded in INI-053 strategy + INI-056 design system and the CEO approves the design direction before Phase 3 implementation; Phase 3 touches the live Shopify theme."
+      },
+      {
+        "id": "INI-056",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (Brand Audit & Inventory) only \u2014 working from the INI-051 guide outputs and the live templeofunicorns.com site, inventory the existing brand identity (documented / implied / missing), catalogu",
+        "stop_line": "Phase 2 (Canonization) must align with INI-053's CEO-approved positioning and the canonical doc set is CEO-approval-gated before Phase 3; halt after the Phase 1 audit memo. Do not author the canonical"
+      },
+      {
+        "id": "INI-063",
+        "type": "INI",
+        "route": "Draft-only",
+        "runner_scope": "Phase 2 (Egress Airlock Design) drafting slice \u2014 Phase 1 (container images + iptables egress + session lifecycle) is COMPLETE. Draft the egress-airlock procedure at policies/security/sandbox-egress-ai",
+        "stop_line": "The egress-airlock procedure and the SS role-definition change are Security-Steward + CEO governance artifacts \u2014 stage the draft and halt at review/approval; do not enact. Phase 3 (operational validat"
+      },
+      {
+        "id": "INI-111",
+        "type": "INI",
+        "route": "Operational",
+        "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists ",
+        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
+      },
+      {
+        "id": "INI-131",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (exclud",
+        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case "
+      },
+      {
+        "id": "INI-132",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bun",
+        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-c"
+      },
+      {
+        "id": "INI-133",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "Build the host-native Channel-1 airlock pipeline that consumes the INI-127 Gmail read runner's quarantine records and carries a message end-to-end (classify per airlock policy A/B/C/D \u2192 manifest \u2192 rou",
+        "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flag"
       }
     ],
-    "blocked_needs_decision": [],
-    "not_executable_leading_stop": [],
+    "blocked_needs_decision": [
+      {
+        "id": "INI-011",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Phases 2 (worker taxonomy) and 3 (broker implementation + Security-Steward-approved go-live) are COMPLETE; the broker is active. The only remaining work is Phase 4 (Remote Node Integration, PROP-004),"
+      },
+      {
+        "id": "INI-039",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "The initiative's own Pull Trigger is an explicit leading gate \u2014 \"Do not pull until the vault reaches ~50 articles or the Knowledge Director reports index.md retrieval is degrading,\" and the approval-g"
+      },
+      {
+        "id": "INI-043",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Phase 3 canonization is COMPLETE and the seven canonical docs are pending CEO review; the CEO must approve the canonical doc set before Phase 4 (AI-assisted exploration) begins. The first actionable s"
+      },
+      {
+        "id": "INI-074",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Hard dependency \u2014 a completed or substantially drafted manuscript must exist before this initiative opens (\"Do not pull before then\"), and market research is performed at pull time because the publish"
+      },
+      {
+        "id": "INI-109",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "Phase 1 documentation slice only \u2014 define and document the product-intent manifest schema (design-file ref, blank + colorways, placement spec, product name, copy, garment-type tag, section tags) inclu",
+        "stop_line": "The Printful API connection and design-file read access require a CEO-provisioned Printful credential (Article XI \u2014 agents cannot open accounts) and Security Steward credential/egress sign-off before "
+      },
+      {
+        "id": "INI-114",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE. Draft one page of real copy (homepage hook + the paid-diagnostic offer) in Jason's register against the governed I",
+        "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build "
+      },
+      {
+        "id": "INI-124",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "Phase 2 (front-end rebuild) only \u2014 stand up the Next.js + shadcn/ui app and port the cockpit home view and all nine INI-123 read-only detail views to the new shell, reading the same v2 JSON contract I",
+        "stop_line": "Phase 1 is a hard governance gate before any write path exists \u2014 the PCR-FIN-003 amendment (cloud-hosted encrypted mutable derived state + HYOK + write mutation surface) is CEO-approval-gated, and a S"
+      },
+      {
+        "id": "INI-126",
+        "type": "INI",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-si"
+      }
+    ],
+    "not_executable_leading_stop": [
+      {
+        "id": "REM-035",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "The interim remediation (revert to CEO CSV-export intake across the agent def, capability doc, scheduled task, intake folder, and renderer) is already executed this session. What remains is external a"
+      },
+      {
+        "id": "REM-036",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs"
+      },
+      {
+        "id": "INI-072",
+        "type": "INI",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "This is interactive creative-structure work \u2014 reading the partial manuscript as a quarry, ranking Cerime chapters by metafictional usefulness, designing the interleave / marginalia arc / frame-permeab"
+      },
+      {
+        "id": "INI-073",
+        "type": "INI",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Blocked by INI-072 (Chapter Map & Dossier Architecture), which identifies the keystone chapters this pass calibrates against and is itself Paused. The work is also CEO-authored creative prose (the CEO"
+      }
+    ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-06T20:28:10.727557+00:00"
+    "generated_at": "2026-07-06T21:08:16.143554+00:00"
   }
 }
