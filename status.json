@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T08:52:15Z",
+  "generated_at": "2026-07-06T10:52:16Z",
   "schema_version": "5",
   "generator_version": "2.6",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T08:40Z",
-    "minutes_since_session": 12,
+    "last_session_date": "2026-07-06T08:12:45Z",
+    "minutes_since_session": 159,
     "airlock_queue": 2,
     "airlock_bundles": 1
   },
@@ -165,11 +165,35 @@
       "category": "required",
       "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
       "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "confirm",
+      "label": "Confirm relay v1.12 live deploy",
+      "context": "commands were given this session (cp canonical jasonos-git-relay.sh \u2192 SandboxData/bin/, then run jasonos-git-relay-activ"
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Host-native airlock pipeline (follow-on initiative)",
+      "context": "decide whether/when to file the scoped initiative wiring the Mac-native read runner into the full airlock pipeline (fetc"
+    },
+    {
+      "id": "ACT-HO-15",
+      "category": "required",
+      "label": "(Long-horizon)",
+      "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if/when a JasonOS domain identity earns its k"
+    },
+    {
+      "id": "ACT-HO-16",
+      "category": "required",
+      "label": "Pre-existing CEO-first (unchanged)",
+      "context": "GAP-040 (PA self-enact hardening-only PCR?), GAP-036 (governance/memory concurrent-write coordination), GAP-035 (Backlog"
     }
   ],
   "handoff_drift": {
     "pcrs": {
-      "handoff": 6,
+      "handoff": 9,
       "files": 0
     },
     "gaps": {
@@ -227,8 +251,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-07-03T03:05:00Z",
-      "invocations_30d": 4
+      "last_active": "2026-07-06T12:00:30Z",
+      "invocations_30d": 5
     },
     {
       "name": "venture-director",
@@ -581,6 +605,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-06T08:52:15.415831+00:00"
+    "generated_at": "2026-07-06T10:52:16.137956+00:00"
   }
 }
