@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-06T22:22:24Z",
+  "generated_at": "2026-07-06T22:26:01Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
-    "done": 106,
+    "done": 107,
     "total": 124,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "paused": 7,
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T22:21:49Z",
-    "minutes_since_session": 0,
+    "last_session_date": "2026-07-06T22:23Z",
+    "minutes_since_session": 3,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,16 +35,6 @@
         "route": "Operational",
         "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
-      }
-    },
-    {
-      "id": "INI-131",
-      "name": "Post-Split Dead-Path Reconciliation Sweep + Standing Drift-Check (dead-monolith-path + config path-exists validation)",
-      "status": "active",
-      "contract": {
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (excluding _archived/, .git/, temp/); classify each as load-bearing (executable/config/plist/scheduled-task path resolution) vs. historical/cosmetic (narrative, closed records, comments); repoint every load-bearing reference to the correct post-split repo path; produce a before/after diff as evidence. Phase 2 (standing check): add a report-triage step (alongside the existing script-registry + scheduled-task coverage checkers) that greps the live surface for references to the archived monolith path and surfaces any load-bearing hit as a drift signal; extend it with a lightweight path-exists validation for known config path fields (e.g. log_path) so a field pointing at a nonexistent directory is also caught.",
-        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case new information changes this."
       }
     }
   ],
@@ -745,13 +735,6 @@
         "route": "CEO-first",
         "runner_scope": "",
         "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-si"
-      },
-      {
-        "id": "INI-131",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (exclud",
-        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case "
       }
     ],
     "not_executable_leading_stop": [
@@ -785,6 +768,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-06T22:22:24.753436+00:00"
+    "generated_at": "2026-07-06T22:26:01.271629+00:00"
   }
 }
