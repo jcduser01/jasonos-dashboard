@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-06T07:53:37Z",
+  "generated_at": "2026-07-06T08:23:48Z",
   "schema_version": "5",
   "generator_version": "2.5",
   "stats": {
     "done": 105,
-    "total": 123,
-    "active": 2,
+    "total": 124,
+    "active": 3,
     "queued": 0,
     "paused": 7,
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T07:50Z",
-    "minutes_since_session": 3,
+    "last_session_date": "2026-07-06T06:13Z",
+    "minutes_since_session": 130,
     "airlock_queue": 2,
     "airlock_bundles": 1
   },
@@ -26,6 +26,19 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
+    },
+    {
+      "id": "INI-130",
+      "name": "Work-Item Model Convergence \u2014 Canonical Taxonomy, Unified Conventions, Template Layer, Generated Indexes, REM Binding, and the JasonOS-Work-Readiness Surface",
+      "status": "active",
+      "contract": {
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (round one) \u2014 build the dashboard JasonOS-work-readiness panel (the inverse of the CEO-Actions panel: a standing render of the contract dry-run over open non-INI items \u2014 eligible-now / blocked-needs-decision / contract-quality-gaps), the templates/ layer (per-type stubs with contract fields pre-stamped, fixing the dangling workloads/README.md reference), the REM contract binding in operations/work-item-execution-contract.md (D: REM stays in Logs/; E: Runner scope <- marked chosen_option, bare None until marked, plus the chosen_option schema marker), and the born-conformant conformance check (report-triage extension flagging any open GAP/PCR/REM or CEO-queued INI with empty Runner scope or a malformed/parenthetical label). Scaffold the unified generated-index generator. Ships the readiness panel first.",
+        "stop_line": "Phase 1 halts for Security Steward review before go-live (the conformance check touches the commit/report-triage path; the dashboard gains a new panel + data read). Phase 2 \u2014 the canonical taxonomy doc (governance/work-item-taxonomy.md), the declined/resolved vocabulary migration, the portfolio/open/ cutover, the generated-index cutover across all types, and PROP retirement \u2014 involves folder-rename migrations of governed artifacts and is staged + CEO-reviewed, never run past this line.",
+        "depends_on": [
+          "PCR-GOV-005"
+        ]
+      }
     },
     {
       "id": "INI-131",
@@ -60,6 +73,13 @@
       "label": "GAP-040",
       "context": "**Decide the rule** \u2014 under an \"execute end-to-end / Execute INI-NNN + elevated autonomy\" grant, may the PA self-enact a PCR whose normative content is fully entailed by an already-ratified decision (",
       "waiting_on": "**Decide the rule** \u2014 under an \"execute end-to-end / Execute INI-NNN + elevated autonomy\" grant, may the PA self-enact a PCR whose normative content is fully entailed by an already-ratified decision (adds no new obligation), or must every PCR always go to explicit CEO approval before enactment?"
+    },
+    {
+      "id": "ACT-GAP-053",
+      "category": "required",
+      "label": "GAP-053",
+      "context": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives only on a staged lane",
+      "waiting_on": null
     },
     {
       "id": "ACT-HO-1",
@@ -141,7 +161,7 @@
     },
     "gaps": {
       "handoff": 6,
-      "files": 3
+      "files": 4
     }
   },
   "status_drift": [],
@@ -156,7 +176,9 @@
     }
   ],
   "contract_drift": [],
-  "waiting_on_drift": [],
+  "waiting_on_drift": [
+    "GAP-053"
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -363,19 +385,6 @@
         }
       },
       {
-        "id": "INI-130",
-        "name": "Work-Item Model Convergence \u2014 Canonical Taxonomy, Unified Conventions, Template Layer, Generated Indexes, REM Binding, and the JasonOS-Work-Readiness Surface",
-        "notes": "UNBLOCKED 2026-07-06 \u2014 PCR-GOV-005 is APPROVED + PUBLISHED (2026-07-05; now in governance/pcrs/closed/). Its `depends_on: PCR-GOV-005` prerequisite is satisfied, so INI-130 is READY in the\u2026",
-        "contract": {
-          "route": "Queue-ready",
-          "runner_scope": "Phase 1 (round one) \u2014 build the dashboard JasonOS-work-readiness panel (the inverse of the CEO-Actions panel: a standing render of the contract dry-run over open non-INI items \u2014 eligible-now / blocked-needs-decision / contract-quality-gaps), the templates/ layer (per-type stubs with contract fields pre-stamped, fixing the dangling workloads/README.md reference), the REM contract binding in operations/work-item-execution-contract.md (D: REM stays in Logs/; E: Runner scope <- marked chosen_option, bare None until marked, plus the chosen_option schema marker), and the born-conformant conformance check (report-triage extension flagging any open GAP/PCR/REM or CEO-queued INI with empty Runner scope or a malformed/parenthetical label). Scaffold the unified generated-index generator. Ships the readiness panel first.",
-          "stop_line": "Phase 1 halts for Security Steward review before go-live (the conformance check touches the commit/report-triage path; the dashboard gains a new panel + data read). Phase 2 \u2014 the canonical taxonomy doc (governance/work-item-taxonomy.md), the declined/resolved vocabulary migration, the portfolio/open/ cutover, the generated-index cutover across all types, and PROP retirement \u2014 involves folder-rename migrations of governed artifacts and is staged + CEO-reviewed, never run past this line.",
-          "depends_on": [
-            "PCR-GOV-005"
-          ]
-        }
-      },
-      {
         "id": "INI-132",
         "name": "Batch Execution Harness \u2014 Four-Role Adversarial Build Loop with Mechanical Gates and Batch-Class Profiles",
         "notes": "BACKLOG 2026-07-05 \u2014 designed with the CEO in a strategic-thought-partner session following the batch-engineering quality review of the 2026-07-05 runs (Logs/batch-engineering-quality-review-2026-07-0\u2026",
@@ -383,6 +392,19 @@
           "route": "Queue-ready",
           "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bundle \u2014 assemble the existing check-* scripts + a code-touched-implies-test-present-and-green check into one fail-closed promotion-gate stage that emits a machine-readable gate result), and Phase 2 (reviewer role \u2014 generalize the Security Steward dispatch pattern into an independent, clean-context code/doc reviewer emitting a structured verdict; validate it manually against the 2026-07-05 batch). Each phase stages one atomic commit and halts at its own stop-line. Phases 3\u20137 (promotion-policy PCR, orchestrator loop, admitter, engineer repackage, substrate promotion to autonomous) carry their own contracts below and are NOT part of this admissible slice \u2014 several halt at CEO/Steward gates by design.",
           "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-canonical for the routine class \u2014 a governance change to today's CEO-gated promotion); Phase 4 (orchestrator loop) and Phase 7 (substrate promotion to unattended mini) each halt at Security Steward review AND require the Phase 3 PCR published before any auto-commit path is enabled. The runner never enables autonomous canonical commit without those gates cleared."
+        }
+      },
+      {
+        "id": "INI-133",
+        "name": "Host-Native Airlock Pipeline \u2014 wire the Gmail read runner into fetch \u2192 classify \u2192 manifest \u2192 route (Channel 1)",
+        "notes": "CEO-directed 2026-07-06 at INI-127 close. INI-127 delivered the portable FETCH step (host-native read runner + ingestion sandbox) but deliberately stopped short of the full pipeline; a standalone\u2026",
+        "contract": {
+          "route": "Queue-ready",
+          "runner_scope": "Build the host-native Channel-1 airlock pipeline that consumes the INI-127 Gmail read runner's quarantine records and carries a message end-to-end (classify per airlock policy A/B/C/D \u2192 manifest \u2192 route to KB inbox \u2192 dedup marker), so airlock Channel 1 can run from a terminal/non-Cowork session in place of the Cowork Composio Gmail MCP scheduled task. Honor the RC-3 quarantine-consumer policy (the classifier treats each record's body as untrusted, opaque data \u2014 never inlined as instructions). Decide + implement scheduling (launchd daemon vs on-demand).",
+          "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flags but does not classify). Do not cut Channel 1 over from the Cowork task to the host-native pipeline until the Steward clears the classifier's untrusted-content handling and the CEO authorizes the cutover.",
+          "depends_on": [
+            "INI-127"
+          ]
         }
       }
     ]
