@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-06T07:41:57Z",
+  "generated_at": "2026-07-06T07:53:28Z",
   "schema_version": "5",
   "generator_version": "2.5",
   "stats": {
-    "done": 104,
+    "done": 105,
     "total": 123,
-    "active": 3,
+    "active": 2,
     "queued": 0,
     "paused": 7,
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T06:13Z",
-    "minutes_since_session": 88,
-    "airlock_queue": 0,
-    "airlock_bundles": 0
+    "last_session_date": "2026-07-06T07:50Z",
+    "minutes_since_session": 3,
+    "airlock_queue": 2,
+    "airlock_bundles": 1
   },
   "active_initiative": {
     "id": "INI-111",
@@ -26,16 +26,6 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
-    },
-    {
-      "id": "INI-127",
-      "name": "Environment-Portability Completion \u2014 Connector-Layer Portability + Cowork-Coupling Drift Sweep",
-      "status": "active",
-      "contract": {
-        "route": "Queue-ready",
-        "runner_scope": "Phase A only (the Cowork-coupling drift sweep) \u2014 enumerate every repo reference to now-falsified environment coupling (\"Cowork-only\", \"may only be executed from a Cowork session\", \"must not run closure / defer to Cowork\", the Cowork auto-memory store as authoritative, memory-writes-go-to-Cowork, and similar) across both repos, Logs/ runbooks, scheduled-task SKILL.md assets, capability/role docs, CLAUDE.md files, and the knowledge/placement policies; classify each hit as (i) now-false, (ii) still-true Cowork-by-nature, or (iii) historical record; and produce the findings manifest (reference \u2192 classification \u2192 disposition). Carry the (ii)-class hits forward as the Phase B connector inventory. No rewrites in this slice.",
-        "stop_line": "CEO sign-off before any rewrite \u2014 stage the findings manifest and halt; do not fix (i)-class references or resolve ambiguous (ii)-vs-(i) calls until the CEO signs off. Phase B (connector provisioning, Steward review, runbook repointing) is entirely outside this slice \u2014 it needs CEO credential-provisioning (Article XI) and a per-runner Security Steward review."
-      }
     },
     {
       "id": "INI-131",
