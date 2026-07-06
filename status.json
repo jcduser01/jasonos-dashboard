@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-05T17:16:49Z",
+  "generated_at": "2026-07-06T05:16:51Z",
   "schema_version": "5",
   "generator_version": "2.4",
   "stats": {
     "done": 104,
-    "total": 122,
-    "active": 1,
+    "total": 123,
+    "active": 2,
     "queued": 0,
     "paused": 7,
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-05T08:25:28Z",
-    "minutes_since_session": 531,
+    "last_session_date": "2026-07-06T00:11Z",
+    "minutes_since_session": 305,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -26,17 +26,20 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
+    },
+    {
+      "id": "INI-131",
+      "name": "Post-Split Dead-Path Reconciliation Sweep + Standing Drift-Check (dead-monolith-path + config path-exists validation)",
+      "status": "active",
+      "contract": {
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (excluding _archived/, .git/, temp/); classify each as load-bearing (executable/config/plist/scheduled-task path resolution) vs. historical/cosmetic (narrative, closed records, comments); repoint every load-bearing reference to the correct post-split repo path; produce a before/after diff as evidence. Phase 2 (standing check): add a report-triage step (alongside the existing script-registry + scheduled-task coverage checkers) that greps the live surface for references to the archived monolith path and surfaces any load-bearing hit as a drift signal; extend it with a lightweight path-exists validation for known config path fields (e.g. log_path) so a field pointing at a nonexistent directory is also caught.",
+        "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case new information changes this."
+      }
     }
   ],
   "queue": [],
   "ceo_actions": [
-    {
-      "id": "ACT-PCR-OPS-040",
-      "category": "required",
-      "label": "PCR-OPS-040",
-      "context": "\"CEO action: None \u2014 &lt;reason&gt;\" sentinel convention for gaps and PCRs",
-      "waiting_on": null
-    },
     {
       "id": "ACT-GAP-035",
       "category": "required",
@@ -140,7 +143,7 @@
   "handoff_drift": {
     "pcrs": {
       "handoff": 6,
-      "files": 1
+      "files": 0
     },
     "gaps": {
       "handoff": 6,
@@ -152,12 +155,14 @@
     {
       "id": "INI-130",
       "category": "governance"
+    },
+    {
+      "id": "INI-132",
+      "category": "engineering"
     }
   ],
   "contract_drift": [],
-  "waiting_on_drift": [
-    "PCR-OPS-040"
-  ],
+  "waiting_on_drift": [],
   "directors": [
     {
       "name": "engineering-director",
@@ -180,8 +185,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-05T00:52:24Z",
-      "invocations_30d": 8
+      "last_active": "2026-07-06T00:00:50Z",
+      "invocations_30d": 9
     },
     {
       "name": "research-director",
@@ -387,13 +392,13 @@
         }
       },
       {
-        "id": "INI-131",
-        "name": "Post-Split Dead-Path Reconciliation Sweep + Standing Drift-Check (dead-monolith-path + config path-exists validation)",
-        "notes": "BACKLOG 2026-07-05 \u2014 filed per PCR-OPS-035's CEO decision (2026-07-05): home = file one new initiative doing both the one-time sweep and the standing drift-check (not folding into the already-Complete INI-116); scope extended to also validate config path-exists, not just the dead-path string. Source: PCR-OPS-035 (closed, this filing is its disposition), surfaced during INI-122 execution when a stale run.sh/dispatch.py REPO= path (already fixed under INI-122, ops ddc2fb4/6e2d5338) turned out not to be isolated \u2014 a sweep found 68 live references to the dead path, an unknown subset load-bearing. Backlog->Current pull is a separate future CEO decision.",
+        "id": "INI-132",
+        "name": "Batch Execution Harness \u2014 Four-Role Adversarial Build Loop with Mechanical Gates and Batch-Class Profiles",
+        "notes": "BACKLOG 2026-07-05 \u2014 designed with the CEO in a strategic-thought-partner session following the batch-engineering quality review of the 2026-07-05 runs (Logs/batch-engineering-quality-review-2026-07-05.md). That review found the DELIVERABLES sound (14/15 Solid, stop-line discipline strong) but surfaced two systemic PROCESS gaps \u2014 zero automated tests on code-touching items (which directly caused the GAP-041 hardcoded-path regression) and an audit blackout (6 passes, only 2 logged), plus mislabeled commits reaching canonical. This initiative rebuilds batch execution to close those gaps by construction. Architecture converged over the session: (1) execution moves from a scheduled task to a SKILL so reasoning level is chosen per run, not pinned at first run; (2) four specialized roles \u2014 admitter / engineer / reviewer / orchestrator \u2014 with the orchestrator owning the commit-vs-escalate decision so a reasoning error in the reviewer OR thin proof-of-quality still can't reach canonical; (3) mechanical gates as a deterministic fail-closed layer BEFORE the reviewer (CI-vs-code-review separation); (4) a batch-class profile taxonomy where the admitter classifies each (homogeneous, never-mixed) batch and that class selects engineer tier + review intensity + promotion policy, making 'auto-commit to canonical' a property of the routine class rather than a global switch. Substrate decision: target B (autonomous mini harness, tier chosen per batch-invocation) built through a C on-ramp (run the whole loop in-session first to earn trust in the gates before going unattended). Reuses heavily: INI-128 runner engine (jasonos-work-item-runner.py \u2014 admissibility, dependency topo-sort, stop-line enforcement, per-item run report), INI-130 conformance check (check-work-item-contract-conformance.py) + templates, the Security Steward dispatch pattern (jasonos-agent-dispatcher.sh + .agent-invoke-queue + jasonos-security-steward-review.SKILL.md) as the independent-reviewer precedent, the relay (commit_via_relay.py / jasonos-git-relay.sh v1.11 item-selective promotion), and the existing check-* gate scripts. Backlog->Current pull is a separate CEO decision.",
         "contract": {
           "route": "Queue-ready",
-          "runner_scope": "Phase 1 (sweep): enumerate every live reference to the dead-monolith path Governance/digital-organization-governance across operations/jasonos-operations + bin/ + Governance/jasonos-governance (excluding _archived/, .git/, temp/); classify each as load-bearing (executable/config/plist/scheduled-task path resolution) vs. historical/cosmetic (narrative, closed records, comments); repoint every load-bearing reference to the correct post-split repo path; produce a before/after diff as evidence. Phase 2 (standing check): add a report-triage step (alongside the existing script-registry + scheduled-task coverage checkers) that greps the live surface for references to the archived monolith path and surfaces any load-bearing hit as a drift signal; extend it with a lightweight path-exists validation for known config path fields (e.g. log_path) so a field pointing at a nonexistent directory is also caught.",
-          "stop_line": "None identified at filing \u2014 both phases are Engineering-owned mechanism/documentation work with no CEO or Steward gate apparent from the PCR-OPS-035 record. Re-verify at Backlog->Current pull in case new information changes this."
+          "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bundle \u2014 assemble the existing check-* scripts + a code-touched-implies-test-present-and-green check into one fail-closed promotion-gate stage that emits a machine-readable gate result), and Phase 2 (reviewer role \u2014 generalize the Security Steward dispatch pattern into an independent, clean-context code/doc reviewer emitting a structured verdict; validate it manually against the 2026-07-05 batch). Each phase stages one atomic commit and halts at its own stop-line. Phases 3\u20137 (promotion-policy PCR, orchestrator loop, admitter, engineer repackage, substrate promotion to autonomous) carry their own contracts below and are NOT part of this admissible slice \u2014 several halt at CEO/Steward gates by design.",
+          "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-canonical for the routine class \u2014 a governance change to today's CEO-gated promotion); Phase 4 (orchestrator loop) and Phase 7 (substrate promotion to unattended mini) each halt at Security Steward review AND require the Phase 3 PCR published before any auto-commit path is enabled. The runner never enables autonomous canonical commit without those gates cleared."
         }
       }
     ]
