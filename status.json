@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-06T10:52:16Z",
+  "generated_at": "2026-07-06T18:11:37Z",
   "schema_version": "5",
   "generator_version": "2.6",
   "stats": {
-    "done": 105,
+    "done": 106,
     "total": 124,
-    "active": 3,
+    "active": 2,
     "queued": 0,
     "paused": 7,
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T08:12:45Z",
-    "minutes_since_session": 159,
+    "last_session_date": "2026-07-06T10:10Z",
+    "minutes_since_session": 481,
     "airlock_queue": 2,
     "airlock_bundles": 1
   },
@@ -26,19 +26,6 @@
       "id": "INI-111",
       "name": "Venture Opportunity Engine",
       "status": "active"
-    },
-    {
-      "id": "INI-130",
-      "name": "Work-Item Model Convergence \u2014 Canonical Taxonomy, Unified Conventions, Template Layer, Generated Indexes, REM Binding, and the JasonOS-Work-Readiness Surface",
-      "status": "active",
-      "contract": {
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (round one) \u2014 build the dashboard JasonOS-work-readiness panel (the inverse of the CEO-Actions panel: a standing render of the contract dry-run over open non-INI items \u2014 eligible-now / blocked-needs-decision / contract-quality-gaps), the templates/ layer (per-type stubs with contract fields pre-stamped, fixing the dangling workloads/README.md reference), the REM contract binding in operations/work-item-execution-contract.md (D: REM stays in Logs/; E: Runner scope <- marked chosen_option, bare None until marked, plus the chosen_option schema marker), and the born-conformant conformance check (report-triage extension flagging any open GAP/PCR/REM or CEO-queued INI with empty Runner scope or a malformed/parenthetical label). Scaffold the unified generated-index generator. Ships the readiness panel first.",
-        "stop_line": "Phase 1 halts for Security Steward review before go-live (the conformance check touches the commit/report-triage path; the dashboard gains a new panel + data read). Phase 2 \u2014 the canonical taxonomy doc (governance/work-item-taxonomy.md), the declined/resolved vocabulary migration, the portfolio/open/ cutover, the generated-index cutover across all types, and PROP retirement \u2014 involves folder-rename migrations of governed artifacts and is staged + CEO-reviewed, never run past this line.",
-        "depends_on": [
-          "PCR-GOV-005"
-        ]
-      }
     },
     {
       "id": "INI-131",
@@ -87,12 +74,6 @@
       "label": "REM-047",
       "context": "INI-116 post-split stale legacy-repo pointers (residual): the archived digital-organization-governance clone keeps a dead `upstream` remote and ~6 non-relay scripts hardcode its now-moved path \u2014 Stewa",
       "waiting_on": null
-    },
-    {
-      "id": "ACT-INI-130",
-      "category": "required",
-      "label": "INI-130",
-      "context": "INI-130 Phase 1 is complete and live (Steward-cleared). Acknowledge Phase-1 completion, and decide whether/when to schedule Phase 2 \u2014 the taxonomy/vocabulary/folder-migration half (a separate staged, "
     },
     {
       "id": "ACT-HO-1",
@@ -204,10 +185,6 @@
   "status_drift": [],
   "category_drift": [
     {
-      "id": "INI-130",
-      "category": "governance"
-    },
-    {
       "id": "INI-132",
       "category": "engineering"
     }
@@ -222,13 +199,13 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 30
+      "invocations_30d": 29
     },
     {
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-06-06T11:41:54Z",
-      "invocations_30d": 1
+      "invocations_30d": 0
     },
     {
       "name": "knowledge-director",
@@ -547,6 +524,12 @@
         "route": "Queue-ready",
         "runner_scope": "Make `commit_via_relay.py`'s `QUEUE_DIR` resolution correct (or fail-loud) for the `~/bin` deployment location, not just `SandboxData/bin`. GAP-041 hard-codes the assumption \"the deployed copy always ",
         "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR."
+      },
+      {
+        "id": "GAP-055",
+        "route": "Queue-ready",
+        "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
+        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th"
       }
     ],
     "contract_quality_gaps": [
@@ -589,22 +572,22 @@
       {
         "type": "missing_field",
         "field": "route",
-        "file": "portfolio/INI-111.md",
+        "file": "portfolio/open/INI-111.md",
         "category": "ini-current"
       },
       {
         "type": "missing_scope",
         "field": "runner_scope",
-        "file": "portfolio/INI-111.md",
+        "file": "portfolio/open/INI-111.md",
         "category": "ini-current"
       },
       {
         "type": "missing_field",
         "field": "stop_line",
-        "file": "portfolio/INI-111.md",
+        "file": "portfolio/open/INI-111.md",
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-06T10:52:16.137956+00:00"
+    "generated_at": "2026-07-06T18:11:37.284507+00:00"
   }
 }
