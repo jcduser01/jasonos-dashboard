@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T20:13:35Z",
+  "generated_at": "2026-07-06T20:20:41Z",
   "schema_version": "5",
   "generator_version": "2.7",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T10:25Z",
-    "minutes_since_session": 588,
+    "last_session_date": null,
+    "minutes_since_session": null,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -51,20 +51,6 @@
   "queue": [],
   "ceo_actions": [
     {
-      "id": "ACT-GAP-035",
-      "category": "required",
-      "label": "GAP-035",
-      "context": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required.",
-      "waiting_on": "Approve creating a \"File a new Backlog initiative\" runbook entry (and confirm its scope) so the filing choreography no longer has to be reconstructed each time. See Decision required."
-    },
-    {
-      "id": "ACT-GAP-036",
-      "category": "required",
-      "label": "GAP-036",
-      "context": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries.",
-      "waiting_on": "Approve a write-coordination convention for `governance/memory/` (see Proposed resolution) \u2014 in particular for the shared `MEMORY.md` index \u2014 so concurrent sessions can't clobber each other's entries. See Decision required."
-    },
-    {
       "id": "ACT-GAP-040",
       "category": "required",
       "label": "GAP-040",
@@ -77,119 +63,12 @@
       "label": "GAP-053",
       "context": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives only on a staged lane",
       "waiting_on": null
-    },
-    {
-      "id": "ACT-REM-047",
-      "category": "required",
-      "label": "REM-047",
-      "context": "INI-116 post-split stale legacy-repo pointers (residual): the archived digital-organization-governance clone keeps a dead `upstream` remote and ~6 non-relay scripts hardcode its now-moved path \u2014 Stewa",
-      "waiting_on": null
-    },
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Provision the privacy.com card for the Venture engine \u2014 when the first paid dependency lands (deferred by CEO).",
-      "context": "Recommended settings: per-transaction $50, monthly ceiling $500 (coarse backstop; engine policy enforces the true rollin"
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Take the staged sam.gov poller live \u2014 obtain a sam.gov API key.",
-      "context": "Register/log into a SAM.gov account \u2192 Account Details \u2192 generate key; associate the account with a registered entity to "
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "Medical/financial power of attorney check",
-      "context": "separate documents from the will/beneficiary (which CEO confirmed are fine as-is); currency not yet confirmed. No urgenc"
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "Concentration-risk rule",
-      "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's own operating model. Open, not prioritized; no a"
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "Planning Mode \u2014 define product requirements",
-      "context": "deferred to a later session; needs a substantive definition (what does it toggle \u2014 scenario overlay? editable assumption"
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
-      "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
-      "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Approve/publish PCR-OPS-033",
-      "context": "or direct further changes"
-    },
-    {
-      "id": "ACT-HO-8",
-      "category": "required",
-      "label": "Cowork-memory migration scope",
-      "context": "when ready, decide the curation boundary (which of the ~179 Cowork memory files are JasonOS-org-operational vs. out of s"
-    },
-    {
-      "id": "ACT-HO-9",
-      "category": "required",
-      "label": "Double-check recently-created operations/bin/ scripts are in the script registry",
-      "context": "check-script-registry-coverage.py Direction 1 currently flags two unregistered scripts, jasonos-cockpit-app.py and jason"
-    },
-    {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "Decide the home for the dead-path fix (PCR-OPS-035)",
-      "context": "(a) fold the one-time sweep into INI-116 Phase 4, (b) file a new standing drift-check initiative, or (c) both (recommend"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "Optional now",
-      "context": "queue the Route: Queue-ready gaps (GAP-029 Steward-gated / GAP-031 / GAP-032) to the batch runner."
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "Process the operational-hygiene work-item (AIRLOCK-2026-07-05-001)",
-      "context": "CEO prompt staged in knowledge/jasonos-vault/inbox/AIRLOCK-2026-07-05-001-work-item-operational-hygiene-prompt.md (Class"
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "confirm",
-      "label": "Confirm relay v1.12 live deploy",
-      "context": "commands were given this session (cp canonical jasonos-git-relay.sh \u2192 SandboxData/bin/, then run jasonos-git-relay-activ"
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "Host-native airlock pipeline (follow-on initiative)",
-      "context": "decide whether/when to file the scoped initiative wiring the Mac-native read runner into the full airlock pipeline (fetc"
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "(Long-horizon)",
-      "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if/when a JasonOS domain identity earns its k"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "Pre-existing CEO-first (unchanged)",
-      "context": "GAP-040 (PA self-enact hardening-only PCR?), GAP-036 (governance/memory concurrent-write coordination), GAP-035 (Backlog"
     }
   ],
   "handoff_drift": {
-    "pcrs": {
-      "handoff": 9,
-      "files": 0
-    },
     "gaps": {
-      "handoff": 6,
-      "files": 4
+      "handoff": 0,
+      "files": 2
     }
   },
   "status_drift": [],
@@ -201,57 +80,56 @@
   ],
   "contract_drift": [],
   "waiting_on_drift": [
-    "GAP-053",
-    "REM-047"
+    "GAP-053"
   ],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 29
+      "last_active": null,
+      "invocations_30d": 0
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-06-06T11:41:54Z",
+      "last_active": null,
       "invocations_30d": 0
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-06-12T20:23:25Z",
-      "invocations_30d": 7
+      "last_active": null,
+      "invocations_30d": 0
     },
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-06T03:42:38Z",
-      "invocations_30d": 13
+      "last_active": null,
+      "invocations_30d": 0
     },
     {
       "name": "research-director",
       "display": "Research",
-      "last_active": "2026-06-12T16:44:02Z",
-      "invocations_30d": 7
+      "last_active": null,
+      "invocations_30d": 0
     },
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-07-06T12:00:30Z",
-      "invocations_30d": 5
+      "last_active": null,
+      "invocations_30d": 0
     },
     {
       "name": "venture-director",
       "display": "Venture",
-      "last_active": "2026-06-12T19:53:45Z",
-      "invocations_30d": 1
+      "last_active": null,
+      "invocations_30d": 0
     },
     {
       "name": "creative-director",
       "display": "Creative",
-      "last_active": "2026-06-13T19:00:00Z",
-      "invocations_30d": 3
+      "last_active": null,
+      "invocations_30d": 0
     }
   ],
   "paused": {
@@ -523,21 +401,8 @@
         "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th"
       }
     ],
-    "blocked_needs_decision": [
-      {
-        "id": "GAP-035",
-        "route": "CEO-first",
-        "runner_scope": "None \u2014 the CEO scope decision (standalone `backlog-initiative-filing-procedure.md` vs. a new section in `operations/portfolio-pull-procedure.md`) is the leading gate; no runner-buildable slice exists ",
-        "stop_line": "The CEO scope decision (standalone doc vs. section) \u2014 halt before drafting; write the doc only after the scope call is made."
-      },
-      {
-        "id": "GAP-036",
-        "route": "CEO-first",
-        "runner_scope": "None \u2014 the CEO scope decision (adopt (a)+(b), the low-cost convention; or go further to (c), a single-writer daemon) is the leading gate; no runner-buildable slice exists ahead of it. Once decided, th",
-        "stop_line": "The CEO scope decision (convention only, vs. add a single-writer daemon) \u2014 halt before building; the chosen scope determines whether a daemon is in scope."
-      }
-    ],
+    "blocked_needs_decision": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-06T20:13:35.108196+00:00"
+    "generated_at": "2026-07-06T20:20:41.704267+00:00"
   }
 }
