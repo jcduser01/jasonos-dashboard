@@ -283,12 +283,19 @@
   .wr-notexec  .wr-group-label { color: var(--text-dim); }
   .wr-gap      .wr-group-label { color: var(--text-dim); }
   .wr-count { font-weight: 700; opacity: 0.65; margin-left: 3px; }
-  .wr-item { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; font-size: 0.82rem; }
+  .wr-item { display: flex; flex-direction: column; gap: 1px; padding: 3px 0; font-size: 0.82rem; }
+  .wr-item-row { display: flex; align-items: baseline; gap: 8px; }
   .wr-id {
     font-weight: 700; color: var(--text-muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
+  .wr-type {
+    font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--text-dim); border: 1px solid var(--border);
+    border-radius: 3px; padding: 0 4px; line-height: 1.4;
+  }
   .wr-meta  { font-size: 0.72rem; color: var(--text-dim); }
+  .wr-desc  { font-size: 0.74rem; color: var(--text-dim); padding-left: 1px; }
   .wr-empty { font-size: 0.8rem; color: var(--text-dim); }
 
   /* Backlog + paused lists */
@@ -813,9 +820,17 @@
                   + '<span class="wr-meta">' + escHtml(meta)  + '</span>'
                   + '</div>';
           } else {
+            var typeTag = it.type ? '<span class="wr-type">' + escHtml(it.type) + '</span>' : '';
+            var descLine = it.description
+              ? '<div class="wr-desc">' + escHtml(it.description) + '</div>'
+              : '';
             html += '<div class="wr-item">'
-                  + '<span class="wr-id">'   + escHtml(it.id || "")    + '</span>'
-                  + '<span class="wr-meta">' + escHtml(it.route || "") + '</span>'
+                  + '<div class="wr-item-row">'
+                  +   typeTag
+                  +   '<span class="wr-id">'   + escHtml(it.id || "")    + '</span>'
+                  +   '<span class="wr-meta">' + escHtml(it.route || "") + '</span>'
+                  + '</div>'
+                  + descLine
                   + '</div>';
           }
         }
