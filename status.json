@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T08:28:58Z",
+  "generated_at": "2026-07-06T08:47:49Z",
   "schema_version": "5",
   "generator_version": "2.5",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-06T06:13Z",
-    "minutes_since_session": 135,
+    "last_session_date": "2026-07-06T08:40Z",
+    "minutes_since_session": 7,
     "airlock_queue": 2,
     "airlock_bundles": 1
   },
@@ -79,6 +79,13 @@
       "category": "required",
       "label": "GAP-053",
       "context": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives only on a staged lane",
+      "waiting_on": null
+    },
+    {
+      "id": "ACT-REM-047",
+      "category": "required",
+      "label": "REM-047",
+      "context": "INI-116 post-split stale legacy-repo pointers (residual): the archived digital-organization-governance clone keeps a dead `upstream` remote and ~6 non-relay scripts hardcode its now-moved path \u2014 Stewa",
       "waiting_on": null
     },
     {
@@ -177,7 +184,8 @@
   ],
   "contract_drift": [],
   "waiting_on_drift": [
-    "GAP-053"
+    "GAP-053",
+    "REM-047"
   ],
   "directors": [
     {
@@ -201,8 +209,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-06T02:36:17Z",
-      "invocations_30d": 12
+      "last_active": "2026-07-06T03:42:38Z",
+      "invocations_30d": 13
     },
     {
       "name": "research-director",
