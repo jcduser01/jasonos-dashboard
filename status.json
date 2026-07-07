@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T16:04:58Z",
+  "generated_at": "2026-07-07T16:23:01Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-06T22:23Z",
-    "minutes_since_session": 1061,
+    "minutes_since_session": 1080,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -447,6 +447,14 @@
         "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
       },
       {
+        "id": "PCR-OPS-043",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "None \u2014 the first step is the CEO risk-acceptance decision itself (leading-stop rule); the",
+        "stop_line": "`awaiting-ceo-decision` \u2014 nothing is enacted (no code armed) without the decision above; and",
+        "description": "Batch-Class Promotion Policy \u2014 Authorize Auto-Commit-to-Canonical for the Routine Class"
+      },
+      {
         "id": "REM-038",
         "type": "REM",
         "route": "Queue-ready",
@@ -639,6 +647,14 @@
         "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
       },
       {
+        "id": "PCR-OPS-043",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "None \u2014 the first step is the CEO risk-acceptance decision itself (leading-stop rule); the",
+        "stop_line": "`awaiting-ceo-decision` \u2014 nothing is enacted (no code armed) without the decision above; and",
+        "description": "Batch-Class Promotion Policy \u2014 Authorize Auto-Commit-to-Canonical for the Routine Class"
+      },
+      {
         "id": "REM-038",
         "type": "REM",
         "route": "Queue-ready",
@@ -798,6 +814,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T16:04:58.188334+00:00"
+    "generated_at": "2026-07-07T16:23:01.931475+00:00"
   }
 }
