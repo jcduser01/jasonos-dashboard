@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T22:17:57Z",
+  "generated_at": "2026-07-07T22:50:22Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-07T21:00:00Z",
-    "minutes_since_session": 77,
+    "last_session_date": "2026-07-07T23:30:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -375,14 +375,6 @@
         "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
       },
       {
-        "id": "GAP-046",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Document the ordering hazard and the safe pattern in the `git-commit-relay.md` workload runbook: precommand always executes before any `branch:`-triggered checkout, so a precommand that mutates a trac",
-        "stop_line": "None \u2014 documentation only.",
-        "description": "Relay precommand always runs before a branch:-targeted checkout, an ordering hazard with no\u2026"
-      },
-      {
         "id": "GAP-048",
         "type": "GAP",
         "route": "Queue-ready",
@@ -413,14 +405,6 @@
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
         "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
-        "id": "GAP-053",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Document, in the git-commit-relay / Steward-dispatch runbook, the sanctioned procedure for a dispatched-Steward review of a staged lane: before dispatch, materialize the lane files into the working tr",
-        "stop_line": "None \u2014 documentation only.",
-        "description": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives\u2026"
       },
       {
         "id": "GAP-054",
@@ -546,14 +530,6 @@
         "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
       },
       {
-        "id": "GAP-046",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Document the ordering hazard and the safe pattern in the `git-commit-relay.md` workload runbook: precommand always executes before any `branch:`-triggered checkout, so a precommand that mutates a trac",
-        "stop_line": "None \u2014 documentation only.",
-        "description": "Relay precommand always runs before a branch:-targeted checkout, an ordering hazard with no\u2026"
-      },
-      {
         "id": "GAP-048",
         "type": "GAP",
         "route": "Queue-ready",
@@ -584,14 +560,6 @@
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
         "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
-        "id": "GAP-053",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Document, in the git-commit-relay / Steward-dispatch runbook, the sanctioned procedure for a dispatched-Steward review of a staged lane: before dispatch, materialize the lane files into the working tr",
-        "stop_line": "None \u2014 documentation only.",
-        "description": "No defined procedure for a dispatched (Read-only) Security Steward to review a change that lives\u2026"
       },
       {
         "id": "GAP-054",
@@ -763,6 +731,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T22:17:58.016829+00:00"
+    "generated_at": "2026-07-07T22:50:22.173861+00:00"
   }
 }
