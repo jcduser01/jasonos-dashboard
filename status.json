@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T22:50:22Z",
+  "generated_at": "2026-07-07T23:44:12Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-07T23:30:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 14,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -431,6 +431,22 @@
         "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
       },
       {
+        "id": "GAP-060",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add a **relay-worker precondition guard** to the batch-run harness (`skills/jasonos-batch-run/SKILL.md` + the orchestrator commit path). Before a batch runs \u2014 and before each item promotion \u2014 verify t",
+        "stop_line": "Security Steward review before promotion \u2014 this changes the harness's commit substrate/serialization behavior (commit-path adjacent). Stages-and-holds for CEO promotion (mission-critical class).",
+        "description": "The batch harness has no relay-worker precondition guard: when the relay worker is down it\u2026"
+      },
+      {
+        "id": "GAP-061",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Isolate the shared-working-copy projection/publisher daemons (dashboard publisher, memory-index publisher, portfolio/README projection \u2014 any daemon that runs `git commit` in `operations/jasonos-operat",
+        "stop_line": "Security Steward review before promotion \u2014 this changes daemon commit behavior and/or the harness's working-tree model (commit-path adjacent). Stages-and-holds for CEO promotion.",
+        "description": "The projection/publisher daemons commit to whatever branch is checked out in the shared working\u2026"
+      },
+      {
         "id": "REM-038",
         "type": "REM",
         "route": "Queue-ready",
@@ -586,6 +602,22 @@
         "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
       },
       {
+        "id": "GAP-060",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add a **relay-worker precondition guard** to the batch-run harness (`skills/jasonos-batch-run/SKILL.md` + the orchestrator commit path). Before a batch runs \u2014 and before each item promotion \u2014 verify t",
+        "stop_line": "Security Steward review before promotion \u2014 this changes the harness's commit substrate/serialization behavior (commit-path adjacent). Stages-and-holds for CEO promotion (mission-critical class).",
+        "description": "The batch harness has no relay-worker precondition guard: when the relay worker is down it\u2026"
+      },
+      {
+        "id": "GAP-061",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Isolate the shared-working-copy projection/publisher daemons (dashboard publisher, memory-index publisher, portfolio/README projection \u2014 any daemon that runs `git commit` in `operations/jasonos-operat",
+        "stop_line": "Security Steward review before promotion \u2014 this changes daemon commit behavior and/or the harness's working-tree model (commit-path adjacent). Stages-and-holds for CEO promotion.",
+        "description": "The projection/publisher daemons commit to whatever branch is checked out in the shared working\u2026"
+      },
+      {
         "id": "REM-038",
         "type": "REM",
         "route": "Queue-ready",
@@ -731,6 +763,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T22:50:22.173861+00:00"
+    "generated_at": "2026-07-07T23:44:12.779996+00:00"
   }
 }
