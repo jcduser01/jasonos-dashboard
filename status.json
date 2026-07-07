@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T14:41:55Z",
+  "generated_at": "2026-07-07T15:49:10Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-06T22:23Z",
-    "minutes_since_session": 978,
+    "minutes_since_session": 1046,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -439,6 +439,14 @@
         "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
+        "id": "GAP-058",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(A) Document the workaround as a discoverable runbook procedure \u2014 a new `operations/cowork-sandbox-git-caveats.md`, or a section in an existing operations runbook \u2014 stating that on `/Volumes/SandboxDa",
+        "stop_line": "None for (A)/(B) as scoped \u2014 documentation and a local, pre-git-invocation lock-clearing helper touch nothing on the authority/spend/build-selection path. Marked Steward-gated only because any *extens",
+        "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
+      },
+      {
         "id": "REM-038",
         "type": "REM",
         "route": "Queue-ready",
@@ -623,6 +631,14 @@
         "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
+        "id": "GAP-058",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(A) Document the workaround as a discoverable runbook procedure \u2014 a new `operations/cowork-sandbox-git-caveats.md`, or a section in an existing operations runbook \u2014 stating that on `/Volumes/SandboxDa",
+        "stop_line": "None for (A)/(B) as scoped \u2014 documentation and a local, pre-git-invocation lock-clearing helper touch nothing on the authority/spend/build-selection path. Marked Steward-gated only because any *extens",
+        "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
+      },
+      {
         "id": "REM-038",
         "type": "REM",
         "route": "Queue-ready",
@@ -782,6 +798,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T14:41:55.275795+00:00"
+    "generated_at": "2026-07-07T15:49:10.157671+00:00"
   }
 }
