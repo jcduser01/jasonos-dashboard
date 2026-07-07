@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T08:27:12Z",
+  "generated_at": "2026-07-07T08:41:42Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-06T22:23Z",
-    "minutes_since_session": 604,
+    "minutes_since_session": 618,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -446,11 +446,18 @@
         "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
       },
       {
-        "id": "REM-046",
+        "id": "REM-048",
         "type": "REM",
         "route": "Queue-ready",
-        "runner_scope": "Re-deploy the canonical `operations/bin/jasonos-access-compiler.py` to the `~/bin/jasonos-access-compiler.py` live path (Mac-side copy, outside the repo tree), confirming the GAP-029 workspace-trust c",
-        "stop_line": "None \u2014 routine deployed-copy sync, Engineering-owned, no CEO or Steward gate (the GAP-029 code was already Steward-reviewed)."
+        "runner_scope": "Re-deploy the four canonical `operations/bin/` scripts named above to their respective `SandboxData/bin/` / `~/bin/` live paths (Mac-side copy, outside the repo tree), then re-run `check-script-regist",
+        "stop_line": "None \u2014 routine deployed-copy sync of an already-canonical, already-committed INI-131 fix. Engineering-owned, no CEO or Steward gate."
+      },
+      {
+        "id": "REM-049",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Add the `dead-path-ok` suppression marker to `operations/bin/tests/test_check_dead_path_drift.py:27`. (2) Extend `scan_config_path_fields()` in `operations/bin/check-dead-path-drift.py` to transla",
+        "stop_line": "None \u2014 both are hardening/correctness fixes to a read-only standing check, Engineering-owned, no CEO or Steward gate."
       },
       {
         "id": "INI-053",
@@ -623,11 +630,18 @@
         "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
       },
       {
-        "id": "REM-046",
+        "id": "REM-048",
         "type": "REM",
         "route": "Queue-ready",
-        "runner_scope": "Re-deploy the canonical `operations/bin/jasonos-access-compiler.py` to the `~/bin/jasonos-access-compiler.py` live path (Mac-side copy, outside the repo tree), confirming the GAP-029 workspace-trust c",
-        "stop_line": "None \u2014 routine deployed-copy sync, Engineering-owned, no CEO or Steward gate (the GAP-029 code was already Steward-reviewed)."
+        "runner_scope": "Re-deploy the four canonical `operations/bin/` scripts named above to their respective `SandboxData/bin/` / `~/bin/` live paths (Mac-side copy, outside the repo tree), then re-run `check-script-regist",
+        "stop_line": "None \u2014 routine deployed-copy sync of an already-canonical, already-committed INI-131 fix. Engineering-owned, no CEO or Steward gate."
+      },
+      {
+        "id": "REM-049",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Add the `dead-path-ok` suppression marker to `operations/bin/tests/test_check_dead_path_drift.py:27`. (2) Extend `scan_config_path_fields()` in `operations/bin/check-dead-path-drift.py` to transla",
+        "stop_line": "None \u2014 both are hardening/correctness fixes to a read-only standing check, Engineering-owned, no CEO or Steward gate."
       },
       {
         "id": "INI-053",
@@ -768,6 +782,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T08:27:12.082291+00:00"
+    "generated_at": "2026-07-07T08:41:42.544608+00:00"
   }
 }
