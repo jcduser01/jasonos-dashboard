@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T16:23:10Z",
+  "generated_at": "2026-07-07T16:50:30Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-06T22:23Z",
-    "minutes_since_session": 1080,
+    "minutes_since_session": 1107,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -511,13 +511,6 @@
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
       },
       {
-        "id": "INI-132",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bun",
-        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-c"
-      },
-      {
         "id": "INI-133",
         "type": "INI",
         "route": "Queue-ready",
@@ -711,13 +704,6 @@
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
       },
       {
-        "id": "INI-132",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bun",
-        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-c"
-      },
-      {
         "id": "INI-133",
         "type": "INI",
         "route": "Queue-ready",
@@ -781,6 +767,13 @@
         "route": "CEO-first",
         "runner_scope": "",
         "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-si"
+      },
+      {
+        "id": "INI-132",
+        "type": "INI",
+        "route": "Queue-ready",
+        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bun",
+        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-c"
       }
     ],
     "not_executable_leading_stop": [
@@ -814,6 +807,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T16:23:10.514321+00:00"
+    "generated_at": "2026-07-07T16:50:30.463027+00:00"
   }
 }
