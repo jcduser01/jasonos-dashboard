@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T16:50:40Z",
+  "generated_at": "2026-07-07T17:59:16Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-06T22:23Z",
-    "minutes_since_session": 1107,
+    "last_session_date": "2026-07-07T16:45:00Z",
+    "minutes_since_session": 74,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -462,13 +462,6 @@
         "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
       },
       {
-        "id": "REM-048",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Re-deploy the four canonical `operations/bin/` scripts named above to their respective `SandboxData/bin/` / `~/bin/` live paths (Mac-side copy, outside the repo tree), then re-run `check-script-regist",
-        "stop_line": "None \u2014 routine deployed-copy sync of an already-canonical, already-committed INI-131 fix. Engineering-owned, no CEO or Steward gate."
-      },
-      {
         "id": "REM-049",
         "type": "REM",
         "route": "Queue-ready",
@@ -655,13 +648,6 @@
         "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
       },
       {
-        "id": "REM-048",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Re-deploy the four canonical `operations/bin/` scripts named above to their respective `SandboxData/bin/` / `~/bin/` live paths (Mac-side copy, outside the repo tree), then re-run `check-script-regist",
-        "stop_line": "None \u2014 routine deployed-copy sync of an already-canonical, already-committed INI-131 fix. Engineering-owned, no CEO or Steward gate."
-      },
-      {
         "id": "REM-049",
         "type": "REM",
         "route": "Queue-ready",
@@ -807,6 +793,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T16:50:40.914090+00:00"
+    "generated_at": "2026-07-07T17:59:16.608735+00:00"
   }
 }
