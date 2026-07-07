@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-07T15:49:20Z",
+  "generated_at": "2026-07-07T16:04:47Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
     "done": 107,
     "total": 124,
-    "active": 1,
+    "active": 2,
     "queued": 0,
     "paused": 7,
-    "backlog": 9
+    "backlog": 8
   },
   "operational": {
     "last_session_date": "2026-07-06T22:23Z",
-    "minutes_since_session": 1046,
+    "minutes_since_session": 1061,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,6 +35,16 @@
         "route": "Operational",
         "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
+      }
+    },
+    {
+      "id": "INI-132",
+      "name": "Batch Execution Harness \u2014 Four-Role Adversarial Build Loop with Mechanical Gates and Batch-Class Profiles",
+      "status": "active",
+      "contract": {
+        "route": "Queue-ready",
+        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bundle \u2014 assemble the existing check-* scripts + a code-touched-implies-test-present-and-green check into one fail-closed promotion-gate stage that emits a machine-readable gate result), and Phase 2 (reviewer role \u2014 generalize the Security Steward dispatch pattern into an independent, clean-context code/doc reviewer emitting a structured verdict; validate it manually against the 2026-07-05 batch). Each phase stages one atomic commit and halts at its own stop-line. Phases 3\u20137 (promotion-policy PCR, orchestrator loop, admitter, engineer repackage, substrate promotion to autonomous) carry their own contracts below and are NOT part of this admissible slice \u2014 several halt at CEO/Steward gates by design.",
+        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-canonical for the routine class \u2014 a governance change to today's CEO-gated promotion); Phase 4 (orchestrator loop) and Phase 7 (substrate promotion to unattended mini) each halt at Security Steward review AND require the Phase 3 PCR published before any auto-commit path is enabled. The runner never enables autonomous canonical commit without those gates cleared."
       }
     }
   ],
@@ -294,16 +304,6 @@
           "depends_on": [
             "INI-124"
           ]
-        }
-      },
-      {
-        "id": "INI-132",
-        "name": "Batch Execution Harness \u2014 Four-Role Adversarial Build Loop with Mechanical Gates and Batch-Class Profiles",
-        "notes": "BACKLOG 2026-07-05 \u2014 designed with the CEO in a strategic-thought-partner session following the batch-engineering quality review of the 2026-07-05 runs (Logs/batch-engineering-quality-review-2026-07-0\u2026",
-        "contract": {
-          "route": "Queue-ready",
-          "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bundle \u2014 assemble the existing check-* scripts + a code-touched-implies-test-present-and-green check into one fail-closed promotion-gate stage that emits a machine-readable gate result), and Phase 2 (reviewer role \u2014 generalize the Security Steward dispatch pattern into an independent, clean-context code/doc reviewer emitting a structured verdict; validate it manually against the 2026-07-05 batch). Each phase stages one atomic commit and halts at its own stop-line. Phases 3\u20137 (promotion-policy PCR, orchestrator loop, admitter, engineer repackage, substrate promotion to autonomous) carry their own contracts below and are NOT part of this admissible slice \u2014 several halt at CEO/Steward gates by design.",
-          "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-canonical for the routine class \u2014 a governance change to today's CEO-gated promotion); Phase 4 (orchestrator loop) and Phase 7 (substrate promotion to unattended mini) each halt at Security Steward review AND require the Phase 3 PCR published before any auto-commit path is enabled. The runner never enables autonomous canonical commit without those gates cleared."
         }
       },
       {
@@ -798,6 +798,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-07T15:49:20.283221+00:00"
+    "generated_at": "2026-07-07T16:04:47.860442+00:00"
   }
 }
