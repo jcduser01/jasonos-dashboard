@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T02:50:24Z",
+  "generated_at": "2026-07-08T04:50:25Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-08T05:15:00Z",
-    "minutes_since_session": 0,
+    "last_session_date": "2026-07-08T04:20:00Z",
+    "minutes_since_session": 30,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -375,14 +375,6 @@
         "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
       },
       {
-        "id": "GAP-048",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Two coupled deficiencies on the same untracked, hand-maintained, multi-writer file. **(A) Reconciliation-on-interactive-close.** Add a mandatory **queue-reconciliation step** to `operations/batch-runn",
-        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina",
-        "description": "Batch-engineering queue has no reconciliation-on-interactive-close and no multi-writer\u2026"
-      },
-      {
         "id": "GAP-050",
         "type": "GAP",
         "route": "Queue-ready",
@@ -429,6 +421,14 @@
         "runner_scope": "(A) Document the workaround as a discoverable runbook procedure \u2014 a new `operations/cowork-sandbox-git-caveats.md`, or a section in an existing operations runbook \u2014 stating that on `/Volumes/SandboxDa",
         "stop_line": "None for (A)/(B) as scoped \u2014 documentation and a local, pre-git-invocation lock-clearing helper touch nothing on the authority/spend/build-selection path. Marked Steward-gated only because any *extens",
         "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
+      },
+      {
+        "id": "GAP-063",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "The relay client (`commit_via_relay.py`) and worker (`jasonos-git-relay.sh`) default to the **governance** repo when a trigger omits `--repo`/`repo:`. A caller intending an **operations**-repo commit ",
+        "stop_line": "Security Steward review before promotion \u2014 repo-resolution is commit-path-adjacent (a mis-defaulted commit could land in the wrong canonical repo). Stages-and-holds for CEO promotion.",
+        "description": "The git relay defaults to the governance repo, so an operations-repo commit/merge-staged that\u2026"
       },
       {
         "id": "REM-038",
@@ -530,14 +530,6 @@
         "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
       },
       {
-        "id": "GAP-048",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Two coupled deficiencies on the same untracked, hand-maintained, multi-writer file. **(A) Reconciliation-on-interactive-close.** Add a mandatory **queue-reconciliation step** to `operations/batch-runn",
-        "stop_line": "Mechanism decisions \u2014 halt before building either automated surface: (1) the staleness-detector home (report-triage extension vs. standing scheduled check vs. generator-side read) and (2) the coordina",
-        "description": "Batch-engineering queue has no reconciliation-on-interactive-close and no multi-writer\u2026"
-      },
-      {
         "id": "GAP-050",
         "type": "GAP",
         "route": "Queue-ready",
@@ -584,6 +576,14 @@
         "runner_scope": "(A) Document the workaround as a discoverable runbook procedure \u2014 a new `operations/cowork-sandbox-git-caveats.md`, or a section in an existing operations runbook \u2014 stating that on `/Volumes/SandboxDa",
         "stop_line": "None for (A)/(B) as scoped \u2014 documentation and a local, pre-git-invocation lock-clearing helper touch nothing on the authority/spend/build-selection path. Marked Steward-gated only because any *extens",
         "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
+      },
+      {
+        "id": "GAP-063",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "The relay client (`commit_via_relay.py`) and worker (`jasonos-git-relay.sh`) default to the **governance** repo when a trigger omits `--repo`/`repo:`. A caller intending an **operations**-repo commit ",
+        "stop_line": "Security Steward review before promotion \u2014 repo-resolution is commit-path-adjacent (a mis-defaulted commit could land in the wrong canonical repo). Stages-and-holds for CEO promotion.",
+        "description": "The git relay defaults to the governance repo, so an operations-repo commit/merge-staged that\u2026"
       },
       {
         "id": "REM-038",
@@ -731,6 +731,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T02:50:24.512871+00:00"
+    "generated_at": "2026-07-08T04:50:25.790565+00:00"
   }
 }
