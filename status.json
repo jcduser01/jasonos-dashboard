@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T05:02:03Z",
+  "generated_at": "2026-07-08T05:42:19Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-08T04:20:00Z",
-    "minutes_since_session": 42,
+    "last_session_date": "2026-07-08T05:05:49Z",
+    "minutes_since_session": 36,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -415,14 +415,6 @@
         "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
-        "id": "GAP-058",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(A) Document the workaround as a discoverable runbook procedure \u2014 a new `operations/cowork-sandbox-git-caveats.md`, or a section in an existing operations runbook \u2014 stating that on `/Volumes/SandboxDa",
-        "stop_line": "None for (A)/(B) as scoped \u2014 documentation and a local, pre-git-invocation lock-clearing helper touch nothing on the authority/spend/build-selection path. Marked Steward-gated only because any *extens",
-        "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
-      },
-      {
         "id": "GAP-063",
         "type": "GAP",
         "route": "Queue-ready",
@@ -568,14 +560,6 @@
         "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
         "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th",
         "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
-      },
-      {
-        "id": "GAP-058",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(A) Document the workaround as a discoverable runbook procedure \u2014 a new `operations/cowork-sandbox-git-caveats.md`, or a section in an existing operations runbook \u2014 stating that on `/Volumes/SandboxDa",
-        "stop_line": "None for (A)/(B) as scoped \u2014 documentation and a local, pre-git-invocation lock-clearing helper touch nothing on the authority/spend/build-selection path. Marked Steward-gated only because any *extens",
-        "description": "SandboxData FUSE mount blocks unlink() from the Cowork Bash sandbox, breaking git's own\u2026"
       },
       {
         "id": "GAP-063",
@@ -731,6 +715,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T05:02:03.331046+00:00"
+    "generated_at": "2026-07-08T05:42:19.208610+00:00"
   }
 }
