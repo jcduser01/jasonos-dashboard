@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T06:47:45Z",
+  "generated_at": "2026-07-08T12:32:55Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-08T05:50:00Z",
-    "minutes_since_session": 57,
+    "last_session_date": "2026-07-08T09:45:00Z",
+    "minutes_since_session": 167,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -367,22 +367,6 @@
         "description": "JasonOS mkdir-based advisory locks have no orphan recovery when the owning process dies abnormally\u2026"
       },
       {
-        "id": "GAP-045",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Fix the dispatcher's trigger-file parser so a `task:` value is either (a) explicitly single-line only, with the parser **rejecting** (not silently truncating) any trigger whose `task:` line is followe",
-        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja",
-        "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
-      },
-      {
-        "id": "GAP-050",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the dependency resolver in `operations/bin/jasonos-work-item-runner.py` (`plan`/`report`) so a `depends_on` target that resolves to a **published/terminal state** \u2014 a PCR or GAP in `closed/`, a",
-        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite).",
-        "description": "Runner does not auto-satisfy a depends_on target that is already published; it defers unless\u2026"
-      },
-      {
         "id": "GAP-051",
         "type": "GAP",
         "route": "Queue-ready",
@@ -415,11 +399,36 @@
         "description": "The git relay defaults to the governance repo, so an operations-repo commit/merge-staged that\u2026"
       },
       {
-        "id": "REM-038",
-        "type": "REM",
+        "id": "GAP-065",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Capture the deployed prompt (`~/Claude/Scheduled/jasonos-venture-engine-registration-check/SKILL.md`) verbatim into the canonical asset `operations/assets/jasonos-venture-engine-registration-check.SKI",
-        "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
+        "runner_scope": "The defect is *sole-hardcoded-root* usage \u2014 a script that pins `REM_DIR`/`REGISTER`/`OUTPUT_PATH`/repo roots to a literal `/Volumes/SandboxData/...` with no runtime resolution, so it breaks (exit non-",
+        "stop_line": "Engineering ready-bar (TDD RED/GREEN + the standard build gates) per consumer. **No blanket Security Steward gate** \u2014 path-resolution portability touches no authority/spend surface; the only Steward g",
+        "description": "A class of operations tooling pins /Volumes/SandboxData as a sole hardcoded root (no runtime mount\u2026"
+      },
+      {
+        "id": "GAP-066",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "Document \u2014 and optionally narrow \u2014 the interaction between the INI-081 push-interlock and concurrent non-batch work. The relay refuses `push:true` to `main` whenever **any** `staged/*` lane is open (i",
+        "stop_line": "If documentation-only \u2192 Engineering ready-bar, no Steward gate. If the interlock's refusal scope is changed in code \u2192 **Security Steward review required** (commit/push-path machinery) and stage-and-ho",
+        "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
+      },
+      {
+        "id": "GAP-067",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Give each parallel batch engineer its own **git worktree** so concurrent builds never share a working copy or index. Today the batch-run loop can dispatch multiple engineers concurrently, but they all",
+        "stop_line": "Security Steward review before promotion if the change touches the relay/commit substrate or the worktree lifecycle on the shared volume (commit-path-adjacent). A worktree-orchestration change confine",
+        "description": "Parallel batch engineers share one working copy / git index, so concurrent builds collide on\u2026"
+      },
+      {
+        "id": "GAP-068",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extract a single, tested **work-item-ID resolution primitive** into the shared engine and route every consumer through it, plus an **antipattern detector** to stop the class regrowing. The recurring r",
+        "stop_line": "Security Steward review before the runner/admitter consumers are deployed (build-selection/admissibility path \u2014 a wrong \"satisfied\"/\"admissible\" is deny-by-default relevant). The shared helper + detec",
+        "description": "No shared, anchored work-item-ID resolver: tools re-implement ID\u2192artifact / ID-mention matching ad\u2026"
       },
       {
         "id": "INI-053",
@@ -506,22 +515,6 @@
         "description": "JasonOS mkdir-based advisory locks have no orphan recovery when the owning process dies abnormally\u2026"
       },
       {
-        "id": "GAP-045",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Fix the dispatcher's trigger-file parser so a `task:` value is either (a) explicitly single-line only, with the parser **rejecting** (not silently truncating) any trigger whose `task:` line is followe",
-        "stop_line": "Changing how the dispatcher parses/validates its trigger-file input is Security-Steward-gated (it is the ingestion path the injection-pattern filter and prefix-validation controls operate on \u2014 see `ja",
-        "description": "Agent-invocation dispatcher's task-file parser silently truncates multi-line task: values instead\u2026"
-      },
-      {
-        "id": "GAP-050",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the dependency resolver in `operations/bin/jasonos-work-item-runner.py` (`plan`/`report`) so a `depends_on` target that resolves to a **published/terminal state** \u2014 a PCR or GAP in `closed/`, a",
-        "stop_line": "Security Steward review before the resolver change is deployed \u2014 it sits on the runner's build-selection/admissibility path (a wrong \"satisfied\" would let the runner build past an unmet prerequisite).",
-        "description": "Runner does not auto-satisfy a depends_on target that is already published; it defers unless\u2026"
-      },
-      {
         "id": "GAP-051",
         "type": "GAP",
         "route": "Queue-ready",
@@ -554,11 +547,36 @@
         "description": "The git relay defaults to the governance repo, so an operations-repo commit/merge-staged that\u2026"
       },
       {
-        "id": "REM-038",
-        "type": "REM",
+        "id": "GAP-065",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Capture the deployed prompt (`~/Claude/Scheduled/jasonos-venture-engine-registration-check/SKILL.md`) verbatim into the canonical asset `operations/assets/jasonos-venture-engine-registration-check.SKI",
-        "stop_line": "None \u2014 routine canonical-asset sync, no CEO or Steward gate. (Note: the deployed prompt source lives outside the repo tree at `~/Claude/Scheduled/\u2026`, so the capture step needs read access to that path"
+        "runner_scope": "The defect is *sole-hardcoded-root* usage \u2014 a script that pins `REM_DIR`/`REGISTER`/`OUTPUT_PATH`/repo roots to a literal `/Volumes/SandboxData/...` with no runtime resolution, so it breaks (exit non-",
+        "stop_line": "Engineering ready-bar (TDD RED/GREEN + the standard build gates) per consumer. **No blanket Security Steward gate** \u2014 path-resolution portability touches no authority/spend surface; the only Steward g",
+        "description": "A class of operations tooling pins /Volumes/SandboxData as a sole hardcoded root (no runtime mount\u2026"
+      },
+      {
+        "id": "GAP-066",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "Document \u2014 and optionally narrow \u2014 the interaction between the INI-081 push-interlock and concurrent non-batch work. The relay refuses `push:true` to `main` whenever **any** `staged/*` lane is open (i",
+        "stop_line": "If documentation-only \u2192 Engineering ready-bar, no Steward gate. If the interlock's refusal scope is changed in code \u2192 **Security Steward review required** (commit/push-path machinery) and stage-and-ho",
+        "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
+      },
+      {
+        "id": "GAP-067",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Give each parallel batch engineer its own **git worktree** so concurrent builds never share a working copy or index. Today the batch-run loop can dispatch multiple engineers concurrently, but they all",
+        "stop_line": "Security Steward review before promotion if the change touches the relay/commit substrate or the worktree lifecycle on the shared volume (commit-path-adjacent). A worktree-orchestration change confine",
+        "description": "Parallel batch engineers share one working copy / git index, so concurrent builds collide on\u2026"
+      },
+      {
+        "id": "GAP-068",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extract a single, tested **work-item-ID resolution primitive** into the shared engine and route every consumer through it, plus an **antipattern detector** to stop the class regrowing. The recurring r",
+        "stop_line": "Security Steward review before the runner/admitter consumers are deployed (build-selection/admissibility path \u2014 a wrong \"satisfied\"/\"admissible\" is deny-by-default relevant). The shared helper + detec",
+        "description": "No shared, anchored work-item-ID resolver: tools re-implement ID\u2192artifact / ID-mention matching ad\u2026"
       },
       {
         "id": "INI-053",
@@ -699,6 +717,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T06:47:45.810600+00:00"
+    "generated_at": "2026-07-08T12:32:55.819028+00:00"
   }
 }
