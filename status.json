@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T12:32:55Z",
+  "generated_at": "2026-07-08T18:32:57Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-08T09:45:00Z",
-    "minutes_since_session": 167,
+    "minutes_since_session": 527,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -431,6 +431,14 @@
         "description": "No shared, anchored work-item-ID resolver: tools re-implement ID\u2192artifact / ID-mention matching ad\u2026"
       },
       {
+        "id": "GAP-069",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Implement the residual resilience/reliability/durability recommendations from the INI-132 batch #3 review that are **not** already tracked by GAP-066 (lane-scoped interlock) / GAP-067 (per-engineer wo",
+        "stop_line": "Per sub-item. (A) Security Steward review (commit-path gate change) + stage-and-hold. (B) Security Steward review (deploy path) + **CEO authorization for any live deploy-sync** (classifier-gated). (C)",
+        "description": "Batch / parallel-work resilience hardening cluster: post-build atomicity assertion, gated\u2026"
+      },
+      {
         "id": "INI-053",
         "type": "INI",
         "route": "Queue-ready",
@@ -579,6 +587,14 @@
         "description": "No shared, anchored work-item-ID resolver: tools re-implement ID\u2192artifact / ID-mention matching ad\u2026"
       },
       {
+        "id": "GAP-069",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Implement the residual resilience/reliability/durability recommendations from the INI-132 batch #3 review that are **not** already tracked by GAP-066 (lane-scoped interlock) / GAP-067 (per-engineer wo",
+        "stop_line": "Per sub-item. (A) Security Steward review (commit-path gate change) + stage-and-hold. (B) Security Steward review (deploy path) + **CEO authorization for any live deploy-sync** (classifier-gated). (C)",
+        "description": "Batch / parallel-work resilience hardening cluster: post-build atomicity assertion, gated\u2026"
+      },
+      {
         "id": "INI-053",
         "type": "INI",
         "route": "Queue-ready",
@@ -717,6 +733,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T12:32:55.819028+00:00"
+    "generated_at": "2026-07-08T18:32:57.543404+00:00"
   }
 }
