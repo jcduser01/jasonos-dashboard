@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T05:42:28Z",
+  "generated_at": "2026-07-08T06:47:45Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-08T05:05:49Z",
-    "minutes_since_session": 36,
+    "last_session_date": "2026-07-08T05:50:00Z",
+    "minutes_since_session": 57,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -399,14 +399,6 @@
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
       },
       {
-        "id": "GAP-054",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Make `commit_via_relay.py`'s `QUEUE_DIR` resolution correct (or fail-loud) for the `~/bin` deployment location, not just `SandboxData/bin`. GAP-041 hard-codes the assumption \"the deployed copy always ",
-        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR.",
-        "description": "The ~/bin deployment of commit_via_relay.py resolves QUEUE_DIR to ~/.git-commit-queue (outside the\u2026"
-      },
-      {
         "id": "GAP-055",
         "type": "GAP",
         "route": "Queue-ready",
@@ -544,14 +536,6 @@
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
         "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
-        "id": "GAP-054",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Make `commit_via_relay.py`'s `QUEUE_DIR` resolution correct (or fail-loud) for the `~/bin` deployment location, not just `SandboxData/bin`. GAP-041 hard-codes the assumption \"the deployed copy always ",
-        "stop_line": "Queue-resolution change to the commit client is Steward-gated (commit-path control, parallels GAP-041); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR.",
-        "description": "The ~/bin deployment of commit_via_relay.py resolves QUEUE_DIR to ~/.git-commit-queue (outside the\u2026"
       },
       {
         "id": "GAP-055",
@@ -715,6 +699,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T05:42:28.298465+00:00"
+    "generated_at": "2026-07-08T06:47:45.810600+00:00"
   }
 }
