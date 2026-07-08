@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T18:32:57Z",
+  "generated_at": "2026-07-08T22:31:50Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-08T09:45:00Z",
-    "minutes_since_session": 527,
+    "last_session_date": "2026-07-08T13:30:00Z",
+    "minutes_since_session": 541,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -391,14 +391,6 @@
         "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
-        "id": "GAP-063",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "The relay client (`commit_via_relay.py`) and worker (`jasonos-git-relay.sh`) default to the **governance** repo when a trigger omits `--repo`/`repo:`. A caller intending an **operations**-repo commit ",
-        "stop_line": "Security Steward review before promotion \u2014 repo-resolution is commit-path-adjacent (a mis-defaulted commit could land in the wrong canonical repo). Stages-and-holds for CEO promotion.",
-        "description": "The git relay defaults to the governance repo, so an operations-repo commit/merge-staged that\u2026"
-      },
-      {
         "id": "GAP-065",
         "type": "GAP",
         "route": "Queue-ready",
@@ -415,28 +407,12 @@
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
-        "id": "GAP-067",
+        "id": "GAP-070",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Give each parallel batch engineer its own **git worktree** so concurrent builds never share a working copy or index. Today the batch-run loop can dispatch multiple engineers concurrently, but they all",
-        "stop_line": "Security Steward review before promotion if the change touches the relay/commit substrate or the worktree lifecycle on the shared volume (commit-path-adjacent). A worktree-orchestration change confine",
-        "description": "Parallel batch engineers share one working copy / git index, so concurrent builds collide on\u2026"
-      },
-      {
-        "id": "GAP-068",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extract a single, tested **work-item-ID resolution primitive** into the shared engine and route every consumer through it, plus an **antipattern detector** to stop the class regrowing. The recurring r",
-        "stop_line": "Security Steward review before the runner/admitter consumers are deployed (build-selection/admissibility path \u2014 a wrong \"satisfied\"/\"admissible\" is deny-by-default relevant). The shared helper + detec",
-        "description": "No shared, anchored work-item-ID resolver: tools re-implement ID\u2192artifact / ID-mention matching ad\u2026"
-      },
-      {
-        "id": "GAP-069",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Implement the residual resilience/reliability/durability recommendations from the INI-132 batch #3 review that are **not** already tracked by GAP-066 (lane-scoped interlock) / GAP-067 (per-engineer wo",
-        "stop_line": "Per sub-item. (A) Security Steward review (commit-path gate change) + stage-and-hold. (B) Security Steward review (deploy path) + **CEO authorization for any live deploy-sync** (classifier-gated). (C)",
-        "description": "Batch / parallel-work resilience hardening cluster: post-build atomicity assertion, gated\u2026"
+        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
+        "stop_line": "None hard \u2014 engineering-ready-bar. (No commit-path/deploy-path surface; the audit log is a Logs/ artifact, not versioned doctrine.) Decision at the ready bar.",
+        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
       },
       {
         "id": "INI-053",
@@ -547,14 +523,6 @@
         "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
-        "id": "GAP-063",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "The relay client (`commit_via_relay.py`) and worker (`jasonos-git-relay.sh`) default to the **governance** repo when a trigger omits `--repo`/`repo:`. A caller intending an **operations**-repo commit ",
-        "stop_line": "Security Steward review before promotion \u2014 repo-resolution is commit-path-adjacent (a mis-defaulted commit could land in the wrong canonical repo). Stages-and-holds for CEO promotion.",
-        "description": "The git relay defaults to the governance repo, so an operations-repo commit/merge-staged that\u2026"
-      },
-      {
         "id": "GAP-065",
         "type": "GAP",
         "route": "Queue-ready",
@@ -571,28 +539,12 @@
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
-        "id": "GAP-067",
+        "id": "GAP-070",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Give each parallel batch engineer its own **git worktree** so concurrent builds never share a working copy or index. Today the batch-run loop can dispatch multiple engineers concurrently, but they all",
-        "stop_line": "Security Steward review before promotion if the change touches the relay/commit substrate or the worktree lifecycle on the shared volume (commit-path-adjacent). A worktree-orchestration change confine",
-        "description": "Parallel batch engineers share one working copy / git index, so concurrent builds collide on\u2026"
-      },
-      {
-        "id": "GAP-068",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extract a single, tested **work-item-ID resolution primitive** into the shared engine and route every consumer through it, plus an **antipattern detector** to stop the class regrowing. The recurring r",
-        "stop_line": "Security Steward review before the runner/admitter consumers are deployed (build-selection/admissibility path \u2014 a wrong \"satisfied\"/\"admissible\" is deny-by-default relevant). The shared helper + detec",
-        "description": "No shared, anchored work-item-ID resolver: tools re-implement ID\u2192artifact / ID-mention matching ad\u2026"
-      },
-      {
-        "id": "GAP-069",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Implement the residual resilience/reliability/durability recommendations from the INI-132 batch #3 review that are **not** already tracked by GAP-066 (lane-scoped interlock) / GAP-067 (per-engineer wo",
-        "stop_line": "Per sub-item. (A) Security Steward review (commit-path gate change) + stage-and-hold. (B) Security Steward review (deploy path) + **CEO authorization for any live deploy-sync** (classifier-gated). (C)",
-        "description": "Batch / parallel-work resilience hardening cluster: post-build atomicity assertion, gated\u2026"
+        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
+        "stop_line": "None hard \u2014 engineering-ready-bar. (No commit-path/deploy-path surface; the audit log is a Logs/ artifact, not versioned doctrine.) Decision at the ready bar.",
+        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
       },
       {
         "id": "INI-053",
@@ -733,6 +685,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T18:32:57.543404+00:00"
+    "generated_at": "2026-07-08T22:31:50.711587+00:00"
   }
 }
