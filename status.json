@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T21:34:42Z",
+  "generated_at": "2026-07-09T23:34:43Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-09T04:37:15Z",
-    "minutes_since_session": 1017,
+    "minutes_since_session": 1137,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -106,8 +106,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-06T03:42:38Z",
-      "invocations_30d": 13
+      "last_active": "2026-07-09T17:45:32Z",
+      "invocations_30d": 20
     },
     {
       "name": "research-director",
@@ -818,6 +818,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-09T21:34:42.415482+00:00"
+    "generated_at": "2026-07-09T23:34:43.050899+00:00"
   }
 }
