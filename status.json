@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T00:53:00Z",
+  "generated_at": "2026-07-09T02:13:10Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,7 +11,7 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-09T00:55:00Z",
+    "last_session_date": "2026-07-09T02:15:00Z",
     "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
@@ -306,7 +306,52 @@
       }
     ]
   },
-  "batch_queue": [],
+  "batch_queue": [
+    {
+      "position": 1,
+      "id": "PCR-GOV-006"
+    },
+    {
+      "position": 2,
+      "id": "GAP-033"
+    },
+    {
+      "position": 3,
+      "id": "GAP-070"
+    },
+    {
+      "position": 4,
+      "id": "GAP-066"
+    },
+    {
+      "position": 5,
+      "id": "PCR-SEC-009"
+    },
+    {
+      "position": 6,
+      "id": "GAP-065"
+    },
+    {
+      "position": 7,
+      "id": "PCR-ENG-017"
+    },
+    {
+      "position": 8,
+      "id": "GAP-052"
+    },
+    {
+      "position": 9,
+      "id": "PCR-OPS-046"
+    },
+    {
+      "position": 10,
+      "id": "GAP-051"
+    },
+    {
+      "position": 11,
+      "id": "GAP-071"
+    }
+  ],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -376,6 +421,14 @@
         "runner_scope": "Document \u2014 and optionally narrow \u2014 the interaction between the INI-081 push-interlock and concurrent non-batch work. The relay refuses `push:true` to `main` whenever **any** `staged/*` lane is open (i",
         "stop_line": "If documentation-only \u2192 Engineering ready-bar, no Steward gate. If the interlock's refusal scope is changed in code \u2192 **Security Steward review required** (commit/push-path machinery) and stage-and-ho",
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
+      },
+      {
+        "id": "GAP-071",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "~16 tests in the **top-level** `operations/bin/test_*.py` (NOT `operations/bin/tests/`) fail (4 failures + 12 errors as of 2026-07-08). Two classes: (1) **stale-API tests** \u2014 `test_drive_backup_mirror",
+        "stop_line": "None hard \u2014 engineering-ready-bar. (If the blog fix chooses to install `markdown`, that package install needs Security Steward clearance; the skip-on-missing-dep alternative avoids it.) Decision at th",
+        "description": "Top-level operations/bin/test_*.py repo-health failures (drive-backup stale-API tests + blog\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -492,6 +545,14 @@
         "runner_scope": "Document \u2014 and optionally narrow \u2014 the interaction between the INI-081 push-interlock and concurrent non-batch work. The relay refuses `push:true` to `main` whenever **any** `staged/*` lane is open (i",
         "stop_line": "If documentation-only \u2192 Engineering ready-bar, no Steward gate. If the interlock's refusal scope is changed in code \u2192 **Security Steward review required** (commit/push-path machinery) and stage-and-ho",
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
+      },
+      {
+        "id": "GAP-071",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "~16 tests in the **top-level** `operations/bin/test_*.py` (NOT `operations/bin/tests/`) fail (4 failures + 12 errors as of 2026-07-08). Two classes: (1) **stale-API tests** \u2014 `test_drive_backup_mirror",
+        "stop_line": "None hard \u2014 engineering-ready-bar. (If the blog fix chooses to install `markdown`, that package install needs Security Steward clearance; the skip-on-missing-dep alternative avoids it.) Decision at th",
+        "description": "Top-level operations/bin/test_*.py repo-health failures (drive-backup stale-API tests + blog\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -658,6 +719,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T00:53:00.690848+00:00"
+    "generated_at": "2026-07-09T02:13:10.471248+00:00"
   }
 }
