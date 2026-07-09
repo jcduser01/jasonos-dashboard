@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T12:44:37Z",
+  "generated_at": "2026-07-09T15:34:49Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-09T04:37:15Z",
-    "minutes_since_session": 487,
+    "minutes_since_session": 657,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -459,6 +459,22 @@
         "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
+        "id": "GAP-076",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-agent-dispatcher.sh` (v1.8). Three defects, all in the recording path, none in the execution path: (1) the invocation-log header at **`:954`** prints `# model_flag: ${BROKER_MO",
+        "stop_line": "Halt at the `jasonos-agent-dispatcher.sh` change for Security Steward review before it is deployed to `~/bin` / `SandboxData/bin`.",
+        "description": "The dispatcher's durable records cannot prove which model tier and effort an invocation actually\u2026"
+      },
+      {
+        "id": "GAP-078",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-git-relay.sh` (v1.12+). The `close-staged` action decides whether the lane exists with a **local-only** check \u2014 `git show-ref --verify --quiet \"refs/heads/${MERGE_BRANCH}\" || B",
+        "stop_line": "Halt before deploying the `jasonos-git-relay.sh` change to `~/bin` / `SandboxData/bin` for Security Steward review.",
+        "description": "close-staged reports success without deleting the remote lane ref whenever the local branch is\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -591,6 +607,22 @@
         "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
+        "id": "GAP-076",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-agent-dispatcher.sh` (v1.8). Three defects, all in the recording path, none in the execution path: (1) the invocation-log header at **`:954`** prints `# model_flag: ${BROKER_MO",
+        "stop_line": "Halt at the `jasonos-agent-dispatcher.sh` change for Security Steward review before it is deployed to `~/bin` / `SandboxData/bin`.",
+        "description": "The dispatcher's durable records cannot prove which model tier and effort an invocation actually\u2026"
+      },
+      {
+        "id": "GAP-078",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-git-relay.sh` (v1.12+). The `close-staged` action decides whether the lane exists with a **local-only** check \u2014 `git show-ref --verify --quiet \"refs/heads/${MERGE_BRANCH}\" || B",
+        "stop_line": "Halt before deploying the `jasonos-git-relay.sh` change to `~/bin` / `SandboxData/bin` for Security Steward review.",
+        "description": "close-staged reports success without deleting the remote lane ref whenever the local branch is\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -679,8 +711,16 @@
         "type": "PCR",
         "route": "Draft-only",
         "runner_scope": "",
-        "stop_line": "`awaiting-ceo-decision`. The runner drafts and halts. No code, no arming, no scope change is enacted by this document.",
+        "stop_line": "`awaiting-steward-re-review`. CEO scope approval recorded 2026-07-09; the runner still halts. No code, no arming, no scope change is enacted by this document.",
         "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
+      },
+      {
+        "id": "PCR-OPS-048",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
+        "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
+        "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
       },
       {
         "id": "INI-011",
@@ -763,6 +803,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T12:44:37.565240+00:00"
+    "generated_at": "2026-07-09T15:34:50.256864+00:00"
   }
 }
