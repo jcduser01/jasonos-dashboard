@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T12:44:28Z",
+  "generated_at": "2026-07-09T12:44:37Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -763,6 +763,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T12:44:28.379919+00:00"
+    "generated_at": "2026-07-09T12:44:37.565240+00:00"
   }
 }
