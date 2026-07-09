@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T04:03:16Z",
+  "generated_at": "2026-07-09T04:08:10Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-09T03:53:00Z",
-    "minutes_since_session": 10,
+    "last_session_date": "2026-07-09T04:10:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -355,6 +355,14 @@
         "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
         "stop_line": "",
         "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
+      },
+      {
+        "id": "GAP-074",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
+        "stop_line": "",
+        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
       }
     ],
     "fully_executable": [
@@ -373,6 +381,14 @@
         "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
         "stop_line": "",
         "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
+      },
+      {
+        "id": "GAP-074",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
+        "stop_line": "",
+        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -415,14 +431,6 @@
         "runner_scope": "(A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invokes the generator as `subproces",
         "stop_line": "None for (A)/(B) \u2014 a read-only environment probe and a fail-loud guard touch nothing on the authority/spend/commit path. **(C) is Steward-gated** if it resolves to a package install.",
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
-      },
-      {
-        "id": "GAP-074",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
-        "stop_line": "None \u2014 a test-harness change. It touches no authority, spend, commit, or deploy path.",
-        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -547,14 +555,6 @@
         "runner_scope": "(A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invokes the generator as `subproces",
         "stop_line": "None for (A)/(B) \u2014 a read-only environment probe and a fail-loud guard touch nothing on the authority/spend/commit path. **(C) is Steward-gated** if it resolves to a package install.",
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
-      },
-      {
-        "id": "GAP-074",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
-        "stop_line": "None \u2014 a test-harness change. It touches no authority, spend, commit, or deploy path.",
-        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -721,6 +721,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T04:03:16.611835+00:00"
+    "generated_at": "2026-07-09T04:08:10.732989+00:00"
   }
 }
