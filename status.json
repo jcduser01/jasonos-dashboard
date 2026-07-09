@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-08T22:31:50Z",
+  "generated_at": "2026-07-09T00:53:00Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
-    "done": 107,
+    "done": 108,
     "total": 124,
-    "active": 2,
+    "active": 1,
     "queued": 0,
     "paused": 7,
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-08T13:30:00Z",
-    "minutes_since_session": 541,
+    "last_session_date": "2026-07-09T00:55:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,16 +35,6 @@
         "route": "Operational",
         "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
-      }
-    },
-    {
-      "id": "INI-132",
-      "name": "Batch Execution Harness \u2014 Four-Role Adversarial Build Loop with Mechanical Gates and Batch-Class Profiles",
-      "status": "active",
-      "contract": {
-        "route": "Queue-ready",
-        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bundle \u2014 assemble the existing check-* scripts + a code-touched-implies-test-present-and-green check into one fail-closed promotion-gate stage that emits a machine-readable gate result), and Phase 2 (reviewer role \u2014 generalize the Security Steward dispatch pattern into an independent, clean-context code/doc reviewer emitting a structured verdict; validate it manually against the 2026-07-05 batch). Each phase stages one atomic commit and halts at its own stop-line. Phases 3\u20137 (promotion-policy PCR, orchestrator loop, admitter, engineer repackage, substrate promotion to autonomous) carry their own contracts below and are NOT part of this admissible slice \u2014 several halt at CEO/Steward gates by design.",
-        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-canonical for the routine class \u2014 a governance change to today's CEO-gated promotion); Phase 4 (orchestrator loop) and Phase 7 (substrate promotion to unattended mini) each halt at Security Steward review AND require the Phase 3 PCR published before any auto-commit path is enabled. The runner never enables autonomous canonical commit without those gates cleared."
       }
     }
   ],
@@ -94,12 +84,7 @@
     }
   ],
   "status_drift": [],
-  "category_drift": [
-    {
-      "id": "INI-132",
-      "category": "engineering"
-    }
-  ],
+  "category_drift": [],
   "contract_drift": [],
   "directors": [
     {
@@ -323,49 +308,43 @@
   },
   "batch_queue": [],
   "jasonos_work_readiness": {
-    "eligible_now": [],
-    "fully_executable": [],
-    "in_progress_not_ceo": [
-      {
-        "id": "GAP-029",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "add a workspace-trust establishment + verification step to the access-compiler deploy path (`operations/bin/jasonos-access-compiler.py` `write_jail`), plus a report-triage / Security-Steward check tha",
-        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy.",
-        "description": "Director subagent execution layer is blocked: jail workspaces are untrusted, so Claude Code\u2026"
-      },
+    "eligible_now": [
       {
         "id": "GAP-033",
         "type": "GAP",
         "route": "Operational",
         "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
-        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own",
+        "stop_line": "",
         "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
       },
       {
-        "id": "GAP-038",
+        "id": "GAP-070",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "diagnose why the dispatched `claude --agent security-steward` context lacks write to `/Volumes/SandboxData/Logs/` (FDA vs `--permission-mode`/allowed-tools vs writable-root scope); scope the minimal w",
-        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h",
-        "description": "A dispatched Security Steward cannot write its own review outputs to Logs/, forcing manual PA\u2026"
+        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
+        "stop_line": "",
+        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
+      }
+    ],
+    "fully_executable": [
+      {
+        "id": "GAP-033",
+        "type": "GAP",
+        "route": "Operational",
+        "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
+        "stop_line": "",
+        "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
       },
       {
-        "id": "GAP-039",
+        "id": "GAP-070",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "diagnose why the procedure is bypassable and un-enforced; draft the commit-time gate (pre-commit hook refusing a new `operations/bin/` file without a same-commit registry row) + the report-triage esca",
-        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi",
-        "description": "New automation can enter operations/bin/ without following the script-build-procedure runbook; the\u2026"
-      },
-      {
-        "id": "GAP-044",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Diagnose why the dispatcher's per-director advisory lock (`.agent-lock-<director>/`) and paired `.result` file are not cleaned up / finalized when the spawned `claude` subprocess exits abnormally (cra",
-        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and ",
-        "description": "JasonOS mkdir-based advisory locks have no orphan recovery when the owning process dies abnormally\u2026"
-      },
+        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
+        "stop_line": "",
+        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
+      }
+    ],
+    "in_progress_not_ceo": [
       {
         "id": "GAP-051",
         "type": "GAP",
@@ -381,14 +360,6 @@
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
         "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
-        "id": "GAP-055",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
-        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th",
-        "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
         "id": "GAP-065",
@@ -407,12 +378,44 @@
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
-        "id": "GAP-070",
-        "type": "GAP",
+        "id": "PCR-ENG-016",
+        "type": "PCR",
         "route": "Queue-ready",
-        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
-        "stop_line": "None hard \u2014 engineering-ready-bar. (No commit-path/deploy-path surface; the audit log is a Logs/ artifact, not versioned doctrine.) Decision at the ready bar.",
-        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
+        "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
+        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
+        "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
+      },
+      {
+        "id": "PCR-ENG-017",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Diagnose why each lock is not cleaned up on abnormal owner exit; implement a liveness-based startup/pre-acquire orphan-reap for `.agent-lock-<director>/` and `.git-relay-lock/`; guarantee a terminal `",
+        "stop_line": "The dispatcher process-supervision change and the relay lock change are Security-Steward-gated (they touch the dispatch mechanism and the commit path). Diagnosis and a fix draft are completable withou",
+        "description": "JasonOS mkdir-based advisory locks (agent-invocation dispatcher and git-relay) must self-recover\u2026"
+      },
+      {
+        "id": "PCR-GOV-006",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Dispose of items 1\u20134 (independent; any order, or split into per-item children). (1) retire the governance-repo proposal template + scrub PROP-intake references; (2) extend `jasonos-work-item-index-gen",
+        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring (and any commit/deploy-path change) is Steward-gated at execution; item 1's governance-repo edits go through the g",
+        "description": "Close out the INI-130 Phase-2 cleanup tail \u2014 retire the orphaned proposal template, generate the\u2026"
+      },
+      {
+        "id": "PCR-OPS-046",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
+        "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
+        "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
+      },
+      {
+        "id": "PCR-SEC-009",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Confirm the drafted `governance/access-manifest.yaml` `security-steward` grant is minimal and correct; obtain Security Steward review; re-run `jasonos-access-compiler.py` to deploy the regenerated jai",
+        "stop_line": "Audit-log integrity \u2014 this change must not touch the audit-log grant or enable history rewrite (it does not; append-only is delegated to GAP-070). Do not run the compiler to deploy until Security Stew",
+        "description": "Grant the dispatched Security Steward write access to its own review-output paths, and deploy the\u2026"
       },
       {
         "id": "INI-053",
@@ -459,46 +462,6 @@
     ],
     "partially_executable": [
       {
-        "id": "GAP-029",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "add a workspace-trust establishment + verification step to the access-compiler deploy path (`operations/bin/jasonos-access-compiler.py` `write_jail`), plus a report-triage / Security-Steward check tha",
-        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 stage + flag, do not deploy.",
-        "description": "Director subagent execution layer is blocked: jail workspaces are untrusted, so Claude Code\u2026"
-      },
-      {
-        "id": "GAP-033",
-        "type": "GAP",
-        "route": "Operational",
-        "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
-        "stop_line": "None \u2014 folder-state reconciliation and a corrected write to `session-handoff.md`; no code or policy change. (If item 3's cadence-strengthening is separately pursued, that follow-on would carry its own",
-        "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
-      },
-      {
-        "id": "GAP-038",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "diagnose why the dispatched `claude --agent security-steward` context lacks write to `/Volumes/SandboxData/Logs/` (FDA vs `--permission-mode`/allowed-tools vs writable-root scope); scope the minimal w",
-        "stop_line": "audit-log integrity \u2014 granting the Steward write to its own audit log must preserve append-only semantics and audit independence; if the fix would let the Steward rewrite history rather than append, h",
-        "description": "A dispatched Security Steward cannot write its own review outputs to Logs/, forcing manual PA\u2026"
-      },
-      {
-        "id": "GAP-039",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "diagnose why the procedure is bypassable and un-enforced; draft the commit-time gate (pre-commit hook refusing a new `operations/bin/` file without a same-commit registry row) + the report-triage esca",
-        "stop_line": "the pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live; the backfill registration and the runbook-wiring are completable wi",
-        "description": "New automation can enter operations/bin/ without following the script-build-procedure runbook; the\u2026"
-      },
-      {
-        "id": "GAP-044",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Diagnose why the dispatcher's per-director advisory lock (`.agent-lock-<director>/`) and paired `.result` file are not cleaned up / finalized when the spawned `claude` subprocess exits abnormally (cra",
-        "stop_line": "The dispatcher's process-supervision/lock-lifecycle change is Security-Steward-gated (same class of change GAP-038's fix required review for \u2014 it touches the dispatch mechanism itself). Diagnosis and ",
-        "description": "JasonOS mkdir-based advisory locks have no orphan recovery when the owning process dies abnormally\u2026"
-      },
-      {
         "id": "GAP-051",
         "type": "GAP",
         "route": "Queue-ready",
@@ -513,14 +476,6 @@
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
         "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
-        "id": "GAP-055",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Dispose of each enumerated item below. They are independent and can be closed in any order (or split into per-item children if preferred); this gap is the tracking parent so none is forgotten. For eac",
-        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring and any change touching commit/deploy paths are Steward-gated at execution; item 1's governance-repo edits land th",
-        "description": "INI-130 Phase 2 left a set of orphaned artifacts and named follow-ons (retired-PROP template\u2026"
       },
       {
         "id": "GAP-065",
@@ -539,12 +494,44 @@
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
-        "id": "GAP-070",
-        "type": "GAP",
+        "id": "PCR-ENG-016",
+        "type": "PCR",
         "route": "Queue-ready",
-        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
-        "stop_line": "None hard \u2014 engineering-ready-bar. (No commit-path/deploy-path surface; the audit log is a Logs/ artifact, not versioned doctrine.) Decision at the ready bar.",
-        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
+        "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
+        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
+        "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
+      },
+      {
+        "id": "PCR-ENG-017",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Diagnose why each lock is not cleaned up on abnormal owner exit; implement a liveness-based startup/pre-acquire orphan-reap for `.agent-lock-<director>/` and `.git-relay-lock/`; guarantee a terminal `",
+        "stop_line": "The dispatcher process-supervision change and the relay lock change are Security-Steward-gated (they touch the dispatch mechanism and the commit path). Diagnosis and a fix draft are completable withou",
+        "description": "JasonOS mkdir-based advisory locks (agent-invocation dispatcher and git-relay) must self-recover\u2026"
+      },
+      {
+        "id": "PCR-GOV-006",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Dispose of items 1\u20134 (independent; any order, or split into per-item children). (1) retire the governance-repo proposal template + scrub PROP-intake references; (2) extend `jasonos-work-item-index-gen",
+        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring (and any commit/deploy-path change) is Steward-gated at execution; item 1's governance-repo edits go through the g",
+        "description": "Close out the INI-130 Phase-2 cleanup tail \u2014 retire the orphaned proposal template, generate the\u2026"
+      },
+      {
+        "id": "PCR-OPS-046",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
+        "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
+        "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
+      },
+      {
+        "id": "PCR-SEC-009",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Confirm the drafted `governance/access-manifest.yaml` `security-steward` grant is minimal and correct; obtain Security Steward review; re-run `jasonos-access-compiler.py` to deploy the regenerated jai",
+        "stop_line": "Audit-log integrity \u2014 this change must not touch the audit-log grant or enable history rewrite (it does not; append-only is delegated to GAP-070). Do not run the compiler to deploy until Security Stew",
+        "description": "Grant the dispatched Security Steward write access to its own review-output paths, and deploy the\u2026"
       },
       {
         "id": "INI-053",
@@ -645,23 +632,9 @@
         "route": "CEO-first",
         "runner_scope": "",
         "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-si"
-      },
-      {
-        "id": "INI-132",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "The completable, non-CEO-gated foundation: Phase 0 (substrate capability spike \u2014 probe whether the mini's dispatch/execution layer can select a model tier per invocation), Phase 1 (mechanical gate bun",
-        "stop_line": "Multiple, per phase (see per-phase contracts). The load-bearing halts: Phase 3's batch-class promotion-policy amendment is Draft-only and halts at awaiting-ceo-decision (it authorizes auto-commit-to-c"
       }
     ],
     "not_executable_leading_stop": [
-      {
-        "id": "REM-035",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "The interim remediation (revert to CEO CSV-export intake across the agent def, capability doc, scheduled task, intake folder, and renderer) is already executed this session. What remains is external a"
-      },
       {
         "id": "REM-036",
         "type": "REM",
@@ -685,6 +658,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-08T22:31:50.711587+00:00"
+    "generated_at": "2026-07-09T00:53:00.690848+00:00"
   }
 }
