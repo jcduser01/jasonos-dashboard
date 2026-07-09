@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-09T02:13:10Z",
+  "generated_at": "2026-07-09T02:14:56Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
     "done": 108,
     "total": 124,
-    "active": 1,
+    "active": 0,
     "queued": 0,
-    "paused": 7,
+    "paused": 8,
     "backlog": 8
   },
   "operational": {
@@ -16,28 +16,8 @@
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-111",
-    "name": "Venture Opportunity Engine",
-    "status": "active",
-    "contract": {
-      "route": "Operational",
-      "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
-      "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
-    }
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-111",
-      "name": "Venture Opportunity Engine",
-      "status": "active",
-      "contract": {
-        "route": "Operational",
-        "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
-        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
-      }
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [],
   "ceo_actions": [
     {
@@ -182,6 +162,16 @@
       }
     ],
     "infrastructure": [
+      {
+        "id": "INI-111",
+        "name": "Venture Opportunity Engine",
+        "notes": "Phase 2 built + ACTIVATED 2026-07-02 (schema + append-only decision ledger + sam.gov adapter + launchd poller; 59 tests green; Security Steward review PASS). CEO added the API key + ran activation\u2026",
+        "contract": {
+          "route": "Operational",
+          "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
+          "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
+        }
+      },
       {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
@@ -719,6 +709,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T02:13:10.471248+00:00"
+    "generated_at": "2026-07-09T02:14:57.022874+00:00"
   }
 }
