@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T02:22:02Z",
+  "generated_at": "2026-07-09T04:03:06Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-09T02:15:00Z",
-    "minutes_since_session": 7,
+    "last_session_date": "2026-07-09T03:53:00Z",
+    "minutes_since_session": 10,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -299,46 +299,42 @@
   "batch_queue": [
     {
       "position": 1,
-      "id": "GAP-071"
-    },
-    {
-      "position": 2,
       "id": "GAP-070"
     },
     {
-      "position": 3,
+      "position": 2,
       "id": "GAP-066"
     },
     {
-      "position": 4,
+      "position": 3,
       "id": "PCR-SEC-009"
     },
     {
-      "position": 5,
+      "position": 4,
       "id": "GAP-065"
     },
     {
-      "position": 6,
+      "position": 5,
       "id": "PCR-ENG-017"
     },
     {
-      "position": 7,
+      "position": 6,
       "id": "GAP-052"
     },
     {
-      "position": 8,
+      "position": 7,
       "id": "GAP-051"
     },
     {
-      "position": 9,
+      "position": 8,
       "id": "PCR-OPS-046"
     },
     {
-      "position": 10,
+      "position": 9,
       "id": "PCR-GOV-006"
     },
     {
-      "position": 11,
+      "position": 10,
       "id": "GAP-033"
     }
   ],
@@ -413,12 +409,20 @@
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
-        "id": "GAP-071",
+        "id": "GAP-073",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "~16 tests in the **top-level** `operations/bin/test_*.py` (NOT `operations/bin/tests/`) fail (4 failures + 12 errors as of 2026-07-08). Two classes: (1) **stale-API tests** \u2014 `test_drive_backup_mirror",
-        "stop_line": "None hard \u2014 engineering-ready-bar. (If the blog fix chooses to install `markdown`, that package install needs Security Steward clearance; the skip-on-missing-dep alternative avoids it.) Decision at th",
-        "description": "Top-level operations/bin/test_*.py repo-health failures (drive-backup stale-API tests + blog\u2026"
+        "runner_scope": "(A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invokes the generator as `subproces",
+        "stop_line": "None for (A)/(B) \u2014 a read-only environment probe and a fail-loud guard touch nothing on the authority/spend/commit path. **(C) is Steward-gated** if it resolves to a package install.",
+        "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
+      },
+      {
+        "id": "GAP-074",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
+        "stop_line": "None \u2014 a test-harness change. It touches no authority, spend, commit, or deploy path.",
+        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -537,12 +541,20 @@
         "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
-        "id": "GAP-071",
+        "id": "GAP-073",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "~16 tests in the **top-level** `operations/bin/test_*.py` (NOT `operations/bin/tests/`) fail (4 failures + 12 errors as of 2026-07-08). Two classes: (1) **stale-API tests** \u2014 `test_drive_backup_mirror",
-        "stop_line": "None hard \u2014 engineering-ready-bar. (If the blog fix chooses to install `markdown`, that package install needs Security Steward clearance; the skip-on-missing-dep alternative avoids it.) Decision at th",
-        "description": "Top-level operations/bin/test_*.py repo-health failures (drive-backup stale-API tests + blog\u2026"
+        "runner_scope": "(A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invokes the generator as `subproces",
+        "stop_line": "None for (A)/(B) \u2014 a read-only environment probe and a fail-loud guard touch nothing on the authority/spend/commit path. **(C) is Steward-gated** if it resolves to a package install.",
+        "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
+      },
+      {
+        "id": "GAP-074",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
+        "stop_line": "None \u2014 a test-harness change. It touches no authority, spend, commit, or deploy path.",
+        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -709,6 +721,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T02:22:02.304611+00:00"
+    "generated_at": "2026-07-09T04:03:06.123480+00:00"
   }
 }
