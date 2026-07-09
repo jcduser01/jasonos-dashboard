@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T15:34:49Z",
+  "generated_at": "2026-07-09T17:34:41Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-09T04:37:15Z",
-    "minutes_since_session": 657,
+    "minutes_since_session": 777,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -781,6 +781,14 @@
     ],
     "not_executable_leading_stop": [
       {
+        "id": "PCR-SEC-010",
+        "type": "PCR",
+        "route": "CEO decision \u2192 doctrine edit in the Governance repo",
+        "runner_scope": "",
+        "stop_line": "This PCR must be ratified before the GAP-070 manifest change is deployed via `jasonos-access-compiler.py`; otherwise the enforced grant contradicts live doctrine.",
+        "description": "Reconcile capabilities/security-audit.md with the GAP-070 inbox model \u2014 the Steward no longer\u2026"
+      },
+      {
         "id": "REM-036",
         "type": "REM",
         "route": "Operational",
@@ -802,7 +810,14 @@
         "stop_line": "Blocked by INI-072 (Chapter Map & Dossier Architecture), which identifies the keystone chapters this pass calibrates against and is itself Paused. The work is also CEO-authored creative prose (the CEO"
       }
     ],
-    "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T15:34:50.256864+00:00"
+    "contract_quality_gaps": [
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-SEC-010-audit-log-append-only-via-inbox-reconcile-capability-policy.md",
+        "category": "pcr-open"
+      }
+    ],
+    "generated_at": "2026-07-09T17:34:42.008566+00:00"
   }
 }
