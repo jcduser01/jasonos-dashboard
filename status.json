@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T04:08:21Z",
+  "generated_at": "2026-07-09T04:38:08Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-09T04:10:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 28,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -433,6 +433,14 @@
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
       },
       {
+        "id": "GAP-075",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Make `classify()` in `operations/bin/jasonos-batch-admitter.py` (and `steward_gated` in `operations/bin/jasonos-work-item-runner.py`) discriminate along three axes it currently ignores, without weaken",
+        "stop_line": "Security Steward review before the classifier change is merged to canonical. This item modifies `jasonos-batch-admitter.py` \u2014 relay/commit-path machinery by name \u2014 and changes the assignment of the cl",
+        "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -557,6 +565,14 @@
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
       },
       {
+        "id": "GAP-075",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Make `classify()` in `operations/bin/jasonos-batch-admitter.py` (and `steward_gated` in `operations/bin/jasonos-work-item-runner.py`) discriminate along three axes it currently ignores, without weaken",
+        "stop_line": "Security Steward review before the classifier change is merged to canonical. This item modifies `jasonos-batch-admitter.py` \u2014 relay/commit-path machinery by name \u2014 and changes the assignment of the cl",
+        "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -641,6 +657,14 @@
     ],
     "blocked_needs_decision": [
       {
+        "id": "PCR-OPS-047",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "",
+        "stop_line": "`awaiting-ceo-decision`. The runner drafts and halts. No code, no arming, no scope change is enacted by this document.",
+        "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
+      },
+      {
         "id": "INI-011",
         "type": "INI",
         "route": "CEO-first",
@@ -721,6 +745,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-09T04:08:21.211555+00:00"
+    "generated_at": "2026-07-09T04:38:08.041031+00:00"
   }
 }
