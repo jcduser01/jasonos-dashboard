@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T23:34:43Z",
+  "generated_at": "2026-07-10T01:34:43Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-09T04:37:15Z",
-    "minutes_since_session": 1137,
+    "minutes_since_session": 1257,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -106,8 +106,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-09T17:45:32Z",
-      "invocations_30d": 20
+      "last_active": "2026-07-09T20:05:35Z",
+      "invocations_30d": 22
     },
     {
       "name": "research-director",
@@ -367,14 +367,6 @@
         "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
       },
       {
-        "id": "GAP-070",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
-        "stop_line": "",
-        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
-      },
-      {
         "id": "GAP-074",
         "type": "GAP",
         "route": "Queue-ready",
@@ -391,14 +383,6 @@
         "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
         "stop_line": "",
         "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
-      },
-      {
-        "id": "GAP-070",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`Logs/security-steward-audit-log.md` reached ~1000 lines / ~44K tokens as of 2026-07-08. The Security Steward runs as a subagent with a bounded output-token budget; it appends its per-review entry by ",
-        "stop_line": "",
-        "description": "The Security Steward audit log has grown too large for the Steward subagent to append atomically\u2026"
       },
       {
         "id": "GAP-074",
@@ -505,14 +489,6 @@
         "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
         "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
         "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
-      },
-      {
-        "id": "PCR-SEC-009",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Confirm the drafted `governance/access-manifest.yaml` `security-steward` grant is minimal and correct; obtain Security Steward review; re-run `jasonos-access-compiler.py` to deploy the regenerated jai",
-        "stop_line": "Audit-log integrity \u2014 this change must not touch the audit-log grant or enable history rewrite (it does not; append-only is delegated to GAP-070). Do not run the compiler to deploy until Security Stew",
-        "description": "Grant the dispatched Security Steward write access to its own review-output paths, and deploy the\u2026"
       },
       {
         "id": "INI-053",
@@ -655,14 +631,6 @@
         "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
       },
       {
-        "id": "PCR-SEC-009",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Confirm the drafted `governance/access-manifest.yaml` `security-steward` grant is minimal and correct; obtain Security Steward review; re-run `jasonos-access-compiler.py` to deploy the regenerated jai",
-        "stop_line": "Audit-log integrity \u2014 this change must not touch the audit-log grant or enable history rewrite (it does not; append-only is delegated to GAP-070). Do not run the compiler to deploy until Security Stew",
-        "description": "Grant the dispatched Security Steward write access to its own review-output paths, and deploy the\u2026"
-      },
-      {
         "id": "INI-053",
         "type": "INI",
         "route": "Queue-ready",
@@ -781,12 +749,36 @@
     ],
     "not_executable_leading_stop": [
       {
-        "id": "PCR-SEC-010",
-        "type": "PCR",
-        "route": "CEO decision \u2192 doctrine edit in the Governance repo",
+        "id": "GAP-079",
+        "type": "GAP",
+        "route": "Queue-ready",
         "runner_scope": "",
-        "stop_line": "This PCR must be ratified before the GAP-070 manifest change is deployed via `jasonos-access-compiler.py`; otherwise the enforced grant contradicts live doctrine.",
-        "description": "Reconcile capabilities/security-audit.md with the GAP-070 inbox model \u2014 the Steward no longer\u2026"
+        "stop_line": "",
+        "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
+      },
+      {
+        "id": "GAP-080",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "jasonos-access-compiler.py reports every jail untrusted when run from its canonical repo path, and\u2026"
+      },
+      {
+        "id": "GAP-081",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "A dispatched Security Steward filed a capability review asserting a file write that had failed"
+      },
+      {
+        "id": "GAP-082",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
       },
       {
         "id": "REM-036",
@@ -814,10 +806,52 @@
       {
         "type": "missing_scope",
         "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-SEC-010-audit-log-append-only-via-inbox-reconcile-capability-policy.md",
-        "category": "pcr-open"
+        "file": "governance/gaps/open/GAP-079-write-grant-without-edit-grant-is-silently-refused.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/gaps/open/GAP-079-write-grant-without-edit-grant-is-silently-refused.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-080-access-compiler-reports-false-untrusted-jails-from-repo-path.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/gaps/open/GAP-080-access-compiler-reports-false-untrusted-jails-from-repo-path.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-081-security-steward-filed-a-capability-review-asserting-a-write-that-failed.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/gaps/open/GAP-081-security-steward-filed-a-capability-review-asserting-a-write-that-failed.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-082-relay-push-canonical-unusable-on-single-origin-repos-and-silently-mislabels.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/gaps/open/GAP-082-relay-push-canonical-unusable-on-single-origin-repos-and-silently-mislabels.md",
+        "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-09T23:34:43.050899+00:00"
+    "generated_at": "2026-07-10T01:34:43.232352+00:00"
   }
 }
