@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T02:50:10Z",
+  "generated_at": "2026-07-10T03:23:05Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,9 +11,9 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-09T20:30:00Z",
-    "minutes_since_session": 380,
-    "airlock_queue": 1,
+    "last_session_date": "2026-07-09T21:55:00Z",
+    "minutes_since_session": 328,
+    "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": null,
@@ -83,20 +83,26 @@
     {
       "id": "ACT-HO-11",
       "category": "required",
-      "label": "Sync the deployed weekly Steward prompt.",
-      "context": "~/Claude/Scheduled/jasonos-security-steward-review/SKILL.md still says \"Append a structured compliance summary to securi"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
       "label": "Re-run the pre-rotation Drive copy \u2014 the first run uploaded the wrong file.",
       "context": "CEO ran it 2026-07-10 01:41 UTC; it succeeded and produced gap070-pre-rotation-security-steward-audit-log-2026-07-10.md,"
     },
     {
-      "id": "ACT-HO-13",
+      "id": "ACT-HO-12",
       "category": "required",
       "label": "Live audit-log header corrected.",
       "context": "It still directed the Steward to the dead security-steward-audit/inbox/ path; now points at Logs/steward-audit-inbox/."
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "Re-run the pre-rotation Drive copy",
+      "context": "with the corrected config; expect \"files_included\": 2 and a snapshot over 130KB. Then delete or retitle the mislabelled "
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Sweep Logs/.projection-dirty/",
+      "context": "of the 16 never-consumed signal files."
     }
   ],
   "status_drift": [],
@@ -469,6 +475,30 @@
         "description": "close-staged reports success without deleting the remote lane ref whenever the local branch is\u2026"
       },
       {
+        "id": "GAP-079",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Determine the actual matcher rule \u2014 whether a Claude Code `Write` permission genuinely requires a paired `Edit` allow rule, or whether something narrower is happening. Four hypotheses were tried and r",
+        "stop_line": "The compiler change is a **deploy-path** change to director access provisioning. Build, test, and stage; halt before re-running the compiler against live jails, dispatch the Security Steward, and depl",
+        "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
+      },
+      {
+        "id": "GAP-080",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Resolve `ACCESS_ROOT` from the volume root rather than from the script's own location \u2014 via `Logs/.jasonos-repo-map` or the manifest's `volume_root`, which are already the declared sources of truth fo",
+        "stop_line": "Engineering ready-bar for the path-resolution and fail-loud changes (read-only diagnostics, no grant change). **Halt and dispatch the Steward** before any change that alters what the compiler *writes*",
+        "description": "jasonos-access-compiler.py reports every jail untrusted when run from its canonical repo path, and\u2026"
+      },
+      {
+        "id": "GAP-082",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Make `push: canonical` on a single-origin repo either resolve to the origin push path \u2014 `origin` *is* canonical \u2014 or reject **before the commit is created**, never after. (2) Emit one unambiguous ",
+        "stop_line": "`jasonos-git-relay.sh` and `commit_via_relay.py` are the **commit/push path**. Build, test, and stage; halt before promoting, dispatch the Security Steward, and deploy Mac-side on CLEAR \u2014 same discipl",
+        "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -609,6 +639,30 @@
         "description": "close-staged reports success without deleting the remote lane ref whenever the local branch is\u2026"
       },
       {
+        "id": "GAP-079",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Determine the actual matcher rule \u2014 whether a Claude Code `Write` permission genuinely requires a paired `Edit` allow rule, or whether something narrower is happening. Four hypotheses were tried and r",
+        "stop_line": "The compiler change is a **deploy-path** change to director access provisioning. Build, test, and stage; halt before re-running the compiler against live jails, dispatch the Security Steward, and depl",
+        "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
+      },
+      {
+        "id": "GAP-080",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Resolve `ACCESS_ROOT` from the volume root rather than from the script's own location \u2014 via `Logs/.jasonos-repo-map` or the manifest's `volume_root`, which are already the declared sources of truth fo",
+        "stop_line": "Engineering ready-bar for the path-resolution and fail-loud changes (read-only diagnostics, no grant change). **Halt and dispatch the Steward** before any change that alters what the compiler *writes*",
+        "description": "jasonos-access-compiler.py reports every jail untrusted when run from its canonical repo path, and\u2026"
+      },
+      {
+        "id": "GAP-082",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Make `push: canonical` on a single-origin repo either resolve to the origin push path \u2014 `origin` *is* canonical \u2014 or reject **before the commit is created**, never after. (2) Emit one unambiguous ",
+        "stop_line": "`jasonos-git-relay.sh` and `commit_via_relay.py` are the **commit/push path**. Build, test, and stage; halt before promoting, dispatch the Security Steward, and deploy Mac-side on CLEAR \u2014 same discipl",
+        "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -685,6 +739,14 @@
     ],
     "blocked_needs_decision": [
       {
+        "id": "GAP-081",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Amend the Steward's review discipline in `capabilities/security-audit.md` \u00a7 Review Output Requirements and in the dispatch prompt template: a disposition may state that a file was written **only** if ",
+        "stop_line": "This amends the Security Steward's own capability policy, which the Steward may not self-authorize (`capabilities/security-audit.md` \u00a7 Prohibited Actions) and which no autonomy tier lets the President",
+        "description": "A dispatched Security Steward filed a capability review asserting a file write that had failed"
+      },
+      {
         "id": "PCR-OPS-047",
         "type": "PCR",
         "route": "Draft-only",
@@ -759,38 +821,6 @@
     ],
     "not_executable_leading_stop": [
       {
-        "id": "GAP-079",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
-      },
-      {
-        "id": "GAP-080",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "jasonos-access-compiler.py reports every jail untrusted when run from its canonical repo path, and\u2026"
-      },
-      {
-        "id": "GAP-081",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "A dispatched Security Steward filed a capability review asserting a file write that had failed"
-      },
-      {
-        "id": "GAP-082",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
-      },
-      {
         "id": "REM-036",
         "type": "REM",
         "route": "Operational",
@@ -812,56 +842,7 @@
         "stop_line": "Blocked by INI-072 (Chapter Map & Dossier Architecture), which identifies the keystone chapters this pass calibrates against and is itself Paused. The work is also CEO-authored creative prose (the CEO"
       }
     ],
-    "contract_quality_gaps": [
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-079-write-grant-without-edit-grant-is-silently-refused.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-079-write-grant-without-edit-grant-is-silently-refused.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-080-access-compiler-reports-false-untrusted-jails-from-repo-path.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-080-access-compiler-reports-false-untrusted-jails-from-repo-path.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-081-security-steward-filed-a-capability-review-asserting-a-write-that-failed.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-081-security-steward-filed-a-capability-review-asserting-a-write-that-failed.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-082-relay-push-canonical-unusable-on-single-origin-repos-and-silently-mislabels.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-082-relay-push-canonical-unusable-on-single-origin-repos-and-silently-mislabels.md",
-        "category": "gap-open"
-      }
-    ],
-    "generated_at": "2026-07-10T02:50:10.101137+00:00"
+    "contract_quality_gaps": [],
+    "generated_at": "2026-07-10T03:23:06.008113+00:00"
   }
 }
