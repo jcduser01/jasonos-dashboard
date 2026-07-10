@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T06:06:44Z",
+  "generated_at": "2026-07-10T07:50:47Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-10T04:45:00Z",
-    "minutes_since_session": 81,
+    "last_session_date": "2026-07-10T18:20:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -23,86 +23,62 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Provision the privacy.com card for the Venture engine \u2014 when the first paid dependency lands (deferred by CEO).",
-      "context": "Recommended settings: per-transaction $50, monthly ceiling $500 (coarse backstop; engine policy enforces the true rollin"
+      "label": "Re-arm routine-class auto-commit?",
+      "context": "batch-class-profiles.json has auto_commit_globally_armed: false, and the com.jasonos.batch-run plist is removed from ~/L"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Take the staged sam.gov poller live \u2014 obtain a sam.gov API key.",
-      "context": "Register/log into a SAM.gov account \u2192 Account Details \u2192 generate key; associate the account with a registered entity to "
+      "label": "Concentration-risk rule",
+      "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Medical/financial power of attorney check",
-      "context": "separate documents from the will/beneficiary (which CEO confirmed are fine as-is); currency not yet confirmed. No urgenc"
+      "label": "Medical/financial power of attorney",
+      "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "Concentration-risk rule",
-      "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's own operating model. Open, not prioritized; no a"
+      "label": "(parked)",
+      "context": "Canonize UX best-practices into a JasonOS KB wiki article \u2014 externalize the CEO's UX-career expertise into org knowledge"
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "(parked idea) Canonize UX best-practices into a JasonOS KB wiki article",
-      "context": "externalize the CEO's UX-career expertise into org knowledge; propose at a natural moment, not urgent."
+      "label": "(long-horizon)",
+      "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if a JasonOS domain identity earns its keep."
     },
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "Double-check recently-created operations/bin/ scripts are in the script registry",
-      "context": "check-script-registry-coverage.py Direction 1 currently flags two unregistered scripts, jasonos-cockpit-app.py and jason"
+      "label": "Re-run the pre-rotation Drive copy",
+      "context": "with the corrected temp/gap070-pre-rotation-backup.yaml. Expect files_included: 2 and a snapshot over 130 KB. The 2026-0"
     },
     {
       "id": "ACT-HO-7",
       "category": "required",
-      "label": "(Long-horizon)",
-      "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if/when a JasonOS domain identity earns its k"
+      "label": "Delete the overnight-engineering-runner schedule entry",
+      "context": "in Claude Desktop \u2192 Scheduled tasks. Its body and tracked asset are removed; the trigger lives in the app's own store, n"
     },
     {
       "id": "ACT-HO-8",
       "category": "required",
-      "label": "Decide PCR-OPS-047",
-      "context": "`governance/pcrs/open/`, Draft \u2014 Pending CEO Review"
+      "label": "Sweep Logs/.projection-dirty/",
+      "context": "16 signal files lack the .dirty suffix the publisher's find -name '*.dirty' consumes. They still fire the WatchPath, so "
     },
     {
       "id": "ACT-HO-9",
-      "category": "confirm",
-      "label": "Review the 02:00 batch run.",
-      "context": "Ten mission-critical items will build, adversarially review, stage, and hold. Nothing promotes. Expect a run report per "
+      "category": "required",
+      "label": "sam.gov API key",
+      "context": "register/log in \u2192 Account Details \u2192 generate key, and associate the account with a registered entity for the usable ~1,0"
     },
     {
       "id": "ACT-HO-10",
       "category": "required",
-      "label": "Delete the overnight-engineering-runner schedule entry",
-      "context": "in the Claude Desktop scheduler UI. The task body and its tracked asset are removed, but the trigger lives in the app's "
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "Re-run the pre-rotation Drive copy \u2014 the first run uploaded the wrong file.",
-      "context": "CEO ran it 2026-07-10 01:41 UTC; it succeeded and produced gap070-pre-rotation-security-steward-audit-log-2026-07-10.md,"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "Live audit-log header corrected.",
-      "context": "It still directed the Steward to the dead security-steward-audit/inbox/ path; now points at Logs/steward-audit-inbox/."
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "required",
-      "label": "Re-run the pre-rotation Drive copy",
-      "context": "with the corrected config; expect \"files_included\": 2 and a snapshot over 130KB. Then delete or retitle the mislabelled "
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "Sweep Logs/.projection-dirty/",
-      "context": "of the 16 never-consumed signal files."
+      "label": "privacy.com card for the Venture engine",
+      "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
     }
   ],
   "status_drift": [],
@@ -375,38 +351,22 @@
   "jasonos_work_readiness": {
     "eligible_now": [
       {
-        "id": "GAP-033",
-        "type": "GAP",
-        "route": "Operational",
-        "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
-        "stop_line": "",
-        "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
-      },
-      {
-        "id": "GAP-074",
+        "id": "GAP-087",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
+        "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
         "stop_line": "",
-        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
+        "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
       }
     ],
     "fully_executable": [
       {
-        "id": "GAP-033",
-        "type": "GAP",
-        "route": "Operational",
-        "runner_scope": "Run a full reconciliation pass per `operations/ceo-decision-surfacing-runbook.md` \u00a7 Reconciliation against current folder-state (open PCRs, open gaps, remediation register, portfolio `ceo_action` fiel",
-        "stop_line": "",
-        "description": "session-handoff.md CEO Actions Required block has drifted stale against folder-state"
-      },
-      {
-        "id": "GAP-074",
+        "id": "GAP-087",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "`operations/bin/tests/test_worktree_isolation_gap067.py::TestGap067IsolationInvariant::test_concurrent_worktree_commits_do_not_corrupt_repo` starts two threads that each build a git worktree of a shar",
+        "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
         "stop_line": "",
-        "description": "test_concurrent_worktree_commits_do_not_corrupt_repo flakes ~17% on a git config lock race, inside\u2026"
+        "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -499,6 +459,30 @@
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
       },
       {
+        "id": "GAP-084",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Author the review-type template registry in `operations/steward-review-runbook.md` \u2014 a version-controlled table mapping each review type to its required outputs. (2) Extend the Steward dispatch to",
+        "stop_line": "Halt before go-live pending Security Steward review, per the step-2c/2d/2e/2f wire-in precedent. As with PCR-SEC-011, note the reflexivity: the Steward reviews a control over its own review contract, ",
+        "description": "A capability review's output declaration is self-reported, so a silently omitted required output\u2026"
+      },
+      {
+        "id": "GAP-085",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Repoint `read_remediation_open()` in `bin/jasonos-status-generator.py` at the per-entry directory `Logs/remediation/REM-*.md` (the INI-115 system of record) instead of `_read_remediation_open_lega",
+        "stop_line": "None for (1), (2), (4). Halt at (3) if reconciling the two surfaces requires changing what counts as \"a CEO decision is pending\" \u2014 that is a definition question that belongs to the CEO and to `operati",
+        "description": "The dashboard's CEO-actions Source C silently returns zero remediation entries, so no REM has ever\u2026"
+      },
+      {
+        "id": "GAP-086",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend `operations/bin/check-steward-audit-log-size.py` so a **stuck** inbox entry is a defect independent of the 5-entry volume threshold: (a) an entry the compactor has actively rejected (compactor ",
+        "stop_line": "Halt before changing the compactor's ingress validator or the required frontmatter schema. Widening what the compactor accepts is a separate decision (it was REM-051 Option 2, not chosen) and is Secur",
+        "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -529,14 +513,6 @@
         "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
         "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
         "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
-      },
-      {
-        "id": "PCR-SEC-011",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "Build the CAP-REV output-declaration schema, the `check-cap-rev-write-claims.py` checker, its regression suite, its script-registry row, and the report-triage step-2f wire-in text \u2014 all staged, not de",
-        "stop_line": "The three doctrine edits (Changes 1\u20133) amend `capabilities/security-audit.md` and `agents/security-steward.md`. The Steward may not self-authorize its own capability policy (`capabilities/security-aud",
-        "description": "A capability review may not assert a write it did not perform \u2014 declared outputs, an INCOMPLETE\u2026"
       },
       {
         "id": "INI-053",
@@ -671,6 +647,30 @@
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
       },
       {
+        "id": "GAP-084",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Author the review-type template registry in `operations/steward-review-runbook.md` \u2014 a version-controlled table mapping each review type to its required outputs. (2) Extend the Steward dispatch to",
+        "stop_line": "Halt before go-live pending Security Steward review, per the step-2c/2d/2e/2f wire-in precedent. As with PCR-SEC-011, note the reflexivity: the Steward reviews a control over its own review contract, ",
+        "description": "A capability review's output declaration is self-reported, so a silently omitted required output\u2026"
+      },
+      {
+        "id": "GAP-085",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) Repoint `read_remediation_open()` in `bin/jasonos-status-generator.py` at the per-entry directory `Logs/remediation/REM-*.md` (the INI-115 system of record) instead of `_read_remediation_open_lega",
+        "stop_line": "None for (1), (2), (4). Halt at (3) if reconciling the two surfaces requires changing what counts as \"a CEO decision is pending\" \u2014 that is a definition question that belongs to the CEO and to `operati",
+        "description": "The dashboard's CEO-actions Source C silently returns zero remediation entries, so no REM has ever\u2026"
+      },
+      {
+        "id": "GAP-086",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend `operations/bin/check-steward-audit-log-size.py` so a **stuck** inbox entry is a defect independent of the 5-entry volume threshold: (a) an entry the compactor has actively rejected (compactor ",
+        "stop_line": "Halt before changing the compactor's ingress validator or the required frontmatter schema. Widening what the compactor accepts is a separate decision (it was REM-051 Option 2, not chosen) and is Secur",
+        "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -701,14 +701,6 @@
         "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
         "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
         "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
-      },
-      {
-        "id": "PCR-SEC-011",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "Build the CAP-REV output-declaration schema, the `check-cap-rev-write-claims.py` checker, its regression suite, its script-registry row, and the report-triage step-2f wire-in text \u2014 all staged, not de",
-        "stop_line": "The three doctrine edits (Changes 1\u20133) amend `capabilities/security-audit.md` and `agents/security-steward.md`. The Steward may not self-authorize its own capability policy (`capabilities/security-aud",
-        "description": "A capability review may not assert a write it did not perform \u2014 declared outputs, an INCOMPLETE\u2026"
       },
       {
         "id": "INI-053",
@@ -755,14 +747,6 @@
     ],
     "blocked_needs_decision": [
       {
-        "id": "GAP-084",
-        "type": "GAP",
-        "route": "CEO-first",
-        "runner_scope": "None until the schema question below is decided. No completable prep slice \u2014 designing the expected-output manifest *is* the decision.",
-        "stop_line": "Halt at the schema design. Do not extend `check-cap-rev-write-claims.py` to enforce an expected-output manifest before the CEO has decided whether dispatches carry one and who authors it.",
-        "description": "A capability review's output declaration is self-reported, so a silently omitted required output\u2026"
-      },
-      {
         "id": "PCR-OPS-047",
         "type": "PCR",
         "route": "Draft-only",
@@ -777,6 +761,20 @@
         "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
         "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
         "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+      },
+      {
+        "id": "REM-052",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "None \u2014 no option is chosen yet. Per PCR-GOV-005 decision E (leading-stop rule), a REM's runner scope stays a bare `None` until the CEO marks a `Chosen option`.",
+        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate. Both sit on the commit path and are Security-Steward-gated. Unblocked by the CEO's option selection."
+      },
+      {
+        "id": "REM-053",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "None until an option is chosen. Per PCR-GOV-005 decision E (leading-stop rule), a REM's runner scope stays a bare `None` until the CEO marks a `Chosen option`. Steps A1\u2013A3 (bundle, upload, verify) are",
+        "stop_line": "**Halt before `rm`.** Deletion proceeds only after (1) the CEO has marked a chosen option, and (2) for Option A/B, the preserved copy has been *verified restorable* \u2014 a bundle that was created is not "
       },
       {
         "id": "INI-011",
@@ -844,13 +842,6 @@
         "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs"
       },
       {
-        "id": "REM-051",
-        "type": "REM",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": ""
-      },
-      {
         "id": "INI-072",
         "type": "INI",
         "route": "Operational",
@@ -866,6 +857,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T06:06:44.897087+00:00"
+    "generated_at": "2026-07-10T07:50:47.941205+00:00"
   }
 }
