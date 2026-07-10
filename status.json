@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T06:06:33Z",
+  "generated_at": "2026-07-10T06:06:44Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -755,14 +755,6 @@
     ],
     "blocked_needs_decision": [
       {
-        "id": "GAP-081",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Amend the Steward's review discipline in `capabilities/security-audit.md` \u00a7 Review Output Requirements and in the dispatch prompt template: a disposition may state that a file was written **only** if ",
-        "stop_line": "This amends the Security Steward's own capability policy, which the Steward may not self-authorize (`capabilities/security-audit.md` \u00a7 Prohibited Actions) and which no autonomy tier lets the President",
-        "description": "A dispatched Security Steward filed a capability review asserting a file write that had failed"
-      },
-      {
         "id": "GAP-084",
         "type": "GAP",
         "route": "CEO-first",
@@ -874,6 +866,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T06:06:33.432014+00:00"
+    "generated_at": "2026-07-10T06:06:44.897087+00:00"
   }
 }
