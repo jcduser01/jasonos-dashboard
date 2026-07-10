@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T03:23:16Z",
+  "generated_at": "2026-07-10T04:09:33Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-09T21:55:00Z",
-    "minutes_since_session": 328,
+    "minutes_since_session": 374,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -130,8 +130,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-09T20:05:35Z",
-      "invocations_30d": 22
+      "last_active": "2026-07-09T23:06:15Z",
+      "invocations_30d": 23
     },
     {
       "name": "research-director",
@@ -499,6 +499,14 @@
         "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
       },
       {
+        "id": "GAP-083",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
+        "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
+        "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -661,6 +669,14 @@
         "runner_scope": "(1) Make `push: canonical` on a single-origin repo either resolve to the origin push path \u2014 `origin` *is* canonical \u2014 or reject **before the commit is created**, never after. (2) Emit one unambiguous ",
         "stop_line": "`jasonos-git-relay.sh` and `commit_via_relay.py` are the **commit/push path**. Build, test, and stage; halt before promoting, dispatch the Security Steward, and deploy Mac-side on CLEAR \u2014 same discipl",
         "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
+      },
+      {
+        "id": "GAP-083",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
+        "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
+        "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -843,6 +859,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T03:23:16.328276+00:00"
+    "generated_at": "2026-07-10T04:09:33.514083+00:00"
   }
 }
