@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T16:53:42Z",
+  "generated_at": "2026-07-10T22:44:02Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-10T07:51:00Z",
-    "minutes_since_session": 542,
+    "last_session_date": "2026-07-10T20:53:34Z",
+    "minutes_since_session": 110,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -89,7 +89,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 25
+      "invocations_30d": 24
     },
     {
       "name": "operations-director",
@@ -314,36 +314,7 @@
       }
     ]
   },
-  "batch_queue": [
-    {
-      "position": 1,
-      "id": "GAP-066"
-    },
-    {
-      "position": 2,
-      "id": "GAP-065"
-    },
-    {
-      "position": 3,
-      "id": "PCR-ENG-017"
-    },
-    {
-      "position": 4,
-      "id": "GAP-052"
-    },
-    {
-      "position": 5,
-      "id": "GAP-051"
-    },
-    {
-      "position": 6,
-      "id": "PCR-OPS-046"
-    },
-    {
-      "position": 7,
-      "id": "PCR-GOV-006"
-    }
-  ],
+  "batch_queue": [],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -382,22 +353,6 @@
       }
     ],
     "in_progress_not_ceo": [
-      {
-        "id": "GAP-051",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In the split-repo arms of the push guardrail \u2014 both the client `_guard_push_mode()` in `commit_via_relay.py` and the worker `jasonos-governance` / `jasonos-operations` `case` arms in `jasonos-git-rela",
-        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049.",
-        "description": "The relay push-mode guardrail (client + worker) does not pre-refuse push:canonical for the\u2026"
-      },
-      {
-        "id": "GAP-052",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
-        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
-        "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
       {
         "id": "GAP-073",
         "type": "GAP",
@@ -479,14 +434,6 @@
         "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
       },
       {
-        "id": "GAP-088",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Draft a PCR that encodes the CEO's ratified interpretation (below) into the four documents that today assert single-item scope, so a grant issued over a batch is unambiguous and needs no per-session r",
-        "stop_line": "CEO ratification of the PCR before any edit lands in `policies/agents/autonomy-policy.md` \u2014 that file's declared edit authority is CEO only, and the two skills it governs are `disable-model-invocation",
-        "description": "The autonomy-tier doctrine defines a grant only over a *single* work item, so a grant issued over\u2026"
-      },
-      {
         "id": "GAP-090",
         "type": "GAP",
         "route": "Queue-ready",
@@ -495,28 +442,20 @@
         "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
       },
       {
+        "id": "GAP-091",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Harden `test_steward_review_with_injection_vocab_exempted` in `operations/bin/tests/test_dispatcher_injection_exemption.py`: (1) add `assertIsNotNone(result)` before the current negative assertion; (2",
+        "stop_line": "None.",
+        "description": "GAP-052's exempt-direction test can pass vacuously \u2014 the injection-exemption assertion is\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
         "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
         "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
         "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
-      },
-      {
-        "id": "PCR-GOV-006",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Dispose of items 1\u20134 (independent; any order, or split into per-item children). (1) retire the governance-repo proposal template + scrub PROP-intake references; (2) extend `jasonos-work-item-index-gen",
-        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring (and any commit/deploy-path change) is Steward-gated at execution; item 1's governance-repo edits go through the g",
-        "description": "Close out the INI-130 Phase-2 cleanup tail \u2014 retire the orphaned proposal template, generate the\u2026"
-      },
-      {
-        "id": "PCR-OPS-046",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
-        "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
-        "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
       },
       {
         "id": "REM-054",
@@ -570,22 +509,6 @@
     ],
     "partially_executable": [
       {
-        "id": "GAP-051",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In the split-repo arms of the push guardrail \u2014 both the client `_guard_push_mode()` in `commit_via_relay.py` and the worker `jasonos-governance` / `jasonos-operations` `case` arms in `jasonos-git-rela",
-        "stop_line": "Guardrail change is Steward-gated (push-authorization control); halt before promoting to canonical, dispatch the Steward, deploy deliberately Mac-side on CLEAR \u2014 same discipline as GAP-049.",
-        "description": "The relay push-mode guardrail (client + worker) does not pre-refuse push:canonical for the\u2026"
-      },
-      {
-        "id": "GAP-052",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
-        "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
-        "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
         "id": "GAP-073",
         "type": "GAP",
         "route": "Queue-ready",
@@ -666,14 +589,6 @@
         "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
       },
       {
-        "id": "GAP-088",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Draft a PCR that encodes the CEO's ratified interpretation (below) into the four documents that today assert single-item scope, so a grant issued over a batch is unambiguous and needs no per-session r",
-        "stop_line": "CEO ratification of the PCR before any edit lands in `policies/agents/autonomy-policy.md` \u2014 that file's declared edit authority is CEO only, and the two skills it governs are `disable-model-invocation",
-        "description": "The autonomy-tier doctrine defines a grant only over a *single* work item, so a grant issued over\u2026"
-      },
-      {
         "id": "GAP-090",
         "type": "GAP",
         "route": "Queue-ready",
@@ -682,28 +597,20 @@
         "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
       },
       {
+        "id": "GAP-091",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Harden `test_steward_review_with_injection_vocab_exempted` in `operations/bin/tests/test_dispatcher_injection_exemption.py`: (1) add `assertIsNotNone(result)` before the current negative assertion; (2",
+        "stop_line": "None.",
+        "description": "GAP-052's exempt-direction test can pass vacuously \u2014 the injection-exemption assertion is\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
         "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
         "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
         "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
-      },
-      {
-        "id": "PCR-GOV-006",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Dispose of items 1\u20134 (independent; any order, or split into per-item children). (1) retire the governance-repo proposal template + scrub PROP-intake references; (2) extend `jasonos-work-item-index-gen",
-        "stop_line": "No single blocking stop-line for the parent. Item 3's pre-commit/report-triage wiring (and any commit/deploy-path change) is Steward-gated at execution; item 1's governance-repo edits go through the g",
-        "description": "Close out the INI-130 Phase-2 cleanup tail \u2014 retire the orphaned proposal template, generate the\u2026"
-      },
-      {
-        "id": "PCR-OPS-046",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Wire `check-registry-row-in-commit.py` into `operations/assets/pre-commit`; update `operations/pre-commit-hook-runbook.md` from \"candidate\" to \"active\"; confirm regression coverage (violation / compli",
-        "stop_line": "The pre-commit hook change touches the relay commit interlock \u2014 halt at that change for Security Steward review before it goes live.",
-        "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
       },
       {
         "id": "REM-054",
@@ -867,6 +774,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T16:53:42.480034+00:00"
+    "generated_at": "2026-07-10T22:44:02.268014+00:00"
   }
 }
