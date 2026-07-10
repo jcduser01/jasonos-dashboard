@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T04:43:19Z",
+  "generated_at": "2026-07-10T06:06:33Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-09T23:25:00Z",
-    "minutes_since_session": 318,
+    "last_session_date": "2026-07-10T04:45:00Z",
+    "minutes_since_session": 81,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -113,7 +113,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 29
+      "invocations_30d": 26
     },
     {
       "name": "operations-director",
@@ -531,6 +531,14 @@
         "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
       },
       {
+        "id": "PCR-SEC-011",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "Build the CAP-REV output-declaration schema, the `check-cap-rev-write-claims.py` checker, its regression suite, its script-registry row, and the report-triage step-2f wire-in text \u2014 all staged, not de",
+        "stop_line": "The three doctrine edits (Changes 1\u20133) amend `capabilities/security-audit.md` and `agents/security-steward.md`. The Steward may not self-authorize its own capability policy (`capabilities/security-aud",
+        "description": "A capability review may not assert a write it did not perform \u2014 declared outputs, an INCOMPLETE\u2026"
+      },
+      {
         "id": "INI-053",
         "type": "INI",
         "route": "Queue-ready",
@@ -695,6 +703,14 @@
         "description": "A relay pre-commit gate must refuse any new operations/bin/ file that lacks a same-commit\u2026"
       },
       {
+        "id": "PCR-SEC-011",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "Build the CAP-REV output-declaration schema, the `check-cap-rev-write-claims.py` checker, its regression suite, its script-registry row, and the report-triage step-2f wire-in text \u2014 all staged, not de",
+        "stop_line": "The three doctrine edits (Changes 1\u20133) amend `capabilities/security-audit.md` and `agents/security-steward.md`. The Steward may not self-authorize its own capability policy (`capabilities/security-aud",
+        "description": "A capability review may not assert a write it did not perform \u2014 declared outputs, an INCOMPLETE\u2026"
+      },
+      {
         "id": "INI-053",
         "type": "INI",
         "route": "Queue-ready",
@@ -745,6 +761,14 @@
         "runner_scope": "Amend the Steward's review discipline in `capabilities/security-audit.md` \u00a7 Review Output Requirements and in the dispatch prompt template: a disposition may state that a file was written **only** if ",
         "stop_line": "This amends the Security Steward's own capability policy, which the Steward may not self-authorize (`capabilities/security-audit.md` \u00a7 Prohibited Actions) and which no autonomy tier lets the President",
         "description": "A dispatched Security Steward filed a capability review asserting a file write that had failed"
+      },
+      {
+        "id": "GAP-084",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "None until the schema question below is decided. No completable prep slice \u2014 designing the expected-output manifest *is* the decision.",
+        "stop_line": "Halt at the schema design. Do not extend `check-cap-rev-write-claims.py` to enforce an expected-output manifest before the CEO has decided whether dispatches carry one and who authors it.",
+        "description": "A capability review's output declaration is self-reported, so a silently omitted required output\u2026"
       },
       {
         "id": "PCR-OPS-047",
@@ -828,6 +852,13 @@
         "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs"
       },
       {
+        "id": "REM-051",
+        "type": "REM",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": ""
+      },
+      {
         "id": "INI-072",
         "type": "INI",
         "route": "Operational",
@@ -843,6 +874,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T04:43:19.046665+00:00"
+    "generated_at": "2026-07-10T06:06:33.432014+00:00"
   }
 }
