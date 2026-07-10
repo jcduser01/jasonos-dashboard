@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T01:34:43Z",
+  "generated_at": "2026-07-10T02:49:59Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,9 +11,9 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-09T04:37:15Z",
-    "minutes_since_session": 1257,
-    "airlock_queue": 0,
+    "last_session_date": "2026-07-09T20:30:00Z",
+    "minutes_since_session": 379,
+    "airlock_queue": 1,
     "airlock_bundles": 0
   },
   "active_initiative": null,
@@ -79,6 +79,24 @@
       "category": "required",
       "label": "Delete the overnight-engineering-runner schedule entry",
       "context": "in the Claude Desktop scheduler UI. The task body and its tracked asset are removed, but the trigger lives in the app's "
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
+      "label": "Sync the deployed weekly Steward prompt.",
+      "context": "~/Claude/Scheduled/jasonos-security-steward-review/SKILL.md still says \"Append a structured compliance summary to securi"
+    },
+    {
+      "id": "ACT-HO-12",
+      "category": "required",
+      "label": "Re-run the pre-rotation Drive copy \u2014 the first run uploaded the wrong file.",
+      "context": "CEO ran it 2026-07-10 01:41 UTC; it succeeded and produced gap070-pre-rotation-security-steward-audit-log-2026-07-10.md,"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "Live audit-log header corrected.",
+      "context": "It still directed the Steward to the dead security-steward-audit/inbox/ path; now points at Logs/steward-audit-inbox/."
     }
   ],
   "status_drift": [],
@@ -317,42 +335,34 @@
   "batch_queue": [
     {
       "position": 1,
-      "id": "GAP-070"
-    },
-    {
-      "position": 2,
       "id": "GAP-066"
     },
     {
-      "position": 3,
-      "id": "PCR-SEC-009"
-    },
-    {
-      "position": 4,
+      "position": 2,
       "id": "GAP-065"
     },
     {
-      "position": 5,
+      "position": 3,
       "id": "PCR-ENG-017"
     },
     {
-      "position": 6,
+      "position": 4,
       "id": "GAP-052"
     },
     {
-      "position": 7,
+      "position": 5,
       "id": "GAP-051"
     },
     {
-      "position": 8,
+      "position": 6,
       "id": "PCR-OPS-046"
     },
     {
-      "position": 9,
+      "position": 7,
       "id": "PCR-GOV-006"
     },
     {
-      "position": 10,
+      "position": 8,
       "id": "GAP-033"
     }
   ],
@@ -852,6 +862,6 @@
         "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-10T01:34:43.232352+00:00"
+    "generated_at": "2026-07-10T02:49:59.147846+00:00"
   }
 }
