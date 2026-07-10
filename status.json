@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T08:41:12Z",
+  "generated_at": "2026-07-10T16:53:32Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-10T07:51:00Z",
-    "minutes_since_session": 50,
+    "minutes_since_session": 542,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -89,7 +89,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 26
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
@@ -353,6 +353,14 @@
         "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
         "stop_line": "",
         "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
+      },
+      {
+        "id": "GAP-089",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Harden `scan_mount_root_pinned()` / `_is_sole_hardcoded_root()` in `operations/bin/check-dead-path-drift.py` (introduced by GAP-065, staged at `f213a10`, not yet promoted). Three defects: **(1) Covera",
+        "stop_line": "",
+        "description": "The GAP-065 mount-root regrowth detector is a bare-literal-presence check, is structurally blind\u2026"
       }
     ],
     "fully_executable": [
@@ -363,6 +371,14 @@
         "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
         "stop_line": "",
         "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
+      },
+      {
+        "id": "GAP-089",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Harden `scan_mount_root_pinned()` / `_is_sole_hardcoded_root()` in `operations/bin/check-dead-path-drift.py` (introduced by GAP-065, staged at `f213a10`, not yet promoted). Three defects: **(1) Covera",
+        "stop_line": "",
+        "description": "The GAP-065 mount-root regrowth detector is a bare-literal-presence check, is structurally blind\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -381,22 +397,6 @@
         "runner_scope": "Diagnose the dispatcher's task-field injection filter and design a change that lets a legitimate `director: security-steward`, `REVIEW:`-prefixed task describe an injection/untrusted-content review su",
         "stop_line": "Security Steward review before any change to the injection filter goes live \u2014 it is a security control on an ingestion path.",
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
-      },
-      {
-        "id": "GAP-065",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "The defect is *sole-hardcoded-root* usage \u2014 a script that pins `REM_DIR`/`REGISTER`/`OUTPUT_PATH`/repo roots to a literal `/Volumes/SandboxData/...` with no runtime resolution, so it breaks (exit non-",
-        "stop_line": "Engineering ready-bar (TDD RED/GREEN + the standard build gates) per consumer. **No blanket Security Steward gate** \u2014 path-resolution portability touches no authority/spend surface; the only Steward g",
-        "description": "A class of operations tooling pins /Volumes/SandboxData as a sole hardcoded root (no runtime mount\u2026"
-      },
-      {
-        "id": "GAP-066",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Document \u2014 and optionally narrow \u2014 the interaction between the INI-081 push-interlock and concurrent non-batch work. The relay refuses `push:true` to `main` whenever **any** `staged/*` lane is open (i",
-        "stop_line": "If documentation-only \u2192 Engineering ready-bar, no Steward gate. If the interlock's refusal scope is changed in code \u2192 **Security Steward review required** (commit/push-path machinery) and stage-and-ho",
-        "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
       },
       {
         "id": "GAP-073",
@@ -479,20 +479,28 @@
         "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
       },
       {
+        "id": "GAP-088",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "Draft a PCR that encodes the CEO's ratified interpretation (below) into the four documents that today assert single-item scope, so a grant issued over a batch is unambiguous and needs no per-session r",
+        "stop_line": "CEO ratification of the PCR before any edit lands in `policies/agents/autonomy-policy.md` \u2014 that file's declared edit authority is CEO only, and the two skills it governs are `disable-model-invocation",
+        "description": "The autonomy-tier doctrine defines a grant only over a *single* work item, so a grant issued over\u2026"
+      },
+      {
+        "id": "GAP-090",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three defects introduced or exposed by PCR-ENG-017 (staged at `0731d80`, lane `staged/batch-eng-2026-07-10b`, not yet promoted). **(1) Unbounded grace.** `RELAY_LOCK_GRACE_SECONDS` (`operations/bin/ja",
+        "stop_line": "Security Steward review before the grace clamp goes live \u2014 it is a change to the lock that serializes the canonical-commit queue. Stage and hold; same discipline as PCR-ENG-017 and GAP-049.",
+        "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
         "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
         "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
         "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
-      },
-      {
-        "id": "PCR-ENG-017",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Diagnose why each lock is not cleaned up on abnormal owner exit; implement a liveness-based startup/pre-acquire orphan-reap for `.agent-lock-<director>/` and `.git-relay-lock/`; guarantee a terminal `",
-        "stop_line": "The dispatcher process-supervision change and the relay lock change are Security-Steward-gated (they touch the dispatch mechanism and the commit path). Diagnosis and a fix draft are completable withou",
-        "description": "JasonOS mkdir-based advisory locks (agent-invocation dispatcher and git-relay) must self-recover\u2026"
       },
       {
         "id": "PCR-GOV-006",
@@ -578,22 +586,6 @@
         "description": "Agent-invocation dispatcher's injection-pattern filter rejects a legitimate Security-Steward\u2026"
       },
       {
-        "id": "GAP-065",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "The defect is *sole-hardcoded-root* usage \u2014 a script that pins `REM_DIR`/`REGISTER`/`OUTPUT_PATH`/repo roots to a literal `/Volumes/SandboxData/...` with no runtime resolution, so it breaks (exit non-",
-        "stop_line": "Engineering ready-bar (TDD RED/GREEN + the standard build gates) per consumer. **No blanket Security Steward gate** \u2014 path-resolution portability touches no authority/spend surface; the only Steward g",
-        "description": "A class of operations tooling pins /Volumes/SandboxData as a sole hardcoded root (no runtime mount\u2026"
-      },
-      {
-        "id": "GAP-066",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Document \u2014 and optionally narrow \u2014 the interaction between the INI-081 push-interlock and concurrent non-batch work. The relay refuses `push:true` to `main` whenever **any** `staged/*` lane is open (i",
-        "stop_line": "If documentation-only \u2192 Engineering ready-bar, no Steward gate. If the interlock's refusal scope is changed in code \u2192 **Security Steward review required** (commit/push-path machinery) and stage-and-ho",
-        "description": "An open batch lane engages the INI-081 push-interlock repo-wide, so ALL concurrent work (even\u2026"
-      },
-      {
         "id": "GAP-073",
         "type": "GAP",
         "route": "Queue-ready",
@@ -674,20 +666,28 @@
         "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
       },
       {
+        "id": "GAP-088",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "Draft a PCR that encodes the CEO's ratified interpretation (below) into the four documents that today assert single-item scope, so a grant issued over a batch is unambiguous and needs no per-session r",
+        "stop_line": "CEO ratification of the PCR before any edit lands in `policies/agents/autonomy-policy.md` \u2014 that file's declared edit authority is CEO only, and the two skills it governs are `disable-model-invocation",
+        "description": "The autonomy-tier doctrine defines a grant only over a *single* work item, so a grant issued over\u2026"
+      },
+      {
+        "id": "GAP-090",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three defects introduced or exposed by PCR-ENG-017 (staged at `0731d80`, lane `staged/batch-eng-2026-07-10b`, not yet promoted). **(1) Unbounded grace.** `RELAY_LOCK_GRACE_SECONDS` (`operations/bin/ja",
+        "stop_line": "Security Steward review before the grace clamp goes live \u2014 it is a change to the lock that serializes the canonical-commit queue. Stage and hold; same discipline as PCR-ENG-017 and GAP-049.",
+        "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
         "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
         "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
         "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
-      },
-      {
-        "id": "PCR-ENG-017",
-        "type": "PCR",
-        "route": "Queue-ready",
-        "runner_scope": "Diagnose why each lock is not cleaned up on abnormal owner exit; implement a liveness-based startup/pre-acquire orphan-reap for `.agent-lock-<director>/` and `.git-relay-lock/`; guarantee a terminal `",
-        "stop_line": "The dispatcher process-supervision change and the relay lock change are Security-Steward-gated (they touch the dispatch mechanism and the commit path). Diagnosis and a fix draft are completable withou",
-        "description": "JasonOS mkdir-based advisory locks (agent-invocation dispatcher and git-relay) must self-recover\u2026"
       },
       {
         "id": "PCR-GOV-006",
@@ -867,6 +867,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T08:41:12.646527+00:00"
+    "generated_at": "2026-07-10T16:53:32.413011+00:00"
   }
 }
