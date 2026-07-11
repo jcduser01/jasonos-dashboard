@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-11T22:39:34Z",
+  "generated_at": "2026-07-11T22:59:28Z",
   "schema_version": "5",
-  "generator_version": "2.10",
+  "generator_version": "2.11",
   "stats": {
     "done": 108,
     "total": 124,
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T21:23:17Z",
-    "minutes_since_session": 76,
+    "last_session_date": "2026-07-11T22:39:47Z",
+    "minutes_since_session": 19,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -430,49 +430,56 @@
         "type": "REM",
         "route": "Queue-ready",
         "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
-        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th"
+        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th",
+        "description": "An automated chore(portfolio): rebuild README projection commit (2579c33) silently renamed an OPEN\u2026"
       },
       {
         "id": "REM-053",
         "type": "REM",
         "route": "Queue-ready",
         "runner_scope": "**Complete step A2 \u2014 the off-disk copy.** Mac-side, upload `Logs/dog-monolith-preserve/{digital-organization-governance-a128904.bundle, _archived-full-2026-07-10.tar.gz, SHA256SUMS}` to `Backup/Projec",
-        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify."
+        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify.",
+        "description": "CEO action: retire the archived legacy governance monolith (Governance/_archived/digital-organizatio\u2026"
       },
       {
         "id": "REM-054",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Harden `_resolve_declared()`'s absolute-path branch with canonical-root-to-detected-root translation, mirroring the recommended `check-dead-path-drift.py` fix.",
-        "stop_line": "None."
+        "stop_line": "None.",
+        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on its own go-live review \u2014 false positive\u2026"
       },
       {
         "id": "REM-055",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
-        "stop_line": "None."
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
       },
       {
         "id": "REM-056",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Add `entry_id` to the inbox file's frontmatter; re-run the compactor.",
-        "stop_line": "None."
+        "stop_line": "None.",
+        "description": "Step 2e (jasonos-steward-audit-compactor.py) exits 1: a Security Steward audit-inbox entry\u2026"
       },
       {
         "id": "REM-057",
         "type": "REM",
         "route": "CEO-first",
         "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
-        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection."
+        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection.",
+        "description": "Step 2g (jasonos-work-item-index-generator.py --type pcr --check, new under protocol v1.13) finds\u2026"
       },
       {
         "id": "REM-058",
         "type": "REM",
         "route": "CEO-first",
         "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
-        "stop_line": "None beyond the standing push-authorization practice."
+        "stop_line": "None beyond the standing push-authorization practice.",
+        "description": "jasonos-policy-sync 2026-07-11 06:09 UTC anomaly: the live governance repo (jasonos-governance) is\u2026"
       },
       {
         "id": "INI-053",
@@ -611,49 +618,56 @@
         "type": "REM",
         "route": "Queue-ready",
         "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
-        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th"
+        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th",
+        "description": "An automated chore(portfolio): rebuild README projection commit (2579c33) silently renamed an OPEN\u2026"
       },
       {
         "id": "REM-053",
         "type": "REM",
         "route": "Queue-ready",
         "runner_scope": "**Complete step A2 \u2014 the off-disk copy.** Mac-side, upload `Logs/dog-monolith-preserve/{digital-organization-governance-a128904.bundle, _archived-full-2026-07-10.tar.gz, SHA256SUMS}` to `Backup/Projec",
-        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify."
+        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify.",
+        "description": "CEO action: retire the archived legacy governance monolith (Governance/_archived/digital-organizatio\u2026"
       },
       {
         "id": "REM-054",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Harden `_resolve_declared()`'s absolute-path branch with canonical-root-to-detected-root translation, mirroring the recommended `check-dead-path-drift.py` fix.",
-        "stop_line": "None."
+        "stop_line": "None.",
+        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on its own go-live review \u2014 false positive\u2026"
       },
       {
         "id": "REM-055",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
-        "stop_line": "None."
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
       },
       {
         "id": "REM-056",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Add `entry_id` to the inbox file's frontmatter; re-run the compactor.",
-        "stop_line": "None."
+        "stop_line": "None.",
+        "description": "Step 2e (jasonos-steward-audit-compactor.py) exits 1: a Security Steward audit-inbox entry\u2026"
       },
       {
         "id": "REM-057",
         "type": "REM",
         "route": "CEO-first",
         "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
-        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection."
+        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection.",
+        "description": "Step 2g (jasonos-work-item-index-generator.py --type pcr --check, new under protocol v1.13) finds\u2026"
       },
       {
         "id": "REM-058",
         "type": "REM",
         "route": "CEO-first",
         "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
-        "stop_line": "None beyond the standing push-authorization practice."
+        "stop_line": "None beyond the standing push-authorization practice.",
+        "description": "jasonos-policy-sync 2026-07-11 06:09 UTC anomaly: the live governance repo (jasonos-governance) is\u2026"
       },
       {
         "id": "INI-053",
@@ -770,7 +784,8 @@
         "type": "REM",
         "route": "Operational",
         "runner_scope": "",
-        "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs"
+        "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs",
+        "description": "New KB completeness checker surfaces 7 aging airlock artifacts in the vault inbox\u2026"
       },
       {
         "id": "INI-072",
@@ -788,6 +803,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T22:39:34.623649+00:00"
+    "generated_at": "2026-07-11T22:59:28.804193+00:00"
   }
 }
