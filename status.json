@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T13:16:40Z",
+  "generated_at": "2026-07-11T14:47:29Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T12:58:07Z",
-    "minutes_since_session": 18,
+    "last_session_date": "2026-07-11T14:03:30Z",
+    "minutes_since_session": 43,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -402,14 +402,6 @@
         "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
       },
       {
-        "id": "GAP-090",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three defects introduced or exposed by PCR-ENG-017 (staged at `0731d80`, lane `staged/batch-eng-2026-07-10b`, not yet promoted). **(1) Unbounded grace.** `RELAY_LOCK_GRACE_SECONDS` (`operations/bin/ja",
-        "stop_line": "Security Steward review before the grace clamp goes live \u2014 it is a change to the lock that serializes the canonical-commit queue. Stage and hold; same discipline as PCR-ENG-017 and GAP-049.",
-        "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
-      },
-      {
         "id": "GAP-093",
         "type": "GAP",
         "route": "Queue-ready",
@@ -424,14 +416,6 @@
         "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
         "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
-      },
-      {
-        "id": "GAP-095",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
-        "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
-        "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -555,14 +539,6 @@
         "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
       },
       {
-        "id": "GAP-090",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three defects introduced or exposed by PCR-ENG-017 (staged at `0731d80`, lane `staged/batch-eng-2026-07-10b`, not yet promoted). **(1) Unbounded grace.** `RELAY_LOCK_GRACE_SECONDS` (`operations/bin/ja",
-        "stop_line": "Security Steward review before the grace clamp goes live \u2014 it is a change to the lock that serializes the canonical-commit queue. Stage and hold; same discipline as PCR-ENG-017 and GAP-049.",
-        "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
-      },
-      {
         "id": "GAP-093",
         "type": "GAP",
         "route": "Queue-ready",
@@ -577,14 +553,6 @@
         "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
         "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
-      },
-      {
-        "id": "GAP-095",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
-        "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
-        "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -791,6 +759,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T13:16:40.176680+00:00"
+    "generated_at": "2026-07-11T14:47:29.410198+00:00"
   }
 }
