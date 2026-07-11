@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T04:04:00Z",
+  "generated_at": "2026-07-11T04:35:10Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-11T03:09:25Z",
-    "minutes_since_session": 54,
+    "minutes_since_session": 85,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -394,14 +394,6 @@
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
       },
       {
-        "id": "GAP-085",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) Repoint `read_remediation_open()` in `bin/jasonos-status-generator.py` at the per-entry directory `Logs/remediation/REM-*.md` (the INI-115 system of record) instead of `_read_remediation_open_lega",
-        "stop_line": "None for (1), (2), (4). Halt at (3) if reconciling the two surfaces requires changing what counts as \"a CEO decision is pending\" \u2014 that is a definition question that belongs to the CEO and to `operati",
-        "description": "The dashboard's CEO-actions Source C silently returns zero remediation entries, so no REM has ever\u2026"
-      },
-      {
         "id": "GAP-086",
         "type": "GAP",
         "route": "Queue-ready",
@@ -563,14 +555,6 @@
         "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
         "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
-      },
-      {
-        "id": "GAP-085",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) Repoint `read_remediation_open()` in `bin/jasonos-status-generator.py` at the per-entry directory `Logs/remediation/REM-*.md` (the INI-115 system of record) instead of `_read_remediation_open_lega",
-        "stop_line": "None for (1), (2), (4). Halt at (3) if reconciling the two surfaces requires changing what counts as \"a CEO decision is pending\" \u2014 that is a definition question that belongs to the CEO and to `operati",
-        "description": "The dashboard's CEO-actions Source C silently returns zero remediation entries, so no REM has ever\u2026"
       },
       {
         "id": "GAP-086",
@@ -813,6 +797,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T04:04:00.871377+00:00"
+    "generated_at": "2026-07-11T04:35:10.167496+00:00"
   }
 }
