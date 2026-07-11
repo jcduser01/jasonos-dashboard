@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T23:55:50Z",
+  "generated_at": "2026-07-11T03:09:14Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-10T22:49:50Z",
-    "minutes_since_session": 66,
+    "last_session_date": "2026-07-11T02:46:55Z",
+    "minutes_since_session": 22,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -314,24 +314,7 @@
       }
     ]
   },
-  "batch_queue": [
-    {
-      "position": 1,
-      "id": "GAP-082"
-    },
-    {
-      "position": 2,
-      "id": "GAP-078"
-    },
-    {
-      "position": 3,
-      "id": "GAP-076"
-    },
-    {
-      "position": 4,
-      "id": "GAP-084"
-    }
-  ],
+  "batch_queue": [],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -387,22 +370,6 @@
         "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
-        "id": "GAP-076",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-agent-dispatcher.sh` (v1.8). Three defects, all in the recording path, none in the execution path: (1) the invocation-log header at **`:954`** prints `# model_flag: ${BROKER_MO",
-        "stop_line": "Halt at the `jasonos-agent-dispatcher.sh` change for Security Steward review before it is deployed to `~/bin` / `SandboxData/bin`.",
-        "description": "The dispatcher's durable records cannot prove which model tier and effort an invocation actually\u2026"
-      },
-      {
-        "id": "GAP-078",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-git-relay.sh` (v1.12+). The `close-staged` action decides whether the lane exists with a **local-only** check \u2014 `git show-ref --verify --quiet \"refs/heads/${MERGE_BRANCH}\" || B",
-        "stop_line": "Halt before deploying the `jasonos-git-relay.sh` change to `~/bin` / `SandboxData/bin` for Security Steward review.",
-        "description": "close-staged reports success without deleting the remote lane ref whenever the local branch is\u2026"
-      },
-      {
         "id": "GAP-079",
         "type": "GAP",
         "route": "Queue-ready",
@@ -411,28 +378,12 @@
         "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
       },
       {
-        "id": "GAP-082",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) Make `push: canonical` on a single-origin repo either resolve to the origin push path \u2014 `origin` *is* canonical \u2014 or reject **before the commit is created**, never after. (2) Emit one unambiguous ",
-        "stop_line": "`jasonos-git-relay.sh` and `commit_via_relay.py` are the **commit/push path**. Build, test, and stage; halt before promoting, dispatch the Security Steward, and deploy Mac-side on CLEAR \u2014 same discipl",
-        "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
         "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
-      },
-      {
-        "id": "GAP-084",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) Author the review-type template registry in `operations/steward-review-runbook.md` \u2014 a version-controlled table mapping each review type to its required outputs. (2) Extend the Steward dispatch to",
-        "stop_line": "Halt before go-live pending Security Steward review, per the step-2c/2d/2e/2f wire-in precedent. As with PCR-SEC-011, note the reflexivity: the Steward reviews a control over its own review contract, ",
-        "description": "A capability review's output declaration is self-reported, so a silently omitted required output\u2026"
       },
       {
         "id": "GAP-085",
@@ -473,6 +424,30 @@
         "runner_scope": "Extend the deploy/coverage discipline so a deployed script's same-directory `import` of another repo module is verified to resolve at the deploy location \u2014 e.g. `check-script-registry-coverage.py` (or",
         "stop_line": "None.",
         "description": "A deployed script's same-directory import dependency is not verified, so a missing shared module\u2026"
+      },
+      {
+        "id": "GAP-093",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) `skills/jasonos-batch-engineer/SKILL.md` \u2014 the worktree-isolated build+stage procedure must instruct the engineer to create its ephemeral worktree with a **detached** checkout of the lane (`git wo",
+        "stop_line": "None \u2014 the fix is documentation (skill discipline) plus an optional detector; no policy change, no live-path deploy. If the optional committer-identity guard is built as code under `operations/bin/`, ",
+        "description": "The batch engineer bases its worktree on the lane branch and falls back to direct git when the\u2026"
+      },
+      {
+        "id": "GAP-094",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
+        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
+        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
+      },
+      {
+        "id": "GAP-095",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
+        "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
+        "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -550,22 +525,6 @@
         "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
-        "id": "GAP-076",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-agent-dispatcher.sh` (v1.8). Three defects, all in the recording path, none in the execution path: (1) the invocation-log header at **`:954`** prints `# model_flag: ${BROKER_MO",
-        "stop_line": "Halt at the `jasonos-agent-dispatcher.sh` change for Security Steward review before it is deployed to `~/bin` / `SandboxData/bin`.",
-        "description": "The dispatcher's durable records cannot prove which model tier and effort an invocation actually\u2026"
-      },
-      {
-        "id": "GAP-078",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-git-relay.sh` (v1.12+). The `close-staged` action decides whether the lane exists with a **local-only** check \u2014 `git show-ref --verify --quiet \"refs/heads/${MERGE_BRANCH}\" || B",
-        "stop_line": "Halt before deploying the `jasonos-git-relay.sh` change to `~/bin` / `SandboxData/bin` for Security Steward review.",
-        "description": "close-staged reports success without deleting the remote lane ref whenever the local branch is\u2026"
-      },
-      {
         "id": "GAP-079",
         "type": "GAP",
         "route": "Queue-ready",
@@ -574,28 +533,12 @@
         "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
       },
       {
-        "id": "GAP-082",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) Make `push: canonical` on a single-origin repo either resolve to the origin push path \u2014 `origin` *is* canonical \u2014 or reject **before the commit is created**, never after. (2) Emit one unambiguous ",
-        "stop_line": "`jasonos-git-relay.sh` and `commit_via_relay.py` are the **commit/push path**. Build, test, and stage; halt before promoting, dispatch the Security Steward, and deploy Mac-side on CLEAR \u2014 same discipl",
-        "description": "push: canonical is unusable on the post-split repos, hard-errors on a plain commit, and silently\u2026"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
         "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
-      },
-      {
-        "id": "GAP-084",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) Author the review-type template registry in `operations/steward-review-runbook.md` \u2014 a version-controlled table mapping each review type to its required outputs. (2) Extend the Steward dispatch to",
-        "stop_line": "Halt before go-live pending Security Steward review, per the step-2c/2d/2e/2f wire-in precedent. As with PCR-SEC-011, note the reflexivity: the Steward reviews a control over its own review contract, ",
-        "description": "A capability review's output declaration is self-reported, so a silently omitted required output\u2026"
       },
       {
         "id": "GAP-085",
@@ -636,6 +579,30 @@
         "runner_scope": "Extend the deploy/coverage discipline so a deployed script's same-directory `import` of another repo module is verified to resolve at the deploy location \u2014 e.g. `check-script-registry-coverage.py` (or",
         "stop_line": "None.",
         "description": "A deployed script's same-directory import dependency is not verified, so a missing shared module\u2026"
+      },
+      {
+        "id": "GAP-093",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "(1) `skills/jasonos-batch-engineer/SKILL.md` \u2014 the worktree-isolated build+stage procedure must instruct the engineer to create its ephemeral worktree with a **detached** checkout of the lane (`git wo",
+        "stop_line": "None \u2014 the fix is documentation (skill discipline) plus an optional detector; no policy change, no live-path deploy. If the optional committer-identity guard is built as code under `operations/bin/`, ",
+        "description": "The batch engineer bases its worktree on the lane branch and falls back to direct git when the\u2026"
+      },
+      {
+        "id": "GAP-094",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
+        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
+        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
+      },
+      {
+        "id": "GAP-095",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
+        "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
+        "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -807,6 +774,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-10T23:55:50.358395+00:00"
+    "generated_at": "2026-07-11T03:09:14.679261+00:00"
   }
 }
