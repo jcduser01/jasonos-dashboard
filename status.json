@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T19:13:30Z",
+  "generated_at": "2026-07-11T19:39:23Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-11T14:48:01Z",
-    "minutes_since_session": 265,
+    "minutes_since_session": 291,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -797,6 +797,6 @@
         "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-11T19:13:30.103658+00:00"
+    "generated_at": "2026-07-11T19:39:23.274793+00:00"
   }
 }
