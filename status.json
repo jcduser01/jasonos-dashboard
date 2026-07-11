@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T16:47:40Z",
+  "generated_at": "2026-07-11T19:13:30Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-11T14:48:01Z",
-    "minutes_since_session": 119,
+    "minutes_since_session": 265,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -341,17 +341,9 @@
         "id": "GAP-073",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "(A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invokes the generator as `subproces",
-        "stop_line": "None for (A)/(B) \u2014 a read-only environment probe and a fail-loud guard touch nothing on the authority/spend/commit path. **(C) is Steward-gated** if it resolves to a package install.",
+        "runner_scope": "The ungated probe/guard slice. (A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invo",
+        "stop_line": "None \u2014 a read-only environment probe and a fail-loud guard are fully ungated. The dependency-resolution half (install the package under Security Steward clearance, or adopt a stdlib-only renderer) is ",
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
-      },
-      {
-        "id": "GAP-075",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Make `classify()` in `operations/bin/jasonos-batch-admitter.py` (and `steward_gated` in `operations/bin/jasonos-work-item-runner.py`) discriminate along three axes it currently ignores, without weaken",
-        "stop_line": "Security Steward review before the classifier change is merged to canonical. This item modifies `jasonos-batch-admitter.py` \u2014 relay/commit-path machinery by name \u2014 and changes the assignment of the cl",
-        "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
         "id": "GAP-077",
@@ -402,12 +394,42 @@
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
       },
       {
+        "id": "GAP-098",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Two narrow residuals left open by GAP-075, both on the weak-axis / gate-parse frontier GAP-075 explicitly scoped out. (A) **Assert-vs-deny on the weak axes.** GAP-075's `_is_negated_attached()` suppre",
+        "stop_line": "Security Steward review before the classifier change is merged to canonical (same rationale as GAP-075: `admitted_class` gates auto-commit). Stage and hold for the Steward.",
+        "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
         "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
         "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
         "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
+      },
+      {
+        "id": "PCR-OPS-048",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
+        "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
+        "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+      },
+      {
+        "id": "REM-052",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
+        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th"
+      },
+      {
+        "id": "REM-053",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "**Complete step A2 \u2014 the off-disk copy.** Mac-side, upload `Logs/dog-monolith-preserve/{digital-organization-governance-a128904.bundle, _archived-full-2026-07-10.tar.gz, SHA256SUMS}` to `Backup/Projec",
+        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify."
       },
       {
         "id": "REM-054",
@@ -429,6 +451,20 @@
         "route": "Operational",
         "runner_scope": "Add `entry_id` to the inbox file's frontmatter; re-run the compactor.",
         "stop_line": "None."
+      },
+      {
+        "id": "REM-057",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
+        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection."
+      },
+      {
+        "id": "REM-058",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
+        "stop_line": "None beyond the standing push-authorization practice."
       },
       {
         "id": "INI-053",
@@ -478,17 +514,9 @@
         "id": "GAP-073",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "(A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invokes the generator as `subproces",
-        "stop_line": "None for (A)/(B) \u2014 a read-only environment probe and a fail-loud guard touch nothing on the authority/spend/commit path. **(C) is Steward-gated** if it resolves to a package install.",
+        "runner_scope": "The ungated probe/guard slice. (A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invo",
+        "stop_line": "None \u2014 a read-only environment probe and a fail-loud guard are fully ungated. The dependency-resolution half (install the package under Security Steward clearance, or adopt a stdlib-only renderer) is ",
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
-      },
-      {
-        "id": "GAP-075",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Make `classify()` in `operations/bin/jasonos-batch-admitter.py` (and `steward_gated` in `operations/bin/jasonos-work-item-runner.py`) discriminate along three axes it currently ignores, without weaken",
-        "stop_line": "Security Steward review before the classifier change is merged to canonical. This item modifies `jasonos-batch-admitter.py` \u2014 relay/commit-path machinery by name \u2014 and changes the assignment of the cl",
-        "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
         "id": "GAP-077",
@@ -539,12 +567,42 @@
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
       },
       {
+        "id": "GAP-098",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Two narrow residuals left open by GAP-075, both on the weak-axis / gate-parse frontier GAP-075 explicitly scoped out. (A) **Assert-vs-deny on the weak axes.** GAP-075's `_is_negated_attached()` suppre",
+        "stop_line": "Security Steward review before the classifier change is merged to canonical (same rationale as GAP-075: `admitted_class` gates auto-commit). Stage and hold for the Steward.",
+        "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
         "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
         "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
         "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
+      },
+      {
+        "id": "PCR-OPS-048",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
+        "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
+        "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+      },
+      {
+        "id": "REM-052",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
+        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th"
+      },
+      {
+        "id": "REM-053",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "**Complete step A2 \u2014 the off-disk copy.** Mac-side, upload `Logs/dog-monolith-preserve/{digital-organization-governance-a128904.bundle, _archived-full-2026-07-10.tar.gz, SHA256SUMS}` to `Backup/Projec",
+        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify."
       },
       {
         "id": "REM-054",
@@ -566,6 +624,20 @@
         "route": "Operational",
         "runner_scope": "Add `entry_id` to the inbox file's frontmatter; re-run the compactor.",
         "stop_line": "None."
+      },
+      {
+        "id": "REM-057",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
+        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection."
+      },
+      {
+        "id": "REM-058",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
+        "stop_line": "None beyond the standing push-authorization practice."
       },
       {
         "id": "INI-053",
@@ -612,55 +684,20 @@
     ],
     "blocked_needs_decision": [
       {
-        "id": "PCR-OPS-047",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "",
-        "stop_line": "`awaiting-steward-re-review`. CEO scope approval recorded 2026-07-09; the runner still halts. No code, no arming, no scope change is enacted by this document.",
-        "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
-      },
-      {
-        "id": "PCR-OPS-048",
-        "type": "PCR",
+        "id": "GAP-097",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
-        "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
-        "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+        "runner_scope": "In `operations/bin/jasonos-status-generator.py`, `read_work_readiness()` sorts every work item into buckets, and `_ceo_decision_pending(contract, text)` decides whether an item is `blocked_needs_decis",
+        "stop_line": "None. *(Routine read-only-generator change, same class as GAP-096 / GAP-087. The one invariant the implementer must not break: the bug's current direction is fail-toward-blocked, i.e. it shows too muc",
+        "description": "Work-Readiness classifier mis-surfaces CEO-decided, Steward-gated items as blocked_needs_decision\u2026"
       },
       {
-        "id": "REM-047",
-        "type": "REM",
+        "id": "GAP-099",
+        "type": "GAP",
         "route": "CEO-first",
-        "runner_scope": "(1) Remove/repoint the dead `upstream` remote on `Governance/_archived/digital-organization-governance`. (2) Audit and repoint (or confirm map-resolved) the bare hardcoded `/Volumes/SandboxData/Govern",
-        "stop_line": "CEO decision on whether to formally retire (delete) the archived legacy clone or keep it as the documented INI-116 rollback anchor \u2014 that decision bounds how remediation (1) is done. The script-path a"
-      },
-      {
-        "id": "REM-052",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "None \u2014 no option is chosen yet. Per PCR-GOV-005 decision E (leading-stop rule), a REM's runner scope stays a bare `None` until the CEO marks a `Chosen option`.",
-        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate. Both sit on the commit path and are Security-Steward-gated. Unblocked by the CEO's option selection."
-      },
-      {
-        "id": "REM-053",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "None until an option is chosen. Per PCR-GOV-005 decision E (leading-stop rule), a REM's runner scope stays a bare `None` until the CEO marks a `Chosen option`. Steps A1\u2013A3 (bundle, upload, verify) are",
-        "stop_line": "**Halt before `rm`.** Deletion proceeds only after (1) the CEO has marked a chosen option, and (2) for Option A/B, the preserved copy has been *verified restorable* \u2014 a bundle that was created is not "
-      },
-      {
-        "id": "REM-057",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
-        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection."
-      },
-      {
-        "id": "REM-058",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
-        "stop_line": "None beyond the standing push-authorization practice."
+        "runner_scope": "None. *(Leading-stop: the first actionable step is a reserved CEO decision \u2014 install-vs-renderer \u2014 and, if install, a Security Steward clearance. Per the leading-stop rule the scope stays a bare `None",
+        "stop_line": "CEO option selection at (C). If the install path is chosen, `markdown` is a conditional-approval tool class requiring **Security Steward clearance** before the install runs (`governance/memory.md` \u00a7 K",
+        "description": "Blog publish path: resolve the markdown dependency once the GAP-073 probe confirms it \u2014 install\u2026"
       },
       {
         "id": "INI-011",
@@ -721,6 +758,14 @@
     ],
     "not_executable_leading_stop": [
       {
+        "id": "PCR-OPS-047",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "",
+        "stop_line": "`awaiting-steward-re-review`. CEO scope approval recorded 2026-07-09; the runner still halts. No code, no arming, no scope change is enacted by this document.",
+        "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
+      },
+      {
         "id": "REM-036",
         "type": "REM",
         "route": "Operational",
@@ -742,7 +787,16 @@
         "stop_line": "Blocked by INI-072 (Chapter Map & Dossier Architecture), which identifies the keystone chapters this pass calibrates against and is itself Paused. The work is also CEO-authored creative prose (the CEO"
       }
     ],
-    "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T16:47:40.821803+00:00"
+    "contract_quality_gaps": [
+      {
+        "advisory": true,
+        "type": "advisory_sub_item_split",
+        "field": "stop-line",
+        "note": "Contract names a sub-item letter (e.g. '(A)', '(B)', '(C)') in the Stop-line or Route field.  Sub-item splits should be decomposed into separate work items so the batch system can sequence and gate them independently.",
+        "file": "governance/gaps/open/GAP-099-blog-markdown-install-or-stdlib-renderer-steward-gated-half-of-gap073.md",
+        "category": "gap-open"
+      }
+    ],
+    "generated_at": "2026-07-11T19:13:30.103658+00:00"
   }
 }
