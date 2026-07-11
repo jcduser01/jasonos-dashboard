@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T10:44:57Z",
+  "generated_at": "2026-07-11T13:16:29Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T03:09:25Z",
-    "minutes_since_session": 455,
+    "last_session_date": "2026-07-11T12:58:07Z",
+    "minutes_since_session": 18,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -410,22 +410,6 @@
         "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
       },
       {
-        "id": "GAP-091",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Harden `test_steward_review_with_injection_vocab_exempted` in `operations/bin/tests/test_dispatcher_injection_exemption.py`: (1) add `assertIsNotNone(result)` before the current negative assertion; (2",
-        "stop_line": "None.",
-        "description": "GAP-052's exempt-direction test can pass vacuously \u2014 the injection-exemption assertion is\u2026"
-      },
-      {
-        "id": "GAP-092",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the deploy/coverage discipline so a deployed script's same-directory `import` of another repo module is verified to resolve at the deploy location \u2014 e.g. `check-script-registry-coverage.py` (or",
-        "stop_line": "None.",
-        "description": "A deployed script's same-directory import dependency is not verified, so a missing shared module\u2026"
-      },
-      {
         "id": "GAP-093",
         "type": "GAP",
         "route": "Queue-ready",
@@ -448,14 +432,6 @@
         "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
         "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
         "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
-      },
-      {
-        "id": "GAP-096",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `read_work_readiness()` (`operations/bin/jasonos-status-generator.py`, ~lines 855\u2013872), the entire conformance-check block \u2014 the dynamic import of `check-work-item-contract-conformance.py`, `_iter_",
-        "stop_line": "None \u2014 engineering hardening; no decision required.",
-        "description": "The status generator's conformance-check block is one try/except, so an exception on any item\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -587,22 +563,6 @@
         "description": "The advisory-lock grace period is a production-exposed env var with no lower bound (a =0\u2026"
       },
       {
-        "id": "GAP-091",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Harden `test_steward_review_with_injection_vocab_exempted` in `operations/bin/tests/test_dispatcher_injection_exemption.py`: (1) add `assertIsNotNone(result)` before the current negative assertion; (2",
-        "stop_line": "None.",
-        "description": "GAP-052's exempt-direction test can pass vacuously \u2014 the injection-exemption assertion is\u2026"
-      },
-      {
-        "id": "GAP-092",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the deploy/coverage discipline so a deployed script's same-directory `import` of another repo module is verified to resolve at the deploy location \u2014 e.g. `check-script-registry-coverage.py` (or",
-        "stop_line": "None.",
-        "description": "A deployed script's same-directory import dependency is not verified, so a missing shared module\u2026"
-      },
-      {
         "id": "GAP-093",
         "type": "GAP",
         "route": "Queue-ready",
@@ -625,14 +585,6 @@
         "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
         "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
         "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
-      },
-      {
-        "id": "GAP-096",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `read_work_readiness()` (`operations/bin/jasonos-status-generator.py`, ~lines 855\u2013872), the entire conformance-check block \u2014 the dynamic import of `check-work-item-contract-conformance.py`, `_iter_",
-        "stop_line": "None \u2014 engineering hardening; no decision required.",
-        "description": "The status generator's conformance-check block is one try/except, so an exception on any item\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -839,6 +791,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T10:44:57.444637+00:00"
+    "generated_at": "2026-07-11T13:16:29.831048+00:00"
   }
 }
