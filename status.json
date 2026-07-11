@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T03:09:25Z",
+  "generated_at": "2026-07-11T04:03:48Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T02:46:55Z",
-    "minutes_since_session": 22,
+    "last_session_date": "2026-07-11T03:09:25Z",
+    "minutes_since_session": 54,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -370,6 +370,14 @@
         "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
+        "id": "GAP-077",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "See \u00a7 Proposed resolution, P1\u2013P3.",
+        "stop_line": "Halt before any change to `commit_via_relay.py` (P2) or `jasonos-relay-watcher.sh` (P3) is deployed to `~/bin` / `SandboxData/bin`, for Security Steward review. P1 carries no stop-line.",
+        "description": "JASONOS_QUEUE_DIR names two different queues, and its relay-client override unconditionally\u2026"
+      },
+      {
         "id": "GAP-079",
         "type": "GAP",
         "route": "Queue-ready",
@@ -448,6 +456,14 @@
         "runner_scope": "`operations/bin/check-cap-rev-write-claims.py` \u2014 make `_load_runbook_registry` **section-aware**: ingest template rows only from within the required-output registry table (e.g. between the `## Require",
         "stop_line": "Halt before deploy pending Security Steward review \u2014 same discipline as GAP-084 and the checker's existing gate.",
         "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
+      },
+      {
+        "id": "GAP-096",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "In `read_work_readiness()` (`operations/bin/jasonos-status-generator.py`, ~lines 855\u2013872), the entire conformance-check block \u2014 the dynamic import of `check-work-item-contract-conformance.py`, `_iter_",
+        "stop_line": "None \u2014 engineering hardening; no decision required.",
+        "description": "The status generator's conformance-check block is one try/except, so an exception on any item\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -525,6 +541,14 @@
         "description": "Batch classifier is over-broad: a lone weak keyword, a *negated* keyword, or one gated sub-item\u2026"
       },
       {
+        "id": "GAP-077",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "See \u00a7 Proposed resolution, P1\u2013P3.",
+        "stop_line": "Halt before any change to `commit_via_relay.py` (P2) or `jasonos-relay-watcher.sh` (P3) is deployed to `~/bin` / `SandboxData/bin`, for Security Steward review. P1 carries no stop-line.",
+        "description": "JASONOS_QUEUE_DIR names two different queues, and its relay-client override unconditionally\u2026"
+      },
+      {
         "id": "GAP-079",
         "type": "GAP",
         "route": "Queue-ready",
@@ -605,6 +629,14 @@
         "description": "The GAP-084 runbook registry parser ingests the schema-documentation table, registering junk\u2026"
       },
       {
+        "id": "GAP-096",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "In `read_work_readiness()` (`operations/bin/jasonos-status-generator.py`, ~lines 855\u2013872), the entire conformance-check block \u2014 the dynamic import of `check-work-item-contract-conformance.py`, `_iter_",
+        "stop_line": "None \u2014 engineering hardening; no decision required.",
+        "description": "The status generator's conformance-check block is one try/except, so an exception on any item\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -678,6 +710,13 @@
         "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
         "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
         "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+      },
+      {
+        "id": "REM-047",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "(1) Remove/repoint the dead `upstream` remote on `Governance/_archived/digital-organization-governance`. (2) Audit and repoint (or confirm map-resolved) the bare hardcoded `/Volumes/SandboxData/Govern",
+        "stop_line": "CEO decision on whether to formally retire (delete) the archived legacy clone or keep it as the documented INI-116 rollback anchor \u2014 that decision bounds how remediation (1) is done. The script-path a"
       },
       {
         "id": "REM-052",
@@ -774,6 +813,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T03:09:25.341974+00:00"
+    "generated_at": "2026-07-11T04:03:48.073742+00:00"
   }
 }
