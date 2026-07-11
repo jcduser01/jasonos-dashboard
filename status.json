@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T14:47:39Z",
+  "generated_at": "2026-07-11T16:47:40Z",
   "schema_version": "5",
   "generator_version": "2.9",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T14:03:30Z",
-    "minutes_since_session": 44,
+    "last_session_date": "2026-07-11T14:48:01Z",
+    "minutes_since_session": 119,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -324,14 +324,6 @@
         "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
         "stop_line": "",
         "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
-      },
-      {
-        "id": "GAP-089",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Harden `scan_mount_root_pinned()` / `_is_sole_hardcoded_root()` in `operations/bin/check-dead-path-drift.py` (introduced by GAP-065, staged at `f213a10`, not yet promoted). Three defects: **(1) Covera",
-        "stop_line": "",
-        "description": "The GAP-065 mount-root regrowth detector is a bare-literal-presence check, is structurally blind\u2026"
       }
     ],
     "fully_executable": [
@@ -342,14 +334,6 @@
         "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
         "stop_line": "",
         "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
-      },
-      {
-        "id": "GAP-089",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Harden `scan_mount_root_pinned()` / `_is_sole_hardcoded_root()` in `operations/bin/check-dead-path-drift.py` (introduced by GAP-065, staged at `f213a10`, not yet promoted). Three defects: **(1) Covera",
-        "stop_line": "",
-        "description": "The GAP-065 mount-root regrowth detector is a bare-literal-presence check, is structurally blind\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -759,6 +743,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T14:47:39.869486+00:00"
+    "generated_at": "2026-07-11T16:47:40.821803+00:00"
   }
 }
