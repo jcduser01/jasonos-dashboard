@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-11T19:39:33Z",
+  "generated_at": "2026-07-11T21:22:30Z",
   "schema_version": "5",
-  "generator_version": "2.9",
+  "generator_version": "2.10",
   "stats": {
     "done": 108,
     "total": 124,
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T14:48:01Z",
-    "minutes_since_session": 291,
+    "last_session_date": "2026-07-11T20:39:43Z",
+    "minutes_since_session": 42,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -94,8 +94,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-06-06T11:41:54Z",
-      "invocations_30d": 0
+      "last_active": "2026-07-11T06:32:00Z",
+      "invocations_30d": 30
     },
     {
       "name": "knowledge-director",
@@ -316,26 +316,8 @@
   },
   "batch_queue": [],
   "jasonos_work_readiness": {
-    "eligible_now": [
-      {
-        "id": "GAP-087",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
-        "stop_line": "",
-        "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
-      }
-    ],
-    "fully_executable": [
-      {
-        "id": "GAP-087",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos_worktree_utils.py` line 92 builds the worktree target as `wt_dir = os.path.join(parent, \"wt\")`. `parent` is unique per call (`tempfile.mkdtemp(prefix=\"jasonos-eng-wt-\")`), but ",
-        "stop_line": "",
-        "description": "ephemeral_worktree() hardcodes the worktree admin-dir name wt, so concurrent git worktree add\u2026"
-      }
-    ],
+    "eligible_now": [],
+    "fully_executable": [],
     "in_progress_not_ceo": [
       {
         "id": "GAP-073",
@@ -684,14 +666,6 @@
     ],
     "blocked_needs_decision": [
       {
-        "id": "GAP-097",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `operations/bin/jasonos-status-generator.py`, `read_work_readiness()` sorts every work item into buckets, and `_ceo_decision_pending(contract, text)` decides whether an item is `blocked_needs_decis",
-        "stop_line": "None. *(Routine read-only-generator change, same class as GAP-096 / GAP-087. The one invariant the implementer must not break: the bug's current direction is fail-toward-blocked, i.e. it shows too muc",
-        "description": "Work-Readiness classifier mis-surfaces CEO-decided, Steward-gated items as blocked_needs_decision\u2026"
-      },
-      {
         "id": "GAP-099",
         "type": "GAP",
         "route": "CEO-first",
@@ -795,8 +769,15 @@
         "note": "Contract names a sub-item letter (e.g. '(A)', '(B)', '(C)') in the Stop-line or Route field.  Sub-item splits should be decomposed into separate work items so the batch system can sequence and gate them independently.",
         "file": "governance/gaps/open/GAP-099-blog-markdown-install-or-stdlib-renderer-steward-gated-half-of-gap073.md",
         "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Self-executed by the President Agent in-session",
+        "file": "governance/gaps/open/GAP-100-operations-director-scheduled-tasks-never-record-to-master-log-so-dashboard-shows-ops-inactive.md",
+        "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-11T19:39:33.444819+00:00"
+    "generated_at": "2026-07-11T21:22:30.889534+00:00"
   }
 }
