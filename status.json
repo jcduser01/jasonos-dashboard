@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T22:38:09Z",
+  "generated_at": "2026-07-11T22:39:26Z",
   "schema_version": "5",
   "generator_version": "2.10",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-11T21:23:17Z",
-    "minutes_since_session": 74,
+    "minutes_since_session": 76,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -354,14 +354,6 @@
         "description": "JASONOS_QUEUE_DIR names two different queues, and its relay-client override unconditionally\u2026"
       },
       {
-        "id": "GAP-079",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Determine the actual matcher rule \u2014 whether a Claude Code `Write` permission genuinely requires a paired `Edit` allow rule, or whether something narrower is happening. Four hypotheses were tried and r",
-        "stop_line": "The compiler change is a **deploy-path** change to director access provisioning. Build, test, and stage; halt before re-running the compiler against live jails, dispatch the Security Steward, and depl",
-        "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
@@ -541,14 +533,6 @@
         "runner_scope": "See \u00a7 Proposed resolution, P1\u2013P3.",
         "stop_line": "Halt before any change to `commit_via_relay.py` (P2) or `jasonos-relay-watcher.sh` (P3) is deployed to `~/bin` / `SandboxData/bin`, for Security Steward review. P1 carries no stop-line.",
         "description": "JASONOS_QUEUE_DIR names two different queues, and its relay-client override unconditionally\u2026"
-      },
-      {
-        "id": "GAP-079",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Determine the actual matcher rule \u2014 whether a Claude Code `Write` permission genuinely requires a paired `Edit` allow rule, or whether something narrower is happening. Four hypotheses were tried and r",
-        "stop_line": "The compiler change is a **deploy-path** change to director access provisioning. Build, test, and stage; halt before re-running the compiler against live jails, dispatch the Security Steward, and depl",
-        "description": "A write grant with no matching edit grant is silently refused, making the path unwritable"
       },
       {
         "id": "GAP-083",
@@ -804,6 +788,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T22:38:09.423577+00:00"
+    "generated_at": "2026-07-11T22:39:26.163513+00:00"
   }
 }
