@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T12:54:21Z",
+  "generated_at": "2026-07-12T13:48:42Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-12T07:19:38Z",
-    "minutes_since_session": 334,
+    "last_session_date": "2026-07-12T13:47:00Z",
+    "minutes_since_session": 1,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -89,7 +89,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 22
+      "invocations_30d": 21
     },
     {
       "name": "operations-director",
@@ -101,7 +101,7 @@
       "name": "knowledge-director",
       "display": "Knowledge",
       "last_active": "2026-06-12T20:23:25Z",
-      "invocations_30d": 7
+      "invocations_30d": 5
     },
     {
       "name": "security-steward",
@@ -386,14 +386,6 @@
         "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
       },
       {
-        "id": "GAP-106",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`jasonos-deploy-sync.py --apply` re-syncs **every** deployed copy whose bytes differ from canonical (`operations/bin/`), scoped only by \"is it stale\" and the `~/bin`-divergence skip. It has no notion ",
-        "stop_line": "No deploy-path code lands without Security Steward review + CEO promotion (stage-and-hold). The deploy path is the last gate before live runtime \u2014 its integrity is a non-waivable concern.",
-        "description": "A blanket jasonos-deploy-sync.py --apply deploys ANY stale tracked file, including another\u2026"
-      },
-      {
         "id": "GAP-107",
         "type": "GAP",
         "route": "Queue-ready",
@@ -548,14 +540,6 @@
         "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
       },
       {
-        "id": "GAP-106",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`jasonos-deploy-sync.py --apply` re-syncs **every** deployed copy whose bytes differ from canonical (`operations/bin/`), scoped only by \"is it stale\" and the `~/bin`-divergence skip. It has no notion ",
-        "stop_line": "No deploy-path code lands without Security Steward review + CEO promotion (stage-and-hold). The deploy path is the last gate before live runtime \u2014 its integrity is a non-waivable concern.",
-        "description": "A blanket jasonos-deploy-sync.py --apply deploys ANY stale tracked file, including another\u2026"
-      },
-      {
         "id": "GAP-107",
         "type": "GAP",
         "route": "Queue-ready",
@@ -689,6 +673,6 @@
         "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-12T12:54:21.329165+00:00"
+    "generated_at": "2026-07-12T13:48:42.428635+00:00"
   }
 }
