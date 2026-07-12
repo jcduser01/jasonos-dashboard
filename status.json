@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T00:59:40Z",
+  "generated_at": "2026-07-12T02:59:41Z",
   "schema_version": "5",
   "generator_version": "2.11",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-11T22:39:47Z",
-    "minutes_since_session": 139,
+    "last_session_date": "2026-07-12T01:02:23Z",
+    "minutes_since_session": 117,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -362,22 +362,6 @@
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
       },
       {
-        "id": "GAP-086",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend `operations/bin/check-steward-audit-log-size.py` so a **stuck** inbox entry is a defect independent of the 5-entry volume threshold: (a) an entry the compactor has actively rejected (compactor ",
-        "stop_line": "Halt before changing the compactor's ingress validator or the required frontmatter schema. Widening what the compactor accepts is a separate decision (it was REM-051 Option 2, not chosen) and is Secur",
-        "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
-      },
-      {
-        "id": "GAP-093",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) `skills/jasonos-batch-engineer/SKILL.md` \u2014 the worktree-isolated build+stage procedure must instruct the engineer to create its ephemeral worktree with a **detached** checkout of the lane (`git wo",
-        "stop_line": "None \u2014 the fix is documentation (skill discipline) plus an optional detector; no policy change, no live-path deploy. If the optional committer-identity guard is built as code under `operations/bin/`, ",
-        "description": "The batch engineer bases its worktree on the lane branch and falls back to direct git when the\u2026"
-      },
-      {
         "id": "GAP-094",
         "type": "GAP",
         "route": "Queue-ready",
@@ -556,22 +540,6 @@
         "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
         "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
         "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
-      },
-      {
-        "id": "GAP-086",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend `operations/bin/check-steward-audit-log-size.py` so a **stuck** inbox entry is a defect independent of the 5-entry volume threshold: (a) an entry the compactor has actively rejected (compactor ",
-        "stop_line": "Halt before changing the compactor's ingress validator or the required frontmatter schema. Widening what the compactor accepts is a separate decision (it was REM-051 Option 2, not chosen) and is Secur",
-        "description": "The Steward audit-inbox check measures backlog *volume* where the defect is *duration*, so a\u2026"
-      },
-      {
-        "id": "GAP-093",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "(1) `skills/jasonos-batch-engineer/SKILL.md` \u2014 the worktree-isolated build+stage procedure must instruct the engineer to create its ephemeral worktree with a **detached** checkout of the lane (`git wo",
-        "stop_line": "None \u2014 the fix is documentation (skill discipline) plus an optional detector; no policy change, no live-path deploy. If the optional committer-identity guard is built as code under `operations/bin/`, ",
-        "description": "The batch engineer bases its worktree on the lane branch and falls back to direct git when the\u2026"
       },
       {
         "id": "GAP-094",
@@ -819,6 +787,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-12T00:59:40.610780+00:00"
+    "generated_at": "2026-07-12T02:59:42.099270+00:00"
   }
 }
