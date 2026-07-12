@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T16:46:26Z",
+  "generated_at": "2026-07-12T17:15:28Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,9 +12,9 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T14:07:46Z",
-    "minutes_since_session": 158,
-    "airlock_queue": 0,
-    "airlock_bundles": 0
+    "minutes_since_session": 187,
+    "airlock_queue": 4,
+    "airlock_bundles": 1
   },
   "active_initiative": {
     "id": "INI-134",
@@ -712,14 +712,6 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "Volume-Wide Asynchronous Concurrency Substrate \u2014 Per-Repo Isolation Domains, Path-Scoped\u2026"
-      },
-      {
-        "id": "PCR-OPS-053",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Retire the Legacy Memory Monolith and Bound the Session-Handoff Read-Model \u2014 Serialize State by\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -771,26 +763,8 @@
         "field": "stop_line",
         "file": "governance/pcrs/open/PCR-OPS-052-async-concurrency-substrate.md",
         "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-053-memory-and-handoff-monolith-decomposition.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-053-memory-and-handoff-monolith-decomposition.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-053-memory-and-handoff-monolith-decomposition.md",
-        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-12T16:46:26.664810+00:00"
+    "generated_at": "2026-07-12T17:15:28.545868+00:00"
   }
 }
