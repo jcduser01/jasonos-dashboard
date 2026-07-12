@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T17:43:44Z",
+  "generated_at": "2026-07-12T19:16:49Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,17 +11,17 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-12T17:15:49Z",
-    "minutes_since_session": 27,
-    "airlock_queue": 4,
-    "airlock_bundles": 1
+    "last_session_date": "2026-07-12T18:56:49Z",
+    "minutes_since_session": 20,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-134",
     "name": "Async Concurrency Substrate \u2014 rebuild the relay into per-repo isolation domains with path-scoped interlock, lease locks, and async-by-default commit (PCR-OPS-052)",
     "status": "active",
     "contract": {
-      "route": "Queue-ready",
+      "route": "In progress",
       "runner_scope": "Enact PCR-OPS-052 in seven independently-shippable stages, one staged lane per stage, in order 0\u21926. Rebuild the git relay from a volume-global singleton (one queue, one lock, one interlock marker for all 16 repos) into per-repo isolation domains with a path-scoped interlock, lease-based orphan-proof locking, async-by-default commit with session-end receipt reconciliation, enforced single-writer projections, and (gated) bare-main + merge-queue integration. The relay trust boundary (AI \u2192 Intent \u2192 Relay \u2192 GitHub, deny-by-default, relay-only source control, non-waivable Steward/Identity-Firewall gates) is unchanged throughout \u2014 this initiative changes concurrency topology, never authorization. One pattern across all repos, parametrized by operations/repo-class-registry.md.",
       "stop_line": "Each stage that touches the commit/push substrate (Stages 2, 3, 4, 6) requires non-waivable Security Steward review before go-live (PCR-OPS-045 discipline) and stages on its own lane for CEO promotion. Stage 6 (bare-main + merge-queue) additionally requires a parallel-run rehearsal before cutover AND is gated on a measured decision: proceed only if the Stage 0 metrics, after Stages 1\u20135, still show residual integration contention that justifies the build.",
       "depends_on": [
@@ -35,7 +35,7 @@
       "name": "Async Concurrency Substrate \u2014 rebuild the relay into per-repo isolation domains with path-scoped interlock, lease locks, and async-by-default commit (PCR-OPS-052)",
       "status": "active",
       "contract": {
-        "route": "Queue-ready",
+        "route": "In progress",
         "runner_scope": "Enact PCR-OPS-052 in seven independently-shippable stages, one staged lane per stage, in order 0\u21926. Rebuild the git relay from a volume-global singleton (one queue, one lock, one interlock marker for all 16 repos) into per-repo isolation domains with a path-scoped interlock, lease-based orphan-proof locking, async-by-default commit with session-end receipt reconciliation, enforced single-writer projections, and (gated) bare-main + merge-queue integration. The relay trust boundary (AI \u2192 Intent \u2192 Relay \u2192 GitHub, deny-by-default, relay-only source control, non-waivable Steward/Identity-Firewall gates) is unchanged throughout \u2014 this initiative changes concurrency topology, never authorization. One pattern across all repos, parametrized by operations/repo-class-registry.md.",
         "stop_line": "Each stage that touches the commit/push substrate (Stages 2, 3, 4, 6) requires non-waivable Security Steward review before go-live (PCR-OPS-045 discipline) and stages on its own lane for CEO promotion. Stage 6 (bare-main + merge-queue) additionally requires a parallel-run rehearsal before cutover AND is gated on a measured decision: proceed only if the Stage 0 metrics, after Stages 1\u20135, still show residual integration contention that justifies the build.",
         "depends_on": [
@@ -109,13 +109,18 @@
   ],
   "status_drift": [],
   "category_drift": [],
-  "contract_drift": [],
+  "contract_drift": [
+    {
+      "id": "INI-134",
+      "route": "In progress \u2014 Stages 0\u20132 built/tested/shipped to canonical 2026-07-12 (deploy CEO-gated); Stage 6 measured-decision DEFER; Stages 3\u20135 designed (rehearsal-gated build pending)"
+    }
+  ],
   "directors": [
     {
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 15
+      "invocations_30d": 14
     },
     {
       "name": "operations-director",
@@ -734,6 +739,14 @@
         "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
       },
       {
+        "id": "GAP-116",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
+        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": null,
@@ -791,6 +804,12 @@
         "category": "gap-open"
       },
       {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-116-no-procedure-for-genuinely-external-client-confidential-material-in-a-mirrored-vault.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
@@ -825,8 +844,15 @@
         "field": "stop_line",
         "file": "governance/pcrs/open/PCR-OPS-052-async-concurrency-substrate.md",
         "category": "pcr-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "In progress",
+        "file": "portfolio/open/INI-134.md",
+        "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-12T17:43:44.864897+00:00"
+    "generated_at": "2026-07-12T19:16:49.718551+00:00"
   }
 }
