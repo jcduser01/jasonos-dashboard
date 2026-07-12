@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T14:46:26Z",
+  "generated_at": "2026-07-12T16:46:26Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T14:07:46Z",
-    "minutes_since_session": 38,
+    "minutes_since_session": 158,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -115,7 +115,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 19
+      "invocations_30d": 15
     },
     {
       "name": "operations-director",
@@ -127,19 +127,19 @@
       "name": "knowledge-director",
       "display": "Knowledge",
       "last_active": "2026-06-12T20:23:25Z",
-      "invocations_30d": 3
+      "invocations_30d": 1
     },
     {
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-09T23:21:25Z",
-      "invocations_30d": 24
+      "invocations_30d": 23
     },
     {
       "name": "research-director",
       "display": "Research",
       "last_active": "2026-06-12T16:44:02Z",
-      "invocations_30d": 7
+      "invocations_30d": 0
     },
     {
       "name": "financial-analysis-director",
@@ -682,6 +682,14 @@
     ],
     "not_executable_leading_stop": [
       {
+        "id": "GAP-112",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "Do not rebuild or redeploy the plugin (P2 / go-live) until the P1 canonical sources are committed **and** Security Steward review has cleared. Bringing sources under git (P1) is additive and safe; cha",
+        "description": "JasonOS-authored skills live only as un-versioned plugin artifacts (four with no git source at\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": null,
@@ -720,6 +728,12 @@
         "field": "route",
         "value": "Queue-ready to a staged lane",
         "file": "governance/gaps/open/GAP-108-implement-pcr-ops-047-candidate-pool-override-mechanics-and-close-orchestrator-cli-class-hardcode.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-112-jasonos-authored-skills-not-under-source-control-and-deployed-copies-drift.md",
         "category": "gap-open"
       },
       {
@@ -777,6 +791,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-12T14:46:26.214536+00:00"
+    "generated_at": "2026-07-12T16:46:26.664810+00:00"
   }
 }
