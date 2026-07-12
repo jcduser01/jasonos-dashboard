@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T11:53:34Z",
+  "generated_at": "2026-07-12T12:37:37Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T07:19:38Z",
-    "minutes_since_session": 273,
+    "minutes_since_session": 317,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -699,19 +699,19 @@
         "type": "PCR",
         "route": "Draft-only",
         "runner_scope": "",
-        "stop_line": "`awaiting-steward-re-review`. CEO scope approval recorded 2026-07-09; the runner still halts. No code, no arming, no scope change is enacted by this document.",
+        "stop_line": "`awaiting-implementation-item` (was `awaiting-steward-re-review` \u2014 the Guard-D re-review CLEARED 2026-07-12, so gate #1 is satisfied). CEO scope approval recorded 2026-07-09; the runner still halts. N",
         "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
-      },
-      {
-        "id": "REM-036",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs",
-        "description": "New KB completeness checker surfaces 7 aging airlock artifacts in the vault inbox\u2026"
       }
     ],
-    "contract_quality_gaps": [],
-    "generated_at": "2026-07-12T11:53:34.794742+00:00"
+    "contract_quality_gaps": [
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready to a staged lane",
+        "file": "governance/gaps/open/GAP-108-implement-pcr-ops-047-candidate-pool-override-mechanics-and-close-orchestrator-cli-class-hardcode.md",
+        "category": "gap-open"
+      }
+    ],
+    "generated_at": "2026-07-12T12:37:37.969974+00:00"
   }
 }
