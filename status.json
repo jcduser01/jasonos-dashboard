@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-12T17:15:40Z",
+  "generated_at": "2026-07-12T17:43:33Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
     "done": 108,
-    "total": 125,
+    "total": 127,
     "active": 1,
     "queued": 0,
     "paused": 8,
-    "backlog": 8
+    "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-12T14:07:46Z",
-    "minutes_since_session": 187,
+    "last_session_date": "2026-07-12T17:15:49Z",
+    "minutes_since_session": 27,
     "airlock_queue": 4,
     "airlock_bundles": 1
   },
@@ -299,6 +299,26 @@
           "route": "CEO-first",
           "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE. Draft one page of real copy (homepage hook + the paid-diagnostic offer) in Jason's register against the governed IA, to falsify the no-handoff hook cheaply before design spend. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
           "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build carries a launch gate of \u22651 delivered, anonymized fit-proof (paid-diagnostic) case that does not yet exist. Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and the CEO's launch-floor acceptance."
+        }
+      },
+      {
+        "id": "INI-135",
+        "name": "Jason Cook Design \u2014 Client Portal / Engagement Operating System",
+        "notes": "Filed 2026-07-12 from the jcd-digital-organization-artifacts ingestion. The portal is JCD's client-facing engagement surface AND its internal engagement operating system; source strategy at\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "None \u2014 architecture-and-planning initiative; the CEO expects to build it incrementally over time. No autonomous build until scoped and pulled.",
+          "stop_line": "Do not build production billing (Stripe) or store any real client data until (a) a Security Steward review of the data/trust model, and (b) a CEO decision on hosting/productization posture. Deny-by-default on anything that touches client PII or payment execution."
+        }
+      },
+      {
+        "id": "INI-136",
+        "name": "Love All the Way \u2014 Digital Organization Build (first external engagement)",
+        "notes": "Filed 2026-07-12 from the jcd-digital-organization-artifacts ingestion. First live instance of the Digital Organization Architecture Engagement, for an external client. Discovery record at\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "None \u2014 real-world provisioning (hardware purchase, in-home install, the client's own accounts/keys) is CEO/human work performed with the client. No autonomous action against the client's systems or data.",
+          "stop_line": "Deny-by-default on anything touching the external client's live systems, accounts, keys, or client data. All provisioning and access is CEO-performed/authorized with the owner present. Cloud AI must never receive her client notes/identifiable client data or private business positioning (hard constraint from discovery)."
         }
       }
     ],
@@ -690,6 +710,30 @@
         "description": "JasonOS-authored skills live only as un-versioned plugin artifacts (four with no git source at\u2026"
       },
       {
+        "id": "GAP-113",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "None \u2014 this is a projection writer, not the relay/commit-authorization substrate. No authority change. Any fix stays inside the publisher daemon.",
+        "description": "The memory-index publisher daemon auto-commits and pushes its MEMORY.md projection independently\u2026"
+      },
+      {
+        "id": "GAP-114",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "None \u2014 generator is a projection writer; no authority or substrate change.",
+        "description": "The memory-index generator silently skips atomic entries that lack YAML frontmatter, so a real\u2026"
+      },
+      {
+        "id": "GAP-115",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "None.",
+        "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": null,
@@ -729,6 +773,24 @@
         "category": "gap-open"
       },
       {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-113-memory-index-daemon-projection-commit-races-ahead-of-entry-file-commit.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-114-memory-index-generator-silently-skips-entries-without-frontmatter.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-115-relay-dispatch-terminology-fact-dispositioned-archive-only.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
@@ -765,6 +827,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-12T17:15:40.708868+00:00"
+    "generated_at": "2026-07-12T17:43:33.347718+00:00"
   }
 }
