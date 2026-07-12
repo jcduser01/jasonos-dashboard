@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T12:37:50Z",
+  "generated_at": "2026-07-12T12:41:46Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T07:19:38Z",
-    "minutes_since_session": 318,
+    "minutes_since_session": 322,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -692,7 +692,16 @@
         "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
       }
     ],
-    "blocked_needs_decision": [],
+    "blocked_needs_decision": [
+      {
+        "id": "REM-063",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "Land the one-line line-74 correction described under Remediation, then close.",
+        "stop_line": "None substantive \u2014 no policy or definition change; the surfacing model itself is unchanged (already CEO-ratified under GAP-085). Halt only if the edit would restate what \"a CEO decision is pending\" me",
+        "description": "report-triage protocol \u00a7 Storage model (line 74) still describes the pre-GAP-057 dashboard\u2026"
+      }
+    ],
     "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-047",
@@ -712,6 +721,6 @@
         "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-12T12:37:50.044296+00:00"
+    "generated_at": "2026-07-12T12:41:46.230256+00:00"
   }
 }
