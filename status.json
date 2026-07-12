@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T19:17:02Z",
+  "generated_at": "2026-07-12T21:17:01Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-12T18:56:49Z",
-    "minutes_since_session": 20,
+    "last_session_date": "2026-07-12T21:08:41Z",
+    "minutes_since_session": 8,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -112,7 +112,7 @@
   "contract_drift": [
     {
       "id": "INI-134",
-      "route": "In progress \u2014 Stages 0\u20132 built/tested/shipped to canonical 2026-07-12 (deploy CEO-gated); Stage 6 measured-decision DEFER; Stages 3\u20135 designed (rehearsal-gated build pending)"
+      "route": "In progress \u2014 Stages 0\u20132 shipped to canonical AND DEPLOYED LIVE 2026-07-12 (relay v1.23; CEO-authorized deploy; live-smoke verified); Stage 6 measured-decision DEFER; Stages 3\u20135 designed (rehearsal-gated build pending)"
     }
   ],
   "directors": [
@@ -132,7 +132,7 @@
       "name": "knowledge-director",
       "display": "Knowledge",
       "last_active": "2026-06-12T20:23:25Z",
-      "invocations_30d": 1
+      "invocations_30d": 0
     },
     {
       "name": "security-steward",
@@ -156,7 +156,7 @@
       "name": "venture-director",
       "display": "Venture",
       "last_active": "2026-06-12T19:53:45Z",
-      "invocations_30d": 1
+      "invocations_30d": 0
     },
     {
       "name": "creative-director",
@@ -695,16 +695,7 @@
         "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
       }
     ],
-    "blocked_needs_decision": [
-      {
-        "id": "REM-063",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "Land the one-line line-74 correction described under Remediation, then close.",
-        "stop_line": "None substantive \u2014 no policy or definition change; the surfacing model itself is unchanged (already CEO-ratified under GAP-085). Halt only if the edit would restate what \"a CEO decision is pending\" me",
-        "description": "report-triage protocol \u00a7 Storage model (line 74) still describes the pre-GAP-057 dashboard\u2026"
-      }
-    ],
+    "blocked_needs_decision": [],
     "not_executable_leading_stop": [
       {
         "id": "GAP-112",
@@ -773,13 +764,6 @@
     ],
     "contract_quality_gaps": [
       {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready to a staged lane",
-        "file": "governance/gaps/open/GAP-108-implement-pcr-ops-047-candidate-pool-override-mechanics-and-close-orchestrator-cli-class-hardcode.md",
-        "category": "gap-open"
-      },
-      {
         "type": "missing_scope",
         "field": "runner_scope",
         "file": "governance/gaps/open/GAP-112-jasonos-authored-skills-not-under-source-control-and-deployed-copies-drift.md",
@@ -807,6 +791,13 @@
         "type": "missing_scope",
         "field": "runner_scope",
         "file": "governance/gaps/open/GAP-116-no-procedure-for-genuinely-external-client-confidential-material-in-a-mirrored-vault.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready to a staged lane",
+        "file": "governance/gaps/open/GAP-117-relay-cannot-write-work-item-trailer-so-pcr-ops-047-section-c-derivation-is-inert.md",
         "category": "gap-open"
       },
       {
@@ -853,6 +844,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-12T19:17:02.318008+00:00"
+    "generated_at": "2026-07-12T21:17:01.569934+00:00"
   }
 }
