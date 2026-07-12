@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T07:29:02Z",
+  "generated_at": "2026-07-12T08:45:28Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T07:19:38Z",
-    "minutes_since_session": 9,
+    "minutes_since_session": 85,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -458,12 +458,36 @@
         "description": "Step 2g (jasonos-work-item-index-generator.py --type pcr --check, new under protocol v1.13) finds\u2026"
       },
       {
-        "id": "REM-058",
+        "id": "REM-059",
         "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
-        "stop_line": "None beyond the standing push-authorization practice.",
-        "description": "jasonos-policy-sync 2026-07-11 06:09 UTC anomaly: the live governance repo (jasonos-governance) is\u2026"
+        "route": "Operational",
+        "runner_scope": "Confirm next-run seal; optionally adjust the ceiling-check tolerance or the compactor's post-append seal behavior.",
+        "stop_line": "None.",
+        "description": "Step 2e ceiling check (check-steward-audit-log-size.py) exits 1: the active Security Steward audit\u2026"
+      },
+      {
+        "id": "REM-060",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
+        "stop_line": "None.",
+        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
+      },
+      {
+        "id": "REM-061",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
+        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
+        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
+      },
+      {
+        "id": "REM-062",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
       }
     ],
     "partially_executable": [
@@ -588,12 +612,36 @@
         "description": "Step 2g (jasonos-work-item-index-generator.py --type pcr --check, new under protocol v1.13) finds\u2026"
       },
       {
-        "id": "REM-058",
+        "id": "REM-059",
         "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
-        "stop_line": "None beyond the standing push-authorization practice.",
-        "description": "jasonos-policy-sync 2026-07-11 06:09 UTC anomaly: the live governance repo (jasonos-governance) is\u2026"
+        "route": "Operational",
+        "runner_scope": "Confirm next-run seal; optionally adjust the ceiling-check tolerance or the compactor's post-append seal behavior.",
+        "stop_line": "None.",
+        "description": "Step 2e ceiling check (check-steward-audit-log-size.py) exits 1: the active Security Steward audit\u2026"
+      },
+      {
+        "id": "REM-060",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
+        "stop_line": "None.",
+        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
+      },
+      {
+        "id": "REM-061",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
+        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
+        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
+      },
+      {
+        "id": "REM-062",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
       }
     ],
     "blocked_needs_decision": [],
@@ -616,6 +664,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-12T07:29:02.948258+00:00"
+    "generated_at": "2026-07-12T08:45:28.880290+00:00"
   }
 }
