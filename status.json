@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T22:59:39Z",
+  "generated_at": "2026-07-12T00:59:40Z",
   "schema_version": "5",
   "generator_version": "2.11",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-11T22:39:47Z",
-    "minutes_since_session": 19,
+    "minutes_since_session": 139,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -410,6 +410,14 @@
         "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
       },
       {
+        "id": "GAP-103",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "The INI-081 push-interlock keys off a single **volume-global** marker file (`/Volumes/SandboxData/.git-staged-batch-open`, `jasonos-git-relay.sh:345`). The refusal at `jasonos-git-relay.sh:1085\u20131092` ",
+        "stop_line": "No code lands on the relay push-path without Security Steward review and CEO promotion (stage-and-hold). The doc/decision framing in this GAP is Draft-only; the interlock refusal-scope change is the S",
+        "description": "The INI-081 push-interlock is volume-global, so an open batch lane in the ops/gov repos freezes\u2026"
+      },
+      {
         "id": "PCR-ENG-016",
         "type": "PCR",
         "route": "Queue-ready",
@@ -596,6 +604,14 @@
         "runner_scope": "Two independent pieces. (1) A one-time honesty backfill of the Operations Director's documented daily runs into `/Volumes/SandboxData/Logs/director-logs/agent-invocation-master.log`, reconstructed fro",
         "stop_line": "The master-log write is a **sandbox-side Python append only** \u2014 never route this file through the git dispatch path (its writes to this file are hazardous; the panel reads it directly). The backfill m",
         "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
+      },
+      {
+        "id": "GAP-103",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "The INI-081 push-interlock keys off a single **volume-global** marker file (`/Volumes/SandboxData/.git-staged-batch-open`, `jasonos-git-relay.sh:345`). The refusal at `jasonos-git-relay.sh:1085\u20131092` ",
+        "stop_line": "No code lands on the relay push-path without Security Steward review and CEO promotion (stage-and-hold). The doc/decision framing in this GAP is Draft-only; the interlock refusal-scope change is the S",
+        "description": "The INI-081 push-interlock is volume-global, so an open batch lane in the ops/gov repos freezes\u2026"
       },
       {
         "id": "PCR-ENG-016",
@@ -803,6 +819,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-11T22:59:39.406593+00:00"
+    "generated_at": "2026-07-12T00:59:40.610780+00:00"
   }
 }
