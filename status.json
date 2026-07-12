@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-12T07:18:42Z",
+  "generated_at": "2026-07-12T07:28:52Z",
   "schema_version": "5",
-  "generator_version": "2.11",
+  "generator_version": "2.12",
   "stats": {
     "done": 108,
     "total": 124,
@@ -11,8 +11,8 @@
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-12T01:02:23Z",
-    "minutes_since_session": 376,
+    "last_session_date": "2026-07-12T07:19:38Z",
+    "minutes_since_session": 9,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -464,48 +464,6 @@
         "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
         "stop_line": "None beyond the standing push-authorization practice.",
         "description": "jasonos-policy-sync 2026-07-11 06:09 UTC anomaly: the live governance repo (jasonos-governance) is\u2026"
-      },
-      {
-        "id": "INI-053",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue sc",
-        "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is s"
-      },
-      {
-        "id": "INI-055",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (Site Audit) only \u2014 the initiative states Phase 1 can be pulled independently. Audit the live templeofunicorns.com storefront against DTC-apparel conversion and brand best practice (UX, brand ",
-        "stop_line": "Phase 2 (Design Direction) must be grounded in INI-053 strategy + INI-056 design system and the CEO approves the design direction before Phase 3 implementation; Phase 3 touches the live Shopify theme."
-      },
-      {
-        "id": "INI-056",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (Brand Audit & Inventory) only \u2014 working from the INI-051 guide outputs and the live templeofunicorns.com site, inventory the existing brand identity (documented / implied / missing), catalogu",
-        "stop_line": "Phase 2 (Canonization) must align with INI-053's CEO-approved positioning and the canonical doc set is CEO-approval-gated before Phase 3; halt after the Phase 1 audit memo. Do not author the canonical"
-      },
-      {
-        "id": "INI-063",
-        "type": "INI",
-        "route": "Draft-only",
-        "runner_scope": "Phase 2 (Egress Airlock Design) drafting slice \u2014 Phase 1 (container images + iptables egress + session lifecycle) is COMPLETE. Draft the egress-airlock procedure at policies/security/sandbox-egress-ai",
-        "stop_line": "The egress-airlock procedure and the SS role-definition change are Security-Steward + CEO governance artifacts \u2014 stage the draft and halt at review/approval; do not enact. Phase 3 (operational validat"
-      },
-      {
-        "id": "INI-111",
-        "type": "INI",
-        "route": "Operational",
-        "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists ",
-        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
-      },
-      {
-        "id": "INI-133",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Build the host-native Channel-1 airlock pipeline that consumes the INI-127 Gmail read runner's quarantine records and carries a message end-to-end (classify per airlock policy A/B/C/D \u2192 manifest \u2192 rou",
-        "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flag"
       }
     ],
     "partially_executable": [
@@ -636,108 +594,9 @@
         "runner_scope": "`jasonos-git-relay.sh` push of `jasonos-governance` `main` to `origin` (push:true), once authorized.",
         "stop_line": "None beyond the standing push-authorization practice.",
         "description": "jasonos-policy-sync 2026-07-11 06:09 UTC anomaly: the live governance repo (jasonos-governance) is\u2026"
-      },
-      {
-        "id": "INI-053",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue sc",
-        "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is s"
-      },
-      {
-        "id": "INI-055",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (Site Audit) only \u2014 the initiative states Phase 1 can be pulled independently. Audit the live templeofunicorns.com storefront against DTC-apparel conversion and brand best practice (UX, brand ",
-        "stop_line": "Phase 2 (Design Direction) must be grounded in INI-053 strategy + INI-056 design system and the CEO approves the design direction before Phase 3 implementation; Phase 3 touches the live Shopify theme."
-      },
-      {
-        "id": "INI-056",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 (Brand Audit & Inventory) only \u2014 working from the INI-051 guide outputs and the live templeofunicorns.com site, inventory the existing brand identity (documented / implied / missing), catalogu",
-        "stop_line": "Phase 2 (Canonization) must align with INI-053's CEO-approved positioning and the canonical doc set is CEO-approval-gated before Phase 3; halt after the Phase 1 audit memo. Do not author the canonical"
-      },
-      {
-        "id": "INI-063",
-        "type": "INI",
-        "route": "Draft-only",
-        "runner_scope": "Phase 2 (Egress Airlock Design) drafting slice \u2014 Phase 1 (container images + iptables egress + session lifecycle) is COMPLETE. Draft the egress-airlock procedure at policies/security/sandbox-egress-ai",
-        "stop_line": "The egress-airlock procedure and the SS role-definition change are Security-Steward + CEO governance artifacts \u2014 stage the draft and halt at review/approval; do not enact. Phase 3 (operational validat"
-      },
-      {
-        "id": "INI-111",
-        "type": "INI",
-        "route": "Operational",
-        "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists ",
-        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line"
-      },
-      {
-        "id": "INI-133",
-        "type": "INI",
-        "route": "Queue-ready",
-        "runner_scope": "Build the host-native Channel-1 airlock pipeline that consumes the INI-127 Gmail read runner's quarantine records and carries a message end-to-end (classify per airlock policy A/B/C/D \u2192 manifest \u2192 rou",
-        "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flag"
       }
     ],
-    "blocked_needs_decision": [
-      {
-        "id": "INI-011",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Phases 2 (worker taxonomy) and 3 (broker implementation + Security-Steward-approved go-live) are COMPLETE; the broker is active. The only remaining work is Phase 4 (Remote Node Integration, PROP-004),"
-      },
-      {
-        "id": "INI-039",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "The initiative's own Pull Trigger is an explicit leading gate \u2014 \"Do not pull until the vault reaches ~50 articles or the Knowledge Director reports index.md retrieval is degrading,\" and the approval-g"
-      },
-      {
-        "id": "INI-043",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Phase 3 canonization is COMPLETE and the seven canonical docs are pending CEO review; the CEO must approve the canonical doc set before Phase 4 (AI-assisted exploration) begins. The first actionable s"
-      },
-      {
-        "id": "INI-074",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Hard dependency \u2014 a completed or substantially drafted manuscript must exist before this initiative opens (\"Do not pull before then\"), and market research is performed at pull time because the publish"
-      },
-      {
-        "id": "INI-109",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "Phase 1 documentation slice only \u2014 define and document the product-intent manifest schema (design-file ref, blank + colorways, placement spec, product name, copy, garment-type tag, section tags) inclu",
-        "stop_line": "The Printful API connection and design-file read access require a CEO-provisioned Printful credential (Article XI \u2014 agents cannot open accounts) and Security Steward credential/egress sign-off before "
-      },
-      {
-        "id": "INI-114",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE. Draft one page of real copy (homepage hook + the paid-diagnostic offer) in Jason's register against the governed I",
-        "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build "
-      },
-      {
-        "id": "INI-124",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "Phase 2 (front-end rebuild) only \u2014 stand up the Next.js + shadcn/ui app and port the cockpit home view and all nine INI-123 read-only detail views to the new shell, reading the same v2 JSON contract I",
-        "stop_line": "Phase 1 is a hard governance gate before any write path exists \u2014 the PCR-FIN-003 amendment (cloud-hosted encrypted mutable derived state + HYOK + write mutation surface) is CEO-approval-gated, and a S"
-      },
-      {
-        "id": "INI-126",
-        "type": "INI",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-si"
-      }
-    ],
+    "blocked_needs_decision": [],
     "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-047",
@@ -754,23 +613,9 @@
         "runner_scope": "",
         "stop_line": "Remediation is Knowledge-Director triage of 7 vault-inbox artifacts to a resolved \u00a7 Inbox Status disposition, each requiring content-provenance judgment (Intentional hold for still-open initiatives vs",
         "description": "New KB completeness checker surfaces 7 aging airlock artifacts in the vault inbox\u2026"
-      },
-      {
-        "id": "INI-072",
-        "type": "INI",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "This is interactive creative-structure work \u2014 reading the partial manuscript as a quarry, ranking Cerime chapters by metafictional usefulness, designing the interleave / marginalia arc / frame-permeab"
-      },
-      {
-        "id": "INI-073",
-        "type": "INI",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "Blocked by INI-072 (Chapter Map & Dossier Architecture), which identifies the keystone chapters this pass calibrates against and is itself Paused. The work is also CEO-authored creative prose (the CEO"
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-12T07:18:42.924998+00:00"
+    "generated_at": "2026-07-12T07:28:52.433591+00:00"
   }
 }
