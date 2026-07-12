@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T12:41:55Z",
+  "generated_at": "2026-07-12T12:54:11Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T07:19:38Z",
-    "minutes_since_session": 322,
+    "minutes_since_session": 334,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -346,14 +346,6 @@
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
       },
       {
-        "id": "GAP-077",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "See \u00a7 Proposed resolution, P1\u2013P3.",
-        "stop_line": "Halt before any change to `commit_via_relay.py` (P2) or `jasonos-relay-watcher.sh` (P3) is deployed to `~/bin` / `SandboxData/bin`, for Security Steward review. P1 carries no stop-line.",
-        "description": "JASONOS_QUEUE_DIR names two different queues, and its relay-client override unconditionally\u2026"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
@@ -392,14 +384,6 @@
         "runner_scope": "Two independent pieces. (1) A one-time honesty backfill of the Operations Director's documented daily runs into `/Volumes/SandboxData/Logs/director-logs/agent-invocation-master.log`, reconstructed fro",
         "stop_line": "The master-log write is a **sandbox-side Python append only** \u2014 never route this file through the git dispatch path (its writes to this file are hazardous; the panel reads it directly). The backfill m",
         "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
-      },
-      {
-        "id": "GAP-105",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "GAP-077 P3 added a **queue-sentinel handshake**: `commit_via_relay.py` refuses to enqueue unless the watcher has stamped `.jasonos-relay-queue` in the queue dir (fail-loud \"watcher has not run for thi",
-        "stop_line": "No relay commit-path code or its deploy lands without Security Steward review + CEO promotion (stage-and-hold).",
-        "description": "GAP-077 P3's queue-sentinel handshake is committed to canonical (client + watcher) but\u2026"
       },
       {
         "id": "GAP-106",
@@ -524,14 +508,6 @@
         "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
       },
       {
-        "id": "GAP-077",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "See \u00a7 Proposed resolution, P1\u2013P3.",
-        "stop_line": "Halt before any change to `commit_via_relay.py` (P2) or `jasonos-relay-watcher.sh` (P3) is deployed to `~/bin` / `SandboxData/bin`, for Security Steward review. P1 carries no stop-line.",
-        "description": "JASONOS_QUEUE_DIR names two different queues, and its relay-client override unconditionally\u2026"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
@@ -570,14 +546,6 @@
         "runner_scope": "Two independent pieces. (1) A one-time honesty backfill of the Operations Director's documented daily runs into `/Volumes/SandboxData/Logs/director-logs/agent-invocation-master.log`, reconstructed fro",
         "stop_line": "The master-log write is a **sandbox-side Python append only** \u2014 never route this file through the git dispatch path (its writes to this file are hazardous; the panel reads it directly). The backfill m",
         "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
-      },
-      {
-        "id": "GAP-105",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "GAP-077 P3 added a **queue-sentinel handshake**: `commit_via_relay.py` refuses to enqueue unless the watcher has stamped `.jasonos-relay-queue` in the queue dir (fail-loud \"watcher has not run for thi",
-        "stop_line": "No relay commit-path code or its deploy lands without Security Steward review + CEO promotion (stage-and-hold).",
-        "description": "GAP-077 P3's queue-sentinel handshake is committed to canonical (client + watcher) but\u2026"
       },
       {
         "id": "GAP-106",
@@ -721,6 +689,6 @@
         "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-12T12:41:55.685912+00:00"
+    "generated_at": "2026-07-12T12:54:11.339408+00:00"
   }
 }
