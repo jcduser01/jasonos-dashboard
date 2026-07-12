@@ -1,23 +1,49 @@
 {
-  "generated_at": "2026-07-12T13:48:54Z",
+  "generated_at": "2026-07-12T14:11:46Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
     "done": 108,
-    "total": 124,
-    "active": 0,
+    "total": 125,
+    "active": 1,
     "queued": 0,
     "paused": 8,
     "backlog": 8
   },
   "operational": {
-    "last_session_date": "2026-07-12T13:47:00Z",
-    "minutes_since_session": 1,
+    "last_session_date": "2026-07-12T14:07:46Z",
+    "minutes_since_session": 4,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": null,
-  "active_initiatives": [],
+  "active_initiative": {
+    "id": "INI-134",
+    "name": "Async Concurrency Substrate \u2014 rebuild the relay into per-repo isolation domains with path-scoped interlock, lease locks, and async-by-default commit (PCR-OPS-052)",
+    "status": "active",
+    "contract": {
+      "route": "Queue-ready",
+      "runner_scope": "Enact PCR-OPS-052 in seven independently-shippable stages, one staged lane per stage, in order 0\u21926. Rebuild the git relay from a volume-global singleton (one queue, one lock, one interlock marker for all 16 repos) into per-repo isolation domains with a path-scoped interlock, lease-based orphan-proof locking, async-by-default commit with session-end receipt reconciliation, enforced single-writer projections, and (gated) bare-main + merge-queue integration. The relay trust boundary (AI \u2192 Intent \u2192 Relay \u2192 GitHub, deny-by-default, relay-only source control, non-waivable Steward/Identity-Firewall gates) is unchanged throughout \u2014 this initiative changes concurrency topology, never authorization. One pattern across all repos, parametrized by operations/repo-class-registry.md.",
+      "stop_line": "Each stage that touches the commit/push substrate (Stages 2, 3, 4, 6) requires non-waivable Security Steward review before go-live (PCR-OPS-045 discipline) and stages on its own lane for CEO promotion. Stage 6 (bare-main + merge-queue) additionally requires a parallel-run rehearsal before cutover AND is gated on a measured decision: proceed only if the Stage 0 metrics, after Stages 1\u20135, still show residual integration contention that justifies the build.",
+      "depends_on": [
+        "PCR-OPS-052"
+      ]
+    }
+  },
+  "active_initiatives": [
+    {
+      "id": "INI-134",
+      "name": "Async Concurrency Substrate \u2014 rebuild the relay into per-repo isolation domains with path-scoped interlock, lease locks, and async-by-default commit (PCR-OPS-052)",
+      "status": "active",
+      "contract": {
+        "route": "Queue-ready",
+        "runner_scope": "Enact PCR-OPS-052 in seven independently-shippable stages, one staged lane per stage, in order 0\u21926. Rebuild the git relay from a volume-global singleton (one queue, one lock, one interlock marker for all 16 repos) into per-repo isolation domains with a path-scoped interlock, lease-based orphan-proof locking, async-by-default commit with session-end receipt reconciliation, enforced single-writer projections, and (gated) bare-main + merge-queue integration. The relay trust boundary (AI \u2192 Intent \u2192 Relay \u2192 GitHub, deny-by-default, relay-only source control, non-waivable Steward/Identity-Firewall gates) is unchanged throughout \u2014 this initiative changes concurrency topology, never authorization. One pattern across all repos, parametrized by operations/repo-class-registry.md.",
+        "stop_line": "Each stage that touches the commit/push substrate (Stages 2, 3, 4, 6) requires non-waivable Security Steward review before go-live (PCR-OPS-045 discipline) and stages on its own lane for CEO promotion. Stage 6 (bare-main + merge-queue) additionally requires a parallel-run rehearsal before cutover AND is gated on a measured decision: proceed only if the Stage 0 metrics, after Stages 1\u20135, still show residual integration contention that justifies the build.",
+        "depends_on": [
+          "PCR-OPS-052"
+        ]
+      }
+    }
+  ],
   "queue": [],
   "ceo_actions": [
     {
@@ -101,7 +127,7 @@
       "name": "knowledge-director",
       "display": "Knowledge",
       "last_active": "2026-06-12T20:23:25Z",
-      "invocations_30d": 5
+      "invocations_30d": 3
     },
     {
       "name": "security-steward",
@@ -394,20 +420,20 @@
         "description": "test-relay-gap043-interlock-recovery.sh Test 1 asserts pre-GAP-078 close-staged semantics\u2026"
       },
       {
-        "id": "PCR-ENG-016",
-        "type": "PCR",
+        "id": "GAP-109",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
-        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
-        "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
+        "runner_scope": "`operations/bin/check-registry-row-in-commit.py` (the PCR-OPS-046 gate). Its `resolve_repo()` returns the hardcoded live repo path, so `load_registry()` reads the **on-disk `operations/script-registry",
+        "stop_line": "Security Steward review before the pre-commit gate change goes live (pre-commit chain / enforcement semantics). Build + stage + flag; do not deploy the hook change without review.",
+        "description": "The PCR-OPS-046 pre-commit script-registry gate reads the on-disk main-branch script-registry.md\u2026"
       },
       {
-        "id": "PCR-OPS-048",
-        "type": "PCR",
+        "id": "GAP-110",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
-        "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
-        "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+        "runner_scope": "`operations/bin/jasonos-access-compiler.py` `provision_jail_trust()`. Today it writes `~/.claude.json.jasonos-trust.bak` from the unmodified `data` object before each per-jail mutation; on a fresh-hos",
+        "stop_line": "Security Steward review before the trust-provisioning backup change goes live (it is on the `~/.claude.json` trust-mutation path). Build + stage + flag; do not deploy without review.",
+        "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
         "id": "REM-052",
@@ -548,20 +574,20 @@
         "description": "test-relay-gap043-interlock-recovery.sh Test 1 asserts pre-GAP-078 close-staged semantics\u2026"
       },
       {
-        "id": "PCR-ENG-016",
-        "type": "PCR",
+        "id": "GAP-109",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Add a workspace-trust establishment + verification step to `operations/bin/jasonos-access-compiler.py` `write_jail` (and its deploy step), plus a report-triage / Security-Steward check that detects th",
-        "stop_line": "Security Steward review before the compiler trust-establishment change goes live (it touches jail provisioning / trust posture) \u2014 build + stage + flag, do not deploy without review.",
-        "description": "The access-compiler deploy path must establish and verify director-jail workspace trust, and a\u2026"
+        "runner_scope": "`operations/bin/check-registry-row-in-commit.py` (the PCR-OPS-046 gate). Its `resolve_repo()` returns the hardcoded live repo path, so `load_registry()` reads the **on-disk `operations/script-registry",
+        "stop_line": "Security Steward review before the pre-commit gate change goes live (pre-commit chain / enforcement semantics). Build + stage + flag; do not deploy the hook change without review.",
+        "description": "The PCR-OPS-046 pre-commit script-registry gate reads the on-disk main-branch script-registry.md\u2026"
       },
       {
-        "id": "PCR-OPS-048",
-        "type": "PCR",
+        "id": "GAP-110",
+        "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "`operations/bin/jasonos-batch-posture.sh` (new); `operations/bin/check-batch-posture-consistency.py` (new) + registry rows; wire the check into `com.jasonos.governance-compare` and the pre-commit chai",
-        "stop_line": "Halt for Security Steward review before any change to the posture read path or the pre-commit chain goes live.",
-        "description": "Arming or disarming batch auto-commit / the batch-run daemon must be a single audited procedure\u2026"
+        "runner_scope": "`operations/bin/jasonos-access-compiler.py` `provision_jail_trust()`. Today it writes `~/.claude.json.jasonos-trust.bak` from the unmodified `data` object before each per-jail mutation; on a fresh-hos",
+        "stop_line": "Security Steward review before the trust-provisioning backup change goes live (it is on the `~/.claude.json` trust-mutation path). Build + stage + flag; do not deploy without review.",
+        "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
         "id": "REM-052",
@@ -662,6 +688,22 @@
         "runner_scope": "",
         "stop_line": "`awaiting-implementation-item` (was `awaiting-steward-re-review` \u2014 the Guard-D re-review CLEARED 2026-07-12, so gate #1 is satisfied). CEO scope approval recorded 2026-07-09; the runner still halts. N",
         "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
+      },
+      {
+        "id": "PCR-OPS-052",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Volume-Wide Asynchronous Concurrency Substrate \u2014 Per-Repo Isolation Domains, Path-Scoped\u2026"
+      },
+      {
+        "id": "PCR-OPS-053",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Retire the Legacy Memory Monolith and Bound the Session-Handoff Read-Model \u2014 Serialize State by\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -671,8 +713,44 @@
         "value": "Queue-ready to a staged lane",
         "file": "governance/gaps/open/GAP-108-implement-pcr-ops-047-candidate-pool-override-mechanics-and-close-orchestrator-cli-class-hardcode.md",
         "category": "gap-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-OPS-052-async-concurrency-substrate.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-052-async-concurrency-substrate.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-052-async-concurrency-substrate.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-OPS-053-memory-and-handoff-monolith-decomposition.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-053-memory-and-handoff-monolith-decomposition.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-053-memory-and-handoff-monolith-decomposition.md",
+        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-12T13:48:54.909815+00:00"
+    "generated_at": "2026-07-12T14:11:46.871771+00:00"
   }
 }
