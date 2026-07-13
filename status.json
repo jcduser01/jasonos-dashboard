@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T18:47:44Z",
+  "generated_at": "2026-07-13T20:47:45Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T21:43:12Z",
-    "minutes_since_session": 1264,
+    "minutes_since_session": 1384,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -138,7 +138,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-04T13:35:52Z",
-      "invocations_30d": 11
+      "invocations_30d": 9
     },
     {
       "name": "operations-director",
@@ -180,7 +180,7 @@
       "name": "creative-director",
       "display": "Creative",
       "last_active": "2026-06-13T19:00:00Z",
-      "invocations_30d": 1
+      "invocations_30d": 0
     }
   ],
   "paused": {
@@ -431,14 +431,6 @@
         "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
       },
       {
-        "id": "GAP-100",
-        "type": "GAP",
-        "route": "Operational",
-        "runner_scope": "Two independent pieces. (1) A one-time honesty backfill of the Operations Director's documented daily runs into `/Volumes/SandboxData/Logs/director-logs/agent-invocation-master.log`, reconstructed fro",
-        "stop_line": "The master-log write is a **sandbox-side Python append only** \u2014 never route this file through the git dispatch path (its writes to this file are hazardous; the panel reads it directly). The backfill m",
-        "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
-      },
-      {
         "id": "GAP-107",
         "type": "GAP",
         "route": "Queue-ready",
@@ -477,14 +469,6 @@
         "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
         "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th",
         "description": "An automated chore(portfolio): rebuild README projection commit (2579c33) silently renamed an OPEN\u2026"
-      },
-      {
-        "id": "REM-053",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "**Complete step A2 \u2014 the off-disk copy.** Mac-side, upload `Logs/dog-monolith-preserve/{digital-organization-governance-a128904.bundle, _archived-full-2026-07-10.tar.gz, SHA256SUMS}` to `Backup/Projec",
-        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify.",
-        "description": "CEO action: retire the archived legacy governance monolith (Governance/_archived/digital-organizatio\u2026"
       },
       {
         "id": "REM-054",
@@ -585,14 +569,6 @@
         "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
       },
       {
-        "id": "GAP-100",
-        "type": "GAP",
-        "route": "Operational",
-        "runner_scope": "Two independent pieces. (1) A one-time honesty backfill of the Operations Director's documented daily runs into `/Volumes/SandboxData/Logs/director-logs/agent-invocation-master.log`, reconstructed fro",
-        "stop_line": "The master-log write is a **sandbox-side Python append only** \u2014 never route this file through the git dispatch path (its writes to this file are hazardous; the panel reads it directly). The backfill m",
-        "description": "Operations Director's daily scheduled tasks never record to the master invocation log, so the\u2026"
-      },
-      {
         "id": "GAP-107",
         "type": "GAP",
         "route": "Queue-ready",
@@ -631,14 +607,6 @@
         "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
         "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th",
         "description": "An automated chore(portfolio): rebuild README projection commit (2579c33) silently renamed an OPEN\u2026"
-      },
-      {
-        "id": "REM-053",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "**Complete step A2 \u2014 the off-disk copy.** Mac-side, upload `Logs/dog-monolith-preserve/{digital-organization-governance-a128904.bundle, _archived-full-2026-07-10.tar.gz, SHA256SUMS}` to `Backup/Projec",
-        "stop_line": "The destructive halt is passed (deletion done, local copy verified restorable). No further stop-line \u2014 remaining work is a non-destructive off-disk copy + checksum re-verify.",
-        "description": "CEO action: retire the archived legacy governance monolith (Governance/_archived/digital-organizatio\u2026"
       },
       {
         "id": "REM-054",
@@ -748,6 +716,14 @@
         "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
       },
       {
+        "id": "GAP-119",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "jasonos-deploy-sync.py --check reports no drift for a registry-declared deployment whose deployed\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": null,
@@ -798,6 +774,18 @@
         "category": "gap-open"
       },
       {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-119-deploy-sync-check-reports-no-drift-for-a-registry-declared-but-absent-deployed-file.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/gaps/open/GAP-119-deploy-sync-check-reports-no-drift-for-a-registry-declared-but-absent-deployed-file.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
@@ -841,6 +829,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-13T18:47:44.106175+00:00"
+    "generated_at": "2026-07-13T20:47:45.577068+00:00"
   }
 }
