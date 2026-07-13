@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T22:42:08Z",
+  "generated_at": "2026-07-13T00:42:09Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-12T21:08:41Z",
-    "minutes_since_session": 93,
+    "last_session_date": "2026-07-12T22:44:13Z",
+    "minutes_since_session": 117,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -112,7 +112,7 @@
   "contract_drift": [
     {
       "id": "INI-134",
-      "route": "In progress \u2014 Stages 0\u20132 shipped to canonical AND DEPLOYED LIVE 2026-07-12 (relay v1.23; CEO-authorized deploy; live-smoke verified); Stage 6 measured-decision DEFER; Stages 3\u20135 designed (rehearsal-gated build pending)"
+      "route": "In progress \u2014 Stages 0\u20132 shipped to canonical AND DEPLOYED LIVE 2026-07-12 (relay v1.23; CEO-authorized deploy; live-smoke verified); Stage 6 measured-decision DEFER; Stages 3\u20135 designed (rehearsal-gated build pending). Metrics-test acceptance gate evaluated 2026-07-12 \u2014 NOT satisfied (2 of 3 criteria depend on unbuilt Stages 3\u20134; no two-terminal measurement run); initiative stays Current."
     }
   ],
   "directors": [
@@ -369,6 +369,14 @@
     {
       "position": 1,
       "id": "GAP-100"
+    },
+    {
+      "position": 2,
+      "id": "GAP-099"
+    },
+    {
+      "position": 3,
+      "id": "GAP-073"
     }
   ],
   "jasonos_work_readiness": {
@@ -464,6 +472,14 @@
         "runner_scope": "`operations/bin/jasonos-access-compiler.py` `provision_jail_trust()`. Today it writes `~/.claude.json.jasonos-trust.bak` from the unmodified `data` object before each per-jail mutation; on a fresh-hos",
         "stop_line": "Security Steward review before the trust-provisioning backup change goes live (it is on the `~/.claude.json` trust-mutation path). Build + stage + flag; do not deploy without review.",
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
+      },
+      {
+        "id": "GAP-118",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`jasonos-git-relay.sh` defaults `METRICS_LOG` to the production path (`: \"${METRICS_LOG:=/Volumes/SandboxData/Logs/director-logs/engineering/git-relay-metrics.log}\"`, line ~473) and appends one metric",
+        "stop_line": "None for the recommended test-harness fix (test env isolation only; no relay code, no commit path, no deploy path). If the optional relay-hardening path is taken instead, that edits `jasonos-git-relay",
+        "description": "Relay test suites that exec the real relay without exporting METRICS_LOG leak fixture repo=repo\u2026"
       },
       {
         "id": "REM-052",
@@ -618,6 +634,14 @@
         "runner_scope": "`operations/bin/jasonos-access-compiler.py` `provision_jail_trust()`. Today it writes `~/.claude.json.jasonos-trust.bak` from the unmodified `data` object before each per-jail mutation; on a fresh-hos",
         "stop_line": "Security Steward review before the trust-provisioning backup change goes live (it is on the `~/.claude.json` trust-mutation path). Build + stage + flag; do not deploy without review.",
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
+      },
+      {
+        "id": "GAP-118",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "`jasonos-git-relay.sh` defaults `METRICS_LOG` to the production path (`: \"${METRICS_LOG:=/Volumes/SandboxData/Logs/director-logs/engineering/git-relay-metrics.log}\"`, line ~473) and appends one metric",
+        "stop_line": "None for the recommended test-harness fix (test env isolation only; no relay code, no commit path, no deploy path). If the optional relay-hardening path is taken instead, that edits `jasonos-git-relay",
+        "description": "Relay test suites that exec the real relay without exporting METRICS_LOG leak fixture repo=repo\u2026"
       },
       {
         "id": "REM-052",
@@ -828,6 +852,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-12T22:42:08.780154+00:00"
+    "generated_at": "2026-07-13T00:42:09.641872+00:00"
   }
 }
