@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T00:42:09Z",
+  "generated_at": "2026-07-13T00:58:21Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T22:44:13Z",
-    "minutes_since_session": 117,
+    "minutes_since_session": 134,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -365,20 +365,7 @@
       }
     ]
   },
-  "batch_queue": [
-    {
-      "position": 1,
-      "id": "GAP-100"
-    },
-    {
-      "position": 2,
-      "id": "GAP-099"
-    },
-    {
-      "position": 3,
-      "id": "GAP-073"
-    }
-  ],
+  "batch_queue": [],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -402,14 +389,6 @@
     ],
     "in_progress_not_ceo": [
       {
-        "id": "GAP-073",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "The ungated probe/guard slice. (A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invo",
-        "stop_line": "None \u2014 a read-only environment probe and a fail-loud guard are fully ungated. The dependency-resolution half (install the package under Security Steward clearance, or adopt a stdlib-only renderer) is ",
-        "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
@@ -432,14 +411,6 @@
         "runner_scope": "Two narrow residuals left open by GAP-075, both on the weak-axis / gate-parse frontier GAP-075 explicitly scoped out. (A) **Assert-vs-deny on the weak axes.** GAP-075's `_is_negated_attached()` suppre",
         "stop_line": "Security Steward review before the classifier change is merged to canonical (same rationale as GAP-075: `admitted_class` gates auto-commit). Stage and hold for the Steward.",
         "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
-      },
-      {
-        "id": "GAP-099",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Replace the single `markdown.markdown(...)` call at `jasonos-blog-generator.py:139` with a stdlib-only renderer covering the markdown subset the blog posts actually use; drop the module-scope `import ",
-        "stop_line": "None. *(The prior stop \u2014 the CEO install-vs-renderer option selection \u2014 is resolved as of 2026-07-11: stdlib renderer. That path drops `import markdown` outright, so there is no package install and th",
-        "description": "Blog publish path: resolve the markdown dependency once the GAP-073 probe confirms it \u2014 install\u2026"
       },
       {
         "id": "GAP-100",
@@ -564,14 +535,6 @@
     ],
     "partially_executable": [
       {
-        "id": "GAP-073",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "The ungated probe/guard slice. (A) Determine whether the third-party `markdown` package is importable by the interpreter that actually runs the blog drip in production. `jasonos-blog-drip.py:455` invo",
-        "stop_line": "None \u2014 a read-only environment probe and a fail-loud guard are fully ungated. The dependency-resolution half (install the package under Security Steward clearance, or adopt a stdlib-only renderer) is ",
-        "description": "jasonos-blog-generator.py hard-imports the third-party markdown package at module scope, and its\u2026"
-      },
-      {
         "id": "GAP-083",
         "type": "GAP",
         "route": "Queue-ready",
@@ -594,14 +557,6 @@
         "runner_scope": "Two narrow residuals left open by GAP-075, both on the weak-axis / gate-parse frontier GAP-075 explicitly scoped out. (A) **Assert-vs-deny on the weak axes.** GAP-075's `_is_negated_attached()` suppre",
         "stop_line": "Security Steward review before the classifier change is merged to canonical (same rationale as GAP-075: `admitted_class` gates auto-commit). Stage and hold for the Steward.",
         "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
-      },
-      {
-        "id": "GAP-099",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Replace the single `markdown.markdown(...)` call at `jasonos-blog-generator.py:139` with a stdlib-only renderer covering the markdown subset the blog posts actually use; drop the module-scope `import ",
-        "stop_line": "None. *(The prior stop \u2014 the CEO install-vs-renderer option selection \u2014 is resolved as of 2026-07-11: stdlib renderer. That path drops `import markdown` outright, so there is no package install and th",
-        "description": "Blog publish path: resolve the markdown dependency once the GAP-073 probe confirms it \u2014 install\u2026"
       },
       {
         "id": "GAP-100",
@@ -852,6 +807,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-13T00:42:09.641872+00:00"
+    "generated_at": "2026-07-13T00:58:21.843734+00:00"
   }
 }
