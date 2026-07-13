@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T04:58:36Z",
+  "generated_at": "2026-07-13T06:58:37Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,9 +12,9 @@
   },
   "operational": {
     "last_session_date": "2026-07-13T00:59:18Z",
-    "minutes_since_session": 239,
-    "airlock_queue": 0,
-    "airlock_bundles": 0
+    "minutes_since_session": 359,
+    "airlock_queue": 21,
+    "airlock_bundles": 1
   },
   "active_initiative": {
     "id": "INI-134",
@@ -125,8 +125,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-12T06:32:00Z",
-      "invocations_30d": 30
+      "last_active": "2026-07-13T06:33:31Z",
+      "invocations_30d": 31
     },
     {
       "name": "knowledge-director",
@@ -807,6 +807,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-13T04:58:36.403506+00:00"
+    "generated_at": "2026-07-13T06:58:37.310799+00:00"
   }
 }
