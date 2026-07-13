@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T06:58:37Z",
+  "generated_at": "2026-07-13T08:47:09Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-13T00:59:18Z",
-    "minutes_since_session": 359,
+    "minutes_since_session": 467,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -125,7 +125,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-13T06:33:31Z",
+      "last_active": "2026-07-13T07:42:22Z",
       "invocations_30d": 31
     },
     {
@@ -493,22 +493,6 @@
         "description": "Step 2e (jasonos-steward-audit-compactor.py) exits 1: a Security Steward audit-inbox entry\u2026"
       },
       {
-        "id": "REM-057",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
-        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection.",
-        "description": "Step 2g (jasonos-work-item-index-generator.py --type pcr --check, new under protocol v1.13) finds\u2026"
-      },
-      {
-        "id": "REM-059",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Confirm next-run seal; optionally adjust the ceiling-check tolerance or the compactor's post-append seal behavior.",
-        "stop_line": "None.",
-        "description": "Step 2e ceiling check (check-steward-audit-log-size.py) exits 1: the active Security Steward audit\u2026"
-      },
-      {
         "id": "REM-060",
         "type": "REM",
         "route": "Operational",
@@ -531,6 +515,30 @@
         "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
         "stop_line": "None.",
         "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
+      },
+      {
+        "id": "REM-064",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "None \u2014 interactive KD disposition of 9 artifacts, each requiring content judgment against the ratified doctrine; no runner-buildable slice.",
+        "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
+        "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026"
+      },
+      {
+        "id": "REM-065",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Author the missing/relabel the malformed contract fields on the 7 flagged items (GAP-113/114/115/116, PCR-CRE-002, PCR-OPS-052, INI-134).",
+        "stop_line": "None.",
+        "description": "check-work-item-contract-conformance.py (step 2c) exits 1 (regressed from exit 0): 7\u2026"
+      },
+      {
+        "id": "REM-066",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
+        "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
+        "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       }
     ],
     "partially_executable": [
@@ -639,22 +647,6 @@
         "description": "Step 2e (jasonos-steward-audit-compactor.py) exits 1: a Security Steward audit-inbox entry\u2026"
       },
       {
-        "id": "REM-057",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "`python3 operations/bin/jasonos-work-item-index-generator.py --type pcr` (write mode), run from `/Volumes/SandboxData`.",
-        "stop_line": "Do not run the write-mode generator from the Cowork sandbox mount \u2014 confirmed prior incident (portfolio/README.md, 2026-07-05) of a sandbox write-run zeroing a projection.",
-        "description": "Step 2g (jasonos-work-item-index-generator.py --type pcr --check, new under protocol v1.13) finds\u2026"
-      },
-      {
-        "id": "REM-059",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Confirm next-run seal; optionally adjust the ceiling-check tolerance or the compactor's post-append seal behavior.",
-        "stop_line": "None.",
-        "description": "Step 2e ceiling check (check-steward-audit-log-size.py) exits 1: the active Security Steward audit\u2026"
-      },
-      {
         "id": "REM-060",
         "type": "REM",
         "route": "Operational",
@@ -677,6 +669,30 @@
         "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
         "stop_line": "None.",
         "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
+      },
+      {
+        "id": "REM-064",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "None \u2014 interactive KD disposition of 9 artifacts, each requiring content judgment against the ratified doctrine; no runner-buildable slice.",
+        "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
+        "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026"
+      },
+      {
+        "id": "REM-065",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Author the missing/relabel the malformed contract fields on the 7 flagged items (GAP-113/114/115/116, PCR-CRE-002, PCR-OPS-052, INI-134).",
+        "stop_line": "None.",
+        "description": "check-work-item-contract-conformance.py (step 2c) exits 1 (regressed from exit 0): 7\u2026"
+      },
+      {
+        "id": "REM-066",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
+        "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
+        "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       }
     ],
     "blocked_needs_decision": [],
@@ -807,6 +823,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-13T06:58:37.310799+00:00"
+    "generated_at": "2026-07-13T08:47:09.852741+00:00"
   }
 }
