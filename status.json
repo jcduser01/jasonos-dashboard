@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T09:04:57Z",
+  "generated_at": "2026-07-14T09:23:38Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 61,
+    "minutes_since_session": 80,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -780,6 +780,30 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "Volume-Wide Asynchronous Concurrency Substrate \u2014 Per-Repo Isolation Domains, Path-Scoped\u2026"
+      },
+      {
+        "id": "PCR-SEC-012",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "External AI-Provider Usage & Data-Egress Policy"
+      },
+      {
+        "id": "REM-067",
+        "type": "REM",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "The live Cowork President-Agent startup instructions still direct the startup memory read to the\u2026"
+      },
+      {
+        "id": "REM-068",
+        "type": "REM",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Running JasonOS tooling from the Cowork sandbox needs the literal /Volumes/SandboxData path\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -868,6 +892,24 @@
         "category": "pcr-open"
       },
       {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
+        "category": "pcr-open"
+      },
+      {
         "type": "invalid_route_value",
         "field": "route",
         "value": "In progress",
@@ -875,6 +917,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T09:04:57.625505+00:00"
+    "generated_at": "2026-07-14T09:23:38.129810+00:00"
   }
 }
