@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T21:16:28Z",
+  "generated_at": "2026-07-14T23:16:29Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 793,
+    "minutes_since_session": 913,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -130,7 +130,7 @@
   "contract_drift": [
     {
       "id": "INI-134",
-      "route": "In progress \u2014 Stages 0\u20132 shipped to canonical AND DEPLOYED LIVE 2026-07-12 (relay v1.23; CEO-authorized deploy; live-smoke verified); Stage 6 measured-decision DEFER; Stages 3\u20135 designed (rehearsal-gated build pending). Metrics-test acceptance gate evaluated 2026-07-12 \u2014 NOT satisfied (2 of 3 criteria depend on unbuilt Stages 3\u20134; no two-terminal measurement run); initiative stays Current."
+      "route": "In progress \u2014 Stages 0\u20132 shipped + DEPLOYED LIVE 2026-07-12 (relay v1.23); Stage 4 (lease locks + fencing) BUILT, Steward-CLEARED (CAP-REV-2026-07-14-INI134-STAGE4), PROMOTED to canonical 2026-07-14 (relay v1.25, flag-gated default-OFF \u2014 production still mkdir/NOT deployed), and its two-terminal rehearsal PASSED (orphaned-holder criterion self-heals by construction + fencing proven). Stage 3 (per-repo domains) is the next lane; Stage 6 measured-decision DEFER. Acceptance gate now 1 of 3 criteria measured-satisfied (orphaned-holder); cross-serialization awaits Stage 3. Initiative stays Current."
     }
   ],
   "directors": [
@@ -954,6 +954,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T21:16:28.738692+00:00"
+    "generated_at": "2026-07-14T23:16:29.214562+00:00"
   }
 }
