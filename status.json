@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T06:47:48Z",
+  "generated_at": "2026-07-14T08:42:51Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T21:43:12Z",
-    "minutes_since_session": 1984,
+    "minutes_since_session": 2099,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -143,8 +143,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-14T06:33:59Z",
-      "invocations_30d": 32
+      "last_active": "2026-07-14T07:39:17Z",
+      "invocations_30d": 33
     },
     {
       "name": "knowledge-director",
@@ -724,6 +724,22 @@
         "description": "jasonos-deploy-sync.py --check reports no drift for a registry-declared deployment whose deployed\u2026"
       },
       {
+        "id": "GAP-120",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "None for the wiring. The token-source decision is a small engineering design choice, not a CEO or Steward gate.",
+        "description": "The INI-034 metrics framework was built to measure resource/token consumption but is not wired\u2026"
+      },
+      {
+        "id": "GAP-121",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "",
+        "stop_line": "For the standard: halt at `awaiting-ceo-decision` (publish is a CEO approval). For the compare-daemon remediation: `None` \u2014 projection/monitor-writer fix, no authority or substrate change.",
+        "description": "Machine-append operational logs under Logs/ have no uniform rotation/retention or write\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": null,
@@ -786,6 +802,18 @@
         "category": "gap-open"
       },
       {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-120-metrics-framework-built-but-not-wired-so-token-consumption-is-unmeasured.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-121-machine-append-operational-logs-have-no-uniform-rotation-retention-discipline.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
@@ -829,6 +857,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T06:47:48.745694+00:00"
+    "generated_at": "2026-07-14T08:42:51.601502+00:00"
   }
 }
