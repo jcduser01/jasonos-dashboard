@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T15:23:50Z",
+  "generated_at": "2026-07-14T17:16:16Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 440,
+    "minutes_since_session": 552,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -742,20 +742,28 @@
         "description": "jasonos-deploy-sync.py --check reports no drift for a registry-declared deployment whose deployed\u2026"
       },
       {
-        "id": "GAP-120",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "None for the wiring. The token-source decision is a small engineering design choice, not a CEO or Steward gate.",
-        "description": "The INI-034 metrics framework was built to measure resource/token consumption but is not wired\u2026"
-      },
-      {
         "id": "GAP-121",
         "type": "GAP",
         "route": "Draft-only",
         "runner_scope": "",
         "stop_line": "For the standard: halt at `awaiting-ceo-decision` (publish is a CEO approval). For the compare-daemon remediation: `None` \u2014 projection/monitor-writer fix, no authority or substrate change.",
         "description": "Machine-append operational logs under Logs/ have no uniform rotation/retention or write\u2026"
+      },
+      {
+        "id": "GAP-122",
+        "type": "GAP",
+        "route": "Queue-ready. Bring `operations/bin/metrics/*.py` under the same deploy-currency discipline as the rest of Tier-1 `bin/`: either add the metrics scripts as `jasonos-deploy-sync.py` registry items whose deployed copy is `/Volumes/SandboxData/metrics/bin/`",
+        "runner_scope": "",
+        "stop_line": "None for the drift-coverage wiring. If the `store.py` env-override option is chosen, that touches the INI-034 storage layer \u2014 keep write-mode byte-identical and test.",
+        "description": "The runtime metrics/bin/ scripts are outside deploy-sync / drift control, so a future canonical\u2026"
+      },
+      {
+        "id": "GAP-123",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "The true-token change touches the security-constrained dispatcher spawn path + the invocation-log contract \u2192 **terminal Security Steward review required** before deploy. The coverage-accounting part i",
+        "description": "The live metrics emit records a byte\u00f74 token *estimate* and covers only launchd-dispatched\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -846,13 +854,26 @@
       {
         "type": "missing_scope",
         "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-120-metrics-framework-built-but-not-wired-so-token-consumption-is-unmeasured.md",
+        "file": "governance/gaps/open/GAP-121-machine-append-operational-logs-have-no-uniform-rotation-retention-discipline.md",
         "category": "gap-open"
       },
       {
         "type": "missing_scope",
         "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-121-machine-append-operational-logs-have-no-uniform-rotation-retention-discipline.md",
+        "file": "governance/gaps/open/GAP-122-metrics-bin-runtime-scripts-not-under-deploy-sync-drift-control.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready. Bring `operations/bin/metrics/*.py` under the same deploy-currency discipline as the rest of Tier-1 `bin/`: either add the metrics scripts as `jasonos-deploy-sync.py` registry items whose deployed copy is `/Volumes/SandboxData/metrics/bin/`",
+        "file": "governance/gaps/open/GAP-122-metrics-bin-runtime-scripts-not-under-deploy-sync-drift-control.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/gaps/open/GAP-123-metrics-emit-uses-byte-estimate-not-true-tokens-and-misses-in-session-dispatch.md",
         "category": "gap-open"
       },
       {
@@ -917,6 +938,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T15:23:50.963463+00:00"
+    "generated_at": "2026-07-14T17:16:16.120118+00:00"
   }
 }
