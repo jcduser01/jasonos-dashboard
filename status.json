@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T11:23:48Z",
+  "generated_at": "2026-07-14T13:23:50Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 200,
+    "minutes_since_session": 320,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -144,7 +144,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-07-14T07:39:17Z",
-      "invocations_30d": 33
+      "invocations_30d": 32
     },
     {
       "name": "knowledge-director",
@@ -917,6 +917,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T11:23:48.319994+00:00"
+    "generated_at": "2026-07-14T13:23:50.759280+00:00"
   }
 }
