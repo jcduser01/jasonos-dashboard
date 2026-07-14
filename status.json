@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T04:47:46Z",
+  "generated_at": "2026-07-14T06:47:48Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-12T21:43:12Z",
-    "minutes_since_session": 1864,
+    "minutes_since_session": 1984,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -143,8 +143,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-13T07:42:22Z",
-      "invocations_30d": 31
+      "last_active": "2026-07-14T06:33:59Z",
+      "invocations_30d": 32
     },
     {
       "name": "knowledge-director",
@@ -829,6 +829,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T04:47:47.002738+00:00"
+    "generated_at": "2026-07-14T06:47:48.745694+00:00"
   }
 }
