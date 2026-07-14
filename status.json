@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-14T08:43:03Z",
+  "generated_at": "2026-07-14T09:04:48Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
     "done": 108,
-    "total": 127,
+    "total": 128,
     "active": 1,
     "queued": 0,
     "paused": 8,
-    "backlog": 10
+    "backlog": 11
   },
   "operational": {
-    "last_session_date": "2026-07-12T21:43:12Z",
-    "minutes_since_session": 2099,
+    "last_session_date": "2026-07-14T08:03:19Z",
+    "minutes_since_session": 61,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -378,6 +378,24 @@
           "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flags but does not classify). Do not cut Channel 1 over from the Cowork task to the host-native pipeline until the Steward clears the classifier's untrusted-content handling and the CEO authorizes the cutover.",
           "depends_on": [
             "INI-127"
+          ]
+        }
+      },
+      {
+        "id": "INI-137",
+        "name": "Multi-Provider Execution Layer \u2014 provider-independent workload routing (Codex + Gemini + Ollama under the capability broker)",
+        "notes": "Filed 2026-07-14 from AIRLOCK-2026-07-14-001 (consultant multi-provider routing proposal, treated as discussion material). Generalizes INI-011's capability broker from Claude-tier routing to\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "The first increment (normalized contracts, adapter interface, Ollama refactor, Codex adapter, human-mediated Gemini adapter, orchestrator-worker-reviewer wiring) is Engineering-buildable. HARD GATES ahead of any go-live: (1) Security Steward review before any real org workload routes to a cloud provider; (2) CEO provisioning + budget authorization before any metered API-key lane is enabled \u2014 v1 is free-lanes-only (Ollama local + Codex-on-ChatGPT-Plus + human-mediated Gemini). No autonomous enabling of a paid lane, no autonomous data-egress-policy change.",
+          "stop_line": "Deny-by-default on data egress \u2014 work classified local-only can never be routed off-box, enforced in eligibility, not advised. The broker decides only WHERE/HOW an already-authorized unit executes; it must never widen WHAT an agent is authorized to do. A worker environment never inherits the orchestrator's permissions. Secrets never appear in prompts, ticket text, logs, or committed config. Human-mediated transport (Gemini) is still cloud egress and is bound by the same data-classification constraint. Metered API lanes require explicit CEO budget authorization + Steward sign-off before enablement.",
+          "depends_on": [
+            "INI-011",
+            "INI-011",
+            "INI-132",
+            "GAP-120",
+            "INI-034",
+            "GAP-120"
           ]
         }
       }
@@ -857,6 +875,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-14T08:43:03.966962+00:00"
+    "generated_at": "2026-07-14T09:04:48.355245+00:00"
   }
 }
