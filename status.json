@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T08:42:33Z",
+  "generated_at": "2026-07-15T10:42:34Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 11
   },
   "operational": {
-    "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 1479,
+    "last_session_date": "2026-07-14T17:18:32Z",
+    "minutes_since_session": 1044,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -123,6 +123,12 @@
       "category": "required",
       "label": "Texas commercial/usury + retention legal review",
       "context": "for JCD engagement payment terms and retention clauses \u2014 CEO-owned step flagged in INI-JCD-003 scope."
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "(surfaced, no decision needed now) Verify Ollama is actually serving the DH observation engine",
+      "context": "Mac-side log check per the Entry, or wait for GAP-120 wiring to make it observable."
     }
   ],
   "status_drift": [],
@@ -992,6 +998,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-15T08:42:33.787750+00:00"
+    "generated_at": "2026-07-15T10:42:34.235038+00:00"
   }
 }
