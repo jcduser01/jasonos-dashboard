@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T07:16:32Z",
+  "generated_at": "2026-07-15T08:42:24Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 1393,
+    "minutes_since_session": 1479,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -143,7 +143,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-15T06:32:22Z",
+      "last_active": "2026-07-15T07:42:06Z",
       "invocations_30d": 33
     },
     {
@@ -559,6 +559,30 @@
         "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
         "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
+      },
+      {
+        "id": "REM-069",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Regenerate the PCR README index (Mac-side write mode) and confirm --check exits 0.",
+        "stop_line": "None.",
+        "description": "jasonos-work-item-index-generator.py --type pcr --check (step 2g) exits 1: 2 open PCRs\u2026"
+      },
+      {
+        "id": "REM-070",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
+        "stop_line": "None.",
+        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
+      },
+      {
+        "id": "REM-071",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
+        "stop_line": "None.",
+        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
       }
     ],
     "partially_executable": [
@@ -697,6 +721,30 @@
         "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
         "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
+      },
+      {
+        "id": "REM-069",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Regenerate the PCR README index (Mac-side write mode) and confirm --check exits 0.",
+        "stop_line": "None.",
+        "description": "jasonos-work-item-index-generator.py --type pcr --check (step 2g) exits 1: 2 open PCRs\u2026"
+      },
+      {
+        "id": "REM-070",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
+        "stop_line": "None.",
+        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
+      },
+      {
+        "id": "REM-071",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
+        "stop_line": "None.",
+        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
       }
     ],
     "blocked_needs_decision": [],
@@ -944,6 +992,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-15T07:16:32.088216+00:00"
+    "generated_at": "2026-07-15T08:42:24.238781+00:00"
   }
 }
