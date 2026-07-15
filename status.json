@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T19:07:50Z",
+  "generated_at": "2026-07-15T21:07:51Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 11
   },
   "operational": {
-    "last_session_date": "2026-07-14T17:18:32Z",
-    "minutes_since_session": 1549,
+    "last_session_date": "2026-07-15T19:09:36Z",
+    "minutes_since_session": 118,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -408,22 +408,6 @@
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
       },
       {
-        "id": "GAP-098",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Two narrow residuals left open by GAP-075, both on the weak-axis / gate-parse frontier GAP-075 explicitly scoped out. (A) **Assert-vs-deny on the weak axes.** GAP-075's `_is_negated_attached()` suppre",
-        "stop_line": "Security Steward review before the classifier change is merged to canonical (same rationale as GAP-075: `admitted_class` gates auto-commit). Stage and hold for the Steward.",
-        "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
-      },
-      {
-        "id": "GAP-107",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/test-relay-gap043-interlock-recovery.sh` Test 1 (\"close-staged on gone branch SUCCEEDS\") asserts `grep -q '^status=success'` and `grep -q 'recovered=true'` (lines 88\u201389) \u2014 the **v1.12*",
-        "stop_line": "None \u2014 a test-assertion update to match an already-shipped, already-Steward-cleared relay behavior (GAP-078 landed canonical + deployed). If the fix instead touched `jasonos-git-relay.sh`, it would be",
-        "description": "test-relay-gap043-interlock-recovery.sh Test 1 asserts pre-GAP-078 close-staged semantics\u2026"
-      },
-      {
         "id": "GAP-109",
         "type": "GAP",
         "route": "Queue-ready",
@@ -438,14 +422,6 @@
         "runner_scope": "`operations/bin/jasonos-access-compiler.py` `provision_jail_trust()`. Today it writes `~/.claude.json.jasonos-trust.bak` from the unmodified `data` object before each per-jail mutation; on a fresh-hos",
         "stop_line": "Security Steward review before the trust-provisioning backup change goes live (it is on the `~/.claude.json` trust-mutation path). Build + stage + flag; do not deploy without review.",
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
-      },
-      {
-        "id": "GAP-125",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Four `operations/bin/test-relay-*.sh` suites fail assertions against the current relay and have since INI-134 Stage 2 landed (relay v1.23): `test-relay-gap043-interlock-recovery.sh` (18 pass / **4 fai",
-        "stop_line": "None \u2014 test-only health fix (no relay code, no commit path, no deploy path). Do not \"fix\" by changing relay behavior to satisfy a stale assertion \u2014 the relay is correct; the assertions are stale.",
-        "description": "Four relay hermetic suites carry pre-existing RED assertions against the current (INI-134 Stage-2)\u2026"
       },
       {
         "id": "GAP-126",
@@ -570,22 +546,6 @@
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
       },
       {
-        "id": "GAP-098",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Two narrow residuals left open by GAP-075, both on the weak-axis / gate-parse frontier GAP-075 explicitly scoped out. (A) **Assert-vs-deny on the weak axes.** GAP-075's `_is_negated_attached()` suppre",
-        "stop_line": "Security Steward review before the classifier change is merged to canonical (same rationale as GAP-075: `admitted_class` gates auto-commit). Stage and hold for the Steward.",
-        "description": "Batch classifier: a weak-axis signal is still suppressed by an *attached but asserting* negation\u2026"
-      },
-      {
-        "id": "GAP-107",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/test-relay-gap043-interlock-recovery.sh` Test 1 (\"close-staged on gone branch SUCCEEDS\") asserts `grep -q '^status=success'` and `grep -q 'recovered=true'` (lines 88\u201389) \u2014 the **v1.12*",
-        "stop_line": "None \u2014 a test-assertion update to match an already-shipped, already-Steward-cleared relay behavior (GAP-078 landed canonical + deployed). If the fix instead touched `jasonos-git-relay.sh`, it would be",
-        "description": "test-relay-gap043-interlock-recovery.sh Test 1 asserts pre-GAP-078 close-staged semantics\u2026"
-      },
-      {
         "id": "GAP-109",
         "type": "GAP",
         "route": "Queue-ready",
@@ -600,14 +560,6 @@
         "runner_scope": "`operations/bin/jasonos-access-compiler.py` `provision_jail_trust()`. Today it writes `~/.claude.json.jasonos-trust.bak` from the unmodified `data` object before each per-jail mutation; on a fresh-hos",
         "stop_line": "Security Steward review before the trust-provisioning backup change goes live (it is on the `~/.claude.json` trust-mutation path). Build + stage + flag; do not deploy without review.",
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
-      },
-      {
-        "id": "GAP-125",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Four `operations/bin/test-relay-*.sh` suites fail assertions against the current relay and have since INI-134 Stage 2 landed (relay v1.23): `test-relay-gap043-interlock-recovery.sh` (18 pass / **4 fai",
-        "stop_line": "None \u2014 test-only health fix (no relay code, no commit path, no deploy path). Do not \"fix\" by changing relay behavior to satisfy a stale assertion \u2014 the relay is correct; the assertions are stale.",
-        "description": "Four relay hermetic suites carry pre-existing RED assertions against the current (INI-134 Stage-2)\u2026"
       },
       {
         "id": "GAP-126",
@@ -939,6 +891,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-15T19:07:50.455547+00:00"
+    "generated_at": "2026-07-15T21:07:51.225690+00:00"
   }
 }
