@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T12:42:34Z",
+  "generated_at": "2026-07-15T14:42:36Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T17:18:32Z",
-    "minutes_since_session": 1164,
+    "minutes_since_session": 1284,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -796,14 +796,6 @@
         "description": "Machine-append operational logs under Logs/ have no uniform rotation/retention or write\u2026"
       },
       {
-        "id": "GAP-122",
-        "type": "GAP",
-        "route": "Queue-ready. Bring `operations/bin/metrics/*.py` under the same deploy-currency discipline as the rest of Tier-1 `bin/`: either add the metrics scripts as `jasonos-deploy-sync.py` registry items whose deployed copy is `/Volumes/SandboxData/metrics/bin/`",
-        "runner_scope": "",
-        "stop_line": "None for the drift-coverage wiring. If the `store.py` env-override option is chosen, that touches the INI-034 storage layer \u2014 keep write-mode byte-identical and test.",
-        "description": "The runtime metrics/bin/ scripts are outside deploy-sync / drift control, so a future canonical\u2026"
-      },
-      {
         "id": "GAP-123",
         "type": "GAP",
         "route": "Queue-ready",
@@ -902,19 +894,6 @@
       {
         "type": "missing_scope",
         "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-122-metrics-bin-runtime-scripts-not-under-deploy-sync-drift-control.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready. Bring `operations/bin/metrics/*.py` under the same deploy-currency discipline as the rest of Tier-1 `bin/`: either add the metrics scripts as `jasonos-deploy-sync.py` registry items whose deployed copy is `/Volumes/SandboxData/metrics/bin/`",
-        "file": "governance/gaps/open/GAP-122-metrics-bin-runtime-scripts-not-under-deploy-sync-drift-control.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
         "file": "governance/gaps/open/GAP-123-metrics-emit-uses-byte-estimate-not-true-tokens-and-misses-in-session-dispatch.md",
         "category": "gap-open"
       },
@@ -998,6 +977,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-15T12:42:34.837319+00:00"
+    "generated_at": "2026-07-15T14:42:36.618475+00:00"
   }
 }
