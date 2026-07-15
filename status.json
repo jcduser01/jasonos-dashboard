@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T05:16:30Z",
+  "generated_at": "2026-07-15T07:16:32Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-14T08:03:19Z",
-    "minutes_since_session": 1273,
+    "minutes_since_session": 1393,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -130,7 +130,7 @@
   "contract_drift": [
     {
       "id": "INI-134",
-      "route": "In progress \u2014 Stages 0\u20132 shipped + DEPLOYED LIVE 2026-07-12 (relay v1.23); Stage 4 (lease locks + fencing) BUILT, Steward-CLEARED (CAP-REV-2026-07-14-INI134-STAGE4), PROMOTED to canonical 2026-07-14 (relay v1.25, flag-gated default-OFF \u2014 production still mkdir/NOT deployed), and its two-terminal rehearsal PASSED (orphaned-holder criterion self-heals by construction + fencing proven). Stage 3 (per-repo domains) is the next lane; Stage 6 measured-decision DEFER. Acceptance gate now 1 of 3 criteria measured-satisfied (orphaned-holder); cross-serialization awaits Stage 3. Initiative stays Current."
+      "route": "In progress \u2014 Stages 0\u20132 shipped + DEPLOYED LIVE 2026-07-12 (relay v1.23\u2192v1.24). Stage 4 (lease locks + fencing) PROMOTED 2026-07-14 (relay v1.25) + rehearsal PASSED (orphaned-holder criterion). Stage 3 (per-repo domains) PROMOTED to canonical 2026-07-15 (merge 37f9d05, relay v1.26 + client v1.17; Steward CAP-REV-2026-07-14-INI134-STAGE3 CLEAR-WITH-CONDITIONS, SB-1+GL-1 closed in-lane; flag-gated default-OFF \u2014 production still v1.24/single/NOT deployed) + two-process rehearsal PASSED (cross-serialization \u2192 0: per-domain 0s vs single-mode 12s wait on identical disjoint work; ini134-stage3-rehearsal.md). All THREE acceptance-gate criteria now measured-satisfied (no-op=Stage 1, orphaned-holder=Stage 4, cross-serialization=Stage 3). Remaining for closure: Stage 5 (async-by-default) + Stage 6 measured-decision (DEFER-leaning). Production cutover (deploy v1.26 + per-domain default) is a separate CEO decision behind Steward GL-1/GL-2 (NB-2). Initiative stays Current."
     }
   ],
   "directors": [
@@ -143,8 +143,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-14T07:39:17Z",
-      "invocations_30d": 32
+      "last_active": "2026-07-15T06:32:22Z",
+      "invocations_30d": 33
     },
     {
       "name": "knowledge-director",
@@ -425,14 +425,6 @@
     ],
     "in_progress_not_ceo": [
       {
-        "id": "GAP-083",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
-        "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
-        "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
-      },
-      {
         "id": "GAP-094",
         "type": "GAP",
         "route": "Queue-ready",
@@ -570,14 +562,6 @@
       }
     ],
     "partially_executable": [
-      {
-        "id": "GAP-083",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Replace `test_profiles_armed_posture` in `operations/bin/tests/test_batch_orchestrator.py` with an assertion over an *invariant* rather than over the live posture value. The posture bit is operational",
-        "stop_line": "None \u2014 a test-harness change with no runtime, commit, or deploy surface.",
-        "description": "The gate suite asserts the *live* batch arming posture, so a correct CEO-directed stand-down turns\u2026"
-      },
       {
         "id": "GAP-094",
         "type": "GAP",
@@ -750,14 +734,6 @@
         "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
       },
       {
-        "id": "GAP-119",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "jasonos-deploy-sync.py --check reports no drift for a registry-declared deployment whose deployed\u2026"
-      },
-      {
         "id": "GAP-121",
         "type": "GAP",
         "route": "Draft-only",
@@ -804,6 +780,14 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "Volume-Wide Asynchronous Concurrency Substrate \u2014 Per-Repo Isolation Domains, Path-Scoped\u2026"
+      },
+      {
+        "id": "PCR-OPS-054",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
         "id": "PCR-SEC-012",
@@ -853,18 +837,6 @@
         "type": "missing_scope",
         "field": "runner_scope",
         "file": "governance/gaps/open/GAP-116-no-procedure-for-genuinely-external-client-confidential-material-in-a-mirrored-vault.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-119-deploy-sync-check-reports-no-drift-for-a-registry-declared-but-absent-deployed-file.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-119-deploy-sync-check-reports-no-drift-for-a-registry-declared-but-absent-deployed-file.md",
         "category": "gap-open"
       },
       {
@@ -931,6 +903,24 @@
       {
         "type": "missing_field",
         "field": "route",
+        "file": "governance/pcrs/open/PCR-OPS-054-autonomy-go-live-criteria-bounded-gating-checklist-and-triage-split.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-054-autonomy-go-live-criteria-bounded-gating-checklist-and-triage-split.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-054-autonomy-go-live-criteria-bounded-gating-checklist-and-triage-split.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "route",
         "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
         "category": "pcr-open"
       },
@@ -954,6 +944,6 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-15T05:16:30.239717+00:00"
+    "generated_at": "2026-07-15T07:16:32.088216+00:00"
   }
 }
