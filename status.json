@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T14:45:47Z",
+  "generated_at": "2026-07-16T16:45:50Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,8 +12,8 @@
   },
   "operational": {
     "last_session_date": "2026-07-16T06:08:35Z",
-    "minutes_since_session": 517,
-    "airlock_queue": 3,
+    "minutes_since_session": 637,
+    "airlock_queue": 4,
     "airlock_bundles": 1
   },
   "active_initiative": {
@@ -1069,6 +1069,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-16T14:45:47.796892+00:00"
+    "generated_at": "2026-07-16T16:45:50.154289+00:00"
   }
 }
