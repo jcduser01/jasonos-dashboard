@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T05:27:00Z",
+  "generated_at": "2026-07-16T06:09:22Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-16T05:24:10Z",
-    "minutes_since_session": 2,
+    "minutes_since_session": 45,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -563,6 +563,22 @@
         "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
       },
       {
+        "id": "GAP-135",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
+        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
+        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
+      },
+      {
+        "id": "GAP-136",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend the Cowork-mount auto-detection GAP-134 (v1.20, resolved 2026-07-16) just added for `resolve_queue_dir()` to also cover the `--repo` CLI argument: if `--repo` is given a path under a detected `",
+        "stop_line": "None \u2014 fully completable without a gate.",
+        "description": "commit_via_relay.py --repo is not translated from the Cowork sandbox mount path, unlike the\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -657,14 +673,6 @@
         "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
         "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
-      },
-      {
-        "id": "REM-068",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Add a \"Cowork-sandbox invocation\" section documenting the `/Volumes/SandboxData` \u2192 `/sessions/<id>/mnt/SandboxData` translation, the `JASONOS_QUEUE_DIR=<mount>/.git-commit-queue` requirement for `comm",
-        "stop_line": "None \u2014 documentation-only; if adopted, the durable engineering fix (relay client auto-detect) is a separate candidate GAP, not in this scope.",
-        "description": "Running JasonOS tooling from the Cowork sandbox needs the literal /Volumes/SandboxData path\u2026"
       },
       {
         "id": "REM-069",
@@ -797,6 +805,22 @@
         "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
       },
       {
+        "id": "GAP-135",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
+        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
+        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
+      },
+      {
+        "id": "GAP-136",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend the Cowork-mount auto-detection GAP-134 (v1.20, resolved 2026-07-16) just added for `resolve_queue_dir()` to also cover the `--repo` CLI argument: if `--repo` is given a path under a detected `",
+        "stop_line": "None \u2014 fully completable without a gate.",
+        "description": "commit_via_relay.py --repo is not translated from the Cowork sandbox mount path, unlike the\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -893,14 +917,6 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       },
       {
-        "id": "REM-068",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Add a \"Cowork-sandbox invocation\" section documenting the `/Volumes/SandboxData` \u2192 `/sessions/<id>/mnt/SandboxData` translation, the `JASONOS_QUEUE_DIR=<mount>/.git-commit-queue` requirement for `comm",
-        "stop_line": "None \u2014 documentation-only; if adopted, the durable engineering fix (relay client auto-detect) is a separate candidate GAP, not in this scope.",
-        "description": "Running JasonOS tooling from the Cowork sandbox needs the literal /Volumes/SandboxData path\u2026"
-      },
-      {
         "id": "REM-069",
         "type": "REM",
         "route": "Operational",
@@ -959,9 +975,36 @@
         "runner_scope": "",
         "stop_line": "`awaiting-implementation-item` (was `awaiting-steward-re-review` \u2014 the Guard-D re-review CLEARED 2026-07-12, so gate #1 is satisfied). CEO scope approval recorded 2026-07-09; the runner still halts. N",
         "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
+      },
+      {
+        "id": "PCR-OPS-055",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Session Closing Protocol scope for client-repo (non-JasonOS-portfolio) initiative closures"
       }
     ],
-    "contract_quality_gaps": [],
-    "generated_at": "2026-07-16T05:27:00.416636+00:00"
+    "contract_quality_gaps": [
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-OPS-055-session-closing-protocol-scope-for-client-repo-initiative-closures.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-055-session-closing-protocol-scope-for-client-repo-initiative-closures.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-055-session-closing-protocol-scope-for-client-repo-initiative-closures.md",
+        "category": "pcr-open"
+      }
+    ],
+    "generated_at": "2026-07-16T06:09:22.052912+00:00"
   }
 }
