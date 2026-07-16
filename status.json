@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T02:47:38Z",
+  "generated_at": "2026-07-16T03:08:35Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-15T19:09:36Z",
-    "minutes_since_session": 458,
+    "minutes_since_session": 478,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
@@ -416,6 +416,54 @@
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
+        "id": "GAP-113",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Analyze the two candidate fixes against INI-115 doctrine, pick one, and implement the ordering fix inside `jasonos-memory-index-publisher` (gate the projection commit on referenced entries already bei",
+        "stop_line": "None \u2014 this is a projection writer, not the relay/commit-authorization substrate. No authority change. Any fix stays inside the publisher daemon.",
+        "description": "The memory-index publisher daemon auto-commits and pushes its MEMORY.md projection independently\u2026"
+      },
+      {
+        "id": "GAP-114",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add frontmatter (`name`/`description`/`metadata.type`) to `governance/memory/project_post_batch3_work_series.md` and drop a `.memory-dirty` signal; add a warn-on-skip (and `--check`-mode non-zero) to ",
+        "stop_line": "None \u2014 generator is a projection writer; no authority or substrate change.",
+        "description": "The memory-index generator silently skips atomic entries that lack YAML frontmatter, so a real\u2026"
+      },
+      {
+        "id": "GAP-115",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Knowledge Director reviews the archived Terminology Reference section, decides durable-vs-stale for \"Relay = Dispatch\" (promote to an atomic reference entry / KB terminology page, or confirm archive-o",
+        "stop_line": "None.",
+        "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
+      },
+      {
+        "id": "GAP-116",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
+        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
+        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
+      },
+      {
+        "id": "GAP-121",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "(1) Queue-ready first remediation \u2014 fix `jasonos-governance-compare.sh` with write-on-change, a heartbeat, and a size cap, generalizing the GAP-070 segment-rotation pattern. (2) Draft-only \u2014 Operation",
+        "stop_line": "For the standard: halt at `awaiting-ceo-decision` (publish is a CEO approval). For the compare-daemon remediation: `None` \u2014 projection/monitor-writer fix, no authority or substrate change.",
+        "description": "Machine-append operational logs under Logs/ have no uniform rotation/retention or write\u2026"
+      },
+      {
+        "id": "GAP-123",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Engineering Director builds the coverage-accounting part first (independent, not Steward-gated): a documented scope statement on the dataset plus, if adopted, a lightweight in-session record affordanc",
+        "stop_line": "The true-token change touches the security-constrained dispatcher spawn path + the invocation-log contract \u2192 **terminal Security Steward review required** before deploy. The coverage-accounting part i",
+        "description": "The live metrics emit records a byte\u00f74 token *estimate* and covers only launchd-dispatched\u2026"
+      },
+      {
         "id": "GAP-127",
         "type": "GAP",
         "route": "Queue-ready",
@@ -438,6 +486,30 @@
         "runner_scope": "During the PCR-OPS-054 \u00a7D go-live, the executed NB-2 `--dry-run` rehearsal surfaced **three independent defects in the go-live substrate**, each an armed-but-silently-inert or broken-emergency-control",
         "stop_line": "**Steward-gated** \u2014 the changes touch the auto-commit daemon's go-live substrate + its test harness. The env-isolation tests must not alter the scripts' behavior; the consistency check must be read-on",
         "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
+      },
+      {
+        "id": "GAP-133",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "Build and land the Queue-ready parts: (1) rewrite the authoring-obligation language in `operations/work-item-execution-contract.md \u00a7 Authoring obligation` and `operations/batch-runner-runbook.md` to i",
+        "stop_line": "The protocol-amendment PCR (changing step 2c's routing) halts at `awaiting-ceo-decision` \u2014 report-triage-and-remediation-protocol.md is a CEO-approved governance document and its routing rules are not",
+        "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
+      },
+      {
+        "id": "PCR-CRE-002",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Replace the Mode 4 block and append the cross-mode \"Structural Humanization\" principle in the canonical `writing-humanization` skill source per the Draft revisions above; repackage/redistribute to the",
+        "stop_line": "DoD item 5 \u2014 the worked acceptance draft reviewed by the CEO as materially more human in structure \u2014 requires CEO judgment and is not runner-completable. Skill redeployment also passes through the sta",
+        "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
+      },
+      {
+        "id": "PCR-OPS-054",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "Surface the \u00a7E standing digest across the probation window (~2 weeks / ~10 unattended runs) \u2014 what auto-shipped routine-class, what staged awaiting mission-critical promotion, deferred-bucket sweep st",
+        "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
+        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
         "id": "REM-052",
@@ -520,6 +592,14 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       },
       {
+        "id": "REM-068",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Add a \"Cowork-sandbox invocation\" section documenting the `/Volumes/SandboxData` \u2192 `/sessions/<id>/mnt/SandboxData` translation, the `JASONOS_QUEUE_DIR=<mount>/.git-commit-queue` requirement for `comm",
+        "stop_line": "None \u2014 documentation-only; if adopted, the durable engineering fix (relay client auto-detect) is a separate candidate GAP, not in this scope.",
+        "description": "Running JasonOS tooling from the Cowork sandbox needs the literal /Volumes/SandboxData path\u2026"
+      },
+      {
         "id": "REM-069",
         "type": "REM",
         "route": "Operational",
@@ -542,6 +622,14 @@
         "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
         "stop_line": "None.",
         "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
+      },
+      {
+        "id": "REM-072",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
       }
     ],
     "partially_executable": [
@@ -562,6 +650,54 @@
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
+        "id": "GAP-113",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Analyze the two candidate fixes against INI-115 doctrine, pick one, and implement the ordering fix inside `jasonos-memory-index-publisher` (gate the projection commit on referenced entries already bei",
+        "stop_line": "None \u2014 this is a projection writer, not the relay/commit-authorization substrate. No authority change. Any fix stays inside the publisher daemon.",
+        "description": "The memory-index publisher daemon auto-commits and pushes its MEMORY.md projection independently\u2026"
+      },
+      {
+        "id": "GAP-114",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add frontmatter (`name`/`description`/`metadata.type`) to `governance/memory/project_post_batch3_work_series.md` and drop a `.memory-dirty` signal; add a warn-on-skip (and `--check`-mode non-zero) to ",
+        "stop_line": "None \u2014 generator is a projection writer; no authority or substrate change.",
+        "description": "The memory-index generator silently skips atomic entries that lack YAML frontmatter, so a real\u2026"
+      },
+      {
+        "id": "GAP-115",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Knowledge Director reviews the archived Terminology Reference section, decides durable-vs-stale for \"Relay = Dispatch\" (promote to an atomic reference entry / KB terminology page, or confirm archive-o",
+        "stop_line": "None.",
+        "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
+      },
+      {
+        "id": "GAP-116",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
+        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
+        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
+      },
+      {
+        "id": "GAP-121",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "(1) Queue-ready first remediation \u2014 fix `jasonos-governance-compare.sh` with write-on-change, a heartbeat, and a size cap, generalizing the GAP-070 segment-rotation pattern. (2) Draft-only \u2014 Operation",
+        "stop_line": "For the standard: halt at `awaiting-ceo-decision` (publish is a CEO approval). For the compare-daemon remediation: `None` \u2014 projection/monitor-writer fix, no authority or substrate change.",
+        "description": "Machine-append operational logs under Logs/ have no uniform rotation/retention or write\u2026"
+      },
+      {
+        "id": "GAP-123",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Engineering Director builds the coverage-accounting part first (independent, not Steward-gated): a documented scope statement on the dataset plus, if adopted, a lightweight in-session record affordanc",
+        "stop_line": "The true-token change touches the security-constrained dispatcher spawn path + the invocation-log contract \u2192 **terminal Security Steward review required** before deploy. The coverage-accounting part i",
+        "description": "The live metrics emit records a byte\u00f74 token *estimate* and covers only launchd-dispatched\u2026"
+      },
+      {
         "id": "GAP-127",
         "type": "GAP",
         "route": "Queue-ready",
@@ -584,6 +720,30 @@
         "runner_scope": "During the PCR-OPS-054 \u00a7D go-live, the executed NB-2 `--dry-run` rehearsal surfaced **three independent defects in the go-live substrate**, each an armed-but-silently-inert or broken-emergency-control",
         "stop_line": "**Steward-gated** \u2014 the changes touch the auto-commit daemon's go-live substrate + its test harness. The env-isolation tests must not alter the scripts' behavior; the consistency check must be read-on",
         "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
+      },
+      {
+        "id": "GAP-133",
+        "type": "GAP",
+        "route": "Draft-only",
+        "runner_scope": "Build and land the Queue-ready parts: (1) rewrite the authoring-obligation language in `operations/work-item-execution-contract.md \u00a7 Authoring obligation` and `operations/batch-runner-runbook.md` to i",
+        "stop_line": "The protocol-amendment PCR (changing step 2c's routing) halts at `awaiting-ceo-decision` \u2014 report-triage-and-remediation-protocol.md is a CEO-approved governance document and its routing rules are not",
+        "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
+      },
+      {
+        "id": "PCR-CRE-002",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Replace the Mode 4 block and append the cross-mode \"Structural Humanization\" principle in the canonical `writing-humanization` skill source per the Draft revisions above; repackage/redistribute to the",
+        "stop_line": "DoD item 5 \u2014 the worked acceptance draft reviewed by the CEO as materially more human in structure \u2014 requires CEO judgment and is not runner-completable. Skill redeployment also passes through the sta",
+        "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
+      },
+      {
+        "id": "PCR-OPS-054",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "Surface the \u00a7E standing digest across the probation window (~2 weeks / ~10 unattended runs) \u2014 what auto-shipped routine-class, what staged awaiting mission-critical promotion, deferred-bucket sweep st",
+        "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
+        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
         "id": "REM-052",
@@ -666,6 +826,14 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       },
       {
+        "id": "REM-068",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Add a \"Cowork-sandbox invocation\" section documenting the `/Volumes/SandboxData` \u2192 `/sessions/<id>/mnt/SandboxData` translation, the `JASONOS_QUEUE_DIR=<mount>/.git-commit-queue` requirement for `comm",
+        "stop_line": "None \u2014 documentation-only; if adopted, the durable engineering fix (relay client auto-detect) is a separate candidate GAP, not in this scope.",
+        "description": "Running JasonOS tooling from the Cowork sandbox needs the literal /Volumes/SandboxData path\u2026"
+      },
+      {
         "id": "REM-069",
         "type": "REM",
         "route": "Operational",
@@ -688,66 +856,35 @@
         "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
         "stop_line": "None.",
         "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
+      },
+      {
+        "id": "REM-072",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
       }
     ],
-    "blocked_needs_decision": [],
-    "not_executable_leading_stop": [
+    "blocked_needs_decision": [
       {
-        "id": "GAP-113",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "None \u2014 this is a projection writer, not the relay/commit-authorization substrate. No authority change. Any fix stays inside the publisher daemon.",
-        "description": "The memory-index publisher daemon auto-commits and pushes its MEMORY.md projection independently\u2026"
-      },
-      {
-        "id": "GAP-114",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "None \u2014 generator is a projection writer; no authority or substrate change.",
-        "description": "The memory-index generator silently skips atomic entries that lack YAML frontmatter, so a real\u2026"
-      },
-      {
-        "id": "GAP-115",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "None.",
-        "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
-      },
-      {
-        "id": "GAP-116",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
-        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
-      },
-      {
-        "id": "GAP-121",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "",
-        "stop_line": "For the standard: halt at `awaiting-ceo-decision` (publish is a CEO approval). For the compare-daemon remediation: `None` \u2014 projection/monitor-writer fix, no authority or substrate change.",
-        "description": "Machine-append operational logs under Logs/ have no uniform rotation/retention or write\u2026"
-      },
-      {
-        "id": "GAP-123",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "The true-token change touches the security-constrained dispatcher spawn path + the invocation-log contract \u2192 **terminal Security Steward review required** before deploy. The coverage-accounting part i",
-        "description": "The live metrics emit records a byte\u00f74 token *estimate* and covers only launchd-dispatched\u2026"
-      },
-      {
-        "id": "PCR-CRE-002",
+        "id": "PCR-SEC-012",
         "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
+        "route": "CEO-first",
+        "runner_scope": "None (leading-stop rule) until the CEO decides the Decision-required question. Once decided in favor of a standing policy, the runner drafts the full PCR-SEC policy text per \u00a7 Proposed resolution (a\u2013c",
+        "stop_line": "awaiting-ceo-decision \u2014 cleared by the CEO's answer to \u00a7 Decision required.",
+        "description": "External AI-Provider Usage & Data-Egress Policy"
       },
+      {
+        "id": "REM-067",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "None (leading-stop rule) \u2014 the fix is a CEO-side paste action into a UI surface the runner cannot reach.",
+        "stop_line": "awaiting-ceo-decision \u2014 cleared when the CEO re-pastes the current `agents/president-context-prompt.md` (or its thin-loader replacement) into the Cowork project instructions.",
+        "description": "The live Cowork President-Agent startup instructions still direct the startup memory read to the\u2026"
+      }
+    ],
+    "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-047",
         "type": "PCR",
@@ -755,132 +892,9 @@
         "runner_scope": "",
         "stop_line": "`awaiting-implementation-item` (was `awaiting-steward-re-review` \u2014 the Guard-D re-review CLEARED 2026-07-12, so gate #1 is satisfied). CEO scope approval recorded 2026-07-09; the runner still halts. N",
         "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
-      },
-      {
-        "id": "PCR-OPS-054",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
-      },
-      {
-        "id": "PCR-SEC-012",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "External AI-Provider Usage & Data-Egress Policy"
-      },
-      {
-        "id": "REM-067",
-        "type": "REM",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "The live Cowork President-Agent startup instructions still direct the startup memory read to the\u2026"
-      },
-      {
-        "id": "REM-068",
-        "type": "REM",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Running JasonOS tooling from the Cowork sandbox needs the literal /Volumes/SandboxData path\u2026"
       }
     ],
-    "contract_quality_gaps": [
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-113-memory-index-daemon-projection-commit-races-ahead-of-entry-file-commit.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-114-memory-index-generator-silently-skips-entries-without-frontmatter.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-115-relay-dispatch-terminology-fact-dispositioned-archive-only.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-116-no-procedure-for-genuinely-external-client-confidential-material-in-a-mirrored-vault.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-121-machine-append-operational-logs-have-no-uniform-rotation-retention-discipline.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-123-metrics-emit-uses-byte-estimate-not-true-tokens-and-misses-in-session-dispatch.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-CRE-002-narrative-humanization-structural-markers.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-054-autonomy-go-live-criteria-bounded-gating-checklist-and-triage-split.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-054-autonomy-go-live-criteria-bounded-gating-checklist-and-triage-split.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-054-autonomy-go-live-criteria-bounded-gating-checklist-and-triage-split.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-SEC-012-external-ai-provider-usage-and-data-egress-policy.md",
-        "category": "pcr-open"
-      }
-    ],
-    "generated_at": "2026-07-16T02:47:38.089140+00:00"
+    "contract_quality_gaps": [],
+    "generated_at": "2026-07-16T03:08:35.294449+00:00"
   }
 }
