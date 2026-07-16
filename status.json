@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T10:45:48Z",
+  "generated_at": "2026-07-16T12:45:47Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-16T06:08:35Z",
-    "minutes_since_session": 277,
+    "minutes_since_session": 397,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -172,8 +172,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-07-16T07:45:41Z",
-      "invocations_30d": 10
+      "last_active": "2026-07-16T12:44:47Z",
+      "invocations_30d": 15
     },
     {
       "name": "operations-director",
@@ -619,6 +619,14 @@
         "description": "obs_engine_selector._SELECTION_CACHE stores None on a transient broker/Ollama failure and holds it\u2026"
       },
       {
+        "id": "GAP-139",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Generalize the INI-076/Phase-1b intra-model selection pattern to the Codex lane. Codex exposes `-m/--model <MODEL>` and `-c model_reasoning_effort=<level>` (config override; both verified on codex v0.",
+        "stop_line": "The reasoning tier is a suitability/optimization dimension, NOT an egress or authority control \u2014 it must not touch the Phase-2 egress firewall (C3/C4) or the fail-closed `local_only` refusal. Keep the",
+        "description": "the CodexAdapter advertises a single fixed candidate and does not expose model / reasoning-effort\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -885,6 +893,14 @@
         "description": "obs_engine_selector._SELECTION_CACHE stores None on a transient broker/Ollama failure and holds it\u2026"
       },
       {
+        "id": "GAP-139",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Generalize the INI-076/Phase-1b intra-model selection pattern to the Codex lane. Codex exposes `-m/--model <MODEL>` and `-c model_reasoning_effort=<level>` (config override; both verified on codex v0.",
+        "stop_line": "The reasoning tier is a suitability/optimization dimension, NOT an egress or authority control \u2014 it must not touch the Phase-2 egress firewall (C3/C4) or the fail-closed `local_only` refusal. Keep the",
+        "description": "the CodexAdapter advertises a single fixed candidate and does not expose model / reasoning-effort\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -1069,6 +1085,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-16T10:45:48.501453+00:00"
+    "generated_at": "2026-07-16T12:45:47.170740+00:00"
   }
 }
