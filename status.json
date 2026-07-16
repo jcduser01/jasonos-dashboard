@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T08:09:33Z",
+  "generated_at": "2026-07-16T08:45:37Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-16T07:34:59Z",
-    "minutes_since_session": 34,
+    "minutes_since_session": 70,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -675,14 +675,6 @@
         "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026"
       },
       {
-        "id": "REM-065",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Author the missing/relabel the malformed contract fields on the 7 flagged items (GAP-113/114/115/116, PCR-CRE-002, PCR-OPS-052, INI-134).",
-        "stop_line": "None.",
-        "description": "check-work-item-contract-conformance.py (step 2c) exits 1 (regressed from exit 0): 7\u2026"
-      },
-      {
         "id": "REM-066",
         "type": "REM",
         "route": "Operational",
@@ -721,6 +713,22 @@
         "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
         "stop_line": "None.",
         "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
+      },
+      {
+        "id": "REM-073",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Author `Route` / `Runner scope` / `Stop-line` on PCR-OPS-055 once its Draft status resolves.",
+        "stop_line": "None for this REM's own remediation.",
+        "description": "check-work-item-contract-conformance.py (step 2c) exits 1: PCR-OPS-055 (Session Closing Protocol\u2026"
+      },
+      {
+        "id": "REM-074",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "partially_executable": [
@@ -933,14 +941,6 @@
         "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026"
       },
       {
-        "id": "REM-065",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Author the missing/relabel the malformed contract fields on the 7 flagged items (GAP-113/114/115/116, PCR-CRE-002, PCR-OPS-052, INI-134).",
-        "stop_line": "None.",
-        "description": "check-work-item-contract-conformance.py (step 2c) exits 1 (regressed from exit 0): 7\u2026"
-      },
-      {
         "id": "REM-066",
         "type": "REM",
         "route": "Operational",
@@ -979,6 +979,22 @@
         "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
         "stop_line": "None.",
         "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
+      },
+      {
+        "id": "REM-073",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Author `Route` / `Runner scope` / `Stop-line` on PCR-OPS-055 once its Draft status resolves.",
+        "stop_line": "None for this REM's own remediation.",
+        "description": "check-work-item-contract-conformance.py (step 2c) exits 1: PCR-OPS-055 (Session Closing Protocol\u2026"
+      },
+      {
+        "id": "REM-074",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "blocked_needs_decision": [
@@ -1029,6 +1045,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-16T08:09:33.121530+00:00"
+    "generated_at": "2026-07-16T08:45:37.691817+00:00"
   }
 }
