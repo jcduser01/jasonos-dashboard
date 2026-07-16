@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T06:09:32Z",
+  "generated_at": "2026-07-16T08:09:33Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,10 +11,10 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-16T05:24:10Z",
-    "minutes_since_session": 45,
-    "airlock_queue": 21,
-    "airlock_bundles": 1
+    "last_session_date": "2026-07-16T07:34:59Z",
+    "minutes_since_session": 34,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-137",
@@ -148,14 +148,14 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-07-16T04:30:25Z",
-      "invocations_30d": 8
+      "last_active": "2026-07-16T07:45:41Z",
+      "invocations_30d": 10
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-15T07:42:06Z",
-      "invocations_30d": 33
+      "last_active": "2026-07-16T07:48:04Z",
+      "invocations_30d": 34
     },
     {
       "name": "knowledge-director",
@@ -579,6 +579,22 @@
         "description": "commit_via_relay.py --repo is not translated from the Cowork sandbox mount path, unlike the\u2026"
       },
       {
+        "id": "GAP-137",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Close the self-bypass hole in `~/bin/jasonos-tdd-guard.py` (canonical: `operations/bin/jasonos-tdd-guard.py`). The bypass is documented as reserved to \"President-Agent-ruled exceptions,\" but `_bypass_",
+        "stop_line": "The fix must not make the guard fail-*closed* on its own internal error \u2014 a buggy guard must still fail-open (allow), per its current design, or it will brick the Engineering Director. Only the *bypas",
+        "description": "the TDD guard's bypass marker can be created by the very agent it gates, so the\u2026"
+      },
+      {
+        "id": "GAP-138",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "In `operations/bin/execlayer/obs_engine_selector.py`, distinguish a *successful* selection (`Assigned` \u2192 tag, or a genuine `Rejected` with no eligible candidate) from a *transient failure* (broker `Er",
+        "stop_line": "Must preserve the current fail-open guarantee \u2014 no code path may raise into the engine's inference call. Must also preserve the memoization benefit for the *success* case (at most one broker route per",
+        "description": "obs_engine_selector._SELECTION_CACHE stores None on a transient broker/Ollama failure and holds it\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -821,6 +837,22 @@
         "description": "commit_via_relay.py --repo is not translated from the Cowork sandbox mount path, unlike the\u2026"
       },
       {
+        "id": "GAP-137",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Close the self-bypass hole in `~/bin/jasonos-tdd-guard.py` (canonical: `operations/bin/jasonos-tdd-guard.py`). The bypass is documented as reserved to \"President-Agent-ruled exceptions,\" but `_bypass_",
+        "stop_line": "The fix must not make the guard fail-*closed* on its own internal error \u2014 a buggy guard must still fail-open (allow), per its current design, or it will brick the Engineering Director. Only the *bypas",
+        "description": "the TDD guard's bypass marker can be created by the very agent it gates, so the\u2026"
+      },
+      {
+        "id": "GAP-138",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "In `operations/bin/execlayer/obs_engine_selector.py`, distinguish a *successful* selection (`Assigned` \u2192 tag, or a genuine `Rejected` with no eligible candidate) from a *transient failure* (broker `Er",
+        "stop_line": "Must preserve the current fail-open guarantee \u2014 no code path may raise into the engine's inference call. Must also preserve the memoization benefit for the *success* case (at most one broker route per",
+        "description": "obs_engine_selector._SELECTION_CACHE stores None on a transient broker/Ollama failure and holds it\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -951,14 +983,6 @@
     ],
     "blocked_needs_decision": [
       {
-        "id": "PCR-SEC-012",
-        "type": "PCR",
-        "route": "CEO-first",
-        "runner_scope": "None (leading-stop rule) until the CEO decides the Decision-required question. Once decided in favor of a standing policy, the runner drafts the full PCR-SEC policy text per \u00a7 Proposed resolution (a\u2013c",
-        "stop_line": "awaiting-ceo-decision \u2014 cleared by the CEO's answer to \u00a7 Decision required.",
-        "description": "External AI-Provider Usage & Data-Egress Policy"
-      },
-      {
         "id": "REM-067",
         "type": "REM",
         "route": "CEO-first",
@@ -1005,6 +1029,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-16T06:09:32.581233+00:00"
+    "generated_at": "2026-07-16T08:09:33.121530+00:00"
   }
 }
