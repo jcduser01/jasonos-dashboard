@@ -1,23 +1,59 @@
 {
-  "generated_at": "2026-07-16T03:08:46Z",
+  "generated_at": "2026-07-16T04:06:58Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
     "done": 109,
     "total": 128,
-    "active": 0,
+    "active": 1,
     "queued": 0,
     "paused": 8,
-    "backlog": 11
+    "backlog": 10
   },
   "operational": {
     "last_session_date": "2026-07-15T19:09:36Z",
-    "minutes_since_session": 479,
+    "minutes_since_session": 537,
     "airlock_queue": 21,
     "airlock_bundles": 1
   },
-  "active_initiative": null,
-  "active_initiatives": [],
+  "active_initiative": {
+    "id": "INI-137",
+    "name": "Multi-Provider Execution Layer \u2014 provider-independent workload routing (Codex + Gemini + Ollama under the capability broker)",
+    "status": "active",
+    "contract": {
+      "route": "CEO-first",
+      "runner_scope": "The first increment (normalized contracts, adapter interface, Ollama refactor, Codex adapter, human-mediated Gemini adapter, orchestrator-worker-reviewer wiring) is Engineering-buildable. HARD GATES ahead of any go-live: (1) Security Steward review before any real org workload routes to a cloud provider; (2) CEO provisioning + budget authorization before any metered API-key lane is enabled \u2014 v1 is free-lanes-only (Ollama local + Codex-on-ChatGPT-Plus + human-mediated Gemini). No autonomous enabling of a paid lane, no autonomous data-egress-policy change.",
+      "stop_line": "Deny-by-default on data egress \u2014 work classified local-only can never be routed off-box, enforced in eligibility, not advised. The broker decides only WHERE/HOW an already-authorized unit executes; it must never widen WHAT an agent is authorized to do. A worker environment never inherits the orchestrator's permissions. Secrets never appear in prompts, ticket text, logs, or committed config. Human-mediated transport (Gemini) is still cloud egress and is bound by the same data-classification constraint. Metered API lanes require explicit CEO budget authorization + Steward sign-off before enablement.",
+      "depends_on": [
+        "INI-011",
+        "INI-011",
+        "INI-132",
+        "GAP-120",
+        "INI-034",
+        "GAP-120"
+      ]
+    }
+  },
+  "active_initiatives": [
+    {
+      "id": "INI-137",
+      "name": "Multi-Provider Execution Layer \u2014 provider-independent workload routing (Codex + Gemini + Ollama under the capability broker)",
+      "status": "active",
+      "contract": {
+        "route": "CEO-first",
+        "runner_scope": "The first increment (normalized contracts, adapter interface, Ollama refactor, Codex adapter, human-mediated Gemini adapter, orchestrator-worker-reviewer wiring) is Engineering-buildable. HARD GATES ahead of any go-live: (1) Security Steward review before any real org workload routes to a cloud provider; (2) CEO provisioning + budget authorization before any metered API-key lane is enabled \u2014 v1 is free-lanes-only (Ollama local + Codex-on-ChatGPT-Plus + human-mediated Gemini). No autonomous enabling of a paid lane, no autonomous data-egress-policy change.",
+        "stop_line": "Deny-by-default on data egress \u2014 work classified local-only can never be routed off-box, enforced in eligibility, not advised. The broker decides only WHERE/HOW an already-authorized unit executes; it must never widen WHAT an agent is authorized to do. A worker environment never inherits the orchestrator's permissions. Secrets never appear in prompts, ticket text, logs, or committed config. Human-mediated transport (Gemini) is still cloud egress and is bound by the same data-classification constraint. Metered API lanes require explicit CEO budget authorization + Steward sign-off before enablement.",
+        "depends_on": [
+          "INI-011",
+          "INI-011",
+          "INI-132",
+          "GAP-120",
+          "INI-034",
+          "GAP-120"
+        ]
+      }
+    }
+  ],
   "queue": [],
   "ceo_actions": [
     {
@@ -355,28 +391,59 @@
             "INI-127"
           ]
         }
-      },
-      {
-        "id": "INI-137",
-        "name": "Multi-Provider Execution Layer \u2014 provider-independent workload routing (Codex + Gemini + Ollama under the capability broker)",
-        "notes": "Filed 2026-07-14 from AIRLOCK-2026-07-14-001 (consultant multi-provider routing proposal, treated as discussion material). Generalizes INI-011's capability broker from Claude-tier routing to\u2026",
-        "contract": {
-          "route": "CEO-first",
-          "runner_scope": "The first increment (normalized contracts, adapter interface, Ollama refactor, Codex adapter, human-mediated Gemini adapter, orchestrator-worker-reviewer wiring) is Engineering-buildable. HARD GATES ahead of any go-live: (1) Security Steward review before any real org workload routes to a cloud provider; (2) CEO provisioning + budget authorization before any metered API-key lane is enabled \u2014 v1 is free-lanes-only (Ollama local + Codex-on-ChatGPT-Plus + human-mediated Gemini). No autonomous enabling of a paid lane, no autonomous data-egress-policy change.",
-          "stop_line": "Deny-by-default on data egress \u2014 work classified local-only can never be routed off-box, enforced in eligibility, not advised. The broker decides only WHERE/HOW an already-authorized unit executes; it must never widen WHAT an agent is authorized to do. A worker environment never inherits the orchestrator's permissions. Secrets never appear in prompts, ticket text, logs, or committed config. Human-mediated transport (Gemini) is still cloud egress and is bound by the same data-classification constraint. Metered API lanes require explicit CEO budget authorization + Steward sign-off before enablement.",
-          "depends_on": [
-            "INI-011",
-            "INI-011",
-            "INI-132",
-            "GAP-120",
-            "INI-034",
-            "GAP-120"
-          ]
-        }
       }
     ]
   },
-  "batch_queue": [],
+  "batch_queue": [
+    {
+      "position": 1,
+      "id": "GAP-131"
+    },
+    {
+      "position": 2,
+      "id": "GAP-133"
+    },
+    {
+      "position": 3,
+      "id": "GAP-101"
+    },
+    {
+      "position": 4,
+      "id": "GAP-121"
+    },
+    {
+      "position": 5,
+      "id": "GAP-123"
+    },
+    {
+      "position": 6,
+      "id": "GAP-113"
+    },
+    {
+      "position": 7,
+      "id": "GAP-114"
+    },
+    {
+      "position": 8,
+      "id": "GAP-115"
+    },
+    {
+      "position": 9,
+      "id": "REM-054"
+    },
+    {
+      "position": 10,
+      "id": "REM-055"
+    },
+    {
+      "position": 11,
+      "id": "REM-056"
+    },
+    {
+      "position": 12,
+      "id": "REM-069"
+    }
+  ],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -494,6 +561,14 @@
         "runner_scope": "Build and land the Queue-ready parts: (1) rewrite the authoring-obligation language in `operations/work-item-execution-contract.md \u00a7 Authoring obligation` and `operations/batch-runner-runbook.md` to i",
         "stop_line": "The protocol-amendment PCR (changing step 2c's routing) halts at `awaiting-ceo-decision` \u2014 report-triage-and-remediation-protocol.md is a CEO-approved governance document and its routing rules are not",
         "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
+      },
+      {
+        "id": "GAP-134",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend `commit_via_relay.py`'s existing shared-volume-root marker detection (built for queue-dir resolution under GAP-054) to also: (a) detect that it is running under a Cowork sandbox mount (`/sessio",
+        "stop_line": "None \u2014 fully completable without a gate.",
+        "description": "commit_via_relay.py has no Cowork-mount or per-domain auto-detection, so a documented\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -730,6 +805,14 @@
         "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
       },
       {
+        "id": "GAP-134",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend `commit_via_relay.py`'s existing shared-volume-root marker detection (built for queue-dir resolution under GAP-054) to also: (a) detect that it is running under a Cowork sandbox mount (`/sessio",
+        "stop_line": "None \u2014 fully completable without a gate.",
+        "description": "commit_via_relay.py has no Cowork-mount or per-domain auto-detection, so a documented\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -895,6 +978,6 @@
       }
     ],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-16T03:08:46.670156+00:00"
+    "generated_at": "2026-07-16T04:06:58.758061+00:00"
   }
 }
