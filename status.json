@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T12:42:29Z",
+  "generated_at": "2026-07-17T14:42:30Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-17T12:40:39Z",
-    "minutes_since_session": 1,
+    "last_session_date": "2026-07-17T13:07:12Z",
+    "minutes_since_session": 95,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -59,35 +59,41 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
+      "label": "Website Repositioning decision",
+      "context": "three coupled asks tied to INI-114, all live; INI-114 is Backlog and unblocked. (a) pull decision + director composition"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
-      "id": "ACT-HO-2",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Medical/financial power of attorney",
       "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "(parked)",
-      "context": "Canonize UX best-practices into a JasonOS KB wiki article \u2014 externalize the CEO's UX-career expertise into org knowledge"
-    },
-    {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "(long-horizon)",
-      "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if a JasonOS domain identity earns its keep."
+      "label": "Canonize UX best-practices into a KB article",
+      "context": "*(parked)* \u2014 externalize the CEO's UX-career expertise into org knowledge. Propose at a natural moment."
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "sam.gov API key",
-      "context": "register/log in \u2192 Account Details \u2192 generate key, and associate the account with a registered entity for the usable ~1,0"
+      "label": "Google Workspace OAuth as the durable Gmail auth target",
+      "context": "*(long-horizon)* \u2014 if a JasonOS domain identity earns its keep."
     },
     {
       "id": "ACT-HO-6",
+      "category": "required",
+      "label": "SAM.gov entity registration / tier confirmation",
+      "context": "INI-111 Phase 2"
+    },
+    {
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "privacy.com card for the Venture engine",
       "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
@@ -101,7 +107,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-16T21:43:54Z",
-      "invocations_30d": 21
+      "invocations_30d": 20
     },
     {
       "name": "operations-director",
@@ -130,8 +136,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-07-13T09:01:58Z",
-      "invocations_30d": 6
+      "last_active": "2026-07-17T13:12:01Z",
+      "invocations_30d": 7
     },
     {
       "name": "venture-director",
@@ -555,14 +561,6 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "REM-052",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
-        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th",
-        "description": "An automated chore(portfolio): rebuild README projection commit (2579c33) silently renamed an OPEN\u2026"
-      },
-      {
         "id": "REM-054",
         "type": "REM",
         "route": "Operational",
@@ -657,6 +655,14 @@
         "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
         "stop_line": "None.",
         "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
+      },
+      {
+        "id": "REM-077",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Not assigned in this pass. Investigate the specific hung session (request-id `batch-daemon-20260717T070008Z-78688`) for the actual blocking call; this is a distinct root-cause task from GAP-144.",
+        "stop_line": "None to file this REM. Any daemon-behavior change (timeout value, retry logic) would be commit-path/autonomy-adjacent and Security-Steward-gated per the standing pattern.",
+        "description": "Step 2h (GAP-143/PCR-OPS-056), on its first live run, flagged a real failed-dispatch: the\u2026"
       }
     ],
     "partially_executable": [
@@ -797,14 +803,6 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "REM-052",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "**Option 2 first** (self-contained guard): extend the pre-commit gate (`operations/assets/pre-commit`) \u2014 or the report-triage sweep \u2014 to refuse/flag any commit moving a file between `governance/gaps/{",
-        "stop_line": "Halt before altering any daemon's staging behavior or the pre-commit gate goes live. Both sit on the commit path and are Security-Steward-gated (non-waivable). The CEO option selection is recorded; th",
-        "description": "An automated chore(portfolio): rebuild README projection commit (2579c33) silently renamed an OPEN\u2026"
-      },
-      {
         "id": "REM-054",
         "type": "REM",
         "route": "Operational",
@@ -899,6 +897,14 @@
         "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
         "stop_line": "None.",
         "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
+      },
+      {
+        "id": "REM-077",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Not assigned in this pass. Investigate the specific hung session (request-id `batch-daemon-20260717T070008Z-78688`) for the actual blocking call; this is a distinct root-cause task from GAP-144.",
+        "stop_line": "None to file this REM. Any daemon-behavior change (timeout value, retry logic) would be commit-path/autonomy-adjacent and Security-Steward-gated per the standing pattern.",
+        "description": "Step 2h (GAP-143/PCR-OPS-056), on its first live run, flagged a real failed-dispatch: the\u2026"
       }
     ],
     "blocked_needs_decision": [
@@ -913,11 +919,11 @@
     ],
     "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T12:42:29.361987+00:00"
+    "generated_at": "2026-07-17T14:42:30.234431+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 2,
     "open_gaps": 17,
-    "open_rems": 13
+    "open_rems": 14
   }
 }
