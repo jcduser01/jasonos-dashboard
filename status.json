@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T14:42:30Z",
+  "generated_at": "2026-07-17T15:15:06Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T13:07:12Z",
-    "minutes_since_session": 95,
+    "minutes_since_session": 127,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -917,12 +917,40 @@
         "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
       }
     ],
-    "not_executable_leading_stop": [],
-    "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T14:42:30.234431+00:00"
+    "not_executable_leading_stop": [
+      {
+        "id": "PCR-OPS-059",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Hermetic Test Suite as a Precondition for Checker Security Steward CLEAR"
+      }
+    ],
+    "contract_quality_gaps": [
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-OPS-059-checker-test-suite-precondition.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-059-checker-test-suite-precondition.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-059-checker-test-suite-precondition.md",
+        "category": "pcr-open"
+      }
+    ],
+    "generated_at": "2026-07-17T15:15:06.779737+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 2,
+    "open_pcrs": 3,
     "open_gaps": 17,
     "open_rems": 14
   }
