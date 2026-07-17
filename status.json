@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T03:33:07Z",
+  "generated_at": "2026-07-17T03:58:56Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T03:28:31Z",
-    "minutes_since_session": 4,
+    "minutes_since_session": 30,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -545,6 +545,14 @@
         "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
       },
       {
+        "id": "GAP-147",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Fix `split_canonical()`/`merge_ceo_actions()` in `jasonos-handoff-compactor.py` (both the canonical `operations/bin/` copy and the deployed `/Volumes/SandboxData/bin/` + live `~/bin/` copies, per the ",
+        "stop_line": "None \u2014 fully completable without a gate; test-and-doc fix to a non-commit-path script.",
+        "description": "jasonos-handoff-compactor.py's ## CEO Actions Completed matching only reaches the *last*\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -803,6 +811,14 @@
         "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
       },
       {
+        "id": "GAP-147",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Fix `split_canonical()`/`merge_ceo_actions()` in `jasonos-handoff-compactor.py` (both the canonical `operations/bin/` copy and the deployed `/Volumes/SandboxData/bin/` + live `~/bin/` copies, per the ",
+        "stop_line": "None \u2014 fully completable without a gate; test-and-doc fix to a non-commit-path script.",
+        "description": "jasonos-handoff-compactor.py's ## CEO Actions Completed matching only reaches the *last*\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -987,6 +1003,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T03:33:07.404342+00:00"
+    "generated_at": "2026-07-17T03:58:56.935385+00:00"
   }
 }
