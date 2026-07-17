@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T06:07:19Z",
+  "generated_at": "2026-07-17T11:49:47Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-17T03:28:31Z",
-    "minutes_since_session": 158,
+    "last_session_date": "2026-07-17T06:08:30Z",
+    "minutes_since_session": 341,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -101,12 +101,12 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-16T21:43:54Z",
-      "invocations_30d": 22
+      "invocations_30d": 21
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-16T07:48:04Z",
+      "last_active": "2026-07-17T06:32:56Z",
       "invocations_30d": 34
     },
     {
@@ -119,7 +119,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-09T23:21:25Z",
-      "invocations_30d": 23
+      "invocations_30d": 21
     },
     {
       "name": "research-director",
@@ -952,7 +952,7 @@
     "blocked_needs_decision": [],
     "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T06:07:19.127754+00:00"
+    "generated_at": "2026-07-17T11:49:48.275075+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 2,
