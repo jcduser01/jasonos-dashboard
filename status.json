@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T11:57:37Z",
+  "generated_at": "2026-07-17T12:26:02Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T11:50:03Z",
-    "minutes_since_session": 7,
+    "minutes_since_session": 35,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -106,8 +106,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-17T06:32:56Z",
-      "invocations_30d": 34
+      "last_active": "2026-07-17T11:58:28Z",
+      "invocations_30d": 35
     },
     {
       "name": "knowledge-director",
@@ -539,14 +539,6 @@
         "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
-        "id": "GAP-149",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Add a `--removes REMOVES` argument to `commit_via_relay.py` (one space-separated string of repo-relative paths, mirroring `--pathspec`) that the client writes into the trigger file's `removes:` field.",
-        "stop_line": "None for the build (engineering-ready). Non-waivable Security Steward review before deploy; deploy CEO-gated.",
-        "description": "commit_via_relay.py exposes no --removes passthrough, so it cannot perform a path-limited\u2026"
-      },
-      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -789,14 +781,6 @@
         "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
-        "id": "GAP-149",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Add a `--removes REMOVES` argument to `commit_via_relay.py` (one space-separated string of repo-relative paths, mirroring `--pathspec`) that the client writes into the trigger file's `removes:` field.",
-        "stop_line": "None for the build (engineering-ready). Non-waivable Security Steward review before deploy; deploy CEO-gated.",
-        "description": "commit_via_relay.py exposes no --removes passthrough, so it cannot perform a path-limited\u2026"
-      },
-      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -917,10 +901,19 @@
         "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
-    "blocked_needs_decision": [],
+    "blocked_needs_decision": [
+      {
+        "id": "GAP-151",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "After the INI-134 per-domain cutover (2026-07-15), the legacy flat watcher `com.jasonos.git-relay` remains **loaded** in launchd but is misconfigured for the per-domain world: its plist runs `jasonos-",
+        "stop_line": "Diagnosis + plist retirement engineering-buildable; the `launchctl bootout` is CEO-run (irreversible-ish launchd mutation, classifier-gated). Recommend a Steward look at the substrate change before th",
+        "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
+      }
+    ],
     "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T11:57:37.334524+00:00"
+    "generated_at": "2026-07-17T12:26:02.585824+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 2,
