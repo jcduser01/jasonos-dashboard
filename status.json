@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T03:58:56Z",
+  "generated_at": "2026-07-17T04:02:58Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T03:28:31Z",
-    "minutes_since_session": 30,
+    "minutes_since_session": 34,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -83,17 +83,11 @@
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Sweep Logs/.projection-dirty/",
-      "context": "16 signal files lack the .dirty suffix the publisher's find -name '*.dirty' consumes. They still fire the WatchPath, so "
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
       "label": "sam.gov API key",
       "context": "register/log in \u2192 Account Details \u2192 generate key, and associate the account with a registered entity for the usable ~1,0"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "privacy.com card for the Venture engine",
       "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
@@ -1003,6 +997,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T03:58:56.935385+00:00"
+    "generated_at": "2026-07-17T04:02:58.372205+00:00"
   }
 }
