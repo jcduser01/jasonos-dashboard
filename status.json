@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T11:49:47Z",
+  "generated_at": "2026-07-17T11:49:51Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -952,7 +952,7 @@
     "blocked_needs_decision": [],
     "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T11:49:48.275075+00:00"
+    "generated_at": "2026-07-17T11:49:51.836628+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 2,
