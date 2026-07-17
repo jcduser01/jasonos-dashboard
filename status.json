@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T11:49:51Z",
+  "generated_at": "2026-07-17T11:57:37Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-17T06:08:30Z",
-    "minutes_since_session": 341,
+    "last_session_date": "2026-07-17T11:50:03Z",
+    "minutes_since_session": 7,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -635,14 +635,6 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       },
       {
-        "id": "REM-069",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Regenerate the PCR README index (Mac-side write mode) and confirm --check exits 0.",
-        "stop_line": "None.",
-        "description": "jasonos-work-item-index-generator.py --type pcr --check (step 2g) exits 1: 2 open PCRs\u2026"
-      },
-      {
         "id": "REM-070",
         "type": "REM",
         "route": "Operational",
@@ -665,14 +657,6 @@
         "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
         "stop_line": "None.",
         "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
-      },
-      {
-        "id": "REM-073",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Author `Route` / `Runner scope` / `Stop-line` on PCR-OPS-055 once its Draft status resolves.",
-        "stop_line": "None for this REM's own remediation.",
-        "description": "check-work-item-contract-conformance.py (step 2c) exits 1: PCR-OPS-055 (Session Closing Protocol\u2026"
       },
       {
         "id": "REM-074",
@@ -901,14 +885,6 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       },
       {
-        "id": "REM-069",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Regenerate the PCR README index (Mac-side write mode) and confirm --check exits 0.",
-        "stop_line": "None.",
-        "description": "jasonos-work-item-index-generator.py --type pcr --check (step 2g) exits 1: 2 open PCRs\u2026"
-      },
-      {
         "id": "REM-070",
         "type": "REM",
         "route": "Operational",
@@ -933,14 +909,6 @@
         "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
       },
       {
-        "id": "REM-073",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Author `Route` / `Runner scope` / `Stop-line` on PCR-OPS-055 once its Draft status resolves.",
-        "stop_line": "None for this REM's own remediation.",
-        "description": "check-work-item-contract-conformance.py (step 2c) exits 1: PCR-OPS-055 (Session Closing Protocol\u2026"
-      },
-      {
         "id": "REM-074",
         "type": "REM",
         "route": "Operational",
@@ -952,11 +920,11 @@
     "blocked_needs_decision": [],
     "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T11:49:51.836628+00:00"
+    "generated_at": "2026-07-17T11:57:37.334524+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 2,
     "open_gaps": 17,
-    "open_rems": 15
+    "open_rems": 13
   }
 }
