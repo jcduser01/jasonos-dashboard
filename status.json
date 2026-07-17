@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-17T19:23:42Z",
+  "generated_at": "2026-07-17T20:42:22Z",
   "schema_version": "5",
-  "generator_version": "2.13",
+  "generator_version": "2.14",
   "stats": {
     "done": 110,
     "total": 128,
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 204,
+    "minutes_since_session": 282,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -23,44 +23,68 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
+      "label": "GAP-051 priority re-assessment",
+      "context": "filed Low on a premise disproved 2026-07-09: the relay creates the commit and then errors on the push, stranding it on l"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
       "label": "Website Repositioning decision",
       "context": "three coupled asks tied to INI-114, all live; INI-114 is Backlog and unblocked. (a) pull decision + director composition"
     },
     {
-      "id": "ACT-HO-2",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
-      "id": "ACT-HO-3",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "Medical/financial power of attorney",
       "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-5",
       "category": "required",
       "label": "Canonize UX best-practices into a KB article",
       "context": "*(parked)* \u2014 externalize the CEO's UX-career expertise into org knowledge. Propose at a natural moment."
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "Google Workspace OAuth as the durable Gmail auth target",
       "context": "*(long-horizon)* \u2014 if a JasonOS domain identity earns its keep."
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "SAM.gov entity registration / tier confirmation",
       "context": "INI-111 Phase 2"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "privacy.com card for the Venture engine",
       "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "GAP-116 resolution",
+      "context": "Knowledge Director drafts the external-client-confidentiality procedure \u2192 PCR \u2192 CEO ratification. (None-to-file now; tra"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "PCR-SEC-012 (Draft) \u2014 decide the external-AI-provider data-egress policy.",
+      "context": "Approve drafting it as a standing Security policy (egress-eligibility keyed to data classification; per-interface ToS-co"
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
+      "label": "INI-111 \u2014 confirm SAM.gov entity registration / tier.",
+      "context": "In your SAM.gov account, check whether entity registration completed and the ~1,000/day request tier is active. If yes: "
     }
   ],
   "status_drift": [],
@@ -339,6 +363,142 @@
         "runner_scope": "In `operations/bin/jasonos-gate-bundle.py` line 109, the inline fallback `_ephemeral_worktree` (used only when the shared `jasonos_worktree_utils` module cannot be imported) builds `wt_dir = os.path.j",
         "stop_line": "",
         "description": "jasonos-gate-bundle.py's inline fallback _ephemeral_worktree hardcodes the wt admin-dir leaf, so\u2026"
+      },
+      {
+        "id": "GAP-116",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
+        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
+        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
+      },
+      {
+        "id": "GAP-135",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
+        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
+        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
+      },
+      {
+        "id": "GAP-146",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
+        "stop_line": "None.",
+        "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
+      },
+      {
+        "id": "GAP-148",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
+        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
+        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
+      },
+      {
+        "id": "GAP-157",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
+        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
+        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
+      },
+      {
+        "id": "GAP-158",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
+        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
+        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
+      },
+      {
+        "id": "GAP-160",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Cross-reference every checker invoked by `report-triage-and-remediation-protocol.md` (and any other `operations/bin/check-*.py` registered in `script-registry.md`) against `operations/bin/tests/` for ",
+        "stop_line": "",
+        "description": "Retroactively audit every registered report-triage checker for a hermetic test suite (PCR-OPS-059\u2026"
+      },
+      {
+        "id": "GAP-161",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "In `operations/bin/jasonos-status-generator.py`'s `read_work_readiness()`, add detection for a ticket that is genuinely blocked on a **Director's own content judgment** rather than a CEO decision or a",
+        "stop_line": "",
+        "description": "Work Readiness dashboard card should segment director-decision-gated tickets (not CEO-gated) into\u2026"
+      },
+      {
+        "id": "PCR-OPS-061",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "None \u2014 this PCR's own completable slice (drafting, CEO decision, protocol-text amendment) is done. The remaining sweep-history-tracking mechanism that enforces the N=2 SLA is GAP-158's runner scope, n",
+        "stop_line": "",
+        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
+      },
+      {
+        "id": "REM-055",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
+      },
+      {
+        "id": "REM-060",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
+        "stop_line": "None.",
+        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
+      },
+      {
+        "id": "REM-061",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
+        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
+        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
+      },
+      {
+        "id": "REM-062",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
+      },
+      {
+        "id": "REM-070",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
+        "stop_line": "None.",
+        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
+      },
+      {
+        "id": "REM-071",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
+        "stop_line": "None.",
+        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
+      },
+      {
+        "id": "REM-072",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
+      },
+      {
+        "id": "REM-074",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "fully_executable": [
@@ -349,6 +509,142 @@
         "runner_scope": "In `operations/bin/jasonos-gate-bundle.py` line 109, the inline fallback `_ephemeral_worktree` (used only when the shared `jasonos_worktree_utils` module cannot be imported) builds `wt_dir = os.path.j",
         "stop_line": "",
         "description": "jasonos-gate-bundle.py's inline fallback _ephemeral_worktree hardcodes the wt admin-dir leaf, so\u2026"
+      },
+      {
+        "id": "GAP-116",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
+        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
+        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
+      },
+      {
+        "id": "GAP-135",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
+        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
+        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
+      },
+      {
+        "id": "GAP-146",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
+        "stop_line": "None.",
+        "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
+      },
+      {
+        "id": "GAP-148",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
+        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
+        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
+      },
+      {
+        "id": "GAP-157",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
+        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
+        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
+      },
+      {
+        "id": "GAP-158",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
+        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
+        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
+      },
+      {
+        "id": "GAP-160",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Cross-reference every checker invoked by `report-triage-and-remediation-protocol.md` (and any other `operations/bin/check-*.py` registered in `script-registry.md`) against `operations/bin/tests/` for ",
+        "stop_line": "",
+        "description": "Retroactively audit every registered report-triage checker for a hermetic test suite (PCR-OPS-059\u2026"
+      },
+      {
+        "id": "GAP-161",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "In `operations/bin/jasonos-status-generator.py`'s `read_work_readiness()`, add detection for a ticket that is genuinely blocked on a **Director's own content judgment** rather than a CEO decision or a",
+        "stop_line": "",
+        "description": "Work Readiness dashboard card should segment director-decision-gated tickets (not CEO-gated) into\u2026"
+      },
+      {
+        "id": "PCR-OPS-061",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "None \u2014 this PCR's own completable slice (drafting, CEO decision, protocol-text amendment) is done. The remaining sweep-history-tracking mechanism that enforces the N=2 SLA is GAP-158's runner scope, n",
+        "stop_line": "",
+        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
+      },
+      {
+        "id": "REM-055",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
+      },
+      {
+        "id": "REM-060",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
+        "stop_line": "None.",
+        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
+      },
+      {
+        "id": "REM-061",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
+        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
+        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
+      },
+      {
+        "id": "REM-062",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
+        "stop_line": "None.",
+        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
+      },
+      {
+        "id": "REM-070",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
+        "stop_line": "None.",
+        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
+      },
+      {
+        "id": "REM-071",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
+        "stop_line": "None.",
+        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
+      },
+      {
+        "id": "REM-072",
+        "type": "REM",
+        "route": "Queue-ready",
+        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
+      },
+      {
+        "id": "REM-074",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
+        "stop_line": "None.",
+        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -369,14 +665,6 @@
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
-        "id": "GAP-116",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
-        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
-        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
-      },
-      {
         "id": "GAP-121",
         "type": "GAP",
         "route": "Draft-only",
@@ -409,46 +697,6 @@
         "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
       },
       {
-        "id": "GAP-135",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
-        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
-        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
-      },
-      {
-        "id": "GAP-146",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
-        "stop_line": "None.",
-        "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
-      },
-      {
-        "id": "GAP-148",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
-        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
-        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
-      },
-      {
-        "id": "GAP-157",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
-        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
-        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
-      },
-      {
-        "id": "GAP-158",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
-        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
-        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
-      },
-      {
         "id": "GAP-159",
         "type": "GAP",
         "route": "Queue-ready",
@@ -473,46 +721,6 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "PCR-OPS-061",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "None \u2014 the runner's completable slice (drafting this PCR and the authoring-instruction rewrites) is already done. Enacting the chosen option into `report-triage-and-remediation-protocol.md` requires C",
-        "stop_line": "CEO must select Option A, B, or C and approve enactment before `report-triage-and-remediation-protocol.md` is modified.",
-        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
-      },
-      {
-        "id": "REM-055",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-060",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
-        "stop_line": "None.",
-        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
-      },
-      {
-        "id": "REM-061",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
-        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
-        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
-      },
-      {
-        "id": "REM-062",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
-      },
-      {
         "id": "REM-064",
         "type": "REM",
         "route": "Operational",
@@ -527,38 +735,6 @@
         "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
         "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
-      },
-      {
-        "id": "REM-070",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
-        "stop_line": "None.",
-        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
-      },
-      {
-        "id": "REM-071",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
-        "stop_line": "None.",
-        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
-      },
-      {
-        "id": "REM-072",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
-      },
-      {
-        "id": "REM-074",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "partially_executable": [
@@ -579,14 +755,6 @@
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
-        "id": "GAP-116",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
-        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
-        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
-      },
-      {
         "id": "GAP-121",
         "type": "GAP",
         "route": "Draft-only",
@@ -619,46 +787,6 @@
         "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
       },
       {
-        "id": "GAP-135",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
-        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
-        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
-      },
-      {
-        "id": "GAP-146",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
-        "stop_line": "None.",
-        "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
-      },
-      {
-        "id": "GAP-148",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
-        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
-        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
-      },
-      {
-        "id": "GAP-157",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
-        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
-        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
-      },
-      {
-        "id": "GAP-158",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
-        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
-        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
-      },
-      {
         "id": "GAP-159",
         "type": "GAP",
         "route": "Queue-ready",
@@ -683,46 +811,6 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "PCR-OPS-061",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "None \u2014 the runner's completable slice (drafting this PCR and the authoring-instruction rewrites) is already done. Enacting the chosen option into `report-triage-and-remediation-protocol.md` requires C",
-        "stop_line": "CEO must select Option A, B, or C and approve enactment before `report-triage-and-remediation-protocol.md` is modified.",
-        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
-      },
-      {
-        "id": "REM-055",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-060",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
-        "stop_line": "None.",
-        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
-      },
-      {
-        "id": "REM-061",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
-        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
-        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
-      },
-      {
-        "id": "REM-062",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
-      },
-      {
         "id": "REM-064",
         "type": "REM",
         "route": "Operational",
@@ -737,38 +825,6 @@
         "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
         "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
-      },
-      {
-        "id": "REM-070",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
-        "stop_line": "None.",
-        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
-      },
-      {
-        "id": "REM-071",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
-        "stop_line": "None.",
-        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
-      },
-      {
-        "id": "REM-072",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
-      },
-      {
-        "id": "REM-074",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "blocked_needs_decision": [
@@ -781,41 +837,13 @@
         "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
       }
     ],
-    "not_executable_leading_stop": [
-      {
-        "id": "PCR-OPS-059",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Hermetic Test Suite as a Precondition for Checker Security Steward CLEAR"
-      }
-    ],
-    "contract_quality_gaps": [
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-059-checker-test-suite-precondition.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-059-checker-test-suite-precondition.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-059-checker-test-suite-precondition.md",
-        "category": "pcr-open"
-      }
-    ],
-    "generated_at": "2026-07-17T19:23:42.209075+00:00"
+    "not_executable_leading_stop": [],
+    "contract_quality_gaps": [],
+    "generated_at": "2026-07-17T20:42:22.435763+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 4,
-    "open_gaps": 15,
+    "open_pcrs": 3,
+    "open_gaps": 17,
     "open_rems": 10
   }
 }
