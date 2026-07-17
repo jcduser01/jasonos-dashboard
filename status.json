@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T22:45:52Z",
+  "generated_at": "2026-07-17T00:45:51Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-16T06:08:35Z",
-    "minutes_since_session": 997,
+    "minutes_since_session": 1117,
     "airlock_queue": 5,
     "airlock_bundles": 1
   },
@@ -173,7 +173,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-07-16T21:43:54Z",
-      "invocations_30d": 23
+      "invocations_30d": 22
     },
     {
       "name": "operations-director",
@@ -1037,6 +1037,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-16T22:45:52.222847+00:00"
+    "generated_at": "2026-07-17T00:45:51.295304+00:00"
   }
 }
