@@ -1,59 +1,23 @@
 {
-  "generated_at": "2026-07-17T19:18:51Z",
+  "generated_at": "2026-07-17T19:23:42Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
-    "done": 109,
+    "done": 110,
     "total": 128,
-    "active": 1,
+    "active": 0,
     "queued": 0,
     "paused": 8,
     "backlog": 10
   },
   "operational": {
     "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 199,
+    "minutes_since_session": 204,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": {
-    "id": "INI-137",
-    "name": "Multi-Provider Execution Layer \u2014 provider-independent workload routing (Codex + Gemini + Ollama under the capability broker)",
-    "status": "active",
-    "contract": {
-      "route": "CEO-first",
-      "runner_scope": "The first increment (normalized contracts, adapter interface, Ollama refactor, Codex adapter, human-mediated Gemini adapter, orchestrator-worker-reviewer wiring) is Engineering-buildable. HARD GATES ahead of any go-live: (1) Security Steward review before any real org workload routes to a cloud provider; (2) CEO provisioning + budget authorization before any metered API-key lane is enabled \u2014 v1 is free-lanes-only (Ollama local + Codex-on-ChatGPT-Plus + human-mediated Gemini). No autonomous enabling of a paid lane, no autonomous data-egress-policy change.",
-      "stop_line": "Deny-by-default on data egress \u2014 work classified local-only can never be routed off-box, enforced in eligibility, not advised. The broker decides only WHERE/HOW an already-authorized unit executes; it must never widen WHAT an agent is authorized to do. A worker environment never inherits the orchestrator's permissions. Secrets never appear in prompts, ticket text, logs, or committed config. Human-mediated transport (Gemini) is still cloud egress and is bound by the same data-classification constraint. Metered API lanes require explicit CEO budget authorization + Steward sign-off before enablement.",
-      "depends_on": [
-        "INI-011",
-        "INI-011",
-        "INI-132",
-        "GAP-120",
-        "INI-034",
-        "GAP-120"
-      ]
-    }
-  },
-  "active_initiatives": [
-    {
-      "id": "INI-137",
-      "name": "Multi-Provider Execution Layer \u2014 provider-independent workload routing (Codex + Gemini + Ollama under the capability broker)",
-      "status": "active",
-      "contract": {
-        "route": "CEO-first",
-        "runner_scope": "The first increment (normalized contracts, adapter interface, Ollama refactor, Codex adapter, human-mediated Gemini adapter, orchestrator-worker-reviewer wiring) is Engineering-buildable. HARD GATES ahead of any go-live: (1) Security Steward review before any real org workload routes to a cloud provider; (2) CEO provisioning + budget authorization before any metered API-key lane is enabled \u2014 v1 is free-lanes-only (Ollama local + Codex-on-ChatGPT-Plus + human-mediated Gemini). No autonomous enabling of a paid lane, no autonomous data-egress-policy change.",
-        "stop_line": "Deny-by-default on data egress \u2014 work classified local-only can never be routed off-box, enforced in eligibility, not advised. The broker decides only WHERE/HOW an already-authorized unit executes; it must never widen WHAT an agent is authorized to do. A worker environment never inherits the orchestrator's permissions. Secrets never appear in prompts, ticket text, logs, or committed config. Human-mediated transport (Gemini) is still cloud egress and is bound by the same data-classification constraint. Metered API lanes require explicit CEO budget authorization + Steward sign-off before enablement.",
-        "depends_on": [
-          "INI-011",
-          "INI-011",
-          "INI-132",
-          "GAP-120",
-          "INI-034",
-          "GAP-120"
-        ]
-      }
-    }
-  ],
+  "active_initiative": null,
+  "active_initiatives": [],
   "queue": [],
   "ceo_actions": [
     {
@@ -847,7 +811,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T19:18:51.828721+00:00"
+    "generated_at": "2026-07-17T19:23:42.209075+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
