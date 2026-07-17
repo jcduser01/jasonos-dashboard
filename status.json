@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T02:45:53Z",
+  "generated_at": "2026-07-17T03:33:07Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -11,10 +11,10 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-16T06:08:35Z",
-    "minutes_since_session": 1237,
-    "airlock_queue": 8,
-    "airlock_bundles": 1
+    "last_session_date": "2026-07-17T03:28:31Z",
+    "minutes_since_session": 4,
+    "airlock_queue": 0,
+    "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-137",
@@ -59,110 +59,44 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Re-arm routine-class auto-commit?",
-      "context": "batch-class-profiles.json has auto_commit_globally_armed: false, and the com.jasonos.batch-run plist is removed from ~/L"
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
-      "id": "ACT-HO-3",
+      "id": "ACT-HO-2",
       "category": "required",
       "label": "Medical/financial power of attorney",
       "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "(parked)",
       "context": "Canonize UX best-practices into a JasonOS KB wiki article \u2014 externalize the CEO's UX-career expertise into org knowledge"
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "(long-horizon)",
       "context": "Google Workspace + service-account OAuth as the durable Gmail auth target, if a JasonOS domain identity earns its keep."
     },
     {
-      "id": "ACT-HO-6",
-      "category": "required",
-      "label": "Re-run the pre-rotation Drive copy",
-      "context": "with the corrected temp/gap070-pre-rotation-backup.yaml. Expect files_included: 2 and a snapshot over 130 KB. The 2026-0"
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Delete the overnight-engineering-runner schedule entry",
-      "context": "in Claude Desktop \u2192 Scheduled tasks. Its body and tracked asset are removed; the trigger lives in the app's own store, n"
-    },
-    {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-5",
       "category": "required",
       "label": "Sweep Logs/.projection-dirty/",
       "context": "16 signal files lack the .dirty suffix the publisher's find -name '*.dirty' consumes. They still fire the WatchPath, so "
     },
     {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "sam.gov API key",
       "context": "register/log in \u2192 Account Details \u2192 generate key, and associate the account with a registered entity for the usable ~1,0"
     },
     {
-      "id": "ACT-HO-10",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "privacy.com card for the Venture engine",
       "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "Pull INI-135 / INI-136 / INI-JCD-003 from Backlog when ready",
-      "context": "three new Backlog initiatives from this session; none gates another (INI-135 and INI-136 explicitly parallel)."
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "Engagement-model licensing / productization",
-      "context": "the engagement operating system as a possible licensable product; parked in INI-JCD-003, CEO-reserved (Products/Ventures"
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "required",
-      "label": "Texas commercial/usury + retention legal review",
-      "context": "for JCD engagement payment terms and retention clauses \u2014 CEO-owned step flagged in INI-JCD-003 scope."
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "(surfaced, no decision needed now) Verify Ollama is actually serving the DH observation engine",
-      "context": "Mac-side log check per the Entry, or wait for GAP-120 wiring to make it observable."
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "Sources A (open PCRs) and B (open gaps) reconciled to current folder state this session \u2014 counts corrected from the stale 2026-07-10 figures (6/16) to current (5/15).",
-      "context": "Full item-by-item content re-verification of sources C (remediation), D (initiative ceo_action frontmatter across the wh"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "Open PCRs (5, confirmed against folder state 2026-07-16)",
-      "context": "PCR-CRE-002 (approved, enactment pending on GAP-112 dependency); PCR-OPS-047 (approved, enactment gate #1 satisfied, gat"
-    },
-    {
-      "id": "ACT-HO-17",
-      "category": "required",
-      "label": "New gap, no CEO action required",
-      "context": "GAP-136 (commit_via_relay.py --repo not translated from Cowork mount path) \u2014 Engineering-queue, normal priority."
-    },
-    {
-      "id": "ACT-HO-18",
-      "category": "required",
-      "label": "JCD Digital Organization Engagement \u2014 three CEO-owned follow-ups from DEC-JCD-006, not urgent, no due date beyond the ones stated",
-      "context": "1"
     }
   ],
   "status_drift": [],
@@ -1053,6 +987,6 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T02:45:53.843410+00:00"
+    "generated_at": "2026-07-17T03:33:07.404342+00:00"
   }
 }
