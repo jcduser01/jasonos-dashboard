@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T04:45:54Z",
+  "generated_at": "2026-07-17T05:14:13Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T03:28:31Z",
-    "minutes_since_session": 77,
+    "minutes_since_session": 105,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -280,11 +280,11 @@
       {
         "id": "INI-114",
         "name": "Jason Cook Design \u2014 Website Repositioning",
-        "notes": "Densified & hardened (2 adversarial rounds) 2026-07-03; no longer doctrine-gated; awaiting CEO pull. Pending: Phase 1.5 voice probe + \u22651 fit-proof launch case.",
+        "notes": "Sharpened 2026-07-17: positioning target moved from 'coherence platform' (abstract quality) to 'organizational architecture, with AI as one building material' (concrete, sellable claim); the IA\u2026",
         "contract": {
           "route": "CEO-first",
-          "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE. Draft one page of real copy (homepage hook + the paid-diagnostic offer) in Jason's register against the governed IA, to falsify the no-handoff hook cheaply before design spend. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
-          "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build carries a launch gate of \u22651 delivered, anonymized fit-proof (paid-diagnostic) case that does not yet exist. Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and the CEO's launch-floor acceptance."
+          "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE, sharpened 2026-07-17. Draft one page of real copy (homepage hook + the entry-offer description) in Jason's register against the governed IA, to falsify the no-handoff/outcome-centric hook cheaply before design spend, holding the abstraction guardrail below. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
+          "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build carries a launch gate of \u22651 external fit-proof case whose status is itself a CEO decision (see Open Items). Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and the CEO's launch-floor acceptance."
         }
       },
       {
@@ -933,16 +933,7 @@
         "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
-    "blocked_needs_decision": [
-      {
-        "id": "REM-067",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "None (leading-stop rule) \u2014 the fix is a CEO-side paste action into a UI surface the runner cannot reach.",
-        "stop_line": "awaiting-ceo-decision \u2014 cleared when the CEO re-pastes the current `agents/president-context-prompt.md` (or its thin-loader replacement) into the Cowork project instructions.",
-        "description": "The live Cowork President-Agent startup instructions still direct the startup memory read to the\u2026"
-      }
-    ],
+    "blocked_needs_decision": [],
     "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-047",
@@ -951,36 +942,9 @@
         "runner_scope": "",
         "stop_line": "`awaiting-implementation-item` (was `awaiting-steward-re-review` \u2014 the Guard-D re-review CLEARED 2026-07-12, so gate #1 is satisfied). CEO scope approval recorded 2026-07-09; the runner still halts. N",
         "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
-      },
-      {
-        "id": "PCR-OPS-055",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Session Closing Protocol scope for client-repo (non-JasonOS-portfolio) initiative closures"
       }
     ],
-    "contract_quality_gaps": [
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-055-session-closing-protocol-scope-for-client-repo-initiative-closures.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-055-session-closing-protocol-scope-for-client-repo-initiative-closures.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-055-session-closing-protocol-scope-for-client-repo-initiative-closures.md",
-        "category": "pcr-open"
-      }
-    ],
-    "generated_at": "2026-07-17T04:45:54.037672+00:00"
+    "contract_quality_gaps": [],
+    "generated_at": "2026-07-17T05:14:13.932528+00:00"
   }
 }
