@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T19:04:01Z",
+  "generated_at": "2026-07-17T19:18:51Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 184,
+    "minutes_since_session": 199,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -355,11 +355,15 @@
   "batch_queue": [
     {
       "position": 1,
-      "id": "GAP-101"
+      "id": "GAP-151"
     },
     {
       "position": 2,
-      "id": "REM-055"
+      "id": "GAP-159"
+    },
+    {
+      "position": 3,
+      "id": "GAP-132"
     }
   ],
   "jasonos_work_readiness": {
@@ -843,7 +847,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T19:04:01.147839+00:00"
+    "generated_at": "2026-07-17T19:18:51.828721+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
