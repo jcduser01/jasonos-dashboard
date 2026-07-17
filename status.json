@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T21:26:43Z",
+  "generated_at": "2026-07-17T21:53:09Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 327,
+    "last_session_date": "2026-07-17T21:38:22Z",
+    "minutes_since_session": 14,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -340,20 +340,7 @@
       }
     ]
   },
-  "batch_queue": [
-    {
-      "position": 1,
-      "id": "GAP-151"
-    },
-    {
-      "position": 2,
-      "id": "GAP-159"
-    },
-    {
-      "position": 3,
-      "id": "GAP-132"
-    }
-  ],
+  "batch_queue": [],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -419,14 +406,6 @@
         "runner_scope": "Cross-reference every checker invoked by `report-triage-and-remediation-protocol.md` (and any other `operations/bin/check-*.py` registered in `script-registry.md`) against `operations/bin/tests/` for ",
         "stop_line": "",
         "description": "Retroactively audit every registered report-triage checker for a hermetic test suite (PCR-OPS-059\u2026"
-      },
-      {
-        "id": "GAP-161",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `operations/bin/jasonos-status-generator.py`'s `read_work_readiness()`, add detection for a ticket that is genuinely blocked on a **Director's own content judgment** rather than a CEO decision or a",
-        "stop_line": "",
-        "description": "Work Readiness dashboard card should segment director-decision-gated tickets (not CEO-gated) into\u2026"
       },
       {
         "id": "PCR-OPS-061",
@@ -567,14 +546,6 @@
         "description": "Retroactively audit every registered report-triage checker for a hermetic test suite (PCR-OPS-059\u2026"
       },
       {
-        "id": "GAP-161",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `operations/bin/jasonos-status-generator.py`'s `read_work_readiness()`, add detection for a ticket that is genuinely blocked on a **Director's own content judgment** rather than a CEO decision or a",
-        "stop_line": "",
-        "description": "Work Readiness dashboard card should segment director-decision-gated tickets (not CEO-gated) into\u2026"
-      },
-      {
         "id": "PCR-OPS-061",
         "type": "PCR",
         "route": "Operational",
@@ -681,22 +652,6 @@
         "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026"
       },
       {
-        "id": "GAP-132",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "During the PCR-OPS-054 \u00a7D go-live, the executed NB-2 `--dry-run` rehearsal surfaced **three independent defects in the go-live substrate**, each an armed-but-silently-inert or broken-emergency-control",
-        "stop_line": "**Steward-gated** \u2014 the changes touch the auto-commit daemon's go-live substrate + its test harness. The env-isolation tests must not alter the scripts' behavior; the consistency check must be read-on",
-        "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
-      },
-      {
-        "id": "GAP-159",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Structurally prevent the unattended-dispatch hang: pre-grant, in the engineering jail's `settings.local.json` (or the dispatch runtime's permission surface), the *specific* batch-pipeline terminal com",
-        "stop_line": "**Terminal Security Steward review required before deploy** (Steward C1, `CAP-REV-2026-07-17-GAP156`) \u2014 this is the security-constrained surface GAP-156 deliberately did not touch. Do not widen the ja",
-        "description": "Overnight batch dispatch: pre-grant the batch-pipeline terminal permissions in the engineering\u2026"
-      },
-      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -755,22 +710,6 @@
         "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026"
       },
       {
-        "id": "GAP-132",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "During the PCR-OPS-054 \u00a7D go-live, the executed NB-2 `--dry-run` rehearsal surfaced **three independent defects in the go-live substrate**, each an armed-but-silently-inert or broken-emergency-control",
-        "stop_line": "**Steward-gated** \u2014 the changes touch the auto-commit daemon's go-live substrate + its test harness. The env-isolation tests must not alter the scripts' behavior; the consistency check must be read-on",
-        "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
-      },
-      {
-        "id": "GAP-159",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Structurally prevent the unattended-dispatch hang: pre-grant, in the engineering jail's `settings.local.json` (or the dispatch runtime's permission surface), the *specific* batch-pipeline terminal com",
-        "stop_line": "**Terminal Security Steward review required before deploy** (Steward C1, `CAP-REV-2026-07-17-GAP156`) \u2014 this is the security-constrained surface GAP-156 deliberately did not touch. Do not widen the ja",
-        "description": "Overnight batch dispatch: pre-grant the batch-pipeline terminal permissions in the engineering\u2026"
-      },
-      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -795,16 +734,7 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       }
     ],
-    "blocked_needs_decision": [
-      {
-        "id": "GAP-151",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "After the INI-134 per-domain cutover (2026-07-15), the legacy flat watcher `com.jasonos.git-relay` remains **loaded** in launchd but is misconfigured for the per-domain world: its plist runs `jasonos-",
-        "stop_line": "Diagnosis + plist retirement engineering-buildable; the `launchctl bootout` is CEO-run (irreversible-ish launchd mutation, classifier-gated). Recommend a Steward look at the substrate change before th",
-        "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
-      }
-    ],
+    "blocked_needs_decision": [],
     "blocked_needs_director_decision": [
       {
         "id": "GAP-094",
@@ -855,11 +785,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T21:26:43.370770+00:00"
+    "generated_at": "2026-07-17T21:53:09.087495+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
-    "open_gaps": 17,
+    "open_gaps": 13,
     "open_rems": 10
   }
 }
