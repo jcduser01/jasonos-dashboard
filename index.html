@@ -339,6 +339,7 @@
   .wr-eligible .wr-group-label { color: var(--success); }
   .wr-blocked  .wr-group-label { color: var(--warn); }
   .wr-progress .wr-group-label { color: var(--accent); }
+  .wr-director .wr-group-label { color: #b18cf0; }   /* GAP-161: blocked on a Director's judgment (not CEO) */
   .wr-notexec  .wr-group-label { color: var(--text-dim); }
   .wr-gap      .wr-group-label { color: var(--text-dim); }
   .wr-count { font-weight: 700; opacity: 0.65; margin-left: 3px; }
@@ -354,6 +355,10 @@
     border-radius: 3px; padding: 0 4px; line-height: 1.4;
   }
   .wr-meta  { font-size: 0.72rem; color: var(--text-dim); }
+  .wr-dir-tag {                                     /* GAP-161: per-item Director label */
+    font-size: 0.66rem; font-weight: 700; color: #b18cf0;
+    border: 1px solid #b18cf0; border-radius: 3px; padding: 0 4px; line-height: 1.4;
+  }
   .wr-desc  { font-size: 0.74rem; color: var(--text-dim); padding-left: 1px; }
   .wr-empty { font-size: 0.8rem; color: var(--text-dim); }
 
@@ -827,6 +832,7 @@
       { key: "fully_executable",            label: "Fully executable",                    cls: "wr-eligible" },
       { key: "partially_executable",        label: "Partially executable",                cls: "wr-progress" },
       { key: "blocked_needs_decision",      label: "Blocked — needs decision",            cls: "wr-blocked" },
+      { key: "blocked_needs_director_decision", label: "Blocked — needs director decision", cls: "wr-director" },
       { key: "not_executable_leading_stop", label: "Not executable (leading stop)",       cls: "wr-notexec" },
       { key: "contract_quality_gaps",       label: "Contract gaps",                       cls: "wr-gap" }
     ];
@@ -852,6 +858,7 @@
                   + '</div>';
           } else {
             var typeTag = it.type ? '<span class="wr-type">' + escHtml(it.type) + '</span>' : '';
+            var dirTag  = it.director ? '<span class="wr-dir-tag">' + escHtml(it.director) + '</span>' : '';
             var descLine = it.description
               ? '<div class="wr-desc">' + escHtml(it.description) + '</div>'
               : '';
@@ -860,6 +867,7 @@
                   +   typeTag
                   +   '<span class="wr-id">'   + escHtml(it.id || "")    + '</span>'
                   +   '<span class="wr-meta">' + escHtml(it.route || "") + '</span>'
+                  +   dirTag
                   + '</div>'
                   + descLine
                   + '</div>';
