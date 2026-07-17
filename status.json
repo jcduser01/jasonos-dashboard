@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-17T21:17:18Z",
+  "generated_at": "2026-07-17T21:26:43Z",
   "schema_version": "5",
-  "generator_version": "2.13",
+  "generator_version": "2.15",
   "stats": {
     "done": 110,
     "total": 128,
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 317,
+    "minutes_since_session": 327,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -23,44 +23,68 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
+      "label": "GAP-051 priority re-assessment",
+      "context": "filed Low on a premise disproved 2026-07-09: the relay creates the commit and then errors on the push, stranding it on l"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
       "label": "Website Repositioning decision",
       "context": "three coupled asks tied to INI-114, all live; INI-114 is Backlog and unblocked. (a) pull decision + director composition"
     },
     {
-      "id": "ACT-HO-2",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
-      "id": "ACT-HO-3",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "Medical/financial power of attorney",
       "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-5",
       "category": "required",
       "label": "Canonize UX best-practices into a KB article",
       "context": "*(parked)* \u2014 externalize the CEO's UX-career expertise into org knowledge. Propose at a natural moment."
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "Google Workspace OAuth as the durable Gmail auth target",
       "context": "*(long-horizon)* \u2014 if a JasonOS domain identity earns its keep."
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "SAM.gov entity registration / tier confirmation",
       "context": "INI-111 Phase 2"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "privacy.com card for the Venture engine",
       "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "GAP-116 resolution",
+      "context": "Knowledge Director drafts the external-client-confidentiality procedure \u2192 PCR \u2192 CEO ratification. (None-to-file now; tra"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "PCR-SEC-012 (Draft) \u2014 decide the external-AI-provider data-egress policy.",
+      "context": "Approve drafting it as a standing Security policy (egress-eligibility keyed to data classification; per-interface ToS-co"
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
+      "label": "INI-111 \u2014 confirm SAM.gov entity registration / tier.",
+      "context": "In your SAM.gov account, check whether entity registration completed and the ~1,000/day request tier is active. If yes: "
     }
   ],
   "status_drift": [],
@@ -625,14 +649,6 @@
     ],
     "in_progress_not_ceo": [
       {
-        "id": "GAP-094",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
-        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
-        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
-      },
-      {
         "id": "GAP-110",
         "type": "GAP",
         "route": "Queue-ready",
@@ -695,14 +711,6 @@
         "runner_scope": "Surface the \u00a7E standing digest across the probation window (~2 weeks / ~10 unattended runs) \u2014 what auto-shipped routine-class, what staged awaiting mission-critical promotion, deferred-bucket sweep st",
         "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
-      },
-      {
-        "id": "REM-064",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "None \u2014 interactive KD disposition of 9 artifacts, each requiring content judgment against the ratified doctrine; no runner-buildable slice.",
-        "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
-        "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026"
       },
       {
         "id": "REM-066",
@@ -715,14 +723,6 @@
     ],
     "partially_executable": [
       {
-        "id": "GAP-094",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
-        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
-        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026"
-      },
-      {
         "id": "GAP-110",
         "type": "GAP",
         "route": "Queue-ready",
@@ -785,14 +785,6 @@
         "runner_scope": "Surface the \u00a7E standing digest across the probation window (~2 weeks / ~10 unattended runs) \u2014 what auto-shipped routine-class, what staged awaiting mission-critical promotion, deferred-bucket sweep st",
         "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
-      },
-      {
-        "id": "REM-064",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "None \u2014 interactive KD disposition of 9 artifacts, each requiring content judgment against the ratified doctrine; no runner-buildable slice.",
-        "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
-        "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026"
       },
       {
         "id": "REM-066",
@@ -813,6 +805,26 @@
         "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
       }
     ],
+    "blocked_needs_director_decision": [
+      {
+        "id": "GAP-094",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
+        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
+        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026",
+        "director": "Security Steward"
+      },
+      {
+        "id": "REM-064",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "None \u2014 interactive KD disposition of 9 artifacts, each requiring content judgment against the ratified doctrine; no runner-buildable slice.",
+        "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
+        "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026",
+        "director": "Knowledge Director"
+      }
+    ],
     "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-062",
@@ -824,54 +836,6 @@
       }
     ],
     "contract_quality_gaps": [
-      {
-        "advisory": true,
-        "type": "advisory_stop_line_none_prefix",
-        "field": "stop-line",
-        "note": "Stop-line starts with 'None' but carries trailing prose (operations/work-item-execution-contract.md's convention is the bare token 'None' for a fully-independent item). The runner's parser now reads this correctly either way (GAP-162), so this is a style nudge, not a defect \u2014 consider the bare token or moving the explanation into the ticket body.",
-        "file": "governance/gaps/open/GAP-116-no-procedure-for-genuinely-external-client-confidential-material-in-a-mirrored-vault.md",
-        "category": "gap-open"
-      },
-      {
-        "advisory": true,
-        "type": "advisory_stop_line_none_prefix",
-        "field": "stop-line",
-        "note": "Stop-line starts with 'None' but carries trailing prose (operations/work-item-execution-contract.md's convention is the bare token 'None' for a fully-independent item). The runner's parser now reads this correctly either way (GAP-162), so this is a style nudge, not a defect \u2014 consider the bare token or moving the explanation into the ticket body.",
-        "file": "governance/gaps/open/GAP-135-three-relay-client-python-tests-stand-red-under-the-live-per-domain-launchd-env-because-they-patch-queue-dir-not-relay-queue-root.md",
-        "category": "gap-open"
-      },
-      {
-        "advisory": true,
-        "type": "advisory_stop_line_none_prefix",
-        "field": "stop-line",
-        "note": "Stop-line starts with 'None' but carries trailing prose (operations/work-item-execution-contract.md's convention is the bare token 'None' for a fully-independent item). The runner's parser now reads this correctly either way (GAP-162), so this is a style nudge, not a defect \u2014 consider the bare token or moving the explanation into the ticket body.",
-        "file": "governance/gaps/open/GAP-146-morning-sweep-proactive-batch-run-digest.md",
-        "category": "gap-open"
-      },
-      {
-        "advisory": true,
-        "type": "advisory_stop_line_none_prefix",
-        "field": "stop-line",
-        "note": "Stop-line starts with 'None' but carries trailing prose (operations/work-item-execution-contract.md's convention is the bare token 'None' for a fully-independent item). The runner's parser now reads this correctly either way (GAP-162), so this is a style nudge, not a defect \u2014 consider the bare token or moving the explanation into the ticket body.",
-        "file": "governance/gaps/open/GAP-148-relay-staged-lane-leaves-broken-null-sha-lock-ref-that-breaks-fetch.md",
-        "category": "gap-open"
-      },
-      {
-        "advisory": true,
-        "type": "advisory_stop_line_none_prefix",
-        "field": "stop-line",
-        "note": "Stop-line starts with 'None' but carries trailing prose (operations/work-item-execution-contract.md's convention is the bare token 'None' for a fully-independent item). The runner's parser now reads this correctly either way (GAP-162), so this is a style nudge, not a defect \u2014 consider the bare token or moving the explanation into the ticket body.",
-        "file": "governance/gaps/open/GAP-157-apply-log-lifecycle-standard-to-policy-sync-log.md",
-        "category": "gap-open"
-      },
-      {
-        "advisory": true,
-        "type": "advisory_stop_line_none_prefix",
-        "field": "stop-line",
-        "note": "Stop-line starts with 'None' but carries trailing prose (operations/work-item-execution-contract.md's convention is the bare token 'None' for a fully-independent item). The runner's parser now reads this correctly either way (GAP-162), so this is a style nudge, not a defect \u2014 consider the bare token or moving the explanation into the ticket body.",
-        "file": "governance/gaps/open/GAP-158-step-2c-staleness-sla-sweep-history-tracking-mechanism.md",
-        "category": "gap-open"
-      },
       {
         "type": "missing_field",
         "field": "route",
@@ -891,7 +855,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T21:17:18.162873+00:00"
+    "generated_at": "2026-07-17T21:26:43.370770+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
