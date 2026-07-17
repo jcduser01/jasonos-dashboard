@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T15:52:08Z",
+  "generated_at": "2026-07-17T17:52:18Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-17T13:07:12Z",
-    "minutes_since_session": 164,
+    "last_session_date": "2026-07-17T15:59:33Z",
+    "minutes_since_session": 112,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -355,51 +355,15 @@
   "batch_queue": [
     {
       "position": 1,
-      "id": "GAP-131"
-    },
-    {
-      "position": 2,
-      "id": "GAP-133"
-    },
-    {
-      "position": 3,
       "id": "GAP-101"
     },
     {
-      "position": 4,
-      "id": "GAP-121"
-    },
-    {
-      "position": 5,
-      "id": "GAP-123"
-    },
-    {
-      "position": 6,
-      "id": "GAP-113"
-    },
-    {
-      "position": 7,
-      "id": "GAP-114"
-    },
-    {
-      "position": 8,
-      "id": "GAP-115"
-    },
-    {
-      "position": 9,
-      "id": "REM-054"
-    },
-    {
-      "position": 10,
+      "position": 2,
       "id": "REM-055"
     },
     {
-      "position": 11,
+      "position": 3,
       "id": "REM-056"
-    },
-    {
-      "position": 12,
-      "id": "REM-069"
     }
   ],
   "jasonos_work_readiness": {
@@ -441,30 +405,6 @@
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
-        "id": "GAP-113",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Analyze the two candidate fixes against INI-115 doctrine, pick one, and implement the ordering fix inside `jasonos-memory-index-publisher` (gate the projection commit on referenced entries already bei",
-        "stop_line": "None \u2014 this is a projection writer, not the relay/commit-authorization substrate. No authority change. Any fix stays inside the publisher daemon.",
-        "description": "The memory-index publisher daemon auto-commits and pushes its MEMORY.md projection independently\u2026"
-      },
-      {
-        "id": "GAP-114",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Add frontmatter (`name`/`description`/`metadata.type`) to `governance/memory/project_post_batch3_work_series.md` and drop a `.memory-dirty` signal; add a warn-on-skip (and `--check`-mode non-zero) to ",
-        "stop_line": "None \u2014 generator is a projection writer; no authority or substrate change.",
-        "description": "The memory-index generator silently skips atomic entries that lack YAML frontmatter, so a real\u2026"
-      },
-      {
-        "id": "GAP-115",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Knowledge Director reviews the archived Terminology Reference section, decides durable-vs-stale for \"Relay = Dispatch\" (promote to an atomic reference entry / KB terminology page, or confirm archive-o",
-        "stop_line": "None.",
-        "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
-      },
-      {
         "id": "GAP-116",
         "type": "GAP",
         "route": "Queue-ready",
@@ -495,14 +435,6 @@
         "runner_scope": "Two non-blocking residuals surfaced by the Security Steward's terminal review of the GAP-126 fix (`CAP-REV-2026-07-15-GAP126`, Conditions 1 and 3). GAP-126 made both relay commit paths path-limited (`",
         "stop_line": "**Steward-gated** \u2014 commit-path substrate (PCR-OPS-045). Preserve the GAP-126 isolation, the GAP-117 trailer path, the INI-134 Stage-2 interlock ordering + Stage-4 lease/fencing ordering, and the push",
         "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026"
-      },
-      {
-        "id": "GAP-131",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/tests/test_jasonos_handoff_compactor.py::TestEndToEndWindowing::test_hc6_output_within_line_bound` fails (`1 failed`) because it exercises the compactor against the **live** `/Volumes/",
-        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by editing the compactor to hit a fixture-free bound over live data.",
-        "description": "test_hc6_output_within_line_bound reads the LIVE session-handoff.md and asserts a size bound the\u2026"
       },
       {
         "id": "GAP-132",
@@ -545,6 +477,14 @@
         "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
+        "id": "GAP-156",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Diagnose and fix why the `com.jasonos.batch-run` daemon's dispatched `engineering-director` session (`requester: batch-daemon`) refuses or hangs instead of running the four-role loop. Two confirmed fa",
+        "stop_line": "If the fix modifies the agent-dispatcher spawn path (`jasonos-agent-dispatcher.sh`) or the `engineering-director` agent definition's permission grants \u2014 security-constrained surfaces \u2014 halt for termin",
+        "description": "The unattended overnight batch-run dispatch refuses or hangs instead of processing the queue: it\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -561,12 +501,12 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "REM-054",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Harden `_resolve_declared()`'s absolute-path branch with canonical-root-to-detected-root translation, mirroring the recommended `check-dead-path-drift.py` fix.",
-        "stop_line": "None.",
-        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on its own go-live review \u2014 false positive\u2026"
+        "id": "PCR-OPS-061",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "None \u2014 the runner's completable slice (drafting this PCR and the authoring-instruction rewrites) is already done. Enacting the chosen option into `report-triage-and-remediation-protocol.md` requires C",
+        "stop_line": "CEO must select Option A, B, or C and approve enactment before `report-triage-and-remediation-protocol.md` is modified.",
+        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
       },
       {
         "id": "REM-055",
@@ -683,30 +623,6 @@
         "description": "provision_jail_trust() overwrites the single ~/.claude.json trust backup once per jail, so a\u2026"
       },
       {
-        "id": "GAP-113",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Analyze the two candidate fixes against INI-115 doctrine, pick one, and implement the ordering fix inside `jasonos-memory-index-publisher` (gate the projection commit on referenced entries already bei",
-        "stop_line": "None \u2014 this is a projection writer, not the relay/commit-authorization substrate. No authority change. Any fix stays inside the publisher daemon.",
-        "description": "The memory-index publisher daemon auto-commits and pushes its MEMORY.md projection independently\u2026"
-      },
-      {
-        "id": "GAP-114",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Add frontmatter (`name`/`description`/`metadata.type`) to `governance/memory/project_post_batch3_work_series.md` and drop a `.memory-dirty` signal; add a warn-on-skip (and `--check`-mode non-zero) to ",
-        "stop_line": "None \u2014 generator is a projection writer; no authority or substrate change.",
-        "description": "The memory-index generator silently skips atomic entries that lack YAML frontmatter, so a real\u2026"
-      },
-      {
-        "id": "GAP-115",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Knowledge Director reviews the archived Terminology Reference section, decides durable-vs-stale for \"Relay = Dispatch\" (promote to an atomic reference entry / KB terminology page, or confirm archive-o",
-        "stop_line": "None.",
-        "description": "The memory-monolith retirement archived a live terminology fact (\"Relay = Dispatch\") without\u2026"
-      },
-      {
         "id": "GAP-116",
         "type": "GAP",
         "route": "Queue-ready",
@@ -737,14 +653,6 @@
         "runner_scope": "Two non-blocking residuals surfaced by the Security Steward's terminal review of the GAP-126 fix (`CAP-REV-2026-07-15-GAP126`, Conditions 1 and 3). GAP-126 made both relay commit paths path-limited (`",
         "stop_line": "**Steward-gated** \u2014 commit-path substrate (PCR-OPS-045). Preserve the GAP-126 isolation, the GAP-117 trailer path, the INI-134 Stage-2 interlock ordering + Stage-4 lease/fencing ordering, and the push",
         "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026"
-      },
-      {
-        "id": "GAP-131",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "`operations/bin/tests/test_jasonos_handoff_compactor.py::TestEndToEndWindowing::test_hc6_output_within_line_bound` fails (`1 failed`) because it exercises the compactor against the **live** `/Volumes/",
-        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by editing the compactor to hit a fixture-free bound over live data.",
-        "description": "test_hc6_output_within_line_bound reads the LIVE session-handoff.md and asserts a size bound the\u2026"
       },
       {
         "id": "GAP-132",
@@ -787,6 +695,14 @@
         "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
+        "id": "GAP-156",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Diagnose and fix why the `com.jasonos.batch-run` daemon's dispatched `engineering-director` session (`requester: batch-daemon`) refuses or hangs instead of running the four-role loop. Two confirmed fa",
+        "stop_line": "If the fix modifies the agent-dispatcher spawn path (`jasonos-agent-dispatcher.sh`) or the `engineering-director` agent definition's permission grants \u2014 security-constrained surfaces \u2014 halt for termin",
+        "description": "The unattended overnight batch-run dispatch refuses or hangs instead of processing the queue: it\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -803,12 +719,12 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "REM-054",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Harden `_resolve_declared()`'s absolute-path branch with canonical-root-to-detected-root translation, mirroring the recommended `check-dead-path-drift.py` fix.",
-        "stop_line": "None.",
-        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on its own go-live review \u2014 false positive\u2026"
+        "id": "PCR-OPS-061",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "None \u2014 the runner's completable slice (drafting this PCR and the authoring-instruction rewrites) is already done. Enacting the chosen option into `report-triage-and-remediation-protocol.md` requires C",
+        "stop_line": "CEO must select Option A, B, or C and approve enactment before `report-triage-and-remediation-protocol.md` is modified.",
+        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
       },
       {
         "id": "REM-055",
@@ -915,6 +831,14 @@
         "runner_scope": "After the INI-134 per-domain cutover (2026-07-15), the legacy flat watcher `com.jasonos.git-relay` remains **loaded** in launchd but is misconfigured for the per-domain world: its plist runs `jasonos-",
         "stop_line": "Diagnosis + plist retirement engineering-buildable; the `launchctl bootout` is CEO-run (irreversible-ish launchd mutation, classifier-gated). Recommend a Steward look at the substrate change before th",
         "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
+      },
+      {
+        "id": "PCR-OPS-060",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "None \u2014 this PCR is draft-only; the pilot remediation (compare-daemon fix) was a separate work item (GAP-121). No runner scope until CEO approves and assigns enactment.",
+        "stop_line": "Halt at awaiting-ceo-decision \u2014 publish only after CEO approval.",
+        "description": "Operational Log Lifecycle Standard: Rotation, Retention, and Write Discipline for Machine-Append\u2026"
       }
     ],
     "not_executable_leading_stop": [
@@ -947,11 +871,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T15:52:08.788075+00:00"
+    "generated_at": "2026-07-17T17:52:18.919887+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 3,
-    "open_gaps": 17,
-    "open_rems": 13
+    "open_pcrs": 5,
+    "open_gaps": 14,
+    "open_rems": 12
   }
 }
