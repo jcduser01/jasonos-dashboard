@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T20:59:20Z",
+  "generated_at": "2026-07-17T21:17:18Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 299,
+    "minutes_since_session": 317,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -89,7 +89,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-09T23:21:25Z",
-      "invocations_30d": 20
+      "invocations_30d": 18
     },
     {
       "name": "research-director",
@@ -821,14 +821,6 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "Relay trigger partial-failure leaves --removes' index mutation in place, breaking naive retries"
-      },
-      {
-        "id": "PCR-OPS-063",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "AskUserQuestion tool is present and functional in this Cowork session despite a standing\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -897,30 +889,12 @@
         "field": "stop_line",
         "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
         "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-063-ask-user-question-tool-still-present-cowork.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-063-ask-user-question-tool-still-present-cowork.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-063-ask-user-question-tool-still-present-cowork.md",
-        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T20:59:20.760470+00:00"
+    "generated_at": "2026-07-17T21:17:18.162873+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 5,
+    "open_pcrs": 4,
     "open_gaps": 17,
     "open_rems": 10
   }
