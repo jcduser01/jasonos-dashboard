@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T17:52:18Z",
+  "generated_at": "2026-07-17T19:04:01Z",
   "schema_version": "5",
   "generator_version": "2.13",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T15:59:33Z",
-    "minutes_since_session": 112,
+    "minutes_since_session": 184,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -125,7 +125,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-09T23:21:25Z",
-      "invocations_30d": 21
+      "invocations_30d": 20
     },
     {
       "name": "research-director",
@@ -360,10 +360,6 @@
     {
       "position": 2,
       "id": "REM-055"
-    },
-    {
-      "position": 3,
-      "id": "REM-056"
     }
   ],
   "jasonos_work_readiness": {
@@ -445,14 +441,6 @@
         "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
       },
       {
-        "id": "GAP-133",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Build and land the Queue-ready parts: (1) rewrite the authoring-obligation language in `operations/work-item-execution-contract.md \u00a7 Authoring obligation` and `operations/batch-runner-runbook.md` to i",
-        "stop_line": "The protocol-amendment PCR (changing step 2c's routing) halts at `awaiting-ceo-decision` \u2014 report-triage-and-remediation-protocol.md is a CEO-approved governance document and its routing rules are not",
-        "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
-      },
-      {
         "id": "GAP-135",
         "type": "GAP",
         "route": "Queue-ready",
@@ -477,12 +465,28 @@
         "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
-        "id": "GAP-156",
+        "id": "GAP-157",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Diagnose and fix why the `com.jasonos.batch-run` daemon's dispatched `engineering-director` session (`requester: batch-daemon`) refuses or hangs instead of running the four-role loop. Two confirmed fa",
-        "stop_line": "If the fix modifies the agent-dispatcher spawn path (`jasonos-agent-dispatcher.sh`) or the `engineering-director` agent definition's permission grants \u2014 security-constrained surfaces \u2014 halt for termin",
-        "description": "The unattended overnight batch-run dispatch refuses or hangs instead of processing the queue: it\u2026"
+        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
+        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
+        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
+      },
+      {
+        "id": "GAP-158",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
+        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
+        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
+      },
+      {
+        "id": "GAP-159",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Structurally prevent the unattended-dispatch hang: pre-grant, in the engineering jail's `settings.local.json` (or the dispatch runtime's permission surface), the *specific* batch-pipeline terminal com",
+        "stop_line": "**Terminal Security Steward review required before deploy** (Steward C1, `CAP-REV-2026-07-17-GAP156`) \u2014 this is the security-constrained surface GAP-156 deliberately did not touch. Do not widen the ja",
+        "description": "Overnight batch dispatch: pre-grant the batch-pipeline terminal permissions in the engineering\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -515,14 +519,6 @@
         "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
         "stop_line": "None.",
         "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-056",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add `entry_id` to the inbox file's frontmatter; re-run the compactor.",
-        "stop_line": "None.",
-        "description": "Step 2e (jasonos-steward-audit-compactor.py) exits 1: a Security Steward audit-inbox entry\u2026"
       },
       {
         "id": "REM-060",
@@ -595,14 +591,6 @@
         "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
         "stop_line": "None.",
         "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
-      },
-      {
-        "id": "REM-077",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Not assigned in this pass. Investigate the specific hung session (request-id `batch-daemon-20260717T070008Z-78688`) for the actual blocking call; this is a distinct root-cause task from GAP-144.",
-        "stop_line": "None to file this REM. Any daemon-behavior change (timeout value, retry logic) would be commit-path/autonomy-adjacent and Security-Steward-gated per the standing pattern.",
-        "description": "Step 2h (GAP-143/PCR-OPS-056), on its first live run, flagged a real failed-dispatch: the\u2026"
       }
     ],
     "partially_executable": [
@@ -663,14 +651,6 @@
         "description": "The go-live substrate (daemon plist, arming script, posture toggle) has no hermetic env-isolation\u2026"
       },
       {
-        "id": "GAP-133",
-        "type": "GAP",
-        "route": "Draft-only",
-        "runner_scope": "Build and land the Queue-ready parts: (1) rewrite the authoring-obligation language in `operations/work-item-execution-contract.md \u00a7 Authoring obligation` and `operations/batch-runner-runbook.md` to i",
-        "stop_line": "The protocol-amendment PCR (changing step 2c's routing) halts at `awaiting-ceo-decision` \u2014 report-triage-and-remediation-protocol.md is a CEO-approved governance document and its routing rules are not",
-        "description": "Work items keep filing without a conformant Work-Item Execution Contract despite the templates\u2026"
-      },
-      {
         "id": "GAP-135",
         "type": "GAP",
         "route": "Queue-ready",
@@ -695,12 +675,28 @@
         "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
-        "id": "GAP-156",
+        "id": "GAP-157",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Diagnose and fix why the `com.jasonos.batch-run` daemon's dispatched `engineering-director` session (`requester: batch-daemon`) refuses or hangs instead of running the four-role loop. Two confirmed fa",
-        "stop_line": "If the fix modifies the agent-dispatcher spawn path (`jasonos-agent-dispatcher.sh`) or the `engineering-director` agent definition's permission grants \u2014 security-constrained surfaces \u2014 halt for termin",
-        "description": "The unattended overnight batch-run dispatch refuses or hangs instead of processing the queue: it\u2026"
+        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
+        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
+        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
+      },
+      {
+        "id": "GAP-158",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
+        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
+        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
+      },
+      {
+        "id": "GAP-159",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Structurally prevent the unattended-dispatch hang: pre-grant, in the engineering jail's `settings.local.json` (or the dispatch runtime's permission surface), the *specific* batch-pipeline terminal com",
+        "stop_line": "**Terminal Security Steward review required before deploy** (Steward C1, `CAP-REV-2026-07-17-GAP156`) \u2014 this is the security-constrained surface GAP-156 deliberately did not touch. Do not widen the ja",
+        "description": "Overnight batch dispatch: pre-grant the batch-pipeline terminal permissions in the engineering\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -733,14 +729,6 @@
         "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
         "stop_line": "None.",
         "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-056",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add `entry_id` to the inbox file's frontmatter; re-run the compactor.",
-        "stop_line": "None.",
-        "description": "Step 2e (jasonos-steward-audit-compactor.py) exits 1: a Security Steward audit-inbox entry\u2026"
       },
       {
         "id": "REM-060",
@@ -813,14 +801,6 @@
         "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
         "stop_line": "None.",
         "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
-      },
-      {
-        "id": "REM-077",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Not assigned in this pass. Investigate the specific hung session (request-id `batch-daemon-20260717T070008Z-78688`) for the actual blocking call; this is a distinct root-cause task from GAP-144.",
-        "stop_line": "None to file this REM. Any daemon-behavior change (timeout value, retry logic) would be commit-path/autonomy-adjacent and Security-Steward-gated per the standing pattern.",
-        "description": "Step 2h (GAP-143/PCR-OPS-056), on its first live run, flagged a real failed-dispatch: the\u2026"
       }
     ],
     "blocked_needs_decision": [
@@ -831,14 +811,6 @@
         "runner_scope": "After the INI-134 per-domain cutover (2026-07-15), the legacy flat watcher `com.jasonos.git-relay` remains **loaded** in launchd but is misconfigured for the per-domain world: its plist runs `jasonos-",
         "stop_line": "Diagnosis + plist retirement engineering-buildable; the `launchctl bootout` is CEO-run (irreversible-ish launchd mutation, classifier-gated). Recommend a Steward look at the substrate change before th",
         "description": "The legacy flat com.jasonos.git-relay launchd watcher was never decommissioned after the INI-134\u2026"
-      },
-      {
-        "id": "PCR-OPS-060",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "None \u2014 this PCR is draft-only; the pilot remediation (compare-daemon fix) was a separate work item (GAP-121). No runner scope until CEO approves and assigns enactment.",
-        "stop_line": "Halt at awaiting-ceo-decision \u2014 publish only after CEO approval.",
-        "description": "Operational Log Lifecycle Standard: Rotation, Retention, and Write Discipline for Machine-Append\u2026"
       }
     ],
     "not_executable_leading_stop": [
@@ -871,11 +843,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T17:52:18.919887+00:00"
+    "generated_at": "2026-07-17T19:04:01.147839+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 5,
-    "open_gaps": 14,
-    "open_rems": 12
+    "open_pcrs": 4,
+    "open_gaps": 15,
+    "open_rems": 10
   }
 }
