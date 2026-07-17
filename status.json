@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T05:14:13Z",
+  "generated_at": "2026-07-17T05:35:14Z",
   "schema_version": "5",
   "generator_version": "2.12",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T03:28:31Z",
-    "minutes_since_session": 105,
+    "minutes_since_session": 126,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -523,20 +523,20 @@
         "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
       },
       {
-        "id": "GAP-136",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the Cowork-mount auto-detection GAP-134 (v1.20, resolved 2026-07-16) just added for `resolve_queue_dir()` to also cover the `--repo` CLI argument: if `--repo` is given a path under a detected `",
-        "stop_line": "None \u2014 fully completable without a gate.",
-        "description": "commit_via_relay.py --repo is not translated from the Cowork sandbox mount path, unlike the\u2026"
-      },
-      {
         "id": "GAP-146",
         "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
         "stop_line": "None.",
         "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
+      },
+      {
+        "id": "GAP-148",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
+        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
+        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -781,20 +781,20 @@
         "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
       },
       {
-        "id": "GAP-136",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the Cowork-mount auto-detection GAP-134 (v1.20, resolved 2026-07-16) just added for `resolve_queue_dir()` to also cover the `--repo` CLI argument: if `--repo` is given a path under a detected `",
-        "stop_line": "None \u2014 fully completable without a gate.",
-        "description": "commit_via_relay.py --repo is not translated from the Cowork sandbox mount path, unlike the\u2026"
-      },
-      {
         "id": "GAP-146",
         "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
         "stop_line": "None.",
         "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
+      },
+      {
+        "id": "GAP-148",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
+        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
+        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -934,17 +934,8 @@
       }
     ],
     "blocked_needs_decision": [],
-    "not_executable_leading_stop": [
-      {
-        "id": "PCR-OPS-047",
-        "type": "PCR",
-        "route": "Draft-only",
-        "runner_scope": "",
-        "stop_line": "`awaiting-implementation-item` (was `awaiting-steward-re-review` \u2014 the Guard-D re-review CLEARED 2026-07-12, so gate #1 is satisfied). CEO scope approval recorded 2026-07-09; the runner still halts. N",
-        "description": "The Batch Execution Queue as a Candidate-Pool Override \u2014 Amend the Daemon's Class Scope, Restate\u2026"
-      }
-    ],
+    "not_executable_leading_stop": [],
     "contract_quality_gaps": [],
-    "generated_at": "2026-07-17T05:14:13.932528+00:00"
+    "generated_at": "2026-07-17T05:35:14.437232+00:00"
   }
 }
