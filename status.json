@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T19:00:50Z",
+  "generated_at": "2026-07-18T21:00:52Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T13:45:00Z",
-    "minutes_since_session": 315,
+    "minutes_since_session": 435,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -448,15 +448,7 @@
   "batch_queue": [
     {
       "position": 1,
-      "id": "GAP-121"
-    },
-    {
-      "position": 2,
-      "id": "GAP-123"
-    },
-    {
-      "position": 3,
-      "id": "REM-066"
+      "id": "REM-078"
     }
   ],
   "jasonos_work_readiness": {
@@ -470,6 +462,14 @@
         "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
       },
       {
+        "id": "GAP-169",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add a read-only detector \u2014 either a new `operations/bin/check-*.py` or an added facet on an existing contract/agreement checker \u2014 that flags any work item filed in a terminal folder (`governance/gaps/",
+        "stop_line": "None. Detector only \u2014 it must not edit, close, or reopen any work item, and must not be wired into any blocking pre-commit gate in this change (report-triage sweep wiring is the intended consumer; a b",
+        "description": "No detector flags a work item closed into resolved/ whose Resolution notes are empty or still\u2026"
+      },
+      {
         "id": "PCR-OPS-065",
         "type": "PCR",
         "route": "Operational",
@@ -492,14 +492,6 @@
         "runner_scope": "Patch `jasonos-steward-audit-compactor.py`'s `compact()` duplicate-skip branch to move the duplicate-skipped inbox file to `archive/` (mirroring the `fresh` path's `os.replace`), add a regression test",
         "stop_line": "None \u2014 mechanical, no authority/commit-path change (the compactor already writes to this exact tree under its existing GAP-070 authorization).",
         "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026"
-      },
-      {
-        "id": "REM-089",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Remove the `REM-066` row from `batch-engineering-queue.md`'s `## Queue` table; confirm no other queued item shares this defect.",
-        "stop_line": "None.",
-        "description": "check-batch-queue-staleness.py exits 1: batch-engineering-queue.md item #3 (REM-066) is a resolved\u2026"
       }
     ],
     "fully_executable": [
@@ -512,6 +504,14 @@
         "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
       },
       {
+        "id": "GAP-169",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add a read-only detector \u2014 either a new `operations/bin/check-*.py` or an added facet on an existing contract/agreement checker \u2014 that flags any work item filed in a terminal folder (`governance/gaps/",
+        "stop_line": "None. Detector only \u2014 it must not edit, close, or reopen any work item, and must not be wired into any blocking pre-commit gate in this change (report-triage sweep wiring is the intended consumer; a b",
+        "description": "No detector flags a work item closed into resolved/ whose Resolution notes are empty or still\u2026"
+      },
+      {
         "id": "PCR-OPS-065",
         "type": "PCR",
         "route": "Operational",
@@ -534,14 +534,6 @@
         "runner_scope": "Patch `jasonos-steward-audit-compactor.py`'s `compact()` duplicate-skip branch to move the duplicate-skipped inbox file to `archive/` (mirroring the `fresh` path's `os.replace`), add a regression test",
         "stop_line": "None \u2014 mechanical, no authority/commit-path change (the compactor already writes to this exact tree under its existing GAP-070 authorization).",
         "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026"
-      },
-      {
-        "id": "REM-089",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Remove the `REM-066` row from `batch-engineering-queue.md`'s `## Queue` table; confirm no other queued item shares this defect.",
-        "stop_line": "None.",
-        "description": "check-batch-queue-staleness.py exits 1: batch-engineering-queue.md item #3 (REM-066) is a resolved\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -678,6 +670,22 @@
     ],
     "blocked_needs_decision": [
       {
+        "id": "GAP-170",
+        "type": "GAP",
+        "route": "Queue-ready for the detector half. The **policy placement decision**",
+        "runner_scope": "Two separable parts.",
+        "stop_line": "**The detector must never delete a worktree or branch, and no automation built under this gap may.** Deletion stays a human-authorized act performed against a specific reviewed report. This is not cau",
+        "description": "No recurring discipline reaps stale git worktrees and lanes; debris accumulates until it holds the\u2026"
+      },
+      {
+        "id": "GAP-171",
+        "type": "GAP",
+        "route": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
+        "runner_scope": "Three separable parts, in order.",
+        "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
+        "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
+      },
+      {
         "id": "PCR-ENG-020",
         "type": "PCR",
         "route": "Draft-only",
@@ -770,6 +778,20 @@
         "category": "PCR"
       },
       {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready for the detector half. The **policy placement decision**",
+        "file": "governance/gaps/open/GAP-170-no-recurring-discipline-for-stale-git-worktree-and-lane-debris.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
+        "file": "governance/gaps/open/GAP-171-no-queue-eligibility-discipline-for-batch-admissible-work-items.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
@@ -788,11 +810,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T19:00:50.810388+00:00"
+    "generated_at": "2026-07-18T21:00:52.586510+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
-    "open_gaps": 8,
-    "open_rems": 6
+    "open_gaps": 11,
+    "open_rems": 5
   }
 }
