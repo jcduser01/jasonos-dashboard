@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-18T07:07:17Z",
+  "generated_at": "2026-07-18T07:25:48Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 110,
-    "total": 134,
+    "total": 133,
     "active": 1,
     "queued": 0,
     "paused": 8,
-    "backlog": 15
+    "backlog": 14
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 335,
+    "minutes_since_session": 353,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -258,32 +258,22 @@
     "client_work": [
       {
         "id": "INI-055",
-        "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
-        "notes": "Pending: INI-053 + INI-056 complete",
+        "name": "SIGIL.ZERO \u2014 Artifacts Web Experience",
+        "notes": "RE-SCOPED 2026-07-18 from 'Temple of Unicorns \u2014 Shopify Site Redesign' \u2192 the SIGIL.ZERO Artifacts web experience. Runs on the SIGIL.ZERO Shopify store (post ToU\u2192SIGIL.ZERO account migration \u2014 see\u2026",
         "contract": {
           "route": "Queue-ready",
-          "runner_scope": "Phase 1 (Site Audit) only \u2014 the initiative states Phase 1 can be pulled independently. Audit the live templeofunicorns.com storefront against DTC-apparel conversion and brand best practice (UX, brand expression, copy, technical/mobile/trust signals) and produce a prioritized gap list classified as quick wins / design changes / structural changes. Staged as an audit report for CEO review.",
-          "stop_line": "Phase 2 (Design Direction) must be grounded in INI-053 strategy + INI-056 design system and the CEO approves the design direction before Phase 3 implementation; Phase 3 touches the live Shopify theme. Halt after the Phase 1 audit report \u2014 do not set design direction or touch the storefront without CEO sign-off."
+          "runner_scope": "None \u2014 design/creative initiative gated on INI-053 (doctrine) and the SIGIL.ZERO brand system; scope to be set when pulled.",
+          "stop_line": "Design direction must express the ratified artifact doctrine (Website & UX Rules) and the SIGIL.ZERO brand system (INI-042); CEO approves the design direction before any build touches a live Shopify theme."
         }
       },
       {
         "id": "INI-056",
-        "name": "Temple of Unicorns \u2014 Brand Design System",
-        "notes": "Pending: INI-051 + INI-053 complete",
+        "name": "SIGIL.ZERO \u2014 Initial Artifact Set (Design)",
+        "notes": "RE-SCOPED 2026-07-18 from 'Temple of Unicorns \u2014 Brand Design System' \u2192 design the initial SIGIL.ZERO artifact set. NB: SIGIL.ZERO already HAS a brand design system (INI-042 / sigil-zero\u2026",
         "contract": {
           "route": "Queue-ready",
-          "runner_scope": "Phase 1 (Brand Audit & Inventory) only \u2014 working from the INI-051 guide outputs and the live templeofunicorns.com site, inventory the existing brand identity (documented / implied / missing), catalogue the current design vocabulary (color, type, illustration style, motifs, references), flag gaps and contradictions between the guides and the live site, and produce a brand audit memo. Staged for CEO review.",
-          "stop_line": "Phase 2 (Canonization) must align with INI-053's CEO-approved positioning and the canonical doc set is CEO-approval-gated before Phase 3; halt after the Phase 1 audit memo. Do not author the canonical doc set without INI-053 positioning + CEO sign-off."
-        }
-      },
-      {
-        "id": "INI-109",
-        "name": "Temple of Unicorns \u2014 Product Pipeline Automation",
-        "notes": "Pending: other ToU initiatives (INI-053/055/056) to land before scheduling; CEO parked in Backlog 2026-06-28 to let the relaunch dust settle",
-        "contract": {
-          "route": "CEO-first",
-          "runner_scope": "Phase 1 documentation slice only \u2014 define and document the product-intent manifest schema (design-file ref, blank + colorways, placement spec, product name, copy, garment-type tag, section tags) including the per-garment-type margin table and nearest-$5 rounding rule, plus a written verification of Printful-connector field-ownership (which fields the connector pushes/overwrites vs. which Stage 2 may safely own). No credential, no live API call.",
-          "stop_line": "The Printful API connection and design-file read access require a CEO-provisioned Printful credential (Article XI \u2014 agents cannot open accounts) and Security Steward credential/egress sign-off before the connection goes live; halt after the manifest-schema + field-ownership docs are staged. Stage 1/2 automation and the first real run are past this stop."
+          "runner_scope": "None \u2014 irreducibly creative design work (CEO + Creative Director); not a runner task.",
+          "stop_line": "Designs must conform to the ratified artifact doctrine and the SIGIL.ZERO brand system; the garment-quality gate (blank selection + physical test) must pass before anything is finalized for production. CEO approves the artifact set before build (INI-055) or production."
         }
       },
       {
@@ -714,7 +704,7 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T07:07:17.955370+00:00"
+    "generated_at": "2026-07-18T07:25:48.961918+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 6,
