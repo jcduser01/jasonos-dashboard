@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T08:11:58Z",
+  "generated_at": "2026-07-18T08:44:56Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 400,
+    "minutes_since_session": 432,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -461,6 +461,46 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
+      },
+      {
+        "id": "REM-079",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Copy canonical `operations/bin/jasonos-git-relay.sh` to `/Volumes/SandboxData/bin/jasonos-git-relay.sh` and `~/bin/jasonos-git-relay.sh` (or invoke the standing deploy-sync tool if it is registered fo",
+        "stop_line": "None \u2014 bounded re-sync, no substrate or authority surface change; the script content itself was already reviewed/merged under GAP-148.",
+        "description": "check-script-registry-coverage.py exits 1: the live-deployed jasonos-git-relay.sh (SandboxData/bin\u2026"
+      },
+      {
+        "id": "REM-080",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add a well-formed YAML frontmatter block to `Logs/steward-audit-inbox/CAP-REV-2026-07-17-GAP151.md` and `Logs/steward-audit-inbox/CAP-REV-2026-07-17-batch-l3.md` (matching the schema of already-merged",
+        "stop_line": "None \u2014 bounded repair of two malformed inbox files via the existing compactor; no new write path or authority surface.",
+        "description": "Step 2e's Security Steward audit-log compactor rejects 2 stuck inbox entries\u2026"
+      },
+      {
+        "id": "REM-081",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add `Route`/`Runner scope`/`Stop-line` fields to PCR-GOV-008, PCR-OPS-062, PCR-SEC-013 per the execution-contract template; correct INI-053's Route field to a canonical value.",
+        "stop_line": "None \u2014 bounded metadata authoring on existing open items; no substrate or authority change.",
+        "description": "check-work-item-contract-conformance.py exits 1 with 10 fresh defects: 3 open PCRs (PCR-GOV-008\u2026"
+      },
+      {
+        "id": "REM-082",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add index rows for PCR-ENG-020, PCR-GOV-008, PCR-OPS-064, PCR-OPS-065, PCR-SEC-013 to `governance/pcrs/README.md \u00a7 ## Index`, matching the existing row format; re-run the `--check` to confirm exit 0.",
+        "stop_line": "None \u2014 bounded index-table edit, no substrate or authority surface.",
+        "description": "jasonos-work-item-index-generator.py --type pcr --check exits 1: 5 PCRs missing from\u2026"
+      },
+      {
+        "id": "REM-083",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "For GAP-101, GAP-113, GAP-114, GAP-115, GAP-116, GAP-131, GAP-133, GAP-135, GAP-146, GAP-148, GAP-156, GAP-157, GAP-158, GAP-160, GAP-163: cross-check `governance/gaps/INDEX.md` and commit history, th",
+        "stop_line": "None per the checker's own scope (read-only flag tool; the fix itself is a normal governance-file edit, not a daemon-staging or pre-commit-gate change) \u2014 but the executor must do the per-file verifica",
+        "description": "check-gap-folder-status-agreement.py --check exits 1: 15 gap files physically sit in\u2026"
       }
     ],
     "fully_executable": [
@@ -471,6 +511,46 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
+      },
+      {
+        "id": "REM-079",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Copy canonical `operations/bin/jasonos-git-relay.sh` to `/Volumes/SandboxData/bin/jasonos-git-relay.sh` and `~/bin/jasonos-git-relay.sh` (or invoke the standing deploy-sync tool if it is registered fo",
+        "stop_line": "None \u2014 bounded re-sync, no substrate or authority surface change; the script content itself was already reviewed/merged under GAP-148.",
+        "description": "check-script-registry-coverage.py exits 1: the live-deployed jasonos-git-relay.sh (SandboxData/bin\u2026"
+      },
+      {
+        "id": "REM-080",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add a well-formed YAML frontmatter block to `Logs/steward-audit-inbox/CAP-REV-2026-07-17-GAP151.md` and `Logs/steward-audit-inbox/CAP-REV-2026-07-17-batch-l3.md` (matching the schema of already-merged",
+        "stop_line": "None \u2014 bounded repair of two malformed inbox files via the existing compactor; no new write path or authority surface.",
+        "description": "Step 2e's Security Steward audit-log compactor rejects 2 stuck inbox entries\u2026"
+      },
+      {
+        "id": "REM-081",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add `Route`/`Runner scope`/`Stop-line` fields to PCR-GOV-008, PCR-OPS-062, PCR-SEC-013 per the execution-contract template; correct INI-053's Route field to a canonical value.",
+        "stop_line": "None \u2014 bounded metadata authoring on existing open items; no substrate or authority change.",
+        "description": "check-work-item-contract-conformance.py exits 1 with 10 fresh defects: 3 open PCRs (PCR-GOV-008\u2026"
+      },
+      {
+        "id": "REM-082",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add index rows for PCR-ENG-020, PCR-GOV-008, PCR-OPS-064, PCR-OPS-065, PCR-SEC-013 to `governance/pcrs/README.md \u00a7 ## Index`, matching the existing row format; re-run the `--check` to confirm exit 0.",
+        "stop_line": "None \u2014 bounded index-table edit, no substrate or authority surface.",
+        "description": "jasonos-work-item-index-generator.py --type pcr --check exits 1: 5 PCRs missing from\u2026"
+      },
+      {
+        "id": "REM-083",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "For GAP-101, GAP-113, GAP-114, GAP-115, GAP-116, GAP-131, GAP-133, GAP-135, GAP-146, GAP-148, GAP-156, GAP-157, GAP-158, GAP-160, GAP-163: cross-check `governance/gaps/INDEX.md` and commit history, th",
+        "stop_line": "None per the checker's own scope (read-only flag tool; the fix itself is a normal governance-file edit, not a daemon-staging or pre-commit-gate change) \u2014 but the executor must do the per-file verifica",
+        "description": "check-gap-folder-status-agreement.py --check exits 1: 15 gap files physically sit in\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -613,6 +693,14 @@
         "runner_scope": "None until the CEO decision above is made.",
         "stop_line": "CEO decision on \u00a7 Decision required.",
         "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
+      },
+      {
+        "id": "REM-084",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "File and prioritize the GAP only on explicit CEO authorization \u2014 this sweep does not author governance work items.",
+        "description": "Step 2i marker scan: this morning's overnight batch run (2026-07-18T02:00Z) aborted cleanly (exit\u2026"
       }
     ],
     "blocked_needs_director_decision": [
@@ -738,11 +826,11 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T08:11:58.144139+00:00"
+    "generated_at": "2026-07-18T08:44:56.193389+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
     "open_gaps": 6,
-    "open_rems": 3
+    "open_rems": 9
   }
 }
