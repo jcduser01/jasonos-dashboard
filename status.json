@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T18:12:36Z",
+  "generated_at": "2026-07-18T18:37:02Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 14
   },
   "operational": {
-    "last_session_date": "2026-07-18T11:30:00Z",
-    "minutes_since_session": 402,
+    "last_session_date": "2026-07-18T13:30:00Z",
+    "minutes_since_session": 307,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -628,6 +628,22 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
+      },
+      {
+        "id": "REM-088",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Patch `jasonos-steward-audit-compactor.py`'s `compact()` duplicate-skip branch to move the duplicate-skipped inbox file to `archive/` (mirroring the `fresh` path's `os.replace`), add a regression test",
+        "stop_line": "None \u2014 mechanical, no authority/commit-path change (the compactor already writes to this exact tree under its existing GAP-070 authorization).",
+        "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026"
+      },
+      {
+        "id": "REM-089",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Remove the `REM-066` row from `batch-engineering-queue.md`'s `## Queue` table; confirm no other queued item shares this defect.",
+        "stop_line": "None.",
+        "description": "check-batch-queue-staleness.py exits 1: batch-engineering-queue.md item #3 (REM-066) is a resolved\u2026"
       }
     ],
     "fully_executable": [
@@ -654,6 +670,22 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
+      },
+      {
+        "id": "REM-088",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Patch `jasonos-steward-audit-compactor.py`'s `compact()` duplicate-skip branch to move the duplicate-skipped inbox file to `archive/` (mirroring the `fresh` path's `os.replace`), add a regression test",
+        "stop_line": "None \u2014 mechanical, no authority/commit-path change (the compactor already writes to this exact tree under its existing GAP-070 authorization).",
+        "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026"
+      },
+      {
+        "id": "REM-089",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Remove the `REM-066` row from `batch-engineering-queue.md`'s `## Queue` table; confirm no other queued item shares this defect.",
+        "stop_line": "None.",
+        "description": "check-batch-queue-staleness.py exits 1: batch-engineering-queue.md item #3 (REM-066) is a resolved\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -812,6 +844,14 @@
         "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
         "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
+      },
+      {
+        "id": "REM-091",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Requires Mac-native (host) access to diagnose and act \u2014 cannot be closed from Cowork.",
+        "description": "Step 2k Part A infrastructure health: canonical-fetch and git-relay both stopped producing log\u2026"
       }
     ],
     "blocked_needs_director_decision": [
@@ -850,6 +890,14 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "No standing procedure for Cowork sessions substituting for Mac-side director/Steward subagents"
+      },
+      {
+        "id": "REM-090",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Author must read PCR-OPS-068 itself before assigning its Route/Runner scope/Stop-line \u2014 do not default to a template value.",
+        "description": "check-work-item-contract-conformance.py exits 1 with 3 fresh defects: PCR-OPS-068 (Cowork director\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -884,11 +932,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T18:12:36.693378+00:00"
+    "generated_at": "2026-07-18T18:37:02.888618+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
     "open_gaps": 8,
-    "open_rems": 2
+    "open_rems": 6
   }
 }
