@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-18T04:17:51Z",
+  "generated_at": "2026-07-18T04:35:33Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 110,
-    "total": 128,
+    "total": 134,
     "active": 0,
     "queued": 0,
     "paused": 8,
-    "backlog": 10
+    "backlog": 16
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 165,
+    "minutes_since_session": 183,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -300,6 +300,83 @@
           "runner_scope": "None \u2014 real-world provisioning (hardware purchase, in-home install, the client's own accounts/keys) is CEO/human work performed with the client. No autonomous action against the client's systems or data.",
           "stop_line": "Deny-by-default on anything touching the external client's live systems, accounts, keys, or client data. All provisioning and access is CEO-performed/authorized with the owner present. Cloud AI must never receive her client notes/identifiable client data or private business positioning (hard constraint from discovery)."
         }
+      },
+      {
+        "id": "INI-138",
+        "name": "Dyson Hope Reels \u2014 Knowledge Base Normalization & Retrieval Contracts",
+        "notes": "Program: Dyson Hope Reel Production (see knowledge/clients/dyson-hope-family/_shared/reel-production-program-brief.md). Foundational \u2014 every downstream initiative reads from these normalized\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Knowledge-Director-buildable end to end: normalizing the CEO's existing Dyson Hope vault content (backlog spreadsheet, format templates, article notes, prior scripts) into machine-readable sources with stable IDs. No external services, no model egress, no paid work. Nothing leaves the box.",
+          "stop_line": "Deny-by-default on destructive edits to the CEO's authored source material \u2014 normalization is additive/derived (new machine-readable projections beside the originals), never in-place rewriting of the CEO's notes. No content is invented; empty fields stay empty pending CEO input.",
+          "depends_on": [
+            "INI-047",
+            "INI-057",
+            "INI-101"
+          ]
+        }
+      },
+      {
+        "id": "INI-140",
+        "name": "Dyson Hope Reel Producer \u2014 Staged Scripting Pipeline (Brief \u2192 Draft \u2192 Critique \u2192 Approval)",
+        "notes": "Program: Dyson Hope Reel Production. The spine of the program. Implemented as a staged state machine, NOT one giant prompt: brief \u2192 (human angle gate) \u2192 draft \u2192 independent critique \u2192 revision \u2192\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Engineering-buildable as a state machine over the broker (INI-137) and the voice capability (INI-092). Worker-tier stages route to local Ollama; creative-drafting runs on the Claude Creative Director by default. HARD human gates in the flow (angle approval, script approval) are CEO work, not automated. No paid asset generation anywhere in this initiative \u2014 it stops at an approved script.",
+          "stop_line": "Automation stops before every consequential judgment: final topic, central stance, script approval, and any spend. No script proceeds past a human gate without CEO approval. Client content in the drafting/brief stages stays on-box (local Ollama / Claude orchestrator) unless and until INI-139's scoped exception is in force; the producer never widens its own data-egress authority.",
+          "depends_on": [
+            "INI-138",
+            "INI-137",
+            "INI-092",
+            "INI-139"
+          ]
+        }
+      },
+      {
+        "id": "INI-141",
+        "name": "Dyson Hope Reels \u2014 Bounded Apify Competitive-Pattern Research",
+        "notes": "Program: Dyson Hope Reel Production. Overlaps in spirit with INI-057 (Music Culture Observation Engine) \u2014 reconcile the account-monitoring surface rather than duplicating. Public-data path means\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Research-Director-buildable. A bounded weekly Apify scrape of a curated account list (public Instagram data only), account-relative normalization, Gemini/local pattern classification, and a weekly report written into the vault. JasonOS owns the schedule. Free-tier only until a concrete limit blocks a useful scan.",
+          "stop_line": "Public data only \u2014 no comments harvesting, no follower lists, no complete account histories, no private analytics (which public scraping cannot see anyway). Competitive research INFORMS experimentation; it never defines the Dyson Hope identity. No strategy change on the basis of a single report.",
+          "depends_on": [
+            "INI-138",
+            "INI-137",
+            "INI-140"
+          ]
+        }
+      },
+      {
+        "id": "INI-142",
+        "name": "Dyson Hope Reels \u2014 Higgsfield Atmospheric-Asset Pipeline & Hybrid Visual Routing",
+        "notes": "Program: Dyson Hope Reel Production. The atmospheric SHELL around the authentic core. Higgsfield free evaluation \u2192 lowest monthly tier only after the workflow works, no annual commitment. Measures\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Creative + Engineering buildable. Divide an approved script into timed visual beats, route each beat to real-vs-generated by accuracy-sensitivity, generate atmospheric assets via the Higgsfield MCP, and hand selected assets into the existing INI-085/087 video pipeline. FIRST initiative in the program that spends money \u2014 every paid generation is behind an explicit human approval gate.",
+          "stop_line": "No paid generation without explicit approval \u2014 the system proposes an asset manifest; a human approves requests before anything is submitted, and selects usable assets after. High-accuracy-sensitivity beats (named gear, real technique, real people/venues, the CEO's face, archival artifacts) MUST use real assets \u2014 generated imagery never substitutes for real evidence. No autonomous credit spending; no automatic generation of every proposed shot.",
+          "depends_on": [
+            "INI-140",
+            "INI-085",
+            "INI-087"
+          ]
+        }
+      },
+      {
+        "id": "INI-143",
+        "name": "Dyson Hope Reels \u2014 Batch Production Operations (Weekly Rhythm)",
+        "notes": "Program: Dyson Hope Reel Production. The operational layer that turns the built pipeline into cadence. Codifies the source \u00a715 weekly rhythm. Runs the machine over mostly-existing pieces\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Creative + Operations. This is a RUN-the-machine initiative, not a build: a repeatable weekly rhythm that orchestrates the producer (INI-140), the visual pipeline (INI-142), and the existing voice/video capabilities into steady published output. Operations owns cadence and runbook discipline; Creative owns execution and taste.",
+          "stop_line": "No automatic publication and no full unattended backlog processing \u2014 the 200-item backlog is strategic inventory, not a machine queue. The rhythm batches human-gated work; it never removes the gates. Publication, music, sound design, edit rhythm, and final captions stay human-controlled.",
+          "depends_on": [
+            "INI-140",
+            "INI-142",
+            "INI-092",
+            "INI-085"
+          ]
+        }
       }
     ],
     "infrastructure": [
@@ -335,6 +412,22 @@
           "stop_line": "Security Steward review before go-live \u2014 this pipeline is an autonomous agent/logic path consuming attacker-controllable inbound email (the read-path injection surface INI-127's ingestion sandbox flags but does not classify). Do not cut Channel 1 over from the Cowork task to the host-native pipeline until the Steward clears the classifier's untrusted-content handling and the CEO authorizes the cutover.",
           "depends_on": [
             "INI-127"
+          ]
+        }
+      },
+      {
+        "id": "INI-139",
+        "name": "Selectable External Writing Lane \u2014 Enablement, Scoped Egress Exception & Routing",
+        "notes": "Program: Dyson Hope Reel Production. This is NOT a Gemini build \u2014 INI-137 already integrated Gemini/OpenAI as dark metered adapters under the broker. This initiative enables those lanes for a\u2026",
+        "contract": {
+          "route": "CEO-first",
+          "runner_scope": "Engineering-buildable AFTER two non-engineering clearances land: (1) Security Steward authors + enacts the scoped client-egress exception; (2) CEO provisions API key(s) + budget and the Steward runs the metered-lane enablement review. The engineering work itself is thin \u2014 wire the already-built INI-137 metered adapters and an executor-selection surface into the producer's drafting stage. NO autonomous enabling of a paid lane; NO autonomous egress-policy change.",
+          "stop_line": "Inherits INI-137's egress posture unchanged except through the Steward-authored scoped exception. Client data may leave the box ONLY for the reel-script source corpus, ONLY to the approved external-writing-model set, ONLY under the exception's stated constraints \u2014 enforced as an eligibility rule in code, fail-closed, not advisory. Metered spend is impossible until CEO key + budget + GAP-142 ledger + Steward enablement review are all in place. Secrets never appear in prompts, logs, tickets, or committed config.",
+          "depends_on": [
+            "INI-137",
+            "GAP-142",
+            "INI-137",
+            "INI-092"
           ]
         }
       }
@@ -667,6 +760,13 @@
         "category": "PCR"
       },
       {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "**Queue-ready**",
+        "file": "governance/gaps/open/GAP-164-native-terminal-harness-memory-store-diverged-from-canonical-governance-memory.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
@@ -685,11 +785,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T04:17:51.579645+00:00"
+    "generated_at": "2026-07-18T04:35:33.187447+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 5,
-    "open_gaps": 11,
+    "open_gaps": 12,
     "open_rems": 5
   }
 }
