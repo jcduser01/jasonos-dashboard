@@ -1,23 +1,43 @@
 {
-  "generated_at": "2026-07-18T04:53:13Z",
+  "generated_at": "2026-07-18T04:55:18Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 110,
     "total": 134,
-    "active": 0,
+    "active": 1,
     "queued": 0,
     "paused": 8,
-    "backlog": 16
+    "backlog": 15
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 201,
+    "minutes_since_session": 203,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
-  "active_initiative": null,
-  "active_initiatives": [],
+  "active_initiative": {
+    "id": "INI-053",
+    "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+    "status": "active",
+    "contract": {
+      "route": "Queue-ready",
+      "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue scan, and a concise gap-summary diagnosis memo. Staged as a research artifact for CEO review.",
+      "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is staged \u2014 do not author positioning without the CEO."
+    }
+  },
+  "active_initiatives": [
+    {
+      "id": "INI-053",
+      "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+      "status": "active",
+      "contract": {
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue scan, and a concise gap-summary diagnosis memo. Staged as a research artifact for CEO review.",
+        "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is staged \u2014 do not author positioning without the CEO."
+      }
+    }
+  ],
   "queue": [],
   "ceo_actions": [
     {
@@ -231,16 +251,6 @@
   },
   "backlog": {
     "client_work": [
-      {
-        "id": "INI-053",
-        "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
-        "notes": "Pending: INI-051 complete",
-        "contract": {
-          "route": "Queue-ready",
-          "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue scan, and a concise gap-summary diagnosis memo. Staged as a research artifact for CEO review.",
-          "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is staged \u2014 do not author positioning without the CEO."
-        }
-      },
       {
         "id": "INI-055",
         "name": "Temple of Unicorns \u2014 Shopify Site Redesign",
@@ -496,6 +506,14 @@
         "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
         "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
         "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
+      },
+      {
+        "id": "REM-078",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
+        "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
+        "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
       }
     ],
     "fully_executable": [
@@ -546,6 +564,14 @@
         "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
         "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
         "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
+      },
+      {
+        "id": "REM-078",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
+        "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
+        "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -763,11 +789,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T04:53:13.633659+00:00"
+    "generated_at": "2026-07-18T04:55:18.747200+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 6,
     "open_gaps": 12,
-    "open_rems": 2
+    "open_rems": 3
   }
 }
