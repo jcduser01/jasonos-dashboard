@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T17:52:48Z",
+  "generated_at": "2026-07-18T18:12:36Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T11:30:00Z",
-    "minutes_since_session": 382,
+    "minutes_since_session": 402,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -628,14 +628,6 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
-      },
-      {
-        "id": "REM-087",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Amend the two named BC documents once the live task un-scheduling (CEO-reserved, PCR-OPS-067) is confirmed done.",
-        "stop_line": "None.",
-        "description": "BC procedures (sandbox-rebuild + relocation) still list jasonos-daily-briefing as a live scheduled\u2026"
       }
     ],
     "fully_executable": [
@@ -662,14 +654,6 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
-      },
-      {
-        "id": "REM-087",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Amend the two named BC documents once the live task un-scheduling (CEO-reserved, PCR-OPS-067) is confirmed done.",
-        "stop_line": "None.",
-        "description": "BC procedures (sandbox-rebuild + relocation) still list jasonos-daily-briefing as a live scheduled\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -858,6 +842,14 @@
         "runner_scope": "",
         "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
+      },
+      {
+        "id": "PCR-OPS-068",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "No standing procedure for Cowork sessions substituting for Mac-side director/Steward subagents"
       }
     ],
     "contract_quality_gaps": [
@@ -874,18 +866,29 @@
         "category": "PCR"
       },
       {
-        "type": "invalid_route_value",
+        "type": "missing_field",
         "field": "route",
-        "value": "CEO decision required",
-        "file": "governance/pcrs/open/PCR-OPS-066-morning-sweep-session-protocol.md",
+        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T17:52:48.087310+00:00"
+    "generated_at": "2026-07-18T18:12:36.693378+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
     "open_gaps": 8,
-    "open_rems": 3
+    "open_rems": 2
   }
 }
