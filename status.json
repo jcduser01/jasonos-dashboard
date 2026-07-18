@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T07:25:48Z",
+  "generated_at": "2026-07-18T08:11:58Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 353,
+    "minutes_since_session": 400,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -125,8 +125,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-18T06:32:26Z",
-      "invocations_30d": 35
+      "last_active": "2026-07-18T07:44:21Z",
+      "invocations_30d": 36
     },
     {
       "name": "knowledge-director",
@@ -591,6 +591,14 @@
     ],
     "blocked_needs_decision": [
       {
+        "id": "PCR-ENG-020",
+        "type": "PCR",
+        "route": "Draft-only",
+        "runner_scope": "None \u2014 blocked on the Part 2 ruling and Part 1/3 authorization above; drafting cannot start until CEO acts on Decision required.",
+        "stop_line": "CEO decision on items 1\u20132 above. Once cleared, Engineering Director drafts Part 1/3 as a \u00a76 proposal (routed through the existing process) and Security Steward reviews Part 2 per its own authority.",
+        "description": "Worker Capability Taxonomy refresh \u2014 stale model registry and missing\u2026"
+      },
+      {
         "id": "PCR-OPS-064",
         "type": "PCR",
         "route": "Queue-ready",
@@ -629,6 +637,14 @@
     ],
     "not_executable_leading_stop": [
       {
+        "id": "PCR-GOV-008",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Commit-authorization approval specificity is undefined"
+      },
+      {
         "id": "PCR-OPS-054",
         "type": "PCR",
         "route": "Operational",
@@ -659,6 +675,24 @@
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
         "category": "PCR"
+      },
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
+        "category": "pcr-open"
       },
       {
         "type": "missing_field",
@@ -704,10 +738,10 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T07:25:48.961918+00:00"
+    "generated_at": "2026-07-18T08:11:58.144139+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 6,
+    "open_pcrs": 8,
     "open_gaps": 6,
     "open_rems": 3
   }
