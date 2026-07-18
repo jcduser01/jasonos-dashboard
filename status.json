@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T15:52:37Z",
+  "generated_at": "2026-07-18T16:29:56Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T08:11:36Z",
-    "minutes_since_session": 461,
+    "minutes_since_session": 498,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -21,7 +21,7 @@
     "name": "SIGIL.ZERO \u2014 Apparel / Artifact Line (Launch Strategy)",
     "status": "active",
     "contract": {
-      "route": "CEO-collaborative",
+      "route": "CEO-first",
       "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
       "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
     }
@@ -32,7 +32,7 @@
       "name": "SIGIL.ZERO \u2014 Apparel / Artifact Line (Launch Strategy)",
       "status": "active",
       "contract": {
-        "route": "CEO-collaborative",
+        "route": "CEO-first",
         "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
         "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
       }
@@ -139,137 +139,143 @@
     {
       "id": "ACT-HO-17",
       "category": "required",
+      "label": "PCR-OPS-062",
+      "context": "Relay trigger partial-failure leaves --removes' index mutation in place, breaking naive retries. Decide: documentation f"
+    },
+    {
+      "id": "ACT-HO-18",
+      "category": "required",
       "label": "PCR-OPS-063",
       "context": "AskUserQuestion is present and functional in this Cowork session despite feedback_ask_user_question_tool_forbidden.md's "
     },
     {
-      "id": "ACT-HO-18",
+      "id": "ACT-HO-19",
       "category": "required",
       "label": "Promote (or dispose) the staged/batch-2026-07-17-msc mission-critical batch \u2014 3 items, all Steward-reviewed, held for your item-selective promotion.",
       "context": "Exact sequence in Logs/batch-run-2026-07-17-msc.md:"
     },
     {
-      "id": "ACT-HO-19",
+      "id": "ACT-HO-20",
       "category": "required",
       "label": "Promote the routine batch to canonical",
       "context": "one item-selective merge-staged --push true call (in Logs/batch-run-2026-07-17-routine.md \u00a7 Promotion trail) lands GAP-1"
     },
     {
-      "id": "ACT-HO-20",
+      "id": "ACT-HO-21",
       "category": "required",
       "label": "Ratify PCR-KNOW-006 (GAP-116)",
       "context": "Draft external-client-confidentiality procedure + PCR staged on the lane (deadfd8d); ratify or direct changes. This is t"
     },
     {
-      "id": "ACT-HO-21",
+      "id": "ACT-HO-22",
       "category": "required",
       "label": "GAP-157 scheduler deploy",
       "context": "after promote, refresh the policy-sync scheduled-task prompt via update_scheduled_task (Cowork-only) so the live task ca"
     },
     {
-      "id": "ACT-HO-22",
+      "id": "ACT-HO-23",
       "category": "required",
       "label": "REM-071 deploy ordering",
       "context": "deploy the drive-backup runner + knowledge.yaml BEFORE/with the knowledge-backup SKILL refresh (runner-first = self-heal"
     },
     {
-      "id": "ACT-HO-23",
+      "id": "ACT-HO-24",
       "category": "required",
       "label": "GAP-158 / PCR-OPS-061 wire-in",
       "context": "flipping report-triage \u00a7 Step 2c onto the automated --sweep-history command is a separate Steward/CEO-gated go-live; PCR"
     },
     {
-      "id": "ACT-HO-24",
+      "id": "ACT-HO-25",
       "category": "required",
       "label": "REM-074 mitigation (Cowork-side)",
       "context": "repoint the knowledge-backup + engineering-backup scheduled tasks at commit_via_relay.py --wait (or domain-sub-queue pol"
     },
     {
-      "id": "ACT-HO-25",
+      "id": "ACT-HO-26",
       "category": "required",
       "label": "GAP-157 / REM-071 / REM-074 \u2014 Cowork scheduled-task refreshes",
       "context": "only surface is Cowork `update_scheduled_task`"
     },
     {
-      "id": "ACT-HO-26",
+      "id": "ACT-HO-27",
       "category": "required",
       "label": "(optional) Promote a memory-currency update",
       "context": "to relay-removes-recipe-for-closeout-renames capturing the v1.23 --removes no-op \u2014 offered, not yet staged."
     },
     {
-      "id": "ACT-HO-27",
+      "id": "ACT-HO-28",
       "category": "confirm",
       "label": "Confirm tomorrow's daily backup runs, then close REM-071 + REM-074",
       "context": "REM-071: jasonos-knowledge-backup writes exactly one dated knowledge-log entry (runner-authored, no double). REM-074: a "
     },
     {
-      "id": "ACT-HO-28",
+      "id": "ACT-HO-29",
       "category": "required",
       "label": "GAP-158 wire-in",
       "context": "unchanged"
     },
     {
-      "id": "ACT-HO-29",
+      "id": "ACT-HO-30",
       "category": "required",
       "label": "\u2b50 MORNING-SWEEP VERIFICATION (President Agent \u2014 do this in the next morning sweep, per CEO instruction 2026-07-17).",
       "context": "After tonight's daily jasonos-knowledge-backup and jasonos-engineering-backup runs, verify and then close REM-071 + REM-"
     },
     {
-      "id": "ACT-HO-30",
+      "id": "ACT-HO-31",
       "category": "required",
       "label": "GAP-157",
       "context": "effectively done pending its next jasonos-policy-sync fire using the new writer; verify in the same sweep and close if c"
     },
     {
-      "id": "ACT-HO-31",
+      "id": "ACT-HO-32",
       "category": "required",
       "label": "(cleanup, low)",
       "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; fi"
     },
     {
-      "id": "ACT-HO-32",
+      "id": "ACT-HO-33",
       "category": "required",
       "label": "Decide PCR-OPS-065 (AskUserQuestion enforcement)",
       "context": "reverse PCR-OPS-063's decision not to track the settings.json-disable investigation (option 1), and/or approve a standin"
     },
     {
-      "id": "ACT-HO-33",
+      "id": "ACT-HO-34",
       "category": "required",
       "label": "Authorize Phase 1 of PCR-OPS-064 when ready",
       "context": "policy-sync seam extraction is scoped and approved; awaiting CEO go-ahead to start the build. Not blocking \u2014 no other wo"
     },
     {
-      "id": "ACT-HO-34",
+      "id": "ACT-HO-35",
       "category": "required",
       "label": "Dyson Hope Reel Production \u2014 program pull + ID confirmation.",
       "context": "Six initiatives filed to Backlog (INI-138 through INI-143). Confirm provisional IDs against canonical portfolio/, run th"
     },
     {
-      "id": "ACT-HO-35",
+      "id": "ACT-HO-36",
       "category": "required",
       "label": "Authorize Security Steward to author PCR-SEC-013",
       "context": "scoped reel-script egress exception"
     },
     {
-      "id": "ACT-HO-36",
+      "id": "ACT-HO-37",
       "category": "required",
       "label": "Provision Gemini/OpenAI API key(s) + budget",
       "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
     },
     {
-      "id": "ACT-HO-37",
+      "id": "ACT-HO-38",
       "category": "required",
       "label": "6 gap close-outs deferred \u2014 proceed authorization.",
       "context": "GAP-101/135/146/148/157/163 are all on canonical but their open\u2192resolved + gaps-INDEX close-outs are held because the Dy"
     },
     {
-      "id": "ACT-HO-38",
+      "id": "ACT-HO-39",
       "category": "required",
       "label": "GAP-148 relay-worker deploy (CEO-gated).",
       "context": "jasonos-git-relay.sh v1.30 (null-SHA staged-ref reap) is on canonical; deployed copies (~/bin, SandboxData/bin) remain v"
     },
     {
-      "id": "ACT-HO-39",
+      "id": "ACT-HO-40",
       "category": "required",
       "label": "GAP-146 digest wire-in (Steward+CEO-gated).",
       "context": "write-batch-run-digest.py is on canonical but DORMANT. Pick wire-in Option A (report-triage sweep after step 2h) or B (d"
@@ -277,12 +283,7 @@
   ],
   "status_drift": [],
   "category_drift": [],
-  "contract_drift": [
-    {
-      "id": "INI-053",
-      "route": "CEO-collaborative"
-    }
-  ],
+  "contract_drift": [],
   "directors": [
     {
       "name": "engineering-director",
@@ -623,86 +624,54 @@
   "jasonos_work_readiness": {
     "eligible_now": [
       {
+        "id": "GAP-168",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Investigate why the settings.json-level disable referenced in the original 2026-07-08 directive (`governance/memory/feedback_ask_user_question_tool_forbidden.md`) did not take effect for the Cowork en",
+        "stop_line": "None \u2014 investigation and, if a fix is found, a settings/config change scoped to disabling one named tool; not a substrate or authority change.",
+        "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
+      },
+      {
+        "id": "PCR-OPS-065",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "GAP-168 tracks the settings-level investigation/fix (Engineering-owned). The pre-flight check (option 2) is done \u2014 added to `agents/president-context-prompt.md` v1.4.",
+        "stop_line": "None remaining.",
+        "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
+      },
+      {
         "id": "REM-078",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
-      },
-      {
-        "id": "REM-080",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add a well-formed YAML frontmatter block to `Logs/steward-audit-inbox/CAP-REV-2026-07-17-GAP151.md` and `Logs/steward-audit-inbox/CAP-REV-2026-07-17-batch-l3.md` (matching the schema of already-merged",
-        "stop_line": "None \u2014 bounded repair of two malformed inbox files via the existing compactor; no new write path or authority surface.",
-        "description": "Step 2e's Security Steward audit-log compactor rejects 2 stuck inbox entries\u2026"
-      },
-      {
-        "id": "REM-081",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add `Route`/`Runner scope`/`Stop-line` fields to PCR-GOV-008, PCR-OPS-062, PCR-SEC-013 per the execution-contract template; correct INI-053's Route field to a canonical value.",
-        "stop_line": "None \u2014 bounded metadata authoring on existing open items; no substrate or authority change.",
-        "description": "check-work-item-contract-conformance.py exits 1 with 10 fresh defects: 3 open PCRs (PCR-GOV-008\u2026"
-      },
-      {
-        "id": "REM-082",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add index rows for PCR-ENG-020, PCR-GOV-008, PCR-OPS-064, PCR-OPS-065, PCR-SEC-013 to `governance/pcrs/README.md \u00a7 ## Index`, matching the existing row format; re-run the `--check` to confirm exit 0.",
-        "stop_line": "None \u2014 bounded index-table edit, no substrate or authority surface.",
-        "description": "jasonos-work-item-index-generator.py --type pcr --check exits 1: 5 PCRs missing from\u2026"
-      },
-      {
-        "id": "REM-083",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "For GAP-101, GAP-113, GAP-114, GAP-115, GAP-116, GAP-131, GAP-133, GAP-135, GAP-146, GAP-148, GAP-156, GAP-157, GAP-158, GAP-160, GAP-163: cross-check `governance/gaps/INDEX.md` and commit history, th",
-        "stop_line": "None per the checker's own scope (read-only flag tool; the fix itself is a normal governance-file edit, not a daemon-staging or pre-commit-gate change) \u2014 but the executor must do the per-file verifica",
-        "description": "check-gap-folder-status-agreement.py --check exits 1: 15 gap files physically sit in\u2026"
       }
     ],
     "fully_executable": [
       {
+        "id": "GAP-168",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Investigate why the settings.json-level disable referenced in the original 2026-07-08 directive (`governance/memory/feedback_ask_user_question_tool_forbidden.md`) did not take effect for the Cowork en",
+        "stop_line": "None \u2014 investigation and, if a fix is found, a settings/config change scoped to disabling one named tool; not a substrate or authority change.",
+        "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
+      },
+      {
+        "id": "PCR-OPS-065",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "GAP-168 tracks the settings-level investigation/fix (Engineering-owned). The pre-flight check (option 2) is done \u2014 added to `agents/president-context-prompt.md` v1.4.",
+        "stop_line": "None remaining.",
+        "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
+      },
+      {
         "id": "REM-078",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
-      },
-      {
-        "id": "REM-080",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add a well-formed YAML frontmatter block to `Logs/steward-audit-inbox/CAP-REV-2026-07-17-GAP151.md` and `Logs/steward-audit-inbox/CAP-REV-2026-07-17-batch-l3.md` (matching the schema of already-merged",
-        "stop_line": "None \u2014 bounded repair of two malformed inbox files via the existing compactor; no new write path or authority surface.",
-        "description": "Step 2e's Security Steward audit-log compactor rejects 2 stuck inbox entries\u2026"
-      },
-      {
-        "id": "REM-081",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add `Route`/`Runner scope`/`Stop-line` fields to PCR-GOV-008, PCR-OPS-062, PCR-SEC-013 per the execution-contract template; correct INI-053's Route field to a canonical value.",
-        "stop_line": "None \u2014 bounded metadata authoring on existing open items; no substrate or authority change.",
-        "description": "check-work-item-contract-conformance.py exits 1 with 10 fresh defects: 3 open PCRs (PCR-GOV-008\u2026"
-      },
-      {
-        "id": "REM-082",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add index rows for PCR-ENG-020, PCR-GOV-008, PCR-OPS-064, PCR-OPS-065, PCR-SEC-013 to `governance/pcrs/README.md \u00a7 ## Index`, matching the existing row format; re-run the `--check` to confirm exit 0.",
-        "stop_line": "None \u2014 bounded index-table edit, no substrate or authority surface.",
-        "description": "jasonos-work-item-index-generator.py --type pcr --check exits 1: 5 PCRs missing from\u2026"
-      },
-      {
-        "id": "REM-083",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "For GAP-101, GAP-113, GAP-114, GAP-115, GAP-116, GAP-131, GAP-133, GAP-135, GAP-146, GAP-148, GAP-156, GAP-157, GAP-158, GAP-160, GAP-163: cross-check `governance/gaps/INDEX.md` and commit history, th",
-        "stop_line": "None per the checker's own scope (read-only flag tool; the fix itself is a normal governance-file edit, not a daemon-staging or pre-commit-gate change) \u2014 but the executor must do the per-file verifica",
-        "description": "check-gap-folder-status-agreement.py --check exits 1: 15 gap files physically sit in\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -761,6 +730,14 @@
         "runner_scope": "Replace the Mode 4 block and append the cross-mode \"Structural Humanization\" principle in the canonical `writing-humanization` skill source per the Draft revisions above; repackage/redistribute to the",
         "stop_line": "DoD item 5 \u2014 the worked acceptance draft reviewed by the CEO as materially more human in structure \u2014 requires CEO judgment and is not runner-completable. Skill redeployment also passes through the sta",
         "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
+      },
+      {
+        "id": "PCR-SEC-013",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "None \u2014 the Steward authors the exception as INI-139 Governance Gate item 1, not as a standalone PCR-SEC-013 deliverable.",
+        "stop_line": "None remaining at the PCR level. The Steward's gate language itself still carries its own non-waivable review before any egress path goes live (same class as INI-137's existing C1/C3/C5 gates it reuse",
+        "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
       },
       {
         "id": "REM-066",
@@ -829,6 +806,14 @@
         "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
       },
       {
+        "id": "PCR-SEC-013",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "None \u2014 the Steward authors the exception as INI-139 Governance Gate item 1, not as a standalone PCR-SEC-013 deliverable.",
+        "stop_line": "None remaining at the PCR level. The Steward's gate language itself still carries its own non-waivable review before any egress path goes live (same class as INI-137's existing C1/C3/C5 gates it reuse",
+        "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
+      },
+      {
         "id": "REM-066",
         "type": "REM",
         "route": "Operational",
@@ -842,9 +827,17 @@
         "id": "PCR-ENG-020",
         "type": "PCR",
         "route": "Draft-only",
-        "runner_scope": "None \u2014 blocked on the Part 2 ruling and Part 1/3 authorization above; drafting cannot start until CEO acts on Decision required.",
-        "stop_line": "CEO decision on items 1\u20132 above. Once cleared, Engineering Director drafts Part 1/3 as a \u00a76 proposal (routed through the existing process) and Security Steward reviews Part 2 per its own authority.",
+        "runner_scope": "Engineering Director drafts Part 1 (\u00a77 registry refresh: current model strings, Fable 5 entry, deprecate stale entries) and Part 3 (effort-level vocabulary proposal) per \u00a76.",
+        "stop_line": "None remaining \u2014 both decision items cleared 2026-07-18. Engineering Director's draft routes back through \u00a76 for CEO approval before taking effect.",
         "description": "Worker Capability Taxonomy refresh \u2014 stale model registry and missing\u2026"
+      },
+      {
+        "id": "PCR-GOV-008",
+        "type": "PCR",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "CEO decision required (see \u00a7 Decision required) before any \u00a7 Commit Authorization amendment is drafted or enacted.",
+        "description": "Commit-authorization approval specificity is undefined"
       },
       {
         "id": "PCR-OPS-064",
@@ -853,14 +846,6 @@
         "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
         "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
-      },
-      {
-        "id": "PCR-OPS-065",
-        "type": "PCR",
-        "route": "CEO-first",
-        "runner_scope": "None until the CEO decision above is made.",
-        "stop_line": "CEO decision on \u00a7 Decision required.",
-        "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
       }
     ],
     "blocked_needs_director_decision": [
@@ -885,112 +870,33 @@
     ],
     "not_executable_leading_stop": [
       {
-        "id": "PCR-GOV-008",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Commit-authorization approval specificity is undefined"
-      },
-      {
         "id": "PCR-OPS-054",
         "type": "PCR",
         "route": "Operational",
         "runner_scope": "",
         "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
-      },
-      {
-        "id": "PCR-OPS-062",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Relay trigger partial-failure leaves --removes' index mutation in place, breaking naive retries"
-      },
-      {
-        "id": "PCR-SEC-013",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
       }
     ],
     "contract_quality_gaps": [
+      {
+        "id": "PCR-ENG-020",
+        "file": "governance/pcrs/open/PCR-ENG-020-worker-capability-taxonomy-refresh-model-registry-and-effort-axis.md",
+        "issue": "decision-recorded-ceo-action-header-stale",
+        "category": "PCR"
+      },
       {
         "id": "PCR-OPS-064",
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
         "category": "PCR"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "CEO-collaborative",
-        "file": "portfolio/open/INI-053.md",
-        "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T15:52:37.333891+00:00"
+    "generated_at": "2026-07-18T16:29:56.489643+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 8,
-    "open_gaps": 7,
-    "open_rems": 7
+    "open_pcrs": 7,
+    "open_gaps": 8,
+    "open_rems": 3
   }
 }
