@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T12:45:08Z",
+  "generated_at": "2026-07-18T15:52:37Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T08:11:36Z",
-    "minutes_since_session": 273,
+    "minutes_since_session": 461,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -631,14 +631,6 @@
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
       },
       {
-        "id": "REM-079",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Copy canonical `operations/bin/jasonos-git-relay.sh` to `/Volumes/SandboxData/bin/jasonos-git-relay.sh` and `~/bin/jasonos-git-relay.sh` (or invoke the standing deploy-sync tool if it is registered fo",
-        "stop_line": "None \u2014 bounded re-sync, no substrate or authority surface change; the script content itself was already reviewed/merged under GAP-148.",
-        "description": "check-script-registry-coverage.py exits 1: the live-deployed jasonos-git-relay.sh (SandboxData/bin\u2026"
-      },
-      {
         "id": "REM-080",
         "type": "REM",
         "route": "Operational",
@@ -679,14 +671,6 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
-      },
-      {
-        "id": "REM-079",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Copy canonical `operations/bin/jasonos-git-relay.sh` to `/Volumes/SandboxData/bin/jasonos-git-relay.sh` and `~/bin/jasonos-git-relay.sh` (or invoke the standing deploy-sync tool if it is registered fo",
-        "stop_line": "None \u2014 bounded re-sync, no substrate or authority surface change; the script content itself was already reviewed/merged under GAP-148.",
-        "description": "check-script-registry-coverage.py exits 1: the live-deployed jasonos-git-relay.sh (SandboxData/bin\u2026"
       },
       {
         "id": "REM-080",
@@ -763,6 +747,14 @@
         "description": "Native Claude Code terminal harness memory store has diverged from the canonical\u2026"
       },
       {
+        "id": "GAP-167",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Build the launchd-daemon-level three-stage pipeline (admit \u2192 engineer \u2192 reviewer) as genuinely separate OS-level `claude` CLI invocations, each scoped by its own narrow, pre-granted jail permission se",
+        "stop_line": "Security Steward review, non-waivable \u2014 do not deploy any new jail grant or daemon change on this path without it, per condition 4 above. This mirrors GAP-159's own stop-line language exactly: do not ",
+        "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -821,6 +813,14 @@
         "description": "Native Claude Code terminal harness memory store has diverged from the canonical\u2026"
       },
       {
+        "id": "GAP-167",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Build the launchd-daemon-level three-stage pipeline (admit \u2192 engineer \u2192 reviewer) as genuinely separate OS-level `claude` CLI invocations, each scoped by its own narrow, pre-granted jail permission se",
+        "stop_line": "Security Steward review, non-waivable \u2014 do not deploy any new jail grant or daemon change on this path without it, per condition 4 above. This mirrors GAP-159's own stop-line language exactly: do not ",
+        "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -861,14 +861,6 @@
         "runner_scope": "None until the CEO decision above is made.",
         "stop_line": "CEO decision on \u00a7 Decision required.",
         "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
-      },
-      {
-        "id": "REM-084",
-        "type": "REM",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "File and prioritize the GAP only on explicit CEO authorization \u2014 this sweep does not author governance work items.",
-        "description": "Step 2i marker scan: this morning's overnight batch run (2026-07-18T02:00Z) aborted cleanly (exit\u2026"
       }
     ],
     "blocked_needs_director_decision": [
@@ -994,11 +986,11 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T12:45:08.139204+00:00"
+    "generated_at": "2026-07-18T15:52:37.333891+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
-    "open_gaps": 6,
-    "open_rems": 9
+    "open_gaps": 7,
+    "open_rems": 7
   }
 }
