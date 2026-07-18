@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T05:18:54Z",
+  "generated_at": "2026-07-18T06:46:35Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,29 +12,29 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 226,
+    "minutes_since_session": 314,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
     "id": "INI-053",
-    "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+    "name": "SIGIL.ZERO \u2014 Apparel / Artifact Line (Launch Strategy)",
     "status": "active",
     "contract": {
-      "route": "Queue-ready",
-      "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue scan, and a concise gap-summary diagnosis memo. Staged as a research artifact for CEO review.",
-      "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is staged \u2014 do not author positioning without the CEO."
+      "route": "CEO-collaborative",
+      "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
+      "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
     }
   },
   "active_initiatives": [
     {
       "id": "INI-053",
-      "name": "Temple of Unicorns \u2014 Relaunch Strategy & Positioning",
+      "name": "SIGIL.ZERO \u2014 Apparel / Artifact Line (Launch Strategy)",
       "status": "active",
       "contract": {
-        "route": "Queue-ready",
-        "runner_scope": "Phase 1 diagnosis only (Research Director) \u2014 brand audit of the INI-051 guide outputs, site & catalog audit of the live templeofunicorns.com storefront, audience research, a 4\u20136 competitor/analogue scan, and a concise gap-summary diagnosis memo. Staged as a research artifact for CEO review.",
-        "stop_line": "Phase 2 (Strategy Definition) requires a CEO working session and CEO approval of the positioning statement + go-to-market direction; Phase 3 roadmap follows. Halt after the Phase 1 diagnosis memo is staged \u2014 do not author positioning without the CEO."
+        "route": "CEO-collaborative",
+        "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
+        "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
       }
     }
   ],
@@ -109,7 +109,12 @@
   ],
   "status_drift": [],
   "category_drift": [],
-  "contract_drift": [],
+  "contract_drift": [
+    {
+      "id": "INI-053",
+      "route": "CEO-collaborative"
+    }
+  ],
   "directors": [
     {
       "name": "engineering-director",
@@ -120,7 +125,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-17T11:58:28Z",
+      "last_active": "2026-07-18T06:32:26Z",
       "invocations_30d": 35
     },
     {
@@ -700,9 +705,16 @@
         "field": "stop_line",
         "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
         "category": "pcr-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "CEO-collaborative",
+        "file": "portfolio/open/INI-053.md",
+        "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T05:18:54.388364+00:00"
+    "generated_at": "2026-07-18T06:46:35.180076+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 6,
