@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T00:41:09Z",
+  "generated_at": "2026-07-18T01:31:32Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T21:38:22Z",
-    "minutes_since_session": 182,
+    "minutes_since_session": 233,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -340,7 +340,20 @@
       }
     ]
   },
-  "batch_queue": [],
+  "batch_queue": [
+    {
+      "position": 1,
+      "id": "GAP-121"
+    },
+    {
+      "position": 2,
+      "id": "GAP-123"
+    },
+    {
+      "position": 3,
+      "id": "REM-066"
+    }
+  ],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -424,36 +437,12 @@
         "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
       },
       {
-        "id": "REM-070",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
-        "stop_line": "None.",
-        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
-      },
-      {
         "id": "REM-071",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
         "stop_line": "None.",
         "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
-      },
-      {
-        "id": "REM-072",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
-      },
-      {
-        "id": "REM-074",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "fully_executable": [
@@ -538,36 +527,12 @@
         "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
       },
       {
-        "id": "REM-070",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Disposition AIRLOCK-2026-07-13-001-jcd-digital-organization-engagement-spec-v0.1.0 and record it in index.md \u00a7 Inbox Status.",
-        "stop_line": "None.",
-        "description": "check-kb-completeness.py Facet A (regressed from exit 0): AIRLOCK-2026-07-13-001-jcd-digital-organiz\u2026"
-      },
-      {
         "id": "REM-071",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
         "stop_line": "None.",
         "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
-      },
-      {
-        "id": "REM-072",
-        "type": "REM",
-        "route": "Queue-ready",
-        "runner_scope": "Done \u2014 the `cowork-sandbox-git-caveats.md` addition described in \u00a7 Remediation (a).",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py from Cowork falsely reports the relay as not-loaded-in-launchd when\u2026"
-      },
-      {
-        "id": "REM-074",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Investigate relay `.result` file write/delivery timing and `.git-commit-queue` cleanup ordering in the Cowork sandbox; propose a fix or documented mitigation.",
-        "stop_line": "None.",
-        "description": "commit_via_relay.py's precommand relay .result file failed to appear in the .git-commit-queue for\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -610,14 +575,6 @@
         "runner_scope": "Replace the Mode 4 block and append the cross-mode \"Structural Humanization\" principle in the canonical `writing-humanization` skill source per the Draft revisions above; repackage/redistribute to the",
         "stop_line": "DoD item 5 \u2014 the worked acceptance draft reviewed by the CEO as materially more human in structure \u2014 requires CEO judgment and is not runner-completable. Skill redeployment also passes through the sta",
         "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
-      },
-      {
-        "id": "PCR-OPS-054",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "Surface the \u00a7E standing digest across the probation window (~2 weeks / ~10 unattended runs) \u2014 what auto-shipped routine-class, what staged awaiting mission-critical promotion, deferred-bucket sweep st",
-        "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
-        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
         "id": "REM-066",
@@ -670,14 +627,6 @@
         "description": "Writing-Humanization Skill \u2014 Structural Narrative Markers (Mode 4 + Cross-Mode)"
       },
       {
-        "id": "PCR-OPS-054",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "Surface the \u00a7E standing digest across the probation window (~2 weeks / ~10 unattended runs) \u2014 what auto-shipped routine-class, what staged awaiting mission-critical promotion, deferred-bucket sweep st",
-        "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
-        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
-      },
-      {
         "id": "REM-066",
         "type": "REM",
         "route": "Operational",
@@ -686,13 +635,30 @@
         "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       }
     ],
-    "blocked_needs_decision": [],
+    "blocked_needs_decision": [
+      {
+        "id": "PCR-OPS-064",
+        "type": "PCR",
+        "route": "Queue-ready",
+        "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
+        "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
+        "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
+      },
+      {
+        "id": "PCR-OPS-065",
+        "type": "PCR",
+        "route": "CEO-first",
+        "runner_scope": "None until the CEO decision above is made.",
+        "stop_line": "CEO decision on \u00a7 Decision required.",
+        "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
+      }
+    ],
     "blocked_needs_director_decision": [
       {
         "id": "GAP-094",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "None \u2014 the corrective act is a **Security Steward re-file**, not an engineering slice, and it edits a Steward-owned audit artifact which the President Agent is structurally barred from touching (Stewa",
+        "runner_scope": "",
         "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
         "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026",
         "director": "Security Steward"
@@ -701,13 +667,21 @@
         "id": "REM-064",
         "type": "REM",
         "route": "Operational",
-        "runner_scope": "None \u2014 interactive KD disposition of 9 artifacts, each requiring content judgment against the ratified doctrine; no runner-buildable slice.",
+        "runner_scope": "",
         "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
         "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026",
         "director": "Knowledge Director"
       }
     ],
     "not_executable_leading_stop": [
+      {
+        "id": "PCR-OPS-054",
+        "type": "PCR",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
+        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
+      },
       {
         "id": "PCR-OPS-062",
         "type": "PCR",
@@ -718,6 +692,12 @@
       }
     ],
     "contract_quality_gaps": [
+      {
+        "id": "PCR-OPS-064",
+        "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
+        "issue": "decision-recorded-ceo-action-header-stale",
+        "category": "PCR"
+      },
       {
         "type": "missing_field",
         "field": "route",
@@ -737,11 +717,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T00:41:09.728014+00:00"
+    "generated_at": "2026-07-18T01:31:32.149064+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 3,
+    "open_pcrs": 5,
     "open_gaps": 11,
-    "open_rems": 10
+    "open_rems": 7
   }
 }
