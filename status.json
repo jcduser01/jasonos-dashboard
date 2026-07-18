@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T08:44:56Z",
+  "generated_at": "2026-07-18T10:45:08Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 14
   },
   "operational": {
-    "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 432,
+    "last_session_date": "2026-07-18T08:11:36Z",
+    "minutes_since_session": 153,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -105,6 +105,174 @@
       "category": "required",
       "label": "INI-111 \u2014 confirm SAM.gov entity registration / tier.",
       "context": "In your SAM.gov account, check whether entity registration completed and the ~1,000/day request tier is active. If yes: "
+    },
+    {
+      "id": "ACT-HO-12",
+      "category": "required",
+      "label": "Deploy GAP-153's relay fix",
+      "context": "copy jasonos-git-relay.sh v1.29 to /Volumes/SandboxData/bin/ and ~/bin/, then restart all four per-domain watchers (com."
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "PCR-OPS-059",
+      "context": "decide whether to formalize \"checker requires a hermetic test suite before Security Steward CLEAR\" as stated policy, and"
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "REM-052's deferred question",
+      "context": "decide whether the stricter pre-commit-blocking variant of the gap-status checker is still wanted, given the 2026-07-11 "
+    },
+    {
+      "id": "ACT-HO-15",
+      "category": "required",
+      "label": "REM-077",
+      "context": "the 2026-07-17T07:00:08Z overnight batch dispatch hang needs its actual root cause investigated (distinct bug from GAP-1"
+    },
+    {
+      "id": "ACT-HO-16",
+      "category": "required",
+      "label": "REM-075 remainder",
+      "context": "6 other un-baselined mount-root-pinned hits + a jasonos-cockpit-app.py baseline-drain finding, deliberately not bundled "
+    },
+    {
+      "id": "ACT-HO-17",
+      "category": "required",
+      "label": "PCR-OPS-063",
+      "context": "AskUserQuestion is present and functional in this Cowork session despite feedback_ask_user_question_tool_forbidden.md's "
+    },
+    {
+      "id": "ACT-HO-18",
+      "category": "required",
+      "label": "Promote (or dispose) the staged/batch-2026-07-17-msc mission-critical batch \u2014 3 items, all Steward-reviewed, held for your item-selective promotion.",
+      "context": "Exact sequence in Logs/batch-run-2026-07-17-msc.md:"
+    },
+    {
+      "id": "ACT-HO-19",
+      "category": "required",
+      "label": "Promote the routine batch to canonical",
+      "context": "one item-selective merge-staged --push true call (in Logs/batch-run-2026-07-17-routine.md \u00a7 Promotion trail) lands GAP-1"
+    },
+    {
+      "id": "ACT-HO-20",
+      "category": "required",
+      "label": "Ratify PCR-KNOW-006 (GAP-116)",
+      "context": "Draft external-client-confidentiality procedure + PCR staged on the lane (deadfd8d); ratify or direct changes. This is t"
+    },
+    {
+      "id": "ACT-HO-21",
+      "category": "required",
+      "label": "GAP-157 scheduler deploy",
+      "context": "after promote, refresh the policy-sync scheduled-task prompt via update_scheduled_task (Cowork-only) so the live task ca"
+    },
+    {
+      "id": "ACT-HO-22",
+      "category": "required",
+      "label": "REM-071 deploy ordering",
+      "context": "deploy the drive-backup runner + knowledge.yaml BEFORE/with the knowledge-backup SKILL refresh (runner-first = self-heal"
+    },
+    {
+      "id": "ACT-HO-23",
+      "category": "required",
+      "label": "GAP-158 / PCR-OPS-061 wire-in",
+      "context": "flipping report-triage \u00a7 Step 2c onto the automated --sweep-history command is a separate Steward/CEO-gated go-live; PCR"
+    },
+    {
+      "id": "ACT-HO-24",
+      "category": "required",
+      "label": "REM-074 mitigation (Cowork-side)",
+      "context": "repoint the knowledge-backup + engineering-backup scheduled tasks at commit_via_relay.py --wait (or domain-sub-queue pol"
+    },
+    {
+      "id": "ACT-HO-25",
+      "category": "required",
+      "label": "GAP-157 / REM-071 / REM-074 \u2014 Cowork scheduled-task refreshes",
+      "context": "only surface is Cowork `update_scheduled_task`"
+    },
+    {
+      "id": "ACT-HO-26",
+      "category": "required",
+      "label": "(optional) Promote a memory-currency update",
+      "context": "to relay-removes-recipe-for-closeout-renames capturing the v1.23 --removes no-op \u2014 offered, not yet staged."
+    },
+    {
+      "id": "ACT-HO-27",
+      "category": "confirm",
+      "label": "Confirm tomorrow's daily backup runs, then close REM-071 + REM-074",
+      "context": "REM-071: jasonos-knowledge-backup writes exactly one dated knowledge-log entry (runner-authored, no double). REM-074: a "
+    },
+    {
+      "id": "ACT-HO-28",
+      "category": "required",
+      "label": "GAP-158 wire-in",
+      "context": "unchanged"
+    },
+    {
+      "id": "ACT-HO-29",
+      "category": "required",
+      "label": "\u2b50 MORNING-SWEEP VERIFICATION (President Agent \u2014 do this in the next morning sweep, per CEO instruction 2026-07-17).",
+      "context": "After tonight's daily jasonos-knowledge-backup and jasonos-engineering-backup runs, verify and then close REM-071 + REM-"
+    },
+    {
+      "id": "ACT-HO-30",
+      "category": "required",
+      "label": "GAP-157",
+      "context": "effectively done pending its next jasonos-policy-sync fire using the new writer; verify in the same sweep and close if c"
+    },
+    {
+      "id": "ACT-HO-31",
+      "category": "required",
+      "label": "(cleanup, low)",
+      "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; fi"
+    },
+    {
+      "id": "ACT-HO-32",
+      "category": "required",
+      "label": "Decide PCR-OPS-065 (AskUserQuestion enforcement)",
+      "context": "reverse PCR-OPS-063's decision not to track the settings.json-disable investigation (option 1), and/or approve a standin"
+    },
+    {
+      "id": "ACT-HO-33",
+      "category": "required",
+      "label": "Authorize Phase 1 of PCR-OPS-064 when ready",
+      "context": "policy-sync seam extraction is scoped and approved; awaiting CEO go-ahead to start the build. Not blocking \u2014 no other wo"
+    },
+    {
+      "id": "ACT-HO-34",
+      "category": "required",
+      "label": "Dyson Hope Reel Production \u2014 program pull + ID confirmation.",
+      "context": "Six initiatives filed to Backlog (INI-138 through INI-143). Confirm provisional IDs against canonical portfolio/, run th"
+    },
+    {
+      "id": "ACT-HO-35",
+      "category": "required",
+      "label": "Authorize Security Steward to author PCR-SEC-013",
+      "context": "scoped reel-script egress exception"
+    },
+    {
+      "id": "ACT-HO-36",
+      "category": "required",
+      "label": "Provision Gemini/OpenAI API key(s) + budget",
+      "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
+    },
+    {
+      "id": "ACT-HO-37",
+      "category": "required",
+      "label": "6 gap close-outs deferred \u2014 proceed authorization.",
+      "context": "GAP-101/135/146/148/157/163 are all on canonical but their open\u2192resolved + gaps-INDEX close-outs are held because the Dy"
+    },
+    {
+      "id": "ACT-HO-38",
+      "category": "required",
+      "label": "GAP-148 relay-worker deploy (CEO-gated).",
+      "context": "jasonos-git-relay.sh v1.30 (null-SHA staged-ref reap) is on canonical; deployed copies (~/bin, SandboxData/bin) remain v"
+    },
+    {
+      "id": "ACT-HO-39",
+      "category": "required",
+      "label": "GAP-146 digest wire-in (Steward+CEO-gated).",
+      "context": "write-batch-run-digest.py is on canonical but DORMANT. Pick wire-in Option A (report-triage sweep after step 2h) or B (d"
     }
   ],
   "status_drift": [],
@@ -826,7 +994,7 @@
         "category": "ini-current"
       }
     ],
-    "generated_at": "2026-07-18T08:44:56.193389+00:00"
+    "generated_at": "2026-07-18T10:45:08.319106+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
