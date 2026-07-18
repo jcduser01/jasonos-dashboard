@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T04:35:33Z",
+  "generated_at": "2026-07-18T04:53:13Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 183,
+    "minutes_since_session": 201,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -496,30 +496,6 @@
         "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
         "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
         "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
-      },
-      {
-        "id": "REM-055",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-062",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
-      },
-      {
-        "id": "REM-071",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
-        "stop_line": "None.",
-        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
       }
     ],
     "fully_executable": [
@@ -570,30 +546,6 @@
         "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
         "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
         "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
-      },
-      {
-        "id": "REM-055",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-062",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add dual-root resolution to (or baseline) check-lane-commit-identity.py and tests/test_commit_via_relay_gap077.py.",
-        "stop_line": "None.",
-        "description": "check-dead-path-drift.py GAP-065 mount-root regrowth-guard exits 1: 2 new sole-hardcoded-root\u2026"
-      },
-      {
-        "id": "REM-071",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Diagnose and fix the knowledge-backup task's log-write path so it fires unconditionally on every run.",
-        "stop_line": "None.",
-        "description": "jasonos-knowledge-backup scheduled task silently skipped its knowledge-log.md write step on\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -750,6 +702,14 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "Relay trigger partial-failure leaves --removes' index mutation in place, breaking naive retries"
+      },
+      {
+        "id": "PCR-SEC-013",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
       }
     ],
     "contract_quality_gaps": [
@@ -783,13 +743,31 @@
         "field": "stop_line",
         "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
         "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-SEC-013-reel-script-scoped-egress-exception.md",
+        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T04:35:33.187447+00:00"
+    "generated_at": "2026-07-18T04:53:13.633659+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 5,
+    "open_pcrs": 6,
     "open_gaps": 12,
-    "open_rems": 5
+    "open_rems": 2
   }
 }
