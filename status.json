@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T00:03:19Z",
+  "generated_at": "2026-07-18T00:41:09Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T21:38:22Z",
-    "minutes_since_session": 144,
+    "minutes_since_session": 182,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -384,28 +384,12 @@
         "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
       },
       {
-        "id": "GAP-158",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
-        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
-        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
-      },
-      {
         "id": "GAP-163",
         "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
         "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
         "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
-      },
-      {
-        "id": "PCR-OPS-061",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "None \u2014 this PCR's own completable slice (drafting, CEO decision, protocol-text amendment) is done. The remaining sweep-history-tracking mechanism that enforces the N=2 SLA is GAP-158's runner scope, n",
-        "stop_line": "",
-        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
       },
       {
         "id": "REM-055",
@@ -514,28 +498,12 @@
         "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
       },
       {
-        "id": "GAP-158",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Implement the per-defect sweep-history tracking that drives the PCR-OPS-061 Option B N=2 escalation: extend `operations/bin/check-work-item-contract-conformance.py` (or add a thin wrapper run at repor",
-        "stop_line": "None \u2014 read-only detection + REM emission, same class as the existing step-2c checker; no authority/substrate surface.",
-        "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
-      },
-      {
         "id": "GAP-163",
         "type": "GAP",
         "route": "Queue-ready",
         "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
         "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
         "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
-      },
-      {
-        "id": "PCR-OPS-061",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "None \u2014 this PCR's own completable slice (drafting, CEO decision, protocol-text amendment) is done. The remaining sweep-history-tracking mechanism that enforces the N=2 SLA is GAP-158's runner scope, n",
-        "stop_line": "",
-        "description": "Report-triage step 2c routing amendment \u2014 three options for closing the conformance-check feedback\u2026"
       },
       {
         "id": "REM-055",
@@ -769,11 +737,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T00:03:19.393641+00:00"
+    "generated_at": "2026-07-18T00:41:09.728014+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 4,
-    "open_gaps": 12,
+    "open_pcrs": 3,
+    "open_gaps": 11,
     "open_rems": 10
   }
 }
