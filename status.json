@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T16:29:56Z",
+  "generated_at": "2026-07-18T17:52:48Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 14
   },
   "operational": {
-    "last_session_date": "2026-07-18T08:11:36Z",
-    "minutes_since_session": 498,
+    "last_session_date": "2026-07-18T11:30:00Z",
+    "minutes_since_session": 382,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -139,143 +139,125 @@
     {
       "id": "ACT-HO-17",
       "category": "required",
-      "label": "PCR-OPS-062",
-      "context": "Relay trigger partial-failure leaves --removes' index mutation in place, breaking naive retries. Decide: documentation f"
-    },
-    {
-      "id": "ACT-HO-18",
-      "category": "required",
       "label": "PCR-OPS-063",
       "context": "AskUserQuestion is present and functional in this Cowork session despite feedback_ask_user_question_tool_forbidden.md's "
     },
     {
-      "id": "ACT-HO-19",
+      "id": "ACT-HO-18",
       "category": "required",
       "label": "Promote (or dispose) the staged/batch-2026-07-17-msc mission-critical batch \u2014 3 items, all Steward-reviewed, held for your item-selective promotion.",
       "context": "Exact sequence in Logs/batch-run-2026-07-17-msc.md:"
     },
     {
-      "id": "ACT-HO-20",
+      "id": "ACT-HO-19",
       "category": "required",
       "label": "Promote the routine batch to canonical",
       "context": "one item-selective merge-staged --push true call (in Logs/batch-run-2026-07-17-routine.md \u00a7 Promotion trail) lands GAP-1"
     },
     {
-      "id": "ACT-HO-21",
+      "id": "ACT-HO-20",
       "category": "required",
       "label": "Ratify PCR-KNOW-006 (GAP-116)",
       "context": "Draft external-client-confidentiality procedure + PCR staged on the lane (deadfd8d); ratify or direct changes. This is t"
     },
     {
-      "id": "ACT-HO-22",
+      "id": "ACT-HO-21",
       "category": "required",
       "label": "GAP-157 scheduler deploy",
       "context": "after promote, refresh the policy-sync scheduled-task prompt via update_scheduled_task (Cowork-only) so the live task ca"
     },
     {
-      "id": "ACT-HO-23",
+      "id": "ACT-HO-22",
       "category": "required",
       "label": "REM-071 deploy ordering",
       "context": "deploy the drive-backup runner + knowledge.yaml BEFORE/with the knowledge-backup SKILL refresh (runner-first = self-heal"
     },
     {
-      "id": "ACT-HO-24",
+      "id": "ACT-HO-23",
       "category": "required",
       "label": "GAP-158 / PCR-OPS-061 wire-in",
       "context": "flipping report-triage \u00a7 Step 2c onto the automated --sweep-history command is a separate Steward/CEO-gated go-live; PCR"
     },
     {
-      "id": "ACT-HO-25",
+      "id": "ACT-HO-24",
       "category": "required",
       "label": "REM-074 mitigation (Cowork-side)",
       "context": "repoint the knowledge-backup + engineering-backup scheduled tasks at commit_via_relay.py --wait (or domain-sub-queue pol"
     },
     {
-      "id": "ACT-HO-26",
+      "id": "ACT-HO-25",
       "category": "required",
       "label": "GAP-157 / REM-071 / REM-074 \u2014 Cowork scheduled-task refreshes",
       "context": "only surface is Cowork `update_scheduled_task`"
     },
     {
-      "id": "ACT-HO-27",
+      "id": "ACT-HO-26",
       "category": "required",
       "label": "(optional) Promote a memory-currency update",
       "context": "to relay-removes-recipe-for-closeout-renames capturing the v1.23 --removes no-op \u2014 offered, not yet staged."
     },
     {
-      "id": "ACT-HO-28",
+      "id": "ACT-HO-27",
       "category": "confirm",
       "label": "Confirm tomorrow's daily backup runs, then close REM-071 + REM-074",
       "context": "REM-071: jasonos-knowledge-backup writes exactly one dated knowledge-log entry (runner-authored, no double). REM-074: a "
     },
     {
-      "id": "ACT-HO-29",
+      "id": "ACT-HO-28",
       "category": "required",
       "label": "GAP-158 wire-in",
       "context": "unchanged"
     },
     {
-      "id": "ACT-HO-30",
+      "id": "ACT-HO-29",
       "category": "required",
       "label": "\u2b50 MORNING-SWEEP VERIFICATION (President Agent \u2014 do this in the next morning sweep, per CEO instruction 2026-07-17).",
       "context": "After tonight's daily jasonos-knowledge-backup and jasonos-engineering-backup runs, verify and then close REM-071 + REM-"
     },
     {
-      "id": "ACT-HO-31",
+      "id": "ACT-HO-30",
       "category": "required",
       "label": "GAP-157",
       "context": "effectively done pending its next jasonos-policy-sync fire using the new writer; verify in the same sweep and close if c"
     },
     {
-      "id": "ACT-HO-32",
+      "id": "ACT-HO-31",
       "category": "required",
       "label": "(cleanup, low)",
       "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; fi"
     },
     {
-      "id": "ACT-HO-33",
-      "category": "required",
-      "label": "Decide PCR-OPS-065 (AskUserQuestion enforcement)",
-      "context": "reverse PCR-OPS-063's decision not to track the settings.json-disable investigation (option 1), and/or approve a standin"
-    },
-    {
-      "id": "ACT-HO-34",
+      "id": "ACT-HO-32",
       "category": "required",
       "label": "Authorize Phase 1 of PCR-OPS-064 when ready",
       "context": "policy-sync seam extraction is scoped and approved; awaiting CEO go-ahead to start the build. Not blocking \u2014 no other wo"
     },
     {
-      "id": "ACT-HO-35",
+      "id": "ACT-HO-33",
       "category": "required",
       "label": "Dyson Hope Reel Production \u2014 program pull + ID confirmation.",
       "context": "Six initiatives filed to Backlog (INI-138 through INI-143). Confirm provisional IDs against canonical portfolio/, run th"
     },
     {
-      "id": "ACT-HO-36",
-      "category": "required",
-      "label": "Authorize Security Steward to author PCR-SEC-013",
-      "context": "scoped reel-script egress exception"
-    },
-    {
-      "id": "ACT-HO-37",
+      "id": "ACT-HO-34",
       "category": "required",
       "label": "Provision Gemini/OpenAI API key(s) + budget",
       "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
     },
     {
-      "id": "ACT-HO-38",
+      "id": "ACT-HO-35",
       "category": "required",
       "label": "6 gap close-outs deferred \u2014 proceed authorization.",
       "context": "GAP-101/135/146/148/157/163 are all on canonical but their open\u2192resolved + gaps-INDEX close-outs are held because the Dy"
     },
     {
-      "id": "ACT-HO-39",
+      "id": "ACT-HO-36",
       "category": "required",
       "label": "GAP-148 relay-worker deploy (CEO-gated).",
       "context": "jasonos-git-relay.sh v1.30 (null-SHA staged-ref reap) is on canonical; deployed copies (~/bin, SandboxData/bin) remain v"
     },
     {
-      "id": "ACT-HO-40",
+      "id": "ACT-HO-37",
       "category": "required",
       "label": "GAP-146 digest wire-in (Steward+CEO-gated).",
       "context": "write-batch-run-digest.py is on canonical but DORMANT. Pick wire-in Option A (report-triage sweep after step 2h) or B (d"
@@ -646,6 +628,14 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
+      },
+      {
+        "id": "REM-087",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Amend the two named BC documents once the live task un-scheduling (CEO-reserved, PCR-OPS-067) is confirmed done.",
+        "stop_line": "None.",
+        "description": "BC procedures (sandbox-rebuild + relocation) still list jasonos-daily-briefing as a live scheduled\u2026"
       }
     ],
     "fully_executable": [
@@ -672,6 +662,14 @@
         "runner_scope": "Add dual-root resolution to `operations/bin/jasonos-policy-sync-log-writer.py` (replace the sole-hardcoded `/Volumes/SandboxData` root with `resolve_sandbox_root()`/`resolve_logs_root()` from `jasonos",
         "stop_line": "None \u2014 bounded per-file portability fix; no authority or substrate surface.",
         "description": "check-dead-path-drift.py Direction-3 (GAP-065 mount-root regrowth-guard) exits 1\u2026"
+      },
+      {
+        "id": "REM-087",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "Amend the two named BC documents once the live task un-scheduling (CEO-reserved, PCR-OPS-067) is confirmed done.",
+        "stop_line": "None.",
+        "description": "BC procedures (sandbox-rebuild + relocation) still list jasonos-daily-briefing as a live scheduled\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -738,14 +736,6 @@
         "runner_scope": "None \u2014 the Steward authors the exception as INI-139 Governance Gate item 1, not as a standalone PCR-SEC-013 deliverable.",
         "stop_line": "None remaining at the PCR level. The Steward's gate language itself still carries its own non-waivable review before any egress path goes live (same class as INI-137's existing C1/C3/C5 gates it reuse",
         "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
-      },
-      {
-        "id": "REM-066",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
-        "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
-        "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       }
     ],
     "partially_executable": [
@@ -812,14 +802,6 @@
         "runner_scope": "None \u2014 the Steward authors the exception as INI-139 Governance Gate item 1, not as a standalone PCR-SEC-013 deliverable.",
         "stop_line": "None remaining at the PCR level. The Steward's gate language itself still carries its own non-waivable review before any egress path goes live (same class as INI-137's existing C1/C3/C5 gates it reuse",
         "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
-      },
-      {
-        "id": "REM-066",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Add dual-environment plugin-cache-root resolution to `check-skills-drift.py`, or document the host-only run caveat and reclassify its Cowork exit-2.",
-        "stop_line": "None. (Any actual skill redeploy, if drift is later found, is separately Security-Steward-gated per GAP-112 P2 \u2014 out of scope for this checker-reachability REM.)",
-        "description": "check-skills-drift.py (GAP-112, first live sweep run under protocol v1.14) exits 2 from the Cowork\u2026"
       }
     ],
     "blocked_needs_decision": [
@@ -890,12 +872,19 @@
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
         "category": "PCR"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "CEO decision required",
+        "file": "governance/pcrs/open/PCR-OPS-066-morning-sweep-session-protocol.md",
+        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T16:29:56.489643+00:00"
+    "generated_at": "2026-07-18T17:52:48.087310+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 7,
+    "open_pcrs": 8,
     "open_gaps": 8,
     "open_rems": 3
   }
