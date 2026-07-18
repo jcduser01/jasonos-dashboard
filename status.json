@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T22:08:17Z",
+  "generated_at": "2026-07-18T00:03:19Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-17T21:38:22Z",
-    "minutes_since_session": 29,
+    "minutes_since_session": 144,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -340,32 +340,7 @@
       }
     ]
   },
-  "batch_queue": [
-    {
-      "position": 1,
-      "id": "GAP-116"
-    },
-    {
-      "position": 2,
-      "id": "GAP-157"
-    },
-    {
-      "position": 3,
-      "id": "GAP-158"
-    },
-    {
-      "position": 4,
-      "id": "GAP-160"
-    },
-    {
-      "position": 5,
-      "id": "REM-071"
-    },
-    {
-      "position": 6,
-      "id": "REM-074"
-    }
-  ],
+  "batch_queue": [],
   "jasonos_work_readiness": {
     "eligible_now": [
       {
@@ -375,14 +350,6 @@
         "runner_scope": "In `operations/bin/jasonos-gate-bundle.py` line 109, the inline fallback `_ephemeral_worktree` (used only when the shared `jasonos_worktree_utils` module cannot be imported) builds `wt_dir = os.path.j",
         "stop_line": "",
         "description": "jasonos-gate-bundle.py's inline fallback _ephemeral_worktree hardcodes the wt admin-dir leaf, so\u2026"
-      },
-      {
-        "id": "GAP-116",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
-        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
-        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
       },
       {
         "id": "GAP-135",
@@ -425,12 +392,12 @@
         "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
       },
       {
-        "id": "GAP-160",
+        "id": "GAP-163",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Cross-reference every checker invoked by `report-triage-and-remediation-protocol.md` (and any other `operations/bin/check-*.py` registered in `script-registry.md`) against `operations/bin/tests/` for ",
-        "stop_line": "",
-        "description": "Retroactively audit every registered report-triage checker for a hermetic test suite (PCR-OPS-059\u2026"
+        "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
+        "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
+        "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
       },
       {
         "id": "PCR-OPS-061",
@@ -515,14 +482,6 @@
         "description": "jasonos-gate-bundle.py's inline fallback _ephemeral_worktree hardcodes the wt admin-dir leaf, so\u2026"
       },
       {
-        "id": "GAP-116",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Knowledge Director drafts the external-client-confidentiality procedure per \u00a7 Recommended resolution (classification/retention posture, name-bearing-source-vs-mirror rule, de-identify-and-keep-source ",
-        "stop_line": "None to author the procedure. The procedure it produces is itself the control; until it exists, deny-by-default governs (no external-client client-data ingestion beyond what an engagement requires).",
-        "description": "The KB has no procedure for handling a genuinely-external client's confidential material (and\u2026"
-      },
-      {
         "id": "GAP-135",
         "type": "GAP",
         "route": "Queue-ready",
@@ -563,12 +522,12 @@
         "description": "Implement the step-2c staleness-SLA sweep-history tracking that fires an immediate REM at N=2\u2026"
       },
       {
-        "id": "GAP-160",
+        "id": "GAP-163",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Cross-reference every checker invoked by `report-triage-and-remediation-protocol.md` (and any other `operations/bin/check-*.py` registered in `script-registry.md`) against `operations/bin/tests/` for ",
-        "stop_line": "",
-        "description": "Retroactively audit every registered report-triage checker for a hermetic test suite (PCR-OPS-059\u2026"
+        "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
+        "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
+        "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
       },
       {
         "id": "PCR-OPS-061",
@@ -810,11 +769,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-17T22:08:17.174657+00:00"
+    "generated_at": "2026-07-18T00:03:19.393641+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
-    "open_gaps": 13,
+    "open_gaps": 12,
     "open_rems": 10
   }
 }
