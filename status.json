@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T04:55:18Z",
+  "generated_at": "2026-07-18T05:18:54Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 203,
+    "minutes_since_session": 226,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -460,54 +460,6 @@
   "jasonos_work_readiness": {
     "eligible_now": [
       {
-        "id": "GAP-101",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `operations/bin/jasonos-gate-bundle.py` line 109, the inline fallback `_ephemeral_worktree` (used only when the shared `jasonos_worktree_utils` module cannot be imported) builds `wt_dir = os.path.j",
-        "stop_line": "",
-        "description": "jasonos-gate-bundle.py's inline fallback _ephemeral_worktree hardcodes the wt admin-dir leaf, so\u2026"
-      },
-      {
-        "id": "GAP-135",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
-        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
-        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
-      },
-      {
-        "id": "GAP-146",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
-        "stop_line": "None.",
-        "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
-      },
-      {
-        "id": "GAP-148",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
-        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
-        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
-      },
-      {
-        "id": "GAP-157",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
-        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
-        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
-      },
-      {
-        "id": "GAP-163",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
-        "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
-        "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
-      },
-      {
         "id": "REM-078",
         "type": "REM",
         "route": "Operational",
@@ -517,54 +469,6 @@
       }
     ],
     "fully_executable": [
-      {
-        "id": "GAP-101",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "In `operations/bin/jasonos-gate-bundle.py` line 109, the inline fallback `_ephemeral_worktree` (used only when the shared `jasonos_worktree_utils` module cannot be imported) builds `wt_dir = os.path.j",
-        "stop_line": "",
-        "description": "jasonos-gate-bundle.py's inline fallback _ephemeral_worktree hardcodes the wt admin-dir leaf, so\u2026"
-      },
-      {
-        "id": "GAP-135",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three relay-client tests stand red whenever the suite runs under the live Mac launchd environment, which sets `RELAY_DOMAINS_MODE=per-domain` (INI-134 cutover): `operations/bin/tests/test_commit_via_r",
-        "stop_line": "None \u2014 test-only health fix (no product code, no commit path, no deploy path). Do not \"fix\" it by weakening the client's per-domain probe or by asserting against the live queue.",
-        "description": "Three relay-client Python tests stand red under the live per-domain launchd env because they patch\u2026"
-      },
-      {
-        "id": "GAP-146",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Extend the report-triage sweep's Step 2h output (or the daemon's own run report) so a",
-        "stop_line": "None.",
-        "description": "Morning sweep should surface overnight batch-run outcomes proactively, not just report clean on\u2026"
-      },
-      {
-        "id": "GAP-148",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Root-cause and remove the source of stale `refs/heads/staged/<lane>.lock.stale-<N>-<token>` artifacts in the operations repo (`/Volumes/SandboxData/operations/jasonos-operations`), and add a defensive",
-        "stop_line": "None \u2014 fully completable; local ref hygiene only.",
-        "description": "Relay staged-lane lifecycle leaves a broken null-SHA .lock.stale-* ref under refs/heads/staged/\u2026"
-      },
-      {
-        "id": "GAP-157",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Apply the Operational Log Lifecycle Standard (`policies/operations/log-lifecycle-standard.md`, governance repo) to the writer of `Logs/policy-sync-log.md`: add write-on-change + heartbeat (Rule 1) or ",
-        "stop_line": "None \u2014 a bounded per-writer conformance change; no authority or substrate surface.",
-        "description": "Apply the Operational Log Lifecycle Standard to Logs/policy-sync-log.md"
-      },
-      {
-        "id": "GAP-163",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Author a dedicated hermetic `test_*.py` suite under `operations/bin/tests/` for each of the two registered `operations/bin/check-*.py` checkers the GAP-160 audit found without one: (1) `check-schedule",
-        "stop_line": "None. (If a suite exposes a genuine checker behavior bug, stage the RED proof + fix-forward within scope; do not expand into unrelated checker rework.)",
-        "description": "Author hermetic test suites for the two registered checkers lacking one (GAP-160 audit finding)"
-      },
       {
         "id": "REM-078",
         "type": "REM",
@@ -606,6 +510,14 @@
         "runner_scope": "Two non-blocking residuals surfaced by the Security Steward's terminal review of the GAP-126 fix (`CAP-REV-2026-07-15-GAP126`, Conditions 1 and 3). GAP-126 made both relay commit paths path-limited (`",
         "stop_line": "**Steward-gated** \u2014 commit-path substrate (PCR-OPS-045). Preserve the GAP-126 isolation, the GAP-117 trailer path, the INI-134 Stage-2 interlock ordering + Stage-4 lease/fencing ordering, and the push",
         "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026"
+      },
+      {
+        "id": "GAP-164",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Two phases, per the **CEO-selected approach in \u00a7 CEO Decision** (Option B preferred, Option A as the compatibility-spike fallback). **(1) Reconcile the backlog:** port the ~43 harness-only memory entr",
+        "stop_line": "Do NOT delete any file from the native harness store until its content is confirmed present in canonical (grade the artifact \u2014 the harness store is not git-tracked and has no backup; a premature delet",
+        "description": "Native Claude Code terminal harness memory store has diverged from the canonical\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -656,6 +568,14 @@
         "runner_scope": "Two non-blocking residuals surfaced by the Security Steward's terminal review of the GAP-126 fix (`CAP-REV-2026-07-15-GAP126`, Conditions 1 and 3). GAP-126 made both relay commit paths path-limited (`",
         "stop_line": "**Steward-gated** \u2014 commit-path substrate (PCR-OPS-045). Preserve the GAP-126 isolation, the GAP-117 trailer path, the INI-134 Stage-2 interlock ordering + Stage-4 lease/fencing ordering, and the push",
         "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026"
+      },
+      {
+        "id": "GAP-164",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Two phases, per the **CEO-selected approach in \u00a7 CEO Decision** (Option B preferred, Option A as the compatibility-spike fallback). **(1) Reconcile the backlog:** port the ~43 harness-only memory entr",
+        "stop_line": "Do NOT delete any file from the native harness store until its content is confirmed present in canonical (grade the artifact \u2014 the harness store is not git-tracked and has no backup; a premature delet",
+        "description": "Native Claude Code terminal harness memory store has diverged from the canonical\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -746,13 +666,6 @@
         "category": "PCR"
       },
       {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "**Queue-ready**",
-        "file": "governance/gaps/open/GAP-164-native-terminal-harness-memory-store-diverged-from-canonical-governance-memory.md",
-        "category": "gap-open"
-      },
-      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-062-relay-partial-failure-index-mutation.md",
@@ -789,11 +702,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T04:55:18.747200+00:00"
+    "generated_at": "2026-07-18T05:18:54.388364+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 6,
-    "open_gaps": 12,
+    "open_gaps": 6,
     "open_rems": 3
   }
 }
