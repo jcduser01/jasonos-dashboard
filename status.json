@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T03:32:47Z",
+  "generated_at": "2026-07-18T04:17:51Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T01:31:57Z",
-    "minutes_since_session": 120,
+    "minutes_since_session": 165,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -413,22 +413,6 @@
         "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
       },
       {
-        "id": "REM-060",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
-        "stop_line": "None.",
-        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
-      },
-      {
-        "id": "REM-061",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
-        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
-        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
-      },
-      {
         "id": "REM-062",
         "type": "REM",
         "route": "Operational",
@@ -501,22 +485,6 @@
         "runner_scope": "Add the `dead-path-ok` marker comment to `test_commit_via_relay_gap051.py:42`.",
         "stop_line": "None.",
         "description": "check-dead-path-drift.py (PCR-OPS-035/INI-131) exits 1: a new test file\u2026"
-      },
-      {
-        "id": "REM-060",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Backfill the PCR-SEC-011 declaration on CAP-REV-2026-07-10-GAP051 and CAP-REV-2026-07-11-ENG016; verify each declared path exists before accepting.",
-        "stop_line": "None.",
-        "description": "check-cap-rev-write-claims.py (step 2f) exits 1 on two genuine PCR-SEC-011 conformance defects\u2026"
-      },
-      {
-        "id": "REM-061",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "Re-sync the three deployed copies from canonical to SandboxData/bin and ~/bin.",
-        "stop_line": "None \u2014 but confirm the canonical `commit_via_relay.py` is the reviewed version before syncing (push-path script).",
-        "description": "check-script-registry-coverage.py exits 1 (regressed from exit 0): 3 operations/bin scripts have\u2026"
       },
       {
         "id": "REM-062",
@@ -717,11 +685,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-18T03:32:47.495842+00:00"
+    "generated_at": "2026-07-18T04:17:51.579645+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 5,
     "open_gaps": 11,
-    "open_rems": 7
+    "open_rems": 5
   }
 }
