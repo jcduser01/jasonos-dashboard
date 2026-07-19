@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T03:09:40Z",
+  "generated_at": "2026-07-19T03:54:44Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T13:45:00Z",
-    "minutes_since_session": 804,
+    "minutes_since_session": 849,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -586,6 +586,14 @@
         "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
       },
       {
+        "id": "GAP-172",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "See \u00a7 Staged plan. Stage 1 only until the CEO schedules Stage 2 (deferred to w/c 2026-07-20 per CEO, token-budget driven).",
+        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until Stage 2 delivers a working containment layer AND a Secur",
+        "description": "Unattended batch execution needs an OS-level sandbox, not a tool-permission jail: staged\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -652,6 +660,14 @@
         "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
       },
       {
+        "id": "GAP-172",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "See \u00a7 Staged plan. Stage 1 only until the CEO schedules Stage 2 (deferred to w/c 2026-07-20 per CEO, token-budget driven).",
+        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until Stage 2 delivers a working containment layer AND a Secur",
+        "description": "Unattended batch execution needs an OS-level sandbox, not a tool-permission jail: staged\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -672,7 +688,7 @@
       {
         "id": "GAP-170",
         "type": "GAP",
-        "route": "Queue-ready for the detector half. The **policy placement decision**",
+        "route": "Queue-ready",
         "runner_scope": "Two separable parts.",
         "stop_line": "**The detector must never delete a worktree or branch, and no automation built under this gap may.** Deletion stays a human-authorized act performed against a specific reviewed report. This is not cau",
         "description": "No recurring discipline reaps stale git worktrees and lanes; debris accumulates until it holds the\u2026"
@@ -680,7 +696,7 @@
       {
         "id": "GAP-171",
         "type": "GAP",
-        "route": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
+        "route": "Queue-ready",
         "runner_scope": "Three separable parts, in order.",
         "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
         "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
@@ -708,28 +724,17 @@
         "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
         "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
-      }
-    ],
-    "blocked_needs_director_decision": [
-      {
-        "id": "GAP-094",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
-        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026",
-        "director": "Security Steward"
       },
       {
-        "id": "REM-064",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "Do not stamp `doctrine_reconciled` on an artifact whose reconciliation would set or imply a fee structure or contract term \u2014 those are CEO-reserved (DEC-JCD-001); escalate that artifact instead.",
-        "description": "check-doctrine-artifact-currency.py exits 1 (regressed from exit 0): 9 Jason Cook Design\u2026",
-        "director": "Knowledge Director"
+        "id": "PCR-OPS-068",
+        "type": "PCR",
+        "route": "CEO-first",
+        "runner_scope": "None \u2014 the PCR draft above is already complete; there is no build for the runner until the CEO rules on \u00a7 Decision required.",
+        "stop_line": "None \u2014 this item does not enter the runner queue; it halts immediately awaiting the CEO's decision in \u00a7 Decision required. Once decided, if the CEO authorizes a policy-doc amendment, Route becomes Dra",
+        "description": "No standing procedure for Cowork sessions substituting for Mac-side director/Steward subagents"
       }
     ],
+    "blocked_needs_director_decision": [],
     "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-054",
@@ -738,14 +743,6 @@
         "runner_scope": "",
         "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
-      },
-      {
-        "id": "PCR-OPS-068",
-        "type": "PCR",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "No standing procedure for Cowork sessions substituting for Mac-side director/Steward subagents"
       },
       {
         "id": "REM-090",
@@ -774,52 +771,13 @@
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
         "category": "PCR"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready for the detector half. The **policy placement decision**",
-        "file": "governance/gaps/open/GAP-170-no-recurring-discipline-for-stale-git-worktree-and-lane-debris.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
-        "file": "governance/gaps/open/GAP-171-no-queue-eligibility-discipline-for-batch-admissible-work-items.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Two stages",
-        "file": "governance/gaps/open/GAP-172-batch-execution-needs-os-level-sandbox-not-tool-permission-jail.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
-        "category": "pcr-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
-        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T03:09:40.203387+00:00"
+    "generated_at": "2026-07-19T03:54:44.306991+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
-    "open_gaps": 12,
-    "open_rems": 4
+    "open_gaps": 11,
+    "open_rems": 3
   }
 }
