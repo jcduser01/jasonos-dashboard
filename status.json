@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T07:32:28Z",
+  "generated_at": "2026-07-19T09:32:27Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -11,8 +11,8 @@
     "backlog": 13
   },
   "operational": {
-    "last_session_date": "2026-07-18T13:45:00Z",
-    "minutes_since_session": 1067,
+    "last_session_date": "2026-07-19T07:35:16Z",
+    "minutes_since_session": 117,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -118,20 +118,56 @@
     {
       "id": "ACT-HO-11",
       "category": "required",
-      "label": "Dyson Hope Reel Production \u2014 program pull + ID confirmation.",
-      "context": "Six initiatives filed to Backlog (INI-138 through INI-143). Confirm provisional IDs against canonical portfolio/, run th"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
       "label": "Provision Gemini/OpenAI API key(s) + budget",
       "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
     },
     {
-      "id": "ACT-HO-13",
+      "id": "ACT-HO-12",
       "category": "required",
       "label": "GAP-146 digest wire-in (Steward+CEO-gated).",
       "context": "write-batch-run-digest.py is on canonical but DORMANT. CEO decided Option A 2026-07-18 (report-triage sweep, alongside t"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "Ratify PCR-OPS-068's Cowork-director-substitution question",
+      "context": "decide whether the pattern used twice this session (independent same-session agent standing in for a Mac-side director, "
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Build and register jasonos-morning-sweep-precompile",
+      "context": "*(tracked under PCR-OPS-066)* \u2014 the SKILL.md is drafted and independently reviewed; scheduled-task creation, scheduled-t"
+    },
+    {
+      "id": "ACT-HO-15",
+      "category": "required",
+      "label": "Run jasonos-access-compiler.py",
+      "context": "Mac-side, deploy-gated"
+    },
+    {
+      "id": "ACT-HO-16",
+      "category": "required",
+      "label": "INI-138 \u2014 Series-taxonomy reconciliation.",
+      "context": "Confirm the CEO's live Content Workbook (not instagram-content-strategy.md's Signature Series table) is authoritative, s"
+    },
+    {
+      "id": "ACT-HO-17",
+      "category": "required",
+      "label": "INI-138/INI-140 \u2014 template-selection architecture.",
+      "context": "Decide whether every Series needs its own Phase-2 template file, or whether Series+Framework alone are sufficient for th"
+    },
+    {
+      "id": "ACT-HO-18",
+      "category": "required",
+      "label": "INI-138 \u2014 Phase 3 agent confirmation.",
+      "context": "Confirm operations/bin/jasonos-blog-drip.py is the right existing recurring-research agent to extend for article-note me"
+    },
+    {
+      "id": "ACT-HO-19",
+      "category": "required",
+      "label": "Portfolio README Mac-side regen",
+      "context": "run the portfolio README generator on the Mac mini to pick up INI-138's Backlog\u2192Current pull (unsafe to run from Cowork)"
     }
   ],
   "status_drift": [],
@@ -147,8 +183,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-19T06:33:56Z",
-      "invocations_30d": 36
+      "last_active": "2026-07-19T07:48:30Z",
+      "invocations_30d": 37
     },
     {
       "name": "knowledge-director",
@@ -813,7 +849,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T07:32:28.125801+00:00"
+    "generated_at": "2026-07-19T09:32:27.796198+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
