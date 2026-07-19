@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T02:11:57Z",
+  "generated_at": "2026-07-19T03:09:40Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T13:45:00Z",
-    "minutes_since_session": 746,
+    "minutes_since_session": 804,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -698,7 +698,7 @@
         "type": "PCR",
         "route": "CEO-first",
         "runner_scope": "",
-        "stop_line": "CEO decision required (see \u00a7 Decision required) before any \u00a7 Commit Authorization amendment is drafted or enacted.",
+        "stop_line": "None remaining \u2014 decision recorded above.",
         "description": "Commit-authorization approval specificity is undefined"
       },
       {
@@ -708,14 +708,6 @@
         "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
         "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
-      },
-      {
-        "id": "REM-091",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "Requires Mac-native (host) access to diagnose and act \u2014 cannot be closed from Cowork.",
-        "description": "Step 2k Part A infrastructure health: canonical-fetch and git-relay both stopped producing log\u2026"
       }
     ],
     "blocked_needs_director_decision": [
@@ -772,6 +764,12 @@
         "category": "PCR"
       },
       {
+        "id": "PCR-GOV-008",
+        "file": "governance/pcrs/open/PCR-GOV-008-commit-authorization-approval-specificity-undefined.md",
+        "issue": "decision-recorded-ceo-action-header-stale",
+        "category": "PCR"
+      },
+      {
         "id": "PCR-OPS-064",
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
@@ -817,11 +815,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T02:11:57.377691+00:00"
+    "generated_at": "2026-07-19T03:09:40.203387+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
     "open_gaps": 12,
-    "open_rems": 5
+    "open_rems": 4
   }
 }
