@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T05:32:15Z",
+  "generated_at": "2026-07-19T07:32:28Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-18T13:45:00Z",
-    "minutes_since_session": 947,
+    "minutes_since_session": 1067,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -141,13 +141,13 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-07-18T02:03:40Z",
-      "invocations_30d": 20
+      "last_active": "2026-07-19T02:02:54Z",
+      "invocations_30d": 21
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-18T07:44:21Z",
+      "last_active": "2026-07-19T06:33:56Z",
       "invocations_30d": 36
     },
     {
@@ -454,6 +454,14 @@
   "jasonos_work_readiness": {
     "eligible_now": [
       {
+        "id": "GAP-168",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Investigate why the settings.json-level disable referenced in the original 2026-07-08 directive (`governance/memory/feedback_ask_user_question_tool_forbidden.md`) did not take effect for the Cowork en",
+        "stop_line": "None \u2014 investigation and, if a fix is found, a settings/config change scoped to disabling one named tool; not a substrate or authority change.",
+        "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
+      },
+      {
         "id": "GAP-174",
         "type": "GAP",
         "route": "Queue-ready",
@@ -479,6 +487,14 @@
       }
     ],
     "fully_executable": [
+      {
+        "id": "GAP-168",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Investigate why the settings.json-level disable referenced in the original 2026-07-08 directive (`governance/memory/feedback_ask_user_question_tool_forbidden.md`) did not take effect for the Cowork en",
+        "stop_line": "None \u2014 investigation and, if a fix is found, a settings/config change scoped to disabling one named tool; not a substrate or authority change.",
+        "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
+      },
       {
         "id": "GAP-174",
         "type": "GAP",
@@ -554,14 +570,6 @@
         "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
       },
       {
-        "id": "GAP-172",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "See \u00a7 Staged plan. Stage 1 only until the CEO schedules Stage 2 (deferred to w/c 2026-07-20 per CEO, token-budget driven).",
-        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until Stage 2 delivers a working containment layer AND a Secur",
-        "description": "Unattended batch execution needs an OS-level sandbox, not a tool-permission jail: staged\u2026"
-      },
-      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -628,14 +636,6 @@
         "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
       },
       {
-        "id": "GAP-172",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "See \u00a7 Staged plan. Stage 1 only until the CEO schedules Stage 2 (deferred to w/c 2026-07-20 per CEO, token-budget driven).",
-        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until Stage 2 delivers a working containment layer AND a Secur",
-        "description": "Unattended batch execution needs an OS-level sandbox, not a tool-permission jail: staged\u2026"
-      },
-      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -656,7 +656,7 @@
       {
         "id": "GAP-170",
         "type": "GAP",
-        "route": "Queue-ready",
+        "route": "Queue-ready for the detector half. The **policy placement decision**",
         "runner_scope": "Two separable parts.",
         "stop_line": "**The detector must never delete a worktree or branch, and no automation built under this gap may.** Deletion stays a human-authorized act performed against a specific reviewed report. This is not cau",
         "description": "No recurring discipline reaps stale git worktrees and lanes; debris accumulates until it holds the\u2026"
@@ -664,10 +664,18 @@
       {
         "id": "GAP-171",
         "type": "GAP",
-        "route": "Queue-ready",
+        "route": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
         "runner_scope": "Three separable parts, in order.",
         "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
         "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
+      },
+      {
+        "id": "GAP-175",
+        "type": "GAP",
+        "route": "CEO-first for the grant-derivation design question below; the mechanical fix",
+        "runner_scope": "`operations/bin/jasonos-batch-orchestrator.py`, `_default_commit_seam()` (~lines 467\u2013529): add `--autonomy-grant daemon-armed` to the `commit_via_relay.py --action merge-staged ...` invocation this fu",
+        "stop_line": "This fix must land (or PCR-OPS-069's guard must be held back) before `jasonos-git-relay.sh` v1.31 is deployed to `/Volumes/SandboxData/bin` / `~/bin`. Deploying the guard without this fix silently bre",
+        "description": "jasonos-batch-orchestrator.py's _default_commit_seam() will fail closed the moment the PCR-OPS-069\u2026"
       },
       {
         "id": "PCR-ENG-020",
@@ -694,15 +702,25 @@
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
       },
       {
-        "id": "PCR-OPS-068",
+        "id": "PCR-OPS-069",
         "type": "PCR",
         "route": "CEO-first",
-        "runner_scope": "None \u2014 the PCR draft above is already complete; there is no build for the runner until the CEO rules on \u00a7 Decision required.",
-        "stop_line": "None \u2014 this item does not enter the runner queue; it halts immediately awaiting the CEO's decision in \u00a7 Decision required. Once decided, if the CEO authorizes a policy-doc amendment, Route becomes Dra",
-        "description": "No standing procedure for Cowork sessions substituting for Mac-side director/Steward subagents"
+        "runner_scope": "None until the CEO rules on \u00a7 Decision required. Once decided: if option 1 or 3 is chosen, Runner scope is the `commit_via_relay.py` / Mac-side-worker code change adding the fail-closed grant check; i",
+        "stop_line": "None \u2014 this item does not enter the runner queue; it halts immediately awaiting the CEO's decision above. No further `--push true` relay calls should rely on this PCR as authorization in the interim \u2014",
+        "description": "commit_via_relay.py --push true has no mechanical autonomy-tier check"
       }
     ],
-    "blocked_needs_director_decision": [],
+    "blocked_needs_director_decision": [
+      {
+        "id": "GAP-094",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "",
+        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
+        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026",
+        "director": "Security Steward"
+      }
+    ],
     "not_executable_leading_stop": [
       {
         "id": "PCR-OPS-054",
@@ -713,12 +731,12 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
-        "id": "PCR-OPS-069",
+        "id": "PCR-OPS-068",
         "type": "PCR",
         "route": null,
         "runner_scope": "",
         "stop_line": "",
-        "description": "commit_via_relay.py --push true has no mechanical autonomy-tier check"
+        "description": "No standing procedure for Cowork sessions substituting for Mac-side director/Steward subagents"
       },
       {
         "id": "REM-090",
@@ -749,29 +767,57 @@
         "category": "PCR"
       },
       {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready for the detector half. The **policy placement decision**",
+        "file": "governance/gaps/open/GAP-170-no-recurring-discipline-for-stale-git-worktree-and-lane-debris.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
+        "file": "governance/gaps/open/GAP-171-no-queue-eligibility-discipline-for-batch-admissible-work-items.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Two stages",
+        "file": "governance/gaps/open/GAP-172-batch-execution-needs-os-level-sandbox-not-tool-permission-jail.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "CEO-first for the grant-derivation design question below; the mechanical fix",
+        "file": "governance/gaps/open/GAP-175-batch-orchestrator-commit-seam-lacks-autonomy-grant-declaration.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
-        "file": "governance/pcrs/open/PCR-OPS-069-relay-push-true-has-no-autonomy-tier-check.md",
+        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
         "category": "pcr-open"
       },
       {
         "type": "missing_scope",
         "field": "runner_scope",
-        "file": "governance/pcrs/open/PCR-OPS-069-relay-push-true-has-no-autonomy-tier-check.md",
+        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
         "category": "pcr-open"
       },
       {
         "type": "missing_field",
         "field": "stop_line",
-        "file": "governance/pcrs/open/PCR-OPS-069-relay-push-true-has-no-autonomy-tier-check.md",
+        "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T05:32:15.840735+00:00"
+    "generated_at": "2026-07-19T07:32:28.125801+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
-    "open_gaps": 10,
+    "open_gaps": 13,
     "open_rems": 3
   }
 }
