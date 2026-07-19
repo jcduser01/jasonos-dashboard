@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-19T04:12:36Z",
+  "generated_at": "2026-07-19T05:32:15Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 110,
     "total": 133,
-    "active": 1,
+    "active": 2,
     "queued": 0,
     "paused": 8,
-    "backlog": 14
+    "backlog": 13
   },
   "operational": {
     "last_session_date": "2026-07-18T13:45:00Z",
-    "minutes_since_session": 867,
-    "airlock_queue": 1,
-    "airlock_bundles": 0
+    "minutes_since_session": 947,
+    "airlock_queue": 3,
+    "airlock_bundles": 1
   },
   "active_initiative": {
     "id": "INI-053",
@@ -35,6 +35,21 @@
         "route": "CEO-first",
         "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
         "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
+      }
+    },
+    {
+      "id": "INI-138",
+      "name": "Dyson Hope Reels \u2014 Knowledge Base Normalization & Retrieval Contracts",
+      "status": "active",
+      "contract": {
+        "route": "CEO-first",
+        "runner_scope": "Knowledge-Director-buildable end to end: normalizing the CEO's existing Dyson Hope vault content (backlog spreadsheet, format templates, article notes, prior scripts) into machine-readable sources with stable IDs. No external services, no model egress, no paid work. Nothing leaves the box.",
+        "stop_line": "Deny-by-default on destructive edits to the CEO's authored source material \u2014 normalization is additive/derived (new machine-readable projections beside the originals), never in-place rewriting of the CEO's notes. No content is invented; empty fields stay empty pending CEO input.",
+        "depends_on": [
+          "INI-047",
+          "INI-057",
+          "INI-101"
+        ]
       }
     }
   ],
@@ -144,8 +159,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-09T23:21:25Z",
-      "invocations_30d": 18
+      "last_active": "2026-07-19T00:21:38Z",
+      "invocations_30d": 19
     },
     {
       "name": "research-director",
@@ -314,21 +329,6 @@
         }
       },
       {
-        "id": "INI-138",
-        "name": "Dyson Hope Reels \u2014 Knowledge Base Normalization & Retrieval Contracts",
-        "notes": "Program: Dyson Hope Reel Production (see knowledge/clients/dyson-hope-family/_shared/reel-production-program-brief.md). Foundational \u2014 every downstream initiative reads from these normalized\u2026",
-        "contract": {
-          "route": "CEO-first",
-          "runner_scope": "Knowledge-Director-buildable end to end: normalizing the CEO's existing Dyson Hope vault content (backlog spreadsheet, format templates, article notes, prior scripts) into machine-readable sources with stable IDs. No external services, no model egress, no paid work. Nothing leaves the box.",
-          "stop_line": "Deny-by-default on destructive edits to the CEO's authored source material \u2014 normalization is additive/derived (new machine-readable projections beside the originals), never in-place rewriting of the CEO's notes. No content is invented; empty fields stay empty pending CEO input.",
-          "depends_on": [
-            "INI-047",
-            "INI-057",
-            "INI-101"
-          ]
-        }
-      },
-      {
         "id": "INI-140",
         "name": "Dyson Hope Reel Producer \u2014 Staged Scripting Pipeline (Brief \u2192 Draft \u2192 Critique \u2192 Approval)",
         "notes": "Program: Dyson Hope Reel Production. The spine of the program. Implemented as a staged state machine, NOT one giant prompt: brief \u2192 (human angle gate) \u2192 draft \u2192 independent critique \u2192 revision \u2192\u2026",
@@ -454,20 +454,12 @@
   "jasonos_work_readiness": {
     "eligible_now": [
       {
-        "id": "GAP-169",
+        "id": "GAP-174",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Add a read-only detector \u2014 either a new `operations/bin/check-*.py` or an added facet on an existing contract/agreement checker \u2014 that flags any work item filed in a terminal folder (`governance/gaps/",
-        "stop_line": "None. Detector only \u2014 it must not edit, close, or reopen any work item, and must not be wired into any blocking pre-commit gate in this change (report-triage sweep wiring is the intended consumer; a b",
-        "description": "No detector flags a work item closed into resolved/ whose Resolution notes are empty or still\u2026"
-      },
-      {
-        "id": "PCR-OPS-065",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "GAP-168 tracks the settings-level investigation/fix (Engineering-owned). The pre-flight check (option 2) is done \u2014 added to `agents/president-context-prompt.md` v1.4.",
-        "stop_line": "None remaining.",
-        "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
+        "runner_scope": "Extend `check-gap-folder-status-agreement.py` with a PCR facet (or add a parallel `check_pcr_folder_status_agreement()`-style function in the same module, per its own existing per-type-scoping precede",
+        "stop_line": "None. Detector only \u2014 it must not edit, close, or reopen any work item, and must not be wired into any blocking pre-commit gate in this change (report-triage sweep wiring, as an addition to the existi",
+        "description": "check-gap-folder-status-agreement.py has no PCR facet: a resolved PCR's folder/Status *semantic*\u2026"
       },
       {
         "id": "REM-078",
@@ -488,20 +480,12 @@
     ],
     "fully_executable": [
       {
-        "id": "GAP-169",
+        "id": "GAP-174",
         "type": "GAP",
         "route": "Queue-ready",
-        "runner_scope": "Add a read-only detector \u2014 either a new `operations/bin/check-*.py` or an added facet on an existing contract/agreement checker \u2014 that flags any work item filed in a terminal folder (`governance/gaps/",
-        "stop_line": "None. Detector only \u2014 it must not edit, close, or reopen any work item, and must not be wired into any blocking pre-commit gate in this change (report-triage sweep wiring is the intended consumer; a b",
-        "description": "No detector flags a work item closed into resolved/ whose Resolution notes are empty or still\u2026"
-      },
-      {
-        "id": "PCR-OPS-065",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "GAP-168 tracks the settings-level investigation/fix (Engineering-owned). The pre-flight check (option 2) is done \u2014 added to `agents/president-context-prompt.md` v1.4.",
-        "stop_line": "None remaining.",
-        "description": "AskUserQuestion ban recurred post-PCR-OPS-063 \u2014 the ban has no mechanical enforcement"
+        "runner_scope": "Extend `check-gap-folder-status-agreement.py` with a PCR facet (or add a parallel `check_pcr_folder_status_agreement()`-style function in the same module, per its own existing per-type-scoping precede",
+        "stop_line": "None. Detector only \u2014 it must not edit, close, or reopen any work item, and must not be wired into any blocking pre-commit gate in this change (report-triage sweep wiring, as an addition to the existi",
+        "description": "check-gap-folder-status-agreement.py has no PCR facet: a resolved PCR's folder/Status *semantic*\u2026"
       },
       {
         "id": "REM-078",
@@ -729,6 +713,14 @@
         "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
+        "id": "PCR-OPS-069",
+        "type": "PCR",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "",
+        "description": "commit_via_relay.py --push true has no mechanical autonomy-tier check"
+      },
+      {
         "id": "REM-090",
         "type": "REM",
         "route": "Operational",
@@ -755,9 +747,27 @@
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
         "category": "PCR"
+      },
+      {
+        "type": "missing_field",
+        "field": "route",
+        "file": "governance/pcrs/open/PCR-OPS-069-relay-push-true-has-no-autonomy-tier-check.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_scope",
+        "field": "runner_scope",
+        "file": "governance/pcrs/open/PCR-OPS-069-relay-push-true-has-no-autonomy-tier-check.md",
+        "category": "pcr-open"
+      },
+      {
+        "type": "missing_field",
+        "field": "stop_line",
+        "file": "governance/pcrs/open/PCR-OPS-069-relay-push-true-has-no-autonomy-tier-check.md",
+        "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T04:12:36.033710+00:00"
+    "generated_at": "2026-07-19T05:32:15.840735+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
