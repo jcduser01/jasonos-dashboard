@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T09:32:27Z",
+  "generated_at": "2026-07-19T11:17:54Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 117,
+    "minutes_since_session": 222,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -744,6 +744,14 @@
         "runner_scope": "None until the CEO rules on \u00a7 Decision required. Once decided: if option 1 or 3 is chosen, Runner scope is the `commit_via_relay.py` / Mac-side-worker code change adding the fail-closed grant check; i",
         "stop_line": "None \u2014 this item does not enter the runner queue; it halts immediately awaiting the CEO's decision above. No further `--push true` relay calls should rely on this PCR as authorization in the interim \u2014",
         "description": "commit_via_relay.py --push true has no mechanical autonomy-tier check"
+      },
+      {
+        "id": "REM-095",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Requires Mac-native (host) access to diagnose and act \u2014 cannot be closed from Cowork.",
+        "description": "Step 2k Part A infrastructure health: canonical-fetch and git-relay both went silent again around\u2026"
       }
     ],
     "blocked_needs_director_decision": [
@@ -781,6 +789,30 @@
         "runner_scope": "",
         "stop_line": "Author must read PCR-OPS-068 itself before assigning its Route/Runner scope/Stop-line \u2014 do not default to a template value.",
         "description": "check-work-item-contract-conformance.py exits 1 with 3 fresh defects: PCR-OPS-068 (Cowork director\u2026"
+      },
+      {
+        "id": "REM-092",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "None \u2014 a director or the President Agent can delete the stray file directly; this is a same-item duplicate of an already-resolved, already-narrated record, not a live edit to governance content.",
+        "description": "check-gap-folder-status-agreement.py step 2g index-drift check exits 1: GAP-094 has a stale\u2026"
+      },
+      {
+        "id": "REM-093",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "None \u2014 a director or the President Agent can correct these fields directly; this does not touch a commit-path, audit-path, or authority-adjacent surface.",
+        "description": "Step 2c full-sweep check-work-item-contract-conformance.py reports 7 current contract-conformance\u2026"
+      },
+      {
+        "id": "REM-094",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "None \u2014 Engineering or the President Agent can port the fix directly; it touches monitoring/poll text, not a commit-path, audit-path, or authority surface.",
+        "description": "jasonos-financial-state-backup.SKILL.md's Step 3 polls only the flat-root .git-commit-queue/ path\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -849,11 +881,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T09:32:27.796198+00:00"
+    "generated_at": "2026-07-19T11:17:54.599837+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 8,
     "open_gaps": 13,
-    "open_rems": 3
+    "open_rems": 7
   }
 }
