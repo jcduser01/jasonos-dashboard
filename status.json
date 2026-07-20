@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T22:57:02Z",
+  "generated_at": "2026-07-20T23:21:48Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 2361,
+    "minutes_since_session": 2386,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -915,19 +915,6 @@
       },
       {
         "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-181-pcr-ops-069-grant-is-a-declaration-not-an-authorization-and-is-unscoped-for-daemons.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready for the design/diagnosis half. **Steward-gated at the stop-line**",
-        "file": "governance/gaps/open/GAP-181-pcr-ops-069-grant-is-a-declaration-not-an-authorization-and-is-unscoped-for-daemons.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-070-duplicate-work-item-id-across-folders-uncaught.md",
         "category": "pcr-open"
@@ -994,11 +981,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-20T22:57:02.294208+00:00"
+    "generated_at": "2026-07-20T23:21:48.088289+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 15,
+    "open_gaps": 14,
     "open_rems": 8
   }
 }
