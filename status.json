@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T22:56:59Z",
+  "generated_at": "2026-07-20T22:57:02Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -994,7 +994,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-20T22:56:59.748405+00:00"
+    "generated_at": "2026-07-20T22:57:02.294208+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
