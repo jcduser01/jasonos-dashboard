@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T17:18:05Z",
+  "generated_at": "2026-07-20T00:48:12Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 582,
+    "minutes_since_session": 1032,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -58,113 +58,59 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "GAP-051 priority re-assessment",
-      "context": "filed Low on a premise disproved 2026-07-09: the relay creates the commit and then errors on the push, stranding it on l"
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Website Repositioning decision",
-      "context": "three coupled asks tied to INI-114, all live; INI-114 is Backlog and unblocked. (a) pull decision + director composition"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-2",
       "category": "required",
       "label": "Medical/financial power of attorney",
       "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Canonize UX best-practices into a KB article",
       "context": "*(parked)* \u2014 externalize the CEO's UX-career expertise into org knowledge. Propose at a natural moment."
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "Google Workspace OAuth as the durable Gmail auth target",
       "context": "*(long-horizon)* \u2014 if a JasonOS domain identity earns its keep."
     },
     {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "SAM.gov entity registration / tier confirmation",
-      "context": "INI-111 Phase 2"
-    },
-    {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-5",
       "category": "required",
       "label": "privacy.com card for the Venture engine",
       "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
     },
     {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "INI-111 \u2014 confirm SAM.gov entity registration / tier.",
       "context": "In your SAM.gov account, check whether entity registration completed and the ~1,000/day request tier is active. If yes: "
     },
     {
-      "id": "ACT-HO-10",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "(cleanup, low)",
       "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; co"
     },
     {
-      "id": "ACT-HO-11",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "Provision Gemini/OpenAI API key(s) + budget",
       "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
     },
     {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "GAP-146 digest wire-in (Steward+CEO-gated).",
-      "context": "write-batch-run-digest.py is on canonical but DORMANT. CEO decided Option A 2026-07-18 (report-triage sweep, alongside t"
-    },
-    {
-      "id": "ACT-HO-13",
+      "id": "ACT-HO-9",
       "category": "required",
       "label": "Ratify PCR-OPS-068's Cowork-director-substitution question",
       "context": "decide whether the pattern used twice this session (independent same-session agent standing in for a Mac-side director, "
     },
     {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "Build and register jasonos-morning-sweep-precompile",
-      "context": "*(tracked under PCR-OPS-066)* \u2014 the SKILL.md is drafted and independently reviewed; scheduled-task creation, scheduled-t"
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "Run jasonos-access-compiler.py",
-      "context": "Mac-side, deploy-gated"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "INI-138 \u2014 Series-taxonomy reconciliation.",
-      "context": "Confirm the CEO's live Content Workbook (not instagram-content-strategy.md's Signature Series table) is authoritative, s"
-    },
-    {
-      "id": "ACT-HO-17",
-      "category": "required",
-      "label": "INI-138/INI-140 \u2014 template-selection architecture.",
-      "context": "Decide whether every Series needs its own Phase-2 template file, or whether Series+Framework alone are sufficient for th"
-    },
-    {
-      "id": "ACT-HO-18",
-      "category": "required",
-      "label": "INI-138 \u2014 Phase 3 agent confirmation.",
-      "context": "Confirm operations/bin/jasonos-blog-drip.py is the right existing recurring-research agent to extend for article-note me"
-    },
-    {
-      "id": "ACT-HO-19",
+      "id": "ACT-HO-10",
       "category": "required",
       "label": "Portfolio README Mac-side regen",
       "context": "run the portfolio README generator on the Mac mini to pick up INI-138's Backlog\u2192Current pull (unsafe to run from Cowork)"
@@ -195,8 +141,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-19T00:21:38Z",
-      "invocations_30d": 18
+      "last_active": "2026-07-19T18:47:53Z",
+      "invocations_30d": 19
     },
     {
       "name": "research-director",
@@ -490,14 +436,6 @@
   "jasonos_work_readiness": {
     "eligible_now": [
       {
-        "id": "GAP-168",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Investigate why the settings.json-level disable referenced in the original 2026-07-08 directive (`governance/memory/feedback_ask_user_question_tool_forbidden.md`) did not take effect for the Cowork en",
-        "stop_line": "None \u2014 investigation and, if a fix is found, a settings/config change scoped to disabling one named tool; not a substrate or authority change.",
-        "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
-      },
-      {
         "id": "GAP-174",
         "type": "GAP",
         "route": "Queue-ready",
@@ -523,14 +461,6 @@
       }
     ],
     "fully_executable": [
-      {
-        "id": "GAP-168",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Investigate why the settings.json-level disable referenced in the original 2026-07-08 directive (`governance/memory/feedback_ask_user_question_tool_forbidden.md`) did not take effect for the Cowork en",
-        "stop_line": "None \u2014 investigation and, if a fix is found, a settings/config change scoped to disabling one named tool; not a substrate or authority change.",
-        "description": "Investigate and fix why the settings.json-level AskUserQuestion disable never took effect in Cowork"
-      },
       {
         "id": "GAP-174",
         "type": "GAP",
@@ -706,14 +636,6 @@
         "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
       },
       {
-        "id": "GAP-175",
-        "type": "GAP",
-        "route": "CEO-first for the grant-derivation design question below; the mechanical fix",
-        "runner_scope": "`operations/bin/jasonos-batch-orchestrator.py`, `_default_commit_seam()` (~lines 467\u2013529): add `--autonomy-grant daemon-armed` to the `commit_via_relay.py --action merge-staged ...` invocation this fu",
-        "stop_line": "This fix must land (or PCR-OPS-069's guard must be held back) before `jasonos-git-relay.sh` v1.31 is deployed to `/Volumes/SandboxData/bin` / `~/bin`. Deploying the guard without this fix silently bre",
-        "description": "jasonos-batch-orchestrator.py's _default_commit_seam() will fail closed the moment the PCR-OPS-069\u2026"
-      },
-      {
         "id": "PCR-ENG-020",
         "type": "PCR",
         "route": "Draft-only",
@@ -736,14 +658,6 @@
         "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
         "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
-      },
-      {
-        "id": "PCR-OPS-069",
-        "type": "PCR",
-        "route": "CEO-first",
-        "runner_scope": "None until the CEO rules on \u00a7 Decision required. Once decided: if option 1 or 3 is chosen, Runner scope is the `commit_via_relay.py` / Mac-side-worker code change adding the fail-closed grant check; i",
-        "stop_line": "None \u2014 this item does not enter the runner queue; it halts immediately awaiting the CEO's decision above. No further `--push true` relay calls should rely on this PCR as authorization in the interim \u2014",
-        "description": "commit_via_relay.py --push true has no mechanical autonomy-tier check"
       },
       {
         "id": "REM-095",
@@ -856,13 +770,6 @@
         "category": "gap-open"
       },
       {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "CEO-first for the grant-derivation design question below; the mechanical fix",
-        "file": "governance/gaps/open/GAP-175-batch-orchestrator-commit-seam-lacks-autonomy-grant-declaration.md",
-        "category": "gap-open"
-      },
-      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-068-cowork-director-dispatch-substitution.md",
@@ -881,11 +788,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-19T17:18:05.218972+00:00"
+    "generated_at": "2026-07-20T00:48:12.953779+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 8,
-    "open_gaps": 13,
+    "open_pcrs": 7,
+    "open_gaps": 11,
     "open_rems": 7
   }
 }
