@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T20:02:36Z",
+  "generated_at": "2026-07-20T22:56:59Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 2187,
+    "minutes_since_session": 2361,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -719,14 +719,6 @@
         "description": "Cowork\u2192Code work handoff has no canonical procedure: the handoff carries files but not lifecycle\u2026"
       },
       {
-        "id": "GAP-180",
-        "type": "GAP",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "",
-        "description": "The dashboard-publisher daemon cannot publish: PCR-OPS-069's autonomy-grant guard refuses its\u2026"
-      },
-      {
         "id": "PCR-ENG-020",
         "type": "PCR",
         "route": "Draft-only",
@@ -759,17 +751,7 @@
         "description": "Step 2k Part A infrastructure health: canonical-fetch and git-relay both went silent again around\u2026"
       }
     ],
-    "blocked_needs_director_decision": [
-      {
-        "id": "GAP-094",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "",
-        "stop_line": "Dispatch the Security Steward to re-file `CAP-REV-2026-07-10-GAP051.md` with proper PCR-SEC-011 frontmatter; the President Agent does not edit the file itself, even for a one-line frontmatter add.",
-        "description": "A capability review filed on the PCR-SEC-011 enactment day carries no outputs_written frontmatter\u2026",
-        "director": "Security Steward"
-      }
-    ],
+    "blocked_needs_director_decision": [],
     "not_executable_leading_stop": [
       {
         "id": "GAP-179",
@@ -932,18 +914,6 @@
         "category": "gap-open"
       },
       {
-        "type": "missing_scope",
-        "field": "runner_scope",
-        "file": "governance/gaps/open/GAP-180-dashboard-publisher-daemon-cannot-publish-pcr-ops-069-guard-refuses-its-push.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "missing_field",
-        "field": "stop_line",
-        "file": "governance/gaps/open/GAP-180-dashboard-publisher-daemon-cannot-publish-pcr-ops-069-guard-refuses-its-push.md",
-        "category": "gap-open"
-      },
-      {
         "type": "missing_field",
         "field": "stop_line",
         "file": "governance/gaps/open/GAP-181-pcr-ops-069-grant-is-a-declaration-not-an-authorization-and-is-unscoped-for-daemons.md",
@@ -1024,11 +994,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-20T20:02:36.379298+00:00"
+    "generated_at": "2026-07-20T22:56:59.748405+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 17,
+    "open_gaps": 15,
     "open_rems": 8
   }
 }
