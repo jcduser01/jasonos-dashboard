@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T00:48:12Z",
+  "generated_at": "2026-07-20T00:58:49Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 1032,
+    "minutes_since_session": 1043,
     "airlock_queue": 3,
     "airlock_bundles": 1
   },
@@ -788,7 +788,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-20T00:48:12.953779+00:00"
+    "generated_at": "2026-07-20T00:58:49.781530+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 7,
