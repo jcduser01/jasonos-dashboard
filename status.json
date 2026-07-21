@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T15:18:10Z",
+  "generated_at": "2026-07-21T15:25:46Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 3342,
+    "minutes_since_session": 3350,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -749,6 +749,22 @@
         "runner_scope": "",
         "stop_line": "Requires Mac-native (host) access to diagnose and act \u2014 cannot be closed from Cowork.",
         "description": "Step 2k Part A infrastructure health: canonical-fetch and git-relay both went silent again around\u2026"
+      },
+      {
+        "id": "REM-099",
+        "type": "REM",
+        "route": "CEO-first for prioritization",
+        "runner_scope": "",
+        "stop_line": "Confirm whether the admitted ticket(s) from this failed dispatch need re-queuing before any fix work begins, to avoid losing track of what was supposed to run last night.",
+        "description": "Step 2h check-batch-run-currency.py reports a failed-dispatch (timeout): the 2026-07-21T02:00:05Z\u2026"
+      },
+      {
+        "id": "REM-100",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "CEO/Engineering review of GAP-182's staged fix before merge; do not merge or re-arm the task autonomously given this touches the relay's authorization allowlist.",
+        "description": "dh-blog-drip self-disabled at 2026-07-21T01:20Z after its scheduled publish attempt (#8\u2026"
       }
     ],
     "blocked_needs_director_decision": [],
@@ -802,14 +818,6 @@
         "description": "The skill lifecycle spans a mandatory environment handoff that no procedure documents and no\u2026"
       },
       {
-        "id": "REM-092",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "None \u2014 a director or the President Agent can delete the stray file directly; this is a same-item duplicate of an already-resolved, already-narrated record, not a live edit to governance content.",
-        "description": "check-gap-folder-status-agreement.py step 2g index-drift check exits 1: GAP-094 has a stale\u2026"
-      },
-      {
         "id": "REM-093",
         "type": "REM",
         "route": "Operational",
@@ -834,12 +842,12 @@
         "description": "Step 2c full-sweep check-work-item-contract-conformance.py reports 7 fresh (non-overlapping)\u2026"
       },
       {
-        "id": "REM-097",
+        "id": "REM-098",
         "type": "REM",
         "route": "Operational",
         "runner_scope": "",
-        "stop_line": "None \u2014 a director or the President Agent can regenerate the index directly; this is a read-projection refresh, not a live edit to governance content substance.",
-        "description": "Step 2g gap ## Open index-drift check exits 1 with content-mismatch drift (distinct from REM-092's\u2026"
+        "stop_line": "Confirm intent for the `temp/` top-level path's long-term placement (Operations scratch space vs. something requiring Governance-tier treatment) before codifying the classification rule.",
+        "description": "check-repo-placement.py (INI-116 repo structural-placement drift surface) exits 2: a new top-level\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -981,11 +989,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-21T15:18:10.595601+00:00"
+    "generated_at": "2026-07-21T15:25:46.132385+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
     "open_gaps": 14,
-    "open_rems": 8
+    "open_rems": 9
   }
 }
