@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T16:36:50Z",
+  "generated_at": "2026-07-21T18:37:03Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 3421,
+    "minutes_since_session": 3541,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -569,6 +569,22 @@
         "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
       },
       {
+        "id": "GAP-171",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three separable parts, in order; all three are authorized.",
+        "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
+        "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
+      },
+      {
+        "id": "GAP-172",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Correct `_build_engineer_task()` in `operations/bin/jasonos-batch-pipeline.py` so it no longer instructs the engineer to invoke a command its jail forbids; encode a mechanical non-execution eligibilit",
+        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until the Stage 2 work in GAP-187 delivers a working containme",
+        "description": "Batch pipeline Stage 1: correct the engineer task builder, restrict queued work to non-execution\u2026"
+      },
+      {
         "id": "GAP-176",
         "type": "GAP",
         "route": "CEO-first",
@@ -667,6 +683,22 @@
         "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
       },
       {
+        "id": "GAP-171",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Three separable parts, in order; all three are authorized.",
+        "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
+        "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
+      },
+      {
+        "id": "GAP-172",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Correct `_build_engineer_task()` in `operations/bin/jasonos-batch-pipeline.py` so it no longer instructs the engineer to invoke a command its jail forbids; encode a mechanical non-execution eligibilit",
+        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until the Stage 2 work in GAP-187 delivers a working containme",
+        "description": "Batch pipeline Stage 1: correct the engineer task builder, restrict queued work to non-execution\u2026"
+      },
+      {
         "id": "GAP-176",
         "type": "GAP",
         "route": "CEO-first",
@@ -717,14 +749,6 @@
         "description": "No recurring discipline reaps stale git worktrees and lanes; debris accumulates until it holds the\u2026"
       },
       {
-        "id": "GAP-171",
-        "type": "GAP",
-        "route": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
-        "runner_scope": "Three separable parts, in order.",
-        "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
-        "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
-      },
-      {
         "id": "GAP-178",
         "type": "GAP",
         "route": "CEO-first",
@@ -749,20 +773,28 @@
         "description": "A Claude Code auto-update changes the binary path, which is the TCC subject identity, so the macOS\u2026"
       },
       {
-        "id": "GAP-184",
-        "type": "GAP",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Do not edit any launchd plist without an explicit CEO authorization for that specific file. Do not \"fix\" the observed staleness by widening a threshold to swallow the 5h offset \u2014 that would hide the d",
-        "description": "Daemon log writers emit offset-less local time that the health checks read as UTC, manufacturing\u2026"
-      },
-      {
         "id": "GAP-186",
         "type": "GAP",
         "route": "CEO-first",
         "runner_scope": "",
         "stop_line": "Do not deploy the pre-compile task without the Steward review in item 1 \u2014 the asset self-declares unreviewed, and deploying an unreviewed standing task that reads the full governance surface and draft",
         "description": "Report-triage Step 7 is marked LIVE in the protocol but names no mechanism, so the morning-sweep\u2026"
+      },
+      {
+        "id": "GAP-187",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until this ticket delivers a working containment layer AND a S",
+        "description": "Stage 2: OS-level sandboxed execution runner for unattended batch TDD (design spike + build)"
+      },
+      {
+        "id": "GAP-188",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not change `code/dysonhope`'s remote configuration without confirming the change against a real publish \u2014 a repointed remote that is wrong in the other direction would push working drafts to canoni",
+        "description": "When the blog-drip automated publish fails, the manual recovery path is broken in two independent\u2026"
       },
       {
         "id": "PCR-ENG-020",
@@ -806,6 +838,14 @@
         "runner_scope": "",
         "stop_line": "",
         "description": "Reel producer S1 has no relevance floor: it always returns 8 research notes, so an off-topic reel\u2026"
+      },
+      {
+        "id": "GAP-184",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not edit any launchd plist without an explicit CEO authorization for that specific file. Do not \"fix\" the observed staleness by widening a threshold to swallow the 5h offset \u2014 that would hide the d",
+        "description": "Daemon log writers emit offset-less local time that the health checks read as UTC, manufacturing\u2026"
       },
       {
         "id": "PCR-OPS-054",
@@ -907,20 +947,6 @@
         "category": "gap-open"
       },
       {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready for the detector and contract-field work. The **eligibility taxonomy itself is a policy artifact** and needs ratification",
-        "file": "governance/gaps/open/GAP-171-no-queue-eligibility-discipline-for-batch-admissible-work-items.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Two stages",
-        "file": "governance/gaps/open/GAP-172-batch-execution-needs-os-level-sandbox-not-tool-permission-jail.md",
-        "category": "gap-open"
-      },
-      {
         "type": "missing_scope",
         "field": "runner_scope",
         "file": "governance/gaps/open/GAP-178-cowork-to-code-handoff-has-no-canonical-procedure.md",
@@ -1019,11 +1045,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-21T16:36:50.303901+00:00"
+    "generated_at": "2026-07-21T18:37:03.426105+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 20,
+    "open_gaps": 22,
     "open_rems": 7
   }
 }
