@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T15:25:46Z",
+  "generated_at": "2026-07-21T16:36:50Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,8 +12,8 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 3350,
-    "airlock_queue": 1,
+    "minutes_since_session": 3421,
+    "airlock_queue": 0,
     "airlock_bundles": 0
   },
   "active_initiative": {
@@ -140,59 +140,41 @@
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "INI-111 \u2014 confirm SAM.gov entity registration / tier.",
-      "context": "In your SAM.gov account, check whether entity registration completed and the ~1,000/day request tier is active. If yes: "
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
       "label": "(cleanup, low)",
       "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; co"
     },
     {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "Provision Gemini/OpenAI API key(s) + budget",
       "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
     },
     {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "Ratify PCR-OPS-068's Cowork-director-substitution question",
       "context": "decide whether the pattern used twice this session (independent same-session agent standing in for a Mac-side director, "
     },
     {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "Portfolio README Mac-side regen",
-      "context": "run the portfolio README generator on the Mac mini to pick up INI-138's Backlog\u2192Current pull (unsafe to run from Cowork)"
-    },
-    {
-      "id": "ACT-HO-11",
+      "id": "ACT-HO-9",
       "category": "required",
       "label": "GAP-176",
       "context": "Mac-native: read the plist for research-handoff, ollama, boot-marker, and retired-memory-detective, confirm whether each"
     },
     {
-      "id": "ACT-HO-12",
+      "id": "ACT-HO-10",
       "category": "required",
       "label": "REM-095",
       "context": "root cause still open (sleep ruled out); if the canonical-fetch/git-relay silence recurs a third time, check the Mac sys"
     },
     {
-      "id": "ACT-HO-13",
-      "category": "confirm",
-      "label": "Confirm the Claude Code/INI-140 session successfully staged INI-145 (native commit, given the GAP-177 correction) and re",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-14",
+      "id": "ACT-HO-11",
       "category": "required",
       "label": "Decide PCR-OPS-072: standalone operations/skill-authoring-procedure.md vs. folded into an existing runbook, and who auth",
       "context": ""
     },
     {
-      "id": "ACT-HO-15",
+      "id": "ACT-HO-12",
       "category": "required",
       "label": "Run the Idea ID migration (design spec \u00a74/\u00a79.1) for the 195 existing Idea Backlog rows before INI-145's skill is usable.",
       "context": ""
@@ -571,6 +553,14 @@
         "description": "Native Claude Code terminal harness memory store has diverged from the canonical\u2026"
       },
       {
+        "id": "GAP-166",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Reconcile a discrepancy in `operations/bin/jasonos-policy-sync-log-writer.py` (GAP-157): the 2026-07-18T06:08:10Z `jasonos-policy-sync` scheduled-task transcript shows the writer invoked and exiting 0",
+        "stop_line": "(superseded on reopen) The 07-18 close's \"no code change to the writer's own logic\" no longer holds \u2014 the root cause is in the writer. Stop before any change that removes a hardcoded mount root from a",
+        "description": "jasonos-policy-sync-log-writer.py reported success but left no artifacts on 2026-07-18"
+      },
+      {
         "id": "GAP-167",
         "type": "GAP",
         "route": "Queue-ready",
@@ -593,6 +583,14 @@
         "runner_scope": "On the Mac mini, reproduce and locate the failure in the staged-lane branch of `jasonos-git-relay.sh`. Observed behavior (2026-07-19, relay worker log `Logs/director-logs/engineering/git-relay.log`): ",
         "stop_line": "Steward-gated \u2014 this edits the relay commit/lane path. No live change without a Security Steward review at the stop-line (same gate as GAP-126/GAP-127).",
         "description": "Relay staged-lane git add fails for a brand-new untracked file (ANY environment, not only Cowork)"
+      },
+      {
+        "id": "GAP-185",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Item 1 only \u2014 a bounded counter fix in `jasonos-handoff-compactor.py` (around line 563). Stop counting bullets that fall inside the `### Completed (historical \u2014 preserved verbatim, unchanged)` subsect",
+        "stop_line": "Do not silently change what the number means without recording the redefinition in the handoff itself. A figure that quietly drops from 23 to 14 with no explanation looks like work disappearing. Do no",
+        "description": "The session-handoff \"open CEO actions\" figure is a raw bullet count over a block containing\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -653,6 +651,14 @@
         "description": "Native Claude Code terminal harness memory store has diverged from the canonical\u2026"
       },
       {
+        "id": "GAP-166",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Reconcile a discrepancy in `operations/bin/jasonos-policy-sync-log-writer.py` (GAP-157): the 2026-07-18T06:08:10Z `jasonos-policy-sync` scheduled-task transcript shows the writer invoked and exiting 0",
+        "stop_line": "(superseded on reopen) The 07-18 close's \"no code change to the writer's own logic\" no longer holds \u2014 the root cause is in the writer. Stop before any change that removes a hardcoded mount root from a",
+        "description": "jasonos-policy-sync-log-writer.py reported success but left no artifacts on 2026-07-18"
+      },
+      {
         "id": "GAP-167",
         "type": "GAP",
         "route": "Queue-ready",
@@ -675,6 +681,14 @@
         "runner_scope": "On the Mac mini, reproduce and locate the failure in the staged-lane branch of `jasonos-git-relay.sh`. Observed behavior (2026-07-19, relay worker log `Logs/director-logs/engineering/git-relay.log`): ",
         "stop_line": "Steward-gated \u2014 this edits the relay commit/lane path. No live change without a Security Steward review at the stop-line (same gate as GAP-126/GAP-127).",
         "description": "Relay staged-lane git add fails for a brand-new untracked file (ANY environment, not only Cowork)"
+      },
+      {
+        "id": "GAP-185",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Item 1 only \u2014 a bounded counter fix in `jasonos-handoff-compactor.py` (around line 563). Stop counting bullets that fall inside the `### Completed (historical \u2014 preserved verbatim, unchanged)` subsect",
+        "stop_line": "Do not silently change what the number means without recording the redefinition in the handoff itself. A figure that quietly drops from 23 to 14 with no explanation looks like work disappearing. Do no",
+        "description": "The session-handoff \"open CEO actions\" figure is a raw bullet count over a block containing\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -719,6 +733,38 @@
         "description": "Cowork\u2192Code work handoff has no canonical procedure: the handoff carries files but not lifecycle\u2026"
       },
       {
+        "id": "GAP-182",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not widen the relay allowlist, add `autonomy_grant: publisher-scoped` to `jasonos-blog-drip.py`, or re-arm `dh-blog-drip` without a Security Steward capability review \u2014 this is the same authorizati",
+        "description": "The Dyson Hope blog-drip publisher has no relay scope entry, so PCR-OPS-069's publisher-scoped\u2026"
+      },
+      {
+        "id": "GAP-183",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not reset, clear, or script any TCC grant (`tccutil reset` or equivalent) as part of investigating this \u2014 a reset revokes working grants and is not reversible from a script, and the failure mode be",
+        "description": "A Claude Code auto-update changes the binary path, which is the TCC subject identity, so the macOS\u2026"
+      },
+      {
+        "id": "GAP-184",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not edit any launchd plist without an explicit CEO authorization for that specific file. Do not \"fix\" the observed staleness by widening a threshold to swallow the 5h offset \u2014 that would hide the d",
+        "description": "Daemon log writers emit offset-less local time that the health checks read as UTC, manufacturing\u2026"
+      },
+      {
+        "id": "GAP-186",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not deploy the pre-compile task without the Steward review in item 1 \u2014 the asset self-declares unreviewed, and deploying an unreviewed standing task that reads the full governance surface and draft",
+        "description": "Report-triage Step 7 is marked LIVE in the protocol but names no mechanism, so the morning-sweep\u2026"
+      },
+      {
         "id": "PCR-ENG-020",
         "type": "PCR",
         "route": "Draft-only",
@@ -741,22 +787,6 @@
         "runner_scope": "Phase 1 only for the initial runner pass: extract `jasonos-policy-sync`'s summarization step into a discrete python function, wire into `jasonos-local-inference-router.is_eligible`, run `jasonos-infer",
         "stop_line": "After Phase 1's comparison-harness run \u2014 report results and await confirmation before flipping `is_eligible`'s default for policy-sync in production, consistent with the existing INI-076 sign-off patt",
         "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion"
-      },
-      {
-        "id": "REM-095",
-        "type": "REM",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "Requires Mac-native (host) access to diagnose and act \u2014 cannot be closed from Cowork.",
-        "description": "Step 2k Part A infrastructure health: canonical-fetch and git-relay both went silent again around\u2026"
-      },
-      {
-        "id": "REM-099",
-        "type": "REM",
-        "route": "CEO-first for prioritization",
-        "runner_scope": "",
-        "stop_line": "Confirm whether the admitted ticket(s) from this failed dispatch need re-queuing before any fix work begins, to avoid losing track of what was supposed to run last night.",
-        "description": "Step 2h check-batch-run-currency.py reports a failed-dispatch (timeout): the 2026-07-21T02:00:05Z\u2026"
       },
       {
         "id": "REM-100",
@@ -989,11 +1019,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-21T15:25:46.132385+00:00"
+    "generated_at": "2026-07-21T16:36:50.303901+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 14,
-    "open_rems": 9
+    "open_gaps": 20,
+    "open_rems": 7
   }
 }
