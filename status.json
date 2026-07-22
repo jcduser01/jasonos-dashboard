@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T06:37:24Z",
+  "generated_at": "2026-07-22T07:21:06Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4262,
+    "minutes_since_session": 4305,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -43,7 +43,7 @@
       "status": "active",
       "contract": {
         "route": "Operational",
-        "runner_scope": "Engineering \u2014 land the ledger idempotency fix (content_hash must be computed over source-derived facts only, excluding the ingestion-time normalized_at, so a re-polled unchanged notice dedupes instead of appending a spurious 'source update' version; the poller's duplicates counter must also actually increment). This is the one Phase-2 property still unmet after the 2026-07-22 first recording, and it compounds daily until fixed. After that, Phase 3 (hybrid scorer and routing) is the next slice and stays gated on the Security Steward Phase-3 re-review in operations/bin/venture-engine/SECURITY-REVIEW.md.",
+        "runner_scope": "Engineering \u2014 Phase 3 provider binding. The containment layer (gate items 1/2/3/4/7/8) is built, Steward-cleared, and on canonical; the provider is decided (Anthropic SDK, confined to one adapter module implementing the existing injected Protocol). The next slice is gate items 5 (anti-SSRF description fetch \u2014 the actual egress change), 6 (per-record untrusted-text size caps, which attaches to the same framing helper as item 5 and should land with it), and 9 (cost/rate ceilings bound to the MAL/envelope), plus the SDK adapter itself. GATED: item 9 needs the PCR-VENT-005 engine wallet FUNDED \u2014 it is defined but unfunded, provisioned when the first paid dependency lands, and inference is that dependency. Spend crosses money, which is Red under production-operating-model.md \u00a7 3 and requires a CEO turn. The binding also requires its OWN Security Steward review; the 2026-07-22 CLEAR explicitly does not carry to it.",
         "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
       }
     },
@@ -1066,7 +1066,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T06:37:24.992520+00:00"
+    "generated_at": "2026-07-22T07:21:06.558831+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
