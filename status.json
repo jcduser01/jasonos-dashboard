@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-22T02:37:15Z",
+  "generated_at": "2026-07-22T04:37:20Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 111,
     "total": 135,
-    "active": 2,
+    "active": 3,
     "queued": 3,
     "paused": 9,
-    "backlog": 10
+    "backlog": 9
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4021,
+    "minutes_since_session": 4142,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,6 +35,16 @@
         "route": "CEO-first",
         "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
         "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
+      }
+    },
+    {
+      "id": "INI-114",
+      "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
+      "status": "active",
+      "contract": {
+        "route": "CEO-first",
+        "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE and is now the initiative's scope rather than an amendment to it (rescoped 2026-07-21). Draft one page of real copy (homepage hook + the entry-offer description) in Jason's register against the governed IA, to falsify the no-handoff/outcome-centric hook cheaply before design spend, holding the abstraction guardrail below. Carries the entry-offer naming task. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
+        "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E). The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but the IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and consent clearance on every cited case."
       }
     },
     {
@@ -353,16 +363,6 @@
           "route": "Queue-ready",
           "runner_scope": "None \u2014 irreducibly creative design work (CEO + Creative Director); not a runner task.",
           "stop_line": "Designs must conform to the ratified artifact doctrine and the SIGIL.ZERO brand system; the garment-quality gate (blank selection + physical test) must pass before anything is finalized for production. CEO approves the artifact set before build (INI-055) or production."
-        }
-      },
-      {
-        "id": "INI-114",
-        "name": "Jason Cook Design \u2014 Website Repositioning",
-        "notes": "Sharpened 2026-07-17: positioning target moved from 'coherence platform' (abstract quality) to 'organizational architecture, with AI as one building material' (concrete, sellable claim); the IA\u2026",
-        "contract": {
-          "route": "CEO-first",
-          "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE, sharpened 2026-07-17. Draft one page of real copy (homepage hook + the entry-offer description) in Jason's register against the governed IA, to falsify the no-handoff/outcome-centric hook cheaply before design spend, holding the abstraction guardrail below. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
-          "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E); Phase 3 build carries a launch gate of \u22651 external fit-proof case whose status is itself a CEO decision (see Open Items). Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and the CEO's launch-floor acceptance."
         }
       },
       {
@@ -1059,7 +1059,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T02:37:15.552436+00:00"
+    "generated_at": "2026-07-22T04:37:20.256082+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
