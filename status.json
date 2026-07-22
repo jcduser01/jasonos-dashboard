@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-22T04:37:20Z",
+  "generated_at": "2026-07-22T06:37:24Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 111,
     "total": 135,
-    "active": 3,
+    "active": 4,
     "queued": 3,
-    "paused": 9,
+    "paused": 8,
     "backlog": 9
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4142,
+    "minutes_since_session": 4262,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -35,6 +35,16 @@
         "route": "CEO-first",
         "runner_scope": "None \u2014 CEO-collaborative strategy/creative initiative (President Agent + CEO). Not a runner task. Later build slices (Shopify/Printful configuration, Foundational garment production) may become runner-eligible but are gated on the Phase 2 CEO decisions below.",
         "stop_line": "Phase 2 requires CEO ratification of the evolved artifact/apparel doctrine, the brand-architecture confirmation (SIGIL.ZERO as home), the garment-quality gate, and the break-even economics. Do not begin Phase 3 build, retire Temple of Unicorns, or touch the canonical artifact-strategy.md doctrine without explicit CEO sign-off."
+      }
+    },
+    {
+      "id": "INI-111",
+      "name": "Venture Opportunity Engine",
+      "status": "active",
+      "contract": {
+        "route": "Operational",
+        "runner_scope": "Engineering \u2014 land the ledger idempotency fix (content_hash must be computed over source-derived facts only, excluding the ingestion-time normalized_at, so a re-polled unchanged notice dedupes instead of appending a spurious 'source update' version; the poller's duplicates counter must also actually increment). This is the one Phase-2 property still unmet after the 2026-07-22 first recording, and it compounds daily until fixed. After that, Phase 3 (hybrid scorer and routing) is the next slice and stays gated on the Security Steward Phase-3 re-review in operations/bin/venture-engine/SECURITY-REVIEW.md.",
+        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
       }
     },
     {
@@ -203,7 +213,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-21T06:31:58Z",
+      "last_active": "2026-07-22T06:32:22Z",
       "invocations_30d": 38
     },
     {
@@ -300,16 +310,6 @@
       }
     ],
     "infrastructure": [
-      {
-        "id": "INI-111",
-        "name": "Venture Opportunity Engine",
-        "notes": "Phase 2 built + ACTIVATED 2026-07-02 (schema + append-only decision ledger + sam.gov adapter + launchd poller; 59 tests green; Security Steward review PASS). CEO added the API key + ran activation\u2026",
-        "contract": {
-          "route": "Operational",
-          "runner_scope": "None actionable now \u2014 Phase 2 (schema, ledger, sam.gov adapter, launchd poller) is built, staged, and activated at the LOW request tier; the engine is recording only. No runner-buildable slice exists until the 2026-07-14 sam.gov entity-registration verification check runs and clears. Once it clears, Phase 3 (hybrid scorer and routing) becomes the queue-ready slice under Engineering.",
-          "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
-        }
-      },
       {
         "id": "INI-011",
         "name": "Distributed Compute Architecture",
@@ -992,6 +992,13 @@
         "category": "gap-open"
       },
       {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready.",
+        "file": "governance/gaps/open/GAP-191-samgov-adapter-comma-joins-single-value-filters-and-silently-records-nothing.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-070-duplicate-work-item-id-across-folders-uncaught.md",
@@ -1059,11 +1066,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T04:37:20.256082+00:00"
+    "generated_at": "2026-07-22T06:37:24.992520+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 24,
+    "open_gaps": 25,
     "open_rems": 7
   }
 }
