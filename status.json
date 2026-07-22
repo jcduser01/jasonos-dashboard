@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T09:21:17Z",
+  "generated_at": "2026-07-22T11:17:23Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4426,
+    "minutes_since_session": 4542,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -845,6 +845,14 @@
         "runner_scope": "",
         "stop_line": "CEO/Engineering review of GAP-182's staged fix before merge; do not merge or re-arm the task autonomously given this touches the relay's authorization allowlist.",
         "description": "dh-blog-drip self-disabled at 2026-07-21T01:20Z after its scheduled publish attempt (#8\u2026"
+      },
+      {
+        "id": "REM-103",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "Do not alter the connector/tool surface (add or remove the Shopify MCP from any dispatch context) without a CEO decision on whether the exposure is intentional; the President Agent's role here is inve",
+        "description": "Security Steward Weekly Compliance Summary (weekly-2026-07-20) finding 1 / recommendation (a): a\u2026"
       }
     ],
     "blocked_needs_director_decision": [],
@@ -936,6 +944,22 @@
         "runner_scope": "",
         "stop_line": "Confirm intent for the `temp/` top-level path's long-term placement (Operations scratch space vs. something requiring Governance-tier treatment) before codifying the classification rule.",
         "description": "check-repo-placement.py (INI-116 repo structural-placement drift surface) exits 2: a new top-level\u2026"
+      },
+      {
+        "id": "REM-101",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Author must confirm each artifact actually conforms to (or is deliberately superseding) the 2026-07-16 ratified doctrine before stamping the marker \u2014 do not stamp `doctrine_reconciled:` as a formality",
+        "description": "Step 2b coverage checker check-doctrine-artifact-currency.py exits 1: three Jason Cook Design\u2026"
+      },
+      {
+        "id": "REM-102",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "Knowledge Director reads the inbox prompt and decides its disposition on its merits before recording it \u2014 do not blanket-archive to clear the SLA flag.",
+        "description": "Step 2b coverage checker check-kb-completeness.py exits 1 (Facet A): inbox item\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -1084,11 +1108,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T09:21:17.596035+00:00"
+    "generated_at": "2026-07-22T11:17:23.820860+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
     "open_gaps": 25,
-    "open_rems": 7
+    "open_rems": 10
   }
 }
