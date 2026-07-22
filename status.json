@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T15:19:30Z",
+  "generated_at": "2026-07-22T17:19:35Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4784,
+    "minutes_since_session": 4904,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -208,29 +208,71 @@
     {
       "id": "ACT-HO-14",
       "category": "required",
-      "label": "DECIDE \u2014 PCR-VENT-006 (DRAFT, filed 2026-07-22)",
+      "label": "DECIDE \u2014 PCR-VENT-006 (DRAFT, filed 2026-07-22, lane staged/vent-wallet-governance fb1b957)",
       "context": "strike the $250 concurrent envelope as structurally inert (privacy.com debits via ACH on settlement, not revolving credi"
     },
     {
       "id": "ACT-HO-15",
       "category": "required",
+      "label": "Two privacy.com facts newly on the record (2026-07-22, from vendor docs \u2014 neither was in any JasonOS document)",
+      "context": "a"
+    },
+    {
+      "id": "ACT-HO-16",
+      "category": "required",
+      "label": "CEO DECISION 2026-07-22 \u2014 the Anthropic inference envelope stays at $20/month",
+      "context": ", matching actual card mechanics; the $100/month proposal is rejected. Note the constraint this creates: that $20 is alr"
+    },
+    {
+      "id": "ACT-HO-17",
+      "category": "required",
       "label": "BUILD (before any purchase path) \u2014 our software does not enforce the money limits it declares.",
       "context": "Verified against operations/bin/venture-engine/vengine/ on 2026-07-22: policy.py parses the per-opportunity MAL, the $25"
     },
     {
-      "id": "ACT-HO-16",
+      "id": "ACT-HO-18",
       "category": "required",
       "label": "Promote one staged lane",
       "context": "staged/session-close-2026-07-22 (c8f0c86, operations repo) \u2014 the 2026-07-22 session-close memory entry + three procedure"
     },
     {
-      "id": "ACT-HO-17",
+      "id": "ACT-HO-19",
+      "category": "required",
+      "label": "INI-111 Phase-3 lanes (2026-07-22, both merge clean, neither promotable yet)",
+      "context": ""
+    },
+    {
+      "id": "ACT-HO-20",
+      "category": "required",
+      "label": "staged/ini111-phase3-code (ce7d892)",
+      "context": "gate items 5/6/9 + SDK adapter + shared spend tracker. BLOCKED on PCR-VENT-006: load_policy_values() now requires infere"
+    },
+    {
+      "id": "ACT-HO-21",
+      "category": "required",
+      "label": "staged/vent-wallet-governance (4b74607)",
+      "context": "PCR-VENT-006 draft + PCR-VENT-005 post-enactment record. Needs CEO approval, not Steward code clearance \u2014 deliberately s"
+    },
+    {
+      "id": "ACT-HO-22",
+      "category": "required",
+      "label": "staged/ini111-phase3-binding (bcd1c1d) \u2014 SUPERSEDED, do not promote.",
+      "context": "Engineering's original; it mixed the two governance documents into a code commit. Its venture-engine subtree is byte-ide"
+    },
+    {
+      "id": "ACT-HO-23",
+      "category": "required",
+      "label": "PRODUCTION INCIDENT, contained 2026-07-22",
+      "context": "the Phase-3 working-tree changes broke load_policy_values() against the real policy document; the daily 07:10 CDT poll w"
+    },
+    {
+      "id": "ACT-HO-24",
       "category": "required",
       "label": "Do NOT promote staged/ini111-phase3-containment (fb7ae51)",
       "context": "retained deliberately as the immutable artifact the Security Steward reviewed for CAP-REV-2026-07-22-INI111-PHASE3. Its "
     },
     {
-      "id": "ACT-HO-18",
+      "id": "ACT-HO-25",
       "category": "required",
       "label": "Rule on the \u00a7 6 baseline recount discrepancy",
       "context": "the CEO-set baseline records checkers 26 / policies 28; recounting on 2026-07-22 gave 20 / 37 by the stated method (scri"
@@ -1151,7 +1193,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T15:19:31.052575+00:00"
+    "generated_at": "2026-07-22T17:19:35.314105+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 11,
