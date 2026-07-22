@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T07:21:06Z",
+  "generated_at": "2026-07-22T09:21:17Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4305,
+    "minutes_since_session": 4426,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -53,8 +53,8 @@
       "status": "active",
       "contract": {
         "route": "CEO-first",
-        "runner_scope": "Phase 1.5 (voice probe) only \u2014 Phase 1 (positioning + IA + claims model) is COMPLETE and is now the initiative's scope rather than an amendment to it (rescoped 2026-07-21). Draft one page of real copy (homepage hook + the entry-offer description) in Jason's register against the governed IA, to falsify the no-handoff/outcome-centric hook cheaply before design spend, holding the abstraction guardrail below. Carries the entry-offer naming task. Staged for CEO read as a hook-validation artifact; the positioning is re-cut if it fails.",
-        "stop_line": "Phase 2 copy is gated on a governed voice/style guide that does not yet exist, every public claim clears the Public Voice review gate, and publication is CEO-reserved (Public Voice \u00a7E). The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but the IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Halt after the voice-probe page \u2014 do not draft site copy or ship pages without the voice guide, the review gate, and consent clearance on every cited case."
+        "runner_scope": "Phase 1.5 COMPLETE 2026-07-22 (hook survived; voice guide ratified). Next buildable slice is Phase 2 copy \u2014 its voice-guide gate is cleared, so page copy can be drafted against the ratified guide and the governed IA, each page's claims classified for the Public Voice review gate. Two carry-overs sit inside Phase 2 rather than blocking it: the entry-offer name is undecided (\"Clarity Diagnostic\" is a placeholder), and the fit-proof slot stays unwritable until there is delivered, consented work to describe.",
+        "stop_line": "The voice-guide gate is CLEARED (ratified 2026-07-22), so Phase 2 copy may be drafted. Every public claim still clears the Public Voice review gate and publication remains CEO-reserved (Public Voice \u00a7E) \u2014 draft freely, publish nothing. The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Do not write fit-proof copy at all until there is delivered, consented work to describe \u2014 a fabricated version of that passage was produced and withdrawn during Phase 1.5. Do not ship any page without the review gate and consent clearance on every cited case."
       }
     },
     {
@@ -198,6 +198,24 @@
       "category": "required",
       "label": "Run the Idea ID migration (design spec \u00a74/\u00a79.1) for the 195 existing Idea Backlog rows before INI-145's skill is usable.",
       "context": ""
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "Provision the PCR-VENT-005 engine wallet",
+      "context": "INI-111 Phase-3 gate item 9 (cost/rate ceilings) cannot be completed against a wallet that does not exist. The wallet is"
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Promote three staged lanes",
+      "context": "all merge clean, working trees clean"
+    },
+    {
+      "id": "ACT-HO-15",
+      "category": "required",
+      "label": "Rule on the \u00a7 6 baseline recount discrepancy",
+      "context": "the CEO-set baseline records checkers 26 / policies 28; recounting on 2026-07-22 gave 20 / 37 by the stated method (scri"
     }
   ],
   "status_drift": [],
@@ -213,8 +231,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-22T06:32:22Z",
-      "invocations_30d": 38
+      "last_active": "2026-07-22T07:43:43Z",
+      "invocations_30d": 39
     },
     {
       "name": "knowledge-director",
@@ -1066,7 +1084,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T07:21:06.558831+00:00"
+    "generated_at": "2026-07-22T09:21:17.596035+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
