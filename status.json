@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T18:37:03Z",
+  "generated_at": "2026-07-22T02:37:15Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 3541,
+    "minutes_since_session": 4021,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -978,6 +978,20 @@
         "category": "gap-open"
       },
       {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready.",
+        "file": "governance/gaps/open/GAP-189-preflight-verification-checks-existence-where-use-requires-fitness.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "invalid_route_value",
+        "field": "route",
+        "value": "Queue-ready.",
+        "file": "governance/gaps/open/GAP-190-pcr-folder-docs-say-closed-live-practice-is-resolved-plus-vestigial-governance-stub.md",
+        "category": "gap-open"
+      },
+      {
         "type": "missing_field",
         "field": "route",
         "file": "governance/pcrs/open/PCR-OPS-070-duplicate-work-item-id-across-folders-uncaught.md",
@@ -1045,11 +1059,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-21T18:37:03.426105+00:00"
+    "generated_at": "2026-07-22T02:37:15.552436+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 22,
+    "open_gaps": 24,
     "open_rems": 7
   }
 }
