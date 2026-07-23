@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T13:18:41Z",
+  "generated_at": "2026-07-23T17:18:46Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 6103,
+    "minutes_since_session": 6343,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -43,7 +43,7 @@
       "status": "active",
       "contract": {
         "route": "Operational",
-        "runner_scope": "Engineering \u2014 **Phase-3 WIRING BUILT and STAGED 2026-07-22** on `staged/ini111-phase3-wiring` (not promoted). `vengine/assessment.py` joins poller \u2192 judgment \u2192 decision \u2192 ledger; ledger v1.1 adds the `decision` slot; dedup hoisted before judging so duplicates are never paid for; ceilings/halt degrade to observe-only while recording continues; a failed judgment still escalates. Judgment is **OFF by default** (`judgment_enabled: false`, not set in the deployed config), so merging changes nothing about the 07:10 poll. Suite 294\u2192309 green, guards proven RED. Also fixed a cost-model defect that would have limited judging to ~2 notices/run (or zero on long descriptions): the estimator is now model-aware and max_tokens is 1400. **Next: (1) Phase 4 calibration loop \u2014 confusion matrix, the two sampling streams, CEO rationale-grading, readiness metric; (2) OrgState/calendar-feed wiring to lift the attention-envelope escalation interlock; (3) ONE batched Security Steward review over the whole completed surface (CEO preference 2026-07-22: fewer, larger Steward runs) covering the decision layer, schema v4.0, and this wiring; (4) promotion, then the CEO flips `judgment_enabled` once the Anthropic project exists.** PRIOR: **Phase-5 deterministic decision layer BUILT and STAGED 2026-07-22** on `staged/ini111-phase5-decision-layer` (not promoted; Ordinary autonomy, stage-and-hold). `vengine/decision/` = routing triage, Tier-1/2/3 action floor, L0\u2013L3 autonomy dial with hysteresis, MAL/envelope guard, profile-based rubric evaluator, and the real DecisionGate replacing the Phase-3 stub. Suite 219\u2192292 green. Findings F1\u2013F4 all resolved in the same change-set (wallet-instrument separation, PCR-VENT-006 doc drift, the never-in-force 11-dimension framework, the ledger scoring drop). **Next, in order: (1) CEO ratifies PCR-VENT-007 so the rubric exists and L2/L3 stop being inert; (2) Phase-3 WIRING \u2014 the poller constructs a JudgmentEngine + DecisionGate and writes scoring + decision verbatim to the ledger (this is the step that makes the engine actually judge rather than only record); (3) Phase 4 calibration loop \u2014 confusion matrix, the two sampling streams, CEO rationale-grading, readiness metric; (4) OrgState/calendar-feed wiring to lift the attention-envelope escalation interlock; (5) Security Steward re-review of the now-active surface \u2014 a HARD GATE whose prior CLEARs explicitly do not carry \u2014 then promotion.** PRIOR: **Phase 3 provider binding COMPLETE and LIVE on canonical 2026-07-22** (Steward CLEAR, CEO-approved, promoted). All 9 SECURITY-REVIEW.md gate items are built and on canonical: containment (1/2/3/4/7/8) from the earlier CLEAR, plus 5 (anti-SSRF description fetch), 6 (per-record untrusted-text size caps, provenance-honest truncation), 9 (rate + per-run cost + rolling-30d cost ceilings \u2014 all verified runtime-fireable, not the earlier declared-but-inert stubs). Provider = Anthropic SDK confined to `_anthropic_provider.py`. Spend enforcement = two-axis (per-wallet + account-level) `RollingSpendAccumulator`, rolling-30-day with per-transaction rolloff, fail-closed. PCR-VENT-006 struck the inert $250 'concurrent' envelope; the aggregate stays $500/rolling-30d (privacy.com computes rolling-30, confirmed from vendor docs \u2014 the earlier calendar-month realignment was withdrawn). Inference ceilings ($2/rolling-30d, $0.10/run, 20 calls/run) live in the venture policy; inference meters against PCR-FIN-001 ($2 reallocated from director-ops), NOT the PCR-VENT-005 card. **Next: Phase 4/5 \u2014 wiring inference to actually run** (poller constructs JudgmentEngine; requires the CV3 preconditions: `account-config.json` + the Anthropic project), which is recording-only \u2192 judging, a distinct future CEO decision. The PCR-VENT-005 wallet stays provisioned-and-idle awaiting a genuine paid third-party dependency; none identified.",
+        "runner_scope": "Engineering \u2014 **COMPLETE AND ON CANONICAL 2026-07-23.** All five phases built: governance contract (Phase 1), schema/ledger/adapter/poller (Phase 2), judgment layer + rubric + wiring (Phase 3), calibration loop with the two sampling streams and the readiness bar (Phase 4), deterministic decision layer with routing/floor/dial/envelope + cross-directorate instrumentation (Phase 5). 419 tests. Five Security Steward capability reviews across two days; every condition worked; every new guard proven RED against the unfixed code. **Remaining work is a ROUTING build, not an engine build:** an Ollama provider against the existing injected Protocol, then Class A eligibility conditions 2 and 5, then the flag. Separately open and NOT part of this initiative: GAP-191 residual (no health signal for a recording daemon whose ledger has never received a record; `~/Library/Logs` unreachable from Cowork), and the PROPOSED-NOT-RATIFIED amendment in `operations/local-llm-workload-classification.md` on the Steward carve-out protecting its verdict but not its inputs.",
         "stop_line": "Before inference goes LIVE (recording-only \u2192 actually judging notices): the CV3 preconditions must exist (`account-config.json` with the current privacy.com account ceiling; the `jasonos-venture-engine-inference` Anthropic project) AND the CEO must decide to wire it on. The Phase-3 Steward review is DONE (CLEAR, 2026-07-22). Nothing runs inference today \u2014 the poller does not construct a JudgmentEngine; Phase 2 stays recording-only until that wiring decision."
       }
     },
@@ -1194,7 +1194,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-23T13:18:41.337092+00:00"
+    "generated_at": "2026-07-23T17:18:46.568316+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
