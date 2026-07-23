@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T11:18:26Z",
+  "generated_at": "2026-07-23T13:18:41Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 5983,
+    "minutes_since_session": 6103,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -286,7 +286,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-07-23T07:45:10Z",
-      "invocations_30d": 41
+      "invocations_30d": 40
     },
     {
       "name": "knowledge-director",
@@ -1194,7 +1194,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-23T11:18:26.808424+00:00"
+    "generated_at": "2026-07-23T13:18:41.337092+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
