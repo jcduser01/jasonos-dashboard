@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T17:19:35Z",
+  "generated_at": "2026-07-23T03:19:43Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 4904,
+    "minutes_since_session": 5504,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -43,8 +43,8 @@
       "status": "active",
       "contract": {
         "route": "Operational",
-        "runner_scope": "Engineering \u2014 Phase 3 provider binding. The containment layer (gate items 1/2/3/4/7/8) is built, Steward-cleared, and on canonical; the provider is decided (Anthropic SDK, confined to one adapter module implementing the existing injected Protocol). The next slice is gate items 5 (anti-SSRF description fetch \u2014 the actual egress change), 6 (per-record untrusted-text size caps, which attaches to the same framing helper as item 5 and should land with it), and 9 (cost/rate ceilings bound to the MAL/envelope), plus the SDK adapter itself. **NOT GATED ON THE WALLET \u2014 corrected 2026-07-22.** A prior version of this field asserted 'item 9 needs the PCR-VENT-005 engine wallet FUNDED... inference is that dependency.' That was wrong and it propagated to session-handoff.md and onto the CEO action board, where it caused a card to be provisioned against a trigger that had not fired. wallet-policy.md \u00a7 Venture Opportunity Engine Wallet is explicit: 'The engine's Anthropic API compute does NOT ride this card' \u2014 inference meters against the existing PCR-FIN-001 Anthropic billing (CEO confirmed 2026-07-22 that a separate Anthropic-locked card already exists). Item 9 is a software ceiling reading policy numbers that already exist ($50/txn, $250 concurrent, $500/30d); it needs no card and is buildable now. The PCR-VENT-005 wallet is correctly provisioned-and-idle, awaiting a genuine paid third-party dependency (a paid RFP/data source or enrichment API); none is identified. The binding requires its OWN Security Steward review; the 2026-07-22 CLEAR explicitly does not carry to it.",
-        "stop_line": "Security Steward review before Phase 3 (the LLM judgment layer / hybrid scorer) goes live \u2014 already recorded as a hard blocker in operations/bin/venture-engine/SECURITY-REVIEW.md. No earlier stop-line: Phase 2 is already built, staged, and Steward-cleared."
+        "runner_scope": "Engineering \u2014 **Phase 3 provider binding COMPLETE and LIVE on canonical 2026-07-22** (Steward CLEAR, CEO-approved, promoted). All 9 SECURITY-REVIEW.md gate items are built and on canonical: containment (1/2/3/4/7/8) from the earlier CLEAR, plus 5 (anti-SSRF description fetch), 6 (per-record untrusted-text size caps, provenance-honest truncation), 9 (rate + per-run cost + rolling-30d cost ceilings \u2014 all verified runtime-fireable, not the earlier declared-but-inert stubs). Provider = Anthropic SDK confined to `_anthropic_provider.py`. Spend enforcement = two-axis (per-wallet + account-level) `RollingSpendAccumulator`, rolling-30-day with per-transaction rolloff, fail-closed. PCR-VENT-006 struck the inert $250 'concurrent' envelope; the aggregate stays $500/rolling-30d (privacy.com computes rolling-30, confirmed from vendor docs \u2014 the earlier calendar-month realignment was withdrawn). Inference ceilings ($2/rolling-30d, $0.10/run, 20 calls/run) live in the venture policy; inference meters against PCR-FIN-001 ($2 reallocated from director-ops), NOT the PCR-VENT-005 card. **Next: Phase 4/5 \u2014 wiring inference to actually run** (poller constructs JudgmentEngine; requires the CV3 preconditions: `account-config.json` + the Anthropic project), which is recording-only \u2192 judging, a distinct future CEO decision. The PCR-VENT-005 wallet stays provisioned-and-idle awaiting a genuine paid third-party dependency; none identified.",
+        "stop_line": "Before inference goes LIVE (recording-only \u2192 actually judging notices): the CV3 preconditions must exist (`account-config.json` with the current privacy.com account ceiling; the `jasonos-venture-engine-inference` Anthropic project) AND the CEO must decide to wire it on. The Phase-3 Steward review is DONE (CLEAR, 2026-07-22). Nothing runs inference today \u2014 the poller does not construct a JudgmentEngine; Phase 2 stays recording-only until that wiring decision."
       }
     },
     {
@@ -220,59 +220,53 @@
     {
       "id": "ACT-HO-16",
       "category": "required",
-      "label": "CEO DECISION 2026-07-22 \u2014 the Anthropic inference envelope stays at $20/month",
-      "context": ", matching actual card mechanics; the $100/month proposal is rejected. Note the constraint this creates: that $20 is alr"
+      "label": "CEO DECISION 2026-07-22 \u2014 inference ceilings LOCKED, numbers as proposed.",
+      "context": "Anthropic envelope stays $20/month. Ceiling values stand as Engineering proposed: inference_calls_per_run: 20, inference"
     },
     {
       "id": "ACT-HO-17",
-      "category": "required",
-      "label": "BUILD (before any purchase path) \u2014 our software does not enforce the money limits it declares.",
-      "context": "Verified against operations/bin/venture-engine/vengine/ on 2026-07-22: policy.py parses the per-opportunity MAL, the $25"
-    },
-    {
-      "id": "ACT-HO-18",
       "category": "required",
       "label": "Promote one staged lane",
       "context": "staged/session-close-2026-07-22 (c8f0c86, operations repo) \u2014 the 2026-07-22 session-close memory entry + three procedure"
     },
     {
-      "id": "ACT-HO-19",
+      "id": "ACT-HO-18",
       "category": "required",
       "label": "INI-111 Phase-3 lanes (2026-07-22, both merge clean, neither promotable yet)",
       "context": ""
     },
     {
-      "id": "ACT-HO-20",
+      "id": "ACT-HO-19",
       "category": "required",
       "label": "staged/ini111-phase3-code (ce7d892)",
       "context": "gate items 5/6/9 + SDK adapter + shared spend tracker. BLOCKED on PCR-VENT-006: load_policy_values() now requires infere"
     },
     {
-      "id": "ACT-HO-21",
+      "id": "ACT-HO-20",
       "category": "required",
       "label": "staged/vent-wallet-governance (4b74607)",
       "context": "PCR-VENT-006 draft + PCR-VENT-005 post-enactment record. Needs CEO approval, not Steward code clearance \u2014 deliberately s"
     },
     {
-      "id": "ACT-HO-22",
+      "id": "ACT-HO-21",
       "category": "required",
       "label": "staged/ini111-phase3-binding (bcd1c1d) \u2014 SUPERSEDED, do not promote.",
       "context": "Engineering's original; it mixed the two governance documents into a code commit. Its venture-engine subtree is byte-ide"
     },
     {
-      "id": "ACT-HO-23",
+      "id": "ACT-HO-22",
       "category": "required",
       "label": "PRODUCTION INCIDENT, contained 2026-07-22",
       "context": "the Phase-3 working-tree changes broke load_policy_values() against the real policy document; the daily 07:10 CDT poll w"
     },
     {
-      "id": "ACT-HO-24",
+      "id": "ACT-HO-23",
       "category": "required",
       "label": "Do NOT promote staged/ini111-phase3-containment (fb7ae51)",
       "context": "retained deliberately as the immutable artifact the Security Steward reviewed for CAP-REV-2026-07-22-INI111-PHASE3. Its "
     },
     {
-      "id": "ACT-HO-25",
+      "id": "ACT-HO-24",
       "category": "required",
       "label": "Rule on the \u00a7 6 baseline recount discrepancy",
       "context": "the CEO-set baseline records checkers 26 / policies 28; recounting on 2026-07-22 gave 20 / 37 by the stated method (scri"
@@ -1193,7 +1187,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-22T17:19:35.314105+00:00"
+    "generated_at": "2026-07-23T03:19:43.292133+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 11,
