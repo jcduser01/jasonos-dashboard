@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T09:20:03Z",
+  "generated_at": "2026-07-23T11:18:26Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-19T07:35:16Z",
-    "minutes_since_session": 5864,
+    "minutes_since_session": 5983,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -555,6 +555,14 @@
         "runner_scope": "Patch `jasonos-steward-audit-compactor.py`'s `compact()` duplicate-skip branch to move the duplicate-skipped inbox file to `archive/` (mirroring the `fresh` path's `os.replace`), add a regression test",
         "stop_line": "None \u2014 mechanical, no authority/commit-path change (the compactor already writes to this exact tree under its existing GAP-070 authorization).",
         "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026"
+      },
+      {
+        "id": "REM-105",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "**None** until `Chosen option` is marked. (Once chosen: strip the trailing period from the `**Route:**` line of `governance/gaps/open/GAP-189-*.md`, `GAP-190-*.md`, `GAP-191-*.md`; verify `check-work-",
+        "stop_line": "None \u2014 bounded mechanical authoring fix; no authority surface.",
+        "description": "Step 2c full-sweep check-work-item-contract-conformance.py reports 3 fresh (non-overlapping)\u2026"
       }
     ],
     "fully_executable": [
@@ -581,6 +589,14 @@
         "runner_scope": "Patch `jasonos-steward-audit-compactor.py`'s `compact()` duplicate-skip branch to move the duplicate-skipped inbox file to `archive/` (mirroring the `fresh` path's `os.replace`), add a regression test",
         "stop_line": "None \u2014 mechanical, no authority/commit-path change (the compactor already writes to this exact tree under its existing GAP-070 authorization).",
         "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026"
+      },
+      {
+        "id": "REM-105",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "**None** until `Chosen option` is marked. (Once chosen: strip the trailing period from the `**Route:**` line of `governance/gaps/open/GAP-189-*.md`, `GAP-190-*.md`, `GAP-191-*.md`; verify `check-work-",
+        "stop_line": "None \u2014 bounded mechanical authoring fix; no authority surface.",
+        "description": "Step 2c full-sweep check-work-item-contract-conformance.py reports 3 fresh (non-overlapping)\u2026"
       }
     ],
     "in_progress_not_ceo": [
@@ -695,6 +711,14 @@
         "runner_scope": "None \u2014 the Steward authors the exception as INI-139 Governance Gate item 1, not as a standalone PCR-SEC-013 deliverable.",
         "stop_line": "None remaining at the PCR level. The Steward's gate language itself still carries its own non-waivable review before any egress path goes live (same class as INI-137's existing C1/C3/C5 gates it reuse",
         "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
+      },
+      {
+        "id": "REM-104",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "**None** until `Chosen option` is marked. (Option 1 once chosen: add `outputs_written`/`outputs_attempted_and_failed` frontmatter keys to `Logs/capability-reviews/CAP-REV-2026-07-22-INI111-PHASE3-BIND",
+        "stop_line": "None for Option 1 (bounded frontmatter fix). Option 2 halts at the PCR-SEC-011/checker amendment and requires a Security Steward review.",
+        "description": "Step 2f check-cap-rev-write-claims.py exits 1: CAP-REV-2026-07-22-INI111-PHASE3-BINDING.md (dated\u2026"
       }
     ],
     "partially_executable": [
@@ -809,6 +833,14 @@
         "runner_scope": "None \u2014 the Steward authors the exception as INI-139 Governance Gate item 1, not as a standalone PCR-SEC-013 deliverable.",
         "stop_line": "None remaining at the PCR level. The Steward's gate language itself still carries its own non-waivable review before any egress path goes live (same class as INI-137's existing C1/C3/C5 gates it reuse",
         "description": "Scoped Low-Sensitivity Client-Egress Exception for Reel-Script Content"
+      },
+      {
+        "id": "REM-104",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "**None** until `Chosen option` is marked. (Option 1 once chosen: add `outputs_written`/`outputs_attempted_and_failed` frontmatter keys to `Logs/capability-reviews/CAP-REV-2026-07-22-INI111-PHASE3-BIND",
+        "stop_line": "None for Option 1 (bounded frontmatter fix). Option 2 halts at the PCR-SEC-011/checker amendment and requires a Security Steward review.",
+        "description": "Step 2f check-cap-rev-write-claims.py exits 1: CAP-REV-2026-07-22-INI111-PHASE3-BINDING.md (dated\u2026"
       }
     ],
     "blocked_needs_decision": [
@@ -1162,11 +1194,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-23T09:20:03.674238+00:00"
+    "generated_at": "2026-07-23T11:18:26.808424+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
     "open_gaps": 25,
-    "open_rems": 10
+    "open_rems": 12
   }
 }
