@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T09:12:45Z",
+  "generated_at": "2026-07-24T11:15:32Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-23T19:28:00Z",
-    "minutes_since_session": 824,
+    "minutes_since_session": 947,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -1088,6 +1088,14 @@
         "runner_scope": "",
         "stop_line": "Knowledge Director reads the inbox prompt and decides its disposition on its merits before recording it \u2014 do not blanket-archive to clear the SLA flag.",
         "description": "Step 2b coverage checker check-kb-completeness.py exits 1 (Facet A): inbox item\u2026"
+      },
+      {
+        "id": "REM-106",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "None \u2014 bounded audit-inbox hygiene fix; the compactor is append-only and this REM proposes no compactor code change (that broader hardening question is REM-088's / Engineering's).",
+        "description": "Step 2e's check-steward-audit-log-size.py exits 1 on a NEW rejected inbox file\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -1236,11 +1244,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-24T09:12:45.476258+00:00"
+    "generated_at": "2026-07-24T11:15:32.265117+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
     "open_gaps": 26,
-    "open_rems": 12
+    "open_rems": 13
   }
 }
