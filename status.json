@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T07:12:39Z",
+  "generated_at": "2026-07-24T09:12:45Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-23T19:28:00Z",
-    "minutes_since_session": 704,
+    "minutes_since_session": 824,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -280,6 +280,30 @@
       "category": "required",
       "label": "Rule on the \u00a7 6 baseline recount discrepancy",
       "context": "the CEO-set baseline records checkers 26 / policies 28; recounting on 2026-07-22 gave 20 / 37 by the stated method (scri"
+    },
+    {
+      "id": "ACT-HO-25",
+      "category": "required",
+      "label": "INI-111 \u2014 decide the leg-3 interpretation before any autonomy advance above L0.",
+      "context": "operations/local-llm-workload-classification.md gates local routing partly on leg 3 (\"the model cannot unilaterally supp"
+    },
+    {
+      "id": "ACT-HO-26",
+      "category": "required",
+      "label": "INI-111 \u2014 watch for injection-inflated scores in production (Steward C4 trigger).",
+      "context": "qwen2.5:14b is confirmed susceptible to description-embedded injection where Haiku resists. At L0 this only misrepresent"
+    },
+    {
+      "id": "ACT-HO-27",
+      "category": "required",
+      "label": "INI-111 \u2014 any autonomy-dial advance beyond L0 requires a fresh Security Steward injection-resistance pass",
+      "context": "before local inference continues (Steward condition C2). Not a decision needed now; a gate on a future one."
+    },
+    {
+      "id": "ACT-HO-28",
+      "category": "required",
+      "label": "INI-146 \u2014 dispatch the Security Steward capability review on the SDLC doctrine + check-sdlc-phase-gate.py",
+      "context": "this is the initiative's remaining stop-line. Until it clears, the checker stays wired into no live sweep. Must run from"
     }
   ],
   "status_drift": [],
@@ -295,8 +319,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-24T06:31:50Z",
-      "invocations_30d": 40
+      "last_active": "2026-07-24T07:44:04Z",
+      "invocations_30d": 41
     },
     {
       "name": "knowledge-director",
@@ -1212,7 +1236,7 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-24T07:12:39.602898+00:00"
+    "generated_at": "2026-07-24T09:12:45.476258+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
