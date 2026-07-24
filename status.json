@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-23T23:18:59Z",
+  "generated_at": "2026-07-24T07:12:39Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
     "done": 111,
-    "total": 135,
-    "active": 4,
+    "total": 136,
+    "active": 5,
     "queued": 3,
     "paused": 8,
     "backlog": 9
   },
   "operational": {
     "last_session_date": "2026-07-23T19:28:00Z",
-    "minutes_since_session": 230,
+    "minutes_since_session": 704,
     "airlock_queue": 0,
     "airlock_bundles": 0
   },
@@ -70,6 +70,16 @@
           "INI-057",
           "INI-101"
         ]
+      }
+    },
+    {
+      "id": "INI-146",
+      "name": "JasonOS Software Delivery Lifecycle \u2014 Canonization (Plan \u2192 Architect \u2192 Build \u2192 Test \u2192 Ship)",
+      "status": "active",
+      "contract": {
+        "route": "Queue-ready",
+        "runner_scope": "Author the SDLC doctrine (policy + capability amendment + runbook), the four artifact templates, the Build Record substrate, the three new front-half role skills with their registry rows, the phase-profiles routing file, and the phase-gate checker built under TDD. Stage to a lane per repo.",
+        "stop_line": "Phases A-D are promoted to canonical (2026-07-24, CEO push directive). Remaining stop-line: the Security Steward capability review on the doctrine + checker has NOT run \u2014 until it clears, check-sdlc-phase-gate.py stays unwired from every live sweep. Phase E (the first real trial run) is a separate, CEO-selected execution."
       }
     }
   ],
@@ -285,7 +295,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-23T07:45:10Z",
+      "last_active": "2026-07-24T06:31:50Z",
       "invocations_30d": 40
     },
     {
@@ -901,6 +911,14 @@
         "description": "When the blog-drip automated publish fails, the manual recovery path is broken in two independent\u2026"
       },
       {
+        "id": "GAP-192",
+        "type": "GAP",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "CEO decides the disposition (consolidate vs. formally split). Until then no migration, deletion, or reconciliation of either store is performed \u2014 moving memory on inference is precisely the failure th",
+        "description": "Harness memory-store guidance conflicts with PCR-OPS-039, and both stores are live"
+      },
+      {
         "id": "PCR-ENG-020",
         "type": "PCR",
         "route": "Draft-only",
@@ -1194,11 +1212,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-23T23:18:59.925465+00:00"
+    "generated_at": "2026-07-24T07:12:39.602898+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 25,
+    "open_gaps": 26,
     "open_rems": 12
   }
 }
