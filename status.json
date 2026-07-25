@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T16:49:00Z",
+  "generated_at": "2026-07-25T20:49:10Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-24T17:35:02Z",
-    "minutes_since_session": 1393,
+    "minutes_since_session": 1634,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -320,7 +320,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-07-24T07:44:04Z",
-      "invocations_30d": 41
+      "invocations_30d": 40
     },
     {
       "name": "knowledge-director",
@@ -731,6 +731,14 @@
         "description": "The session-handoff \"open CEO actions\" figure is a raw bullet count over a block containing\u2026"
       },
       {
+        "id": "GAP-193",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add an attention seam to `operations/bin/jasonos-gate-bundle.py` \u2014 a `_ATTENTION_SEAM_PREFIXES` tuple (`operations/bin/venture-engine/vengine/orgstate/`, `.../vengine/net/`, `.../vengine/decision/_att",
+        "stop_line": "Do not wire the suites into the bundle before INI-148 Stage 3 is complete and `tests/attention/` is green \u2014 wiring a deliberately-RED suite into a SHARED gate would fail every unrelated change that to",
+        "description": "No mechanical gate runs the INI-148 attention suites, and the gate bundle's seam trigger is\u2026"
+      },
+      {
         "id": "PCR-CRE-002",
         "type": "PCR",
         "route": "Queue-ready",
@@ -851,6 +859,14 @@
         "runner_scope": "Item 1 only \u2014 a bounded counter fix in `jasonos-handoff-compactor.py` (around line 563). Stop counting bullets that fall inside the `### Completed (historical \u2014 preserved verbatim, unchanged)` subsect",
         "stop_line": "Do not silently change what the number means without recording the redefinition in the handoff itself. A figure that quietly drops from 23 to 14 with no explanation looks like work disappearing. Do no",
         "description": "The session-handoff \"open CEO actions\" figure is a raw bullet count over a block containing\u2026"
+      },
+      {
+        "id": "GAP-193",
+        "type": "GAP",
+        "route": "Queue-ready",
+        "runner_scope": "Add an attention seam to `operations/bin/jasonos-gate-bundle.py` \u2014 a `_ATTENTION_SEAM_PREFIXES` tuple (`operations/bin/venture-engine/vengine/orgstate/`, `.../vengine/net/`, `.../vengine/decision/_att",
+        "stop_line": "Do not wire the suites into the bundle before INI-148 Stage 3 is complete and `tests/attention/` is green \u2014 wiring a deliberately-RED suite into a SHARED gate would fail every unrelated change that to",
+        "description": "No mechanical gate runs the INI-148 attention suites, and the gate bundle's seam trigger is\u2026"
       },
       {
         "id": "PCR-CRE-002",
@@ -1260,11 +1276,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-25T16:49:00.199006+00:00"
+    "generated_at": "2026-07-25T20:49:10.832111+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
-    "open_gaps": 26,
+    "open_gaps": 27,
     "open_rems": 15
   }
 }
