@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T21:59:14Z",
+  "generated_at": "2026-07-25T11:15:25Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-24T17:35:02Z",
-    "minutes_since_session": 264,
+    "minutes_since_session": 1060,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -994,6 +994,14 @@
         "runner_scope": "",
         "stop_line": "Do not alter the connector/tool surface (add or remove the Shopify MCP from any dispatch context) without a CEO decision on whether the exposure is intentional; the President Agent's role here is inve",
         "description": "Security Steward Weekly Compliance Summary (weekly-2026-07-20) finding 1 / recommendation (a): a\u2026"
+      },
+      {
+        "id": "REM-107",
+        "type": "REM",
+        "route": "CEO-first",
+        "runner_scope": "",
+        "stop_line": "CEO/Security Steward must independently confirm the actual (non-log) outcome of today's six runs before any corrective code change is authorized \u2014 do not assume either \"nothing happened\" or \"everythin",
+        "description": "Six of the twelve watermark-bounded daily channels (jasonos-policy-sync, jasonos-airlock-monitor\u2026"
       }
     ],
     "blocked_needs_director_decision": [],
@@ -1109,6 +1117,14 @@
         "runner_scope": "",
         "stop_line": "None \u2014 bounded audit-inbox hygiene fix; the compactor is append-only and this REM proposes no compactor code change (that broader hardening question is REM-088's / Engineering's).",
         "description": "Step 2e's check-steward-audit-log-size.py exits 1 on a NEW rejected inbox file\u2026"
+      },
+      {
+        "id": "REM-108",
+        "type": "REM",
+        "route": "Operational",
+        "runner_scope": "",
+        "stop_line": "None \u2014 bounded infrastructure-health remediation.",
+        "description": "Step 2k Part A infrastructure-health check: dashboard publisher is stale\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -1257,11 +1273,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-24T21:59:14.485260+00:00"
+    "generated_at": "2026-07-25T11:15:25.804254+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 10,
     "open_gaps": 26,
-    "open_rems": 13
+    "open_rems": 15
   }
 }
