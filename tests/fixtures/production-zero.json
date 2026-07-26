@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-07-26T05:00:00Z",
+  "schema_version": "6",
+  "production": {
+    "headline": {
+      "delivered": 0,
+      "recipients": 0,
+      "next": "INI-111",
+      "blocker_count": 1,
+      "maintenance_attention_share": null,
+      "maintenance_attention_label": "Unavailable",
+      "delivery_status": "no_delivery",
+      "summary": "Delivered this period: 0 artifacts to 0 recipients · Next commitment: INI-111 · Delivery blockers: 1 · Maintenance attention share: Unavailable"
+    },
+    "delivery": {
+      "rolling_four_period_counts": [2, 1, 1, 0],
+      "next": {"id": "INI-111", "label": "INI-111", "expected_delivery_date": null},
+      "blockers": [{"red": false}]
+    },
+    "effort": {
+      "production_ratio": {"status": "degraded_unquantified"},
+      "attention": {"status": "unavailable"},
+      "tokens": {"status": "unavailable"}
+    },
+    "maintenance": {"admitted": 3, "declined_observations": 2, "expired_observations": 1},
+    "escape_hatches": {"delivery_dependencies": 1, "guardrail_repairs": 2, "maintenance_cap_overrides": 0},
+    "mechanisms": {"status": "partial_unverified", "ratified_ceiling": 69, "live_count": null},
+    "projection_contract": {"classification": "public"}
+  },
+  "stats": {"done": 6, "total": 12, "active": 2, "queued": 1, "paused": 1, "backlog": 2},
+  "operational": {"minutes_since_session": 45, "airlock_queue": 0},
+  "active_initiatives": [{"id": "INI-111", "name": "Venture Opportunity Engine"}],
+  "queue": [{"id": "INI-114", "name": "JCD Website", "position": 1}],
+  "ceo_actions": [],
+  "directors": [],
+  "paused": {"client_work": [], "infrastructure": []},
+  "backlog": {"client_work": [], "infrastructure": []},
+  "batch_queue": [],
+  "jasonos_work_readiness": {
+    "fully_executable": [], "partially_executable": [], "blocked_needs_decision": [],
+    "blocked_needs_director_decision": [], "not_executable_leading_stop": [],
+    "contract_quality_gaps": []
+  }
+}
