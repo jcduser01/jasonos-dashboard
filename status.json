@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T18:04:02Z",
+  "generated_at": "2026-07-26T19:39:34Z",
   "schema_version": "6",
   "generator_version": "3.0",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 8,
-      "guardrail_repairs": 21,
+      "guardrail_repairs": 22,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T07:46:00Z",
-    "minutes_since_session": 618,
+    "minutes_since_session": 713,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -275,146 +275,92 @@
     {
       "id": "ACT-HO-8",
       "category": "required",
-      "label": "Ratify PCR-OPS-068's Cowork-director-substitution question",
-      "context": "decide whether the pattern used twice this session (independent same-session agent standing in for a Mac-side director, "
-    },
-    {
-      "id": "ACT-HO-9",
-      "category": "required",
-      "label": "PCR-OPS-071 (Draft)",
-      "context": "decide whether the CEO-Actions redundancy check should be periodic (e.g. folded into the morning-sweep precompile once b"
-    },
-    {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "GAP-176",
-      "context": "Mac-native: read the plist for research-handoff, ollama, boot-marker, and retired-memory-detective, confirm whether each"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "REM-095",
-      "context": "root cause still open (sleep ruled out); if the canonical-fetch/git-relay silence recurs a third time, check the Mac sys"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "Decide PCR-OPS-072: standalone operations/skill-authoring-procedure.md vs. folded into an existing runbook, and who auth",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "required",
       "label": "Run the Idea ID migration (design spec \u00a74/\u00a79.1) for the 195 existing Idea Backlog rows before INI-145's skill is usable.",
       "context": ""
     },
     {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "GAP-178 \u2014 decide where the Cowork\u2192Code handoff procedure lives and who owns it",
-      "context": "including whether it is a third section of the combined PCR-OPS-072/073 lifecycle document or a separate operations runb"
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "DECIDE \u2014 the PCR-VENT-005 merchant lock does not protect the first transaction.",
-      "context": "The approved control (PCR-VENT-005 Option 3(a), enacted into wallet-policy.md) is \"locked to the specific pre-approved v"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "DECIDE \u2014 PCR-VENT-006 (DRAFT, filed 2026-07-22, lane staged/vent-wallet-governance fb1b957)",
-      "context": "strike the $250 concurrent envelope as structurally inert (privacy.com debits via ACH on settlement, not revolving credi"
-    },
-    {
-      "id": "ACT-HO-17",
+      "id": "ACT-HO-9",
       "category": "required",
       "label": "Two privacy.com facts newly on the record (2026-07-22, from vendor docs \u2014 neither was in any JasonOS document)",
       "context": "a"
     },
     {
-      "id": "ACT-HO-18",
+      "id": "ACT-HO-10",
       "category": "required",
       "label": "CEO DECISION 2026-07-22 \u2014 inference ceilings LOCKED, numbers as proposed.",
       "context": "Anthropic envelope stays $20/month. Ceiling values stand as Engineering proposed: inference_calls_per_run: 20, inference"
     },
     {
-      "id": "ACT-HO-19",
+      "id": "ACT-HO-11",
       "category": "required",
       "label": "Promote one staged lane",
       "context": "staged/session-close-2026-07-22 (c8f0c86, operations repo) \u2014 the 2026-07-22 session-close memory entry + three procedure"
     },
     {
-      "id": "ACT-HO-20",
+      "id": "ACT-HO-12",
       "category": "required",
       "label": "INI-111 Phase-3 lanes (2026-07-22, both merge clean, neither promotable yet)",
       "context": ""
     },
     {
-      "id": "ACT-HO-21",
+      "id": "ACT-HO-13",
       "category": "required",
       "label": "staged/ini111-phase3-code (ce7d892)",
       "context": "gate items 5/6/9 + SDK adapter + shared spend tracker. BLOCKED on PCR-VENT-006: load_policy_values() now requires infere"
     },
     {
-      "id": "ACT-HO-22",
+      "id": "ACT-HO-14",
       "category": "required",
       "label": "staged/vent-wallet-governance (4b74607)",
       "context": "PCR-VENT-006 draft + PCR-VENT-005 post-enactment record. Needs CEO approval, not Steward code clearance \u2014 deliberately s"
     },
     {
-      "id": "ACT-HO-23",
+      "id": "ACT-HO-15",
       "category": "required",
       "label": "staged/ini111-phase3-binding (bcd1c1d) \u2014 SUPERSEDED, do not promote.",
       "context": "Engineering's original; it mixed the two governance documents into a code commit. Its venture-engine subtree is byte-ide"
     },
     {
-      "id": "ACT-HO-24",
+      "id": "ACT-HO-16",
       "category": "required",
       "label": "PRODUCTION INCIDENT, contained 2026-07-22",
       "context": "the Phase-3 working-tree changes broke load_policy_values() against the real policy document; the daily 07:10 CDT poll w"
     },
     {
-      "id": "ACT-HO-25",
+      "id": "ACT-HO-17",
       "category": "required",
       "label": "Do NOT promote staged/ini111-phase3-containment (fb7ae51)",
       "context": "retained deliberately as the immutable artifact the Security Steward reviewed for CAP-REV-2026-07-22-INI111-PHASE3. Its "
     },
     {
-      "id": "ACT-HO-26",
+      "id": "ACT-HO-18",
       "category": "required",
       "label": "Rule on the \u00a7 6 baseline recount discrepancy",
       "context": "the CEO-set baseline records checkers 26 / policies 28; recounting on 2026-07-22 gave 20 / 37 by the stated method (scri"
     },
     {
-      "id": "ACT-HO-27",
+      "id": "ACT-HO-19",
       "category": "required",
       "label": "INI-111 \u2014 decide the leg-3 interpretation before any autonomy advance above L0.",
       "context": "operations/local-llm-workload-classification.md gates local routing partly on leg 3 (\"the model cannot unilaterally supp"
     },
     {
-      "id": "ACT-HO-28",
+      "id": "ACT-HO-20",
       "category": "required",
       "label": "INI-111 \u2014 watch for injection-inflated scores in production (Steward C4 trigger).",
       "context": "qwen2.5:14b is confirmed susceptible to description-embedded injection where Haiku resists. At L0 this only misrepresent"
     },
     {
-      "id": "ACT-HO-29",
+      "id": "ACT-HO-21",
       "category": "required",
       "label": "INI-111 \u2014 any autonomy-dial advance beyond L0 requires a fresh Security Steward injection-resistance pass",
       "context": "before local inference continues (Steward condition C2). Not a decision needed now; a gate on a future one."
     },
     {
-      "id": "ACT-HO-30",
+      "id": "ACT-HO-22",
       "category": "required",
       "label": "INI-146 \u2014 dispatch the Security Steward capability review on the SDLC doctrine + check-sdlc-phase-gate.py",
       "context": "this is the initiative's remaining stop-line. Until it clears, the checker stays wired into no live sweep. Must run from"
-    },
-    {
-      "id": "ACT-HO-31",
-      "category": "required",
-      "label": "GAP-192 \u2014 decide the memory-store disposition",
-      "context": "either governance/memory/ becomes the sole store (harness store retired, its unique entries migrated), or a two-store mo"
     }
   ],
   "status_drift": [],
@@ -698,6 +644,14 @@
         "description": "When the blog-drip automated publish fails, the manual recovery path is broken in two independent\u2026"
       },
       {
+        "id": "GAP-194",
+        "type": "GAP",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "Read-only/reconciliation logic change to the dashboard generator and the session-close procedure; no change to any commit-path, audit-path, or authority surface. Do not auto-strike on a fuzzy/uncertai",
+        "description": "The CEO-Actions narrative panel has no mechanism that retires a bullet when its own referenced\u2026"
+      },
+      {
         "id": "PCR-OPS-064",
         "type": "PCR",
         "route": null,
@@ -915,13 +869,49 @@
         "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
         "issue": "decision-recorded-ceo-action-header-stale",
         "category": "PCR"
+      },
+      {
+        "type": "missing_common_field",
+        "field": "execution scope",
+        "file": "governance/gaps/open/GAP-194-ceo-actions-panel-has-no-mechanism-to-retire-ticket-resolved-bullets.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_common_field",
+        "field": "definition of done",
+        "file": "governance/gaps/open/GAP-194-ceo-actions-panel-has-no-mechanism-to-retire-ticket-resolved-bullets.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_common_field",
+        "field": "gates",
+        "file": "governance/gaps/open/GAP-194-ceo-actions-panel-has-no-mechanism-to-retire-ticket-resolved-bullets.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_class_field",
+        "field": "guardrail",
+        "file": "governance/gaps/open/GAP-194-ceo-actions-panel-has-no-mechanism-to-retire-ticket-resolved-bullets.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_class_field",
+        "field": "failure evidence",
+        "file": "governance/gaps/open/GAP-194-ceo-actions-panel-has-no-mechanism-to-retire-ticket-resolved-bullets.md",
+        "category": "gap-open"
+      },
+      {
+        "type": "missing_class_field",
+        "field": "detected at",
+        "file": "governance/gaps/open/GAP-194-ceo-actions-panel-has-no-mechanism-to-retire-ticket-resolved-bullets.md",
+        "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-26T18:04:02.895041+00:00"
+    "generated_at": "2026-07-26T19:39:34.794647+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
-    "open_gaps": 12,
+    "open_gaps": 13,
     "open_rems": 12
   }
 }
