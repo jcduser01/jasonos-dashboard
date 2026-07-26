@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-07-26T05:00:00Z",
+  "schema_version": "6",
+  "production": {
+    "headline": {
+      "delivered": 2,
+      "recipients": 2,
+      "next": "INI-114",
+      "blocker_count": 1,
+      "maintenance_attention_share": null,
+      "maintenance_attention_label": "Unavailable",
+      "delivery_status": "productive",
+      "summary": "Delivered this period: 2 artifacts to 2 recipients · Next commitment: INI-114 · Delivery blockers: 1 · Maintenance attention share: Unavailable"
+    },
+    "delivery": {
+      "rolling_four_period_counts": [0, 1, 1, 2],
+      "next": {"id": "INI-114", "label": "INI-114", "expected_delivery_date": "2026-07-29"},
+      "blockers": [{"red": true}]
+    },
+    "effort": {
+      "production_ratio": {"status": "unavailable"},
+      "attention": {"status": "unavailable"},
+      "tokens": {"status": "unavailable"}
+    },
+    "maintenance": {"admitted": 1, "declined_observations": 3, "expired_observations": 2},
+    "escape_hatches": {"delivery_dependencies": 2, "guardrail_repairs": 1, "maintenance_cap_overrides": 0},
+    "mechanisms": {"status": "partial_unverified", "ratified_ceiling": 69, "live_count": null},
+    "projection_contract": {"classification": "public"}
+  },
+  "stats": {"done": 8, "total": 13, "active": 2, "queued": 1, "paused": 0, "backlog": 2},
+  "operational": {"minutes_since_session": 18, "airlock_queue": 1},
+  "active_initiatives": [{"id": "INI-114", "name": "Jason Cook Design Website"}],
+  "queue": [{"id": "INI-147", "name": "Venture Deep Evaluation", "position": 1}],
+  "ceo_actions": [],
+  "directors": [],
+  "paused": {"client_work": [], "infrastructure": []},
+  "backlog": {"client_work": [], "infrastructure": []},
+  "batch_queue": [],
+  "jasonos_work_readiness": {
+    "fully_executable": [], "partially_executable": [], "blocked_needs_decision": [],
+    "blocked_needs_director_decision": [], "not_executable_leading_stop": [],
+    "contract_quality_gaps": []
+  }
+}

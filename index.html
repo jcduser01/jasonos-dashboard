@@ -416,6 +416,34 @@
     color: var(--danger);
   }
 
+  /* Production Model Tranche 4 — governing organizational readout. */
+  #production-headline {
+    width: 100%;
+    border-left: 4px solid var(--accent);
+    padding: 22px 24px;
+  }
+  #production-headline.no-delivery { border-left-color: var(--warn); }
+  #production-summary {
+    font-size: clamp(20px, 2.4vw, 32px);
+    line-height: 1.28;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+  }
+  #production-detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+    color: var(--text-secondary);
+  }
+  .production-kicker { color: var(--text-muted); font-size: 11px; text-transform: uppercase; }
+  .production-value { margin-top: 5px; color: var(--text); font-size: 15px; }
+  .production-red { color: var(--danger); font-weight: 650; }
+  #production-subordinate {
+    margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border);
+    color: var(--text-muted); font-size: 12px; line-height: 1.6;
+  }
+
   /* ── Backlog panels ──────────────────────────────────────────── */
   .backlog-item {
     display: flex;
@@ -489,9 +517,17 @@
   <!-- Error -->
   <div id="load-error">Could not load status. Retrying in 15 minutes.</div>
 
-  <!-- CEO Actions -->
+  <!-- Governing production headline -->
+  <div id="production-headline" class="panel">
+    <div class="panel-label">Delivery</div>
+    <div id="production-summary">Delivery data unavailable</div>
+    <div id="production-detail"></div>
+    <div id="production-subordinate"></div>
+  </div>
+
+  <!-- Diagnostics -->
   <div id="ceo-actions-panel" class="panel">
-    <div class="panel-label">CEO Actions</div>
+    <div class="panel-label">Diagnostics · CEO Actions</div>
     <div id="ceo-actions-body"></div>
   </div>
 
@@ -541,7 +577,7 @@
        what JasonOS can absorb. Hidden until the generator ships
        jasonos_work_readiness (Security-Steward-gated go-live). -->
   <div id="work-readiness-panel" class="panel" style="display:none;">
-    <div class="panel-label">JasonOS Work Readiness</div>
+    <div class="panel-label">Diagnostics · Tickets &amp; Conformance</div>
     <div id="work-readiness-body"></div>
   </div>
 
@@ -706,6 +742,51 @@
       html += '</div>';
     }
     body.innerHTML = html;
+  }
+
+  function renderProduction(model) {
+    var panel = document.getElementById("production-headline");
+    var summary = document.getElementById("production-summary");
+    var detail = document.getElementById("production-detail");
+    var subordinate = document.getElementById("production-subordinate");
+    if (!model || !model.headline || !model.delivery) {
+      panel.classList.add("no-delivery");
+      summary.textContent = "Delivery data unavailable";
+      detail.innerHTML = "";
+      subordinate.innerHTML = "";
+      return;
+    }
+    var h = model.headline;
+    panel.classList.toggle("no-delivery", h.delivered === 0);
+    summary.textContent = h.summary;
+    var next = model.delivery.next || {};
+    var blockers = model.delivery.blockers || [];
+    var red = blockers.some(function (b) { return b.red; });
+    detail.innerHTML =
+      '<div><div class="production-kicker">Rolling 4 periods</div><div class="production-value">'
+      + escHtml((model.delivery.rolling_four_period_counts || []).join(" · ")) + '</div></div>'
+      + '<div><div class="production-kicker">Next date</div><div class="production-value">'
+      + escHtml(next.expected_delivery_date || "Unavailable") + '</div></div>'
+      + '<div><div class="production-kicker">Blocker posture</div><div class="production-value'
+      + (red ? ' production-red' : '') + '">' + (red ? "RED blocker" : blockers.length + " named") + '</div></div>'
+      + '<div><div class="production-kicker">Attention source</div><div class="production-value">'
+      + escHtml((model.effort.attention || {}).status || "unavailable") + '</div></div>';
+    var maintenance = model.maintenance || {};
+    var escape = model.escape_hatches || {};
+    var mechanisms = model.mechanisms || {};
+    var ratio = model.effort.production_ratio || {};
+    var tokens = model.effort.tokens || {};
+    subordinate.textContent =
+      "Production ratio: " + (ratio.status || "unavailable")
+      + " · Tokens: " + (tokens.status || "unavailable")
+      + " · Maintenance admitted/declined/expired: "
+      + (maintenance.admitted || 0) + "/" + (maintenance.declined_observations || 0)
+      + "/" + (maintenance.expired_observations || 0)
+      + " · Escape hatches — dependencies/repairs/overrides: "
+      + (escape.delivery_dependencies || 0) + "/" + (escape.guardrail_repairs || 0)
+      + "/" + (escape.maintenance_cap_overrides || 0)
+      + " · Mechanisms: " + (mechanisms.live_count == null ? "unverified" : mechanisms.live_count)
+      + " / ceiling " + (mechanisms.ratified_ceiling == null ? "unavailable" : mechanisms.ratified_ceiling);
   }
 
   function renderOpsStrip(stats, operational) {
@@ -957,6 +1038,7 @@
     lastUpdatedEl.textContent = data.generated_at
       ? formatTimestamp(data.generated_at) : "Unknown";
     checkStaleness(data.generated_at);
+    renderProduction(data.production);
     renderCeoActions(data.ceo_actions);
     renderOpsStrip(data.stats, data.operational);
     renderActive(data.active_initiative, data.active_initiatives);

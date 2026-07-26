@@ -2,7 +2,10 @@
 
 Static GitHub Pages dashboard for passive CEO monitoring of the JasonOS digital office. Served at `https://jcduser01.github.io/jasonos-dashboard/`.
 
-Two renderers share one data source (`status.json`):
+Two renderers share one data source (`status.json`). The first screen is the
+Production Model headline: Delivered / Recipients / Next / Blockers /
+Maintenance Attention Share. Ticket, closure, readiness, and conformance
+surfaces are diagnostic-only:
 
 - **Standard** — `index.html` at the site root (`/`). Single-column, mobile-first, tuned for dated/low-spec devices (iPad Mini 2, Safari 12 / WebKit 607).
 - **Pro** — `pro/index.html` at `/pro/`. Fluid widescreen layout tuned for 1920×1080 modern browsers; more content above the fold, responsive down to phone width, with a light/dark toggle. See [Renderers](#renderers).
@@ -44,7 +47,19 @@ Renderer-only fields (no generator dependency): the Pro renderer reuses every re
 
 Both renderers share the same `PASSWORD_HASH` and auth gate (see [Password Setup](#password-setup)).
 
-## status.json Schema (version 1)
+## status.json Schema (version 6)
+
+The top-level `production` object is the shared semantic model also consumed by
+the client/venture heartbeat. It contains the governing `headline`, delivery
+facts, effort-source limitations, maintenance lifecycle counts, escape-hatch
+audit counts, and the subordinate mechanism-ceiling readout. Renderers do not
+derive or hand-maintain these facts.
+
+`status.json` is public. Its `production` object is therefore the model's
+enforced public projection: recipient/artifact names, commitment references,
+dependency claims, and blocker text are absent. The dashboard shows counts,
+dates, Red posture, and JasonOS item IDs; the CEO-controlled heartbeat can
+render private labels from the same underlying model.
 
 ```json
 {
