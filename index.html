@@ -328,39 +328,60 @@
   .batch-id  { font-weight: 700; color: var(--text-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   .batch-empty { font-size: 0.85rem; color: var(--text-dim); }
 
-  /* ── JasonOS Work Readiness (INI-130 Change 9) ───────────────── */
-  .wr-group { padding: 7px 0; border-bottom: 1px solid var(--border); }
-  .wr-group:first-child { padding-top: 0; }
-  .wr-group:last-child  { border-bottom: none; padding-bottom: 0; }
-  .wr-group-label {
-    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.04em; margin-bottom: 5px;
+  /* ── Projects board (PCR-OPS-074) — primary board, replaces the retired
+     six-bucket JasonOS Work Readiness panel. ───────────────────── */
+  #projects-panel { border-color: var(--accent); }
+  #projects-panel .panel-label { color: var(--accent); }
+  .proj-group { padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .proj-group:first-child { padding-top: 0; }
+  .proj-group:last-child  { border-bottom: none; padding-bottom: 0; }
+  .proj-name {
+    font-size: 0.85rem; font-weight: 700; color: var(--text);
   }
-  .wr-eligible .wr-group-label { color: var(--success); }
-  .wr-blocked  .wr-group-label { color: var(--warn); }
-  .wr-progress .wr-group-label { color: var(--accent); }
-  .wr-director .wr-group-label { color: #b18cf0; }   /* GAP-161: blocked on a Director's judgment (not CEO) */
-  .wr-notexec  .wr-group-label { color: var(--text-dim); }
-  .wr-gap      .wr-group-label { color: var(--text-dim); }
-  .wr-count { font-weight: 700; opacity: 0.65; margin-left: 3px; }
-  .wr-item { display: flex; flex-direction: column; gap: 1px; padding: 3px 0; font-size: 0.82rem; }
-  .wr-item-row { display: flex; align-items: baseline; gap: 8px; }
-  .wr-id {
+  .proj-count { font-weight: 700; opacity: 0.6; margin-left: 4px; color: var(--text-dim); }
+  .proj-desc  { font-size: 0.75rem; color: var(--text-dim); margin: 2px 0 6px; }
+  .proj-item { display: flex; flex-direction: column; gap: 1px; padding: 3px 0 3px 2px; font-size: 0.82rem; }
+  .proj-item-row { display: flex; align-items: baseline; gap: 8px; }
+  .proj-id {
     font-weight: 700; color: var(--text-muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
-  .wr-type {
+  .proj-type {
     font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.03em; color: var(--text-dim); border: 1px solid var(--border);
     border-radius: 3px; padding: 0 4px; line-height: 1.4;
   }
-  .wr-meta  { font-size: 0.72rem; color: var(--text-dim); }
-  .wr-dir-tag {                                     /* GAP-161: per-item Director label */
-    font-size: 0.66rem; font-weight: 700; color: #b18cf0;
-    border: 1px solid #b18cf0; border-radius: 3px; padding: 0 4px; line-height: 1.4;
+  .proj-badge {
+    font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; border-radius: 3px; padding: 0 5px; line-height: 1.5;
+    margin-left: auto;
   }
-  .wr-desc  { font-size: 0.74rem; color: var(--text-dim); padding-left: 1px; }
-  .wr-empty { font-size: 0.8rem; color: var(--text-dim); }
+  .proj-badge-ceo   { background: rgba(255, 159, 64, 0.15);  color: var(--warn); }
+  .proj-badge-agent { background: rgba(76, 175, 125, 0.12);  color: var(--success); }
+  .proj-desc-line { font-size: 0.74rem; color: var(--text-dim); padding-left: 1px; }
+  .proj-empty { font-size: 0.85rem; color: var(--text-muted); }
+
+  /* ── Contract Quality (standalone conformance badge, PCR-OPS-074 §4) ── */
+  .cq-item { display: flex; flex-direction: column; gap: 1px; padding: 3px 0; font-size: 0.8rem; }
+  .cq-file { font-weight: 700; color: var(--text-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .cq-meta { font-size: 0.72rem; color: var(--text-dim); }
+  .cq-empty { font-size: 0.8rem; color: var(--text-dim); }
+
+  /* ── Pending Notes (PCR-OPS-074) — collapsed by default, visually
+     subordinate to Projects. ─────────────────────────────────── */
+  #pending-notes-panel { padding: 0; }
+  #pending-notes-panel summary {
+    cursor: pointer; padding: 14px 16px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-dim);
+  }
+  #pending-notes-panel summary .pn-count { opacity: 0.7; margin-left: 4px; }
+  #pending-notes-body { padding: 0 16px 14px; }
+  .pn-item { padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
+  .pn-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .pn-summary  { color: var(--text-muted); }
+  .pn-meta     { font-size: 0.7rem; color: var(--text-dim); margin-top: 2px; }
+  .pn-empty    { font-size: 0.8rem; color: var(--text-dim); }
 
   /* ── Director Activity ───────────────────────────────────────── */
   .director-row {
@@ -476,10 +497,13 @@
     #header                { width: 100%; }
     #load-error            { width: 100%; }
     #ceo-actions-panel     { width: 100%; }
+    #projects-panel        { width: 100%; }
     #ops-strip             { width: 100%; }
     #active-panel          { flex: 1; min-width: 200px; }
     #queue-panel           { flex: 1; min-width: 200px; }
+    #contract-quality-panel { width: 100%; }
     #directors-panel       { width: 100%; }
+    #pending-notes-panel   { width: 100%; }
 
     #paused-client-panel   { flex: 1; min-width: 200px; }
     #paused-infra-panel    { flex: 1; min-width: 200px; }
@@ -525,10 +549,17 @@
     <div id="production-subordinate"></div>
   </div>
 
-  <!-- Diagnostics -->
+  <!-- CEO Actions — standing, non-ticketed asks only (PCR-OPS-074) -->
   <div id="ceo-actions-panel" class="panel">
-    <div class="panel-label">Diagnostics · CEO Actions</div>
+    <div class="panel-label">CEO Actions</div>
     <div id="ceo-actions-body"></div>
+  </div>
+
+  <!-- Projects — primary board (PCR-OPS-074): every open GAP/PCR/REM grouped
+       by its project:, this is the surface for calling a project's execution. -->
+  <div id="projects-panel" class="panel">
+    <div class="panel-label">Projects</div>
+    <div id="projects-body"></div>
   </div>
 
   <!-- Ops Strip -->
@@ -573,12 +604,12 @@
     <div id="batch-queue-body"></div>
   </div>
 
-  <!-- JasonOS Work Readiness (INI-130 Change 9) — inverse of CEO Actions:
-       what JasonOS can absorb. Hidden until the generator ships
-       jasonos_work_readiness (Security-Steward-gated go-live). -->
-  <div id="work-readiness-panel" class="panel" style="display:none;">
-    <div class="panel-label">Diagnostics · Tickets &amp; Conformance</div>
-    <div id="work-readiness-body"></div>
+  <!-- Contract Quality (PCR-OPS-074 §4) — standalone conformance badge: a
+       malformed/missing contract (including a ticket missing project:),
+       independent of the retired six-bucket readiness apparatus. -->
+  <div id="contract-quality-panel" class="panel">
+    <div class="panel-label">Diagnostics · Contract Quality</div>
+    <div id="contract-quality-body"></div>
   </div>
 
   <!-- Director Activity -->
@@ -610,6 +641,13 @@
     <div class="panel-label">Infrastructure Backlog</div>
     <div id="backlog-digital-body"></div>
   </div>
+
+  <!-- Pending Notes (PCR-OPS-074) — operations/observations.jsonl, collapsed
+       by default, visually subordinate to Projects. -->
+  <details id="pending-notes-panel" class="panel">
+    <summary>Pending Notes<span class="pn-count" id="pending-notes-count"></span></summary>
+    <div id="pending-notes-body"></div>
+  </details>
 
 </div>
 
@@ -885,77 +923,104 @@
     body.innerHTML = html;
   }
 
-  /* JasonOS Work Readiness (INI-130 Change 9, GAP-056 + v2.8 revision) — the
-     inverse of the CEO-Actions panel: a standing render of the runner's
-     contract dry-run over open non-INI items, in five buckets. Two axes:
-     (1) CEO-relevance — is a CEO decision actually pending, checked first
-     and taking precedence; (2) completability — how much of the item can
-     the runner finish before it has to halt at a stop-line:
-       - Fully executable        — no stop-line at all; runs start to finish.
-       - Partially executable    — a stop-line exists but is NOT the leading
-         action; real work exists ahead of it (not CEO-blocked).
-       - Blocked — needs decision — a CEO decision is genuinely pending
-         (checked first; wins regardless of how much prep work exists).
-       - Not executable (leading stop) — the stop IS the first action (bare
-         `Runner scope: None`) and it isn't a CEO call either — an unmet
-         external/environment gate. Previously silently dropped; now shown.
-       - Contract gaps            — malformed/missing contract fields.
-     Degrades gracefully: hidden when the field is absent (the dormant,
-     pre-Steward-sign-off state — the generator's read_work_readiness()
-     wiring is commented until go-live). */
-  function renderWorkReadiness(wr) {
-    var panel = document.getElementById("work-readiness-panel");
-    var body  = document.getElementById("work-readiness-body");
+  /* Projects (PCR-OPS-074) — the primary board, replacing the retired
+     six-bucket JasonOS Work Readiness panel. A live groupby(project) over
+     every open GAP/PCR/REM: one card per project (registry name + description),
+     member tickets each showing type/id/description and a two-state
+     CEO action / Agent action badge (derived server-side via the same
+     _ceo_decision_pending() the retired Blocked bucket used — no new
+     classification logic). "groups": [] renders as an empty board (not
+     hidden) — a genuinely empty Projects board is meaningful state. */
+  function renderProjects(projects) {
+    var panel = document.getElementById("projects-panel");
+    var body  = document.getElementById("projects-body");
     if (!panel || !body) return;
-    if (wr === undefined || wr === null) { panel.style.display = "none"; return; }
-    panel.style.display = "";
-    var buckets = [
-      { key: "fully_executable",            label: "Fully executable",                    cls: "wr-eligible" },
-      { key: "partially_executable",        label: "Partially executable",                cls: "wr-progress" },
-      { key: "blocked_needs_decision",      label: "Blocked — needs decision",            cls: "wr-blocked" },
-      { key: "blocked_needs_director_decision", label: "Blocked — needs director decision", cls: "wr-director" },
-      { key: "not_executable_leading_stop", label: "Not executable (leading stop)",       cls: "wr-notexec" },
-      { key: "contract_quality_gaps",       label: "Contract gaps",                       cls: "wr-gap" }
-    ];
+    var groups = (projects && projects.groups) || [];
+    if (groups.length === 0) {
+      body.innerHTML = '<span class="proj-empty">No open tickets</span>';
+      return;
+    }
     var html = "";
-    for (var b = 0; b < buckets.length; b++) {
-      var bk    = buckets[b];
-      var items = wr[bk.key] || [];
-      html += '<div class="wr-group ' + bk.cls + '">'
-            + '<div class="wr-group-label">' + escHtml(bk.label)
-            + '<span class="wr-count">' + items.length + '</span></div>';
-      if (items.length === 0) {
-        html += '<span class="wr-empty">None</span>';
-      } else {
-        for (var i = 0; i < items.length; i++) {
-          var it = items[i];
-          if (bk.key === "contract_quality_gaps") {
-            var fname  = String(it.file || it.id || "").split("/").pop();
-            var defect = String(it.type || "").replace(/_/g, " ");
-            var meta   = [it.field, defect].filter(Boolean).join(" · ");
-            html += '<div class="wr-item">'
-                  + '<span class="wr-id">'   + escHtml(fname) + '</span>'
-                  + '<span class="wr-meta">' + escHtml(meta)  + '</span>'
-                  + '</div>';
-          } else {
-            var typeTag = it.type ? '<span class="wr-type">' + escHtml(it.type) + '</span>' : '';
-            var dirTag  = it.director ? '<span class="wr-dir-tag">' + escHtml(it.director) + '</span>' : '';
-            var descLine = it.description
-              ? '<div class="wr-desc">' + escHtml(it.description) + '</div>'
-              : '';
-            html += '<div class="wr-item">'
-                  + '<div class="wr-item-row">'
-                  +   typeTag
-                  +   '<span class="wr-id">'   + escHtml(it.id || "")    + '</span>'
-                  +   '<span class="wr-meta">' + escHtml(it.route || "") + '</span>'
-                  +   dirTag
-                  + '</div>'
-                  + descLine
-                  + '</div>';
-          }
-        }
+    for (var g = 0; g < groups.length; g++) {
+      var grp   = groups[g];
+      var items = grp.items || [];
+      html += '<div class="proj-group">'
+            + '<div class="proj-name">' + escHtml(grp.name || "")
+            + '<span class="proj-count">' + items.length + '</span></div>';
+      if (grp.description) {
+        html += '<div class="proj-desc">' + escHtml(grp.description) + '</div>';
+      }
+      for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        var typeTag  = it.type ? '<span class="proj-type">' + escHtml(it.type) + '</span>' : '';
+        var badgeCls = it.action === "ceo" ? "proj-badge-ceo" : "proj-badge-agent";
+        var badgeTxt = it.action === "ceo" ? "CEO ACTION" : "AGENT ACTION";
+        var descLine = it.description
+          ? '<div class="proj-desc-line">' + escHtml(it.description) + '</div>'
+          : '';
+        html += '<div class="proj-item">'
+              + '<div class="proj-item-row">'
+              +   typeTag
+              +   '<span class="proj-id">' + escHtml(it.id || "") + '</span>'
+              +   '<span class="proj-badge ' + badgeCls + '">' + badgeTxt + '</span>'
+              + '</div>'
+              + descLine
+              + '</div>';
       }
       html += '</div>';
+    }
+    body.innerHTML = html;
+  }
+
+  /* Contract Quality (PCR-OPS-074 §4) — standalone conformance badge, reusing
+     check-work-item-contract-conformance.py's own defect shapes server-side.
+     Independent of Projects: a ticket missing project: shows up here even
+     though it has nowhere to live on the Projects board. */
+  function renderContractQualityGaps(gaps) {
+    var panel = document.getElementById("contract-quality-panel");
+    var body  = document.getElementById("contract-quality-body");
+    if (!panel || !body) return;
+    var list = gaps || [];
+    if (list.length === 0) {
+      body.innerHTML = '<span class="cq-empty">None</span>';
+      return;
+    }
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+      var it     = list[i];
+      var fname  = String(it.file || it.id || "").split("/").pop();
+      var defect = String(it.type || it.issue || "").replace(/_/g, " ");
+      var meta   = [it.field, defect].filter(Boolean).join(" · ");
+      html += '<div class="cq-item">'
+            + '<span class="cq-file">' + escHtml(fname) + '</span>'
+            + '<span class="cq-meta">' + escHtml(meta)  + '</span>'
+            + '</div>';
+    }
+    body.innerHTML = html;
+  }
+
+  /* Pending Notes (PCR-OPS-074) — operations/observations.jsonl, already
+     sorted soonest-expiring-first by the generator. Collapsed by default
+     (native <details>), visually subordinate to Projects. */
+  function renderPendingNotes(notes) {
+    var body    = document.getElementById("pending-notes-body");
+    var countEl = document.getElementById("pending-notes-count");
+    if (!body) return;
+    var list = notes || [];
+    if (countEl) countEl.textContent = list.length ? " (" + list.length + ")" : "";
+    if (list.length === 0) {
+      body.innerHTML = '<span class="pn-empty">None</span>';
+      return;
+    }
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+      var n    = list[i];
+      var meta = [n.project, n.expires_on ? "expires " + n.expires_on : null]
+                 .filter(Boolean).join(" · ");
+      html += '<div class="pn-item">'
+            + '<div class="pn-summary">' + escHtml(n.summary || n.id || "") + '</div>'
+            + (meta ? '<div class="pn-meta">' + escHtml(meta) + '</div>' : '')
+            + '</div>';
     }
     body.innerHTML = html;
   }
@@ -1040,12 +1105,14 @@
     checkStaleness(data.generated_at);
     renderProduction(data.production);
     renderCeoActions(data.ceo_actions);
+    renderProjects(data.projects);
     renderOpsStrip(data.stats, data.operational);
     renderActive(data.active_initiative, data.active_initiatives);
     renderQueue(data.queue);
     renderBatchQueue(data.batch_queue);
-    renderWorkReadiness(data.jasonos_work_readiness);
+    renderContractQualityGaps(data.contract_quality_gaps);
     renderDirectors(data.directors);
+    renderPendingNotes(data.pending_notes);
     renderPaused(data.paused || {});
     var backlog = data.backlog || {};
     renderBacklog(backlog.client_work,                            "backlog-client-body");
