@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T10:35:33Z",
+  "generated_at": "2026-07-26T12:35:38Z",
   "schema_version": "6",
   "generator_version": "3.0",
   "production": {
@@ -67,7 +67,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 8,
-      "guardrail_repairs": 19,
+      "guardrail_repairs": 21,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -103,7 +103,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T07:46:00Z",
-    "minutes_since_session": 169,
+    "minutes_since_session": 289,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -725,6 +725,22 @@
         "runner_scope": "",
         "stop_line": "CEO/Security Steward must independently confirm the actual (non-log) outcome of today's six runs before any corrective code change is authorized \u2014 do not assume either \"nothing happened\" or \"everythin",
         "description": "Six of the twelve watermark-bounded daily channels (jasonos-policy-sync, jasonos-airlock-monitor\u2026"
+      },
+      {
+        "id": "REM-109",
+        "type": "REM",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "No production config or runner code was modified by this sweep; the fix requires an explicit, reviewed change to either the backup config or the runner, per this sweep's write boundaries.",
+        "description": "jasonos-operations-backup: operations-infra backup target crashed with an unhandled TypeError\u2026"
+      },
+      {
+        "id": "REM-110",
+        "type": "REM",
+        "route": null,
+        "runner_scope": "",
+        "stop_line": "No scheduled-task prompt/asset was modified by this sweep.",
+        "description": "jasonos-engineering-backup: relay received a malformed repo path (/Volumes /SandboxData/..., stray\u2026"
       }
     ],
     "blocked_needs_director_decision": [],
@@ -898,11 +914,11 @@
         "category": "PCR"
       }
     ],
-    "generated_at": "2026-07-26T10:35:33.970963+00:00"
+    "generated_at": "2026-07-26T12:35:38.583372+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
     "open_gaps": 12,
-    "open_rems": 10
+    "open_rems": 12
   }
 }
