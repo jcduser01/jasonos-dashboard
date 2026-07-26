@@ -1,7 +1,98 @@
 {
-  "generated_at": "2026-07-26T08:57:49Z",
-  "schema_version": "5",
-  "generator_version": "2.15",
+  "generated_at": "2026-07-26T10:34:37Z",
+  "schema_version": "6",
+  "generator_version": "3.0",
+  "production": {
+    "period": {
+      "start": "2026-07-20",
+      "end": "2026-07-26"
+    },
+    "headline": {
+      "delivered": 0,
+      "recipients": 0,
+      "next": "INI-053",
+      "blocker_count": 0,
+      "maintenance_attention_share": null,
+      "maintenance_attention_label": "Unavailable",
+      "delivery_status": "no_delivery",
+      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-053 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+    },
+    "delivery": {
+      "artifacts": [],
+      "recipients": 0,
+      "rolling_four_period_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "next": {
+        "id": "INI-053",
+        "label": "INI-053",
+        "expected_delivery_date": null
+      },
+      "blockers": [],
+      "throughput_floor": {
+        "status": "uncalibrated",
+        "delivered": 0,
+        "explicit_zero_delivery": true
+      },
+      "source_contract_defects": []
+    },
+    "effort": {
+      "production_ratio": {
+        "status": "degraded_unquantified",
+        "value": null,
+        "numerator": 0,
+        "denominator": null,
+        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
+      },
+      "attention": {
+        "status": "unavailable",
+        "production_share": null,
+        "maintenance_share": null,
+        "limitation": "No authoritative CEO-attention measure exists."
+      },
+      "tokens": {
+        "status": "unavailable",
+        "production_share": null,
+        "maintenance_share": null,
+        "limitation": "Existing token records are not classified on the Tranche-3 economic axis."
+      }
+    },
+    "maintenance": {
+      "admitted": 1,
+      "declined_observations": 0,
+      "expired_observations": 1
+    },
+    "escape_hatches": {
+      "delivery_dependencies": 8,
+      "guardrail_repairs": 19,
+      "maintenance_cap_overrides": 0
+    },
+    "mechanisms": {
+      "status": "partial_unverified",
+      "ratified_ceiling": 69,
+      "ratified_baseline": {
+        "checkers": 27,
+        "policies": 28,
+        "daemons": 14
+      },
+      "live_count": null,
+      "limitation": "Ratified ceiling exists; live recount discrepancy is unresolved."
+    },
+    "projection_contract": {
+      "classification": "public",
+      "redacted_fields": [
+        "external_recipient",
+        "deliverable",
+        "commitment_id",
+        "committed_deliverable",
+        "dependency_claim",
+        "delivery_blockers"
+      ]
+    }
+  },
   "stats": {
     "done": 113,
     "total": 139,
@@ -12,7 +103,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T07:46:00Z",
-    "minutes_since_session": 71,
+    "minutes_since_session": 168,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -807,7 +898,7 @@
         "category": "PCR"
       }
     ],
-    "generated_at": "2026-07-26T08:57:50.006417+00:00"
+    "generated_at": "2026-07-26T10:34:37.582284+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
