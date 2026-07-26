@@ -22,6 +22,7 @@
     --gap:         16px;
     --rail:        clamp(360px, 25vw, 470px);
     --maxw:        2100px;
+    --border-soft: #262626;
     color-scheme: dark;
   }
 
@@ -38,6 +39,7 @@
     --warn:        #b76b00;
     --danger:      #d12f2f;
     --success:     #1f7a4d;
+    --border-soft: #eaedf1;
     color-scheme: light;
   }
 
@@ -375,12 +377,133 @@
   }
   #production-headline { border-left: 4px solid var(--accent); }
   #production-headline.no-delivery { border-left-color: var(--warn); }
-  #production-summary { font-size: clamp(21px, 2.4vw, 34px); line-height: 1.25; font-weight: 650; letter-spacing: -.025em; }
-  #production-detail { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:18px; margin-top:18px; }
-  .production-kicker { color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:.08em; }
-  .production-value { color:var(--text); margin-top:5px; font-size:14px; }
-  .production-red { color:var(--danger); font-weight:650; }
-  #production-subordinate { margin-top:18px; padding-top:14px; border-top:1px solid var(--border); color:var(--text-muted); font-size:12px; line-height:1.6; }
+
+  /* ── Delivery card — variant 1B (Pro only, scoped under .production-v2) ── */
+  .production-v2 { padding: 24px 26px 20px; }
+
+  .production-v2 .pv2-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .production-v2 .pv2-head { min-width: 0; }
+
+  .production-v2 .pv2-summary {
+    font-size: clamp(26px, 2.7vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .production-v2 .pv2-num       { font-variant-numeric: tabular-nums; }
+  .production-v2 .pv2-lede-soft { font-weight: 400; color: var(--text-muted); }
+
+  .production-v2 .pv2-period {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 10px;
+  }
+
+  .production-v2 .pv2-tag {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 11px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .production-v2 .pv2-tag-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .production-v2 .pv2-clauses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 36px;
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+  .production-v2 .pv2-strong  { font-weight: 650; color: var(--text); }
+  .production-v2 .pv2-unknown { font-weight: 650; color: var(--text-dim); }
+  .production-v2 .pv2-red     { font-weight: 650; color: var(--danger); }
+
+  .production-v2 .pv2-detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0 32px;
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .production-v2 .pv2-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding-right: 24px;
+  }
+  .production-v2 .pv2-cell + .pv2-cell {
+    border-left: 1px solid var(--border-soft);
+    padding-left: 32px;
+  }
+  .production-v2 .pv2-cell:last-child { padding-right: 0; }
+
+  .production-v2 .pv2-kicker {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .production-v2 .pv2-value {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .production-v2 .pv2-value.is-num     { font-variant-numeric: tabular-nums; }
+  .production-v2 .pv2-value.is-rolling { letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+  .production-v2 .pv2-value.is-unknown { color: var(--text-dim); }
+  .production-v2 .pv2-value.is-red     { color: var(--danger); }
+
+  .production-v2 .pv2-baseline {
+    margin-top: 26px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+    font-size: 11px;
+    line-height: 2;
+    letter-spacing: 0.07em;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 820px) {
+    .production-v2 .pv2-detail { gap: 22px 32px; }
+    .production-v2 .pv2-cell + .pv2-cell { border-left: none; padding-left: 0; }
+  }
+  @media (max-width: 620px) {
+    .production-v2 { padding: 20px 18px 18px; }
+    .production-v2 .pv2-top {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .production-v2 .pv2-clauses { flex-direction: column; gap: 8px; }
+  }
 
   /* ── Responsive : collapse rail below main ───────────────────── */
   @media (max-width: 1180px) {
@@ -434,11 +557,17 @@
 
     <div id="load-error">Could not load status. Retrying in 15 minutes.</div>
 
-    <div id="production-headline" class="panel">
-      <div class="panel-label">Delivery</div>
-      <div id="production-summary">Delivery data unavailable</div>
-      <div id="production-detail"></div>
-      <div id="production-subordinate"></div>
+    <div id="production-headline" class="panel production-v2">
+      <div class="pv2-top">
+        <div class="pv2-head">
+          <div id="production-summary" class="pv2-summary">Delivery data unavailable</div>
+          <div id="production-period" class="pv2-period"></div>
+        </div>
+        <span class="pv2-tag"><span class="pv2-tag-dot" aria-hidden="true"></span>Delivery</span>
+      </div>
+      <div id="production-clauses" class="pv2-clauses"></div>
+      <div id="production-detail" class="pv2-detail"></div>
+      <div id="production-subordinate" class="pv2-baseline"></div>
     </div>
 
     <!-- Diagnostic KPI strip -->
@@ -673,48 +802,109 @@
   }
 
   function renderProduction(model) {
-    var panel = document.getElementById("production-headline");
-    var summary = document.getElementById("production-summary");
-    var detail = document.getElementById("production-detail");
+    var panel       = document.getElementById("production-headline");
+    var summary     = document.getElementById("production-summary");
+    var period      = document.getElementById("production-period");
+    var clauses     = document.getElementById("production-clauses");
+    var detail      = document.getElementById("production-detail");
     var subordinate = document.getElementById("production-subordinate");
+
+    function hide(el) { if (el) { el.innerHTML = ""; el.style.display = "none"; } }
+    function show(el) { if (el) { el.style.display = ""; } }
+
+    /* ── No-data state ─────────────────────────────────────────────────── */
     if (!model || !model.headline || !model.delivery) {
       panel.classList.add("no-delivery");
       summary.textContent = "Delivery data unavailable";
-      detail.innerHTML = "";
-      subordinate.innerHTML = "";
+      hide(period); hide(clauses); hide(detail); hide(subordinate);
       return;
     }
-    var h = model.headline;
-    var next = model.delivery.next || {};
+    show(period); show(clauses); show(detail); show(subordinate);
+
+    var h        = model.headline;
+    var next     = model.delivery.next || {};
     var blockers = model.delivery.blockers || [];
-    var red = blockers.some(function (b) { return b.red; });
+    var red      = blockers.some(function (b) { return b.red; });
     panel.classList.toggle("no-delivery", h.delivered === 0);
-    summary.textContent = h.summary;
+
+    /* ── 1 · Primary metric ────────────────────────────────────────────── */
+    summary.innerHTML =
+        '<span class="pv2-num">' + escHtml(String(h.delivered)) + '</span> '
+      + '<span class="pv2-lede-soft">artifacts delivered to</span> '
+      + '<span class="pv2-num">' + escHtml(String(h.recipients)) + '</span> '
+      + '<span class="pv2-lede-soft">recipients</span>';
+
+    /* ── 2 · Period line (schema v6; hidden if absent) ─────────────────── */
+    var p = model.period || {};
+    var periodTxt = fmtPeriod(p.start, p.end);
+    if (periodTxt) {
+      period.textContent = "Period " + periodTxt;
+      period.style.display = "";
+    } else {
+      period.textContent = "";
+      period.style.display = "none";
+    }
+
+    /* ── 3 · Supporting clause line ────────────────────────────────────── */
+    var attention = (model.effort && model.effort.attention) || {};
+    var shareTxt  = h.maintenance_attention_label || "Unavailable";
+    var shareCls  = /^unavail/i.test(shareTxt) ? "pv2-unknown" : "pv2-strong";
+
+    clauses.innerHTML =
+        '<div>Next commitment <span class="pv2-strong">'
+      +   escHtml(next.label || next.id || "Unavailable") + '</span></div>'
+      + '<div>Delivery blockers <span class="' + (red ? "pv2-red" : "pv2-strong") + '">'
+      +   (red ? "RED blocker" : escHtml(String(blockers.length))) + '</span></div>'
+      + '<div>Maintenance attention share <span class="' + shareCls + '">'
+      +   escHtml(shareTxt) + '</span></div>';
+
+    /* ── 4 · Metadata columns ──────────────────────────────────────────── */
+    var rolling   = (model.delivery.rolling_four_period_counts || []).join(" · ");
+    var nextDate  = next.expected_delivery_date || "Unavailable";
+    var posture   = red ? "RED blocker" : blockers.length + " named";
+    var attnTxt   = sentenceCase(attention.status || "unavailable");
+
     detail.innerHTML =
-      '<div><div class="production-kicker">Rolling 4 periods</div><div class="production-value">'
-      + escHtml((model.delivery.rolling_four_period_counts || []).join(" · ")) + '</div></div>'
-      + '<div><div class="production-kicker">Next date</div><div class="production-value">'
-      + escHtml(next.expected_delivery_date || "Unavailable") + '</div></div>'
-      + '<div><div class="production-kicker">Blocker posture</div><div class="production-value'
-      + (red ? ' production-red' : '') + '">' + (red ? "RED blocker" : blockers.length + " named") + '</div></div>'
-      + '<div><div class="production-kicker">Attention source</div><div class="production-value">'
-      + escHtml((model.effort.attention || {}).status || "unavailable") + '</div></div>';
-    var maintenance = model.maintenance || {};
-    var escape = model.escape_hatches || {};
-    var mechanisms = model.mechanisms || {};
-    var ratio = model.effort.production_ratio || {};
-    var tokens = model.effort.tokens || {};
-    subordinate.textContent =
-      "Production ratio: " + (ratio.status || "unavailable")
-      + " · Tokens: " + (tokens.status || "unavailable")
-      + " · Maintenance admitted/declined/expired: "
-      + (maintenance.admitted || 0) + "/" + (maintenance.declined_observations || 0)
-      + "/" + (maintenance.expired_observations || 0)
-      + " · Escape hatches — dependencies/repairs/overrides: "
-      + (escape.delivery_dependencies || 0) + "/" + (escape.guardrail_repairs || 0)
-      + "/" + (escape.maintenance_cap_overrides || 0)
-      + " · Mechanisms: " + (mechanisms.live_count == null ? "unverified" : mechanisms.live_count)
-      + " / ceiling " + (mechanisms.ratified_ceiling == null ? "unavailable" : mechanisms.ratified_ceiling);
+        cell("Rolling 4 periods", rolling || "Unavailable", "is-rolling")
+      + cell("Next date",        nextDate, isUnknown(nextDate) ? "is-unknown" : "")
+      + cell("Blocker posture",  posture,  red ? "is-red" : "is-num")
+      + cell("Attention source", attnTxt,  isUnknown(attnTxt) ? "is-unknown" : "");
+
+    /* ── 5 · Technical baseline footer ─────────────────────────────────── */
+    var maintenance = model.maintenance    || {};
+    var escape      = model.escape_hatches || {};
+    var mechanisms  = model.mechanisms     || {};
+    var ratio       = (model.effort && model.effort.production_ratio) || {};
+    var tokens      = (model.effort && model.effort.tokens)           || {};
+
+    subordinate.innerHTML =
+        frag("Production ratio " + (ratio.status  || "unavailable"))
+      + frag("Tokens "           + (tokens.status || "unavailable"))
+      + frag("Maintenance "
+          + (maintenance.admitted              || 0) + "/"
+          + (maintenance.declined_observations || 0) + "/"
+          + (maintenance.expired_observations  || 0)
+          + " admitted/declined/expired")
+      + frag("Escape hatches "
+          + (escape.delivery_dependencies      || 0) + "/"
+          + (escape.guardrail_repairs          || 0) + "/"
+          + (escape.maintenance_cap_overrides  || 0)
+          + " dependencies/repairs/overrides")
+      + frag("Mechanisms "
+          + (mechanisms.live_count == null ? "unverified" : mechanisms.live_count)
+          + " / ceiling "
+          + (mechanisms.ratified_ceiling == null ? "unavailable" : mechanisms.ratified_ceiling));
+
+    /* ── local helpers ─────────────────────────────────────────────────── */
+    function cell(label, value, cls) {
+      var extra = cls ? " " + cls : "";
+      return '<div class="pv2-cell">'
+           +   '<div class="pv2-kicker">' + escHtml(label) + '</div>'
+           +   '<div class="pv2-value' + extra + '">' + escHtml(String(value)) + '</div>'
+           + '</div>';
+    }
+    function frag(txt) { return '<span>' + escHtml(txt) + '</span>'; }
+    function isUnknown(v) { return /^unavail|^unverified|^unknown/i.test(String(v)); }
   }
 
   function renderOpsStrip(stats, operational) {
@@ -1029,6 +1219,25 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function sentenceCase(s) {
+    s = String(s);
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  /* "2026-07-20" + "2026-07-26" → "20 Jul – 26 Jul".  Returns "" if unusable. */
+  function fmtPeriod(start, end) {
+    if (!start || !end) return "";
+    try {
+      var a = new Date(start + "T00:00:00");
+      var b = new Date(end   + "T00:00:00");
+      if (isNaN(a.getTime()) || isNaN(b.getTime())) return "";
+      function d(x) {
+        return x.getDate() + " " + x.toLocaleDateString(undefined, { month: "short" });
+      }
+      return d(a) + " – " + d(b);
+    } catch (e) { return ""; }
   }
 
   function fmtRelative(isoStr) {
