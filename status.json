@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T19:39:34Z",
+  "generated_at": "2026-07-26T19:49:34Z",
   "schema_version": "6",
   "generator_version": "3.0",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T07:46:00Z",
-    "minutes_since_session": 713,
+    "minutes_since_session": 723,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -257,107 +257,47 @@
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "privacy.com card for the Venture engine",
-      "context": "deferred until the first paid dependency lands. Recommended: per-transaction $50, monthly ceiling $500, merchant-locked."
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
       "label": "(cleanup, low)",
       "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; co"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "Provision Gemini/OpenAI API key(s) + budget",
       "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
     },
     {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "Run the Idea ID migration (design spec \u00a74/\u00a79.1) for the 195 existing Idea Backlog rows before INI-145's skill is usable.",
       "context": ""
     },
     {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "Two privacy.com facts newly on the record (2026-07-22, from vendor docs \u2014 neither was in any JasonOS document)",
       "context": "a"
     },
     {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "CEO DECISION 2026-07-22 \u2014 inference ceilings LOCKED, numbers as proposed.",
-      "context": "Anthropic envelope stays $20/month. Ceiling values stand as Engineering proposed: inference_calls_per_run: 20, inference"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "Promote one staged lane",
-      "context": "staged/session-close-2026-07-22 (c8f0c86, operations repo) \u2014 the 2026-07-22 session-close memory entry + three procedure"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "INI-111 Phase-3 lanes (2026-07-22, both merge clean, neither promotable yet)",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "required",
-      "label": "staged/ini111-phase3-code (ce7d892)",
-      "context": "gate items 5/6/9 + SDK adapter + shared spend tracker. BLOCKED on PCR-VENT-006: load_policy_values() now requires infere"
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "staged/vent-wallet-governance (4b74607)",
-      "context": "PCR-VENT-006 draft + PCR-VENT-005 post-enactment record. Needs CEO approval, not Steward code clearance \u2014 deliberately s"
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "staged/ini111-phase3-binding (bcd1c1d) \u2014 SUPERSEDED, do not promote.",
-      "context": "Engineering's original; it mixed the two governance documents into a code commit. Its venture-engine subtree is byte-ide"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "PRODUCTION INCIDENT, contained 2026-07-22",
-      "context": "the Phase-3 working-tree changes broke load_policy_values() against the real policy document; the daily 07:10 CDT poll w"
-    },
-    {
-      "id": "ACT-HO-17",
-      "category": "required",
-      "label": "Do NOT promote staged/ini111-phase3-containment (fb7ae51)",
-      "context": "retained deliberately as the immutable artifact the Security Steward reviewed for CAP-REV-2026-07-22-INI111-PHASE3. Its "
-    },
-    {
-      "id": "ACT-HO-18",
-      "category": "required",
-      "label": "Rule on the \u00a7 6 baseline recount discrepancy",
-      "context": "the CEO-set baseline records checkers 26 / policies 28; recounting on 2026-07-22 gave 20 / 37 by the stated method (scri"
-    },
-    {
-      "id": "ACT-HO-19",
+      "id": "ACT-HO-9",
       "category": "required",
       "label": "INI-111 \u2014 decide the leg-3 interpretation before any autonomy advance above L0.",
       "context": "operations/local-llm-workload-classification.md gates local routing partly on leg 3 (\"the model cannot unilaterally supp"
     },
     {
-      "id": "ACT-HO-20",
+      "id": "ACT-HO-10",
       "category": "required",
       "label": "INI-111 \u2014 watch for injection-inflated scores in production (Steward C4 trigger).",
       "context": "qwen2.5:14b is confirmed susceptible to description-embedded injection where Haiku resists. At L0 this only misrepresent"
     },
     {
-      "id": "ACT-HO-21",
+      "id": "ACT-HO-11",
       "category": "required",
       "label": "INI-111 \u2014 any autonomy-dial advance beyond L0 requires a fresh Security Steward injection-resistance pass",
       "context": "before local inference continues (Steward condition C2). Not a decision needed now; a gate on a future one."
     },
     {
-      "id": "ACT-HO-22",
+      "id": "ACT-HO-12",
       "category": "required",
       "label": "INI-146 \u2014 dispatch the Security Steward capability review on the SDLC doctrine + check-sdlc-phase-gate.py",
       "context": "this is the initiative's remaining stop-line. Until it clears, the checker stays wired into no live sweep. Must run from"
@@ -853,14 +793,6 @@
         "runner_scope": "",
         "stop_line": "None \u2014 bounded audit-inbox hygiene fix; the compactor is append-only and this REM proposes no compactor code change (that broader hardening question is REM-088's / Engineering's).",
         "description": "Step 2e's check-steward-audit-log-size.py exits 1 on a NEW rejected inbox file\u2026"
-      },
-      {
-        "id": "REM-108",
-        "type": "REM",
-        "route": null,
-        "runner_scope": "",
-        "stop_line": "None \u2014 bounded infrastructure-health remediation.",
-        "description": "Step 2k Part A infrastructure-health check: dashboard publisher is stale\u2026"
       }
     ],
     "contract_quality_gaps": [
@@ -907,11 +839,11 @@
         "category": "gap-open"
       }
     ],
-    "generated_at": "2026-07-26T19:39:34.794647+00:00"
+    "generated_at": "2026-07-26T19:49:34.024369+00:00"
   },
   "work_item_counts": {
     "open_pcrs": 4,
     "open_gaps": 13,
-    "open_rems": 12
+    "open_rems": 11
   }
 }
