@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T00:57:30Z",
+  "generated_at": "2026-07-26T02:57:33Z",
   "schema_version": "5",
   "generator_version": "2.15",
   "stats": {
@@ -12,7 +12,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-24T17:35:02Z",
-    "minutes_since_session": 1882,
+    "minutes_since_session": 2002,
     "airlock_queue": 12,
     "airlock_bundles": 1
   },
@@ -574,7 +574,7 @@
   "batch_queue": [
     {
       "position": 1,
-      "id": "REM-078"
+      "id": "REM-100"
     }
   ],
   "jasonos_work_readiness": {
@@ -696,30 +696,6 @@
         "description": "jasonos-policy-sync-log-writer.py reported success but left no artifacts on 2026-07-18"
       },
       {
-        "id": "GAP-167",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Build the launchd-daemon-level three-stage pipeline (admit \u2192 engineer \u2192 reviewer) as genuinely separate OS-level `claude` CLI invocations, each scoped by its own narrow, pre-granted jail permission se",
-        "stop_line": "Security Steward review, non-waivable \u2014 do not deploy any new jail grant or daemon change on this path without it, per condition 4 above. This mirrors GAP-159's own stop-line language exactly: do not ",
-        "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
-      },
-      {
-        "id": "GAP-171",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three separable parts, in order; all three are authorized.",
-        "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
-        "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
-      },
-      {
-        "id": "GAP-172",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Correct `_build_engineer_task()` in `operations/bin/jasonos-batch-pipeline.py` so it no longer instructs the engineer to invoke a command its jail forbids; encode a mechanical non-execution eligibilit",
-        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until the Stage 2 work in GAP-187 delivers a working containme",
-        "description": "Batch pipeline Stage 1: correct the engineer task builder, restrict queued work to non-execution\u2026"
-      },
-      {
         "id": "GAP-176",
         "type": "GAP",
         "route": "CEO-first",
@@ -818,30 +794,6 @@
         "description": "jasonos-policy-sync-log-writer.py reported success but left no artifacts on 2026-07-18"
       },
       {
-        "id": "GAP-167",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Build the launchd-daemon-level three-stage pipeline (admit \u2192 engineer \u2192 reviewer) as genuinely separate OS-level `claude` CLI invocations, each scoped by its own narrow, pre-granted jail permission se",
-        "stop_line": "Security Steward review, non-waivable \u2014 do not deploy any new jail grant or daemon change on this path without it, per condition 4 above. This mirrors GAP-159's own stop-line language exactly: do not ",
-        "description": "Overnight batch dispatch: build the Phase-7 dispatcher as a process-level split (Option 4), not\u2026"
-      },
-      {
-        "id": "GAP-171",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Three separable parts, in order; all three are authorized.",
-        "stop_line": "Do not weaken any existing Stop-line, Route, or Steward gate in the course of encoding eligibility. This gap makes ineligibility **explicit**; it must not become a mechanism for reclassifying gated wo",
-        "description": "No queue-eligibility discipline: a work item can be admitted, dispatched, and burn a full\u2026"
-      },
-      {
-        "id": "GAP-172",
-        "type": "GAP",
-        "route": "Queue-ready",
-        "runner_scope": "Correct `_build_engineer_task()` in `operations/bin/jasonos-batch-pipeline.py` so it no longer instructs the engineer to invoke a command its jail forbids; encode a mechanical non-execution eligibilit",
-        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until the Stage 2 work in GAP-187 delivers a working containme",
-        "description": "Batch pipeline Stage 1: correct the engineer task builder, restrict queued work to non-execution\u2026"
-      },
-      {
         "id": "GAP-176",
         "type": "GAP",
         "route": "CEO-first",
@@ -914,30 +866,6 @@
         "runner_scope": "",
         "stop_line": "Do not widen the relay allowlist, add `autonomy_grant: publisher-scoped` to `jasonos-blog-drip.py`, or re-arm `dh-blog-drip` without a Security Steward capability review \u2014 this is the same authorizati",
         "description": "The Dyson Hope blog-drip publisher has no relay scope entry, so PCR-OPS-069's publisher-scoped\u2026"
-      },
-      {
-        "id": "GAP-183",
-        "type": "GAP",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Do not reset, clear, or script any TCC grant (`tccutil reset` or equivalent) as part of investigating this \u2014 a reset revokes working grants and is not reversible from a script, and the failure mode be",
-        "description": "A Claude Code auto-update changes the binary path, which is the TCC subject identity, so the macOS\u2026"
-      },
-      {
-        "id": "GAP-186",
-        "type": "GAP",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "Do not deploy the pre-compile task without the Steward review in item 1 \u2014 the asset self-declares unreviewed, and deploying an unreviewed standing task that reads the full governance surface and draft",
-        "description": "Report-triage Step 7 is marked LIVE in the protocol but names no mechanism, so the morning-sweep\u2026"
-      },
-      {
-        "id": "GAP-187",
-        "type": "GAP",
-        "route": "CEO-first",
-        "runner_scope": "",
-        "stop_line": "**Do not add any code-execution grant (`Bash(python3 \u2026)`, `Bash(\u2026 pytest \u2026)`, or equivalent) to `batch-engineer` or any unattended jail** until this ticket delivers a working containment layer AND a S",
-        "description": "Stage 2: OS-level sandboxed execution runner for unattended batch TDD (design spike + build)"
       },
       {
         "id": "GAP-188",
@@ -1021,14 +949,6 @@
         "runner_scope": "",
         "stop_line": "Do not edit any launchd plist without an explicit CEO authorization for that specific file. Do not \"fix\" the observed staleness by widening a threshold to swallow the 5h offset \u2014 that would hide the d",
         "description": "Daemon log writers emit offset-less local time that the health checks read as UTC, manufacturing\u2026"
-      },
-      {
-        "id": "PCR-OPS-054",
-        "type": "PCR",
-        "route": "Operational",
-        "runner_scope": "",
-        "stop_line": "The probation window's completion and the CEO's ratification-or-amendment of the durable posture are CEO-reserved; the runner does not stand in for that decision.",
-        "description": "Autonomy Go-Live Criteria \u2014 A Bounded Gating Checklist, a Standing Ops/Client Triage Split, and a\u2026"
       },
       {
         "id": "PCR-OPS-070",
@@ -1188,20 +1108,6 @@
         "type": "invalid_route_value",
         "field": "route",
         "value": "Queue-ready.",
-        "file": "governance/gaps/open/GAP-189-preflight-verification-checks-existence-where-use-requires-fitness.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready.",
-        "file": "governance/gaps/open/GAP-190-pcr-folder-docs-say-closed-live-practice-is-resolved-plus-vestigial-governance-stub.md",
-        "category": "gap-open"
-      },
-      {
-        "type": "invalid_route_value",
-        "field": "route",
-        "value": "Queue-ready.",
         "file": "governance/gaps/open/GAP-191-samgov-adapter-comma-joins-single-value-filters-and-silently-records-nothing.md",
         "category": "gap-open"
       },
@@ -1273,11 +1179,11 @@
         "category": "pcr-open"
       }
     ],
-    "generated_at": "2026-07-26T00:57:30.174630+00:00"
+    "generated_at": "2026-07-26T02:57:33.733938+00:00"
   },
   "work_item_counts": {
-    "open_pcrs": 10,
-    "open_gaps": 26,
+    "open_pcrs": 9,
+    "open_gaps": 18,
     "open_rems": 15
   }
 }
