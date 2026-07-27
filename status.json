@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T06:30:45Z",
+  "generated_at": "2026-07-27T07:55:42Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 7,
-      "guardrail_repairs": 20,
+      "guardrail_repairs": 21,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -105,8 +105,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 435,
+    "last_session_date": "2026-07-27T07:47:22Z",
+    "minutes_since_session": 8,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -290,7 +290,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-26T06:32:58Z",
+      "last_active": "2026-07-27T06:33:04Z",
       "invocations_30d": 40
     },
     {
@@ -302,8 +302,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-27T01:22:40Z",
-      "invocations_30d": 23
+      "last_active": "2026-07-27T02:51:07Z",
+      "invocations_30d": 24
     },
     {
       "name": "research-director",
@@ -599,6 +599,12 @@
             "action": "agent"
           },
           {
+            "id": "GAP-196",
+            "type": "GAP",
+            "description": "Six scheduled tasks missed their 2026-07-25 work without a failure signal",
+            "action": "agent"
+          },
+          {
             "id": "REM-094",
             "type": "REM",
             "description": "jasonos-financial-state-backup.SKILL.md's Step 3 polls only the flat-root .git-commit-queue/ path\u2026",
@@ -652,24 +658,6 @@
         "name": "Security Steward Audit-Trail Hygiene",
         "description": "Clear the backlog and structural defects in the Security Steward's own audit-inbox and capability-review record-keeping.",
         "items": [
-          {
-            "id": "REM-088",
-            "type": "REM",
-            "description": "Step 2e's check-steward-audit-log-size.py exits 1: the active Security Steward audit segment is\u2026",
-            "action": "agent"
-          },
-          {
-            "id": "REM-104",
-            "type": "REM",
-            "description": "Step 2f check-cap-rev-write-claims.py exits 1: CAP-REV-2026-07-22-INI111-PHASE3-BINDING.md (dated\u2026",
-            "action": "agent"
-          },
-          {
-            "id": "REM-106",
-            "type": "REM",
-            "description": "Step 2e's check-steward-audit-log-size.py exits 1 on a NEW rejected inbox file\u2026",
-            "action": "agent"
-          },
           {
             "id": "REM-107",
             "type": "REM",
@@ -751,7 +739,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T06:30:45.279390+00:00"
+    "generated_at": "2026-07-27T07:55:42.340006+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -870,7 +858,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 4,
-    "open_gaps": 11,
-    "open_rems": 10
+    "open_gaps": 12,
+    "open_rems": 7
   }
 }
