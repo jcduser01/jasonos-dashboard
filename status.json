@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T02:12:37Z",
+  "generated_at": "2026-07-27T02:18:59Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 177,
+    "minutes_since_session": 183,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -572,19 +572,19 @@
             "id": "GAP-182",
             "type": "GAP",
             "description": "The Dyson Hope blog-drip publisher has no relay scope entry, so PCR-OPS-069's publisher-scoped\u2026",
-            "action": "ceo"
+            "action": "agent"
           },
           {
             "id": "GAP-188",
             "type": "GAP",
             "description": "When the blog-drip automated publish fails, the manual recovery path is broken in two independent\u2026",
-            "action": "ceo"
+            "action": "agent"
           },
           {
             "id": "REM-100",
             "type": "REM",
             "description": "dh-blog-drip self-disabled at 2026-07-21T01:20Z after its scheduled publish attempt (#8\u2026",
-            "action": "ceo"
+            "action": "agent"
           }
         ]
       },
@@ -775,7 +775,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T02:12:37.074701+00:00"
+    "generated_at": "2026-07-27T02:18:59.159804+00:00"
   },
   "contract_quality_gaps": [
     {
