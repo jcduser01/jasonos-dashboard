@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T03:18:02Z",
+  "generated_at": "2026-07-27T04:37:11Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 242,
+    "minutes_since_session": 321,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -302,8 +302,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-26T04:10:08Z",
-      "invocations_30d": 20
+      "last_active": "2026-07-26T23:20:21Z",
+      "invocations_30d": 21
     },
     {
       "name": "research-director",
@@ -757,7 +757,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T03:18:02.783156+00:00"
+    "generated_at": "2026-07-27T04:37:11.759124+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -856,14 +856,6 @@
       "observed_at": "2026-07-26",
       "expires_on": "2026-08-25",
       "project": "Governance Tooling & Checker Reliability"
-    },
-    {
-      "id": "OBS-SCRIPT-REGISTRY-MONOLITH",
-      "summary": "operations/script-registry.md collided twice in one session between two concurrent sessions each inserting a registry row (489 lines / ~154 KB, one shared table + one shared narrative header). Same root cause named in at least three prior memories (temp-index-staged-lane-in-shared-tree, merge-staged-interlock-exempt-but-dirty-file-blocks-cherrypick, deploy-sync-and-relay-act-on-the-shared-working-tree). Worth auditing other monolithic shared files (daemon-manifest.md, procedure-improvement-log.md, MEMORY.md, session-handoff.md) for the same fragility, and proposing a policy on when a shared artifact should decompose into a per-item-file + single-writer-compactor model (precedent already exists: the Security Steward audit-log inbox/compactor pattern, GAP-070/INI-115) versus staying monolithic.",
-      "source": "CEO observation during ini146-caprev/observation-dispositions lane work, 2026-07-26",
-      "observed_at": "2026-07-26",
-      "expires_on": "2026-08-25",
-      "project": "Process & Surface Governance"
     },
     {
       "id": "OBS-WORKTREE-ISOLATION-DISCIPLINE",
