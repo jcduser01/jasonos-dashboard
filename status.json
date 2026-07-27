@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-27T04:37:11Z",
+  "generated_at": "2026-07-27T06:30:45Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
     "period": {
-      "start": "2026-07-20",
-      "end": "2026-07-26"
+      "start": "2026-07-21",
+      "end": "2026-07-27"
     },
     "headline": {
       "delivered": 0,
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 7,
-      "guardrail_repairs": 21,
+      "guardrail_repairs": 20,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 321,
+    "minutes_since_session": 435,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -302,8 +302,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-26T23:20:21Z",
-      "invocations_30d": 21
+      "last_active": "2026-07-27T01:22:40Z",
+      "invocations_30d": 23
     },
     {
       "name": "research-director",
@@ -551,12 +551,6 @@
         "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
         "items": [
           {
-            "id": "GAP-127",
-            "type": "GAP",
-            "description": "Relay path-limited commit: directory/glob pathspecs are not fully isolated, and the empty-check\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-177",
             "type": "GAP",
             "description": "Relay staged-lane git add fails for a brand-new untracked file (ANY environment, not only Cowork)",
@@ -757,7 +751,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T04:37:11.759124+00:00"
+    "generated_at": "2026-07-27T06:30:45.279390+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -876,7 +870,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 4,
-    "open_gaps": 12,
+    "open_gaps": 11,
     "open_rems": 10
   }
 }
