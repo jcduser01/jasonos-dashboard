@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T03:16:03Z",
+  "generated_at": "2026-07-27T03:17:51Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 240,
+    "minutes_since_session": 242,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -757,7 +757,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T03:16:03.339182+00:00"
+    "generated_at": "2026-07-27T03:17:51.763977+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -871,6 +871,14 @@
       "source": "CEO observation following the script-registry.md collision incident, 2026-07-26",
       "observed_at": "2026-07-26",
       "expires_on": "2026-08-25",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-CEO-TICKET-DISPOSITION-EXERCISE",
+      "summary": "Propose canonizing a reusable CEO ticket-disposition procedure or skill: process one project at a time; read each CEO ACTION ticket and frame richer numbered decisions with options and recommendations; preserve continuous numbering; treat an explicit CEO authorization of bounded review or execution as AGENT ACTION; record decisions in the ticket; set CEO action to None when no further CEO choice remains; close or supersede tickets when the CEO says the issue is obsolete or the definition of done is satisfied; verify every ticket in the project is AGENT ACTION (or closed), then promote the project's staged lane to canonical in one push, regenerate projections via the projection-dirty signal, verify the dashboard, and remove the temporary lane before starting the next project. Friction points to encode: scheduler success metadata and fresh current-day logs do not prove prior-day work; absent logs do not prove task failure; manually published content requires duplicate-action checks against queue, commit, and operations evidence; non-git Logs/remediation records use projection publishing rather than git promotion; stale CEO-action text and duplicated needs_ceo_action fields can misclassify already-authorized work; relay promotion may encounter stale lane references or shared-worktree dirt, so name the lane explicitly, clean old lanes, isolate or stash only targeted tracked changes, and verify branch/worktree state before retrying; resolved records must move to canonical resolved folders. Proposed follow-on: create a short runbook/skill with a decision-question template, classification/closure rules, staged-lane promotion checklist, projection verification, and friction-point evidence checks.",
+      "source": "CEO-directed multi-project ticket-disposition exercise, 2026-07-27",
+      "observed_at": "2026-07-27",
+      "expires_on": "2026-08-26",
       "project": "Process & Surface Governance"
     }
   ],
