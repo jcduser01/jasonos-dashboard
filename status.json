@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T22:34:18Z",
+  "generated_at": "2026-07-27T22:40:45Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -44,11 +44,11 @@
     },
     "effort": {
       "production_ratio": {
-        "status": "degraded_unquantified",
+        "status": "unavailable",
         "value": null,
         "numerator": 0,
         "denominator": null,
-        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
+        "limitation": "CEO-attention denominator is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -64,13 +64,13 @@
       }
     },
     "maintenance": {
-      "admitted": 1,
+      "admitted": 0,
       "declined_observations": 0,
       "expired_observations": 1
     },
     "escape_hatches": {
       "delivery_dependencies": 6,
-      "guardrail_repairs": 19,
+      "guardrail_repairs": 18,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 886,
+    "minutes_since_session": 893,
     "airlock_queue": 1,
     "airlock_bundles": 1
   },
@@ -637,25 +637,13 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T22:34:18.475765+00:00"
+    "generated_at": "2026-07-27T22:40:45.550963+00:00"
   },
   "contract_quality_gaps": [
     {
       "type": "missing_project",
       "field": "project",
-      "file": "governance/gaps/open/GAP-191-samgov-adapter-comma-joins-single-value-filters-and-silently-records-nothing.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_project",
-      "field": "project",
       "file": "governance/pcrs/open/GAP-191-samgov-adapter-comma-joins-single-value-filters-and-silently-records-nothing.md",
-      "category": "pcr-open"
-    },
-    {
-      "type": "missing_project",
-      "field": "project",
-      "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
       "category": "pcr-open"
     }
   ],
@@ -790,8 +778,8 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 3,
-    "open_gaps": 5,
+    "open_pcrs": 2,
+    "open_gaps": 4,
     "open_rems": 6
   }
 }
