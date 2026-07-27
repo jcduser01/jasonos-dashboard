@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T03:02:27Z",
+  "generated_at": "2026-07-27T03:06:44Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 226,
+    "minutes_since_session": 231,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -765,17 +765,11 @@
             "type": "REM",
             "description": "Step 2b coverage checker check-doctrine-artifact-currency.py exits 1: three Jason Cook Design\u2026",
             "action": "agent"
-          },
-          {
-            "id": "REM-103",
-            "type": "REM",
-            "description": "Security Steward Weekly Compliance Summary (weekly-2026-07-20) finding 1 / recommendation (a): a\u2026",
-            "action": "ceo"
           }
         ]
       }
     ],
-    "generated_at": "2026-07-27T03:02:27.867623+00:00"
+    "generated_at": "2026-07-27T03:06:44.773382+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -895,6 +889,6 @@
   "work_item_counts": {
     "open_pcrs": 5,
     "open_gaps": 13,
-    "open_rems": 11
+    "open_rems": 10
   }
 }
