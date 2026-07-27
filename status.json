@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T10:46:03Z",
+  "generated_at": "2026-07-27T11:09:04Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 178,
+    "minutes_since_session": 201,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -721,7 +721,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T10:46:03.983724+00:00"
+    "generated_at": "2026-07-27T11:09:04.853929+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -820,14 +820,6 @@
       "observed_at": "2026-07-26",
       "expires_on": "2026-08-25",
       "project": "Governance Tooling & Checker Reliability"
-    },
-    {
-      "id": "OBS-WORKTREE-ISOLATION-DISCIPLINE",
-      "summary": "Isolated-worktree discipline exists for batch engineering (jasonos-batch-engineer/jasonos-batch-pipeline, Workflow isolation:\"worktree\") but not for single-effort or ad-hoc sessions, which edit the shared main working tree directly. Todays script-registry.md collision (see OBS-SCRIPT-REGISTRY-MONOLITH) happened exactly because two such sessions shared one working directory with no isolation between them. CEO proposal to look into: extend worktree-per-session practice beyond batch engineering to ad-hoc coding generally, so a same-day same-file collision cant recur regardless of whether the concurrent work is a batch run or two hands-on sessions.",
-      "source": "CEO observation following the script-registry.md collision incident, 2026-07-26",
-      "observed_at": "2026-07-26",
-      "expires_on": "2026-08-25",
-      "project": "Process & Surface Governance"
     },
     {
       "id": "OBS-CEO-TICKET-DISPOSITION-EXERCISE",
