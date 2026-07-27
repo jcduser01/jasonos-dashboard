@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T00:11:26Z",
+  "generated_at": "2026-07-27T01:40:23Z",
   "schema_version": "7",
   "generator_version": "3.2",
   "production": {
@@ -69,7 +69,7 @@
       "expired_observations": 1
     },
     "escape_hatches": {
-      "delivery_dependencies": 8,
+      "delivery_dependencies": 7,
       "guardrail_repairs": 23,
       "maintenance_cap_overrides": 0
     },
@@ -97,16 +97,16 @@
     }
   },
   "stats": {
-    "done": 113,
+    "done": 114,
     "total": 138,
-    "active": 4,
+    "active": 3,
     "queued": 3,
     "paused": 9,
     "backlog": 9
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 55,
+    "minutes_since_session": 144,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -147,14 +147,6 @@
           "INI-057",
           "INI-101"
         ]
-      }
-    },
-    {
-      "id": "INI-146",
-      "name": "JasonOS Software Delivery Lifecycle \u2014 Canonization (Plan \u2192 Architect \u2192 Build \u2192 Test \u2192 Ship)",
-      "status": "active",
-      "contract": {
-        "stop_line": "Phases A-D are promoted to canonical (2026-07-24, CEO push directive). Remaining stop-line: the Security Steward capability review on the doctrine + checker has NOT run \u2014 until it clears, check-sdlc-phase-gate.py stays unwired from every live sweep. Phase E (the first real trial run) is a separate, CEO-selected execution."
       }
     }
   ],
@@ -783,7 +775,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T00:11:26.468903+00:00"
+    "generated_at": "2026-07-27T01:40:23.731701+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -888,6 +880,14 @@
       "source": "REM-102",
       "observed_at": "2026-07-25",
       "expires_on": "2026-08-24",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-DASHBOARD-DEPLOY-LAG",
+      "summary": "PCR-OPS-074 promoted jasonos-status-generator.py to canonical but never ran the SandboxData/bin/ deploy-sync staging step; the dashboard-publisher daemon ran a generator one full version behind (schema 6/gen 3.0), silently rendering the Projects board empty for roughly a day. Found via jasonos-deploy-sync.py --check, fixed same session (--apply + regenerate). Not admitted as work \u2014 the control worked correctly the instant it ran; this was a skipped manual promotion step, not a broken guardrail.",
+      "source": "PCR-OPS-074 promotion session, 2026-07-26",
+      "observed_at": "2026-07-26",
+      "expires_on": "2026-08-25",
       "project": "Governance Tooling & Checker Reliability"
     }
   ],
