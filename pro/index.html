@@ -303,11 +303,6 @@
     font-weight: 700; color: var(--text-muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
-  .proj-type {
-    font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.03em; color: var(--text-dim); border: 1px solid var(--border);
-    border-radius: 3px; padding: 0 4px; line-height: 1.4;
-  }
   .proj-badge {
     font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.05em; border-radius: 3px; padding: 0 5px; line-height: 1.5;
@@ -354,6 +349,14 @@
   .backlog-name      { color: var(--text-muted); font-size: 0.875rem; display: block; }
   .backlog-note      { color: var(--text-dim); font-size: 0.74rem; margin-top: 2px; display: block; }
   .backlog-empty     { font-size: 0.875rem; color: var(--text-dim); }
+
+  /* Expected delivery date — Current/Backlog/Paused cards. Grey (default) more
+     than 7 days out, orange within 7 days, red on or after the date. Omitted
+     entirely by the generator when the initiative sets no date. */
+  .delivery-date         { font-size: 0.74rem; font-weight: 600; margin-top: 2px; display: block; }
+  .delivery-date-ok      { color: var(--text-dim); }
+  .delivery-date-warning { color: var(--warn); }
+  .delivery-date-error   { color: var(--danger); }
 
   #paused-client-panel .panel-label,
   #paused-infra-panel  .panel-label { color: var(--warn); }
@@ -1012,6 +1015,24 @@
       total > 0 ? done + "/" + total : "—";
   }
 
+  /* Expected delivery date badge — shared by Current/Backlog/Paused cards.
+     Grey (default) more than 7 days out, orange within 7 days, red on or
+     after the date. Callers omit the field entirely when there is no date;
+     this returns "" in that case so no empty line is inserted. */
+  function deliveryDateHtml(dateStr) {
+    if (!dateStr) return "";
+    var cls = "delivery-date-ok";
+    var due = new Date(dateStr + "T00:00:00");
+    if (!isNaN(due.getTime())) {
+      var now   = new Date();
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      var diffDays = Math.round((due - today) / 86400000);
+      if (diffDays <= 0) cls = "delivery-date-error";
+      else if (diffDays <= 7) cls = "delivery-date-warning";
+    }
+    return '<span class="delivery-date ' + cls + '">Due ' + escHtml(dateStr) + '</span>';
+  }
+
   function renderActive(initiative, initiatives) {
     var body = document.getElementById("active-body");
     var list = (initiatives && initiatives.length)
@@ -1026,6 +1047,7 @@
       html += '<div class="active-item">'
             +   '<div class="initiative-id">'   + escHtml(list[i].id)   + '</div>'
             +   '<div class="initiative-name">' + escHtml(list[i].name) + '</div>'
+            +   deliveryDateHtml(list[i].expected_delivery_date)
             +   '<span class="initiative-status status-active">In Progress</span>'
             + '</div>';
     }
@@ -1104,7 +1126,6 @@
       }
       for (var i = 0; i < items.length; i++) {
         var it = items[i];
-        var typeTag  = it.type ? '<span class="proj-type">' + escHtml(it.type) + '</span>' : '';
         var badgeCls = it.action === "ceo" ? "proj-badge-ceo" : "proj-badge-agent";
         var badgeTxt = it.action === "ceo" ? "CEO ACTION" : "AGENT ACTION";
         var descLine = it.description
@@ -1112,7 +1133,6 @@
           : '';
         html += '<div class="proj-item">'
               + '<div class="proj-item-row">'
-              +   typeTag
               +   '<span class="proj-id">' + escHtml(it.id || "") + '</span>'
               +   '<span class="proj-badge ' + badgeCls + '">' + badgeTxt + '</span>'
               + '</div>'
@@ -1215,7 +1235,8 @@
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
       var nameWrap = '<div class="backlog-name-wrap">'
-                   + '<span class="backlog-name">' + escHtml(item.name) + '</span>';
+                   + '<span class="backlog-name">' + escHtml(item.name) + '</span>'
+                   + deliveryDateHtml(item.expected_delivery_date);
       if (item.notes) {
         nameWrap += '<span class="backlog-note">' + escHtml(item.notes) + '</span>';
       }
