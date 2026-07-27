@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T02:50:12Z",
+  "generated_at": "2026-07-27T02:56:04Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 214,
+    "minutes_since_session": 220,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -728,7 +728,7 @@
             "id": "PCR-OPS-064",
             "type": "PCR",
             "description": "Local-LLM routing \u2014 standing workload classification and phased eligibility expansion",
-            "action": "ceo"
+            "action": "agent"
           }
         ]
       },
@@ -775,16 +775,9 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T02:50:12.250792+00:00"
+    "generated_at": "2026-07-27T02:56:04.100313+00:00"
   },
-  "contract_quality_gaps": [
-    {
-      "id": "PCR-OPS-064",
-      "file": "governance/pcrs/open/PCR-OPS-064-local-llm-routing-workload-classification-and-phased-expansion.md",
-      "issue": "decision-recorded-ceo-action-header-stale",
-      "category": "PCR"
-    }
-  ],
+  "contract_quality_gaps": [],
   "pending_notes": [
     {
       "id": "OBS-GAP-121",
