@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-27T01:52:24Z",
+  "generated_at": "2026-07-27T01:53:55Z",
   "schema_version": "7",
-  "generator_version": "3.2",
+  "generator_version": "3.4",
   "production": {
     "period": {
       "start": "2026-07-20",
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 156,
+    "minutes_since_session": 158,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -775,7 +775,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T01:52:24.088513+00:00"
+    "generated_at": "2026-07-27T01:53:55.734529+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -786,14 +786,6 @@
     }
   ],
   "pending_notes": [
-    {
-      "id": "OBS-TRANCHE3-E2E",
-      "summary": "Disposable real observation proving evidence-preserving expiry.",
-      "source": "Production Model Tranche 3 approved expiry proof",
-      "observed_at": "2026-07-23",
-      "expires_on": "2026-07-24",
-      "project": null
-    },
     {
       "id": "OBS-GAP-121",
       "summary": "Machine-append operational logs under `Logs/` have no uniform rotation/retention or write discipline, so each log stays bounded only if its author happened to build that in \u2014 and the ones that didn't grow unbounded until a human notices",
