@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T01:40:35Z",
+  "generated_at": "2026-07-27T01:52:24Z",
   "schema_version": "7",
   "generator_version": "3.2",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-26T23:15:31Z",
-    "minutes_since_session": 145,
+    "minutes_since_session": 156,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -775,7 +775,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T01:40:35.059711+00:00"
+    "generated_at": "2026-07-27T01:52:24.088513+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -889,6 +889,22 @@
       "observed_at": "2026-07-26",
       "expires_on": "2026-08-25",
       "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-SCRIPT-REGISTRY-MONOLITH",
+      "summary": "operations/script-registry.md collided twice in one session between two concurrent sessions each inserting a registry row (489 lines / ~154 KB, one shared table + one shared narrative header). Same root cause named in at least three prior memories (temp-index-staged-lane-in-shared-tree, merge-staged-interlock-exempt-but-dirty-file-blocks-cherrypick, deploy-sync-and-relay-act-on-the-shared-working-tree). Worth auditing other monolithic shared files (daemon-manifest.md, procedure-improvement-log.md, MEMORY.md, session-handoff.md) for the same fragility, and proposing a policy on when a shared artifact should decompose into a per-item-file + single-writer-compactor model (precedent already exists: the Security Steward audit-log inbox/compactor pattern, GAP-070/INI-115) versus staying monolithic.",
+      "source": "CEO observation during ini146-caprev/observation-dispositions lane work, 2026-07-26",
+      "observed_at": "2026-07-26",
+      "expires_on": "2026-08-25",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-WORKTREE-ISOLATION-DISCIPLINE",
+      "summary": "Isolated-worktree discipline exists for batch engineering (jasonos-batch-engineer/jasonos-batch-pipeline, Workflow isolation:\"worktree\") but not for single-effort or ad-hoc sessions, which edit the shared main working tree directly. Todays script-registry.md collision (see OBS-SCRIPT-REGISTRY-MONOLITH) happened exactly because two such sessions shared one working directory with no isolation between them. CEO proposal to look into: extend worktree-per-session practice beyond batch engineering to ad-hoc coding generally, so a same-day same-file collision cant recur regardless of whether the concurrent work is a batch run or two hands-on sessions.",
+      "source": "CEO observation following the script-registry.md collision incident, 2026-07-26",
+      "observed_at": "2026-07-26",
+      "expires_on": "2026-08-25",
+      "project": "Process & Surface Governance"
     }
   ],
   "work_item_counts": {
