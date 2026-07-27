@@ -335,6 +335,16 @@
   .pn-summary  { color: var(--text-muted); }
   .pn-meta     { font-size: 0.72rem; color: var(--text-dim); margin-top: 2px; }
   .pn-empty    { font-size: 0.85rem; color: var(--text-dim); }
+  /* Recurrence count (record-observation.py) — same finding observed N times. */
+  .pn-occurrences {
+    font-size: 0.7rem; font-weight: 700; color: var(--warn);
+    margin-left: 6px; vertical-align: 1px;
+  }
+  /* Expiry proximity badge — same grey/orange/red rule as delivery-date. */
+  .pn-expiry         { font-size: 0.72rem; font-weight: 600; margin-top: 2px; display: block; }
+  .pn-expiry-ok      { color: var(--text-dim); }
+  .pn-expiry-warning { color: var(--warn); }
+  .pn-expiry-error   { color: var(--danger); }
 
   /* Backlog + paused lists */
   .backlog-item {
@@ -1015,22 +1025,38 @@
       total > 0 ? done + "/" + total : "—";
   }
 
+  /* Shared date-proximity classifier — "ok"/"warning"/"error" more than 7
+     days out / within 7 days / on-or-after. Used by both the delivery-date
+     badge (Current/Backlog/Paused) and the observation-expiry badge
+     (Pending Notes) so the two surfaces stay visually consistent. */
+  function dateProximityClass(dateStr) {
+    var due = new Date(dateStr + "T00:00:00");
+    if (isNaN(due.getTime())) return "ok";
+    var now   = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var diffDays = Math.round((due - today) / 86400000);
+    if (diffDays <= 0) return "error";
+    if (diffDays <= 7) return "warning";
+    return "ok";
+  }
+
   /* Expected delivery date badge — shared by Current/Backlog/Paused cards.
      Grey (default) more than 7 days out, orange within 7 days, red on or
      after the date. Callers omit the field entirely when there is no date;
      this returns "" in that case so no empty line is inserted. */
   function deliveryDateHtml(dateStr) {
     if (!dateStr) return "";
-    var cls = "delivery-date-ok";
-    var due = new Date(dateStr + "T00:00:00");
-    if (!isNaN(due.getTime())) {
-      var now   = new Date();
-      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-      var diffDays = Math.round((due - today) / 86400000);
-      if (diffDays <= 0) cls = "delivery-date-error";
-      else if (diffDays <= 7) cls = "delivery-date-warning";
-    }
-    return '<span class="delivery-date ' + cls + '">Due ' + escHtml(dateStr) + '</span>';
+    return '<span class="delivery-date delivery-date-' + dateProximityClass(dateStr) + '">Due '
+         + escHtml(dateStr) + '</span>';
+  }
+
+  /* Observation-expiry badge — Pending Notes. Same grey/orange/red proximity
+     rule as the delivery-date badge, applied to an observation's expires_on
+     (every observation has one; the field is required by schema). */
+  function observationExpiryHtml(dateStr) {
+    if (!dateStr) return "";
+    return '<span class="pn-expiry pn-expiry-' + dateProximityClass(dateStr) + '">Expires '
+         + escHtml(dateStr) + '</span>';
   }
 
   function renderActive(initiative, initiatives) {
@@ -1188,11 +1214,13 @@
     var html = "";
     for (var i = 0; i < list.length; i++) {
       var n    = list[i];
-      var meta = [n.project, n.expires_on ? "expires " + n.expires_on : null]
-                 .filter(Boolean).join(" · ");
+      var occ  = n.occurrences > 1
+        ? '<span class="pn-occurrences">\xd7' + escHtml(String(n.occurrences)) + '</span>'
+        : '';
       html += '<div class="pn-item">'
-            + '<div class="pn-summary">' + escHtml(n.summary || n.id || "") + '</div>'
-            + (meta ? '<div class="pn-meta">' + escHtml(meta) + '</div>' : '')
+            + '<div class="pn-summary">' + escHtml(n.summary || n.id || "") + occ + '</div>'
+            + (n.project ? '<div class="pn-meta">' + escHtml(n.project) + '</div>' : '')
+            + observationExpiryHtml(n.expires_on)
             + '</div>';
     }
     body.innerHTML = html;
