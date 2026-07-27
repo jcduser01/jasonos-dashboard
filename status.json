@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T11:09:16Z",
+  "generated_at": "2026-07-27T12:11:02Z",
   "schema_version": "7",
   "generator_version": "3.4",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 201,
+    "minutes_since_session": 263,
     "airlock_queue": 1,
     "airlock_bundles": 0
   },
@@ -308,8 +308,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-07-27T02:51:07Z",
-      "invocations_30d": 24
+      "last_active": "2026-07-27T07:09:03Z",
+      "invocations_30d": 26
     },
     {
       "name": "research-director",
@@ -721,7 +721,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-27T11:09:16.313634+00:00"
+    "generated_at": "2026-07-27T12:11:02.279402+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -825,6 +825,30 @@
       "id": "OBS-CEO-TICKET-DISPOSITION-EXERCISE",
       "summary": "Propose canonizing a reusable CEO ticket-disposition procedure or skill: process one project at a time; read each CEO ACTION ticket and frame richer numbered decisions with options and recommendations; preserve continuous numbering; treat an explicit CEO authorization of bounded review or execution as AGENT ACTION; record decisions in the ticket; set CEO action to None when no further CEO choice remains; close or supersede tickets when the CEO says the issue is obsolete or the definition of done is satisfied; verify every ticket in the project is AGENT ACTION (or closed), then promote the project's staged lane to canonical in one push, regenerate projections via the projection-dirty signal, verify the dashboard, and remove the temporary lane before starting the next project. Friction points to encode: scheduler success metadata and fresh current-day logs do not prove prior-day work; absent logs do not prove task failure; manually published content requires duplicate-action checks against queue, commit, and operations evidence; non-git Logs/remediation records use projection publishing rather than git promotion; stale CEO-action text and duplicated needs_ceo_action fields can misclassify already-authorized work; relay promotion may encounter stale lane references or shared-worktree dirt, so name the lane explicitly, clean old lanes, isolate or stash only targeted tracked changes, and verify branch/worktree state before retrying; resolved records must move to canonical resolved folders. Proposed follow-on: create a short runbook/skill with a decision-question template, classification/closure rules, staged-lane promotion checklist, projection verification, and friction-point evidence checks.",
       "source": "CEO-directed multi-project ticket-disposition exercise, 2026-07-27",
+      "observed_at": "2026-07-27",
+      "expires_on": "2026-08-26",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-FINANCIAL-RELAY-RECEIPT-PATH",
+      "summary": "financial-analysis-log's daily mirror run has now shown the relay-receipt-location anomaly (nested .result path vs. flat-root poll expected by the reader) on 7 consecutive days (07-20 through 07-27). Each occurrence is read-only/non-blocking (mirror still succeeds), but the pattern is now stable enough that the log's own author recommends fixing the poll path. Maintenance-investment candidate (est. payback: ~230s wasted polling latency per run) but not admitted today \u2014 no CEO payback-case decision has been made.",
+      "source": "jasonos-report-triage sweep, 2026-07-27",
+      "observed_at": "2026-07-27",
+      "expires_on": "2026-08-26",
+      "project": "Financial Analysis"
+    },
+    {
+      "id": "OBS-SCRIPT-REGISTRY-COVERAGE-CHECKER-CRASH",
+      "summary": "check-script-registry-coverage.py exited 2 (crash, not a normal drift-nonzero) with ERROR: uncountable policy status 'draft' for policies/engineering/shared-artifact-write-ownership.md, before it could produce a coverage result. This means the script-registry 58-mechanism ceiling / one-in-one-out enforcement had no verified outcome this sweep -- recorded as cannot_verify, not clean. Not admitted as work today: no independent evidence yet that this is a broken guardrail versus a policy-file authoring defect (an uncountable status value in one policy file), but worth a look before the next sweep silently treats a repeat crash as routine.",
+      "source": "jasonos-report-triage sweep, 2026-07-27",
+      "observed_at": "2026-07-27",
+      "expires_on": "2026-08-26",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-LOG-TIMESTAMP-NO-UTC-OFFSET",
+      "summary": "git-relay.log and agent-invocation-master.log both write bare local timestamps (e.g. [2026-07-27T06:11:12], actually CDT/UTC-5) with no offset marker, the same phantom-staleness class GAP-184 already fixed for daemon health-check logs. A naive UTC read of git-relay.log this sweep would have shown a false ~5-hour infrastructure-health breach against the 4-hour threshold; only manual offset conversion caught it. Not admitted as work today -- no live breach occurred, this is a latent false-alarm risk for a future sweep or automated checker that reads these two logs without the same manual correction.",
+      "source": "jasonos-report-triage sweep, 2026-07-27",
       "observed_at": "2026-07-27",
       "expires_on": "2026-08-26",
       "project": "Process & Surface Governance"
