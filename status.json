@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T05:42:56Z",
+  "generated_at": "2026-07-28T05:48:23Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 1315,
+    "minutes_since_session": 1321,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -566,7 +566,7 @@
             "id": "GAP-205",
             "type": "GAP",
             "description": "Operational logs lack uniform rotation and write discipline",
-            "action": "ceo"
+            "action": "agent"
           },
           {
             "id": "REM-094",
@@ -596,7 +596,7 @@
             "id": "PCR-ENG-021",
             "type": "PCR",
             "description": "Worker capability taxonomy and multi-provider model-registry refresh",
-            "action": "ceo"
+            "action": "agent"
           }
         ]
       },
@@ -626,7 +626,7 @@
             "id": "GAP-202",
             "type": "GAP",
             "description": "Harness memory guidance conflicts with the canonical memory policy",
-            "action": "ceo"
+            "action": "agent"
           },
           {
             "id": "GAP-203",
@@ -638,12 +638,12 @@
             "id": "PCR-OPS-076",
             "type": "PCR",
             "description": "Skill authoring and staging lifecycle conventions",
-            "action": "ceo"
+            "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-07-28T05:42:56.704183+00:00"
+    "generated_at": "2026-07-28T05:48:23.536207+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
