@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T06:14:40Z",
+  "generated_at": "2026-07-28T08:14:51Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 1347,
+    "minutes_since_session": 1467,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -207,50 +207,20 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Concentration-risk rule",
-      "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
+      "label": "Approve the worker taxonomy amendment",
+      "context": "PCR-ENG-021 is now Agent Action for Engineering Director drafting and review. CEO approval remains required before the a"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Medical/financial power of attorney",
-      "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
+      "label": "Resolve the Dyson Hope Reels taxonomy choices",
+      "context": "INI-138 asks whether the live workbook is authoritative, whether Series need dedicated Phase-2 templates, and whether th"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Canonize UX best-practices into a KB article",
-      "context": "*(parked)* \u2014 externalize the CEO's UX-career expertise into org knowledge. Propose at a natural moment."
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "Google Workspace OAuth as the durable Gmail auth target",
-      "context": "*(long-horizon)* \u2014 if a JasonOS domain identity earns its keep."
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "(cleanup, low)",
-      "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; co"
-    },
-    {
-      "id": "ACT-HO-6",
-      "category": "required",
-      "label": "Provision Gemini/OpenAI API key(s) + budget",
-      "context": "to enable the INI-137 metered writing lanes for the selectable-writer comparison (co-requisite: GAP-142 ledger + Steward"
-    },
-    {
-      "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Run the Idea ID migration (design spec \u00a74/\u00a79.1) for the 195 existing Idea Backlog rows before INI-145's skill is usable.",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-8",
-      "category": "required",
-      "label": "Two privacy.com facts newly on the record (2026-07-22, from vendor docs \u2014 neither was in any JasonOS document)",
-      "context": "a"
+      "label": "Authorize the reel-production security and model lane",
+      "context": "INI-139 asks for Security Steward evaluation of the reel-script egress seam and the future Gemini/OpenAI key and budget "
     }
   ],
   "status_drift": [],
@@ -260,20 +230,20 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-07-27T10:35:43Z",
-      "invocations_30d": 24
+      "last_active": "2026-07-28T07:34:03Z",
+      "invocations_30d": 25
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-27T06:33:04Z",
-      "invocations_30d": 40
+      "last_active": "2026-07-28T07:47:22Z",
+      "invocations_30d": 41
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-06-12T20:23:25Z",
-      "invocations_30d": 0
+      "last_active": "2026-07-28T07:37:42Z",
+      "invocations_30d": 1
     },
     {
       "name": "security-steward",
@@ -290,8 +260,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-07-27T09:01:14Z",
-      "invocations_30d": 8
+      "last_active": "2026-07-28T07:52:43Z",
+      "invocations_30d": 9
     },
     {
       "name": "venture-director",
@@ -608,7 +578,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-28T06:14:40.079438+00:00"
+    "generated_at": "2026-07-28T08:14:51.418581+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
