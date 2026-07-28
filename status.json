@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T08:14:51Z",
+  "generated_at": "2026-07-28T12:14:59Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 17,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 1467,
+    "minutes_since_session": 1707,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -532,12 +532,6 @@
             "type": "REM",
             "description": "jasonos-financial-state-backup.SKILL.md's Step 3 polls only the flat-root .git-commit-queue/ path\u2026",
             "action": "agent"
-          },
-          {
-            "id": "REM-109",
-            "type": "REM",
-            "description": "jasonos-operations-backup: operations-infra backup target crashed with an unhandled TypeError\u2026",
-            "action": "agent"
           }
         ]
       },
@@ -550,6 +544,12 @@
             "type": "REM",
             "description": "Six of the twelve watermark-bounded daily channels (jasonos-policy-sync, jasonos-airlock-monitor\u2026",
             "action": "agent"
+          },
+          {
+            "id": "REM-111",
+            "type": "REM",
+            "description": "Step 2e/2f Security Steward audit-trail hygiene guardrails recurred: check-cap-rev-write-claims.py\u2026",
+            "action": "ceo"
           }
         ]
       },
@@ -574,11 +574,17 @@
             "type": "PCR",
             "description": "Skill authoring and staging lifecycle conventions",
             "action": "agent"
+          },
+          {
+            "id": "REM-112",
+            "type": "REM",
+            "description": "Step 3 (expire-observations.py --file operations/observations.jsonl), the sweep's single writer\u2026",
+            "action": "ceo"
           }
         ]
       }
     ],
-    "generated_at": "2026-07-28T08:14:51.418581+00:00"
+    "generated_at": "2026-07-28T12:14:59.179698+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -642,9 +648,10 @@
       "id": "OBS-FINANCIAL-RELAY-RECEIPT-PATH",
       "summary": "financial-analysis-log's daily mirror run has now shown the relay-receipt-location anomaly (nested .result path vs. flat-root poll expected by the reader) on 7 consecutive days (07-20 through 07-27). Each occurrence is read-only/non-blocking (mirror still succeeds), but the pattern is now stable enough that the log's own author recommends fixing the poll path. Maintenance-investment candidate (est. payback: ~230s wasted polling latency per run) but not admitted today \u2014 no CEO payback-case decision has been made.",
       "source": "jasonos-report-triage sweep, 2026-07-27",
-      "observed_at": "2026-07-27",
+      "observed_at": "2026-07-28",
       "expires_on": "2026-08-26",
-      "project": "Financial Analysis"
+      "project": "Financial Analysis",
+      "occurrences": 2
     },
     {
       "id": "OBS-TRANCHE-SNAPSHOT-GROUND-TRUTH",
@@ -653,11 +660,27 @@
       "observed_at": "2026-07-28",
       "expires_on": "2026-08-27",
       "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-SCRIPT-REGISTRY-CEILING-BREACH",
+      "summary": "check-script-registry-coverage.py reports 59/58 active mechanisms (daemons=13, checkers=16, policies=30), a one-in-one-out ceiling violation, plus 5 operations/bin scripts with no registry row (check-duplicate-work-item-ids.py, disposition-observation.py, jasonos-shared-artifact-publisher.py, record-observation.py, test-relay-gap127-177-hardening.sh) and 2 registry rows with no source file (execlayer/reel_producer/, jasonos-policy-sync-seam.py). Retained as observation-only per protocol v2.3's detector-disposition table (ordinary script-registry drift); not independently verified as a broken enforcement guardrail today, since the ceiling check itself ran and reported (rather than silently passing) the breach.",
+      "source": "jasonos-report-triage sweep, 2026-07-28",
+      "observed_at": "2026-07-28",
+      "expires_on": "2026-08-27",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-DASHBOARD-GENERATED-AT-QUIESCENT-STALENESS",
+      "summary": "status.json generated_at read 2h56m old against the infrastructure-health policy's 2h threshold at sweep time (generated_at=2026-07-28T08:14:51Z, sweep at 11:11Z), but Logs/director-logs/engineering/dashboard-publisher.log (offset-less CDT timestamps, +5h correction per the OBS-LOG-TIMESTAMP-NO-UTC-OFFSET pattern) shows the publisher invoked on its 2h StartInterval schedule through 10:14:53 UTC with a correct clean/no-diff skip (no underlying data changed, so no new file was written) -- the control is running on schedule and functioning correctly, generated_at just does not advance during a quiescent period with no real content change, so a literal generated_at-age reading against the 2h threshold will read as false staleness whenever data is quiet for over 2h. Verified via the publisher log, not admitted as a broken guardrail today.",
+      "source": "jasonos-report-triage sweep, 2026-07-28",
+      "observed_at": "2026-07-28",
+      "expires_on": "2026-08-27",
+      "project": "Process & Surface Governance"
     }
   ],
   "work_item_counts": {
     "open_pcrs": 1,
     "open_gaps": 5,
-    "open_rems": 4
+    "open_rems": 5
   }
 }
