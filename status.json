@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T04:21:36Z",
+  "generated_at": "2026-07-28T04:36:19Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 1234,
+    "minutes_since_session": 1248,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -577,18 +577,6 @@
         ]
       },
       {
-        "name": "Governance Tooling & Checker Reliability",
-        "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
-        "items": [
-          {
-            "id": "REM-078",
-            "type": "REM",
-            "description": "Scoped GAP-065 mount-root regrowth cleanup for non-venture tooling; policy-sync writer and GAP-159\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Security Steward Audit-Trail Hygiene",
         "description": "Clear the backlog and structural defects in the Security Steward's own audit-inbox and capability-review record-keeping.",
         "items": [
@@ -601,7 +589,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-28T04:21:36.004865+00:00"
+    "generated_at": "2026-07-28T04:36:19.544557+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -737,6 +725,6 @@
   "work_item_counts": {
     "open_pcrs": 0,
     "open_gaps": 3,
-    "open_rems": 5
+    "open_rems": 4
   }
 }
