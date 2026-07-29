@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T13:08:56Z",
+  "generated_at": "2026-07-29T15:09:07Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 3201,
+    "last_session_date": "2026-07-29T13:13:26Z",
+    "minutes_since_session": 115,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -257,12 +257,6 @@
       "category": "required",
       "label": "Read and approve operations/skill-lifecycle-runbook.md",
       "context": "as the final skill-authoring/lifecycle/handoff procedure \u2014 it is already authored, cross-linked, mechanically reviewed, "
-    },
-    {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "Deploy the relay fix \u2014 the git-source fix is NOT yet live.",
-      "context": "Run on the Mac mini terminal (deploy-sync --apply on relay substrate is classifier-gated even under a session Full Auton"
     }
   ],
   "status_drift": [],
@@ -542,7 +536,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-29T13:08:56.192931+00:00"
+    "generated_at": "2026-07-29T15:09:07.585282+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
