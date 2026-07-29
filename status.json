@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T20:57:28Z",
+  "generated_at": "2026-07-29T21:37:05Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,8 +106,8 @@
   },
   "operational": {
     "last_session_date": "2026-07-29T13:13:26Z",
-    "minutes_since_session": 464,
-    "airlock_queue": 0,
+    "minutes_since_session": 503,
+    "airlock_queue": 1,
     "airlock_bundles": 1
   },
   "active_initiative": {
@@ -521,7 +521,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-29T20:57:28.836506+00:00"
+    "generated_at": "2026-07-29T21:37:05.735721+00:00"
   },
   "contract_quality_gaps": [
     {
