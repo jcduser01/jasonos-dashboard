@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T00:02:36Z",
+  "generated_at": "2026-07-29T00:19:36Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 13,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-27T07:47:22Z",
-    "minutes_since_session": 2415,
+    "minutes_since_session": 2432,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -254,12 +254,6 @@
     },
     {
       "id": "ACT-HO-9",
-      "category": "required",
-      "label": "One shared action closes both GAP-201's routing-fix DoD and GAP-202's live-harness-alignment DoD.",
-      "context": "Run on the Mac mini terminal (not delegable under the autonomy grant \u2014 this is a change to Claude Code's own harness sub"
-    },
-    {
-      "id": "ACT-HO-10",
       "category": "required",
       "label": "Read and approve operations/skill-lifecycle-runbook.md",
       "context": "as the final skill-authoring/lifecycle/handoff procedure \u2014 it is already authored, cross-linked, mechanically reviewed, "
@@ -570,18 +564,6 @@
         "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
         "items": [
           {
-            "id": "GAP-201",
-            "type": "GAP",
-            "description": "Native harness memory remains divergent from canonical organizational memory",
-            "action": "agent"
-          },
-          {
-            "id": "GAP-202",
-            "type": "GAP",
-            "description": "Harness memory guidance conflicts with the canonical memory policy",
-            "action": "agent"
-          },
-          {
             "id": "PCR-OPS-076",
             "type": "PCR",
             "description": "Skill authoring and staging lifecycle conventions",
@@ -596,7 +578,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-29T00:02:36.649942+00:00"
+    "generated_at": "2026-07-29T00:19:36.650928+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -692,7 +674,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 1,
-    "open_gaps": 3,
+    "open_gaps": 1,
     "open_rems": 3
   }
 }
