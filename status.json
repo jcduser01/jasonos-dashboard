@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T15:09:07Z",
+  "generated_at": "2026-07-29T19:09:11Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-29T13:13:26Z",
-    "minutes_since_session": 115,
+    "minutes_since_session": 355,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -536,9 +536,94 @@
         ]
       }
     ],
-    "generated_at": "2026-07-29T15:09:07.585282+00:00"
+    "generated_at": "2026-07-29T19:09:11.943435+00:00"
   },
-  "contract_quality_gaps": [],
+  "contract_quality_gaps": [
+    {
+      "type": "missing_common_field",
+      "field": "execution scope",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "definition of done",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "gates",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "external recipient",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "deliverable",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "commitment id",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_project",
+      "field": "project",
+      "file": "governance/gaps/open/GAP-212-venture-engine-no-deterministic-eligibility-filter-sole-source-set-aside.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "execution scope",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "definition of done",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "gates",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "external recipient",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "deliverable",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "commitment id",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_project",
+      "field": "project",
+      "file": "governance/gaps/open/GAP-213-ethical-risk-screen-no-binding-citation-article-vii.md",
+      "category": "gap-open"
+    }
+  ],
   "pending_notes": [
     {
       "id": "OBS-GAP-123",
@@ -641,7 +726,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 0,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
