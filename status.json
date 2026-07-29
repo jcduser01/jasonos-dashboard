@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T22:49:24Z",
+  "generated_at": "2026-07-29T22:51:09Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-29T13:13:26Z",
-    "minutes_since_session": 575,
+    "minutes_since_session": 577,
     "airlock_queue": 1,
     "airlock_bundles": 1
   },
@@ -192,59 +192,53 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Re-enable INI-141 Apify automation on or after 2026-08-19",
-      "context": "confirm the free-tier budget has reset and transcript retrieval is off by default; no paid Apify upgrade is authorized."
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
     },
     {
-      "id": "ACT-HO-3",
+      "id": "ACT-HO-2",
       "category": "required",
       "label": "Medical/financial power of attorney",
       "context": "separate from the will/beneficiary (confirmed fine); currency not yet confirmed. No urgency."
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Canonize UX best-practices into a KB article",
       "context": "*(parked)* \u2014 externalize the CEO's UX-career expertise into org knowledge. Propose at a natural moment."
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "Google Workspace OAuth as the durable Gmail auth target",
       "context": "*(long-horizon)* \u2014 if a JasonOS domain identity earns its keep."
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-5",
       "category": "required",
       "label": "(cleanup, low)",
       "context": "the stale \"DRAFT\" label in check-work-item-contract-conformance.py (Steward P-2) \u2014 a one-line docstring/argparse fix; co"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-6",
       "category": "required",
       "label": "Set the Gemini/OpenAI metered-lane budget ceiling",
       "context": "API keys are already available; set the budget ceiling when INI-139's Steward exception, GAP-142 ledger, and metered-lan"
     },
     {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-7",
       "category": "required",
       "label": "Run the Idea ID migration (design spec \u00a74/\u00a79.1) for the 195 existing Idea Backlog rows before INI-145's skill is usable.",
       "context": ""
     },
     {
-      "id": "ACT-HO-9",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "Two privacy.com facts newly on the record (2026-07-22, from vendor docs \u2014 neither was in any JasonOS document)",
       "context": "a"
     },
     {
-      "id": "ACT-HO-10",
+      "id": "ACT-HO-9",
       "category": "required",
       "label": "Read and approve operations/skill-lifecycle-runbook.md",
       "context": "as the final skill-authoring/lifecycle/handoff procedure \u2014 it is already authored, cross-linked, mechanically reviewed, "
@@ -527,7 +521,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-29T22:49:24.834694+00:00"
+    "generated_at": "2026-07-29T22:51:09.142271+00:00"
   },
   "contract_quality_gaps": [
     {
