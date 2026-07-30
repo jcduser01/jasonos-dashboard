@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T15:54:28Z",
+  "generated_at": "2026-07-30T16:04:56Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -44,11 +44,11 @@
     },
     "effort": {
       "production_ratio": {
-        "status": "unavailable",
+        "status": "degraded_unquantified",
         "value": null,
         "numerator": 0,
         "denominator": null,
-        "limitation": "CEO-attention denominator is unavailable."
+        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -64,7 +64,7 @@
       }
     },
     "maintenance": {
-      "admitted": 0,
+      "admitted": 1,
       "declined_observations": 0,
       "expired_observations": 1
     },
@@ -105,8 +105,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-30T14:06:47Z",
-    "minutes_since_session": 107,
+    "last_session_date": "2026-07-30T16:02:30Z",
+    "minutes_since_session": 2,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -211,7 +211,14 @@
       }
     }
   ],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Sync deployed jasonos-operations-backup scheduled task",
+      "context": "the GAP-216 fix landed in the canonical source (operations/assets/jasonos-operations-backup.SKILL.md, authoritative on c"
+    }
+  ],
   "status_drift": [],
   "category_drift": [],
   "contract_drift": [],
@@ -503,20 +510,24 @@
             "action": "agent"
           }
         ]
+      },
+      {
+        "name": "Process & Surface Governance",
+        "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
+        "items": [
+          {
+            "id": "GAP-218",
+            "type": "GAP",
+            "description": "Metrics dataset misses the dominant sources of JasonOS token consumption: Claude Code terminal\u2026",
+            "action": "agent"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-07-30T15:54:28.029453+00:00"
+    "generated_at": "2026-07-30T16:04:56.735807+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
-    {
-      "id": "OBS-GAP-123",
-      "summary": "The live metrics emit records a byte\u00f74 token *estimate* and covers only launchd-dispatched invocations; in-session (Cowork/Claude-Code) dispatch is unmeasured",
-      "source": "GAP-123",
-      "observed_at": "2026-07-25",
-      "expires_on": "2026-08-24",
-      "project": null
-    },
     {
       "id": "OBS-GAP-170",
       "summary": "No recurring discipline reaps stale git worktrees and lanes; debris accumulates until it holds the only copy of real work",
@@ -577,7 +588,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 1,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
