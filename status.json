@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T06:27:24Z",
+  "generated_at": "2026-07-30T08:27:29Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 10
   },
   "operational": {
-    "last_session_date": "2026-07-30T06:02:23Z",
-    "minutes_since_session": 25,
+    "last_session_date": "2026-07-30T07:52:24Z",
+    "minutes_since_session": 35,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -268,13 +268,13 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-07-29T12:57:53Z",
-      "invocations_30d": 26
+      "last_active": "2026-07-30T07:34:20Z",
+      "invocations_30d": 27
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-07-29T13:08:51Z",
+      "last_active": "2026-07-30T06:32:43Z",
       "invocations_30d": 42
     },
     {
@@ -547,7 +547,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-30T06:27:24.353666+00:00"
+    "generated_at": "2026-07-30T08:27:29.072415+00:00"
   },
   "contract_quality_gaps": [
     {
