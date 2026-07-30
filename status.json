@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T16:04:56Z",
+  "generated_at": "2026-07-30T16:37:52Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -64,7 +64,7 @@
       }
     },
     "maintenance": {
-      "admitted": 1,
+      "admitted": 2,
       "declined_observations": 0,
       "expired_observations": 1
     },
@@ -105,8 +105,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-30T16:02:30Z",
-    "minutes_since_session": 2,
+    "last_session_date": "2026-07-30T16:37:17Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -211,14 +211,7 @@
       }
     }
   ],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Sync deployed jasonos-operations-backup scheduled task",
-      "context": "the GAP-216 fix landed in the canonical source (operations/assets/jasonos-operations-backup.SKILL.md, authoritative on c"
-    }
-  ],
+  "ceo_actions": [],
   "status_drift": [],
   "category_drift": [],
   "contract_drift": [],
@@ -520,11 +513,17 @@
             "type": "GAP",
             "description": "Metrics dataset misses the dominant sources of JasonOS token consumption: Claude Code terminal\u2026",
             "action": "agent"
+          },
+          {
+            "id": "PCR-GOV-009",
+            "type": "PCR",
+            "description": "Add Codex (ChatGPT desktop application) as a fourth branch in president-context-prompt.md's\u2026",
+            "action": "ceo"
           }
         ]
       }
     ],
-    "generated_at": "2026-07-30T16:04:56.735807+00:00"
+    "generated_at": "2026-07-30T16:37:52.220826+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -584,10 +583,18 @@
       "observed_at": "2026-07-30",
       "expires_on": "2026-08-29",
       "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-COWORK-SCHEDULED-TASK-SYNC-GATE-OR-LAUNCHD-MIGRATION",
+      "summary": "GAP-216's fix required update_scheduled_task (Cowork-only) to sync the canonical operations/assets/jasonos-operations-backup.SKILL.md source to the live deployed Cowork scheduled-task prompt -- native Claude Code cannot perform that sync, so a source-only fix silently leaves the OLD (defective) prompt running until someone remembers the manual step or Security Steward's weekly drift check (PCR-OPS-008) catches it. CEO asked whether the scheduled task could just read the source live instead of keeping two manually-synced copies; President Agent's counter-proposal: a fetch-and-confirm pattern rather than a bare live read -- each Cowork-run scheduled task's Step 0 fetches its own canonical SKILL.md source, hashes it, and either proceeds only on a match to an approved value or explicitly reports/escalates a mismatch instead of silently running stale (or silently running unreviewed-new) instructions -- preserves the existing deploy-review gate (an edit doesn't go live merely by being saved) while catching drift automatically and immediately instead of relying on a human noticing or a weekly sweep. CEO's stated alternative, which they are open to considering and specifically framed as a possible full replacement rather than a complement to the above: deprecate ALL Cowork-run scheduled tasks and replace them with native launchd invocation on the Mac mini, motivated by making JasonOS more provider-agnostic (a stated organizational goal) -- this would eliminate the two-copy/sync-gap problem class entirely (no separate Cowork-deployed prompt to drift from source), at the cost of whatever Cowork-only capabilities (e.g. Gmail/Drive/Shopify MCP connectors) any given scheduled task currently depends on, which would need per-task auditing before a migration could be scoped. Not admitted as work: this is an architecture-direction question for the CEO to decide (incremental sync-gate vs. structural migration), not yet a scoped, approved piece of work.",
+      "source": "CEO conversation, 2026-07-30, following GAP-216 closure (Claude Code, native Mac mini, President Agent)",
+      "observed_at": "2026-07-30",
+      "expires_on": "2026-08-29",
+      "project": "Process & Surface Governance"
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 0,
+    "open_pcrs": 1,
     "open_gaps": 2,
     "open_rems": 1
   }
