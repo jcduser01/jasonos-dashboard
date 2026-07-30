@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T13:47:36Z",
+  "generated_at": "2026-07-30T13:55:30Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-07-30T13:47:08Z",
-    "minutes_since_session": 0,
+    "last_session_date": "2026-07-30T13:51:03Z",
+    "minutes_since_session": 4,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -217,12 +217,6 @@
       "category": "required",
       "label": "Concentration-risk rule",
       "context": "max single-stock / max-tech-exposure limit still undefined in the CEO's operating model. Open, not prioritized."
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Set the Gemini/OpenAI metered-lane budget ceiling",
-      "context": "API keys are already available; set the budget ceiling when INI-139's Steward exception, GAP-142 ledger, and metered-lan"
     }
   ],
   "status_drift": [],
@@ -518,7 +512,7 @@
         ]
       }
     ],
-    "generated_at": "2026-07-30T13:47:36.050305+00:00"
+    "generated_at": "2026-07-30T13:55:30.417046+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
