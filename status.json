@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T15:31:28Z",
+  "generated_at": "2026-07-30T15:54:28Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 13,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-30T14:06:47Z",
-    "minutes_since_session": 84,
+    "minutes_since_session": 107,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -503,27 +503,9 @@
             "action": "agent"
           }
         ]
-      },
-      {
-        "name": "Process & Surface Governance",
-        "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
-        "items": [
-          {
-            "id": "GAP-215",
-            "type": "GAP",
-            "description": "Script-registry mechanism ceiling is breached (59/58), 4 scripts have no registry row, and the\u2026",
-            "action": "agent"
-          },
-          {
-            "id": "GAP-216",
-            "type": "GAP",
-            "description": "The daily operations-backup task stops entirely when its first target times out, instead of\u2026",
-            "action": "agent"
-          }
-        ]
       }
     ],
-    "generated_at": "2026-07-30T15:31:28.668253+00:00"
+    "generated_at": "2026-07-30T15:54:28.029453+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -583,11 +565,19 @@
       "expires_on": "2026-08-28",
       "project": null,
       "occurrences": 2
+    },
+    {
+      "id": "OBS-GAP-FOLDER-STATUS-DRIFT-18-FILES",
+      "summary": "check-gap-folder-status-agreement.py --check reports 18 pre-existing GAP/PCR folder/Status disagreements in the live corpus (e.g. GAP-211 sits in resolved/ with its header **Status:** line still reading Open) -- the checker is wired live as report-triage step 2j and evidently has not been cleared against the historical corpus since it went live, or these predate it. Not admitted as work: the checker itself is functioning (this run demonstrates it), no live incident, and GAP-215/GAP-216's own closures were written to set Status: Resolved correctly rather than repeat the pattern. Worth a future sweep to bulk-correct the 18 stale Status lines so report-triage step 2j stops (or starts, if not already) surfacing them.",
+      "source": "GAP-215 closure verification, 2026-07-30 (President Agent, incidental finding while confirming GAP-215's own resolved/ closure would pass this checker)",
+      "observed_at": "2026-07-30",
+      "expires_on": "2026-08-29",
+      "project": "Process & Surface Governance"
     }
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 3,
+    "open_gaps": 1,
     "open_rems": 1
   }
 }
