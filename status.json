@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T05:12:10Z",
+  "generated_at": "2026-08-04T05:19:25Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -570,21 +570,9 @@
             "action": "agent"
           }
         ]
-      },
-      {
-        "name": "Handoff Compaction & CEO Action Surfacing",
-        "description": null,
-        "items": [
-          {
-            "id": "REM-114",
-            "type": "REM",
-            "description": "jasonos-handoff-compactor.py consumes an inbox entry and archives it without merging it into\u2026",
-            "action": "ceo"
-          }
-        ]
       }
     ],
-    "generated_at": "2026-08-04T05:12:10.898467+00:00"
+    "generated_at": "2026-08-04T05:19:25.701148+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -701,6 +689,6 @@
   "work_item_counts": {
     "open_pcrs": 0,
     "open_gaps": 3,
-    "open_rems": 2
+    "open_rems": 1
   }
 }
