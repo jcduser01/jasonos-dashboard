@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T00:23:48Z",
+  "generated_at": "2026-08-04T02:24:00Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 14,
+      "guardrail_repairs": 13,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-07-31T15:24:17Z",
-    "minutes_since_session": 4859,
+    "minutes_since_session": 4979,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -226,7 +226,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-08-03T07:43:11Z",
-      "invocations_30d": 46
+      "invocations_30d": 45
     },
     {
       "name": "knowledge-director",
@@ -238,7 +238,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-27T13:12:56Z",
-      "invocations_30d": 34
+      "invocations_30d": 33
     },
     {
       "name": "research-director",
@@ -485,12 +485,6 @@
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
           {
-            "id": "GAP-223",
-            "type": "GAP",
-            "description": "jasonos-blog-drip.py's relay wait exceeds the sandbox's 45s bash-call limit, so every fire that\u2026",
-            "action": "agent"
-          },
-          {
             "id": "REM-100",
             "type": "REM",
             "description": "dh-blog-drip self-disabled at 2026-07-21T01:20Z after its scheduled publish attempt (#8\u2026",
@@ -511,7 +505,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-04T00:23:48.038364+00:00"
+    "generated_at": "2026-08-04T02:24:00.497803+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -659,7 +653,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
+    "open_gaps": 1,
     "open_rems": 1
   }
 }
