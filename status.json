@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T03:31:56Z",
+  "generated_at": "2026-08-04T04:04:51Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -29,7 +29,7 @@
       "next": {
         "id": "INI-114",
         "label": "INI-114",
-        "expected_delivery_date": "2026-07-31"
+        "expected_delivery_date": "2026-08-14"
       },
       "blockers": [],
       "throughput_floor": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 13,
+      "guardrail_repairs": 15,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-04T03:31:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 33,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -131,7 +131,7 @@
       "id": "INI-114",
       "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
       "status": "active",
-      "expected_delivery_date": "2026-07-31",
+      "expected_delivery_date": "2026-08-14",
       "contract": {
         "stop_line": "The voice-guide gate is CLEARED (ratified 2026-07-22), so Phase 2 copy may be drafted. Every public claim still clears the Public Voice review gate and publication remains CEO-reserved (Public Voice \u00a7E) \u2014 draft freely, publish nothing. The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Do not write fit-proof copy at all until there is delivered, consented work to describe \u2014 a fabricated version of that passage was produced and withdrawn during Phase 1.5. Do not ship any page without the review gate and consent clearance on every cited case."
       }
@@ -494,6 +494,18 @@
   "projects": {
     "groups": [
       {
+        "name": "Git Relay Commit-Path Hardening",
+        "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
+        "items": [
+          {
+            "id": "GAP-224",
+            "type": "GAP",
+            "description": "commit_via_relay.py silently discards every --pathspec but the last, committing a partial file set\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
         "name": "Dyson Hope Blog-Drip Publishing Pipeline",
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
@@ -516,9 +528,21 @@
             "action": "agent"
           }
         ]
+      },
+      {
+        "name": "Handoff Compaction & CEO Action Surfacing",
+        "description": null,
+        "items": [
+          {
+            "id": "REM-114",
+            "type": "REM",
+            "description": "jasonos-handoff-compactor.py consumes an inbox entry and archives it without merging it into\u2026",
+            "action": "ceo"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-08-04T03:31:56.319356+00:00"
+    "generated_at": "2026-08-04T04:04:51.778568+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -640,14 +664,6 @@
       "project": "Financial Analysis"
     },
     {
-      "id": "OBS-RELAY-CLIENT-REPEATED-PATHSPEC-SILENTLY-DROPS-ALL-BUT-LAST",
-      "summary": "commit_via_relay.py's --pathspec is a single whitespace-separated string, not an appending flag: when the flag is repeated, argparse keeps only the LAST value and every earlier one is silently discarded. The client accepts the call, exits 0, and the relay returns status=success \u2014 so nothing in the receipt, the client output, or the relay log distinguishes 'committed everything you asked for' from 'committed the last pathspec and dropped the rest'. Documented in the client's own module docstring (lines 121-122, 637) but not enforced, not warned about, and not visible in any receipt. VERIFIED FAILURE, TWICE: (1) this sweep's first commit 0728fd8 was invoked with --pathspec operations/observations.jsonl --pathspec governance/gaps/open/GAP-222-*.md; the relay log records 'Pathspec : governance/gaps/open/GAP-222-*.md' only, and the commit contains 1 file. (2) The 2026-08-01 sweep's commit 45cd94e has the identical shape \u2014 its narrative in Logs/director-logs/operations/operations-log.md asserts 'operations/observations.jsonl + governance/gaps/open/GAP-221-*.md' but git show --stat 45cd94e shows 1 file changed (the GAP only), and git log -- operations/observations.jsonl confirms the last commit touching that file before today was 4ca2de2 (2026-07-31). Both sweeps' observation writes therefore sat uncommitted in the working tree for up to two days, and the 08-01 sweep narrative made an audit claim that was not true. Data loss was recoverable and both sets of writes were landed this run by commit 65bcf06. Same class as GAP-147 (a relay status=success receipt confirms the commit landed, not that every intended change inside it happened) but a distinct mechanism: here the drop happens client-side, before the trigger is ever written. Not admitted as work: no named live control stopped working and the tool behaves as its own docstring documents, so this fails the admission rule's path-2 test on a strict reading. Flagged explicitly as a candidate a human should weigh for path-2 or maintenance admission \u2014 the failure is silent, it recurred unattended two runs in a row, and its consequence is a false entry in the audit record. Cheapest durable fix: make the client reject or warn on a repeated --pathspec, and echo the final resolved pathspec back to the caller before enqueue. Open question not answered this run: whether any earlier relay commit by any caller lost pathspecs the same way (unanswerable from the relay log, which only ever sees the surviving value).",
-      "source": "report-triage 2026-08-02 step 7 (post-write verification of this sweep's own commit)",
-      "observed_at": "2026-08-02",
-      "expires_on": "2026-09-01",
-      "project": "Git Relay Commit-Path Hardening"
-    },
-    {
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
       "summary": "New: check-doctrine-artifact-currency.py exits 1 for brand 'jason-cook-design' \u2014 4 artifacts in knowledge/clients/jason-cook-design carry no doctrine_reconciled: marker against the 2026-07-16 ratified-doctrine baseline: ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. The checker last read exit 0 on 2026-07-19, so these post-date that ratification and were authored without the stamp rather than having gone stale. Each needs one of reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "report-triage 2026-08-03 step 2b (check-doctrine-artifact-currency.py, PCR-KNOW-005)",
@@ -666,7 +682,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 1,
-    "open_rems": 1
+    "open_gaps": 2,
+    "open_rems": 2
   }
 }
