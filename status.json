@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T06:55:08Z",
+  "generated_at": "2026-08-04T07:56:05Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-04T05:45:00Z",
-    "minutes_since_session": 70,
+    "minutes_since_session": 131,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -191,7 +191,7 @@
       "status": "active",
       "contract": {
         "route": "Operational",
-        "runner_scope": "Not yet run. Single-phase build (no governance gate \u2014 pure engineering capability, no new policy/autonomy/money-risk surface). Engineering Director builds against this spec and the approved mockup.",
+        "runner_scope": "Built and promoted to canonical 2026-08-04 (commit d73763a4da4e). Single-phase build (no governance gate \u2014 pure engineering capability, no new policy/autonomy/money-risk surface).",
         "stop_line": "Preserve every existing CEO/dial/policy control boundary \u2014 this app must never gain a write path to the dial, rubric, MAL, envelope, or config; those remain CLI/PA-mediated. The CLI/library remains the sole source of truth and sole write path for ledger/grade/disposition state.",
         "depends_on": [
           "INI-111"
@@ -245,20 +245,20 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-03T07:34:27Z",
-      "invocations_30d": 29
+      "last_active": "2026-08-04T07:34:43Z",
+      "invocations_30d": 30
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-08-04T06:33:00Z",
-      "invocations_30d": 46
+      "last_active": "2026-08-04T07:53:42Z",
+      "invocations_30d": 47
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-08-03T07:37:16Z",
-      "invocations_30d": 6
+      "last_active": "2026-08-04T07:37:35Z",
+      "invocations_30d": 7
     },
     {
       "name": "security-steward",
@@ -517,7 +517,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-04T06:55:08.279529+00:00"
+    "generated_at": "2026-08-04T07:56:05.155797+00:00"
   },
   "contract_quality_gaps": [
     {
