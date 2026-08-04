@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T05:04:13Z",
+  "generated_at": "2026-08-04T05:12:10Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 17,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -105,8 +105,8 @@
     "backlog": 9
   },
   "operational": {
-    "last_session_date": "2026-08-04T05:02:21Z",
-    "minutes_since_session": 1,
+    "last_session_date": "2026-08-04T05:25:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -214,15 +214,45 @@
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
-      "category": "confirm",
-      "label": "Check on staged/ini114-phase2",
-      "context": "local branch, 1 unmerged commit, no remote ref"
+      "category": "required",
+      "label": "Rule on this session's date stamps.",
+      "context": "Every artifact written this session reads 2026-07-31; the session ran 2026-08-03 CDT. Affects the INI-114 Notes block (p"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Deploy GAP-224's relay-client fix",
-      "context": "python3 /Volumes/SandboxData/operations/jasonos-operations/operations/bin/jasonos-deploy-sync.py --apply --target commit"
+      "label": "Entry-offer name for INI-114",
+      "context": "still a placeholder. CEO: \"the name will come.\" [ENTRY-OFFER-NAME] tokens in both copy documents; a search-and-replace i"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Practice/discipline name",
+      "context": "\"Organizational Solution Architecture\" was trialled and judged weak. Separate slot from the entry-offer name; most of th"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "Ratify web-copy-register-supplement.md into voice-and-style-guide.md",
+      "context": ", or decide it stays a standing supplement. The guide currently records a register it does not cover, and INI-114 record"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Two FAQ answers not yet drafted",
+      "context": "client-side time commitment and phase duration past Phase 0. Content is decided (name the determinants, not a number, us"
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "confirm",
+      "label": "Confirm the proposed S2-EYEBROW and S2-H2",
+      "context": "on the homepage. The CEO restructured Section 2 into two delivery-option cards without specifying either; both are marke"
+    },
+    {
+      "id": "ACT-HO-7",
+      "category": "required",
+      "label": "Record two positions in the engagement model",
+      "context": "that currently exist only in this session's transcript and on INI-114: that the adoption-and-handoff package's contents "
     }
   ],
   "status_drift": [],
@@ -494,18 +524,6 @@
   "projects": {
     "groups": [
       {
-        "name": "Git Relay Commit-Path Hardening",
-        "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
-        "items": [
-          {
-            "id": "GAP-224",
-            "type": "GAP",
-            "description": "commit_via_relay.py silently discards every --pathspec but the last, committing a partial file set\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Dyson Hope Blog-Drip Publishing Pipeline",
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
@@ -566,7 +584,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-04T05:04:13.415854+00:00"
+    "generated_at": "2026-08-04T05:12:10.898467+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -682,7 +700,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 4,
+    "open_gaps": 3,
     "open_rems": 2
   }
 }
