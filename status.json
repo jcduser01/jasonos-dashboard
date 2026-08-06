@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T14:52:37Z",
+  "generated_at": "2026-08-06T17:01:26Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 16,
+      "guardrail_repairs": 17,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-06T04:13:00Z",
-    "minutes_since_session": 639,
+    "minutes_since_session": 768,
     "airlock_queue": 1,
     "airlock_bundles": 1
   },
@@ -487,6 +487,18 @@
   "projects": {
     "groups": [
       {
+        "name": "Git Relay Commit-Path Hardening",
+        "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
+        "items": [
+          {
+            "id": "GAP-229",
+            "type": "GAP",
+            "description": "The documented \"close-initiative.sh git-mv + destination-only --pathspec\" relay recipe silently\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
         "name": "Dyson Hope Blog-Drip Publishing Pipeline",
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
@@ -523,7 +535,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-06T14:52:37.015714+00:00"
+    "generated_at": "2026-08-06T17:01:26.659370+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -798,7 +810,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
+    "open_gaps": 3,
     "open_rems": 1
   }
 }
