@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T04:23:48Z",
+  "generated_at": "2026-08-07T04:52:41Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -74,7 +74,7 @@
       "expired_observations": 1
     },
     "escape_hatches": {
-      "delivery_dependencies": 2,
+      "delivery_dependencies": 3,
       "guardrail_repairs": 15,
       "maintenance_cap_overrides": 0
     },
@@ -104,14 +104,14 @@
   "stats": {
     "done": 116,
     "total": 140,
-    "active": 8,
-    "queued": 1,
+    "active": 9,
+    "queued": 0,
     "paused": 9,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-08-06T04:13:00Z",
-    "minutes_since_session": 1450,
+    "minutes_since_session": 1479,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -174,6 +174,23 @@
       }
     },
     {
+      "id": "INI-143",
+      "name": "Dyson Hope Reels \u2014 Batch Production Operations (Weekly Rhythm)",
+      "status": "active",
+      "contract": {
+        "route": "CEO-first",
+        "runner_scope": "Creative + Operations. This is a RUN-the-machine initiative, not a build: a repeatable weekly rhythm that orchestrates the producer (INI-140), the visual pipeline (INI-142), and the existing voice/video capabilities into steady published output. Operations owns cadence and runbook discipline; Creative owns execution and taste.",
+        "stop_line": "No automatic publication and no full unattended backlog processing \u2014 the 200-item backlog is strategic inventory, not a machine queue. The rhythm batches human-gated work; it never removes the gates. Publication, music, sound design, edit rhythm, and final captions stay human-controlled.",
+        "depends_on": [
+          "INI-140",
+          "INI-142",
+          "INI-092",
+          "INI-085",
+          "INI-142"
+        ]
+      }
+    },
+    {
       "id": "INI-144",
       "name": "Dyson Hope Reels \u2014 Own-Account Performance Capture + Weekly Analysis",
       "status": "active",
@@ -224,25 +241,7 @@
       }
     }
   ],
-  "queue": [
-    {
-      "id": "INI-143",
-      "name": "Dyson Hope Reels \u2014 Batch Production Operations (Weekly Rhythm)",
-      "status": "queued",
-      "position": 1,
-      "contract": {
-        "route": "CEO-first",
-        "runner_scope": "Creative + Operations. This is a RUN-the-machine initiative, not a build: a repeatable weekly rhythm that orchestrates the producer (INI-140), the visual pipeline (INI-142), and the existing voice/video capabilities into steady published output. Operations owns cadence and runbook discipline; Creative owns execution and taste.",
-        "stop_line": "No automatic publication and no full unattended backlog processing \u2014 the 200-item backlog is strategic inventory, not a machine queue. The rhythm batches human-gated work; it never removes the gates. Publication, music, sound design, edit rhythm, and final captions stay human-controlled.",
-        "depends_on": [
-          "INI-140",
-          "INI-142",
-          "INI-092",
-          "INI-085"
-        ]
-      }
-    }
-  ],
+  "queue": [],
   "ceo_actions": [],
   "status_drift": [],
   "category_drift": [],
@@ -494,13 +493,31 @@
             "type": "GAP",
             "description": "Financial cockpit variance-learning loop (STEP 6) has scored zero variances across four baseline\u2026",
             "action": "agent"
+          },
+          {
+            "id": "PCR-FIN-005",
+            "type": "PCR",
+            "description": "Local Scenario Records in the Derived Financial Analytical State Store",
+            "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-08-07T04:23:48.149719+00:00"
+    "generated_at": "2026-08-07T04:52:41.761771+00:00"
   },
   "contract_quality_gaps": [
+    {
+      "type": "missing_class_field",
+      "field": "committed deliverable",
+      "file": "governance/pcrs/open/PCR-FIN-005-local-scenario-derived-state.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "dependency claim",
+      "file": "governance/pcrs/open/PCR-FIN-005-local-scenario-derived-state.md",
+      "category": "pcr-open"
+    },
     {
       "type": "missing_field",
       "field": "route",
@@ -772,7 +789,7 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 0,
+    "open_pcrs": 1,
     "open_gaps": 1,
     "open_rems": 1
   }
