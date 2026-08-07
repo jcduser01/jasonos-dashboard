@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T19:20:20Z",
+  "generated_at": "2026-08-07T19:54:27Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 16,
+      "guardrail_repairs": 19,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-07T06:41:06Z",
-    "minutes_since_session": 759,
+    "minutes_since_session": 793,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -259,8 +259,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-07T18:59:17Z",
-      "invocations_30d": 34
+      "last_active": "2026-08-07T19:29:33Z",
+      "invocations_30d": 36
     },
     {
       "name": "operations-director",
@@ -489,6 +489,12 @@
         "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
         "items": [
           {
+            "id": "GAP-234",
+            "type": "GAP",
+            "description": "check-work-item-contract-conformance.py's project: guardrail doesn't hard-fail a bare INI-NNN\u2026",
+            "action": "agent"
+          },
+          {
             "id": "PCR-OPS-077",
             "type": "PCR",
             "description": "Group portfolio initiatives into lightweight \"Programs\" \u2014 the same organizing paradigm PCR-OPS-074\u2026",
@@ -525,9 +531,33 @@
             "action": "agent"
           }
         ]
+      },
+      {
+        "name": "INI-126 CFO Cockpit Planning Mode (surfaced during; not scoped to it \u2014 affects all director jails)",
+        "description": null,
+        "items": [
+          {
+            "id": "GAP-236",
+            "type": "GAP",
+            "description": "Write tool cannot create new files in any director jail; the paired Edit(...) rule GAP-079 relied\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
+        "name": "None \u2014 infrastructure/dispatcher reliability, surfaced during INI-126 coding-invocation hang diagnosis",
+        "description": null,
+        "items": [
+          {
+            "id": "GAP-237",
+            "type": "GAP",
+            "description": "Dispatcher's timeout fallback path is a bare SIGKILL with no flush grace period, making\u2026",
+            "action": "agent"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-08-07T19:20:20.828012+00:00"
+    "generated_at": "2026-08-07T19:54:27.803767+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -880,7 +910,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 2,
-    "open_gaps": 2,
+    "open_gaps": 5,
     "open_rems": 1
   }
 }
