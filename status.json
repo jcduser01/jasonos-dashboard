@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-07T04:52:41Z",
+  "generated_at": "2026-08-07T06:52:48Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
     "period": {
-      "start": "2026-07-31",
-      "end": "2026-08-06"
+      "start": "2026-08-01",
+      "end": "2026-08-07"
     },
     "headline": {
       "delivered": 1,
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-06T04:13:00Z",
-    "minutes_since_session": 1479,
+    "minutes_since_session": 1599,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -256,7 +256,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-08-06T07:39:24Z",
+      "last_active": "2026-08-07T06:32:27Z",
       "invocations_30d": 49
     },
     {
@@ -501,9 +501,21 @@
             "action": "agent"
           }
         ]
+      },
+      {
+        "name": "INI-145",
+        "description": null,
+        "items": [
+          {
+            "id": "GAP-233",
+            "type": "GAP",
+            "description": "INI-145's Creative Director subagent cannot execute its own skill's Step 5 commit procedure (no\u2026",
+            "action": "agent"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-08-07T04:52:41.761771+00:00"
+    "generated_at": "2026-08-07T06:52:48.121411+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -790,7 +802,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 1,
-    "open_gaps": 1,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
