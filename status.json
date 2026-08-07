@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T12:53:05Z",
+  "generated_at": "2026-08-07T19:04:41Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -69,7 +69,7 @@
       }
     },
     "maintenance": {
-      "admitted": 0,
+      "admitted": 1,
       "declined_observations": 0,
       "expired_observations": 1
     },
@@ -104,14 +104,14 @@
   "stats": {
     "done": 116,
     "total": 140,
-    "active": 9,
+    "active": 10,
     "queued": 0,
     "paused": 9,
-    "backlog": 6
+    "backlog": 5
   },
   "operational": {
     "last_session_date": "2026-08-07T06:41:06Z",
-    "minutes_since_session": 371,
+    "minutes_since_session": 743,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -139,6 +139,15 @@
       "expected_delivery_date": "2026-08-14",
       "contract": {
         "stop_line": "The voice-guide gate is CLEARED (ratified 2026-07-22), so Phase 2 copy may be drafted. Every public claim still clears the Public Voice review gate and publication remains CEO-reserved (Public Voice \u00a7E) \u2014 draft freely, publish nothing. The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Do not write fit-proof copy at all until there is delivered, consented work to describe \u2014 a fabricated version of that passage was produced and withdrawn during Phase 1.5. Do not ship any page without the review gate and consent clearance on every cited case."
+      }
+    },
+    {
+      "id": "INI-126",
+      "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
+      "status": "active",
+      "contract": {
+        "route": "CEO-first",
+        "stop_line": "Phase 1 is a foundation-build + governance gate \u2014 no later phase proceeds until this initiative has itself built the engine-as-service and composable-input-layer requirements (no longer inherited from INI-124), a local mutable scenario record type + write path is in place under a scoped PCR-FIN-003 amendment, the local export path is verified, and the Security Steward has reviewed the local write/export path. Phase 2 UI work additionally waits on the CEO's front-end-approach decision (see `ceo_action`) before it starts, since that decision shapes what Phase 2 is building against."
       }
     },
     {
@@ -250,8 +259,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-07T07:35:01Z",
-      "invocations_30d": 33
+      "last_active": "2026-08-07T18:59:17Z",
+      "invocations_30d": 34
     },
     {
       "name": "operations-director",
@@ -430,15 +439,6 @@
     ],
     "infrastructure": [
       {
-        "id": "INI-126",
-        "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as\u2026",
-        "contract": {
-          "route": "CEO-first",
-          "stop_line": "Phase 1 is a foundation-build + governance gate \u2014 no later phase proceeds until this initiative has itself built the engine-as-service and composable-input-layer requirements (no longer inherited from INI-124), a local mutable scenario record type + write path is in place under a scoped PCR-FIN-003 amendment, the local export path is verified, and the Security Steward has reviewed the local write/export path. Phase 2 UI work additionally waits on the CEO's front-end-approach decision (see `ceo_action`) before it starts, since that decision shapes what Phase 2 is building against."
-        }
-      },
-      {
         "id": "INI-133",
         "name": "Host-Native Airlock Pipeline \u2014 wire the Gmail read runner into fetch \u2192 classify \u2192 manifest \u2192 route (Channel 1)",
         "notes": "CEO-directed 2026-07-06 at INI-127 close. INI-127 delivered the portable FETCH step (host-native read runner + ingestion sandbox) but deliberately stopped short of the full pipeline; a standalone\u2026",
@@ -485,6 +485,18 @@
         ]
       },
       {
+        "name": "Governance Tooling & Checker Reliability",
+        "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
+        "items": [
+          {
+            "id": "PCR-OPS-077",
+            "type": "PCR",
+            "description": "Group portfolio initiatives into lightweight \"Programs\" \u2014 the same organizing paradigm PCR-OPS-074\u2026",
+            "action": "ceo"
+          }
+        ]
+      },
+      {
         "name": "Financial Analysis",
         "description": "Track the Financial Analysis Director's periodic financial-state analysis, reporting, and tooling work (INI-103, operational since 2026-06-26).",
         "items": [
@@ -515,7 +527,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-07T12:53:05.512804+00:00"
+    "generated_at": "2026-08-07T19:04:41.874145+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -528,6 +540,48 @@
       "type": "missing_class_field",
       "field": "dependency claim",
       "file": "governance/pcrs/open/PCR-FIN-005-local-scenario-derived-state.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "estimated build effort",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "estimated carrying cost",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "expected production gain",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "payback horizon",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "payback result",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "decision cycle",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "invalid_payback",
+      "field": "payback_result",
+      "file": "governance/pcrs/open/PCR-OPS-077-group-initiatives-into-programs.md",
       "category": "pcr-open"
     },
     {
@@ -825,7 +879,7 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 1,
+    "open_pcrs": 2,
     "open_gaps": 2,
     "open_rems": 1
   }
