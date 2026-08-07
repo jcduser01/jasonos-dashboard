@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T03:58:50Z",
+  "generated_at": "2026-08-07T04:23:48Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -103,15 +103,15 @@
   },
   "stats": {
     "done": 116,
-    "total": 141,
+    "total": 140,
     "active": 8,
     "queued": 1,
     "paused": 9,
-    "backlog": 7
+    "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-08-06T04:13:00Z",
-    "minutes_since_session": 1425,
+    "minutes_since_session": 1450,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -431,25 +431,12 @@
     ],
     "infrastructure": [
       {
-        "id": "INI-124",
-        "name": "CFO Cockpit Client-Server Phase \u2014 HYOK-Encrypted Hosting + shadcn/ui Front-End Rebuild",
-        "notes": "BACKLOG 2026-07-04 (CEO+PA architecture/security thread, resolved same day as INI-123's closing note). Realizes the Phase D carve-out INI-123 explicitly deferred: interactivity + write-back\u2026",
-        "contract": {
-          "route": "CEO-first",
-          "runner_scope": "Phase 2 (front-end rebuild) only \u2014 stand up the Next.js + shadcn/ui app and port the cockpit home view and all nine INI-123 read-only detail views to the new shell, reading the same v2 JSON contract INI-123 reads against static/local contract files (no server, no write path, no encryption yet). DoD is shadcn/Next.js parity with INI-123's shipped shell, coverage-honesty caveats carried over, no fabricated data. This is the first application of the PCR-ENG-014 governed front-end default.",
-          "stop_line": "Phase 1 is a hard governance gate before any write path exists \u2014 the PCR-FIN-003 amendment (cloud-hosted encrypted mutable derived state + HYOK + write mutation surface) is CEO-approval-gated, and a Security Steward review of the full path (Vercel/DB/Clerk/tunnel/key-custody) must clear before Phases 4/5. Halt after Phase 2; do not build auth-gated data access, HYOK encryption, or write-back without the PCR amendment enacted and the Steward review recorded."
-        }
-      },
-      {
         "id": "INI-126",
         "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
         "notes": "BACKLOG 2026-07-04 (CEO+PA inception, immediately after the Planning-Mode requirements definition pass). The interactive scenario capability INI-123 stubbed as '(coming soon)' and carved out as\u2026",
         "contract": {
           "route": "CEO-first",
-          "stop_line": "Phase 1 is a hard foundation gate \u2014 no phase proceeds until INI-124 has delivered the six foundation requirements (engine-as-service, session-scoped decrypt, scenario record type + write path, mini-side export, data-topology invariant, composable input layer) and the Security Steward has reviewed the Planning-Mode compute/solver/export path. The first actionable step is therefore blocked on the unmet INI-124 dependency; there is no runner-buildable slice ahead of it. Post-unblock, the first buildable slice is Phase 2 (forward modeling + scenario persistence over the composable input layer).",
-          "depends_on": [
-            "INI-124"
-          ]
+          "stop_line": "Phase 1 is a foundation-build + governance gate \u2014 no later phase proceeds until this initiative has itself built the engine-as-service and composable-input-layer requirements (no longer inherited from INI-124), a local mutable scenario record type + write path is in place under a scoped PCR-FIN-003 amendment, the local export path is verified, and the Security Steward has reviewed the local write/export path. Phase 2 UI work additionally waits on the CEO's front-end-approach decision (see `ceo_action`) before it starts, since that decision shapes what Phase 2 is building against."
         }
       },
       {
@@ -511,7 +498,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-07T03:58:50.280669+00:00"
+    "generated_at": "2026-08-07T04:23:48.149719+00:00"
   },
   "contract_quality_gaps": [
     {
