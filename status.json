@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T17:55:06Z",
+  "generated_at": "2026-08-08T21:55:12Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-07T19:53:42Z",
-    "minutes_since_session": 1321,
+    "minutes_since_session": 1561,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -273,7 +273,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-08-08T07:43:11Z",
-      "invocations_30d": 52
+      "invocations_30d": 51
     },
     {
       "name": "knowledge-director",
@@ -285,7 +285,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-27T13:12:56Z",
-      "invocations_30d": 21
+      "invocations_30d": 19
     },
     {
       "name": "research-director",
@@ -564,7 +564,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-08T17:55:06.084807+00:00"
+    "generated_at": "2026-08-08T21:55:12.139703+00:00"
   },
   "contract_quality_gaps": [
     {
