@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T09:54:50Z",
+  "generated_at": "2026-08-08T11:54:56Z",
   "schema_version": "7",
   "generator_version": "3.5",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-07T19:53:42Z",
-    "minutes_since_session": 841,
+    "minutes_since_session": 961,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -564,7 +564,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-08T09:54:50.580516+00:00"
+    "generated_at": "2026-08-08T11:54:56.383102+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -739,10 +739,10 @@
       "id": "OBS-GAP-FOLDER-STATUS-DRIFT-18-FILES",
       "summary": "check-gap-folder-status-agreement.py --check reports 18 pre-existing GAP/PCR folder/Status disagreements in the live corpus (e.g. GAP-211 sits in resolved/ with its header **Status:** line still reading Open) -- the checker is wired live as report-triage step 2j and evidently has not been cleared against the historical corpus since it went live, or these predate it. Not admitted as work: the checker itself is functioning (this run demonstrates it), no live incident, and GAP-215/GAP-216's own closures were written to set Status: Resolved correctly rather than repeat the pattern. Worth a future sweep to bulk-correct the 18 stale Status lines so report-triage step 2j stops (or starts, if not already) surfacing them.",
       "source": "GAP-215 closure verification, 2026-07-30 (President Agent, incidental finding while confirming GAP-215's own resolved/ closure would pass this checker)",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-08-29",
       "project": "Process & Surface Governance",
-      "occurrences": 8
+      "occurrences": 9
     },
     {
       "id": "OBS-COWORK-SCHEDULED-TASK-SYNC-GATE-OR-LAUNCHD-MIGRATION",
@@ -756,10 +756,10 @@
       "id": "OBS-CHECKER-DEPLOY-LAG-DEAD-PATH-DRIFT",
       "summary": "The deployed copy /Volumes/SandboxData/bin/check-dead-path-drift.py is one change behind canonical operations/bin/check-dead-path-drift.py: canonical drained four baseline entries on 2026-07-31 (OBS-DEAD-PATH-BASELINE-DRAINABLE, dispositioned addressed) but the jasonos-deploy-sync staging step was never run, so the deployed checker still carries the stale baseline. Same shape as OBS-DASHBOARD-DEPLOY-LAG: a canonical fix lands with no discipline forcing the deploy-sync that makes it live. Under-reports rather than false-clears; low severity, but the pattern is now twice-observed.",
       "source": "report-triage 2026-08-01 step 2b (check-script-registry-coverage.py deployed-copy freshness)",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-08-31",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 7
+      "occurrences": 8
     },
     {
       "id": "OBS-SCHEDULED-TASK-LOG-APPEND-MISSED",
@@ -774,19 +774,19 @@
       "id": "OBS-GENERATED-INDEX-DRIFT-2026-08-01",
       "summary": "Both generated work-item indexes drift from their folders: gap ## Open table differs from INDEX.md (GAP-220, filed 2026-07-31, is not spliced in), and pcr ## Index is missing PCR-GOV-009. Resolved/Declined sections agree exactly (205 and 12 IDs). Ordinary generated-index drift, no named delivery blocked.",
       "source": "report-triage 2026-08-01 step 2g (jasonos-work-item-index-generator.py --type gap/pcr --check)",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-08-31",
       "project": "Process & Surface Governance",
-      "occurrences": 7
+      "occurrences": 8
     },
     {
       "id": "OBS-KB-INBOX-AGING-2026-08-02",
       "summary": "check-kb-completeness.py Facet A FAILs again: 1 of 23 inbox items is past the 48h SLA and unresolved in the index Inbox Status table \u2014 AIRLOCK-2026-07-31-001-instagram-reel-safe-zone, aged 2.5d in knowledge/jasonos-vault/inbox. Facets B1 (56 index->disk links) and B2 (declared structure vs disk) both clean. Filed under a new id because the prior OBS-KB-INBOX-AGING reached terminal status 'addressed' on 2026-07-31 (all 6 then-aged items triaged) and record-observation.py correctly refuses to reopen a terminal row. GAP-221 (2026-08-03) registered 'Knowledge Vault Operations' in operations/project-registry.md and fixed the write/read validation asymmetry that made setting this field unsafe; project now set retroactively.",
       "source": "report-triage 2026-08-02 step 2b (check-kb-completeness.py Facet A)",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-01",
       "project": "Knowledge Vault Operations",
-      "occurrences": 6
+      "occurrences": 7
     },
     {
       "id": "OBS-FINANCIAL-RETENTION-LOG-MISSING-2026-07-31-ENTRY",
@@ -800,46 +800,46 @@
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
       "summary": "New: check-doctrine-artifact-currency.py exits 1 for brand 'jason-cook-design' \u2014 4 artifacts in knowledge/clients/jason-cook-design carry no doctrine_reconciled: marker against the 2026-07-16 ratified-doctrine baseline: ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. The checker last read exit 0 on 2026-07-19, so these post-date that ratification and were authored without the stamp rather than having gone stale. Each needs one of reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "report-triage 2026-08-03 step 2b (check-doctrine-artifact-currency.py, PCR-KNOW-005)",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-02",
       "project": "Process & Surface Governance",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "id": "OBS-DOCTRINE-CURRENCY-RATIFIED-REGEX-OVERMATCHES",
       "summary": "check-doctrine-artifact-currency.py derives its ratification baseline with _RATIFIED_LINE = re.compile('ratified', re.IGNORECASE) plus the FIRST ISO date on any matching line, across every .md under the brand's doctrine dir. On 2026-08-03 22:39 (jason-cook-design-management 63ffab8) a prose line was added to engagement-models/common/01-governing-principles.md: 'Convention established 2026-07-31 (see DEC-JCD-006 Amendments). Amendments clarify or extend without re-opening ratified substance...'. That line is ABOUT ratification, it does not record one \u2014 but it matches, so the baseline jumped 2026-07-16 -> 2026-07-31 and 12 correctly-stamped artifacts flipped to candidates overnight. Candidate list went 4 -> 17; 12 of the 17 are false. Direction of failure is safe (over-flags, never under-flags) but the signal is now unreadable: real new drift is buried in phantom entries, and anyone acting on the list would re-stamp 12 files that need nothing. The genuine finding is the 5 unstamped files tracked as OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3; no live control failed and no named delivery is blocked.",
       "source": "check-doctrine-artifact-currency.py latest_ratification(), 2026-08-04 report-triage sweep",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "id": "OBS-DEAD-PATH-REGROWTH-2-NEW-PINS-INI149",
       "summary": "The GAP-065 regrowth guard fired for the first time in this sweep series: governed=437 baselined=40 NEW=2. Two files added by INI-149 (ops repo d73763a4, 2026-08-04 02:53) carry a sole hardcoded mount root and are not in the baseline allowlist: operations/bin/venture-engine/console_app.py and operations/bin/venture-engine/vengine/calibration/_dispositions.py. The guard worked exactly as designed \u2014 it fails closed on NEW pins so the 40-file legacy debt cannot quietly grow \u2014 so this is regrowth detected, not a control failure. Disposition is either fix the two pins to use the mount-resolving path helper or consciously baseline them as more venture-engine legacy debt. Not admitted as work: ordinary repository/path drift is observation-only under protocol v2.3; no incident, no live control failing, no named delivery blocked.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), 2026-08-04 report-triage sweep",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "id": "OBS-CONTRACT-CONFORMANCE-RETIRED-FIELD-MESSAGE-INVERTED",
       "summary": "The checker's retired_batch_field defect prints the OPPOSITE of the condition it detected. Detection (line 203) is 'retired = sorted(field for field in _RETIRED_FIELDS if field in fields)' \u2014 it fires because a retired batch field IS PRESENT. The renderer (line 636) prints \"no '<field>' field at all\". Live this run: portfolio/open/INI-149.md was flagged twice, reading 'no route field at all' and 'no runner scope field at all', while the file in fact carries BOTH 'route: Operational' and 'runner_scope: ...' \u2014 which is precisely why it was flagged. Anyone reading the output at face value would add the two fields the contract wants removed, making conformance worse while believing they fixed it. The underlying finding is real and small: INI-149 (pulled into Current and built 2026-08-04) was authored with two retired pre-Tranche-2 batch fields. 10 items scanned, this is the only one. Not admitted as work: contract conformance is observation-only under protocol v2.3 (step 2c explicitly retires automatic REM creation for it).",
       "source": "check-work-item-contract-conformance.py, 2026-08-04 report-triage sweep",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "id": "OBS-CONTRACT-CONFORMANCE-NO-WORK-CLASS-FALLS-TO-LEGACY-CONTRACT",
       "summary": "In a single run the checker demanded the SAME fields it calls retired. portfolio/open/INI-145.md was flagged missing_field 'route', missing_scope 'runner_scope', missing_field 'stop_line'; portfolio/open/INI-149.md was flagged retired_batch_field for 'route' and 'runner scope'. Root cause is a silent fall-through, not two contracts: _production_model_defects() returns None when frontmatter has no work_class key, dropping the item into the legacy pre-Tranche-2 path that REQUIRES those three fields, while any item that does carry work_class goes down the production-model path where the same fields are in _RETIRED_FIELDS. INI-145 has no work_class (verified: zero matches in the file); INI-149 has work_class: delivery. So the real defect on INI-145 is the missing work_class field, and the three reported defects are downstream noise \u2014 acting on them literally would add three retired fields to a Current initiative. 11 items scanned, 5 issues, both affected items are Current. Not admitted as work: contract conformance is observation-only under protocol v2.3 step 2c.",
       "source": "check-work-item-contract-conformance.py, 2026-08-05 report-triage sweep",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-04",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "id": "OBS-AIRLOCK-ROOT-LOOSE-FILE-OUTSIDE-RESERVED-TRANSIT-RULE",
@@ -853,10 +853,10 @@
       "id": "OBS-GOVERNANCE-REVIEW-DATES-LAPSED-11-DOCS",
       "summary": "Eleven governance documents carry a stated Review date of 2026-07-31, which lapsed five days ago with no review recorded and nothing in the sweep's detector battery watching for it. The cohort is the entire capability-policy layer plus the security policy: capabilities/research-operations.md, creative-production.md, venture-operations.md, security-audit.md, financial-analysis.md, software-development.md, president-coordination.md, knowledge-management.md, airlock-operations.md, external-communication-drafting.md, and policies/security-policy.md. Twelve other governance docs carry future review dates and are fine. No existing checker covers this: check-doctrine-artifact-currency.py only reads client-brand doctrine under knowledge/clients/, not governance frontmatter, so this class of lapse is invisible to every daily and weekly check the org runs. Not admitted as work: ordinary doctrine currency drift under protocol v2.3, no live control has failed and no delivery is blocked \u2014 filed so the lapse is watchable and countable rather than rediscovered.",
       "source": "Full-state scan of Governance repo Review date: frontmatter, 2026-08-05 report-triage sweep",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-04",
       "project": "Process & Surface Governance",
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "id": "OBS-DASHBOARD-GENERATED-AT-IS-NOT-A-HEARTBEAT",
@@ -894,9 +894,10 @@
       "id": "OBS-HANDOFF-INBOX-MALFORMED-FILES-STRANDED-SILENTLY",
       "summary": "Two session-handoff inbox files are stranded and their content is absent from the canonical continuity artifact, with no surface reporting it. Logs/handoffs/inbox/ still holds 2026-08-06T17-59-07Z-session.md (17.1h old) and 2026-08-07T04-08-35Z-session.md (7.0h old) after the 09:00:04Z compactor run, which archived five other entries normally. Reproduced at source by importing jasonos-handoff-compactor.py and calling parse_inbox() on both files: each raises MalformedInboxFileError -- both begin directly with '**Date:**' and carry none of the recognized top-level markers (## Entry / ## CEO Actions New / ## CEO Actions Completed / ## CEO Actions Replace / ## Current Initiative), where a well-formed file (e.g. the archived 2026-08-07T04-45-08Z entry) opens with '## Entry'. The compactor's v1.9 REM-114 fix behaves exactly as designed -- it refuses to archive a file it cannot parse rather than silently orphaning it -- so this is NOT a broken guardrail. What is missing is any surfacing of the refusal: the only signal is a Mac-side /tmp/jasonos-handoff-compactor-stderr.log that nothing reads, and grep confirms neither timestamp appears anywhere in Logs/session-handoff.md or Logs/handoffs/archive/. Consequence: two real President Agent sessions -- the 08-06 full-autonomy GAP-225/226/229 batch and the 08-07 CFO-cockpit three-round correction run -- are invisible to any agent reading the handoff for continuity. The writer-side format contract has no enforcement and the reader-side refusal has no alarm. Detected only because report-triage Step 2k cross-checks session-handoff.md mtime against aged inbox entries.",
       "source": "jasonos-report-triage 2026-08-07T11:05Z",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-08",
       "expires_on": "2026-09-06",
-      "project": "Process & Surface Governance"
+      "project": "Process & Surface Governance",
+      "occurrences": 2
     },
     {
       "id": "OBS-GOVERNANCE-REPO-STALE-INDEX-LOCK-STRANDED",
@@ -913,6 +914,14 @@
       "observed_at": "2026-08-07",
       "expires_on": "2026-09-06",
       "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-MAINTENANCE-PCR-FILED-WITH-NO-PAYBACK-CASE",
+      "summary": "PCR-OPS-077 (group portfolio initiatives into Programs, filed 2026-08-07, status Draft) carries work_class: maintenance_investment and production_or_maintenance: maintenance, but contains none of the five payback fields that class requires - expected production gain, payback horizon, estimated build effort, estimated carrying cost, payback result - plus no decision cycle. Verified at source, not just from the checker: a grep for 'payback', 'production gain', 'carrying cost', 'build effort' and 'decision cycle' across all 111 lines of the file returns zero hits, so the case is absent in prose too, not merely unfielded. This is the exact evidence the report-triage admission rule's fourth path (maintenance investment) is built on - a maintenance PCR with no payback case cannot consume a maintenance decision, because there is nothing to weigh. Mitigating and why this stays observation-only: the PCR is explicitly 'proposal only ... filed for review now and will be executed at a time of the CEO's choosing', so nothing is being admitted on it today, and contract conformance is observation-only under protocol v2.3 step 2c. Not admitted as work.",
+      "source": "jasonos-report-triage 2026-08-08T11:05Z step 2c (check-work-item-contract-conformance.py)",
+      "observed_at": "2026-08-08",
+      "expires_on": "2026-09-07",
+      "project": "Process & Surface Governance"
     }
   ],
   "work_item_counts": {
