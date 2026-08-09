@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-09T18:03:56Z",
-  "schema_version": "7",
-  "generator_version": "3.5",
+  "generated_at": "2026-08-09T18:30:26Z",
+  "schema_version": "8",
+  "generator_version": "3.6",
   "production": {
     "period": {
       "start": "2026-08-03",
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 20,
+      "guardrail_repairs": 21,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-07T19:53:42Z",
-    "minutes_since_session": 2770,
+    "minutes_since_session": 2796,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -571,9 +571,224 @@
             "action": "agent"
           }
         ]
+      },
+      {
+        "name": "Governance Behavioral Guardrails",
+        "description": null,
+        "items": [
+          {
+            "id": "GAP-240",
+            "type": "GAP",
+            "description": "No universal \"cannot execute mandatory check = halt and report\" rule; agents self-authorize\u2026",
+            "action": "ceo"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-08-09T18:03:56.752907+00:00"
+    "generated_at": "2026-08-09T18:30:26.211379+00:00"
+  },
+  "programs": {
+    "groups": [
+      {
+        "name": "Dyson Hope Reels",
+        "description": "The Dyson Hope Reels production system: competitive-pattern research, the Higgsfield atmospheric-asset pipeline and hybrid visual routing, the weekly batch-production rhythm (including the selectable external-writing-lane enablement for the drafting stage), own-account performance capture and analysis, the interview-driven idea-backlog development skill, and the V2 performance-to-planning decision loop.",
+        "items": [
+          {
+            "id": "INI-139",
+            "name": "Selectable External Writing Lane \u2014 Enablement, Scoped Egress Exception & Routing",
+            "status": "Backlog"
+          },
+          {
+            "id": "INI-141",
+            "name": "Dyson Hope Reels \u2014 Bounded Apify Competitive-Pattern Research",
+            "status": "Current"
+          },
+          {
+            "id": "INI-142",
+            "name": "Dyson Hope Reels \u2014 Higgsfield Atmospheric-Asset Pipeline & Hybrid Visual Routing",
+            "status": "Current"
+          },
+          {
+            "id": "INI-143",
+            "name": "Dyson Hope Reels \u2014 Batch Production Operations (Weekly Rhythm)",
+            "status": "Current"
+          },
+          {
+            "id": "INI-144",
+            "name": "Dyson Hope Reels \u2014 Own-Account Performance Capture + Weekly Analysis",
+            "status": "Current"
+          },
+          {
+            "id": "INI-145",
+            "name": "Dyson Hope Idea Backlog Development \u2014 Interview-Driven Sketch-to-Brief Skill (Upstream of INI-140)",
+            "status": "Current"
+          },
+          {
+            "id": "INI-150",
+            "name": "Dyson Hope Reels V2 \u2014 Performance-to-Planning Decision Loop",
+            "status": "Current"
+          }
+        ]
+      },
+      {
+        "name": "Venture Opportunity Engine",
+        "description": "A continuously-running discovery and filtering engine that polls external demand sources (sam.gov first), scores every opportunity against a governed model, autonomously disposes of the bulk under hard guardrails, and surfaces only high-value opportunities for CEO attention \u2014 plus the deep-eval request lifecycle that tracks every \"pull attachments\" request through to a visible outcome, so nothing silently vanishes.",
+        "items": [
+          {
+            "id": "INI-111",
+            "name": "Venture Opportunity Engine",
+            "status": "Current"
+          },
+          {
+            "id": "INI-151",
+            "name": "Venture Opportunity Engine \u2014 Deep-Eval Request Lifecycle & Outcome Surfacing",
+            "status": "Current"
+          }
+        ]
+      },
+      {
+        "name": "CFO Cockpit",
+        "description": "The CEO's financial-planning application. Currently building Planning Mode: define a financial scenario, see its modeled effect, and either discard it or turn it into a decision-queue entry plus a President Agent handoff brief \u2014 the cockpit stages and presents, it never authors the plan itself.",
+        "items": [
+          {
+            "id": "INI-126",
+            "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
+            "status": "Current"
+          }
+        ]
+      },
+      {
+        "name": "JCD Website",
+        "description": "Rebuild JasonCookDesign.com from a UX/product-delivery portfolio site into the public expression of JCD's practice \u2014 positioned as organizational architecture with AI as one building material \u2014 with a generalized value-ladder commercial front door.",
+        "items": [
+          {
+            "id": "INI-114",
+            "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
+            "status": "Current"
+          }
+        ]
+      },
+      {
+        "name": "JCD Client Portal",
+        "description": "A staged, JCD-owned Client Portal / Engagement Operating System: canonical-Markdown source to generated deliverables, a living-artifact workspace, feedback mapping, contracts/approvals, Stripe-integrated billing, a progress/value ledger, and the internal back office that runs it all \u2014 a competitive differentiator and possible future licensable product. Kept separate from JCD Website despite sharing presentation-layer code and a domain: the two programs have different build lifecycles (CEO, 2026-08-09).",
+        "items": [
+          {
+            "id": "INI-135",
+            "name": "Jason Cook Design \u2014 Client Portal / Engagement Operating System",
+            "status": "Backlog"
+          }
+        ]
+      },
+      {
+        "name": "SIGIL.ZERO Artifacts",
+        "description": "Design, launch, and sustain SIGIL.ZERO's physical artifact/apparel line true to the label's artifact doctrine: the initial Foundational artifact set, the Artifacts catalog web experience (a gallery/archive, explicitly not a \"Shop\"), and a break-even \u2014 not revenue-maximizing \u2014 launch strategy.",
+        "items": [
+          {
+            "id": "INI-053",
+            "name": "SIGIL.ZERO \u2014 Apparel / Artifact Line (Launch Strategy)",
+            "status": "Paused"
+          },
+          {
+            "id": "INI-055",
+            "name": "SIGIL.ZERO \u2014 Artifacts Web Experience",
+            "status": "Backlog"
+          },
+          {
+            "id": "INI-056",
+            "name": "SIGIL.ZERO \u2014 Initial Artifact Set (Design)",
+            "status": "Backlog"
+          }
+        ]
+      },
+      {
+        "name": "Ray Graystone - What Remains of the Story",
+        "description": "Write and publish the assembled-artifact novel *What Remains of the Story* under the Ray Graystone pen name: the chapter map and dossier architecture, the two-voice (present-day / *Cerime*) calibration pass, and \u2014 once a draft exists \u2014 the publication-route and positioning decision.",
+        "items": [
+          {
+            "id": "INI-072",
+            "name": "Ray Graystone \u2014 Chapter Map & Dossier Architecture",
+            "status": "Paused"
+          },
+          {
+            "id": "INI-073",
+            "name": "Ray Graystone \u2014 Voice & Register Pass",
+            "status": "Paused"
+          },
+          {
+            "id": "INI-074",
+            "name": "Ray Graystone \u2014 Publication Path",
+            "status": "Paused"
+          }
+        ]
+      },
+      {
+        "name": "Dish n' BEATS - Brand Design System",
+        "description": "A complete, CEO-approved canonical design system for the Dish n' BEATS property within the Dyson Hope creative family, implemented in the codebase and maintainable by future director sessions without CEO execution.",
+        "items": [
+          {
+            "id": "INI-043",
+            "name": "Dish n' BEATS \u2014 Brand Design System",
+            "status": "Paused"
+          }
+        ]
+      },
+      {
+        "name": "Sandbox Laboratory",
+        "description": "A general-purpose R&D program for technical experimentation the trusted environment can't or shouldn't host directly \u2014 permissive, contained sandbox environments (governed by a dedicated egress airlock and Security Steward review) for untrustworthy tools, agent experiments, and CEO vibe-coding sessions. Not limited to any one technology by design (CEO, 2026-08-09) \u2014 its first instance, INI-063, happens to be Docker-based.",
+        "items": [
+          {
+            "id": "INI-063",
+            "name": "Sandbox Laboratory \u2014 Docker Experimental Environment with Egress Airlock",
+            "status": "Paused"
+          }
+        ]
+      },
+      {
+        "name": "Airlock Capabilities",
+        "description": "Any build work on JasonOS's Airlock system \u2014 starting with the host-native pipeline that carries each inbound channel off its Cowork-hosted scheduled task (Channel 1/Gmail, currently Backlog; Channel 2/Google Drive interactive, CEO-deferred, a confirmed real sibling per `operations/connector-portability-register.md`) \u2014 open to whatever other airlock-specific capability work comes up, not limited to the host-native migration.",
+        "items": [
+          {
+            "id": "INI-133",
+            "name": "Host-Native Airlock Pipeline \u2014 wire the Gmail read runner into fetch \u2192 classify \u2192 manifest \u2192 route (Channel 1)",
+            "status": "Backlog"
+          }
+        ]
+      },
+      {
+        "name": "Distributed Compute Capabilities",
+        "description": "Everything having to do with creating distributed computation capabilities for JasonOS \u2014 currently, the capability-abstraction/routing layer that makes compute resources interchangeable (work routed by what it requires, not which machine exists), with the Mac mini sufficient today and clean expansion room for a second node later.",
+        "items": [
+          {
+            "id": "INI-011",
+            "name": "Distributed Compute Architecture",
+            "status": "Paused"
+          }
+        ]
+      },
+      {
+        "name": "Knowledge Base Capabilities",
+        "description": "Capability-building work for JasonOS's own knowledge base \u2014 currently, QMD-based hybrid BM25 + vector + LLM-re-ranked search over the vault (replacing manual `index.md` navigation at scale), gated on the vault reaching ~50 articles or retrieval visibly degrading.",
+        "items": [
+          {
+            "id": "INI-039",
+            "name": "QMD Local Search Integration",
+            "status": "Paused"
+          }
+        ]
+      },
+      {
+        "name": "LatW Digital Org Engagement",
+        "description": "Love All the Way's private, owner-comprehensible, AI-assisted digital organization build \u2014 the first genuinely external, arm's-length client engagement: a dedicated home appliance, encrypted remote access, a private-calendar/booking architecture, encrypted backups, and an owner-enablement track, under a hard constraint that cloud AI never sees her client data or business strategy.",
+        "items": [
+          {
+            "id": "INI-136",
+            "name": "Love All the Way \u2014 Digital Organization Build (first external engagement)",
+            "status": "Paused"
+          }
+        ]
+      }
+    ],
+    "generated_at": "2026-08-09T18:30:26.211477+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -818,7 +1033,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 2,
-    "open_gaps": 6,
+    "open_gaps": 7,
     "open_rems": 1
   }
 }
