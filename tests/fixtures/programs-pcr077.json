@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-08-09T12:00:00Z",
+  "schema_version": "8",
+  "generator_version": "3.6",
+  "production": {
+    "headline": {
+      "delivered": 2,
+      "recipients": 2,
+      "next": "INI-114",
+      "blocker_count": 0,
+      "maintenance_attention_share": null,
+      "maintenance_attention_label": "Unavailable",
+      "delivery_status": "productive",
+      "summary": "Delivered this period: 2 artifacts to 2 recipients"
+    },
+    "delivery": {
+      "rolling_four_period_counts": [0, 1, 1, 2],
+      "next": {"id": "INI-114", "label": "INI-114", "expected_delivery_date": "2026-08-30"},
+      "blockers": []
+    },
+    "effort": {
+      "production_ratio": {"status": "unavailable"},
+      "attention": {"status": "unavailable"},
+      "tokens": {"status": "unavailable"}
+    },
+    "maintenance": {"admitted": 1, "declined_observations": 2, "expired_observations": 1},
+    "escape_hatches": {"delivery_dependencies": 1, "guardrail_repairs": 0, "maintenance_cap_overrides": 0},
+    "mechanisms": {"status": "partial_unverified", "ratified_ceiling": 69, "live_count": null},
+    "projection_contract": {"classification": "public"}
+  },
+  "stats": {"done": 8, "total": 26, "active": 2, "queued": 2, "paused": 3, "backlog": 11},
+  "operational": {"last_session_date": "2026-08-09", "minutes_since_session": 30, "airlock_queue": 0, "airlock_bundles": 0},
+  "active_initiative": {"id": "INI-141", "name": "Dyson Hope Reels — Content Pipeline"},
+  "active_initiatives": [
+    {"id": "INI-141", "name": "Dyson Hope Reels — Content Pipeline", "status": "active"},
+    {"id": "INI-114", "name": "JCD Website Rebuild", "status": "active"}
+  ],
+  "queue": [
+    {"id": "INI-111", "name": "Venture Opportunity Engine — Scoring", "status": "queued", "position": 1},
+    {"id": "INI-151", "name": "Venture Deep Eval Lifecycle", "status": "queued", "position": 2}
+  ],
+  "ceo_actions": [],
+  "status_drift": [],
+  "category_drift": [],
+  "contract_drift": [],
+  "directors": [],
+  "paused": {"client_work": [], "infrastructure": []},
+  "backlog": {
+    "client_work": [{"id": "INI-135", "name": "JCD Client Portal"}],
+    "infrastructure": [{"id": "INI-039", "name": "Knowledge Base Search"}, {"id": "INI-011", "name": "Distributed Compute Layer"}]
+  },
+  "batch_queue": [],
+  "projects": {
+    "groups": [
+      {
+        "name": "Governance Tooling & Checker Reliability",
+        "description": "Automated conformance checkers and dashboard tooling.",
+        "items": [
+          {"id": "PCR-OPS-077", "type": "PCR", "description": "Group portfolio initiatives into Programs", "action": "agent"}
+        ]
+      }
+    ],
+    "generated_at": "2026-08-09T12:00:00Z"
+  },
+  "programs": {
+    "groups": [
+      {
+        "name": "Dyson Hope Reels",
+        "description": "The Dyson Hope Reels production system: competitive-pattern research, the Higgsfield atmospheric-asset pipeline and hybrid visual routing, the weekly batch-production rhythm.",
+        "items": [
+          {"id": "INI-139", "name": "Dyson Hope Reels — Brand Design System", "status": "Backlog"},
+          {"id": "INI-141", "name": "Dyson Hope Reels — Content Pipeline", "status": "Current"},
+          {"id": "INI-142", "name": "Dyson Hope Reels — Higgsfield Pipeline", "status": "Current"},
+          {"id": "INI-143", "name": "Dyson Hope Reels — Batch Production Rhythm", "status": "Next"},
+          {"id": "INI-144", "name": "Dyson Hope Reels — Performance Capture", "status": "Paused"},
+          {"id": "INI-145", "name": "Dyson Hope Reels — Interview Idea Backlog", "status": "Backlog"},
+          {"id": "INI-150", "name": "Dyson Hope Reels — V2 Decision Loop", "status": "Backlog"}
+        ]
+      },
+      {
+        "name": "Venture Opportunity Engine",
+        "description": "A continuously-running discovery and filtering engine that polls external demand sources.",
+        "items": [
+          {"id": "INI-111", "name": "Venture Opportunity Engine — Scoring", "status": "Next"},
+          {"id": "INI-151", "name": "Venture Deep Eval Lifecycle", "status": "Next"}
+        ]
+      },
+      {
+        "name": "JCD Website",
+        "description": "Rebuild JasonCookDesign.com as the public expression of JCD's practice.",
+        "items": [
+          {"id": "INI-114", "name": "JCD Website Rebuild", "status": "Current"}
+        ]
+      },
+      {
+        "name": "Knowledge Base Capabilities",
+        "description": "Capability-building work for JasonOS's own knowledge base.",
+        "items": [
+          {"id": "INI-039", "name": "Knowledge Base Hybrid Search", "status": "Backlog"}
+        ]
+      }
+    ],
+    "generated_at": "2026-08-09T12:00:00Z"
+  },
+  "contract_quality_gaps": [],
+  "pending_notes": [],
+  "work_item_counts": {"open_pcrs": 1, "open_gaps": 0, "open_rems": 0}
+}

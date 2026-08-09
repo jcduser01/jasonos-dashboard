@@ -308,6 +308,45 @@
   .proj-desc-line { font-size: 0.74rem; color: var(--text-dim); padding-left: 1px; }
   .proj-empty { font-size: 0.9rem; color: var(--text-muted); }
 
+  /* ── Programs board (PCR-OPS-077) — groupby(program:) over initiatives.
+     One card per program with grid layout mirroring the Projects board.
+     Status vocabulary: Current/Next/Paused/Backlog (initiative-status,
+     not the ticket-class CEO/Agent action badge per GAP-104). ── */
+  #programs-panel .panel-label { color: var(--accent); }
+  #programs-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-flow: row;
+    gap: 12px;
+  }
+  .prog-group {
+    background: var(--surface-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .prog-name { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+  .prog-count { font-weight: 700; opacity: 0.6; margin-left: 4px; color: var(--text-dim); }
+  .prog-desc  { font-size: 0.76rem; color: var(--text-dim); margin: 3px 0 8px; }
+  .prog-item { display: flex; flex-direction: column; gap: 1px; padding: 4px 0; border-top: 1px solid var(--border-soft); font-size: 0.82rem; }
+  .prog-item:first-of-type { border-top: none; }
+  .prog-item-row { display: flex; align-items: baseline; gap: 8px; }
+  .prog-id {
+    font-weight: 700; color: var(--text-muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .prog-ini-name { color: var(--text-dim); font-size: 0.8rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .prog-badge {
+    font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; border-radius: 3px; padding: 0 5px; line-height: 1.5;
+    margin-left: auto; white-space: nowrap;
+  }
+  .prog-badge-current { background: rgba(76, 175, 125, 0.15);  color: var(--success); }
+  .prog-badge-next    { background: rgba(100, 149, 237, 0.15); color: #6495ed; }
+  .prog-badge-paused  { background: rgba(128, 128, 128, 0.15); color: var(--text-muted); }
+  .prog-badge-backlog { background: rgba(128, 128, 128, 0.10); color: var(--text-dim); }
+  .prog-empty { font-size: 0.9rem; color: var(--text-muted); }
+
   /* ── Contract Quality (standalone conformance badge, PCR-OPS-074 §4) ── */
   #contract-quality-panel .panel-label { color: var(--text-dim); }
   .cq-item { display: flex; flex-direction: column; gap: 1px; padding: 3px 0; font-size: 0.8rem; }
@@ -636,6 +675,15 @@
     <div id="projects-panel" class="panel">
       <div class="panel-label">Projects</div>
       <div id="projects-body"></div>
+    </div>
+
+    <!-- Programs — groupby(program:) over initiatives (PCR-OPS-077): one card
+         per program, member initiatives showing id/title/status badge.
+         Sits alongside Current/Next/Paused/Backlog, same relationship Projects
+         has to CEO Actions. Empty groups → empty board, not a hidden panel. -->
+    <div id="programs-panel" class="panel">
+      <div class="panel-label">Programs</div>
+      <div id="programs-body"></div>
     </div>
 
     <!-- Lower zone, organized by work type: column 1 = Next;
@@ -1165,6 +1213,53 @@
     body.innerHTML = html;
   }
 
+  /* Programs (PCR-OPS-077) — groupby(program:) over the already-loaded
+     initiatives list (sourced server-side from read_programs()). One card per
+     program (registry description + member initiatives). Member status badge
+     vocabulary: Current / Next / Paused / Backlog — the initiative's own status
+     vocabulary, NOT the ticket-class CEO/Agent action badge (GAP-104 boundary).
+     Grid layout mirrors the Projects board. "groups": [] renders as an empty
+     board, not a hidden panel — same contract renderProjects implements. */
+  function renderPrograms(programs) {
+    var panel = document.getElementById("programs-panel");
+    var body  = document.getElementById("programs-body");
+    if (!panel || !body) return;
+    var groups = (programs && programs.groups) || [];
+    if (groups.length === 0) {
+      body.innerHTML = '<span class="prog-empty">No programs</span>';
+      return;
+    }
+    var html = "";
+    for (var g = 0; g < groups.length; g++) {
+      var grp   = groups[g];
+      var items = grp.items || [];
+      html += '<div class="prog-group">'
+            + '<div class="prog-name">' + escHtml(grp.name || "")
+            + '<span class="prog-count">' + items.length + '</span></div>';
+      if (grp.description) {
+        html += '<div class="prog-desc">' + escHtml(grp.description) + '</div>';
+      }
+      for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        var st = (it.status || "").toLowerCase();
+        var badgeCls = st === "current" ? "prog-badge-current"
+                     : st === "next"    ? "prog-badge-next"
+                     : st === "paused"  ? "prog-badge-paused"
+                     :                    "prog-badge-backlog";
+        var badgeTxt = it.status || st;
+        html += '<div class="prog-item">'
+              + '<div class="prog-item-row">'
+              +   '<span class="prog-id">'       + escHtml(it.id   || "") + '</span>'
+              +   '<span class="prog-ini-name">' + escHtml(it.name || "") + '</span>'
+              +   '<span class="prog-badge ' + badgeCls + '">' + escHtml(badgeTxt) + '</span>'
+              + '</div>'
+              + '</div>';
+      }
+      html += '</div>';
+    }
+    body.innerHTML = html;
+  }
+
   /* Contract Quality (PCR-OPS-074 §4) — standalone conformance badge, reusing
      check-work-item-contract-conformance.py's own defect shapes server-side.
      Independent of Projects: a ticket missing project: shows up here even
@@ -1295,6 +1390,7 @@
     renderProduction(data.production);
     renderCeoActions(data.ceo_actions);
     renderProjects(data.projects);
+    renderPrograms(data.programs);
     renderOpsStrip(data.stats, data.operational);
     renderActive(data.active_initiative, data.active_initiatives);
     renderQueue(data.queue);
