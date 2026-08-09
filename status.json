@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T20:37:06Z",
+  "generated_at": "2026-08-09T23:37:40Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 21,
+      "guardrail_repairs": 18,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -110,8 +110,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-09T18:39:18Z",
-    "minutes_since_session": 117,
+    "last_session_date": "2026-08-09T22:52:47Z",
+    "minutes_since_session": 44,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -483,18 +483,6 @@
   "projects": {
     "groups": [
       {
-        "name": "Git Relay Commit-Path Hardening",
-        "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
-        "items": [
-          {
-            "id": "GAP-239",
-            "type": "GAP",
-            "description": "source-control-policy.md Rule 1 (relay-only) has no technical enforcement on Mac-native Claude\u2026",
-            "action": "ceo"
-          }
-        ]
-      },
-      {
         "name": "Dyson Hope Blog-Drip Publishing Pipeline",
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
@@ -514,18 +502,6 @@
             "id": "GAP-234",
             "type": "GAP",
             "description": "check-work-item-contract-conformance.py's project: guardrail doesn't hard-fail a bare INI-NNN\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
-        "name": "INI-145 Dyson Hope Idea Backlog Development \u2014 Skill Tooling & Guardrails",
-        "description": "Give the Creative Director subagent (or a designated Bash-capable agent) the tooling to run INI-145's Step 5 CSV-commit procedure per its Steward-reviewed spec, and keep `SKILL.md`'s own instructions accurate to what actually executes.",
-        "items": [
-          {
-            "id": "GAP-233",
-            "type": "GAP",
-            "description": "INI-145's Creative Director subagent cannot execute its own skill's Step 5 commit procedure (no\u2026",
             "action": "agent"
           }
         ]
@@ -557,12 +533,6 @@
             "type": "GAP",
             "description": "Dispatcher's timeout fallback path is a bare SIGKILL with no flush grace period, making\u2026",
             "action": "agent"
-          },
-          {
-            "id": "GAP-238",
-            "type": "GAP",
-            "description": "Dispatcher timeout ceiling isn't framed as caller-facing pre-flight decision guidance; override\u2026",
-            "action": "agent"
           }
         ]
       },
@@ -571,15 +541,15 @@
         "description": null,
         "items": [
           {
-            "id": "GAP-240",
+            "id": "GAP-241",
             "type": "GAP",
-            "description": "No universal \"cannot execute mandatory check = halt and report\" rule; agents self-authorize\u2026",
-            "action": "ceo"
+            "description": "global-CLAUDE.md's session-start read instruction is unconditional and was still silently skipped\u2026",
+            "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-08-09T20:37:06.758512+00:00"
+    "generated_at": "2026-08-09T23:37:40.932009+00:00"
   },
   "programs": {
     "groups": [
@@ -782,7 +752,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-09T20:37:06.758613+00:00"
+    "generated_at": "2026-08-09T23:37:40.932130+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1027,7 +997,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 1,
-    "open_gaps": 7,
+    "open_gaps": 4,
     "open_rems": 1
   }
 }
