@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T00:14:32Z",
+  "generated_at": "2026-08-10T00:14:44Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -528,21 +528,9 @@
             "action": "agent"
           }
         ]
-      },
-      {
-        "name": "Dyson Hope Reel Production",
-        "description": null,
-        "items": [
-          {
-            "id": "GAP-242",
-            "type": "GAP",
-            "description": "Observation engine emits dict-shaped entities, crashing reel_producer S1 on every open",
-            "action": "agent"
-          }
-        ]
       }
     ],
-    "generated_at": "2026-08-10T00:14:32.687242+00:00"
+    "generated_at": "2026-08-10T00:14:44.141012+00:00"
   },
   "programs": {
     "groups": [
@@ -745,17 +733,9 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T00:14:32.687354+00:00"
+    "generated_at": "2026-08-10T00:14:44.141113+00:00"
   },
-  "contract_quality_gaps": [
-    {
-      "type": "invalid_work_class",
-      "field": "work_class",
-      "value": "bug_fix",
-      "file": "governance/gaps/open/GAP-242-observation-engine-emits-dict-entities-crashing-reel-producer-s1.md",
-      "category": "gap-open"
-    }
-  ],
+  "contract_quality_gaps": [],
   "pending_notes": [
     {
       "id": "OBS-GAP-170",
@@ -998,7 +978,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 1,
-    "open_gaps": 4,
+    "open_gaps": 3,
     "open_rems": 1
   }
 }
