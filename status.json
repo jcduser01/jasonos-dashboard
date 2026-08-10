@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T08:31:33Z",
+  "generated_at": "2026-08-10T10:31:38Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -110,8 +110,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-10T01:51:06Z",
-    "minutes_since_session": 400,
+    "last_session_date": "2026-08-10T04:30:33Z",
+    "minutes_since_session": 361,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -258,8 +258,32 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Decide whether to file a GAP for the commit_via_relay.py --push true \u2192 silently-recorded push=false anomaly",
-      "context": "concrete before/after evidence in this entry and the cited .result file; root cause not yet identified (client source re"
+      "label": "Disposition of 48f6d6a5",
+      "context": "(proposals/ini152-reel-production-pipeline-skill-design-spec.md on jasonos-operations main) \u2014 landed unintentionally dur"
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Consider whether shared-working-tree data loss (see entry above) warrants its own GAP",
+      "context": "not filed tonight given session length, but the risk is now demonstrated, not theoretical."
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Decide disposition of a confirmed-redundant git stash",
+      "context": "in jasonos-operations (stash@{0}, \"pre-GAP-245 commit stash\") \u2014 every piece of its content was independently verified al"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "Decide whether dyson-hope-reel-pipeline (worked as \"INI-152\" this session) should get a formal portfolio/INI-152.md",
+      "context": "it shipped as a real, deployed, canonical skill (design spec at proposals/ini152-reel-production-pipeline-skill-design-s"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "DH-REEL-0010 resumption",
+      "context": "script stage complete, sitting at the angle-approval gate; next real step is Stage 4 (Visual-beat decomposition), which "
     }
   ],
   "status_drift": [],
@@ -299,8 +323,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-08-10T07:53:51Z",
-      "invocations_30d": 21
+      "last_active": "2026-08-10T09:13:54Z",
+      "invocations_30d": 22
     },
     {
       "name": "venture-director",
@@ -579,7 +603,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T08:31:33.441158+00:00"
+    "generated_at": "2026-08-10T10:31:38.010140+00:00"
   },
   "programs": {
     "groups": [
@@ -782,7 +806,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T08:31:33.441272+00:00"
+    "generated_at": "2026-08-10T10:31:38.010236+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
