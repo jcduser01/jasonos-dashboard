@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T00:20:30Z",
+  "generated_at": "2026-08-10T01:23:19Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 17,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -110,8 +110,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-10T00:19:52Z",
-    "minutes_since_session": 0,
+    "last_session_date": "2026-08-10T01:08:26Z",
+    "minutes_since_session": 14,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -262,8 +262,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-10T00:17:48Z",
-      "invocations_30d": 39
+      "last_active": "2026-08-10T00:34:45Z",
+      "invocations_30d": 41
     },
     {
       "name": "operations-director",
@@ -516,21 +516,9 @@
             "action": "agent"
           }
         ]
-      },
-      {
-        "name": "Agent Dispatcher Reliability",
-        "description": "Harden the agent dispatcher's process-lifecycle mechanics (timeout handling, kill signaling, invocation-log fidelity) so the org's diagnostic tooling can trust it.",
-        "items": [
-          {
-            "id": "GAP-237",
-            "type": "GAP",
-            "description": "Dispatcher's timeout fallback path is a bare SIGKILL with no flush grace period, making\u2026",
-            "action": "agent"
-          }
-        ]
       }
     ],
-    "generated_at": "2026-08-10T00:20:30.471553+00:00"
+    "generated_at": "2026-08-10T01:23:19.750662+00:00"
   },
   "programs": {
     "groups": [
@@ -733,7 +721,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T00:20:30.471664+00:00"
+    "generated_at": "2026-08-10T01:23:19.750770+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -978,7 +966,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 1,
-    "open_gaps": 3,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
