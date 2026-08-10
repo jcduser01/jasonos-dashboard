@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T02:42:13Z",
+  "generated_at": "2026-08-10T04:11:25Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 20,
+      "guardrail_repairs": 22,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-10T01:51:06Z",
-    "minutes_since_session": 51,
+    "minutes_since_session": 140,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -487,9 +487,21 @@
         "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
         "items": [
           {
-            "id": "GAP-245",
+            "id": "GAP-252",
             "type": "GAP",
-            "description": "commit_via_relay.py --push true produced a trigger the relay recorded and processed as push=false\u2026",
+            "description": "relay_enqueue() (the async default path) has no equivalent to relay_commit()'s GAP-245\u2026",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-253",
+            "type": "GAP",
+            "description": "Does GAP-245's push-mismatch RelayError correctly fire when a push interlock silently skips the\u2026",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-254",
+            "type": "GAP",
+            "description": "Four relay-worker (jasonos-git-relay.sh) shell test suites carry pre-existing, unrelated failures\u2026",
             "action": "agent"
           }
         ]
@@ -567,7 +579,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T02:42:13.178943+00:00"
+    "generated_at": "2026-08-10T04:11:25.431720+00:00"
   },
   "programs": {
     "groups": [
@@ -770,7 +782,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T02:42:13.179051+00:00"
+    "generated_at": "2026-08-10T04:11:25.431831+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -927,7 +939,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 7,
+    "open_gaps": 9,
     "open_rems": 1
   }
 }
