@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T10:31:38Z",
+  "generated_at": "2026-08-10T12:31:44Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-10T04:30:33Z",
-    "minutes_since_session": 361,
+    "minutes_since_session": 481,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -603,7 +603,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T10:31:38.010140+00:00"
+    "generated_at": "2026-08-10T12:31:44.529681+00:00"
   },
   "programs": {
     "groups": [
@@ -806,7 +806,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T10:31:38.010236+00:00"
+    "generated_at": "2026-08-10T12:31:44.529780+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -862,19 +862,19 @@
       "id": "OBS-SCHEDULED-TASK-LOG-APPEND-MISSED",
       "summary": "Two scheduled tasks completed without their mandated log append, leaving the run outcome unverifiable from the log channel alone. (1) jasonos-airlock-monitor: scheduler lastRunAt 2026-08-01T06:30:57Z, but no 2026-08-01 entry in Logs/director-logs/operations/operations-log.md and no new Logs/airlock-manifests/ file (latest is 2026-07-31-002). (2) jasonos-engineering-backup 2026-07-31: runner audit shows upload_success at 07:33:18Z with a Drive file id, but the engineering log has no 07-31 entry \u2014 self-reported by the 08-01 run and deliberately not backfilled. In both cases the underlying work appears to have run; what failed is the evidence write, which is what report triage reads. cannot_verify, not clean.",
       "source": "report-triage 2026-08-01 step 2i (scheduled-task existence-vs-outcome verification)",
-      "observed_at": "2026-08-03",
+      "observed_at": "2026-08-10",
       "expires_on": "2026-08-31",
       "project": "Backup & Scheduled-Task Reliability",
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "id": "OBS-KB-INBOX-AGING-2026-08-02",
       "summary": "check-kb-completeness.py Facet A FAILs again: 1 of 23 inbox items is past the 48h SLA and unresolved in the index Inbox Status table \u2014 AIRLOCK-2026-07-31-001-instagram-reel-safe-zone, aged 2.5d in knowledge/jasonos-vault/inbox. Facets B1 (56 index->disk links) and B2 (declared structure vs disk) both clean. Filed under a new id because the prior OBS-KB-INBOX-AGING reached terminal status 'addressed' on 2026-07-31 (all 6 then-aged items triaged) and record-observation.py correctly refuses to reopen a terminal row. GAP-221 (2026-08-03) registered 'Knowledge Vault Operations' in operations/project-registry.md and fixed the write/read validation asymmetry that made setting this field unsafe; project now set retroactively.",
       "source": "report-triage 2026-08-02 step 2b (check-kb-completeness.py Facet A)",
-      "observed_at": "2026-08-09",
+      "observed_at": "2026-08-10",
       "expires_on": "2026-09-01",
       "project": "Knowledge Vault Operations",
-      "occurrences": 8
+      "occurrences": 9
     },
     {
       "id": "OBS-FINANCIAL-RETENTION-LOG-MISSING-2026-07-31-ENTRY",
@@ -888,19 +888,19 @@
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
       "summary": "New: check-doctrine-artifact-currency.py exits 1 for brand 'jason-cook-design' \u2014 4 artifacts in knowledge/clients/jason-cook-design carry no doctrine_reconciled: marker against the 2026-07-16 ratified-doctrine baseline: ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. The checker last read exit 0 on 2026-07-19, so these post-date that ratification and were authored without the stamp rather than having gone stale. Each needs one of reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "report-triage 2026-08-03 step 2b (check-doctrine-artifact-currency.py, PCR-KNOW-005)",
-      "observed_at": "2026-08-09",
+      "observed_at": "2026-08-10",
       "expires_on": "2026-09-02",
       "project": "Process & Surface Governance",
-      "occurrences": 7
+      "occurrences": 8
     },
     {
       "id": "OBS-DEAD-PATH-REGROWTH-2-NEW-PINS-INI149",
       "summary": "The GAP-065 regrowth guard fired for the first time in this sweep series: governed=437 baselined=40 NEW=2. Two files added by INI-149 (ops repo d73763a4, 2026-08-04 02:53) carry a sole hardcoded mount root and are not in the baseline allowlist: operations/bin/venture-engine/console_app.py and operations/bin/venture-engine/vengine/calibration/_dispositions.py. The guard worked exactly as designed \u2014 it fails closed on NEW pins so the 40-file legacy debt cannot quietly grow \u2014 so this is regrowth detected, not a control failure. Disposition is either fix the two pins to use the mount-resolving path helper or consciously baseline them as more venture-engine legacy debt. Not admitted as work: ordinary repository/path drift is observation-only under protocol v2.3; no incident, no live control failing, no named delivery blocked.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), 2026-08-04 report-triage sweep",
-      "observed_at": "2026-08-09",
+      "observed_at": "2026-08-10",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 6
+      "occurrences": 7
     },
     {
       "id": "OBS-AIRLOCK-ROOT-LOOSE-FILE-OUTSIDE-RESERVED-TRANSIT-RULE",
@@ -914,10 +914,10 @@
       "id": "OBS-GOVERNANCE-REVIEW-DATES-LAPSED-11-DOCS",
       "summary": "Eleven governance documents carry a stated Review date of 2026-07-31, which lapsed five days ago with no review recorded and nothing in the sweep's detector battery watching for it. The cohort is the entire capability-policy layer plus the security policy: capabilities/research-operations.md, creative-production.md, venture-operations.md, security-audit.md, financial-analysis.md, software-development.md, president-coordination.md, knowledge-management.md, airlock-operations.md, external-communication-drafting.md, and policies/security-policy.md. Twelve other governance docs carry future review dates and are fine. No existing checker covers this: check-doctrine-artifact-currency.py only reads client-brand doctrine under knowledge/clients/, not governance frontmatter, so this class of lapse is invisible to every daily and weekly check the org runs. Not admitted as work: ordinary doctrine currency drift under protocol v2.3, no live control has failed and no delivery is blocked \u2014 filed so the lapse is watchable and countable rather than rediscovered.",
       "source": "Full-state scan of Governance repo Review date: frontmatter, 2026-08-05 report-triage sweep",
-      "observed_at": "2026-08-09",
+      "observed_at": "2026-08-10",
       "expires_on": "2026-09-04",
       "project": "Process & Surface Governance",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "id": "OBS-DASHBOARD-GENERATED-AT-IS-NOT-A-HEARTBEAT",
@@ -959,6 +959,22 @@
       "observed_at": "2026-08-08",
       "expires_on": "2026-09-07",
       "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-GAP245-RELAY-PUSH-MISMATCH-GUARD-ABSENT-FROM-DEPLOYED-COPIES",
+      "summary": "GAP-245 was closed Resolved on 2026-08-10, but neither deployed copy of commit_via_relay.py carries its fix. Canonical operations/bin/commit_via_relay.py contains both GAP-245 changes (atomic tmp+rename probe write; RelayError on push-directive mismatch). SandboxData/bin/commit_via_relay.py and ~/bin/commit_via_relay.py are byte-identical to each other, dated 2026-08-04, and differ from canonical by exactly the 40 lines implementing those two fixes. Consequence: any caller resolving commit_via_relay.py by bare name via PATH still gets the pre-fix client that reports status=success when an authorised push did not happen. Mitigating evidence: the three executable command lines in the production assets (jasonos-operations-backup, jasonos-financial-state-backup) use the absolute canonical path, and today's financial-state-backup run is logged invoking that path \u2014 so no live caller was verified hitting the stale copy this run. Not admitted as work: drift verified, but no failure evidence of a live control, per admission rule path 2. check-dead-path-drift.py shows the same deploy lag (already tracked as OBS-CHECKER-DEPLOY-LAG-DEAD-PATH-DRIFT).",
+      "source": "report-triage 2026-08-10 step 2b check-script-registry-coverage.py (exit 0 with DEFECT block); byte-diff verified",
+      "observed_at": "2026-08-10",
+      "expires_on": "2026-09-09",
+      "project": "Git Relay Commit-Path Hardening"
+    },
+    {
+      "id": "OBS-STEWARD-2026-08-10-F1-UNATTRIBUTED-MSMTP-BURST",
+      "summary": "Steward F1 (Medium, preserved verdict): 91 successful msmtp sends on 2026-08-09, all from=jcduser01@gmail.com to=jasoncookdesign@gmail.com, mailsize=787, in seven bursts of exactly 13 \u2014 91x the one-send daily baseline, with no director log recording any outbound email that day. Recipient allowlist held (CEO address only), so this is an attribution/volume gap, not a send-authority breach. Sweep re-verified the count at source (91 on 08-09, 0 on 08-10 so far) and independently RULED OUT the Steward's leading hypothesis: bin/jasonos-governance-compare.sh and ~/bin/jasonos-governance-compare.sh are byte-identical to canonical, so a deployed/canonical divergence does not explain the sends. Origin still unidentified. Not admitted as work: no named live control has observably failed (the gap is that no send-rate or send-attribution control exists), and the finding is 4h old with an accountable route already open (Steward routed F1 to the President Agent). 48h pending-security disposition clock starts 2026-08-10T07:11Z.",
+      "source": "Security Steward weekly compliance review 2026-08-10 F1 (Medium); independently re-verified at source this sweep",
+      "observed_at": "2026-08-10",
+      "expires_on": "2026-09-09",
+      "project": "Security Steward Audit-Trail Hygiene"
     }
   ],
   "work_item_counts": {
