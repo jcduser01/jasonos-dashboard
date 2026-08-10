@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T01:49:36Z",
+  "generated_at": "2026-08-10T01:59:04Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -110,8 +110,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-10T01:28:00Z",
-    "minutes_since_session": 21,
+    "last_session_date": "2026-08-10T01:51:06Z",
+    "minutes_since_session": 7,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -254,7 +254,14 @@
     }
   ],
   "queue": [],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Decide whether to file a GAP for the commit_via_relay.py --push true \u2192 silently-recorded push=false anomaly",
+      "context": "concrete before/after evidence in this entry and the cited .result file; root cause not yet identified (client source re"
+    }
+  ],
   "status_drift": [],
   "category_drift": [],
   "contract_drift": [],
@@ -262,8 +269,8 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-10T00:34:45Z",
-      "invocations_30d": 41
+      "last_active": "2026-08-10T01:52:45Z",
+      "invocations_30d": 42
     },
     {
       "name": "operations-director",
@@ -476,6 +483,18 @@
   "projects": {
     "groups": [
       {
+        "name": "Git Relay Commit-Path Hardening",
+        "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
+        "items": [
+          {
+            "id": "GAP-245",
+            "type": "GAP",
+            "description": "commit_via_relay.py --push true produced a trigger the relay recorded and processed as push=false\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
         "name": "Dyson Hope Blog-Drip Publishing Pipeline",
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
@@ -506,7 +525,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T01:49:36.535005+00:00"
+    "generated_at": "2026-08-10T01:59:04.462098+00:00"
   },
   "programs": {
     "groups": [
@@ -709,7 +728,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T01:49:36.535105+00:00"
+    "generated_at": "2026-08-10T01:59:04.462215+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -954,7 +973,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 1,
-    "open_gaps": 1,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
