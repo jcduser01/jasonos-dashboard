@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T08:00:54Z",
+  "generated_at": "2026-08-16T08:32:44Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -69,8 +69,8 @@
       "expired_observations": 1
     },
     "escape_hatches": {
-      "delivery_dependencies": 3,
-      "guardrail_repairs": 25,
+      "delivery_dependencies": 2,
+      "guardrail_repairs": 26,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -105,8 +105,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-16T08:00:25Z",
-    "minutes_since_session": 0,
+    "last_session_date": "2026-08-16T08:03:19Z",
+    "minutes_since_session": 29,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -593,19 +593,19 @@
         ]
       },
       {
-        "name": "INI-153 Fiction Development System V1 Engine & Ray Graystone Author Project \u2014 Governance Carve-Out",
+        "name": "INI-144 Reel Metrics Capture",
         "description": null,
         "items": [
           {
-            "id": "PCR-SEC-014",
-            "type": "PCR",
-            "description": "Direct-Git Carve-Out for Fiction Development System Repositories",
+            "id": "GAP-259",
+            "type": "GAP",
+            "description": "INI-144 capture daemon silent 5-day outage with no escalation path reaching the CEO; token-type\u2026",
             "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-08-16T08:00:54.128896+00:00"
+    "generated_at": "2026-08-16T08:32:44.830574+00:00"
   },
   "programs": {
     "groups": [
@@ -813,7 +813,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T08:00:54.129014+00:00"
+    "generated_at": "2026-08-16T08:32:44.830674+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -838,6 +838,54 @@
       "type": "retired_batch_field",
       "field": "runner scope",
       "file": "governance/gaps/open/GAP-256-ceo-reserved-items-lack-dispatch-visible-authoritative-register.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "execution scope",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "stop-line",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "depends on",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "definition of done",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "gates",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "guardrail",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "failure evidence",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "detected at",
+      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
       "category": "gap-open"
     }
   ],
@@ -1071,8 +1119,8 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 1,
-    "open_gaps": 12,
+    "open_pcrs": 0,
+    "open_gaps": 13,
     "open_rems": 1
   }
 }
