@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T13:10:02Z",
+  "generated_at": "2026-08-16T15:10:06Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-16T08:38:16Z",
-    "minutes_since_session": 271,
+    "minutes_since_session": 391,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -303,7 +303,7 @@
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
       "last_active": "2026-08-16T07:54:05Z",
-      "invocations_30d": 26
+      "invocations_30d": 25
     },
     {
       "name": "venture-director",
@@ -630,7 +630,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T13:10:02.279244+00:00"
+    "generated_at": "2026-08-16T15:10:06.864822+00:00"
   },
   "programs": {
     "groups": [
@@ -838,7 +838,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T13:10:02.279351+00:00"
+    "generated_at": "2026-08-16T15:10:06.864937+00:00"
   },
   "contract_quality_gaps": [
     {
