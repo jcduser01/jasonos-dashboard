@@ -1,35 +1,30 @@
 {
-  "generated_at": "2026-08-10T12:31:44Z",
+  "generated_at": "2026-08-16T07:56:52Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-08-04",
-      "end": "2026-08-10"
+      "start": "2026-08-10",
+      "end": "2026-08-16"
     },
     "headline": {
-      "delivered": 1,
-      "recipients": 1,
+      "delivered": 0,
+      "recipients": 0,
       "next": "INI-114",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
-      "delivery_status": "productive",
-      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "delivery_status": "no_delivery",
+      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
-      "artifacts": [
-        {
-          "id": "INI-149",
-          "completed": "2026-08-06"
-        }
-      ],
-      "recipients": 1,
+      "artifacts": [],
+      "recipients": 0,
       "rolling_four_period_counts": [
         0,
         0,
-        0,
-        1
+        2,
+        0
       ],
       "next": {
         "id": "INI-114",
@@ -38,22 +33,22 @@
       },
       "blockers": [],
       "throughput_floor": {
-        "status": "met",
+        "status": "missed",
         "floor": 1,
         "reporting_period_days": 7,
         "evaluation_window_days": 7,
-        "delivered": 1,
-        "explicit_zero_delivery": false
+        "delivered": 0,
+        "explicit_zero_delivery": true
       },
       "source_contract_defects": []
     },
     "effort": {
       "production_ratio": {
-        "status": "unavailable",
+        "status": "degraded_unquantified",
         "value": null,
-        "numerator": 1,
+        "numerator": 0,
         "denominator": null,
-        "limitation": "CEO-attention denominator is unavailable."
+        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -74,8 +69,8 @@
       "expired_observations": 1
     },
     "escape_hatches": {
-      "delivery_dependencies": 2,
-      "guardrail_repairs": 22,
+      "delivery_dependencies": 3,
+      "guardrail_repairs": 25,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -102,16 +97,16 @@
     }
   },
   "stats": {
-    "done": 116,
-    "total": 140,
-    "active": 10,
+    "done": 117,
+    "total": 142,
+    "active": 11,
     "queued": 0,
     "paused": 9,
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-10T04:30:33Z",
-    "minutes_since_session": 481,
+    "last_session_date": "2026-08-10T22:54:43Z",
+    "minutes_since_session": 7742,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -251,6 +246,14 @@
           "INI-149"
         ]
       }
+    },
+    {
+      "id": "INI-153",
+      "name": "Fiction Development System V1 \u2014 Engine & Ray Graystone Author Project",
+      "status": "active",
+      "contract": {
+        "stop_line": "No FDS product-behavior implementation before the Stage 2 architecture gate (independent Engineering review + Security Steward pass) clears and RED evidence is on record in the Build Record. No canonical push, merge-staged, or enactment of PCR-SEC-014 without explicit CEO approval (and Security Steward review for the git-relay-bypass carve-out itself). No Docker installs, upgrades, reconfiguration, or building of the combined Postgres/AGE/pgvector image without separate explicit CEO authorization. No population of the `ray-graystone-fds` author project or implementation in either target repo beyond the authorized first ticket's scaffold/contracts/tests."
+      }
     }
   ],
   "queue": [],
@@ -258,32 +261,20 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Disposition of 48f6d6a5",
-      "context": "(proposals/ini152-reel-production-pipeline-skill-design-spec.md on jasonos-operations main) \u2014 landed unintentionally dur"
+      "label": "DH-REEL-0010 resumption",
+      "context": "script stage complete, sitting at the angle-approval gate; next real step is Stage 4 (Visual-beat decomposition), which "
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Consider whether shared-working-tree data loss (see entry above) warrants its own GAP",
-      "context": "not filed tonight given session length, but the risk is now demonstrated, not theoretical."
+      "label": "DH-REEL-0010 Stage 4 (Visual-beat decomposition)",
+      "context": "script is now CEO-approved and record-ready. No packaged skill exists for this stage yet (INI-142's visual-routing tooli"
     },
     {
       "id": "ACT-HO-3",
-      "category": "required",
-      "label": "Decide disposition of a confirmed-redundant git stash",
-      "context": "in jasonos-operations (stash@{0}, \"pre-GAP-245 commit stash\") \u2014 every piece of its content was independently verified al"
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "Decide whether dyson-hope-reel-pipeline (worked as \"INI-152\" this session) should get a formal portfolio/INI-152.md",
-      "context": "it shipped as a real, deployed, canonical skill (design spec at proposals/ini152-reel-production-pipeline-skill-design-s"
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "DH-REEL-0010 resumption",
-      "context": "script stage complete, sitting at the angle-approval gate; next real step is Stage 4 (Visual-beat decomposition), which "
+      "category": "confirm",
+      "label": "Confirm whether Tullberg's book date range (\"1996 to 2002\") also needs correcting",
+      "context": "the CEO corrected Dyson's own Dune 4 attendance year to 1998 this session; the book's separately-stated overall document"
     }
   ],
   "status_drift": [],
@@ -293,20 +284,20 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-10T07:34:05Z",
-      "invocations_30d": 43
+      "last_active": "2026-08-16T07:34:12Z",
+      "invocations_30d": 41
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-08-10T07:43:26Z",
-      "invocations_30d": 53
+      "last_active": "2026-08-16T07:43:20Z",
+      "invocations_30d": 56
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-08-10T07:36:27Z",
-      "invocations_30d": 13
+      "last_active": "2026-08-16T07:38:26Z",
+      "invocations_30d": 19
     },
     {
       "name": "security-steward",
@@ -323,8 +314,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-08-10T09:13:54Z",
-      "invocations_30d": 22
+      "last_active": "2026-08-16T07:54:05Z",
+      "invocations_30d": 26
     },
     {
       "name": "venture-director",
@@ -575,6 +566,24 @@
             "type": "GAP",
             "description": "Malformed session-handoff inbox files are stranded with no alarm surface",
             "action": "agent"
+          },
+          {
+            "id": "GAP-255",
+            "type": "GAP",
+            "description": "Interactive President Agent terminal sessions are not subject to the worktree-per-session mandate\u2026",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-256",
+            "type": "GAP",
+            "description": "CEO-reserved decision items are not recorded in any dispatch-visible authoritative register",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-258",
+            "type": "GAP",
+            "description": "jasonos-status-generator.py hard-fails on a single malformed portfolio/done/ item, and the\u2026",
+            "action": "agent"
           }
         ]
       },
@@ -595,15 +604,27 @@
         "description": null,
         "items": [
           {
-            "id": "GAP-250",
+            "id": "GAP-257",
             "type": "GAP",
-            "description": "GAP-240's halt-and-report rule did not cover a harness permission-classifier block, and was\u2026",
-            "action": "ceo"
+            "description": "Recurring unattributed msmtp email bursts have never been ticketed, despite six occurrences and an\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
+        "name": "INI-153 Fiction Development System V1 Engine & Ray Graystone Author Project \u2014 Governance Carve-Out",
+        "description": null,
+        "items": [
+          {
+            "id": "PCR-SEC-014",
+            "type": "PCR",
+            "description": "Direct-Git Carve-Out for Fiction Development System Repositories",
+            "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-08-10T12:31:44.529681+00:00"
+    "generated_at": "2026-08-16T07:56:52.344157+00:00"
   },
   "programs": {
     "groups": [
@@ -720,7 +741,7 @@
       },
       {
         "name": "Ray Graystone - What Remains of the Story",
-        "description": "Write and publish the assembled-artifact novel *What Remains of the Story* under the Ray Graystone pen name: the chapter map and dossier architecture, the two-voice (present-day / *Cerime*) calibration pass, and \u2014 once a draft exists \u2014 the publication-route and positioning decision.",
+        "description": "Write and publish the assembled-artifact novel *What Remains of the Story* under the Ray Graystone pen name: the chapter map and dossier architecture, the two-voice (present-day / *Cerime*) calibration pass, once a draft exists the publication-route and positioning decision, and the private Fiction Development System (FDS) engine + author project that gives the work explicit creative authority, narrative-state tracking, and Git-versioned Record history (INI-153).",
         "items": [
           {
             "id": "INI-072",
@@ -736,6 +757,11 @@
             "id": "INI-074",
             "name": "Ray Graystone \u2014 Publication Path",
             "status": "Paused"
+          },
+          {
+            "id": "INI-153",
+            "name": "Fiction Development System V1 \u2014 Engine & Ray Graystone Author Project",
+            "status": "Current"
           }
         ]
       },
@@ -806,9 +832,34 @@
         ]
       }
     ],
-    "generated_at": "2026-08-10T12:31:44.529780+00:00"
+    "generated_at": "2026-08-16T07:56:52.344260+00:00"
   },
-  "contract_quality_gaps": [],
+  "contract_quality_gaps": [
+    {
+      "type": "retired_batch_field",
+      "field": "route",
+      "file": "governance/gaps/open/GAP-255-interactive-president-agent-sessions-lack-worktree-isolation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "runner scope",
+      "file": "governance/gaps/open/GAP-255-interactive-president-agent-sessions-lack-worktree-isolation.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "route",
+      "file": "governance/gaps/open/GAP-256-ceo-reserved-items-lack-dispatch-visible-authoritative-register.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "runner scope",
+      "file": "governance/gaps/open/GAP-256-ceo-reserved-items-lack-dispatch-visible-authoritative-register.md",
+      "category": "gap-open"
+    }
+  ],
   "pending_notes": [
     {
       "id": "OBS-GAP-170",
@@ -862,19 +913,19 @@
       "id": "OBS-SCHEDULED-TASK-LOG-APPEND-MISSED",
       "summary": "Two scheduled tasks completed without their mandated log append, leaving the run outcome unverifiable from the log channel alone. (1) jasonos-airlock-monitor: scheduler lastRunAt 2026-08-01T06:30:57Z, but no 2026-08-01 entry in Logs/director-logs/operations/operations-log.md and no new Logs/airlock-manifests/ file (latest is 2026-07-31-002). (2) jasonos-engineering-backup 2026-07-31: runner audit shows upload_success at 07:33:18Z with a Drive file id, but the engineering log has no 07-31 entry \u2014 self-reported by the 08-01 run and deliberately not backfilled. In both cases the underlying work appears to have run; what failed is the evidence write, which is what report triage reads. cannot_verify, not clean.",
       "source": "report-triage 2026-08-01 step 2i (scheduled-task existence-vs-outcome verification)",
-      "observed_at": "2026-08-10",
+      "observed_at": "2026-08-12",
       "expires_on": "2026-08-31",
       "project": "Backup & Scheduled-Task Reliability",
-      "occurrences": 3
+      "occurrences": 5
     },
     {
       "id": "OBS-KB-INBOX-AGING-2026-08-02",
       "summary": "check-kb-completeness.py Facet A FAILs again: 1 of 23 inbox items is past the 48h SLA and unresolved in the index Inbox Status table \u2014 AIRLOCK-2026-07-31-001-instagram-reel-safe-zone, aged 2.5d in knowledge/jasonos-vault/inbox. Facets B1 (56 index->disk links) and B2 (declared structure vs disk) both clean. Filed under a new id because the prior OBS-KB-INBOX-AGING reached terminal status 'addressed' on 2026-07-31 (all 6 then-aged items triaged) and record-observation.py correctly refuses to reopen a terminal row. GAP-221 (2026-08-03) registered 'Knowledge Vault Operations' in operations/project-registry.md and fixed the write/read validation asymmetry that made setting this field unsafe; project now set retroactively.",
       "source": "report-triage 2026-08-02 step 2b (check-kb-completeness.py Facet A)",
-      "observed_at": "2026-08-10",
+      "observed_at": "2026-08-13",
       "expires_on": "2026-09-01",
       "project": "Knowledge Vault Operations",
-      "occurrences": 9
+      "occurrences": 12
     },
     {
       "id": "OBS-FINANCIAL-RETENTION-LOG-MISSING-2026-07-31-ENTRY",
@@ -888,19 +939,19 @@
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
       "summary": "New: check-doctrine-artifact-currency.py exits 1 for brand 'jason-cook-design' \u2014 4 artifacts in knowledge/clients/jason-cook-design carry no doctrine_reconciled: marker against the 2026-07-16 ratified-doctrine baseline: ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. The checker last read exit 0 on 2026-07-19, so these post-date that ratification and were authored without the stamp rather than having gone stale. Each needs one of reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "report-triage 2026-08-03 step 2b (check-doctrine-artifact-currency.py, PCR-KNOW-005)",
-      "observed_at": "2026-08-10",
+      "observed_at": "2026-08-13",
       "expires_on": "2026-09-02",
       "project": "Process & Surface Governance",
-      "occurrences": 8
+      "occurrences": 11
     },
     {
       "id": "OBS-DEAD-PATH-REGROWTH-2-NEW-PINS-INI149",
       "summary": "The GAP-065 regrowth guard fired for the first time in this sweep series: governed=437 baselined=40 NEW=2. Two files added by INI-149 (ops repo d73763a4, 2026-08-04 02:53) carry a sole hardcoded mount root and are not in the baseline allowlist: operations/bin/venture-engine/console_app.py and operations/bin/venture-engine/vengine/calibration/_dispositions.py. The guard worked exactly as designed \u2014 it fails closed on NEW pins so the 40-file legacy debt cannot quietly grow \u2014 so this is regrowth detected, not a control failure. Disposition is either fix the two pins to use the mount-resolving path helper or consciously baseline them as more venture-engine legacy debt. Not admitted as work: ordinary repository/path drift is observation-only under protocol v2.3; no incident, no live control failing, no named delivery blocked.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), 2026-08-04 report-triage sweep",
-      "observed_at": "2026-08-10",
+      "observed_at": "2026-08-13",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 7
+      "occurrences": 10
     },
     {
       "id": "OBS-AIRLOCK-ROOT-LOOSE-FILE-OUTSIDE-RESERVED-TRANSIT-RULE",
@@ -914,19 +965,19 @@
       "id": "OBS-GOVERNANCE-REVIEW-DATES-LAPSED-11-DOCS",
       "summary": "Eleven governance documents carry a stated Review date of 2026-07-31, which lapsed five days ago with no review recorded and nothing in the sweep's detector battery watching for it. The cohort is the entire capability-policy layer plus the security policy: capabilities/research-operations.md, creative-production.md, venture-operations.md, security-audit.md, financial-analysis.md, software-development.md, president-coordination.md, knowledge-management.md, airlock-operations.md, external-communication-drafting.md, and policies/security-policy.md. Twelve other governance docs carry future review dates and are fine. No existing checker covers this: check-doctrine-artifact-currency.py only reads client-brand doctrine under knowledge/clients/, not governance frontmatter, so this class of lapse is invisible to every daily and weekly check the org runs. Not admitted as work: ordinary doctrine currency drift under protocol v2.3, no live control has failed and no delivery is blocked \u2014 filed so the lapse is watchable and countable rather than rediscovered.",
       "source": "Full-state scan of Governance repo Review date: frontmatter, 2026-08-05 report-triage sweep",
-      "observed_at": "2026-08-10",
+      "observed_at": "2026-08-11",
       "expires_on": "2026-09-04",
       "project": "Process & Surface Governance",
-      "occurrences": 6
+      "occurrences": 7
     },
     {
       "id": "OBS-DASHBOARD-GENERATED-AT-IS-NOT-A-HEARTBEAT",
       "summary": "infrastructure-health-policy.md scores dashboard-publisher liveness off status.json's generated_at against a 2-hour threshold, but generated_at is not a heartbeat: the publisher only rewrites status.json when the projection CHANGES ('status.json: no-diff; trigger skipped'), so on a quiet system the field ages past the threshold while the daemon is demonstrably healthy. Observed live this sweep: publisher last ran 2026-08-06T10:12:37Z (59m ago, clean, both no-diff), yet generated_at reads 2026-08-06T08:12:34Z \u2014 2h59m, which scores a Medium staleness breach if the policy is applied literally. Compounding: the plist's own StartInterval backstop is 7200s = exactly the 2h threshold, so even a changed-projection run has zero jitter headroom. Verified at source: publisher log, status.json mtime (08:12Z), and the matching relay commit 00939ab. Not admitted as work: no live control has failed \u2014 the daemon is running and the projection is current \u2014 and no delivery is blocked. Filed because the false-positive direction is the dangerous one for a liveness check: it trains the reader to discount the signal.",
       "source": "report-triage 2026-08-06 step 2k infrastructure health, verified against Logs/director-logs/engineering/dashboard-publisher.log and the publisher plist",
-      "observed_at": "2026-08-09",
+      "observed_at": "2026-08-11",
       "expires_on": "2026-09-05",
       "project": "Backup & Scheduled-Task Reliability",
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "id": "OBS-SANDBOX-GIT-INVARIANT-OMITS-READ-ONLY-VERBS",
@@ -964,9 +1015,10 @@
       "id": "OBS-GAP245-RELAY-PUSH-MISMATCH-GUARD-ABSENT-FROM-DEPLOYED-COPIES",
       "summary": "GAP-245 was closed Resolved on 2026-08-10, but neither deployed copy of commit_via_relay.py carries its fix. Canonical operations/bin/commit_via_relay.py contains both GAP-245 changes (atomic tmp+rename probe write; RelayError on push-directive mismatch). SandboxData/bin/commit_via_relay.py and ~/bin/commit_via_relay.py are byte-identical to each other, dated 2026-08-04, and differ from canonical by exactly the 40 lines implementing those two fixes. Consequence: any caller resolving commit_via_relay.py by bare name via PATH still gets the pre-fix client that reports status=success when an authorised push did not happen. Mitigating evidence: the three executable command lines in the production assets (jasonos-operations-backup, jasonos-financial-state-backup) use the absolute canonical path, and today's financial-state-backup run is logged invoking that path \u2014 so no live caller was verified hitting the stale copy this run. Not admitted as work: drift verified, but no failure evidence of a live control, per admission rule path 2. check-dead-path-drift.py shows the same deploy lag (already tracked as OBS-CHECKER-DEPLOY-LAG-DEAD-PATH-DRIFT).",
       "source": "report-triage 2026-08-10 step 2b check-script-registry-coverage.py (exit 0 with DEFECT block); byte-diff verified",
-      "observed_at": "2026-08-10",
+      "observed_at": "2026-08-13",
       "expires_on": "2026-09-09",
-      "project": "Git Relay Commit-Path Hardening"
+      "project": "Git Relay Commit-Path Hardening",
+      "occurrences": 4
     },
     {
       "id": "OBS-STEWARD-2026-08-10-F1-UNATTRIBUTED-MSMTP-BURST",
@@ -975,11 +1027,71 @@
       "observed_at": "2026-08-10",
       "expires_on": "2026-09-09",
       "project": "Security Steward Audit-Trail Hygiene"
+    },
+    {
+      "id": "OBS-WORK-ITEM-RESOLUTION-COMPLETENESS-7-EMPTY-CLOSURES",
+      "summary": "New, and a regression on this axis: check-work-item-resolution-completeness.py reports DRIFT \u2014 7 closed work items with an empty or placeholder-only closure record. This checker returned OK as recently as the 2026-08-09 sweep, so the seven arrived with the large 08-09..08-11 closure batch (GAP-218/228/230/231/232/233/239-244/251 all moved to resolved in this window). Observation-only per protocol step 2l; no delivery is blocked and no live control stopped working. Worth a human eye because an empty closure record is how the reason a thing was closed stops being recoverable.",
+      "source": "jasonos-report-triage 2026-08-11 sweep",
+      "observed_at": "2026-08-13",
+      "expires_on": "2026-09-10",
+      "project": "Process & Surface Governance",
+      "occurrences": 3
+    },
+    {
+      "id": "OBS-REPO-PLACEMENT-UNKNOWN-GIT-HOOKS-PATHS",
+      "summary": "New. check-repo-placement.py returns 0 problems but 3 UNKNOWN_IN_GOV entries \u2014 git-hooks/pre-commit, git-hooks/pre-merge-commit, git-hooks/pre-push \u2014 a new top-level path in the governance repo that the checker's partition sets do not classify. Almost certainly the GAP-239 relay-only hooks landing in canonical (deploy live-verified 2026-08-09, 9611339), i.e. legitimate content the classifier has not been taught about. Benign as such, but an unclassified path is a hole in a placement control: anything dropped under git-hooks/ from here on is unpoliced. Fix is a one-line partition-set update, not a ticket.",
+      "source": "jasonos-report-triage 2026-08-11 sweep",
+      "observed_at": "2026-08-12",
+      "expires_on": "2026-09-10",
+      "project": "Process & Surface Governance",
+      "occurrences": 2
+    },
+    {
+      "id": "OBS-STEWARD-AUDIT-INBOX-GAP089-NON-ENTRY-RESIDUE",
+      "summary": "The Security Steward's own 2026-08-10 F4 finding, recorded here so it is visible to the sweep that owns the inbox. GAP089-diff.txt and GAP089-live-evidence.txt have sat in Logs/steward-audit-inbox/ since 2026-07-11 \u2014 31 days \u2014 and are not entry files: no entry_id, no timestamp frontmatter, so the compactor neither merges nor rejects them, it simply steps over them every run. This sweep ran the compactor as designated single writer and merged the two conforming 2026-08-10 cap-rev entries cleanly (active segment 16,282 to 31,652 of 40,000 bytes, 0 pending), which leaves these two as the only inbox residue. The inbox is the Steward's sole write path under GAP-070; unrecognized residue there is an audit-trail question, not cosmetic.",
+      "source": "jasonos-report-triage 2026-08-11 sweep",
+      "observed_at": "2026-08-13",
+      "expires_on": "2026-09-10",
+      "project": "Security Steward Audit-Trail Hygiene",
+      "occurrences": 3
+    },
+    {
+      "id": "OBS-FINANCIAL-STATE-BACKUP-DRIVE-TIMEOUT-FAILED-SILENTLY",
+      "summary": "The daily financial-state Drive mirror (INI-121 / GAP-028; operations/backup-configs/financial-state.yaml via jasonos-drive-backup-runner-run.sh) FAILED on 2026-08-12 and no channel a human reads said so. Evidence: relay result .git-commit-queue/operations/20260812T075247Z-fff748df.result reads status=error, 'non-lane precommand failed (non-zero exit)', timestamp 2026-08-12T07:53:17Z; git-relay.log for that trigger carries the runner's own abort line 'backup aborted: UploadError: PATCH .../drive/v3/files/1fpba1URnt1iUJ-MTz7sMXZX8KhYXxQgu: [Errno 60] Operation timed out'. Consequences verified independently: drive-backup-runner-audit.jsonl has NO Financial-State Store event for 2026-08-12, breaking an unbroken 08-05..08-11 daily mirror_success cadence; financial-analysis-log.md has zero 2026-08-12 entries (last is 2026-08-11); agent-invocation-master.log carries no financial-state-backup task record, only the relay's own relay-precommand-...-fff748df status=failed line, which is shape-identical to the six GAP-258 dashboard-lane precommand failures logged the same day and is therefore camouflaged. The controls that exist behaved correctly - the runner aborted rather than claiming false success, and the relay failed closed - so this is not admitted as work: a single transient Google Drive API timeout is not a control that has observably stopped working, and the mirror is full-copy rather than incremental so the 2026-08-13 run restores coverage with no permanent loss. What has no owner is the alarm: a failed daily business-continuity backup currently produces no escalation, no director-log entry, and no distinguishable signal. NOT ADMITTED AS WORK. A second consecutive failure, or any failure leaving the Drive copy inconsistent, satisfies protocol v2.3 admission path 2 and should be admitted then.",
+      "source": "jasonos-report-triage 2026-08-12 sweep",
+      "observed_at": "2026-08-12",
+      "expires_on": "2026-09-11",
+      "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "OBS-DEPLOYED-CHECKER-COPY-STALER-AND-MORE-PERMISSIVE-THAN-CANONICAL",
+      "summary": "check-script-registry-coverage.py reports a SandboxData/bin deployed-copy divergence for check-dead-path-drift.py that previous sweeps folded into the commit_via_relay.py observation and never named separately. Diffed this run: canonical operations/bin/check-dead-path-drift.py (679 lines, mtime 2026-07-31T14:59:03Z) vs deployed /Volumes/SandboxData/bin/check-dead-path-drift.py (681 lines, mtime 2026-07-28T04:40:09Z). The deployed copy is 12 days STALE and materially MORE PERMISSIVE: it still baselines four entries that canonical drained on 2026-07-31 under OBS-DEAD-PATH-BASELINE-DRAINABLE (jasonos-batch-admitter.py, jasonos-batch-orchestrator.py, tests/test_dispatcher_codex_gap200.py, tests/test_dispatcher_worktree_gap198.py). A checker whose deployed copy suppresses defects the canonical copy reports is the instrument-trust failure shape this sweep has been filing against all month, with the direction that matters: anyone invoking the deployed path gets a quieter answer than the truth. This sweep ran the canonical copy from the repo, so today's 5-new-sole-hardcoded-root result is the canonical verdict. Observation-only per protocol v2.3 (deployed-copy drift is ordinary register drift, nothing is blocked, and no run has been shown to have consumed the stale copy). NOT ADMITTED AS WORK.",
+      "source": "jasonos-report-triage 2026-08-12 sweep",
+      "observed_at": "2026-08-13",
+      "expires_on": "2026-09-11",
+      "project": "Governance Tooling & Checker Reliability",
+      "occurrences": 2
+    },
+    {
+      "id": "OBS-RELAY-LOG-ROTATION-ARCHIVE-NAMED-FOR-WRITE-DATE-NOT-COVERAGE",
+      "summary": "The daily operations backup rotates git-relay.log at ~07:41Z into Archive/Logs/engineering/<D>/git-relay-<D>.log, but that file is named for the date it was WRITTEN and covers <D-1>T07:41Z through <D>T07:41Z. Verified: git-relay-2026-08-12.log opens 'Log rotated 2026-08-11' and ends at 2026-08-12T07:40:57Z; the 2026-08-12T07:52Z events live in git-relay-2026-08-13.log. Any task running after 07:41Z that looks for yesterday's relay evidence in the archive named for yesterday will miss that day's final ~16 hours and see a false absence. This produced two incorrect escalations in the 2026-08-13 financial-state-backup run. Reasoning from absence in this archive requires naming the file searched and its coverage range.",
+      "source": "2026-08-13 report-triage sweep",
+      "observed_at": "2026-08-13",
+      "expires_on": "2026-09-12",
+      "project": "Git Relay Commit-Path Hardening"
+    },
+    {
+      "id": "OBS-FSS-2026-08-13-BOTH-ESCALATIONS-DISCONFIRMED",
+      "summary": "Both escalations in the 2026-08-13 financial-analysis-log FSS entry are disconfirmed and should not be assigned. ESCALATION 1 ('the 2026-08-12 run did not fire; fault is in the scheduled-task invocation') is false: the run fired and errored \u2014 relay probe 20260812T075245Z-20a77140.result status=active 07:52:47Z, trigger 20260812T075247Z-fff748df.result status=error 07:53:17Z naming financial-state.yaml, and git-relay-2026-08-13.log lines 4728-4881 record the trigger, the precommand and 'backup aborted: UploadError: PATCH .../1fpba1URnt1iUJ-MTz7sMXZX8KhYXxQgu: [Errno 60] Operation timed out'. ESCALATION 2 (silent mirror staleness from an appProperties.sha256/body divergence) is structurally impossible: jasonos-drive-backup-runner.py _put() sends content and appProperties.sha256 in a single multipart PATCH. The real explanation is a partial 08-12 run \u2014 plan.updates is sorted and applied in order (attribution-rules.json, forecast-baseline-store.json, retention-log.md), so the first two were durably written before the timeout on the third, which is exactly why 08-13 saw those two 'unchanged' and retention-log.md 'updated'. The CONFIDENTIAL mirror is current, not stale. No Engineering assignment is warranted.",
+      "source": "2026-08-13 report-triage sweep",
+      "observed_at": "2026-08-13",
+      "expires_on": "2026-09-12",
+      "project": "Backup & Scheduled-Task Reliability"
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 0,
-    "open_gaps": 9,
+    "open_pcrs": 1,
+    "open_gaps": 12,
     "open_rems": 1
   }
 }
