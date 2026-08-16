@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T07:56:52Z",
+  "generated_at": "2026-08-16T08:00:54Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-10T22:54:43Z",
-    "minutes_since_session": 7742,
+    "last_session_date": "2026-08-16T08:00:25Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -257,26 +257,7 @@
     }
   ],
   "queue": [],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "DH-REEL-0010 resumption",
-      "context": "script stage complete, sitting at the angle-approval gate; next real step is Stage 4 (Visual-beat decomposition), which "
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "DH-REEL-0010 Stage 4 (Visual-beat decomposition)",
-      "context": "script is now CEO-approved and record-ready. No packaged skill exists for this stage yet (INI-142's visual-routing tooli"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "confirm",
-      "label": "Confirm whether Tullberg's book date range (\"1996 to 2002\") also needs correcting",
-      "context": "the CEO corrected Dyson's own Dune 4 attendance year to 1998 this session; the book's separately-stated overall document"
-    }
-  ],
+  "ceo_actions": [],
   "status_drift": [],
   "category_drift": [],
   "contract_drift": [],
@@ -624,7 +605,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T07:56:52.344157+00:00"
+    "generated_at": "2026-08-16T08:00:54.128896+00:00"
   },
   "programs": {
     "groups": [
@@ -832,7 +813,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T07:56:52.344260+00:00"
+    "generated_at": "2026-08-16T08:00:54.129014+00:00"
   },
   "contract_quality_gaps": [
     {
