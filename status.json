@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T15:10:06Z",
+  "generated_at": "2026-08-16T19:10:14Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-16T08:38:16Z",
-    "minutes_since_session": 391,
+    "minutes_since_session": 631,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -630,7 +630,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T15:10:06.864822+00:00"
+    "generated_at": "2026-08-16T19:10:14.564092+00:00"
   },
   "programs": {
     "groups": [
@@ -838,7 +838,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T15:10:06.864937+00:00"
+    "generated_at": "2026-08-16T19:10:14.564253+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1249,6 +1249,14 @@
       "observed_at": "2026-08-13",
       "expires_on": "2026-09-12",
       "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "OBS-RELAY-COMMANDS-CONSTRUCTED-FROM-RECALL-NOT-SPEC-CHECK",
+      "summary": "The CEO reported this session's commit_via_relay.py hand-off went through two malformed iterations before succeeding: (1) --push canonical against jasonos-operations, refused because that repo is single-origin (GAP-051: canonical is only valid for mirrored-governance repos; single-origin repos take --push true) -- the CLI's own --push help text lists 'canonical (upstream only; fork is a CEO-managed backup -- mirrored-governance repos, PCR-OPS-024)' distinctly from 'true (upstream+fork)', which names the distinction directly; (2) a directory-form --pathspec entry (operations/builds/fiction-development-system/modules/) refused with 'file-level pathspec required', which is not a new discovery -- governance/memory/relay-v128-path-limited-and-workers-event-driven.md already documents this exact constraint verbatim ('keep passing explicit space-separated file paths in --pathspec, never a directory or glob', GAP-127 residual) from a prior session. Both failures were avoidable: the CLI's own --help text and an existing memory entry already contained the correct answer before the command was ever typed. The commands were constructed from recalled pattern-memory of prior relay usage rather than by checking commit_via_relay.py --help (or the relevant memory file) against the specific repo/pathspec shape in hand. This is the second known recurrence of the directory-pathspec mistake specifically (the first is what produced the GAP-127/relay-v128 memory entry in the first place), suggesting the existing memory note alone is not reliably surfaced or consulted before a relay command is drafted. Recommendation: before constructing any commit_via_relay.py invocation, run --help (or grep the relay memory files) for the specific flags being used (--push mode for the target repo's topology; --pathspec shape) rather than reconstructing the command from session-to-session recall -- the authoritative spec is one cheap command away and guessing produces exactly this avoidable churn, doubly so when (as here) the guess repeats a mistake already once diagnosed and filed.",
+      "source": "FDS INI-153 Stage 2 gate closure session, 2026-08-16",
+      "observed_at": "2026-08-16",
+      "expires_on": "2026-09-15",
+      "project": "Git Relay Commit-Path Hardening"
     }
   ],
   "work_item_counts": {
