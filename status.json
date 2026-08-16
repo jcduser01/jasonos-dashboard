@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T11:09:55Z",
+  "generated_at": "2026-08-16T13:10:02Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 2,
-      "guardrail_repairs": 27,
+      "guardrail_repairs": 28,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-16T08:38:16Z",
-    "minutes_since_session": 151,
+    "minutes_since_session": 271,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -279,7 +279,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-08-16T07:43:20Z",
-      "invocations_30d": 56
+      "invocations_30d": 55
     },
     {
       "name": "knowledge-director",
@@ -620,11 +620,17 @@
             "type": "GAP",
             "description": "check-work-item-contract-conformance.py has no conformant shape for Stage 2 module specs\u2026",
             "action": "agent"
+          },
+          {
+            "id": "GAP-261",
+            "type": "GAP",
+            "description": "check-sdlc-phase-gate.py's req_ids_present guard only recognizes pipe-table REQ rows; FDS's PRD\u2026",
+            "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-08-16T11:09:55.120038+00:00"
+    "generated_at": "2026-08-16T13:10:02.279244+00:00"
   },
   "programs": {
     "groups": [
@@ -832,7 +838,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-16T11:09:55.120138+00:00"
+    "generated_at": "2026-08-16T13:10:02.279351+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -959,6 +965,60 @@
       "type": "missing_class_field",
       "field": "detected at",
       "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "route",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "execution scope",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "stop-line",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "depends on",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "definition of done",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "gates",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "guardrail",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "failure evidence",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "missing_class_field",
+      "field": "detected at",
+      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
       "category": "gap-open"
     }
   ],
@@ -1193,7 +1253,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 14,
+    "open_gaps": 15,
     "open_rems": 1
   }
 }
