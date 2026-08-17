@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T12:42:17Z",
+  "generated_at": "2026-08-17T18:42:52Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-17T06:39:43Z",
-    "minutes_since_session": 362,
+    "minutes_since_session": 723,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -252,7 +252,7 @@
       "name": "Fiction Development System V1 \u2014 Engine & Ray Graystone Author Project",
       "status": "active",
       "contract": {
-        "stop_line": "No V1 release declaration, and no population of `ray-graystone-fds` with real manuscript content, without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. No custom combined Postgres/AGE/pgvector image build and no real embedding-model download without separate explicit CEO authorization (both remain untouched \u2014 verified via `docker images`/model-cache inspection during the build). No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 this session's Stage 5 work proceeded on the former, stated explicitly at commit time, not assumed)."
+        "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No custom combined Postgres/AGE/pgvector image build and no real embedding-model download without separate explicit CEO authorization (both remain untouched \u2014 verified via `docker images`/model-cache inspection during the build). No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
       }
     }
   ],
@@ -660,7 +660,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-17T12:42:17.716505+00:00"
+    "generated_at": "2026-08-17T18:42:52.813948+00:00"
   },
   "programs": {
     "groups": [
@@ -868,7 +868,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-17T12:42:17.716608+00:00"
+    "generated_at": "2026-08-17T18:42:52.814054+00:00"
   },
   "contract_quality_gaps": [
     {
