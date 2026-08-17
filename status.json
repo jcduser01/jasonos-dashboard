@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T10:42:11Z",
+  "generated_at": "2026-08-17T12:42:17Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -69,7 +69,7 @@
       "expired_observations": 1
     },
     "escape_hatches": {
-      "delivery_dependencies": 4,
+      "delivery_dependencies": 3,
       "guardrail_repairs": 29,
       "maintenance_cap_overrides": 0
     },
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-17T06:39:43Z",
-    "minutes_since_session": 242,
+    "minutes_since_session": 362,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -656,17 +656,11 @@
             "type": "GAP",
             "description": "FDS CLI ships without REQ-036's JSON mode, REQ-037's full exit-code contract, or real-project-file\u2026",
             "action": "agent"
-          },
-          {
-            "id": "GAP-264",
-            "type": "GAP",
-            "description": "fds rebuild incremental is not yet a distinct code path from rebuild full, and DIAGNOSTIC_REGISTRY\u2026",
-            "action": "agent"
           }
         ]
       }
     ],
-    "generated_at": "2026-08-17T10:42:11.675758+00:00"
+    "generated_at": "2026-08-17T12:42:17.716505+00:00"
   },
   "programs": {
     "groups": [
@@ -874,7 +868,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-17T10:42:11.675861+00:00"
+    "generated_at": "2026-08-17T12:42:17.716608+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1104,54 +1098,6 @@
       "field": "dependency claim",
       "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
       "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "committed deliverable",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "dependency claim",
-      "file": "governance/gaps/open/GAP-264-fds-rebuild-incremental-is-not-distinct-from-full-and-diagnostic-registry-is-incomplete.md",
-      "category": "gap-open"
     }
   ],
   "pending_notes": [
@@ -1293,9 +1239,10 @@
       "id": "OBS-GOVERNANCE-REPO-STALE-INDEX-LOCK-STRANDED",
       "summary": "A stranded zero-byte .git/index.lock sits in Governance/jasonos-governance, mtime 2026-08-07T04:34:45Z (6.5h before this sweep), left by an earlier attended session -- not by this sweep. On this FUSE mount unlink() EPERMs, so git cannot clean up after itself (GAP-058), and the next relay git add against the governance repo will fail with a false 'another git process seems to be running'. Verified stale, not live: no governance commit has been attempted since (local main == origin/main == 9188f9a2, unchanged since the 08-06T17:59Z GAP-229 session), the governance-compare heartbeat read clean/ahead=0/behind=0 at 11:01:07Z (it uses non-index-mutating verbs, so passing does not clear the lock), and git-relay.log shows zero 'index.lock'/'another git process' errors because today's relay traffic was all operations-lane. The operations repo carries no bare lock. Not repaired this sweep: the protocol's write boundary forbids executing remediation and this sweep did not cause the condition -- unlike 08-06, which repaired locks it created and disclosed that. Repair when attended: operations/bin/jasonos-clear-stale-git-locks.py (rename-aside). Also still awaiting Mac-side deletion: index.lock.stale-3-1786014818643370296 (governance) and index.lock.stale-6-1786014813187311418 (operations), the rename-aside leftovers disclosed by the 08-06 sweep.",
       "source": "jasonos-report-triage 2026-08-07T11:05Z",
-      "observed_at": "2026-08-07",
+      "observed_at": "2026-08-17",
       "expires_on": "2026-09-06",
-      "project": "Git Relay Commit-Path Hardening"
+      "project": "Git Relay Commit-Path Hardening",
+      "occurrences": 2
     },
     {
       "id": "OBS-MAINTENANCE-PCR-FILED-WITH-NO-PAYBACK-CASE",
@@ -1396,7 +1343,8 @@
       "source": "report-triage 2026-08-17 step 2i, Logs/director-logs/engineering/git-relay.log",
       "observed_at": "2026-08-17",
       "expires_on": "2026-09-16",
-      "project": null
+      "project": null,
+      "occurrences": 2
     },
     {
       "id": "OBS-STEWARD-AUDIT-ACTIVE-SEGMENT-AT-95PCT-OF-ROTATION-CEILING",
@@ -1404,7 +1352,8 @@
       "source": "report-triage 2026-08-17 step 2e",
       "observed_at": "2026-08-17",
       "expires_on": "2026-09-16",
-      "project": null
+      "project": null,
+      "occurrences": 2
     },
     {
       "id": "OBS-DIRECTOR-ESCALATION-TO-PRESIDENT-HAS-NO-PATH-WHEN-THE-SWEEP-DOES-NOT-RUN",
@@ -1413,11 +1362,35 @@
       "observed_at": "2026-08-17",
       "expires_on": "2026-09-16",
       "project": null
+    },
+    {
+      "id": "OBS-DASHBOARD-MECHANISM-BLOCK-IS-A-HARDCODED-LITERAL-AND-ALREADY-DISAGREES-WITH-THE-REGISTRY",
+      "summary": "The CEO dashboard's entire mechanisms panel is a hardcoded Python literal, not a reading of the script registry, and its composition has already drifted. jasonos-production-metrics.py build_production_model() returns mechanisms as constants: status 'at_ceiling', ceiling 58, active {daemons 13, checkers 16, policies 29}, live_count 58. Live check-script-registry-coverage.py this run reports daemons=13, checkers=15, policies=30. The totals coincide at 58, so the ceiling reading on the dashboard is accidentally correct while the composition is wrong by one checker and one policy. The block's own limitation string reads 'Active membership is enforced by the script-registry coverage gate', which invites the reader to treat the numbers as derived from that gate; nothing in the function reads the registry. Consequence: if a mechanism were added, retired, or the 58 ceiling breached, status.json would continue to report at_ceiling 58/58 with a stale breakdown and no reader would see it from the dashboard. NOT admitted as a broken guardrail: the actual enforcement control is check-script-registry-coverage.py, which ran this sweep and correctly held the 58/58 one-in-one-out ceiling. What is defective is the display, not the gate. not admitted as work",
+      "source": "report-triage 2026-08-17T11:05Z sweep \u2014 operations/bin/jasonos-production-metrics.py:352-357 read against live check-script-registry-coverage.py output and code/jasonos-dashboard/status.json",
+      "observed_at": "2026-08-17",
+      "expires_on": "2026-09-16",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-DASHBOARD-PUBLISHER-LOG-TIMESTAMPS-ARE-LOCAL-TIME-IN-A-UTC-SHAPED-FORMAT",
+      "summary": "dashboard-publisher.log stamps every line with bare ISO-8601 carrying no offset and no Z, and the value is LOCAL time (CDT), while every sibling engineering log is explicit UTC. Proved line-internally rather than by inference: line 1949 reads '[2026-08-17T00:33:52] Relay trigger written: 20260817T053352Z-173af410.trigger' \u2014 the same log line carries a local-time prefix and a UTC trigger stem exactly 5 hours apart. Corroborated end-to-end: the day's last publisher run logs '[2026-08-17T05:42:15] === Publisher done ===' while the status.json it wrote carries generated_at 2026-08-17T10:42:11Z with a matching mtime. Zero of the file's 2,007 lines carry a 'Z'; git-relay.log carries 110,690. Diagnosis trap: this log is a first-stop artifact when the dashboard looks frozen, and read at face value it makes every publisher run appear five hours older than it is \u2014 which would read as a threshold breach against infrastructure-health-policy's 2h dashboard bound. It did not mislead this sweep, because the protocol's step 2k table reads status.json generated_at rather than this log. not admitted as work",
+      "source": "report-triage 2026-08-17T11:05Z sweep \u2014 Logs/director-logs/engineering/dashboard-publisher.log compared line-internally and against status.json generated_at",
+      "observed_at": "2026-08-17",
+      "expires_on": "2026-09-16",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-REPORT-TRIAGE-DOUBLE-FIRED-SAME-DAY-AND-OCCURRENCE-COUNTS-CANNOT-ABSORB-IT",
+      "summary": "jasonos-report-triage fired twice on 2026-08-17 \u2014 an off-cycle run at 05:33Z (before the morning report tasks, so it read today's channels empty by construction) and this scheduled 11:05Z run \u2014 and the estate has no way to represent that. Three concrete consequences, all verified. (1) observations.jsonl occurrence counts become a count of SWEEPS, not of sightings: eight standing observations were augmented to observed_at 2026-08-17 by the 05:33Z run, and bumping them again this run would have recorded today twice; this sweep deliberately did not re-bump the seven whose evidence was materially unchanged, and says so rather than silently skipping. (2) the watermark chain now has two 2026-08-17 boundaries. (3) the scheduler's lastRunAt for this task now reads 2026-08-17T11:05:55Z \u2014 the 05:33Z run's own scheduler record is gone, which is exactly the overwrite behaviour that run identified as half of GAP-262's root cause, observed from the other side. Deliberately filed under a NEW id rather than folded into GAP-262: that ticket is about runs that do not happen and leave no trace, this is about a run that happened twice and cannot be counted. not admitted as work",
+      "source": "report-triage 2026-08-17T11:05Z sweep \u2014 agent-invocation-master.log lines 449 and this run's own record; operations-log narrative headings; list_scheduled_tasks lastRunAt",
+      "observed_at": "2026-08-17",
+      "expires_on": "2026-09-16",
+      "project": "Process & Surface Governance"
     }
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 18,
+    "open_gaps": 17,
     "open_rems": 1
   }
 }
