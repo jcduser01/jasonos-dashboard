@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T18:42:52Z",
+  "generated_at": "2026-08-17T19:12:33Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-17T06:39:43Z",
-    "minutes_since_session": 723,
+    "last_session_date": "2026-08-17T19:08:28Z",
+    "minutes_since_session": 4,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -266,12 +266,6 @@
     },
     {
       "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Decide GAP-264's remediation direction",
-      "context": "`governance/gaps/open/GAP-264-...md`"
-    },
-    {
-      "id": "ACT-HO-3",
       "category": "required",
       "label": "staged/fds-stage2-contracts",
       "context": "FDS engine repo, local branch"
@@ -660,7 +654,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-17T18:42:52.813948+00:00"
+    "generated_at": "2026-08-17T19:12:33.047391+00:00"
   },
   "programs": {
     "groups": [
@@ -868,7 +862,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-17T18:42:52.814054+00:00"
+    "generated_at": "2026-08-17T19:12:33.047491+00:00"
   },
   "contract_quality_gaps": [
     {
