@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T11:13:26Z",
+  "generated_at": "2026-08-18T19:13:41Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-17T19:08:28Z",
-    "minutes_since_session": 964,
+    "minutes_since_session": 1445,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -297,7 +297,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-27T13:12:56Z",
-      "invocations_30d": 16
+      "invocations_30d": 15
     },
     {
       "name": "research-director",
@@ -654,7 +654,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-18T11:13:26.447168+00:00"
+    "generated_at": "2026-08-18T19:13:41.395568+00:00"
   },
   "programs": {
     "groups": [
@@ -862,7 +862,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-18T11:13:26.447279+00:00"
+    "generated_at": "2026-08-18T19:13:41.395681+00:00"
   },
   "contract_quality_gaps": [
     {
