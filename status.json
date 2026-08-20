@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T07:14:30Z",
+  "generated_at": "2026-08-20T09:14:34Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-17T19:08:28Z",
-    "minutes_since_session": 3606,
+    "minutes_since_session": 3726,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -278,20 +278,20 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-19T07:33:30Z",
-      "invocations_30d": 41
+      "last_active": "2026-08-20T07:36:38Z",
+      "invocations_30d": 42
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-08-20T06:32:04Z",
-      "invocations_30d": 55
+      "last_active": "2026-08-20T07:43:24Z",
+      "invocations_30d": 56
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-08-19T07:37:31Z",
-      "invocations_30d": 22
+      "last_active": "2026-08-20T07:36:50Z",
+      "invocations_30d": 23
     },
     {
       "name": "security-steward",
@@ -308,8 +308,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-08-19T07:53:11Z",
-      "invocations_30d": 28
+      "last_active": "2026-08-20T07:53:24Z",
+      "invocations_30d": 29
     },
     {
       "name": "venture-director",
@@ -654,7 +654,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-20T07:14:30.291910+00:00"
+    "generated_at": "2026-08-20T09:14:34.547550+00:00"
   },
   "programs": {
     "groups": [
@@ -862,7 +862,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-20T07:14:30.292025+00:00"
+    "generated_at": "2026-08-20T09:14:34.547651+00:00"
   },
   "contract_quality_gaps": [
     {
