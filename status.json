@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T07:56:19Z",
+  "generated_at": "2026-08-23T09:56:22Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-17T19:08:28Z",
-    "minutes_since_session": 7967,
+    "last_session_date": "2026-08-23T07:55:42Z",
+    "minutes_since_session": 120,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -660,7 +660,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-23T07:56:19.179378+00:00"
+    "generated_at": "2026-08-23T09:56:22.553522+00:00"
   },
   "programs": {
     "groups": [
@@ -868,7 +868,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-23T07:56:19.179480+00:00"
+    "generated_at": "2026-08-23T09:56:22.553624+00:00"
   },
   "contract_quality_gaps": [
     {
