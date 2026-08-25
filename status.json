@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-24T11:56:51Z",
+  "generated_at": "2026-08-25T05:57:03Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-08-18",
-      "end": "2026-08-24"
+      "start": "2026-08-19",
+      "end": "2026-08-25"
     },
     "headline": {
       "delivered": 0,
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-23T07:55:42Z",
-    "minutes_since_session": 1681,
+    "minutes_since_session": 2761,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -279,7 +279,7 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-08-24T07:34:38Z",
-      "invocations_30d": 46
+      "invocations_30d": 45
     },
     {
       "name": "operations-director",
@@ -297,7 +297,7 @@
       "name": "security-steward",
       "display": "Security",
       "last_active": "2026-07-27T13:12:56Z",
-      "invocations_30d": 15
+      "invocations_30d": 14
     },
     {
       "name": "research-director",
@@ -666,7 +666,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-24T11:56:51.488996+00:00"
+    "generated_at": "2026-08-25T05:57:03.172230+00:00"
   },
   "programs": {
     "groups": [
@@ -874,7 +874,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-24T11:56:51.489109+00:00"
+    "generated_at": "2026-08-25T05:57:03.172370+00:00"
   },
   "contract_quality_gaps": [
     {
