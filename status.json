@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T22:27:21Z",
+  "generated_at": "2026-08-29T22:38:58Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 26,
+      "guardrail_repairs": 25,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T20:50:00Z",
-    "minutes_since_session": 97,
+    "minutes_since_session": 108,
     "airlock_queue": 6,
     "airlock_bundles": 3
   },
@@ -571,12 +571,6 @@
         "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
         "items": [
           {
-            "id": "GAP-246",
-            "type": "GAP",
-            "description": "GAP/PCR/REM closure isn't a reliable dashboard-refresh-signal trigger",
-            "action": "agent"
-          },
-          {
             "id": "GAP-255",
             "type": "GAP",
             "description": "Interactive President Agent terminal sessions are not subject to the worktree-per-session mandate\u2026",
@@ -645,7 +639,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:27:21.822377+00:00"
+    "generated_at": "2026-08-29T22:38:58.110613+00:00"
   },
   "programs": {
     "groups": [
@@ -864,7 +858,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:27:21.822500+00:00"
+    "generated_at": "2026-08-29T22:38:58.110728+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1303,7 +1297,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 13,
+    "open_gaps": 12,
     "open_rems": 1
   }
 }
