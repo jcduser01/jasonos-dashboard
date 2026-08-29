@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T17:12:47Z",
+  "generated_at": "2026-08-29T18:00:25Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -44,11 +44,11 @@
     },
     "effort": {
       "production_ratio": {
-        "status": "degraded_unquantified",
+        "status": "unavailable",
         "value": null,
         "numerator": 0,
         "denominator": null,
-        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
+        "limitation": "CEO-attention denominator is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -64,13 +64,13 @@
       }
     },
     "maintenance": {
-      "admitted": 1,
+      "admitted": 0,
       "declined_observations": 0,
       "expired_observations": 6
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 31,
+      "guardrail_repairs": 27,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T17:12:04Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 48,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -532,18 +532,6 @@
         ]
       },
       {
-        "name": "Governance Tooling & Checker Reliability",
-        "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
-        "items": [
-          {
-            "id": "GAP-249",
-            "type": "GAP",
-            "description": "Consolidated report-triage checker-reliability maintenance pass",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Process & Surface Governance",
         "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
         "items": [
@@ -604,18 +592,6 @@
         ]
       },
       {
-        "name": "Financial Analysis",
-        "description": "Track the Financial Analysis Director's periodic financial-state analysis, reporting, and tooling work (INI-103, operational since 2026-06-26).",
-        "items": [
-          {
-            "id": "GAP-225",
-            "type": "GAP",
-            "description": "Financial cockpit variance-learning loop (STEP 6) has scored zero variances across four baseline\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Governance Behavioral Guardrails",
         "description": null,
         "items": [
@@ -623,36 +599,6 @@
             "id": "GAP-257",
             "type": "GAP",
             "description": "Recurring unattributed msmtp email bursts have never been ticketed, despite six occurrences and an\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
-        "name": "INI-144 Reel Metrics Capture",
-        "description": null,
-        "items": [
-          {
-            "id": "GAP-259",
-            "type": "GAP",
-            "description": "INI-144 capture daemon silent 5-day outage with no escalation path reaching the CEO; token-type\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
-        "name": "INI-153 Fiction Development System V1 Engine \u2014 Stage 2 Architecture Gate",
-        "description": null,
-        "items": [
-          {
-            "id": "GAP-260",
-            "type": "GAP",
-            "description": "check-work-item-contract-conformance.py has no conformant shape for Stage 2 module specs\u2026",
-            "action": "agent"
-          },
-          {
-            "id": "GAP-261",
-            "type": "GAP",
-            "description": "check-sdlc-phase-gate.py's req_ids_present guard only recognizes pipe-table REQ rows; FDS's PRD\u2026",
             "action": "agent"
           }
         ]
@@ -670,7 +616,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T17:12:47.740297+00:00"
+    "generated_at": "2026-08-29T18:00:25.006318+00:00"
   },
   "programs": {
     "groups": [
@@ -878,7 +824,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T17:12:47.740399+00:00"
+    "generated_at": "2026-08-29T18:00:25.006426+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1317,7 +1263,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 19,
+    "open_gaps": 14,
     "open_rems": 1
   }
 }
