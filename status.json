@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T18:00:25Z",
+  "generated_at": "2026-08-29T18:25:33Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-29T17:12:04Z",
-    "minutes_since_session": 48,
+    "last_session_date": "2026-08-29T18:20:00Z",
+    "minutes_since_session": 5,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -259,20 +259,26 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "staged/fds-stage2-contracts",
-      "context": "FDS engine repo, local branch"
+      "label": "FDS Apache AGE 1.7.0 / PostgreSQL 18 compatibility adjudication (INI-153)",
+      "context": "CEO-deferred until after machine reboot (unrelated slowdown). No urgency. Full detail on portfolio/open/INI-153.md."
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Run the verified-safe branch delete the harness classifier blocked",
-      "context": "cd /Volumes/SandboxData/code/fiction-development-system && git branch -D staged/fds-stage2-contracts \u2014 confirmed by this"
+      "label": "Re-arm dh-blog-drip from Cowork",
+      "context": "native Claude Code cannot call `update_scheduled_task`"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "FDS Apache AGE 1.7.0 / PostgreSQL 18 compatibility adjudication (INI-153)",
-      "context": "CEO-deferred until after machine reboot (unrelated slowdown). No urgency. Full detail on portfolio/open/INI-153.md."
+      "label": "Activate the new INI-144 watchdog",
+      "context": "optional, not urgent"
+    },
+    {
+      "id": "ACT-HO-4",
+      "category": "required",
+      "label": "Consider a manual Security Steward invocation",
+      "context": "for this session (2026-08-29 batch-execution session) \u2014 new automation artifact (INI-144 watchdog, staged), a jasonos-de"
     }
   ],
   "status_drift": [],
@@ -616,7 +622,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T18:00:25.006318+00:00"
+    "generated_at": "2026-08-29T18:25:33.653164+00:00"
   },
   "programs": {
     "groups": [
@@ -824,7 +830,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T18:00:25.006426+00:00"
+    "generated_at": "2026-08-29T18:25:33.653279+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
