@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T16:28:39Z",
+  "generated_at": "2026-08-29T16:41:25Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 5
   },
   "operational": {
-    "last_session_date": "2026-08-23T07:55:42Z",
-    "minutes_since_session": 9152,
+    "last_session_date": "2026-08-29T16:45:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -259,14 +259,20 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "FDS Docker/AGE prerequisites (INI-153)",
-      "context": "two items, neither blocking the authorized first Codex ticket: (1) authorize increasing Docker Desktop's memory allocati"
+      "label": "staged/fds-stage2-contracts",
+      "context": "FDS engine repo, local branch"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "staged/fds-stage2-contracts",
-      "context": "FDS engine repo, local branch"
+      "label": "Run the verified-safe branch delete the harness classifier blocked",
+      "context": "cd /Volumes/SandboxData/code/fiction-development-system && git branch -D staged/fds-stage2-contracts \u2014 confirmed by this"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "FDS Apache AGE 1.7.0 / PostgreSQL 18 compatibility adjudication (INI-153)",
+      "context": "CEO-deferred until after machine reboot (unrelated slowdown). No urgency. Full detail on portfolio/open/INI-153.md."
     }
   ],
   "status_drift": [],
@@ -670,7 +676,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T16:28:39.266112+00:00"
+    "generated_at": "2026-08-29T16:41:25.886489+00:00"
   },
   "programs": {
     "groups": [
@@ -878,7 +884,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T16:28:39.266222+00:00"
+    "generated_at": "2026-08-29T16:41:25.886592+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
