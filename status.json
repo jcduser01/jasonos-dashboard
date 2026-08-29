@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T18:25:33Z",
+  "generated_at": "2026-08-29T19:50:24Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -44,11 +44,11 @@
     },
     "effort": {
       "production_ratio": {
-        "status": "unavailable",
+        "status": "degraded_unquantified",
         "value": null,
         "numerator": 0,
         "denominator": null,
-        "limitation": "CEO-attention denominator is unavailable."
+        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -64,7 +64,7 @@
       }
     },
     "maintenance": {
-      "admitted": 0,
+      "admitted": 1,
       "declined_observations": 0,
       "expired_observations": 6
     },
@@ -98,17 +98,17 @@
   },
   "stats": {
     "done": 117,
-    "total": 142,
+    "total": 143,
     "active": 11,
     "queued": 0,
     "paused": 9,
-    "backlog": 5
+    "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-08-29T18:20:00Z",
-    "minutes_since_session": 5,
-    "airlock_queue": 4,
-    "airlock_bundles": 2
+    "last_session_date": "2026-08-29T15:20:00Z",
+    "minutes_since_session": 270,
+    "airlock_queue": 8,
+    "airlock_bundles": 4
   },
   "active_initiative": {
     "id": "INI-111",
@@ -279,6 +279,24 @@
       "category": "required",
       "label": "Consider a manual Security Steward invocation",
       "context": "for this session (2026-08-29 batch-execution session) \u2014 new automation artifact (INI-144 watchdog, staged), a jasonos-de"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Security Steward review of PCR-OPS-078",
+      "context": "two capability policies amended and promoted to canonical without a Steward pass; the change opens a new automated outbo"
+    },
+    {
+      "id": "ACT-HO-6",
+      "category": "confirm",
+      "label": "Review INI-154 / PCR-OPS-078 payback estimates",
+      "context": "gain 4 attention-hours/week, build 6, carrying 0.25/week, horizon 12 weeks, result positive: 39.0. These are the Preside"
+    },
+    {
+      "id": "ACT-HO-7",
+      "category": "required",
+      "label": "dh-blog-drip re-arm is still open and this was a Cowork session",
+      "context": "the standing CEO action names Cowork as the only environment that can call update_scheduled_task. Not performed: out of "
     }
   ],
   "status_drift": [],
@@ -495,6 +513,17 @@
             "INI-092"
           ]
         }
+      },
+      {
+        "id": "INI-154",
+        "name": "Voice-First Reconnection Digest for Async Dispatch Requests",
+        "notes": "Filed 2026-08-29 alongside its enabling PCR-OPS-078. Enables a voice-first supervision workflow: the CEO opens a Claude Voice Mode session from mobile, issues status inquiries and work instructions\u2026",
+        "contract": {
+          "stop_line": "Do not implement or activate email send behavior until PCR-OPS-078 is observable in governance/pcrs/resolved/ on canonical. Activation of the unattended trigger is Red under production-operating-model.md \u00a7 3.1 (arming an unattended mechanism) and requires a CEO turn at activation time regardless of how the repo work was promoted \u2014 a staged or pushed commit of the code is not itself activation authority. If the chosen implementation registers a new MCP tool rather than invoking a local script, that triggers tool-governance evaluation per sandbox-operating-charter.md \u00a7 15 and a Security Steward advisory per president-agent.md \u00a7 Security Steward Advisory before the tool is registered. No recipient other than the CEO; no content above Class C.",
+          "depends_on": [
+            "PCR-OPS-078"
+          ]
+        }
       }
     ]
   },
@@ -622,7 +651,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T18:25:33.653164+00:00"
+    "generated_at": "2026-08-29T19:50:24.368538+00:00"
   },
   "programs": {
     "groups": [
@@ -830,7 +859,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T18:25:33.653279+00:00"
+    "generated_at": "2026-08-29T19:50:24.368651+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
