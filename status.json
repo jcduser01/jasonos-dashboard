@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T22:42:57Z",
+  "generated_at": "2026-08-29T22:47:44Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 23,
+      "guardrail_repairs": 22,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T20:50:00Z",
-    "minutes_since_session": 112,
+    "minutes_since_session": 117,
     "airlock_queue": 6,
     "airlock_bundles": 3
   },
@@ -583,12 +583,6 @@
             "action": "agent"
           },
           {
-            "id": "GAP-258",
-            "type": "GAP",
-            "description": "jasonos-status-generator.py hard-fails on a single malformed portfolio/done/ item, and the\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-265",
             "type": "GAP",
             "description": "a fork-type subagent dispatch can silently report completion having done zero real work\u2026",
@@ -627,7 +621,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:42:57.158699+00:00"
+    "generated_at": "2026-08-29T22:47:44.033816+00:00"
   },
   "programs": {
     "groups": [
@@ -846,9 +840,52 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:42:57.158815+00:00"
+    "generated_at": "2026-08-29T22:47:44.033931+00:00"
   },
-  "contract_quality_gaps": [],
+  "contract_quality_gaps": [
+    {
+      "type": "retired_batch_field",
+      "field": "route",
+      "file": "portfolio/done/INI-149.md",
+      "category": "ini-done-delivery"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "runner scope",
+      "file": "portfolio/done/INI-149.md",
+      "category": "ini-done-delivery"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "route",
+      "file": "portfolio/done/INI-152.md",
+      "category": "ini-done-delivery"
+    },
+    {
+      "type": "retired_batch_field",
+      "field": "runner scope",
+      "file": "portfolio/done/INI-152.md",
+      "category": "ini-done-delivery"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "execution scope",
+      "file": "portfolio/done/INI-152.md",
+      "category": "ini-done-delivery"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "definition of done",
+      "file": "portfolio/done/INI-152.md",
+      "category": "ini-done-delivery"
+    },
+    {
+      "type": "missing_common_field",
+      "field": "gates",
+      "file": "portfolio/done/INI-152.md",
+      "category": "ini-done-delivery"
+    }
+  ],
   "pending_notes": [
     {
       "id": "OBS-COWORK-SCHEDULED-TASK-SYNC-GATE-OR-LAUNCHD-MIGRATION",
@@ -1293,7 +1330,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 10,
+    "open_gaps": 9,
     "open_rems": 1
   }
 }
