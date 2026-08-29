@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T22:47:44Z",
+  "generated_at": "2026-08-29T23:48:56Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 22,
+      "guardrail_repairs": 21,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -105,10 +105,10 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-08-29T20:50:00Z",
-    "minutes_since_session": 117,
-    "airlock_queue": 6,
-    "airlock_bundles": 3
+    "last_session_date": "2026-08-29T23:20:00Z",
+    "minutes_since_session": 28,
+    "airlock_queue": 7,
+    "airlock_bundles": 4
   },
   "active_initiative": {
     "id": "INI-111",
@@ -265,14 +265,14 @@
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Activate the new INI-144 watchdog",
+      "label": "Activate the INI-144 reel-metrics watchdog",
       "context": "optional, not urgent"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Consider a manual Security Steward invocation",
-      "context": "for this session (2026-08-29 batch-execution session) \u2014 new automation artifact (INI-144 watchdog, staged), a jasonos-de"
+      "label": "Activate the new GAP-266 index-lock sweeper",
+      "context": "optional, not urgent"
     },
     {
       "id": "ACT-HO-4",
@@ -284,19 +284,19 @@
       "id": "ACT-HO-5",
       "category": "required",
       "label": "Decide GAP-266's disposition on the intermittent-lock finding",
-      "context": "this session could not reproduce GAP-266's root-cause reproduction (git status \u2192 stranded lock) under favorable conditio"
+      "context": "superseded: GAP-266 is now fully Resolved this session (items 2-5 built, item 1's stronger DoD bar satisfied by a real c"
     },
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "POST-REBOOT, TOP OF LIST \u2014 call the Security Steward review of PCR-OPS-078 from a terminal Claude Code session",
-      "context": "not Cowork, per PCR-OPS-068"
+      "label": "Consider whether close-work-item.sh's intermittent relay-precommand failure (Unable to read current working directory, reproduced twice, worked around by a manual filesystem move both times) is worth a closer look",
+      "context": "recorded as an observation, not a ticket, given the low reproduction count and that the tool's own hermetic suite and a "
     },
     {
       "id": "ACT-HO-7",
       "category": "required",
-      "label": "Decide whether to write up the agent-invocation-policy.md / PCR-OPS-068 contradiction.",
-      "context": "Line 18 of the invocation policy says the Agent Invocation Bridge exists so Cowork sessions can trigger real Mac-side di"
+      "label": "Optional: manually upload the 2026-08-27 git-relay.log archive to Drive",
+      "context": "GAP-267's fix bounds the live log going forward, but the 08-27/28/29 window has no off-site copy. The 08-27 archive is t"
     }
   ],
   "status_drift": [],
@@ -571,12 +571,6 @@
         "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
         "items": [
           {
-            "id": "GAP-255",
-            "type": "GAP",
-            "description": "Interactive President Agent terminal sessions are not subject to the worktree-per-session mandate\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-256",
             "type": "GAP",
             "description": "CEO-reserved decision items are not recorded in any dispatch-visible authoritative register",
@@ -621,7 +615,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:47:44.033816+00:00"
+    "generated_at": "2026-08-29T23:48:56.692643+00:00"
   },
   "programs": {
     "groups": [
@@ -840,7 +834,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:47:44.033931+00:00"
+    "generated_at": "2026-08-29T23:48:56.692780+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1330,7 +1324,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 9,
+    "open_gaps": 8,
     "open_rems": 1
   }
 }
