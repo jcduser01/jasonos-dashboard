@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T11:59:37Z",
+  "generated_at": "2026-08-29T16:28:39Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-23T07:55:42Z",
-    "minutes_since_session": 8883,
+    "minutes_since_session": 9152,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -216,8 +216,6 @@
       "name": "Dyson Hope Idea Backlog Development \u2014 Interview-Driven Sketch-to-Brief Skill (Upstream of INI-140)",
       "status": "active",
       "contract": {
-        "route": "CEO-first",
-        "runner_scope": "None \u2014 requires a live, multi-turn CEO-answered interview each run (Claude Code only, no Cowork dispatch of the real Creative Director subagent, per PCR-OPS-068); not a runner/batch task.",
         "stop_line": "No autonomous reel-backlog.csv write ever happens without a separate, explicit CEO approval step after the interview draft is reviewed (inline console text and a standalone .md, reviewed on the CEO's phone via Code --remote-control). Does not run from Cowork \u2014 Claude Code only, per PCR-OPS-068 and the CEO's own 2026-07-20 design decision. Does not assign new reel_id values, does not change production_status, and does not write a script/caption/shot list \u2014 scope is strictly the existing developed-brief fields on an already-identified row."
       }
     },
@@ -672,7 +670,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T11:59:37.898295+00:00"
+    "generated_at": "2026-08-29T16:28:39.266112+00:00"
   },
   "programs": {
     "groups": [
@@ -880,334 +878,9 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T11:59:37.898408+00:00"
+    "generated_at": "2026-08-29T16:28:39.266222+00:00"
   },
-  "contract_quality_gaps": [
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "governance/gaps/open/GAP-255-interactive-president-agent-sessions-lack-worktree-isolation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "runner scope",
-      "file": "governance/gaps/open/GAP-255-interactive-president-agent-sessions-lack-worktree-isolation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "governance/gaps/open/GAP-256-ceo-reserved-items-lack-dispatch-visible-authoritative-register.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "runner scope",
-      "file": "governance/gaps/open/GAP-256-ceo-reserved-items-lack-dispatch-visible-authoritative-register.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "guardrail",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "failure evidence",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "detected at",
-      "file": "governance/gaps/open/GAP-259-ini144-capture-daemon-silent-5-day-outage-no-escalation.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "guardrail",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "failure evidence",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "detected at",
-      "file": "governance/gaps/open/GAP-260-check-work-item-contract-conformance-has-no-path-for-stage-2-module-specs.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "guardrail",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "failure evidence",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "detected at",
-      "file": "governance/gaps/open/GAP-261-check-sdlc-phase-gate-req-table-format-mismatch.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "committed deliverable",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "dependency claim",
-      "file": "governance/gaps/open/GAP-263-fds-cli-ships-without-req-036-json-mode-and-most-commands-operate-on-synthetic-data.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "guardrail",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "failure evidence",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "detected at",
-      "file": "governance/gaps/open/GAP-265-fork-subagent-silently-completes-without-doing-work-in-long-sessions.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "stop-line",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "depends on",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "guardrail",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "failure evidence",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    },
-    {
-      "type": "missing_class_field",
-      "field": "detected at",
-      "file": "governance/gaps/open/GAP-267-git-relay-log-rotation-retry-uploads-a-strictly-larger-payload-every-day-and-has-not-truncated-since-2026-08-26.md",
-      "category": "gap-open"
-    }
-  ],
+  "contract_quality_gaps": [],
   "pending_notes": [
     {
       "id": "OBS-COWORK-SCHEDULED-TASK-SYNC-GATE-OR-LAUNCHD-MIGRATION",
