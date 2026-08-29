@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T22:13:48Z",
+  "generated_at": "2026-08-29T22:27:21Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 28,
+      "guardrail_repairs": 26,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T20:50:00Z",
-    "minutes_since_session": 83,
+    "minutes_since_session": 97,
     "airlock_queue": 6,
     "airlock_bundles": 3
   },
@@ -577,12 +577,6 @@
             "action": "agent"
           },
           {
-            "id": "GAP-247",
-            "type": "GAP",
-            "description": "Malformed session-handoff inbox files are stranded with no alarm surface",
-            "action": "agent"
-          },
-          {
             "id": "GAP-255",
             "type": "GAP",
             "description": "Interactive President Agent terminal sessions are not subject to the worktree-per-session mandate\u2026",
@@ -598,12 +592,6 @@
             "id": "GAP-258",
             "type": "GAP",
             "description": "jasonos-status-generator.py hard-fails on a single malformed portfolio/done/ item, and the\u2026",
-            "action": "agent"
-          },
-          {
-            "id": "GAP-262",
-            "type": "GAP",
-            "description": "a jasonos-report-triage run can be cancelled or skipped entirely and leave no trace in any JasonOS\u2026",
             "action": "agent"
           },
           {
@@ -657,7 +645,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:13:48.708177+00:00"
+    "generated_at": "2026-08-29T22:27:21.822377+00:00"
   },
   "programs": {
     "groups": [
@@ -876,7 +864,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:13:48.708291+00:00"
+    "generated_at": "2026-08-29T22:27:21.822500+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1315,7 +1303,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 15,
+    "open_gaps": 13,
     "open_rems": 1
   }
 }
