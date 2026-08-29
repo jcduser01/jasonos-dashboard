@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T20:24:55Z",
+  "generated_at": "2026-08-29T22:13:48Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 27,
+      "guardrail_repairs": 28,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T20:50:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 83,
     "airlock_queue": 6,
     "airlock_bundles": 3
   },
@@ -623,6 +623,12 @@
             "type": "GAP",
             "description": "the git-relay log rotation retry uploads a strictly larger payload every day, and the live log has\u2026",
             "action": "agent"
+          },
+          {
+            "id": "GAP-268",
+            "type": "GAP",
+            "description": "jasonos-deploy-sync.py --apply prints a uniform Steward stop-line banner but only technically\u2026",
+            "action": "agent"
           }
         ]
       },
@@ -651,7 +657,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T20:24:55.088439+00:00"
+    "generated_at": "2026-08-29T22:13:48.708177+00:00"
   },
   "programs": {
     "groups": [
@@ -870,7 +876,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T20:24:55.088697+00:00"
+    "generated_at": "2026-08-29T22:13:48.708291+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1309,7 +1315,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 14,
+    "open_gaps": 15,
     "open_rems": 1
   }
 }
