@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T19:50:24Z",
+  "generated_at": "2026-08-29T19:57:47Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-08-29T15:20:00Z",
-    "minutes_since_session": 270,
+    "last_session_date": "2026-08-29T20:05:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 8,
     "airlock_bundles": 4
   },
@@ -265,38 +265,44 @@
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Re-arm dh-blog-drip from Cowork",
-      "context": "native Claude Code cannot call `update_scheduled_task`"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
       "label": "Activate the new INI-144 watchdog",
       "context": "optional, not urgent"
     },
     {
-      "id": "ACT-HO-4",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Consider a manual Security Steward invocation",
       "context": "for this session (2026-08-29 batch-execution session) \u2014 new automation artifact (INI-144 watchdog, staged), a jasonos-de"
     },
     {
-      "id": "ACT-HO-5",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "Security Steward review of PCR-OPS-078",
       "context": "two capability policies amended and promoted to canonical without a Steward pass; the change opens a new automated outbo"
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-5",
       "category": "confirm",
       "label": "Review INI-154 / PCR-OPS-078 payback estimates",
       "context": "gain 4 attention-hours/week, build 6, carrying 0.25/week, horizon 12 weeks, result positive: 39.0. These are the Preside"
     },
     {
+      "id": "ACT-HO-6",
+      "category": "required",
+      "label": "URGENT before 2026-09-01 \u2014 deploy the REM-100 blog-drip fix.",
+      "context": "The task is re-armed but SandboxData/bin/jasonos-blog-drip.py is still the pre-fix 2026-08-06 build; the 09-01 fire will"
+    },
+    {
       "id": "ACT-HO-7",
       "category": "required",
-      "label": "dh-blog-drip re-arm is still open and this was a Cowork session",
-      "context": "the standing CEO action names Cowork as the only environment that can call update_scheduled_task. Not performed: out of "
+      "label": "Decide GAP-266's disposition on the intermittent-lock finding",
+      "context": "this session could not reproduce GAP-266's root-cause reproduction (git status \u2192 stranded lock) under favorable conditio"
+    },
+    {
+      "id": "ACT-HO-8",
+      "category": "required",
+      "label": "Record CEO-performed out-of-band actions to memory.",
+      "context": "The dh-blog-drip re-arm was done by the CEO outside the sandbox and nothing captured it, so the next session re-surfaced"
     }
   ],
   "status_drift": [],
@@ -651,7 +657,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T19:50:24.368538+00:00"
+    "generated_at": "2026-08-29T19:57:47.898798+00:00"
   },
   "programs": {
     "groups": [
@@ -848,6 +854,17 @@
         ]
       },
       {
+        "name": "JasonOS Communication Continuity",
+        "description": "Keeping the CEO\u2194President Agent channel open when the CEO is away from a terminal, so the organization does not sit without direction between desk sessions \u2014 currently the voice-first reconnection digest (INI-154), open to whatever else keeps the supervision loop continuous. Named by the CEO, 2026-08-29.",
+        "items": [
+          {
+            "id": "INI-154",
+            "name": "Voice-First Reconnection Digest for Async Dispatch Requests",
+            "status": "Backlog"
+          }
+        ]
+      },
+      {
         "name": "LatW Digital Org Engagement",
         "description": "Love All the Way's private, owner-comprehensible, AI-assisted digital organization build \u2014 the first genuinely external, arm's-length client engagement: a dedicated home appliance, encrypted remote access, a private-calendar/booking architecture, encrypted backups, and an owner-enablement track, under a hard constraint that cloud AI never sees her client data or business strategy.",
         "items": [
@@ -859,7 +876,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T19:50:24.368651+00:00"
+    "generated_at": "2026-08-29T19:57:47.898952+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
