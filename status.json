@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T16:41:25Z",
+  "generated_at": "2026-08-29T17:05:39Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 32,
+      "guardrail_repairs": 31,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T16:45:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 20,
     "airlock_queue": 4,
     "airlock_bundles": 2
   },
@@ -536,12 +536,6 @@
         "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
         "items": [
           {
-            "id": "GAP-248",
-            "type": "GAP",
-            "description": "check-work-item-contract-conformance.py silently checks work-class-less items against the wrong\u2026",
-            "action": "ceo"
-          },
-          {
             "id": "GAP-249",
             "type": "GAP",
             "description": "Consolidated report-triage checker-reliability maintenance pass",
@@ -676,7 +670,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T16:41:25.886489+00:00"
+    "generated_at": "2026-08-29T17:05:39.210149+00:00"
   },
   "programs": {
     "groups": [
@@ -884,7 +878,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T16:41:25.886592+00:00"
+    "generated_at": "2026-08-29T17:05:39.210271+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1323,7 +1317,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 20,
+    "open_gaps": 19,
     "open_rems": 1
   }
 }
