@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T22:40:04Z",
+  "generated_at": "2026-08-29T22:42:57Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 24,
+      "guardrail_repairs": 23,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T20:50:00Z",
-    "minutes_since_session": 110,
+    "minutes_since_session": 112,
     "airlock_queue": 6,
     "airlock_bundles": 3
   },
@@ -595,12 +595,6 @@
             "action": "agent"
           },
           {
-            "id": "GAP-267",
-            "type": "GAP",
-            "description": "the git-relay log rotation retry uploads a strictly larger payload every day, and the live log has\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-268",
             "type": "GAP",
             "description": "jasonos-deploy-sync.py --apply prints a uniform Steward stop-line banner but only technically\u2026",
@@ -633,7 +627,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:40:04.893685+00:00"
+    "generated_at": "2026-08-29T22:42:57.158699+00:00"
   },
   "programs": {
     "groups": [
@@ -852,7 +846,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T22:40:04.893800+00:00"
+    "generated_at": "2026-08-29T22:42:57.158815+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1287,11 +1281,19 @@
       "observed_at": "2026-08-29",
       "expires_on": "2026-09-28",
       "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-GIT-RELAY-DRIVE-COVERAGE-GAP-2026-08-27-TO-29-WRITE-OFF",
+      "summary": "Explicit write-off: the git-relay log off-site Drive copies for 2026-08-27, 2026-08-28, and 2026-08-29 are missing from Drive. Root cause: rotation_upload_failure on each day (Broken pipe on 08-27; write operation timed out on 08-28 and 08-29). Back-fill is not possible from this session: no live Drive credentials in scope and the GAP-267 fix session has no authority to initiate a Drive upload outside the runner. Local archives are intact and verified: Archive/Logs/engineering/2026-08-27/git-relay-2026-08-27.log (107,212,041 B), Archive/Logs/engineering/2026-08-28/git-relay-2026-08-28.log (214,405,580 B \u2014 superset covering 08-26 through 08-28 due to the pre-fix no-truncation behavior), Archive/Logs/engineering/2026-08-29/git-relay-2026-08-29.log (321,655,887 B \u2014 superset covering 08-26 through 08-29). Note: the 08-28 and 08-29 archives are overlapping supersets, not disjoint day-slices; the disjoint 08-27 archive covers 08-26 and 08-27 content. Data is not lost; Drive coverage is absent. The next daily run with the GAP-267 fix applied will rotate and upload only the current live log (bounded, post-truncation). The historical superset archives remain on disk as the local safety net. A human operator may choose to manually upload the 2026-08-27 archive to Drive for completeness; the 08-28 and 08-29 local archives are redundant supersets of each other and of the 08-27 archive. Action required: CEO review; no automated recovery path in scope.",
+      "source": "GAP-267 implementation session (Engineering Director, 2026-08-29)",
+      "observed_at": "2026-08-29",
+      "expires_on": "2026-09-28",
+      "project": "Backup & Scheduled-Task Reliability"
     }
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 11,
+    "open_gaps": 10,
     "open_rems": 1
   }
 }
