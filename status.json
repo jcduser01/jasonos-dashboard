@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T07:09:29Z",
+  "generated_at": "2026-08-30T07:38:31Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 14,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-30T03:59:35Z",
-    "minutes_since_session": 189,
+    "minutes_since_session": 218,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -324,7 +324,7 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-29T07:34:00Z",
+      "last_active": "2026-08-30T07:34:17Z",
       "invocations_30d": 46
     },
     {
@@ -336,7 +336,7 @@
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-08-29T07:38:04Z",
+      "last_active": "2026-08-30T07:37:18Z",
       "invocations_30d": 30
     },
     {
@@ -561,18 +561,6 @@
         ]
       },
       {
-        "name": "Process & Surface Governance",
-        "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
-        "items": [
-          {
-            "id": "GAP-256",
-            "type": "GAP",
-            "description": "CEO-reserved decision items are not recorded in any dispatch-visible authoritative register",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "INI-153 Fiction Development System V1 Engine \u2014 Stage 5 Ship",
         "description": null,
         "items": [
@@ -585,7 +573,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T07:09:29.821626+00:00"
+    "generated_at": "2026-08-30T07:38:31.473205+00:00"
   },
   "programs": {
     "groups": [
@@ -804,7 +792,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T07:09:29.821731+00:00"
+    "generated_at": "2026-08-30T07:38:31.473313+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1294,7 +1282,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
+    "open_gaps": 1,
     "open_rems": 1
   }
 }
