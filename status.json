@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T02:57:57Z",
+  "generated_at": "2026-08-30T03:16:09Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 18,
+      "guardrail_repairs": 17,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T23:20:00Z",
-    "minutes_since_session": 217,
+    "minutes_since_session": 236,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -573,18 +573,6 @@
         ]
       },
       {
-        "name": "Governance Behavioral Guardrails",
-        "description": null,
-        "items": [
-          {
-            "id": "GAP-257",
-            "type": "GAP",
-            "description": "Recurring unattributed msmtp email bursts have never been ticketed, despite six occurrences and an\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "INI-153 Fiction Development System V1 Engine \u2014 Stage 5 Ship",
         "description": null,
         "items": [
@@ -597,7 +585,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T02:57:57.351434+00:00"
+    "generated_at": "2026-08-30T03:16:09.485244+00:00"
   },
   "programs": {
     "groups": [
@@ -816,7 +804,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T02:57:57.351543+00:00"
+    "generated_at": "2026-08-30T03:16:09.485363+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1306,7 +1294,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 5,
+    "open_gaps": 4,
     "open_rems": 1
   }
 }
