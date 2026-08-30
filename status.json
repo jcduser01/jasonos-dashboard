@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T23:48:56Z",
+  "generated_at": "2026-08-30T02:23:51Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 21,
+      "guardrail_repairs": 20,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T23:20:00Z",
-    "minutes_since_session": 28,
+    "minutes_since_session": 183,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -577,12 +577,6 @@
             "action": "agent"
           },
           {
-            "id": "GAP-265",
-            "type": "GAP",
-            "description": "a fork-type subagent dispatch can silently report completion having done zero real work\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-268",
             "type": "GAP",
             "description": "jasonos-deploy-sync.py --apply prints a uniform Steward stop-line banner but only technically\u2026",
@@ -615,7 +609,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T23:48:56.692643+00:00"
+    "generated_at": "2026-08-30T02:23:51.677259+00:00"
   },
   "programs": {
     "groups": [
@@ -834,7 +828,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-29T23:48:56.692780+00:00"
+    "generated_at": "2026-08-30T02:23:51.677402+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1324,7 +1318,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 8,
+    "open_gaps": 7,
     "open_rems": 1
   }
 }
