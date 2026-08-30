@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T03:16:09Z",
+  "generated_at": "2026-08-30T03:20:42Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 17,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T23:20:00Z",
-    "minutes_since_session": 236,
+    "minutes_since_session": 240,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -535,12 +535,6 @@
         "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
         "items": [
           {
-            "id": "GAP-253",
-            "type": "GAP",
-            "description": "Does GAP-245's push-mismatch RelayError correctly fire when a push interlock silently skips the\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-254",
             "type": "GAP",
             "description": "Four relay-worker (jasonos-git-relay.sh) shell test suites carry pre-existing, unrelated failures\u2026",
@@ -585,7 +579,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T03:16:09.485244+00:00"
+    "generated_at": "2026-08-30T03:20:42.945611+00:00"
   },
   "programs": {
     "groups": [
@@ -804,7 +798,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T03:16:09.485363+00:00"
+    "generated_at": "2026-08-30T03:20:42.945726+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1294,7 +1288,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 4,
+    "open_gaps": 3,
     "open_rems": 1
   }
 }
