@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T03:56:23Z",
+  "generated_at": "2026-08-30T04:01:50Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-08-29T23:20:00Z",
-    "minutes_since_session": 276,
+    "last_session_date": "2026-08-30T03:59:35Z",
+    "minutes_since_session": 2,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -271,7 +271,7 @@
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Activate the new GAP-266 index-lock sweeper",
+      "label": "Activate the GAP-266 index-lock sweeper",
       "context": "optional, not urgent"
     },
     {
@@ -283,20 +283,38 @@
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Decide GAP-266's disposition on the intermittent-lock finding",
-      "context": "superseded: GAP-266 is now fully Resolved this session (items 2-5 built, item 1's stronger DoD bar satisfied by a real c"
+      "label": "Optional: manually upload the 2026-08-27 git-relay.log archive to Drive",
+      "context": "the 08-27/28/29 window has no off-site copy; 08-27 is the one disjoint (non-redundant) archive worth uploading if full h"
     },
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "Consider whether close-work-item.sh's intermittent relay-precommand failure (Unable to read current working directory, reproduced twice, worked around by a manual filesystem move both times) is worth a closer look",
-      "context": "recorded as an observation, not a ticket, given the low reproduction count and that the tool's own hermetic suite and a "
+      "label": "Governance-repo review-date lapse \u2014 two PCRs need scoping (from a concurrent session's finding, governance/memory/project_governance_drift_email_alert_root_cause_and_gap257_handoff.md).",
+      "context": "11 capability/policy docs carry a lapsed Review date: 2026-07-31 (29+ days overdue). Track A (low-risk): restamp all 11,"
     },
     {
       "id": "ACT-HO-7",
       "category": "required",
-      "label": "Optional: manually upload the 2026-08-27 git-relay.log archive to Drive",
-      "context": "GAP-267's fix bounds the live log going forward, but the 08-27/28/29 window has no off-site copy. The 08-27 archive is t"
+      "label": "Corporate Filings: request a $19.00 refund and remove the old card",
+      "context": "from the financial-cockpit session"
+    },
+    {
+      "id": "ACT-HO-8",
+      "category": "confirm",
+      "label": "Confirm DEC-002 Step 2 posts cleanly",
+      "context": "financial-cockpit session"
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "Fix the Monarch 3595/8582 account linkage",
+      "context": "*(CEO-owned, already stated intent)* \u2014 the employee-card (8582) \u2192 AP-consolidation-account (3595) structure is currently"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "November RSU vest (~Nov 15)",
+      "context": "reminder: POL-003 sell-on-vest applies; proceeds route to the HELoan (Tier 3 paydown), same pattern as the Aug 14 vest."
     }
   ],
   "status_drift": [],
@@ -573,7 +591,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T03:56:23.369588+00:00"
+    "generated_at": "2026-08-30T04:01:50.403107+00:00"
   },
   "programs": {
     "groups": [
@@ -792,7 +810,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T03:56:23.369694+00:00"
+    "generated_at": "2026-08-30T04:01:50.403222+00:00"
   },
   "contract_quality_gaps": [
     {
