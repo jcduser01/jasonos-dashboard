@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T02:32:18Z",
+  "generated_at": "2026-08-30T02:57:57Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 19,
+      "guardrail_repairs": 18,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T23:20:00Z",
-    "minutes_since_session": 192,
+    "minutes_since_session": 217,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -535,12 +535,6 @@
         "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
         "items": [
           {
-            "id": "GAP-252",
-            "type": "GAP",
-            "description": "relay_enqueue() (the async default path) has no equivalent to relay_commit()'s GAP-245\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-253",
             "type": "GAP",
             "description": "Does GAP-245's push-mismatch RelayError correctly fire when a push interlock silently skips the\u2026",
@@ -603,7 +597,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T02:32:18.418030+00:00"
+    "generated_at": "2026-08-30T02:57:57.351434+00:00"
   },
   "programs": {
     "groups": [
@@ -822,7 +816,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T02:32:18.418133+00:00"
+    "generated_at": "2026-08-30T02:57:57.351543+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1312,7 +1306,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 6,
+    "open_gaps": 5,
     "open_rems": 1
   }
 }
