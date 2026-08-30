@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T03:20:42Z",
+  "generated_at": "2026-08-30T03:49:53Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 16,
+      "guardrail_repairs": 15,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-29T23:20:00Z",
-    "minutes_since_session": 240,
+    "minutes_since_session": 269,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -531,18 +531,6 @@
   "projects": {
     "groups": [
       {
-        "name": "Git Relay Commit-Path Hardening",
-        "description": "Harden the git relay's staged-lane and path-limited-commit mechanics so a new file or a scoped pathspec can never silently fail or leak scope.",
-        "items": [
-          {
-            "id": "GAP-254",
-            "type": "GAP",
-            "description": "Four relay-worker (jasonos-git-relay.sh) shell test suites carry pre-existing, unrelated failures\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Dyson Hope Blog-Drip Publishing Pipeline",
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
@@ -579,7 +567,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T03:20:42.945611+00:00"
+    "generated_at": "2026-08-30T03:49:53.374335+00:00"
   },
   "programs": {
     "groups": [
@@ -798,7 +786,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-30T03:20:42.945726+00:00"
+    "generated_at": "2026-08-30T03:49:53.374442+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1288,7 +1276,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 3,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
