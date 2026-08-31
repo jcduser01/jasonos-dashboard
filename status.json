@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T05:39:01Z",
+  "generated_at": "2026-08-31T07:39:05Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-08-30T08:06:00Z",
-    "minutes_since_session": 1293,
+    "minutes_since_session": 1413,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -330,19 +330,19 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-08-30T07:34:17Z",
+      "last_active": "2026-08-31T07:34:10Z",
       "invocations_30d": 46
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-08-30T07:46:10Z",
-      "invocations_30d": 60
+      "last_active": "2026-08-31T06:33:17Z",
+      "invocations_30d": 61
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-08-30T07:37:18Z",
+      "last_active": "2026-08-31T07:36:52Z",
       "invocations_30d": 30
     },
     {
@@ -579,7 +579,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-31T05:39:01.072826+00:00"
+    "generated_at": "2026-08-31T07:39:05.810449+00:00"
   },
   "programs": {
     "groups": [
@@ -798,7 +798,7 @@
         ]
       }
     ],
-    "generated_at": "2026-08-31T05:39:01.072942+00:00"
+    "generated_at": "2026-08-31T07:39:05.810550+00:00"
   },
   "contract_quality_gaps": [
     {
