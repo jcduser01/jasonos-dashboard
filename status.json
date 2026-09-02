@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T06:38:30Z",
+  "generated_at": "2026-09-02T07:54:44Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -66,11 +66,11 @@
     "maintenance": {
       "admitted": 1,
       "declined_observations": 0,
-      "expired_observations": 6
+      "expired_observations": 8
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 18,
+      "guardrail_repairs": 14,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-02T05:18:07Z",
-    "minutes_since_session": 80,
+    "minutes_since_session": 156,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -276,19 +276,19 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-09-01T07:34:09Z",
+      "last_active": "2026-09-02T07:33:58Z",
       "invocations_30d": 46
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-09-02T06:32:57Z",
+      "last_active": "2026-09-02T07:44:18Z",
       "invocations_30d": 60
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-09-01T07:37:14Z",
+      "last_active": "2026-09-02T07:38:14Z",
       "invocations_30d": 30
     },
     {
@@ -306,7 +306,7 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-09-01T10:02:43Z",
+      "last_active": "2026-09-02T07:53:50Z",
       "invocations_30d": 35
     },
     {
@@ -504,48 +504,6 @@
         ]
       },
       {
-        "name": "Governance Tooling & Checker Reliability",
-        "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
-        "items": [
-          {
-            "id": "GAP-274",
-            "type": "GAP",
-            "description": "The observation register (observations.jsonl) has no correction path, and its own expiry logic can\u2026",
-            "action": "agent"
-          },
-          {
-            "id": "GAP-277",
-            "type": "GAP",
-            "description": "Work-item templates present production_or_maintenance as a free author choice when the conformance\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
-        "name": "Security Steward Audit-Trail Hygiene",
-        "description": "Clear the backlog and structural defects in the Security Steward's own audit-inbox and capability-review record-keeping.",
-        "items": [
-          {
-            "id": "GAP-273",
-            "type": "GAP",
-            "description": "Security Steward compliance pipeline is degrading silently: missed weekly review, no catch-up\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
-        "name": "Knowledge Vault Operations",
-        "description": "KB vault inbox triage, retention/expiry, and index-completeness hygiene \u2014 a recurring operational category (GAP-221, 2026-08-03).",
-        "items": [
-          {
-            "id": "GAP-275",
-            "type": "GAP",
-            "description": "KB inbox triage has no standing cadence, so items chronically age past the 48h SLA",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "INI-153 Fiction Development System V1 Engine \u2014 Stage 5 Ship",
         "description": null,
         "items": [
@@ -558,7 +516,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T06:38:30.385883+00:00"
+    "generated_at": "2026-09-02T07:54:44.986257+00:00"
   },
   "programs": {
     "groups": [
@@ -766,7 +724,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T06:38:30.385983+00:00"
+    "generated_at": "2026-09-02T07:54:44.986357+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -814,32 +772,6 @@
   ],
   "pending_notes": [
     {
-      "id": "OBS-COWORK-SCHEDULED-TASK-SYNC-GATE-OR-LAUNCHD-MIGRATION",
-      "summary": "GAP-216's fix required update_scheduled_task (Cowork-only) to sync the canonical operations/assets/jasonos-operations-backup.SKILL.md source to the live deployed Cowork scheduled-task prompt -- native Claude Code cannot perform that sync, so a source-only fix silently leaves the OLD (defective) prompt running until someone remembers the manual step or Security Steward's weekly drift check (PCR-OPS-008) catches it. CEO asked whether the scheduled task could just read the source live instead of keeping two manually-synced copies; President Agent's counter-proposal: a fetch-and-confirm pattern rather than a bare live read -- each Cowork-run scheduled task's Step 0 fetches its own canonical SKILL.md source, hashes it, and either proceeds only on a match to an approved value or explicitly reports/escalates a mismatch instead of silently running stale (or silently running unreviewed-new) instructions -- preserves the existing deploy-review gate (an edit doesn't go live merely by being saved) while catching drift automatically and immediately instead of relying on a human noticing or a weekly sweep. CEO's stated alternative, which they are open to considering and specifically framed as a possible full replacement rather than a complement to the above: deprecate ALL Cowork-run scheduled tasks and replace them with native launchd invocation on the Mac mini, motivated by making JasonOS more provider-agnostic (a stated organizational goal) -- this would eliminate the two-copy/sync-gap problem class entirely (no separate Cowork-deployed prompt to drift from source), at the cost of whatever Cowork-only capabilities (e.g. Gmail/Drive/Shopify MCP connectors) any given scheduled task currently depends on, which would need per-task auditing before a migration could be scoped. Not admitted as work: this is an architecture-direction question for the CEO to decide (incremental sync-gate vs. structural migration), not yet a scoped, approved piece of work.",
-      "source": "CEO conversation, 2026-07-30, following GAP-216 closure (Claude Code, native Mac mini, President Agent)",
-      "observed_at": "2026-07-30",
-      "expires_on": "2026-08-29",
-      "project": "Process & Surface Governance"
-    },
-    {
-      "id": "OBS-SCHEDULED-TASK-LOG-APPEND-MISSED",
-      "summary": "Two scheduled tasks completed without their mandated log append, leaving the run outcome unverifiable from the log channel alone. (1) jasonos-airlock-monitor: scheduler lastRunAt 2026-08-01T06:30:57Z, but no 2026-08-01 entry in Logs/director-logs/operations/operations-log.md and no new Logs/airlock-manifests/ file (latest is 2026-07-31-002). (2) jasonos-engineering-backup 2026-07-31: runner audit shows upload_success at 07:33:18Z with a Drive file id, but the engineering log has no 07-31 entry \u2014 self-reported by the 08-01 run and deliberately not backfilled. In both cases the underlying work appears to have run; what failed is the evidence write, which is what report triage reads. cannot_verify, not clean.",
-      "source": "report-triage 2026-08-01 step 2i (scheduled-task existence-vs-outcome verification)",
-      "observed_at": "2026-08-12",
-      "expires_on": "2026-08-31",
-      "project": "Backup & Scheduled-Task Reliability",
-      "occurrences": 5
-    },
-    {
-      "id": "OBS-KB-INBOX-AGING-2026-08-02",
-      "summary": "check-kb-completeness.py Facet A FAILs again: 1 of 23 inbox items is past the 48h SLA and unresolved in the index Inbox Status table \u2014 AIRLOCK-2026-07-31-001-instagram-reel-safe-zone, aged 2.5d in knowledge/jasonos-vault/inbox. Facets B1 (56 index->disk links) and B2 (declared structure vs disk) both clean. Filed under a new id because the prior OBS-KB-INBOX-AGING reached terminal status 'addressed' on 2026-07-31 (all 6 then-aged items triaged) and record-observation.py correctly refuses to reopen a terminal row. GAP-221 (2026-08-03) registered 'Knowledge Vault Operations' in operations/project-registry.md and fixed the write/read validation asymmetry that made setting this field unsafe; project now set retroactively.",
-      "source": "report-triage 2026-08-02 step 2b (check-kb-completeness.py Facet A)",
-      "observed_at": "2026-08-29",
-      "expires_on": "2026-09-01",
-      "project": "Knowledge Vault Operations",
-      "occurrences": 25
-    },
-    {
       "id": "OBS-FINANCIAL-RETENTION-LOG-MISSING-2026-07-31-ENTRY",
       "summary": "The 2026-07-31 weekly financial digest re-based the forecast baselines (store v3 -> v4) but never appended the matching entry to financial/state/retention-log.md, which is the digest channel's append-only record and a report-triage input. Verified at source: forecast-baseline-store.json archived_baselines[] carries as_of values 2026-07-31, 2026-07-17 and 2026-07-06, while retention-log.md jumps straight from its 2026-07-17 entry to the 2026-08-01 monthly close. The 08-01 entry itself refers to 'prior 2026-07-31 baselines archived', confirming the write happened. One baseline generation is therefore unexplained from the retention log alone. Same shape as OBS-SCHEDULED-TASK-LOG-APPEND-MISSED but a different channel and a different (CEO-directed, not scheduled \u2014 jasonos-financial-digest lastRunAt is 2026-07-27) run. Not admitted as work: a single missed append with the underlying state fully recoverable from the store; no live control failing, no named delivery blocked.",
       "source": "report-triage 2026-08-02, financial digest channel verification (financial/state/retention-log.md cross-checked against financial/state/forecast-baseline-store.json)",
@@ -851,19 +783,19 @@
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
       "summary": "New: check-doctrine-artifact-currency.py exits 1 for brand 'jason-cook-design' \u2014 4 artifacts in knowledge/clients/jason-cook-design carry no doctrine_reconciled: marker against the 2026-07-16 ratified-doctrine baseline: ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. The checker last read exit 0 on 2026-07-19, so these post-date that ratification and were authored without the stamp rather than having gone stale. Each needs one of reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "report-triage 2026-08-03 step 2b (check-doctrine-artifact-currency.py, PCR-KNOW-005)",
-      "observed_at": "2026-08-29",
+      "observed_at": "2026-09-01",
       "expires_on": "2026-09-02",
       "project": "Process & Surface Governance",
-      "occurrences": 24
+      "occurrences": 27
     },
     {
       "id": "OBS-DEAD-PATH-REGROWTH-2-NEW-PINS-INI149",
       "summary": "The GAP-065 regrowth guard fired for the first time in this sweep series: governed=437 baselined=40 NEW=2. Two files added by INI-149 (ops repo d73763a4, 2026-08-04 02:53) carry a sole hardcoded mount root and are not in the baseline allowlist: operations/bin/venture-engine/console_app.py and operations/bin/venture-engine/vengine/calibration/_dispositions.py. The guard worked exactly as designed \u2014 it fails closed on NEW pins so the 40-file legacy debt cannot quietly grow \u2014 so this is regrowth detected, not a control failure. Disposition is either fix the two pins to use the mount-resolving path helper or consciously baseline them as more venture-engine legacy debt. Not admitted as work: ordinary repository/path drift is observation-only under protocol v2.3; no incident, no live control failing, no named delivery blocked.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), 2026-08-04 report-triage sweep",
-      "observed_at": "2026-08-29",
+      "observed_at": "2026-09-01",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 23
+      "occurrences": 26
     },
     {
       "id": "OBS-AIRLOCK-ROOT-LOOSE-FILE-OUTSIDE-RESERVED-TRANSIT-RULE",
@@ -913,10 +845,10 @@
       "id": "OBS-GOVERNANCE-REPO-STALE-INDEX-LOCK-STRANDED",
       "summary": "A stranded zero-byte .git/index.lock sits in Governance/jasonos-governance, mtime 2026-08-07T04:34:45Z (6.5h before this sweep), left by an earlier attended session -- not by this sweep. On this FUSE mount unlink() EPERMs, so git cannot clean up after itself (GAP-058), and the next relay git add against the governance repo will fail with a false 'another git process seems to be running'. Verified stale, not live: no governance commit has been attempted since (local main == origin/main == 9188f9a2, unchanged since the 08-06T17:59Z GAP-229 session), the governance-compare heartbeat read clean/ahead=0/behind=0 at 11:01:07Z (it uses non-index-mutating verbs, so passing does not clear the lock), and git-relay.log shows zero 'index.lock'/'another git process' errors because today's relay traffic was all operations-lane. The operations repo carries no bare lock. Not repaired this sweep: the protocol's write boundary forbids executing remediation and this sweep did not cause the condition -- unlike 08-06, which repaired locks it created and disclosed that. Repair when attended: operations/bin/jasonos-clear-stale-git-locks.py (rename-aside). Also still awaiting Mac-side deletion: index.lock.stale-3-1786014818643370296 (governance) and index.lock.stale-6-1786014813187311418 (operations), the rename-aside leftovers disclosed by the 08-06 sweep.",
       "source": "jasonos-report-triage 2026-08-07T11:05Z",
-      "observed_at": "2026-08-29",
+      "observed_at": "2026-09-01",
       "expires_on": "2026-09-06",
       "project": "Git Relay Commit-Path Hardening",
-      "occurrences": 14
+      "occurrences": 15
     },
     {
       "id": "OBS-MAINTENANCE-PCR-FILED-WITH-NO-PAYBACK-CASE",
@@ -938,10 +870,10 @@
       "id": "OBS-WORK-ITEM-RESOLUTION-COMPLETENESS-7-EMPTY-CLOSURES",
       "summary": "New, and a regression on this axis: check-work-item-resolution-completeness.py reports DRIFT \u2014 7 closed work items with an empty or placeholder-only closure record. This checker returned OK as recently as the 2026-08-09 sweep, so the seven arrived with the large 08-09..08-11 closure batch (GAP-218/228/230/231/232/233/239-244/251 all moved to resolved in this window). Observation-only per protocol step 2l; no delivery is blocked and no live control stopped working. Worth a human eye because an empty closure record is how the reason a thing was closed stops being recoverable.",
       "source": "jasonos-report-triage 2026-08-11 sweep",
-      "observed_at": "2026-08-27",
+      "observed_at": "2026-09-01",
       "expires_on": "2026-09-10",
       "project": "Process & Surface Governance",
-      "occurrences": 12
+      "occurrences": 14
     },
     {
       "id": "OBS-REPO-PLACEMENT-UNKNOWN-GIT-HOOKS-PATHS",
@@ -951,15 +883,6 @@
       "expires_on": "2026-09-10",
       "project": "Process & Surface Governance",
       "occurrences": 11
-    },
-    {
-      "id": "OBS-STEWARD-AUDIT-INBOX-GAP089-NON-ENTRY-RESIDUE",
-      "summary": "The Security Steward's own 2026-08-10 F4 finding, recorded here so it is visible to the sweep that owns the inbox. GAP089-diff.txt and GAP089-live-evidence.txt have sat in Logs/steward-audit-inbox/ since 2026-07-11 \u2014 31 days \u2014 and are not entry files: no entry_id, no timestamp frontmatter, so the compactor neither merges nor rejects them, it simply steps over them every run. This sweep ran the compactor as designated single writer and merged the two conforming 2026-08-10 cap-rev entries cleanly (active segment 16,282 to 31,652 of 40,000 bytes, 0 pending), which leaves these two as the only inbox residue. The inbox is the Steward's sole write path under GAP-070; unrecognized residue there is an audit-trail question, not cosmetic.",
-      "source": "jasonos-report-triage 2026-08-11 sweep",
-      "observed_at": "2026-08-29",
-      "expires_on": "2026-09-10",
-      "project": "Security Steward Audit-Trail Hygiene",
-      "occurrences": 16
     },
     {
       "id": "OBS-FINANCIAL-STATE-BACKUP-DRIVE-TIMEOUT-FAILED-SILENTLY",
@@ -1012,14 +935,6 @@
       "occurrences": 2
     },
     {
-      "id": "OBS-DIRECTOR-ESCALATION-TO-PRESIDENT-HAS-NO-PATH-WHEN-THE-SWEEP-DOES-NOT-RUN",
-      "summary": "The Financial Analysis Director's daily task raises escalations to the President Agent by writing them into its own log; the report-triage sweep is the only mechanism that reads that log and adjudicates them. The 2026-08-13 sweep disconfirmed both FSS escalations and filed OBS-FSS-2026-08-13-BOTH-ESCALATIONS-DISCONFIRMED so a later reader would not act on them. With no sweep on 08-14, 08-15 or 08-16, nothing surfaced that record: the FSS log now carries three further days re-raising both, escalating the request for an Engineering verification pass, and stating the comparison window 'closes today'. The escalation channel has no queue, no acknowledgement and no SLA \u2014 it is write-into-log-and-hope-the-sweep-runs.",
-      "source": "report-triage 2026-08-17, Logs/director-logs/financial-analysis/financial-analysis-log.md 08-14/08-15/08-16",
-      "observed_at": "2026-08-17",
-      "expires_on": "2026-09-16",
-      "project": null
-    },
-    {
       "id": "OBS-DASHBOARD-MECHANISM-BLOCK-IS-A-HARDCODED-LITERAL-AND-ALREADY-DISAGREES-WITH-THE-REGISTRY",
       "summary": "The CEO dashboard's entire mechanisms panel is a hardcoded Python literal, not a reading of the script registry, and its composition has already drifted. jasonos-production-metrics.py build_production_model() returns mechanisms as constants: status 'at_ceiling', ceiling 58, active {daemons 13, checkers 16, policies 29}, live_count 58. Live check-script-registry-coverage.py this run reports daemons=13, checkers=15, policies=30. The totals coincide at 58, so the ceiling reading on the dashboard is accidentally correct while the composition is wrong by one checker and one policy. The block's own limitation string reads 'Active membership is enforced by the script-registry coverage gate', which invites the reader to treat the numbers as derived from that gate; nothing in the function reads the registry. Consequence: if a mechanism were added, retired, or the 58 ceiling breached, status.json would continue to report at_ceiling 58/58 with a stale breakdown and no reader would see it from the dashboard. NOT admitted as a broken guardrail: the actual enforcement control is check-script-registry-coverage.py, which ran this sweep and correctly held the 58/58 one-in-one-out ceiling. What is defective is the display, not the gate. not admitted as work",
       "source": "report-triage 2026-08-17T11:05Z sweep \u2014 operations/bin/jasonos-production-metrics.py:352-357 read against live check-script-registry-coverage.py output and code/jasonos-dashboard/status.json",
@@ -1067,10 +982,10 @@
       "id": "OBS-TWO-REGISTERED-CHECKERS-ARE-PERMANENTLY-UNREACHABLE-FROM-THE-UNATTENDED-SWEEPS-OWN-ENVIRONMENT",
       "summary": "Two of the 15 registered checkers cannot run at all in the environment the daily sweep actually executes in, and both have been reported as prose-only cannot_verify for many consecutive runs with no durable row anywhere. (1) check-skills-drift.py exits 2 at locate ('could not locate the skills-plugin/ cache directory') \u2014 twenty-first consecutive sweep, first recorded 2026-07-31; the plugin cache under Library/Application Support is not a granted Cowork folder, so both facets are unreachable by construction. (2) check-scheduled-task-coverage.py exits 2 ('could not locate repo ... or scheduler path (None)') \u2014 fifth consecutive sweep since 2026-08-17T05:33Z; the checker resolves the scheduler at ~/Claude/Scheduled or /sessions/*/mnt/Claude/Scheduled and this session's granted folders are JasonOS, SandboxData and bin only, with no Claude mount. It returned 15/15 on 08-13 because that session happened to have one, so the control's verdict depends on which folders a given unattended session was granted. Neither is a broken checker: the protocol's own rule (an unreachable source is cannot_verify, never clean) is being followed correctly each run. The durable finding is that a permanently-unreachable check has no disposition path \u2014 the Security Steward's standing question F6 ('what should a permanently unreachable check report?') has been re-raised in the sweep narrative on every one of those runs since 2026-07-31 and remains unanswered, so the estate carries two coverage controls whose result is structurally unknowable from the environment they are scheduled in, and only the sweep's prose records it. Scheduled-task coverage was substituted this run by reading live scheduler state via list_scheduled_tasks (15 tasks, all reconciled), which is a weaker hand-run substitute. not admitted as work",
       "source": "jasonos-report-triage 2026-08-20T11:05Z",
-      "observed_at": "2026-08-29",
+      "observed_at": "2026-09-01",
       "expires_on": "2026-09-19",
       "project": "Process & Surface Governance",
-      "occurrences": 10
+      "occurrences": 13
     },
     {
       "id": "OBS-GAP-262-IS-INDEXED-BUT-UNCOMMITTED-AND-NO-CONTROL-WATCHES-THE-OPERATIONS-REPO-WORKING-TREE",
@@ -1085,10 +1000,10 @@
       "id": "OBS-SWEEP-NARRATIVE-REPORTED-DOCTRINE-CURRENCY-COUNT-DISAGREES-WITH-THE-CHECKERS-DETERMINISTIC-OUTPUT",
       "summary": "check-doctrine-artifact-currency.py returns 18 candidates today (6 with no doctrine_reconciled marker, 12 stamped before the 2026-07-31 boundary; zero current). The 2026-08-21 sweep narrative recorded '11 artifacts: 4 unstamped, 7 predating the 07-31 boundary' for the same check. Nothing in the inputs changed between the two runs: the checker is git-clean, unmodified since commit 8e65d596 (2026-07-03), mtime 2026-07-25; every JCD vault artifact has an mtime of 2026-08-04 or older (18 days); the ratification boundary quoted is the same 2026-07-31; and no artifact carries a marker on or after that boundary, so 18-of-18 is the only arithmetic the corpus supports. The reported figure therefore was not a measurement of the state the checker was reading. This is a narrative-transcription defect in the sweep's own reporting, not a checker fault \u2014 the checker's output is correct and deterministic. It matters because a hand-carried count is the only thing an observation's occurrence history records, so a wrong figure silently becomes the audit record. Not admitted as work: no named live control has stopped working.",
       "source": "report-triage 2026-08-22",
-      "observed_at": "2026-08-24",
+      "observed_at": "2026-09-01",
       "expires_on": "2026-09-21",
       "project": null,
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "id": "OBS-SCHEDULED-TASK-ABORTED-PRE-STEP-1-BY-UPSTREAM-529-CANNOT-EVEN-WRITE-ITS-OWN-LOADER-FAILURE-LINE",
@@ -1100,30 +1015,12 @@
       "occurrences": 2
     },
     {
-      "id": "OBS-WEEKLY-STEWARD-COMPLIANCE-REVIEW-FOR-2026-08-24-DID-NOT-RUN-AND-HAS-NO-CATCH-UP-PATH",
-      "summary": "jasonos-security-steward-review fired at 2026-08-24T07:05:42Z and aborted at turn zero (529). weekly-2026-08-24.md is absent, breaking an unbroken Monday series (weekly-2026-07-13, -07-20, -07-27, -08-03, -08-10, -08-17). The task is weekly-cron only: nextRunAt is 2026-08-31T07:04:46Z, so nothing re-runs it and this week has no compliance review unless a human re-fires it. Compounding: cap-rev-2026-08-22-fds-ticket006 (CLEAR-WITH-CONDITIONS, condition C1 open, plus an unaddressed TICKET-005 condition) crosses the 48h pending-security threshold at 2026-08-25T01:26Z with no accountable disposition in workloads/active/ \u2014 and the control that would normally pick that up is the one that did not run.",
-      "source": "list_scheduled_tasks; ls Logs/security-steward-audit/archive/, 2026-08-24 report-triage sweep",
-      "observed_at": "2026-08-29",
-      "expires_on": "2026-09-23",
-      "project": null,
-      "occurrences": 6
-    },
-    {
       "id": "OBS-INVOCATION-MASTER-LINE-RECORDS-STATUS-SUCCESS-AND-EXIT-CODE-1-FOR-THE-SAME-RUN",
       "summary": "The financial-cockpit weekly digest run is recorded as 'status=success ... exit-code=1'. The run itself was correct \u2014 STEP 2 held on a 13-day-old export rather than rendering \u2014 but the audit line asserts both outcomes at once, so neither field can be read alone. Every other line in the file carries status=success with exit-code=0. Minor audit-legibility defect; no operational impact this run.",
       "source": "Logs/director-logs/agent-invocation-master.log, 2026-08-24T09:02:52 line",
       "observed_at": "2026-08-24",
       "expires_on": "2026-09-23",
       "project": null
-    },
-    {
-      "id": "OBS-DIRECTOR-DECLARED-OBSERVATION-NEVER-REACHED-THE-OBSERVATIONS-REGISTER",
-      "summary": "Today's Operations Director backup entry (Logs/director-logs/operations/operations-log.md, 2026-08-25 07:43 UTC) declares OBS-RELAY-CLIENT-WAIT-TIMEOUT-SHORTER-THAN-ROTATION-RUN under an explicit 'Observations (not admitted as work)' heading, but that id does not exist in operations/observations.jsonl (grep count 0, verified at source this run). A finding written only into a director log has no expiry clock, never appears on the dashboard Pending Notes panel, and cannot accrue an occurrence count -- the three mechanisms report-triage v2.3 relies on to keep an unpromoted finding visible. The declaring log entry reads as if the register knows about it. Filed the underlying observation separately this run; this observation is about the routing gap, not the relay timeout.",
-      "source": "report-triage sweep 2026-08-25",
-      "observed_at": "2026-08-28",
-      "expires_on": "2026-09-24",
-      "project": null,
-      "occurrences": 3
     },
     {
       "id": "OBS-RELAY-CLIENT-WAIT-TIMEOUT-SHORTER-THAN-ROTATION-RUN",
@@ -1144,29 +1041,12 @@
       "occurrences": 5
     },
     {
-      "id": "OBS-PENDING-STEWARD-REVIEW-PAST-48H-AND-ITS-DISPOSING-CONTROL-IS-THE-ONE-THAT-DID-NOT-RUN",
-      "summary": "Step 2k pending-security check fires for the first time: cap-rev-2026-08-22-fds-ticket006 (CLEAR-WITH-CONDITIONS; condition C1 open, prior TICKET-005 containment condition also open) is 57.7h old at sweep time with no accountable disposition -- workloads/active/ holds nothing newer than 2026-07-27 and workloads/completed/ nothing newer than 2026-07-27; the only estate-wide mention outside the review itself is narrative in Logs/session-handoff.md and GAP-262. The control that would ordinarily dispose of it is jasonos-security-steward-review, which aborted pre-Step-1 on 08-24 and has nextRunAt 2026-08-31T07:04:46Z with no in-week catch-up path. Visibility and broken-guardrail evidence per protocol v2.3 Step 2k, not automatic work admission.",
-      "source": "report-triage sweep 2026-08-25",
-      "observed_at": "2026-08-29",
-      "expires_on": "2026-09-24",
-      "project": null,
-      "occurrences": 5
-    },
-    {
       "id": "OBS-OPERATIONS-REPO-GIT-DIR-ACCUMULATES-PARKED-SWEEP-LOCK-FILES",
       "summary": "Operations repo .git/ holds four orphaned lock artifacts -- index.lock.jasonos-sweep-parked-20260823T110950Z, -20260823T111259Z, -20260824T111858Z, and index.lock.stale-6-1786014813187311418. They are the residue of the sweep's own disposal-by-rename workaround for the Cowork mount's unlink(2) denial: each stranded lock is renamed aside rather than deleted, and nothing reaps the renamed file. One file accrues per occurrence, indefinitely, inside the git directory of the estate's primary write path. This run created no fifth: repo refs were read directly from .git/HEAD and .git/refs rather than by invoking 'git status --porcelain', which is what strands the lock. That substitution is the cheaper method and should be the sweep's default.",
       "source": "report-triage sweep 2026-08-25",
       "observed_at": "2026-08-25",
       "expires_on": "2026-09-24",
       "project": null
-    },
-    {
-      "id": "OBS-OBSERVATION-ID-ENCODES-A-CLAIM-THAT-LATER-PROVED-FALSE-AND-THE-REGISTER-HAS-NO-CORRECTION-PATH",
-      "summary": "OBS-WEEKLY-STEWARD-COMPLIANCE-REVIEW-FOR-2026-08-24-DID-NOT-RUN-... asserts in its own id that the task did not run; this sweep proved it did run and was killed by an upstream 529. record-observation.py bumps occurrences and refreshes observed_at but cannot amend an id or a summary, and disposition-observation.py only reaches terminal states \u2014 so a register row whose id carries a disproven claim can only be closed and re-filed under a new id, losing the occurrence history, or left standing while every reader is misled by the id alone. Ids in this register are load-bearing (they are the dedup key and what the dashboard shows), which is exactly why encoding a falsifiable causal claim in one is a hazard. Not admitted as work.",
-      "source": "report-triage sweep 2026-08-26T11:06Z",
-      "observed_at": "2026-08-26",
-      "expires_on": "2026-09-25",
-      "project": "Governance Tooling & Checker Reliability"
     },
     {
       "id": "OBS-DAILY-BACKUP-TASKS-DESCRIBE-THEMSELVES-AS-WEEKLY-IN-SCHEDULER-AND-DIRECTOR-LOG",
@@ -1193,14 +1073,6 @@
       "observed_at": "2026-08-27",
       "expires_on": "2026-09-26",
       "project": "Backup & Scheduled-Task Reliability"
-    },
-    {
-      "id": "OBS-EXPIRY-CLOSED-AN-OBSERVATION-ON-THE-DAY-ITS-CONDITION-RECURRED-A-THIRD-TIME",
-      "summary": "expire-observations.py expired OBS-DASHBOARD-GENERATED-AT-QUIESCENT-STALENESS today (scanned=87 expired=1). Its condition is live-true this morning for the third time: dashboard status.json generated_at reads 2026-08-28T07:59:02Z (3.12h vs a 2h threshold) while the publisher demonstrably ran at 09:59:06 local (~1.15h) and logged no-diff. Expiry is purely date-driven and cannot see that the finding is currently true, and disposition-observation.py refuses terminal ids, so the register now has no path to record the third recurrence. The 08-27 sweep predicted this exact outcome and no disposition was taken.",
-      "source": "2026-08-28-report-triage-sweep",
-      "observed_at": "2026-08-28",
-      "expires_on": "2026-09-27",
-      "project": null
     },
     {
       "id": "OBS-REPORT-TRIAGE-INPUT-TABLE-NAMES-A-PATH-THAT-DOES-NOT-EXIST-FOR-THE-OPERATIONS-CHANNEL",
@@ -1236,6 +1108,98 @@
       "project": "Backup & Scheduled-Task Reliability"
     },
     {
+      "id": "OBS-ROTATION-CONSECUTIVE-FAILURE-GIT-RELAY-2026-08-30",
+      "summary": "rotation_upload_failure for logname=git-relay (target=Logs) has occurred 4 consecutive times as of 2026-08-30. Off-site Drive coverage gap in progress. Local archives are intact (accepted-truncation policy, GAP-267 fix: live log is bounded even when Drive is unavailable). Action required: investigate Drive transport and verify or manually upload the missing archived content.",
+      "source": "jasonos-drive-backup-runner rotation phase (GAP-267 consecutive-failure alert)",
+      "observed_at": "2026-08-30",
+      "expires_on": "2026-09-29",
+      "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "OBS-MASS-GAP-CLOSURE-LANDED-FILES-BUT-NOT-THE-INDEXES",
+      "summary": "The 2026-08-29/08-30 interactive sessions closed a large GAP batch (open GAPs went 20 -> 1; open PCRs now 0), moving the files into governance/gaps/resolved/ but leaving three register surfaces unreconciled, all verified this run at source: (1) jasonos-work-item-index-generator.py --type gap --check reports DRIFT \u2014 9 IDs resolved on disk but still absent from the INDEX Resolved section (GAP-252, 253, 254, 255, 256, 257, 265, 268, 269); (2) --type pcr --check reports PCR-OPS-078 missing from the PCR index; (3) check-gap-folder-status-agreement.py reports 2 MISMATCH files sitting in resolved/ whose own Status frontmatter still reads Open (GAP-256, GAP-269). check-duplicate-work-item-ids.py is OK, so no ID collision was introduced. These four checkers are the protocol's weekly/lifecycle-cadence set and were run this cycle precisely because a mass lifecycle transition occurred, not on the daily schedule. Observation-only per protocol v2.3 steps 2g/2j \u2014 generated-index drift and folder/status agreement are observation-only unless a named delivery is blocked, and none is. Recorded because this drift arrived in one burst rather than accumulating, so it is cheap to reconcile now, and until it is, the INDEX and the dashboard describe an estate state that the filesystem contradicts.",
+      "source": "jasonos-report-triage 2026-08-30 sweep",
+      "observed_at": "2026-09-01",
+      "expires_on": "2026-09-29",
+      "project": "Governance Tooling & Checker Reliability",
+      "occurrences": 3
+    },
+    {
+      "id": "OBS-COMPACTOR-EVALUATES-ROTATION-BEFORE-APPEND-SO-A-LARGE-MERGE-LEAVES-THE-SEGMENT-OVER-CEILING",
+      "summary": "Step 2e ran as designed and still ends the cycle with a DEFECT, for a reason that is in the compactor's own source rather than in any failure. Sequence verified this run: check-steward-audit-log-size.py first reported '10 unmerged entries in the inbox (max 5) \u2014 the compactor is not draining the spool'; jasonos-steward-audit-compactor.py then merged all 10 cleanly (weekly-2026-08-29, the governance-review-date-lapse audit, and 8 cap-revs from 08-29/08-30) and drained the inbox to only the two known GAP089 non-entry files; the same checker then reported a different DEFECT \u2014 'active segment is 55252 bytes, over the 40000-byte ceiling \u2014 run jasonos-steward-audit-compactor.py to rotate'. Read at source: the compactor computes needs_rotation from the pre-append file size, with the deliberate comment 'Rotate before appending, so the newest entries always land in the active segment'. The segment was 7,439 bytes before the merge, so no rotation was due; the 10 appended entries then carried it to 55,252 (138% of ceiling). Two consequences worth having on the record: the sweep's own designated step now leaves a Steward audit control reporting DEFECT for a full day until the next run rotates, and the checker's printed remedy names the tool that has just run and cannot fix it in that invocation. Not a broken guardrail \u2014 nothing stopped working, no entry was lost, and rotation will fire on the 08-31 run. Related and distinct from OBS-STEWARD-AUDIT-ACTIVE-SEGMENT-AT-95PCT-OF-ROTATION-CEILING, which predicted this merge would trip rotation; it overshot instead, and the pre-append ordering is why.",
+      "source": "jasonos-report-triage 2026-08-30 sweep step 2e",
+      "observed_at": "2026-08-30",
+      "expires_on": "2026-09-29",
+      "project": "Security Steward Audit-Trail Hygiene"
+    },
+    {
+      "id": "OBS-DRIP-PENDING-SENTINEL-VANISHED-WITHOUT-THE-DISPOSITION-MARKER-ITS-PREDECESSORS-LEFT",
+      "summary": "REM-100 state change, verified at source and only partly explainable. The 08-29 sweep recorded the drip sentinel .git-commit-queue/drip-pending.json as still unconsumed at 124 bytes, carrying stem 20260810T063345Z-171bc221. Today that file is absent, and no .consumed-* or .resolved-* marker naming that stem exists \u2014 unlike both of its predecessors, which are still on disk as drip-pending.json.consumed-ab7375cc and drip-pending.json.resolved-892dc7c (both 2026-08-06). The job's own result file survives at .git-commit-queue/client-pool/20260810T063345Z-171bc221.result. Meanwhile temp/drip-last-run.json is byte-unchanged, still ran_at 2026-08-10T06:33:45Z with relay_status 'pending' and next_fire null; the drip is dark 20 days. cannot_verify on cause: the 08-29/08-30 interactive sessions touched a great deal of relay and queue state, and nothing in the queue records who removed a sentinel or why. The finding is not the removal but the asymmetry \u2014 the pipeline's own convention is to rename a sentinel to a marker rather than delete it, and the one record that still asserts the 08-10 publish is awaiting relay resolution is now a stale field in a file no mechanism reconciles. Deliberately not filed as a same-shaped daily 'drip still dark' entry; a larger elapsed number is not new evidence, but a disappeared sentinel is.",
+      "source": "jasonos-report-triage 2026-08-30 sweep, REM-100 re-read",
+      "observed_at": "2026-08-30",
+      "expires_on": "2026-09-29",
+      "project": "Dyson Hope Blog-Drip Publishing Pipeline"
+    },
+    {
+      "id": "OBS-URGENT-CEO-ACTION-DEADLINE-PASSED-AND-THE-PREDICTED-DIGEST-ABORT-OCCURRED-2026-08-31",
+      "summary": "The 2026-08-30 sweep raised as URGENT CEO action 1 a two-file copy with a hard deadline of 2026-08-31T09:00:29Z. The copy did not happen. Verified at source this run: financial/import/ still tops out at the 2026-08-11 pair (mtime 08-11 16:40), and Balances_2026-08-29T13-40-46.csv / Transactions_2026-08-29T13-40-07.csv are still in Airlock/transctions-2026-08-29/. The jasonos-financial-digest weekly run fired at 09:00Z and hit its STEP 2 abort on a 20-day-old export \u2014 no render, no store writes, app.html left stale. Third consecutive lost cycle. The digest guardrail behaved correctly; what failed is the loop that turns a dated, deadline-bearing CEO action into an executed one. The finding is that loop, not the digest. Not admitted as work.",
+      "source": "Logs/director-logs/financial-analysis/financial-analysis-log.md 2026-08-31 weekly digest entry; financial/import/ listing (report-triage 2026-08-31)",
+      "observed_at": "2026-09-01",
+      "expires_on": "2026-09-30",
+      "project": null,
+      "occurrences": 2
+    },
+    {
+      "id": "OBS-STEWARD-WEEKLY-FINDING-1-LIVE-EXPOSURE-CLAIM-CONTRADICTED-BY-DEPLOYED-STATE",
+      "summary": "The weekly compliance summary (07:07Z today) rates Finding 1 Medium and states the GAP-257 fix 'exists only as uncommitted worktree edits', that its required Steward review 'has not been performed', and that 'the exposure is therefore live'. Source verification contradicts all three premises: jasonos-governance-compare.sh is byte-identical at 18065 B across canonical operations/bin, SandboxData/bin and ~/bin (mtimes 2026-08-29 22:15-22:16), each carrying 6 SKIP_EMAIL references and the rate-ceiling block; CAP-REV-2026-08-29-GAP257.md exists and entry cap-rev-2026-08-29-gap257 is in the Steward's own audit log; GAP-257 sits in governance/gaps/resolved/ with Status Resolved; and msmtp.log shows zero sends since 2026-08-29 21:48, i.e. after deployment. The Steward's verdict is preserved and not overturned here \u2014 what is recorded is that its evidence pass read a stale worktree copy and, for the review question, did not consult its own audit log. Not admitted as work.",
+      "source": "Logs/steward-audit-inbox/weekly-2026-08-31.md Finding 1; jasonos-governance-compare.sh at three paths (report-triage 2026-08-31)",
+      "observed_at": "2026-08-31",
+      "expires_on": "2026-09-30",
+      "project": null
+    },
+    {
+      "id": "OBS-SCRIPT-REGISTRY-CEILING-BREACHED-AGAIN-59-OF-58-AND-CLOSE-WORK-ITEM-SH-UNREGISTERED",
+      "summary": "Two registry defects, both traceable to the 2026-08-29/30 closure burst. (1) Mechanism count is 59/58 active (daemons 13, checkers 16, policies 30) \u2014 a fresh one-in-one-out violation; the prior breach observation OBS-SCRIPT-REGISTRY-CEILING-BREACH reached terminal status 'elevated' on 2026-07-30, so this is filed under a new id rather than augmenting a closed lifecycle. (2) operations/bin/close-work-item.sh (8409 B, mtime 2026-08-30 02:02, the file GAP-269 fixed and shipped) has zero rows in operations/script-registry.md. Ordinary registry drift, observation-only per protocol. Not admitted as work.",
+      "source": "check-script-registry-coverage.py (report-triage 2026-08-31)",
+      "observed_at": "2026-09-01",
+      "expires_on": "2026-09-30",
+      "project": null,
+      "occurrences": 2
+    },
+    {
+      "id": "OBS-INDEX-LOCK-SWEEPER-REGISTRY-DECLARES-A-DEPLOYMENT-THAT-DOES-NOT-EXIST",
+      "summary": "The registry declares SandboxData/bin/ deployment for three GAP-266 index-lock-sweeper artifacts \u2014 jasonos-index-lock-sweeper.py, com.jasonos.index-lock-sweeper.plist, jasonos-index-lock-sweeper-activate.command \u2014 and none of the three exists at that path. Independently confirmed: neither SandboxData/bin nor ~/bin contains any file matching 'index-lock'. Recorded as a registry-truth observation, not a guardrail claim: the stranded-lock condition GAP-266 describes is still being reported by other checks (the Steward's 2026-08-31 policy-integrity note), so what is verified here is that the registry asserts a deployment that is absent, not that a live control has failed. Not admitted as work.",
+      "source": "check-script-registry-coverage.py; ls of SandboxData/bin and ~/bin (report-triage 2026-08-31)",
+      "observed_at": "2026-09-01",
+      "expires_on": "2026-09-30",
+      "project": null,
+      "occurrences": 2
+    },
+    {
+      "id": "OBS-ENGINEERING-BACKUP-PROVENANCE-SIZE-STATED-BEFORE-IT-IS-MEASURED-3-OF-5-RUNS",
+      "summary": "The daily engineering backup's Step 2 provenance line has now stated an unverified asset size before running wc -c on three of the last five runs (08-27 claimed 4682 B, 08-28 same class, 08-31 claimed 4570 B; authoritative size is 5626 B every time). sha256 is identical across all runs, so there is no content drift and backup integrity is unaffected \u2014 the defect is in the provenance record, which exists precisely so a reader can trust that the stated bytes were measured. The Engineering Director's own 08-31 entry reaches the same conclusion and proposes an observation rather than a ticket. Reporting-only, self-corrected in-run each time. Not admitted as work.",
+      "source": "Logs/director-logs/engineering/engineering-log.md 2026-08-27, 08-28, 08-31 entries (report-triage 2026-08-31)",
+      "observed_at": "2026-08-31",
+      "expires_on": "2026-09-30",
+      "project": null
+    },
+    {
+      "id": "OBS-STAGED-DEPLOYMENT-IS-INDISTINGUISHABLE-FROM-REAL-DRIFT-IN-THE-REGISTRY-CHECKER",
+      "summary": "check-script-registry-coverage.py reports jasonos-agent-dispatcher.sh deployed copies (SandboxData/bin and ~/bin, both v1.15, 92949 B, 2026-08-09) as a DEFECT against canonical v1.16 (96946 B, 2026-08-30). Verified benign: the v1.16 delta is the GAP-256 CEO-reserved-items carve-out inliner, whose own header reads 'STAGED - Security Steward review required before deployment'. The undeployed state is the gate working. The registry supports a ~/bin/(divergent) annotation for exactly this, and it is not being used, so an intentional staging hold is indistinguishable from genuine deployment rot in the checker's output.",
+      "source": "report-triage-2026-09-01",
+      "observed_at": "2026-09-01",
+      "expires_on": "2026-10-01",
+      "project": null
+    },
+    {
+      "id": "OBS-SANDBOX-TMP-PERSISTS-ACROSS-SESSIONS-AND-STALE-ROOT-OWNED-SCRATCH-FILES-CAPTURE-WRITES",
+      "summary": "Cowork sandbox /tmp is not per-session. It holds residue from prior JasonOS unattended runs (sweep.md 20429B 2026-08-30, fa-log.bak 205072B 2026-08-31, stem.txt, step3.marker), all owned nobody:nogroup and not writable by the session user uid=2007. A task writing to a fixed /tmp scratch name gets a silent Permission denied on the write, then reads a PRIOR RUN'S content from the same path. Fired on this run: a heredoc to /tmp/sweep.md failed while the following append succeeded, putting the 2026-08-30 sweep narrative into Logs/director-logs/operations/operations-log.md. Detected on the verification tail and reverted byte-exactly (log restored to 857957 B). Mitigation: session-unique scratch names in unattended tasks.",
+      "source": "report-triage-2026-09-01",
+      "observed_at": "2026-09-01",
+      "expires_on": "2026-10-01",
+      "project": null
+    },
+    {
       "id": "OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP",
       "summary": "The 2026-08-29 review-date-lapse audit found 3 of 11 lapsed capability docs (financial-analysis.md, president-coordination.md, external-communication-drafting.md) went stale specifically because a PCR amended the document's content without bumping its Review date \u2014 the second time this exact pattern has surfaced. Recommended fix: add a standing \"refresh Review date on affected capability/policy docs\" step to the PCR enactment checklist in governance/governance-manual.md \u00a7 Policy Change Management. CEO reviewed the full Track B decision set 2026-09-02 and deferred enacting this as a PCR for now; recorded here as an observation rather than dropped. Revisit if the pattern recurs a third time or when a PCR enactment is next being planned.",
       "source": "Security Steward audit CAP-REV-2026-08-29-REVIEW-DATE-LAPSE-11-DOCS; CEO disposition of Track B, 2026-09-02",
@@ -1246,7 +1210,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 5,
+    "open_gaps": 1,
     "open_rems": 1
   }
 }
