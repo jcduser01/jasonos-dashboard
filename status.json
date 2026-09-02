@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-02T04:32:21Z",
+  "generated_at": "2026-09-02T05:05:52Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-08-26",
-      "end": "2026-09-01"
+      "start": "2026-08-27",
+      "end": "2026-09-02"
     },
     "headline": {
       "delivered": 0,
@@ -105,8 +105,8 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-09-02T04:31:21Z",
-    "minutes_since_session": 1,
+    "last_session_date": "2026-09-02T05:05:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -255,14 +255,7 @@
     }
   ],
   "queue": [],
-  "ceo_actions": [
-    {
-      "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Governance-repo review-date Track B \u2014 CEO decisions needed to close out.",
-      "context": "capabilities/security-audit.md resolved this session \u2014 CEO ruled Option 1 (Steward retains Read on its own compacted aud"
-    }
-  ],
+  "ceo_actions": [],
   "status_drift": [],
   "category_drift": [],
   "contract_drift": [],
@@ -582,7 +575,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T04:32:21.641610+00:00"
+    "generated_at": "2026-09-02T05:05:52.158739+00:00"
   },
   "programs": {
     "groups": [
@@ -790,7 +783,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T04:32:21.641715+00:00"
+    "generated_at": "2026-09-02T05:05:52.158847+00:00"
   },
   "contract_quality_gaps": [
     {
