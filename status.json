@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T12:26:43Z",
+  "generated_at": "2026-09-02T12:26:46Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -510,7 +510,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T12:26:43.940999+00:00"
+    "generated_at": "2026-09-02T12:26:46.726971+00:00"
   },
   "programs": {
     "groups": [
@@ -718,7 +718,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T12:26:43.941113+00:00"
+    "generated_at": "2026-09-02T12:26:46.730946+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
