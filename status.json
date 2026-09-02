@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T04:27:08Z",
+  "generated_at": "2026-09-02T04:27:55Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -260,7 +260,7 @@
       "id": "ACT-HO-1",
       "category": "required",
       "label": "Governance-repo review-date Track B \u2014 CEO decisions needed to close out.",
-      "context": "Real content amendment to 5 of the 11 docs, starting with capabilities/security-audit.md: its Allowed Systems table cont"
+      "context": "capabilities/security-audit.md resolved this session \u2014 CEO ruled Option 1 (Steward retains Read on its own compacted aud"
     }
   ],
   "status_drift": [],
@@ -582,7 +582,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T04:27:08.207463+00:00"
+    "generated_at": "2026-09-02T04:27:55.930429+00:00"
   },
   "programs": {
     "groups": [
@@ -790,7 +790,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T04:27:08.207572+00:00"
+    "generated_at": "2026-09-02T04:27:55.930544+00:00"
   },
   "contract_quality_gaps": [
     {
