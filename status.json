@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T11:55:02Z",
+  "generated_at": "2026-09-02T12:25:05Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-09-02T05:18:07Z",
-    "minutes_since_session": 396,
+    "last_session_date": "2026-09-02T07:56:00Z",
+    "minutes_since_session": 269,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -267,6 +267,12 @@
       "category": "required",
       "label": "jasonos-operations local main is 1 commit ahead of origin/main",
       "context": "(cfdac213, unrelated Track B capability-review-migration work, not this session's) \u2014 flagged so it isn't silently forgot"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "NEW.",
+      "context": "Authorize redeploy of jasonos-git-relay.sh (canonical operations/bin/ \u2192 deployed /Volumes/SandboxData/bin/) to bring the"
     }
   ],
   "status_drift": [],
@@ -516,7 +522,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T11:55:02.537384+00:00"
+    "generated_at": "2026-09-02T12:25:05.302793+00:00"
   },
   "programs": {
     "groups": [
@@ -724,52 +730,9 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T11:55:02.537497+00:00"
+    "generated_at": "2026-09-02T12:25:05.302908+00:00"
   },
-  "contract_quality_gaps": [
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "portfolio/done/INI-149.md",
-      "category": "ini-done-delivery"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "runner scope",
-      "file": "portfolio/done/INI-149.md",
-      "category": "ini-done-delivery"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "route",
-      "file": "portfolio/done/INI-152.md",
-      "category": "ini-done-delivery"
-    },
-    {
-      "type": "retired_batch_field",
-      "field": "runner scope",
-      "file": "portfolio/done/INI-152.md",
-      "category": "ini-done-delivery"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "execution scope",
-      "file": "portfolio/done/INI-152.md",
-      "category": "ini-done-delivery"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "definition of done",
-      "file": "portfolio/done/INI-152.md",
-      "category": "ini-done-delivery"
-    },
-    {
-      "type": "missing_common_field",
-      "field": "gates",
-      "file": "portfolio/done/INI-152.md",
-      "category": "ini-done-delivery"
-    }
-  ],
+  "contract_quality_gaps": [],
   "pending_notes": [
     {
       "id": "OBS-FINANCIAL-RETENTION-LOG-MISSING-2026-07-31-ENTRY",
