@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T02:54:04Z",
+  "generated_at": "2026-09-02T03:07:36Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,7 +105,7 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-09-02T02:55:00Z",
+    "last_session_date": "2026-09-02T03:10:00Z",
     "minutes_since_session": 0,
     "airlock_queue": 7,
     "airlock_bundles": 4
@@ -259,47 +259,23 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Deploy GAP-256's dispatch-prompt carve-out wiring to live runtime copies",
-      "context": "CEO-directed 2026-09-02; blocked by the harness classifier when attempted directly. Run:"
-    },
-    {
-      "id": "ACT-HO-2",
-      "category": "required",
-      "label": "Activate the GAP-266 index-lock sweeper",
-      "context": "CEO-directed 2026-09-02; blocked by the harness classifier. Run, in order:"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "python3 /Volumes/SandboxData/operations/jasonos-operations/operations/bin/jasonos-deploy-sync.py --apply --ceo-authorize",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "zsh /Volumes/SandboxData/bin/jasonos-index-lock-sweeper-activate.command (ends on \"Press any key to close\" \u2014 any keypres",
-      "context": ""
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
       "label": "Optional: upload the 2026-08-27 git-relay.log archive to Drive",
       "context": "local copy intact either way. Source: /Volumes/SandboxData/Archive/Logs/engineering/2026-08-27/git-relay-2026-08-27.log."
     },
     {
-      "id": "ACT-HO-6",
+      "id": "ACT-HO-2",
       "category": "required",
       "label": "Corporate Filings: request a $19.00 refund and remove the old card",
       "context": "a transition-period double-bill on Aug 14 (retired Amex ...1006 + new US Bank structure both billed the same $19.00 char"
     },
     {
-      "id": "ACT-HO-7",
+      "id": "ACT-HO-3",
       "category": "required",
       "label": "Governance-repo review-date lapse \u2014 two PCRs need scoping",
       "context": "11 capability/policy docs carry a lapsed Review date: 2026-07-31 (confirmed still lapsed this session, 32+ days overdue)"
     },
     {
-      "id": "ACT-HO-8",
+      "id": "ACT-HO-4",
       "category": "required",
       "label": "FDS Apache AGE 1.7.0 / PostgreSQL 18 compatibility adjudication (INI-153)",
       "context": "now eligible for action: the reboot that had the machine tied up on a resource-heavy parallel task is complete. CEO will"
@@ -552,7 +528,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T02:54:04.190090+00:00"
+    "generated_at": "2026-09-02T03:07:36.176929+00:00"
   },
   "programs": {
     "groups": [
@@ -760,7 +736,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T02:54:04.190193+00:00"
+    "generated_at": "2026-09-02T03:07:36.177033+00:00"
   },
   "contract_quality_gaps": [
     {
