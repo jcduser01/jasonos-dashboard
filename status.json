@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T03:26:41Z",
+  "generated_at": "2026-09-02T03:30:10Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 6
   },
   "operational": {
-    "last_session_date": "2026-09-02T03:10:00Z",
-    "minutes_since_session": 16,
+    "last_session_date": "2026-09-02T03:35:00Z",
+    "minutes_since_session": 0,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -279,6 +279,12 @@
       "category": "required",
       "label": "FDS Apache AGE 1.7.0 / PostgreSQL 18 compatibility adjudication (INI-153)",
       "context": "now eligible for action: the reboot that had the machine tied up on a resource-heavy parallel task is complete. CEO will"
+    },
+    {
+      "id": "ACT-HO-5",
+      "category": "required",
+      "label": "Clear the staged/rem100-rearm-aborterror lane blocking the memory-index-publisher daemon",
+      "context": "not this session's own work, but found blocking a routine daemon while closing. The lane holds one good commit (a memory"
     }
   ],
   "status_drift": [],
@@ -540,7 +546,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T03:26:41.149724+00:00"
+    "generated_at": "2026-09-02T03:30:10.044454+00:00"
   },
   "programs": {
     "groups": [
@@ -748,7 +754,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T03:26:41.149830+00:00"
+    "generated_at": "2026-09-02T03:30:10.044570+00:00"
   },
   "contract_quality_gaps": [
     {
