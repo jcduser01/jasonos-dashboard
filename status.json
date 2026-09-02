@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T03:30:10Z",
+  "generated_at": "2026-09-02T03:44:24Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 20,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-02T03:35:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 9,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -522,6 +522,36 @@
         ]
       },
       {
+        "name": "Governance Tooling & Checker Reliability",
+        "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
+        "items": [
+          {
+            "id": "GAP-271",
+            "type": "GAP",
+            "description": "Relay-wakeup core.hooksPath drift check is a string-match false positive, not a reachability test",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-274",
+            "type": "GAP",
+            "description": "The observation register (observations.jsonl) has no correction path, and its own expiry logic can\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
+        "name": "Security Steward Audit-Trail Hygiene",
+        "description": "Clear the backlog and structural defects in the Security Steward's own audit-inbox and capability-review record-keeping.",
+        "items": [
+          {
+            "id": "GAP-273",
+            "type": "GAP",
+            "description": "Security Steward compliance pipeline is degrading silently: missed weekly review, no catch-up\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
         "name": "Process & Surface Governance",
         "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
         "items": [
@@ -529,6 +559,24 @@
             "id": "GAP-270",
             "type": "GAP",
             "description": "jasonos-deploy-sync.py silently excludes staged-status registry rows from --target sync, with no\u2026",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-272",
+            "type": "GAP",
+            "description": "Deployed runtime copies drift behind canonical with no automated currency check (third instance\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
+        "name": "Knowledge Vault Operations",
+        "description": "KB vault inbox triage, retention/expiry, and index-completeness hygiene \u2014 a recurring operational category (GAP-221, 2026-08-03).",
+        "items": [
+          {
+            "id": "GAP-275",
+            "type": "GAP",
+            "description": "KB inbox triage has no standing cadence, so items chronically age past the 48h SLA",
             "action": "agent"
           }
         ]
@@ -546,7 +594,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T03:30:10.044454+00:00"
+    "generated_at": "2026-09-02T03:44:24.454525+00:00"
   },
   "programs": {
     "groups": [
@@ -754,7 +802,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T03:30:10.044570+00:00"
+    "generated_at": "2026-09-02T03:44:24.454631+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1319,7 +1367,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
+    "open_gaps": 7,
     "open_rems": 1
   }
 }
