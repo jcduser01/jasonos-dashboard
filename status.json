@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T11:39:47Z",
+  "generated_at": "2026-09-02T01:12:35Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -98,15 +98,15 @@
   },
   "stats": {
     "done": 117,
-    "total": 143,
+    "total": 142,
     "active": 11,
     "queued": 0,
-    "paused": 9,
+    "paused": 8,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-08-30T08:06:00Z",
-    "minutes_since_session": 3093,
+    "minutes_since_session": 3906,
     "airlock_queue": 7,
     "airlock_bundles": 4
   },
@@ -379,15 +379,6 @@
   "paused": {
     "client_work": [
       {
-        "id": "INI-043",
-        "name": "Dish n' BEATS \u2014 Brand Design System",
-        "waiting_on": "CEO to pull into Current (client-work prioritization; begins at Phase 3, parallel with INI-042)",
-        "contract": {
-          "route": "CEO-first",
-          "stop_line": "Phase 3 canonization is COMPLETE and the seven canonical docs are pending CEO review; the CEO must approve the canonical doc set before Phase 4 (AI-assisted exploration) begins. The first actionable step is that blocking CEO approval, so there is no runner-buildable slice ahead of it. Post-approval, Phase 4 exploration (Creative-Director-led AI mockups within canonical constraints) is next; the three known codebase bugs folded into Phase 6 (missing rel=stylesheet, unclosed anchor, no favicon) are a small independent fix a runner could stage, but they are sequenced into implementation after design selection."
-        }
-      },
-      {
         "id": "INI-053",
         "name": "SIGIL.ZERO \u2014 Apparel / Artifact Line (Launch Strategy)",
         "notes": "RE-SCOPED 2026-07-18 from 'Temple of Unicorns \u2014 Relaunch Strategy' \u2192 SIGIL.ZERO apparel/artifact line. Diagnosis concluded ToU should be sunset; the CEO's apparel ambition is rehomed under his\u2026",
@@ -579,7 +570,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-01T11:39:47.922712+00:00"
+    "generated_at": "2026-09-02T01:12:35.793514+00:00"
   },
   "programs": {
     "groups": [
@@ -721,17 +712,6 @@
         ]
       },
       {
-        "name": "Dish n' BEATS - Brand Design System",
-        "description": "A complete, CEO-approved canonical design system for the Dish n' BEATS property within the Dyson Hope creative family, implemented in the codebase and maintainable by future director sessions without CEO execution.",
-        "items": [
-          {
-            "id": "INI-043",
-            "name": "Dish n' BEATS \u2014 Brand Design System",
-            "status": "Paused"
-          }
-        ]
-      },
-      {
         "name": "Sandbox Laboratory",
         "description": "A general-purpose R&D program for technical experimentation the trusted environment can't or shouldn't host directly \u2014 permissive, contained sandbox environments (governed by a dedicated egress airlock and Security Steward review) for untrustworthy tools, agent experiments, and CEO vibe-coding sessions. Not limited to any one technology by design (CEO, 2026-08-09) \u2014 its first instance, INI-063, happens to be Docker-based.",
         "items": [
@@ -798,7 +778,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-01T11:39:47.922815+00:00"
+    "generated_at": "2026-09-02T01:12:35.793630+00:00"
   },
   "contract_quality_gaps": [
     {
