@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T09:54:54Z",
+  "generated_at": "2026-09-02T11:55:02Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-02T05:18:07Z",
-    "minutes_since_session": 276,
+    "minutes_since_session": 396,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -516,7 +516,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T09:54:54.821889+00:00"
+    "generated_at": "2026-09-02T11:55:02.537384+00:00"
   },
   "programs": {
     "groups": [
@@ -724,7 +724,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T09:54:54.822001+00:00"
+    "generated_at": "2026-09-02T11:55:02.537497+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -867,13 +867,21 @@
       "project": "Security Steward Audit-Trail Hygiene"
     },
     {
+      "id": "OBS-FINANCIAL-CSV-EXPORT-STALE-BLOCKS-CLOSE-AND-DIGEST",
+      "summary": "financial/import/ still tops out at the 2026-08-11 CSV pair (21+ days old against the ~8-day freshness gate). The 2026-08-31 Weekly Digest and 2026-09-01 Monthly Close both aborted read-only on stale data (no figures fabricated, no store writes). This is a named delivery dependency: the August month-end close is unrunnable, and the next weekly digest (2026-09-07) will abort again, until the CEO exports fresh Transactions/Balances CSVs from Monarch into financial/import/. The 08-29 Airlock source copy this task's escalations pointed to (Airlock/transctions-2026-08-29/) no longer exists at that path as of 09-02 \u2014 consistent with a Mac-side CEO clearing action per the airlock monitor's own note, not re-verified by this sweep. Recommend CEO land a fresh export before 2026-09-07.",
+      "source": "financial-analysis-log 2026-08-31/2026-09-01/2026-09-02 \u2014 named delivery dependency, CEO export action outstanding",
+      "observed_at": "2026-09-02",
+      "expires_on": "2026-09-09",
+      "project": "Financial Analysis"
+    },
+    {
       "id": "OBS-WORK-ITEM-RESOLUTION-COMPLETENESS-7-EMPTY-CLOSURES",
       "summary": "New, and a regression on this axis: check-work-item-resolution-completeness.py reports DRIFT \u2014 7 closed work items with an empty or placeholder-only closure record. This checker returned OK as recently as the 2026-08-09 sweep, so the seven arrived with the large 08-09..08-11 closure batch (GAP-218/228/230/231/232/233/239-244/251 all moved to resolved in this window). Observation-only per protocol step 2l; no delivery is blocked and no live control stopped working. Worth a human eye because an empty closure record is how the reason a thing was closed stops being recoverable.",
       "source": "jasonos-report-triage 2026-08-11 sweep",
-      "observed_at": "2026-09-01",
+      "observed_at": "2026-09-02",
       "expires_on": "2026-09-10",
       "project": "Process & Surface Governance",
-      "occurrences": 14
+      "occurrences": 15
     },
     {
       "id": "OBS-REPO-PLACEMENT-UNKNOWN-GIT-HOOKS-PATHS",
@@ -1161,10 +1169,10 @@
       "id": "OBS-SCRIPT-REGISTRY-CEILING-BREACHED-AGAIN-59-OF-58-AND-CLOSE-WORK-ITEM-SH-UNREGISTERED",
       "summary": "Two registry defects, both traceable to the 2026-08-29/30 closure burst. (1) Mechanism count is 59/58 active (daemons 13, checkers 16, policies 30) \u2014 a fresh one-in-one-out violation; the prior breach observation OBS-SCRIPT-REGISTRY-CEILING-BREACH reached terminal status 'elevated' on 2026-07-30, so this is filed under a new id rather than augmenting a closed lifecycle. (2) operations/bin/close-work-item.sh (8409 B, mtime 2026-08-30 02:02, the file GAP-269 fixed and shipped) has zero rows in operations/script-registry.md. Ordinary registry drift, observation-only per protocol. Not admitted as work.",
       "source": "check-script-registry-coverage.py (report-triage 2026-08-31)",
-      "observed_at": "2026-09-01",
+      "observed_at": "2026-09-02",
       "expires_on": "2026-09-30",
       "project": null,
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "id": "OBS-INDEX-LOCK-SWEEPER-REGISTRY-DECLARES-A-DEPLOYMENT-THAT-DOES-NOT-EXIST",
@@ -1198,6 +1206,38 @@
       "observed_at": "2026-09-01",
       "expires_on": "2026-10-01",
       "project": null
+    },
+    {
+      "id": "OBS-OBSERVATIONS-JSONL-INVALID-PROJECT-BLOCKS-EXPIRY-2026-09-02",
+      "summary": "expire-observations.py --file operations/observations.jsonl aborted with a hard error (0 scanned/expired) on the row OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP (line 104): its project field 'Governance-Repo Review-Date Lapse (Track B)' is not registered in operations/project-registry.md, violating PCR-OPS-074 section 3.4. record-observation.py itself validates the project field (confirmed by reading its source) and would have refused this write, so the row was almost certainly hand-appended directly rather than filed through the tool, contrary to protocol v2.3's filing guidance. This is a broken-guardrail result per protocol v2.3 step 3 ('a parse or safety failure ... must not be reported clean') \u2014 the observation-expiry mechanism cannot run at all this cycle, blocking every other row's expiry check, not just this one. Not remediated by this sweep (write boundary does not extend to correcting existing rows); needs either registering the project in project-registry.md or correcting/removing the offending row's project field.",
+      "source": "jasonos-report-triage 2026-09-02 sweep \u2014 expire-observations.py hard-failed",
+      "observed_at": "2026-09-02",
+      "expires_on": "2026-10-02",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
+      "summary": "check-cap-rev-write-claims.py reports 2 defects across 135 governed capability reviews: (1) Logs/capability-reviews/CAP-REV-2026-07-19-INI140.md has no PCR-SEC-011 frontmatter block despite being dated on/after 2026-07-10, when that declaration became mandatory; (2) Logs/capability-reviews/README.md carries no ISO date in its filename, so it cannot be proven exempt and is therefore governed. Both are static and predate this sweep (confirmed present before and after the 2026-09-02 GAP-270/277 batch's Steward artifacts, per that session's own retrospective scan) \u2014 ordinary documentation/contract drift, observation-only under protocol v2.3, not an incident or a live guardrail failure.",
+      "source": "jasonos-report-triage 2026-09-02 sweep \u2014 check-cap-rev-write-claims.py; flagged first in 2026-09-02T07:56Z session handoff as 'worth a future report-triage line'",
+      "observed_at": "2026-09-02",
+      "expires_on": "2026-10-02",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-DEPLOYED-STATUS-GENERATOR-DIVERGES-FROM-CANONICAL-2026-09-02",
+      "summary": "check-script-registry-coverage.py reports the deployed copy at /Volumes/SandboxData/bin/jasonos-status-generator.py differs from canonical operations/bin/jasonos-status-generator.py. No functional-failure evidence observed this run (dashboard generation succeeded per today's operations-log entries), so this is ordinary deployed-copy drift, same class as the already-known and already CEO-actioned jasonos-git-relay.sh staleness (see 2026-09-02T07:56Z session handoff CEO Actions), but this is a second, previously unflagged script. Recommend bundling into the same redeploy/sync action already pending CEO authorization for jasonos-git-relay.sh rather than a separate ticket.",
+      "source": "jasonos-report-triage 2026-09-02 sweep \u2014 check-script-registry-coverage.py",
+      "observed_at": "2026-09-02",
+      "expires_on": "2026-10-02",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-TEST-RELAY-GAP271-HOOKSPATH-SH-UNREGISTERED",
+      "summary": "operations/bin/test-relay-gap271-hookspath.sh (test artifact from the 2026-09-02 GAP-270/277 batch's hooksPath reachability fix) has zero rows in operations/script-registry.md. Ordinary registry drift, observation-only per protocol.",
+      "source": "check-script-registry-coverage.py (report-triage 2026-09-02)",
+      "observed_at": "2026-09-02",
+      "expires_on": "2026-10-02",
+      "project": "Governance Tooling & Checker Reliability"
     },
     {
       "id": "OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP",
