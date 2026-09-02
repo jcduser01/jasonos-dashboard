@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T03:49:00Z",
+  "generated_at": "2026-09-02T04:23:45Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -70,7 +70,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 20,
+      "guardrail_repairs": 22,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-02T03:50:00Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 33,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -250,7 +250,7 @@
       "name": "Fiction Development System V1 \u2014 Engine & Ray Graystone Author Project",
       "status": "active",
       "contract": {
-        "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No custom combined Postgres/AGE/pgvector image build and no real embedding-model download without separate explicit CEO authorization (both remain untouched \u2014 verified via `docker images`/model-cache inspection during the build). No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
+        "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No real embedding-model download without separate explicit CEO authorization (remains untouched \u2014 verified via model-cache inspection during the build). The custom combined Postgres/AGE/pgvector image build restriction is discharged as of 2026-09-02 \u2014 CEO explicit authorization this session (\"build the custom PG18/AGE/pgvector image\") \u2014 dispatched to Engineering Director; the B-010 reference benchmark was explicitly held off by the CEO in the same instruction and stays out of scope. No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
       }
     }
   ],
@@ -259,32 +259,14 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Optional: upload the 2026-08-27 git-relay.log archive to Drive",
-      "context": "local copy intact either way. Source: /Volumes/SandboxData/Archive/Logs/engineering/2026-08-27/git-relay-2026-08-27.log."
+      "label": "Governance-repo review-date Track A \u2014 done.",
+      "context": "All 11 capability/policy docs restamped Review date: 2026-11-01 (60-day cadence per governance/governance-manual.md), st"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Corporate Filings: request a $19.00 refund and remove the old card",
-      "context": "a transition-period double-bill on Aug 14 (retired Amex ...1006 + new US Bank structure both billed the same $19.00 char"
-    },
-    {
-      "id": "ACT-HO-3",
-      "category": "required",
-      "label": "Governance-repo review-date lapse \u2014 two PCRs need scoping",
-      "context": "11 capability/policy docs carry a lapsed Review date: 2026-07-31 (confirmed still lapsed this session, 32+ days overdue)"
-    },
-    {
-      "id": "ACT-HO-4",
-      "category": "required",
-      "label": "FDS Apache AGE 1.7.0 / PostgreSQL 18 compatibility adjudication (INI-153)",
-      "context": "now eligible for action: the reboot that had the machine tied up on a resource-heavy parallel task is complete. CEO will"
-    },
-    {
-      "id": "ACT-HO-5",
-      "category": "required",
-      "label": "Clear the staged/rem100-rearm-aborterror lane blocking the memory-index-publisher daemon",
-      "context": "not this session's own work, but found blocking a routine daemon while closing. The lane holds one good commit (a memory"
+      "label": "Governance-repo review-date Track B \u2014 CEO decisions needed to close out.",
+      "context": "Real content amendment to 5 of the 11 docs, starting with capabilities/security-audit.md: its Allowed Systems table cont"
     }
   ],
   "status_drift": [],
@@ -514,6 +496,12 @@
         "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
         "items": [
           {
+            "id": "GAP-276",
+            "type": "GAP",
+            "description": "dh-blog-drip's self-re-arm via update_scheduled_task is structurally unreliable in unattended\u2026",
+            "action": "agent"
+          },
+          {
             "id": "REM-100",
             "type": "REM",
             "description": "dh-blog-drip self-disabled at 2026-07-21T01:20Z after its scheduled publish attempt (#8\u2026",
@@ -535,6 +523,12 @@
             "id": "GAP-274",
             "type": "GAP",
             "description": "The observation register (observations.jsonl) has no correction path, and its own expiry logic can\u2026",
+            "action": "agent"
+          },
+          {
+            "id": "GAP-277",
+            "type": "GAP",
+            "description": "Work-item templates present production_or_maintenance as a free author choice when the conformance\u2026",
             "action": "agent"
           }
         ]
@@ -594,7 +588,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T03:49:00.688336+00:00"
+    "generated_at": "2026-09-02T04:23:45.460958+00:00"
   },
   "programs": {
     "groups": [
@@ -802,7 +796,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-02T03:49:00.688459+00:00"
+    "generated_at": "2026-09-02T04:23:45.461082+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1367,7 +1361,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 7,
+    "open_gaps": 9,
     "open_rems": 1
   }
 }
