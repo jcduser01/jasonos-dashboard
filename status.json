@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T09:38:31Z",
+  "generated_at": "2026-09-03T11:38:39Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-02T13:00:00Z",
-    "minutes_since_session": 1238,
+    "minutes_since_session": 1358,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -503,7 +503,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-03T09:38:31.293295+00:00"
+    "generated_at": "2026-09-03T11:38:39.479542+00:00"
   },
   "programs": {
     "groups": [
@@ -711,7 +711,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-03T09:38:31.293419+00:00"
+    "generated_at": "2026-09-03T11:38:39.479657+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -736,10 +736,10 @@
       "id": "OBS-DEAD-PATH-REGROWTH-2-NEW-PINS-INI149",
       "summary": "The GAP-065 regrowth guard fired for the first time in this sweep series: governed=437 baselined=40 NEW=2. Two files added by INI-149 (ops repo d73763a4, 2026-08-04 02:53) carry a sole hardcoded mount root and are not in the baseline allowlist: operations/bin/venture-engine/console_app.py and operations/bin/venture-engine/vengine/calibration/_dispositions.py. The guard worked exactly as designed \u2014 it fails closed on NEW pins so the 40-file legacy debt cannot quietly grow \u2014 so this is regrowth detected, not a control failure. Disposition is either fix the two pins to use the mount-resolving path helper or consciously baseline them as more venture-engine legacy debt. Not admitted as work: ordinary repository/path drift is observation-only under protocol v2.3; no incident, no live control failing, no named delivery blocked.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), 2026-08-04 report-triage sweep",
-      "observed_at": "2026-09-01",
+      "observed_at": "2026-09-03",
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 26
+      "occurrences": 27
     },
     {
       "id": "OBS-AIRLOCK-ROOT-LOOSE-FILE-OUTSIDE-RESERVED-TRANSIT-RULE",
@@ -1147,17 +1147,19 @@
       "id": "OBS-OBSERVATIONS-JSONL-INVALID-PROJECT-BLOCKS-EXPIRY-2026-09-02",
       "summary": "expire-observations.py --file operations/observations.jsonl aborted with a hard error (0 scanned/expired) on the row OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP (line 104): its project field 'Governance-Repo Review-Date Lapse (Track B)' is not registered in operations/project-registry.md, violating PCR-OPS-074 section 3.4. record-observation.py itself validates the project field (confirmed by reading its source) and would have refused this write, so the row was almost certainly hand-appended directly rather than filed through the tool, contrary to protocol v2.3's filing guidance. This is a broken-guardrail result per protocol v2.3 step 3 ('a parse or safety failure ... must not be reported clean') \u2014 the observation-expiry mechanism cannot run at all this cycle, blocking every other row's expiry check, not just this one. Not remediated by this sweep (write boundary does not extend to correcting existing rows); needs either registering the project in project-registry.md or correcting/removing the offending row's project field.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 expire-observations.py hard-failed",
-      "observed_at": "2026-09-02",
+      "observed_at": "2026-09-03",
       "expires_on": "2026-10-02",
-      "project": "Governance Tooling & Checker Reliability"
+      "project": "Governance Tooling & Checker Reliability",
+      "occurrences": 2
     },
     {
       "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
       "summary": "check-cap-rev-write-claims.py reports 2 defects across 135 governed capability reviews: (1) Logs/capability-reviews/CAP-REV-2026-07-19-INI140.md has no PCR-SEC-011 frontmatter block despite being dated on/after 2026-07-10, when that declaration became mandatory; (2) Logs/capability-reviews/README.md carries no ISO date in its filename, so it cannot be proven exempt and is therefore governed. Both are static and predate this sweep (confirmed present before and after the 2026-09-02 GAP-270/277 batch's Steward artifacts, per that session's own retrospective scan) \u2014 ordinary documentation/contract drift, observation-only under protocol v2.3, not an incident or a live guardrail failure.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 check-cap-rev-write-claims.py; flagged first in 2026-09-02T07:56Z session handoff as 'worth a future report-triage line'",
-      "observed_at": "2026-09-02",
+      "observed_at": "2026-09-03",
       "expires_on": "2026-10-02",
-      "project": "Governance Tooling & Checker Reliability"
+      "project": "Governance Tooling & Checker Reliability",
+      "occurrences": 2
     },
     {
       "id": "OBS-TEST-RELAY-GAP271-HOOKSPATH-SH-UNREGISTERED",
@@ -1166,6 +1168,46 @@
       "observed_at": "2026-09-02",
       "expires_on": "2026-10-02",
       "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-JASONOS-AIRLOCK-FINANCIAL-ROUTER-PY-UNREGISTERED",
+      "summary": "operations/bin/jasonos-airlock-financial-router.py (new script from the 2026-09-02 GAP-278/280 batch's financial-airlock-routing fix) has zero rows in operations/script-registry.md. Ordinary registry drift, observation-only per protocol. 60/60 mechanism ceiling (GAP-279, raised 2026-09-02) not itself breached this run.",
+      "source": "check-script-registry-coverage.py (report-triage 2026-09-03)",
+      "observed_at": "2026-09-03",
+      "expires_on": "2026-10-03",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-DEPLOYED-DASHBOARD-PUBLISHER-AND-PRODUCTION-METRICS-DIVERGE-FROM-CANONICAL-2026-09-03",
+      "summary": "check-script-registry-coverage.py reports two deployed-copy freshness defects: jasonos-dashboard-publisher.sh differs from canonical in both SandboxData/bin and ~/bin; jasonos-production-metrics.py differs from canonical in SandboxData/bin. No functional-failure evidence observed this run (dashboard publisher heartbeat fresh at 09:38:25Z, well within threshold). Same class as the already-CEO-actioned jasonos-git-relay.sh/jasonos-status-generator.py staleness resolved 2026-09-02; recommend bundling into a redeploy/sync action.",
+      "source": "check-script-registry-coverage.py (report-triage 2026-09-03)",
+      "observed_at": "2026-09-03",
+      "expires_on": "2026-10-03",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-CLOSE-WORK-ITEM-SH-REFERENCES-DEAD-MONOLITH-PATH",
+      "summary": "check-dead-path-drift.py flags one live reference to the retired monolith path: operations/operations/bin/close-work-item.sh:57 sets _JASONOS_LEGACY_REPO=/Volumes/SandboxData/Governance/digital-organization-governance (retired INI-116). No evidence this path is actually invoked at runtime this cycle; observation-only per protocol (repository placement drift).",
+      "source": "check-dead-path-drift.py (report-triage 2026-09-03)",
+      "observed_at": "2026-09-03",
+      "expires_on": "2026-10-03",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-KB-INBOX-AGING-2026-09-03",
+      "summary": "check-kb-completeness.py Facet A: 4 inbox item(s) past the 48h SLA, unresolved in the index Inbox Status table: AIRLOCK-2026-07-31-001-instagram-reel-safe-zone (34.5d), AIRLOCK-2026-08-05-001-jcd-website-visual-direction (29.5d), AIRLOCK-2026-08-23-001-the-ledger-doctrines (11.5d), AIRLOCK-2026-08-30-001-financial-exports-2026-08-29 (4.5d). RESULT: FAIL. Facets B1/B2 clean (link resolution, declared-structure agreement). Same recurring pattern as GAP-221/GAP-275 (KB inbox triage has no standing cadence); observation-only per protocol.",
+      "source": "check-kb-completeness.py (report-triage 2026-09-03)",
+      "observed_at": "2026-09-03",
+      "expires_on": "2026-10-03",
+      "project": "Knowledge Vault Operations"
+    },
+    {
+      "id": "OBS-HANDOFF-COMPACTOR-3-INBOX-FILES-UNCONSUMED-PAST-04-00-ROTATION-2026-09-03",
+      "summary": "Logs/handoffs/inbox/ holds 3 session-handoff files not yet consumed into Logs/session-handoff.md: 2026-09-02T13-35-00Z-session.md (~21.5h old), 2026-09-02T19-41-15Z-session.md (~20.5h old), 2026-09-02T21-29-11Z-session.md (~18.5h old). session-handoff.md itself was last written 2026-09-02T13:13:32Z (unchanged since). Logs/handoffs/archive/session-handoff-entries-20260903.md exists with mtime 2026-09-03T09:00:04Z, confirming the 04:00-daily com.jasonos.handoff-compactor run did fire today \u2014 but its content is older hot-window entries rotated out (dated 2026-09-02T19:55Z/03:50Z/03:35Z/03:10Z), not the 3 pending inbox files, so today's run performed hot-window rotation without ingesting the pending inbox backlog. Cannot fully verify from this sandbox whether ingestion and rotation are the same code path or a partial failure in one; not reported as a verified broken guardrail given this ambiguity, but flagged for CEO/Engineering Director attention given 3 files now span past one full daily cadence unconsumed.",
+      "source": "report-triage 2026-09-03 sweep \u2014 Step 2k handoff-compactor freshness check",
+      "observed_at": "2026-09-03",
+      "expires_on": "2026-10-03",
+      "project": "Backup & Scheduled-Task Reliability"
     },
     {
       "id": "OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP",
