@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T13:39:24Z",
+  "generated_at": "2026-09-04T14:32:21Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -99,14 +99,14 @@
   "stats": {
     "done": 117,
     "total": 143,
-    "active": 11,
+    "active": 12,
     "queued": 0,
     "paused": 8,
-    "backlog": 7
+    "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-09-02T13:00:00Z",
-    "minutes_since_session": 2919,
+    "minutes_since_session": 2972,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -251,6 +251,14 @@
       "status": "active",
       "contract": {
         "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No real embedding-model download without separate explicit CEO authorization (remains untouched \u2014 verified via model-cache inspection during the build). The custom combined Postgres/AGE/pgvector image build restriction is discharged as of 2026-09-02 \u2014 CEO explicit authorization this session (\"build the custom PG18/AGE/pgvector image\") \u2014 dispatched to Engineering Director; the B-010 reference benchmark was explicitly held off by the CEO in the same instruction and stays out of scope. No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
+      }
+    },
+    {
+      "id": "INI-155",
+      "name": "UX Design Doctrine \u2014 Comprehensive Best-Practice Reference for the Creative Director",
+      "status": "active",
+      "contract": {
+        "stop_line": "None."
       }
     }
   ],
@@ -472,14 +480,6 @@
             "PCR-OPS-078"
           ]
         }
-      },
-      {
-        "id": "INI-155",
-        "name": "UX Design Doctrine \u2014 Comprehensive Best-Practice Reference for the Creative Director",
-        "notes": "Filed 2026-09-04 from a CEO-supplied SEED list of 20 well-known UX best-practice statements (Reduce choices per screen, Make targets large, Follow familiar patterns, Group related information, Break\u2026",
-        "contract": {
-          "stop_line": "None."
-        }
       }
     ]
   },
@@ -511,7 +511,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-04T13:39:24.346019+00:00"
+    "generated_at": "2026-09-04T14:32:21.500279+00:00"
   },
   "programs": {
     "groups": [
@@ -719,7 +719,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-04T13:39:24.346126+00:00"
+    "generated_at": "2026-09-04T14:32:21.500391+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
