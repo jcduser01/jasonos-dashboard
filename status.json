@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T15:44:53Z",
+  "generated_at": "2026-09-04T15:54:54Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -8,23 +8,28 @@
       "end": "2026-09-04"
     },
     "headline": {
-      "delivered": 0,
-      "recipients": 0,
+      "delivered": 1,
+      "recipients": 1,
       "next": "INI-114",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
-      "delivery_status": "no_delivery",
-      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "delivery_status": "productive",
+      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
-      "artifacts": [],
-      "recipients": 0,
+      "artifacts": [
+        {
+          "id": "INI-155",
+          "completed": "2026-09-04"
+        }
+      ],
+      "recipients": 1,
       "rolling_four_period_counts": [
         1,
         0,
         0,
-        0
+        1
       ],
       "next": {
         "id": "INI-114",
@@ -33,22 +38,22 @@
       },
       "blockers": [],
       "throughput_floor": {
-        "status": "missed",
+        "status": "met",
         "floor": 1,
         "reporting_period_days": 7,
         "evaluation_window_days": 7,
-        "delivered": 0,
-        "explicit_zero_delivery": true
+        "delivered": 1,
+        "explicit_zero_delivery": false
       },
       "source_contract_defects": []
     },
     "effort": {
       "production_ratio": {
-        "status": "degraded_unquantified",
+        "status": "unavailable",
         "value": null,
-        "numerator": 0,
+        "numerator": 1,
         "denominator": null,
-        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
+        "limitation": "CEO-attention denominator is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -97,16 +102,16 @@
     }
   },
   "stats": {
-    "done": 117,
+    "done": 118,
     "total": 143,
-    "active": 12,
+    "active": 11,
     "queued": 0,
     "paused": 8,
     "backlog": 6
   },
   "operational": {
     "last_session_date": "2026-09-02T13:00:00Z",
-    "minutes_since_session": 3044,
+    "minutes_since_session": 3054,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -251,14 +256,6 @@
       "status": "active",
       "contract": {
         "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No real embedding-model download without separate explicit CEO authorization (remains untouched \u2014 verified via model-cache inspection during the build). The custom combined Postgres/AGE/pgvector image build restriction is discharged as of 2026-09-02 \u2014 CEO explicit authorization this session (\"build the custom PG18/AGE/pgvector image\") \u2014 dispatched to Engineering Director; the B-010 reference benchmark was explicitly held off by the CEO in the same instruction and stays out of scope. No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
-      }
-    },
-    {
-      "id": "INI-155",
-      "name": "UX Design Doctrine \u2014 Comprehensive Best-Practice Reference for the Creative Director",
-      "status": "active",
-      "contract": {
-        "stop_line": "None."
       }
     }
   ],
@@ -523,7 +520,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-04T15:44:53.641040+00:00"
+    "generated_at": "2026-09-04T15:54:54.269613+00:00"
   },
   "programs": {
     "groups": [
@@ -731,7 +728,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-04T15:44:53.641148+00:00"
+    "generated_at": "2026-09-04T15:54:54.269718+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
