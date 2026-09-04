@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T15:54:54Z",
+  "generated_at": "2026-09-04T15:57:48Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 14,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-02T13:00:00Z",
-    "minutes_since_session": 3054,
+    "minutes_since_session": 3057,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -506,21 +506,9 @@
             "action": "agent"
           }
         ]
-      },
-      {
-        "name": "Subagent Orchestration & Tooling",
-        "description": null,
-        "items": [
-          {
-            "id": "GAP-283",
-            "type": "GAP",
-            "description": "Granting a subagent the Skill tool does not make a project-scoped skill invokable; it fails with\u2026",
-            "action": "agent"
-          }
-        ]
       }
     ],
-    "generated_at": "2026-09-04T15:54:54.269613+00:00"
+    "generated_at": "2026-09-04T15:57:48.036802+00:00"
   },
   "programs": {
     "groups": [
@@ -728,7 +716,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-04T15:54:54.269718+00:00"
+    "generated_at": "2026-09-04T15:57:48.036904+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1258,7 +1246,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
+    "open_gaps": 1,
     "open_rems": 1
   }
 }
