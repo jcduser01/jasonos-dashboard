@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T09:19:16Z",
+  "generated_at": "2026-09-08T11:19:19Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 2773,
+    "minutes_since_session": 2893,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -508,7 +508,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-08T09:19:16.261780+00:00"
+    "generated_at": "2026-09-08T11:19:19.990462+00:00"
   },
   "programs": {
     "groups": [
@@ -716,7 +716,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-08T09:19:16.261879+00:00"
+    "generated_at": "2026-09-08T11:19:19.990564+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1152,10 +1152,10 @@
       "id": "OBS-OBSERVATIONS-JSONL-INVALID-PROJECT-BLOCKS-EXPIRY-2026-09-02",
       "summary": "expire-observations.py --file operations/observations.jsonl aborted with a hard error (0 scanned/expired) on the row OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP (line 104): its project field 'Governance-Repo Review-Date Lapse (Track B)' is not registered in operations/project-registry.md, violating PCR-OPS-074 section 3.4. record-observation.py itself validates the project field (confirmed by reading its source) and would have refused this write, so the row was almost certainly hand-appended directly rather than filed through the tool, contrary to protocol v2.3's filing guidance. This is a broken-guardrail result per protocol v2.3 step 3 ('a parse or safety failure ... must not be reported clean') \u2014 the observation-expiry mechanism cannot run at all this cycle, blocking every other row's expiry check, not just this one. Not remediated by this sweep (write boundary does not extend to correcting existing rows); needs either registering the project in project-registry.md or correcting/removing the offending row's project field.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 expire-observations.py hard-failed",
-      "observed_at": "2026-09-05",
+      "observed_at": "2026-09-08",
       "expires_on": "2026-10-02",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
@@ -1249,10 +1249,10 @@
       "id": "OBS-AGENT-DISPATCHER-LOG-STALE-BEYOND-7D-THRESHOLD-2026-09-06",
       "summary": "Logs/director-logs/agent-dispatcher.log's last entry is 2026-08-30T07:13:36Z (~7d4h before this sweep's 2026-09-06T11:05:56Z start), exceeding the 7-day infra-health threshold. Verified against agent-invocation-master.log: every director invocation since 2026-08-30 (airlock-monitor, engineering/knowledge/operations-backup, report-triage, financial-state-backup) ran with requester=cowork, not through the Mac-mini agent-dispatcher.sh path; the last dispatcher-mediated call (2026-08-29T21:14Z, a terminal-bridge test) timed out (SIGKILL, 600s) with no dispatcher-log entries since 2026-08-30 07:13. No delivery or control has been shown to depend on the dispatcher currently -- cannot fully verify from this sandbox whether the dispatcher itself is broken or simply superseded/unused under the current Cowork-native operational model. Not admitted as a verified broken guardrail (no failure evidence of a live dependency), but flagged for Engineering Director attention given the threshold breach.",
       "source": "Step 2k infra-health check (report-triage 2026-09-06) -- Logs/director-logs/agent-dispatcher.log",
-      "observed_at": "2026-09-07",
+      "observed_at": "2026-09-08",
       "expires_on": "2026-10-06",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "id": "BROKEN-GUARDRAIL-EXPIRE-OBSERVATIONS-PY-BLOCKED-BY-UNREGISTERED-PROJECT-2026-09-06",
