@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T09:19:55Z",
+  "generated_at": "2026-09-09T11:19:59Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 4213,
+    "minutes_since_session": 4334,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -508,7 +508,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-09T09:19:55.213223+00:00"
+    "generated_at": "2026-09-09T11:19:59.814922+00:00"
   },
   "programs": {
     "groups": [
@@ -716,7 +716,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-09T09:19:55.213329+00:00"
+    "generated_at": "2026-09-09T11:19:59.815026+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1152,10 +1152,10 @@
       "id": "OBS-OBSERVATIONS-JSONL-INVALID-PROJECT-BLOCKS-EXPIRY-2026-09-02",
       "summary": "expire-observations.py --file operations/observations.jsonl aborted with a hard error (0 scanned/expired) on the row OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP (line 104): its project field 'Governance-Repo Review-Date Lapse (Track B)' is not registered in operations/project-registry.md, violating PCR-OPS-074 section 3.4. record-observation.py itself validates the project field (confirmed by reading its source) and would have refused this write, so the row was almost certainly hand-appended directly rather than filed through the tool, contrary to protocol v2.3's filing guidance. This is a broken-guardrail result per protocol v2.3 step 3 ('a parse or safety failure ... must not be reported clean') \u2014 the observation-expiry mechanism cannot run at all this cycle, blocking every other row's expiry check, not just this one. Not remediated by this sweep (write boundary does not extend to correcting existing rows); needs either registering the project in project-registry.md or correcting/removing the offending row's project field.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 expire-observations.py hard-failed",
-      "observed_at": "2026-09-08",
+      "observed_at": "2026-09-09",
       "expires_on": "2026-10-02",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
@@ -1249,10 +1249,10 @@
       "id": "OBS-AGENT-DISPATCHER-LOG-STALE-BEYOND-7D-THRESHOLD-2026-09-06",
       "summary": "Logs/director-logs/agent-dispatcher.log's last entry is 2026-08-30T07:13:36Z (~7d4h before this sweep's 2026-09-06T11:05:56Z start), exceeding the 7-day infra-health threshold. Verified against agent-invocation-master.log: every director invocation since 2026-08-30 (airlock-monitor, engineering/knowledge/operations-backup, report-triage, financial-state-backup) ran with requester=cowork, not through the Mac-mini agent-dispatcher.sh path; the last dispatcher-mediated call (2026-08-29T21:14Z, a terminal-bridge test) timed out (SIGKILL, 600s) with no dispatcher-log entries since 2026-08-30 07:13. No delivery or control has been shown to depend on the dispatcher currently -- cannot fully verify from this sandbox whether the dispatcher itself is broken or simply superseded/unused under the current Cowork-native operational model. Not admitted as a verified broken guardrail (no failure evidence of a live dependency), but flagged for Engineering Director attention given the threshold breach.",
       "source": "Step 2k infra-health check (report-triage 2026-09-06) -- Logs/director-logs/agent-dispatcher.log",
-      "observed_at": "2026-09-08",
+      "observed_at": "2026-09-09",
       "expires_on": "2026-10-06",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "id": "BROKEN-GUARDRAIL-EXPIRE-OBSERVATIONS-PY-BLOCKED-BY-UNREGISTERED-PROJECT-2026-09-06",
@@ -1283,9 +1283,10 @@
       "id": "OBS-FINANCIAL-BACKUP-PRECOMMAND-HOST-PATH-PITFALL-2ND-OCCURRENCE",
       "summary": "Second consecutive occurrence (2026-09-06, 2026-09-07): the daily financial-state mirror's first commit_via_relay.py invocation used Cowork-mount-translated sandbox paths (/sessions/.../mnt/SandboxData/...) inside the --precommand string itself, which fails because the precommand executes host-side and needs Mac-native /Volumes/SandboxData/... paths regardless of how --repo auto-translates. Both days self-corrected on retry with no data-loss or missed mirror (status=success, nothing_to_commit=true on the corrected re-run). Financial-Analysis-Director explicitly flagged this to the President Agent as a 2-occurrence pattern suggesting the loader/task prompt needs a more explicit host-vs-sandbox path reminder for --precommand specifically. Not admitted as work: no live control failed (self-corrected same run, no missed backup), ordinary operator/prompt friction against a correctly-working mechanism -- same class as prior relay-CLI-shape friction entries. Bright line: a third occurrence, or one that fails to self-correct, warrants a prompt/doc fix.",
       "source": "Logs/director-logs/financial-analysis/financial-analysis-log.md 2026-09-06 and 2026-09-07 Daily mirror run entries",
-      "observed_at": "2026-09-07",
+      "observed_at": "2026-09-09",
       "expires_on": "2026-10-07",
-      "project": "Financial Analysis"
+      "project": "Financial Analysis",
+      "occurrences": 2
     },
     {
       "id": "OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP",
