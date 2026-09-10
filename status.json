@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T03:06:47Z",
+  "generated_at": "2026-09-10T03:33:18Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 5280,
+    "minutes_since_session": 5307,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -603,7 +603,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T03:06:47.373067+00:00"
+    "generated_at": "2026-09-10T03:33:18.365142+00:00"
   },
   "programs": {
     "groups": [
@@ -868,9 +868,34 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T03:06:47.373184+00:00"
+    "generated_at": "2026-09-10T03:33:18.365260+00:00"
   },
-  "contract_quality_gaps": [],
+  "contract_quality_gaps": [
+    {
+      "type": "missing_field",
+      "field": "route",
+      "file": "governance/pcrs/open/PCR-OPS-079-scheduled-task-mechanism-reconciliation.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_scope",
+      "field": "runner_scope",
+      "file": "governance/pcrs/open/PCR-OPS-079-scheduled-task-mechanism-reconciliation.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_field",
+      "field": "stop_line",
+      "file": "governance/pcrs/open/PCR-OPS-079-scheduled-task-mechanism-reconciliation.md",
+      "category": "pcr-open"
+    },
+    {
+      "type": "missing_project",
+      "field": "project",
+      "file": "governance/pcrs/open/PCR-OPS-079-scheduled-task-mechanism-reconciliation.md",
+      "category": "pcr-open"
+    }
+  ],
   "pending_notes": [
     {
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
@@ -1407,7 +1432,7 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 0,
+    "open_pcrs": 1,
     "open_gaps": 1,
     "open_rems": 0
   }
