@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T00:38:13Z",
+  "generated_at": "2026-09-10T01:16:43Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -69,9 +69,9 @@
       }
     },
     "maintenance": {
-      "admitted": 1,
+      "admitted": 3,
       "declined_observations": 0,
-      "expired_observations": 8
+      "expired_observations": 12
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
@@ -111,9 +111,9 @@
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 5132,
-    "airlock_queue": 0,
-    "airlock_bundles": 1
+    "minutes_since_session": 5170,
+    "airlock_queue": 2,
+    "airlock_bundles": 2
   },
   "active_initiative": {
     "id": "INI-111",
@@ -577,18 +577,6 @@
   "projects": {
     "groups": [
       {
-        "name": "Dyson Hope Blog-Drip Publishing Pipeline",
-        "description": "Restore the Dyson Hope blog's automated publish-and-recovery pipeline to a working, relay-authorized state end to end.",
-        "items": [
-          {
-            "id": "REM-100",
-            "type": "REM",
-            "description": "dh-blog-drip self-disabled at 2026-07-21T01:20Z after its scheduled publish attempt (#8\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Governance Tooling & Checker Reliability",
         "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
         "items": [
@@ -597,6 +585,24 @@
             "type": "GAP",
             "description": "check-work-item-contract-conformance.py's full sweep skips non-Current initiatives, and its\u2026",
             "action": "agent"
+          },
+          {
+            "id": "GAP-285",
+            "type": "GAP",
+            "description": "Script-registry-row and deploy-sync steps are check-driven, not closure-enforced, so both recur as\u2026",
+            "action": "ceo"
+          }
+        ]
+      },
+      {
+        "name": "Knowledge Vault Operations",
+        "description": "KB vault inbox triage, retention/expiry, and index-completeness hygiene \u2014 a recurring operational category (GAP-221, 2026-08-03).",
+        "items": [
+          {
+            "id": "GAP-287",
+            "type": "GAP",
+            "description": "KB inbox items keep aging past SLA with no automation to clear the backlog and no CEO-visible\u2026",
+            "action": "ceo"
           }
         ]
       },
@@ -613,7 +619,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T00:38:13.200354+00:00"
+    "generated_at": "2026-09-10T01:16:43.430505+00:00"
   },
   "programs": {
     "groups": [
@@ -698,6 +704,11 @@
             "id": "INI-114",
             "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
             "status": "Current"
+          },
+          {
+            "id": "INI-160",
+            "name": "Jason Cook Design \u2014 Sales Doctrine",
+            "status": "Backlog"
           }
         ]
       },
@@ -729,6 +740,11 @@
           {
             "id": "INI-056",
             "name": "SIGIL.ZERO \u2014 Initial Artifact Set (Design)",
+            "status": "Backlog"
+          },
+          {
+            "id": "INI-159",
+            "name": "SIGIL.ZERO Codebase Audit & Cleanup",
             "status": "Backlog"
           }
         ]
@@ -789,6 +805,11 @@
             "id": "INI-011",
             "name": "Distributed Compute Architecture",
             "status": "Paused"
+          },
+          {
+            "id": "INI-161",
+            "name": "Local OCR Capability (Baidu Unlimited-OCR)",
+            "status": "Backlog"
           }
         ]
       },
@@ -824,20 +845,44 @@
             "status": "Paused"
           }
         ]
+      },
+      {
+        "name": "Dyson Hope Performance",
+        "description": "The Dyson Hope performance system: the multi-source DJ track-shortlisting capability (Beatport, Spotify, and Hypeddit chart ingestion and scoring for DJ-set curation) and the Press section EPK (an HTML electronic press kit on the Dyson Hope website with downloadable assets for booking outreach) \u2014 live performance as the unifying purpose.",
+        "items": [
+          {
+            "id": "INI-156",
+            "name": "Dyson Hope EPK \u2014 Press Section Build",
+            "status": "Backlog"
+          },
+          {
+            "id": "INI-158",
+            "name": "DJ Track Shortlist App (Beatport / Spotify / Hypeddit)",
+            "status": "Backlog"
+          }
+        ]
+      },
+      {
+        "name": "JasonOS Capability Building",
+        "description": "JasonOS capability-building work \u2014 currently, new invocable Skills any director can call mid-session (starting with the YouTube video-learning/analysis capability via claude-video and the Gemini API) and evaluations of external tooling against JasonOS's existing agentic workflow, open to whatever capability-expansion work comes up.",
+        "items": [
+          {
+            "id": "INI-162",
+            "name": "YouTube Video-Learning Skill",
+            "status": "Backlog"
+          },
+          {
+            "id": "INI-164",
+            "name": "GitHub Copilot Capability Survey",
+            "status": "Backlog"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-09-10T00:38:13.200465+00:00"
+    "generated_at": "2026-09-10T01:16:43.430637+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
-    {
-      "id": "OBS-FINANCIAL-RETENTION-LOG-MISSING-2026-07-31-ENTRY",
-      "summary": "The 2026-07-31 weekly financial digest re-based the forecast baselines (store v3 -> v4) but never appended the matching entry to financial/state/retention-log.md, which is the digest channel's append-only record and a report-triage input. Verified at source: forecast-baseline-store.json archived_baselines[] carries as_of values 2026-07-31, 2026-07-17 and 2026-07-06, while retention-log.md jumps straight from its 2026-07-17 entry to the 2026-08-01 monthly close. The 08-01 entry itself refers to 'prior 2026-07-31 baselines archived', confirming the write happened. One baseline generation is therefore unexplained from the retention log alone. Same shape as OBS-SCHEDULED-TASK-LOG-APPEND-MISSED but a different channel and a different (CEO-directed, not scheduled \u2014 jasonos-financial-digest lastRunAt is 2026-07-27) run. Not admitted as work: a single missed append with the underlying state fully recoverable from the store; no live control failing, no named delivery blocked.",
-      "source": "report-triage 2026-08-02, financial digest channel verification (financial/state/retention-log.md cross-checked against financial/state/forecast-baseline-store.json)",
-      "observed_at": "2026-08-02",
-      "expires_on": "2026-09-01",
-      "project": "Financial Analysis"
-    },
     {
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED",
       "summary": "New: check-doctrine-artifact-currency.py exits 1 for brand 'jason-cook-design' \u2014 4 artifacts in knowledge/clients/jason-cook-design carry no doctrine_reconciled: marker against the 2026-07-16 ratified-doctrine baseline: ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. The checker last read exit 0 on 2026-07-19, so these post-date that ratification and were authored without the stamp rather than having gone stale. Each needs one of reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: doctrine-artifact currency is observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
@@ -855,14 +900,6 @@
       "expires_on": "2026-09-03",
       "project": "Governance Tooling & Checker Reliability",
       "occurrences": 27
-    },
-    {
-      "id": "OBS-AIRLOCK-ROOT-LOOSE-FILE-OUTSIDE-RESERVED-TRANSIT-RULE",
-      "summary": "capabilities/airlock-operations.md v1.1 exempts only _-prefixed SUBDIRECTORIES of Airlock/ from ingestion; a loose file written straight to the Airlock root has no _ prefix to catch it. Verified at source: Airlock/pending-actions-2026-08-05T01-32-58-040Z.json (30,554 bytes) sits at the root with no prefix. Today's monitor run avoided a spurious CEO escalation only because the Operations Director recognised the filename as the INI-149 venture console's own disposition-export schema and cross-checked the 259-record count against INI-149's ceo_action \u2014 recognition, not a mechanism. Every future console export dropped there is a KB candidate under a strict deny-by-default reading. Two low-cost fixes recorded in manifest 2026-08-05-002: a pending-actions-*.json filename exclusion on the Channel 3 scan, or repoint the console's export destination at a reserved _-prefixed subtree (e.g. Airlock/_venture-exports/) so the existing mechanism catches it without a second exclusion vocabulary. The latter is cleaner. Not admitted: no incident, no live control failed, no named delivery blocked.",
-      "source": "Daily Airlock Monitor 2026-08-05 06:31Z self-observation, verified at source this 2026-08-05 report-triage sweep",
-      "observed_at": "2026-08-05",
-      "expires_on": "2026-09-04",
-      "project": "Process & Surface Governance"
     },
     {
       "id": "OBS-GOVERNANCE-REVIEW-DATES-LAPSED-11-DOCS",
@@ -883,15 +920,6 @@
       "occurrences": 7
     },
     {
-      "id": "OBS-SANDBOX-GIT-INVARIANT-OMITS-READ-ONLY-VERBS",
-      "summary": "commit_via_relay.py's stated INVARIANT enumerates only mutating verbs -- 'The sandbox MUST NOT run git (add/commit/push/fetch/rebase) directly' -- but git status and git log also take .git/index.lock, and on the Cowork FUSE mount unlink() EPERMs so git cannot clean up after itself (GAP-058 / cowork-sandbox-git-caveats.md). This sweep ran git status/git log for repo-state verification, treating them as read-only, and stranded a zero-byte index.lock in BOTH jasonos-operations and jasonos-governance, which would have made the Mac-side relay's next git add fail with a false 'another git process seems to be running'. Remediated in-session with jasonos-clear-stale-git-locks.py (renamed aside; two .stale-* leftovers remain and need Mac-side deletion). Also cleared two orphaned loose-object tmp files in code/dysonhope/.git/objects that pre-existed this sweep and are consistent with the 07:12Z blog-drip publish. Not admitted as work: no live control failed, nothing was lost, and the repair path is a documented, working helper. Filed because the invariant's verb list is the thing that misled, and it is the same sentence a future agent will read.",
-      "source": "report-triage 2026-08-06 self-observation, reproduced and remediated in-session",
-      "observed_at": "2026-08-23",
-      "expires_on": "2026-09-05",
-      "project": "Git Relay Commit-Path Hardening",
-      "occurrences": 2
-    },
-    {
       "id": "OBS-CANONICAL-FETCH-THRESHOLD-DISAGREES-PROTOCOL-VS-POLICY",
       "summary": "The report-triage protocol's own Step 2k table gives the canonical-fetch staleness threshold as 2 hours; operations/infrastructure-health-policy.md -- which that same table says to apply -- gives 26 hours, with an explicit rationale ('canonical fetch is a daily job with a 26-hour allowance covering one scheduled interval plus reasonable launch jitter'). The protocol copy is a 13x-tighter restatement of the policy it defers to, so a sweep reading the protocol literally would score a Medium infra breach on any canonical-fetch older than 2h, which is the normal state for a daily job. Not caught before because canonical-fetch has happened to be fresh at sweep time (35m today, at 2026-08-06T10:36:29Z). Not admitted as work: ordinary documentation drift, no control failed, no delivery blocked.",
       "source": "report-triage 2026-08-06 step 2k, comparing report-triage-and-remediation-protocol.md v2.3 with operations/infrastructure-health-policy.md",
@@ -908,14 +936,6 @@
       "expires_on": "2026-09-06",
       "project": "Git Relay Commit-Path Hardening",
       "occurrences": 15
-    },
-    {
-      "id": "OBS-MAINTENANCE-PCR-FILED-WITH-NO-PAYBACK-CASE",
-      "summary": "PCR-OPS-077 (group portfolio initiatives into Programs, filed 2026-08-07, status Draft) carries work_class: maintenance_investment and production_or_maintenance: maintenance, but contains none of the five payback fields that class requires - expected production gain, payback horizon, estimated build effort, estimated carrying cost, payback result - plus no decision cycle. Verified at source, not just from the checker: a grep for 'payback', 'production gain', 'carrying cost', 'build effort' and 'decision cycle' across all 111 lines of the file returns zero hits, so the case is absent in prose too, not merely unfielded. This is the exact evidence the report-triage admission rule's fourth path (maintenance investment) is built on - a maintenance PCR with no payback case cannot consume a maintenance decision, because there is nothing to weigh. Mitigating and why this stays observation-only: the PCR is explicitly 'proposal only ... filed for review now and will be executed at a time of the CEO's choosing', so nothing is being admitted on it today, and contract conformance is observation-only under protocol v2.3 step 2c. Not admitted as work.",
-      "source": "jasonos-report-triage 2026-08-08T11:05Z step 2c (check-work-item-contract-conformance.py)",
-      "observed_at": "2026-08-08",
-      "expires_on": "2026-09-07",
-      "project": "Process & Surface Governance"
     },
     {
       "id": "OBS-STEWARD-2026-08-10-F1-UNATTRIBUTED-MSMTP-BURST",
@@ -1259,15 +1279,6 @@
       "project": null
     },
     {
-      "id": "OBS-OBSERVATIONS-JSONL-INVALID-PROJECT-BLOCKS-EXPIRY-2026-09-02",
-      "summary": "expire-observations.py --file operations/observations.jsonl aborted with a hard error (0 scanned/expired) on the row OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP (line 104): its project field 'Governance-Repo Review-Date Lapse (Track B)' is not registered in operations/project-registry.md, violating PCR-OPS-074 section 3.4. record-observation.py itself validates the project field (confirmed by reading its source) and would have refused this write, so the row was almost certainly hand-appended directly rather than filed through the tool, contrary to protocol v2.3's filing guidance. This is a broken-guardrail result per protocol v2.3 step 3 ('a parse or safety failure ... must not be reported clean') \u2014 the observation-expiry mechanism cannot run at all this cycle, blocking every other row's expiry check, not just this one. Not remediated by this sweep (write boundary does not extend to correcting existing rows); needs either registering the project in project-registry.md or correcting/removing the offending row's project field.",
-      "source": "jasonos-report-triage 2026-09-02 sweep \u2014 expire-observations.py hard-failed",
-      "observed_at": "2026-09-09",
-      "expires_on": "2026-10-02",
-      "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 6
-    },
-    {
       "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
       "summary": "check-cap-rev-write-claims.py reports 2 defects across 135 governed capability reviews: (1) Logs/capability-reviews/CAP-REV-2026-07-19-INI140.md has no PCR-SEC-011 frontmatter block despite being dated on/after 2026-07-10, when that declaration became mandatory; (2) Logs/capability-reviews/README.md carries no ISO date in its filename, so it cannot be proven exempt and is therefore governed. Both are static and predate this sweep (confirmed present before and after the 2026-09-02 GAP-270/277 batch's Steward artifacts, per that session's own retrospective scan) \u2014 ordinary documentation/contract drift, observation-only under protocol v2.3, not an incident or a live guardrail failure.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 check-cap-rev-write-claims.py; flagged first in 2026-09-02T07:56Z session handoff as 'worth a future report-triage line'",
@@ -1365,15 +1376,6 @@
       "occurrences": 4
     },
     {
-      "id": "BROKEN-GUARDRAIL-EXPIRE-OBSERVATIONS-PY-BLOCKED-BY-UNREGISTERED-PROJECT-2026-09-06",
-      "summary": "VERIFIED BROKEN GUARDRAIL: expire-observations.py -- the sweep's designated single writer for the observations lifecycle -- exits 2 and refuses to run at all: 'operations/observations.jsonl:104: project (Governance-Repo Review-Date Lapse (Track B)) is not in operations/project-registry.md'. Root cause: observation OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP (filed 2026-09-02, promotion_status not_admitted, no occurrences field -- evidence it was hand-appended rather than written via record-observation.py, which validates --project at write time per GAP-221) carries a project name never added to operations/project-registry.md. This is a fail-closed design (GAP-221, same class as the 2026-07-29/2026-08-04 precedents) working as designed against a bad row, but the practical effect is the whole file's expiry cycle cannot run this sweep: no scanned/expired/unchanged counts are available (degraded result, not reported clean per protocol Step 3). Reproduced twice (before and after this sweep's own new observation filings via record-observation.py, which do not hit this validation path). Fix requires either registering the project name in operations/project-registry.md or correcting/removing the offending row -- both are remediation and out of scope for this sweep to execute. Admitted via path 2 (broken guardrail with failure evidence); flagged for Engineering Director / CEO action.",
-      "source": "expire-observations.py --file operations/observations.jsonl (report-triage 2026-09-06 Step 3)",
-      "observed_at": "2026-09-07",
-      "expires_on": "2026-10-06",
-      "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 2
-    },
-    {
       "id": "OBS-GIT-RELAY-LAUNCHD-JOB-DOWN-2026-09-07",
       "summary": "VERIFIED BROKEN GUARDRAIL (transient, recovered by sweep time): the 2026-09-07T07:41 daily operations backup found com.jasonos.git-relay NOT LOADED in launchd on the host Mac (Step 3 error: 'com.jasonos.git-relay is not loaded in launchd', exit code 3), and Step 2's commit_via_relay.py --wait timed out silently on both the initial call and the documented single retry with no worker ever picking up either trigger -- consistent with the relay daemon being down for that window rather than the transient CLI read-latency pattern seen on prior rotation days. Both operations-repo backup targets (operations, operations-infra) failed with no uploads and no Drive file IDs. Operations Director recorded 'Escalations required: Yes' and 'CEO notification required: Yes', recommending /Volumes/SandboxData/bin/jasonos-git-relay-activate.command be run on the host. Verified recovered by this sweep's own read: git-relay.log shows normal lease-acquire/drain activity resuming by 2026-09-07T11:09:05Z (well within the 4h infra-health threshold at sweep time), and canonical-fetch/dashboard heartbeat both current. This is a distinct failure shape from prior relay-timeout/Drive-transport observations (daemon absent from launchd entirely, not a slow or failed transport) and has no prior sighting in this register. First occurrence; recovered before or without further intervention visible to this sweep. Not admitted as work per the single-occurrence/no-permanent-loss pattern established for sibling backup-reliability findings -- bright line: a second occurrence of the launchd job being found unloaded meets the broken-guardrail admission bar.",
       "source": "Logs/director-logs/operations/operations-log.md 2026-09-07T07:41 Daily Operations Backup entry; agent-invocation-master.log operations-backup-20260907 status=failed exit-code=1",
@@ -1399,6 +1401,14 @@
       "occurrences": 2
     },
     {
+      "id": "OBS-FINANCIAL-EXPORT-MISPLACED-INTAKE",
+      "summary": "Second consecutive Monarch financial export misplacement: the 2026-08-29 export landed in a regular Airlock subfolder (manifest 2026-08-30-001) instead of financial/import/ directly (fixed via GAP-278's router); the 2026-09-09 export landed in Airlock/_do-not-index/financial-updates/, a reserved internal-transit subtree the airlock monitor is deliberately designed to never scan (any _-prefixed subfolder is off-limits per airlock-operations.md v1.1). Both times the underlying pipeline mechanism (GAP-278's router) worked correctly once manually invoked; the recurring failure is at the human intake step, not the routing/classification tooling. Not admitted as work this session: no live control is broken (the monitor correctly ignored the reserved subtree, exactly as designed), and a two-occurrence pattern with a different specific cause each time (regular-subfolder vs. reserved-subtree misplacement) does not yet meet a clear bright line. Worth watching for a third occurrence, or considering a CEO-facing reminder/README clarification on the one correct drop point (financial/import/ directly, per financial/import/README.txt).",
+      "source": "Operations Director airlock classification, 2026-09-09 (President Agent-directed observation-corpus review session)",
+      "observed_at": "2026-09-09",
+      "expires_on": "2026-10-10",
+      "project": "Financial Analysis"
+    },
+    {
       "id": "OBS-PCR-ENACTMENT-CHECKLIST-MISSING-REVIEW-DATE-REFRESH-STEP",
       "summary": "The 2026-08-29 review-date-lapse audit found 3 of 11 lapsed capability docs (financial-analysis.md, president-coordination.md, external-communication-drafting.md) went stale specifically because a PCR amended the document's content without bumping its Review date \u2014 the second time this exact pattern has surfaced. Recommended fix: add a standing \"refresh Review date on affected capability/policy docs\" step to the PCR enactment checklist in governance/governance-manual.md \u00a7 Policy Change Management. CEO reviewed the full Track B decision set 2026-09-02 and deferred enacting this as a PCR for now; recorded here as an observation rather than dropped. Revisit if the pattern recurs a third time or when a PCR enactment is next being planned.",
       "source": "Security Steward audit CAP-REV-2026-08-29-REVIEW-DATE-LAPSE-11-DOCS; CEO disposition of Track B, 2026-09-02",
@@ -1409,7 +1419,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
-    "open_rems": 1
+    "open_gaps": 4,
+    "open_rems": 0
   }
 }
