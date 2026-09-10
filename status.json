@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T02:20:41Z",
+  "generated_at": "2026-09-10T02:23:18Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 16,
+      "guardrail_repairs": 15,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 5234,
+    "minutes_since_session": 5237,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -605,12 +605,6 @@
             "type": "GAP",
             "description": "Script-registry-row and deploy-sync steps are check-driven, not closure-enforced, so both recur as\u2026",
             "action": "ceo"
-          },
-          {
-            "id": "GAP-288",
-            "type": "GAP",
-            "description": "Reconcile the operational-ticket batch-execution routine into selected-work-execution-runbook.md\u2026",
-            "action": "agent"
           }
         ]
       },
@@ -639,7 +633,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T02:20:41.424110+00:00"
+    "generated_at": "2026-09-10T02:23:18.731922+00:00"
   },
   "programs": {
     "groups": [
@@ -904,7 +898,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T02:20:41.424230+00:00"
+    "generated_at": "2026-09-10T02:23:18.732052+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1444,7 +1438,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 5,
+    "open_gaps": 4,
     "open_rems": 0
   }
 }
