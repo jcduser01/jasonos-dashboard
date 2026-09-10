@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T01:16:43Z",
+  "generated_at": "2026-09-10T02:20:41Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -10,12 +10,12 @@
     "headline": {
       "delivered": 1,
       "recipients": 1,
-      "next": "INI-114",
+      "next": "INI-111",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
       "delivery_status": "productive",
-      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-111 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
       "artifacts": [
@@ -32,9 +32,9 @@
         1
       ],
       "next": {
-        "id": "INI-114",
-        "label": "INI-114",
-        "expected_delivery_date": "2026-08-14"
+        "id": "INI-111",
+        "label": "INI-111",
+        "expected_delivery_date": null
       },
       "blockers": [],
       "throughput_floor": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -103,15 +103,15 @@
   },
   "stats": {
     "done": 118,
-    "total": 153,
-    "active": 11,
+    "total": 154,
+    "active": 10,
     "queued": 0,
-    "paused": 8,
-    "backlog": 16
+    "paused": 9,
+    "backlog": 17
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 5170,
+    "minutes_since_session": 5234,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -136,18 +136,8 @@
       "id": "INI-114",
       "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
       "status": "active",
-      "expected_delivery_date": "2026-08-14",
       "contract": {
         "stop_line": "The voice-guide gate is CLEARED (ratified 2026-07-22), so Phase 2 copy may be drafted. Every public claim still clears the Public Voice review gate and publication remains CEO-reserved (Public Voice \u00a7E) \u2014 draft freely, publish nothing. The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Do not write fit-proof copy at all until there is delivered, consented work to describe \u2014 a fabricated version of that passage was produced and withdrawn during Phase 1.5. Do not ship any page without the review gate and consent clearance on every cited case."
-      }
-    },
-    {
-      "id": "INI-126",
-      "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
-      "status": "active",
-      "contract": {
-        "route": "Queue-ready",
-        "stop_line": "Phase 1 is a foundation-build + governance gate \u2014 no later phase proceeds until this initiative has itself built the engine-as-service and composable-input-layer requirements (done), a local mutable scenario record type + write path is in place under PCR-FIN-005 (enacted 2026-08-09; the Operationalizer's disk-write half is built and tested against injected paths only \u2014 see notes below \u2014 but `ScenarioStore` itself is still in-memory only, not yet persisted to disk), the local export path is verified (partially \u2014 Operationalizer write path built, not yet enabled against real paths), and the Security Steward has reviewed the local write/export path (the in-memory Phase-1-exit review is CLEAR, but the new 2026-08-09 disk-write code has not yet had its own required review). Phase 2 UI work's CEO decision (front-end approach) was already made 2026-08-06 \u2014 extend the INI-123 shell \u2014 so Phase 2 is no longer blocked on a CEO decision, only on Phase 1 actually clearing."
       }
     },
     {
@@ -401,6 +391,15 @@
           "runner_scope": "Phase 2 (Egress Airlock Design) drafting slice \u2014 Phase 1 (container images + iptables egress + session lifecycle) is COMPLETE. Draft the egress-airlock procedure at policies/security/sandbox-egress-airlock.md (dedicated egress directory distinct from the CEO airlock, docker cp demand-pull output primitive, the Security Steward harm-check criteria, and the clean/conditional/rejected admission outcomes) and the corresponding Security Steward role-definition update granting sandbox-egress review authority. Staged as a governance draft for review.",
           "stop_line": "The egress-airlock procedure and the SS role-definition change are Security-Steward + CEO governance artifacts \u2014 stage the draft and halt at review/approval; do not enact. Phase 3 (operational validation) is a live pilot requiring a running container and CEO/ED operation, and the initiative is Paused pending a CEO re-pull into Current. Do not run the pilot or enact policy without the Steward review and CEO sign-off."
         }
+      },
+      {
+        "id": "INI-126",
+        "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
+        "notes": "PAUSED 2026-09-10 (CEO-directed deprioritization, not blocked): not an active priority against other current work. PCR-FIN-005 enacted 2026-08-09. Operationalizer disk-write path built (brief +\u2026",
+        "contract": {
+          "route": "Queue-ready",
+          "stop_line": "Phase 1 is a foundation-build + governance gate \u2014 no later phase proceeds until this initiative has itself built the engine-as-service and composable-input-layer requirements (done), a local mutable scenario record type + write path is in place under PCR-FIN-005 (enacted 2026-08-09; the Operationalizer's disk-write half is built and tested against injected paths only \u2014 see notes below \u2014 but `ScenarioStore` itself is still in-memory only, not yet persisted to disk), the local export path is verified (partially \u2014 Operationalizer write path built, not yet enabled against real paths), and the Security Steward has reviewed the local write/export path (the in-memory Phase-1-exit review is CLEAR, but the new 2026-08-09 disk-write code has not yet had its own required review). Phase 2 UI work's CEO decision (front-end approach) was already made 2026-08-06 \u2014 extend the INI-123 shell \u2014 so Phase 2 is no longer blocked on a CEO decision, only on Phase 1 actually clearing."
+        }
       }
     ]
   },
@@ -463,7 +462,9 @@
         "contract": {
           "stop_line": "Architecture decision (extend vs. new application) is made at kickoff via an Engineering Director options analysis presented to the CEO, not assumed here.",
           "depends_on": [
-            "INI-157"
+            "INI-157",
+            "INI-166",
+            "INI-166"
           ]
         }
       },
@@ -482,6 +483,19 @@
         "contract": {
           "stop_line": "None.",
           "depends_on": []
+        }
+      },
+      {
+        "id": "INI-166",
+        "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. This was one of the original items from that session, scoped into a ticket now that INI-158 (the Hypeddit-sourcing shortlist app) has been filed\u2026",
+        "contract": {
+          "stop_line": "Per-post reel assembly \u2014 applying album art, artist name/text, and track title to each individual reel as it is created \u2014 is ongoing operational work for the CEO, not part of this initiative's deliverable. This initiative delivers the format spec and the reusable bumper asset library; it does not produce or publish individual reels in the series.",
+          "depends_on": [
+            "INI-142",
+            "INI-158",
+            "INI-158"
+          ]
         }
       }
     ],
@@ -591,6 +605,12 @@
             "type": "GAP",
             "description": "Script-registry-row and deploy-sync steps are check-driven, not closure-enforced, so both recur as\u2026",
             "action": "ceo"
+          },
+          {
+            "id": "GAP-288",
+            "type": "GAP",
+            "description": "Reconcile the operational-ticket batch-execution routine into selected-work-execution-runbook.md\u2026",
+            "action": "agent"
           }
         ]
       },
@@ -619,7 +639,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T01:16:43.430505+00:00"
+    "generated_at": "2026-09-10T02:20:41.424110+00:00"
   },
   "programs": {
     "groups": [
@@ -666,6 +686,11 @@
             "id": "INI-157",
             "name": "Dyson Hope Observation Engine \u2192 Reel/Blog Backlog Automation",
             "status": "Backlog"
+          },
+          {
+            "id": "INI-166",
+            "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
+            "status": "Backlog"
           }
         ]
       },
@@ -692,7 +717,7 @@
           {
             "id": "INI-126",
             "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
-            "status": "Current"
+            "status": "Paused"
           }
         ]
       },
@@ -879,7 +904,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T01:16:43.430637+00:00"
+    "generated_at": "2026-09-10T02:20:41.424230+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1419,7 +1444,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 4,
+    "open_gaps": 5,
     "open_rems": 0
   }
 }
