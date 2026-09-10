@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T02:23:18Z",
+  "generated_at": "2026-09-10T02:29:10Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 14,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 5237,
+    "minutes_since_session": 5243,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -595,12 +595,6 @@
         "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
         "items": [
           {
-            "id": "GAP-284",
-            "type": "GAP",
-            "description": "check-work-item-contract-conformance.py's full sweep skips non-Current initiatives, and its\u2026",
-            "action": "agent"
-          },
-          {
             "id": "GAP-285",
             "type": "GAP",
             "description": "Script-registry-row and deploy-sync steps are check-driven, not closure-enforced, so both recur as\u2026",
@@ -633,7 +627,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T02:23:18.731922+00:00"
+    "generated_at": "2026-09-10T02:29:10.928061+00:00"
   },
   "programs": {
     "groups": [
@@ -898,7 +892,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T02:23:18.732052+00:00"
+    "generated_at": "2026-09-10T02:29:10.928189+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1438,7 +1432,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 4,
+    "open_gaps": 3,
     "open_rems": 0
   }
 }
