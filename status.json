@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T19:25:30Z",
+  "generated_at": "2026-09-10T00:38:13Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 14,
+      "guardrail_repairs": 15,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -103,15 +103,15 @@
   },
   "stats": {
     "done": 118,
-    "total": 143,
+    "total": 153,
     "active": 11,
     "queued": 0,
     "paused": 8,
-    "backlog": 6
+    "backlog": 16
   },
   "operational": {
     "last_session_date": "2026-09-06T11:05:56Z",
-    "minutes_since_session": 4819,
+    "minutes_since_session": 5132,
     "airlock_queue": 0,
     "airlock_bundles": 1
   },
@@ -435,6 +435,54 @@
           "runner_scope": "None \u2014 architecture-and-planning initiative; the CEO expects to build it incrementally over time. No autonomous build until scoped and pulled.",
           "stop_line": "Do not build production billing (Stripe) or store any real client data until (a) a Security Steward review of the data/trust model, and (b) a CEO decision on hosting/productization posture. Deny-by-default on anything that touches client PII or payment execution."
         }
+      },
+      {
+        "id": "INI-156",
+        "name": "Dyson Hope EPK \u2014 Press Section Build",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. Reference example (epk-example.png) stored in KB vault at knowledge/clients/dyson-hope-family/dyson-hope/press-epk/reference/.",
+        "contract": {
+          "stop_line": "No content drafting begins until the CEO supplies the input material listed above.",
+          "depends_on": []
+        }
+      },
+      {
+        "id": "INI-157",
+        "name": "Dyson Hope Observation Engine \u2192 Reel/Blog Backlog Automation",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. Resolves a naming ambiguity from filing: this is the Dyson Hope Cultural Observation Engine vault, distinct from the Venture Opportunity\u2026",
+        "contract": {
+          "stop_line": "No autonomous publication; automation only prepares backlog entries/queues for CEO/Creative Director follow-up, never posts content.",
+          "depends_on": [
+            "INI-145"
+          ]
+        }
+      },
+      {
+        "id": "INI-158",
+        "name": "DJ Track Shortlist App (Beatport / Spotify / Hypeddit)",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. Feeds both DJ-set curation and the Dyson Hope reel-series content sourcing (CEO-confirmed the two efforts should connect).",
+        "contract": {
+          "stop_line": "Architecture decision (extend vs. new application) is made at kickoff via an Engineering Director options analysis presented to the CEO, not assumed here.",
+          "depends_on": [
+            "INI-157"
+          ]
+        }
+      },
+      {
+        "id": "INI-159",
+        "name": "SIGIL.ZERO Codebase Audit & Cleanup",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. CEO-named known trouble spots: tests that don't verify what they claim, data definitions unused in the presentation layer, and generally weak\u2026",
+        "contract": {
+          "stop_line": "Audit only in this initiative's scope \u2014 produces a findings backlog, does not itself authorize open-ended remediation. Explicitly a prerequisite to a separate, not-yet-defined future initiative to enhance the site for transactional artifact content; that enhancement work is out of scope here."
+        }
+      },
+      {
+        "id": "INI-160",
+        "name": "Jason Cook Design \u2014 Sales Doctrine",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. Seed document relocated to the correct JCD vault the same session as a prerequisite housekeeping fix. Creative Director chosen as lead per the\u2026",
+        "contract": {
+          "stop_line": "None.",
+          "depends_on": []
+        }
       }
     ],
     "infrastructure": [
@@ -477,6 +525,51 @@
             "PCR-OPS-078"
           ]
         }
+      },
+      {
+        "id": "INI-161",
+        "name": "Local OCR Capability (Baidu Unlimited-OCR)",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. Not scoped to a single use case \u2014 general-purpose capability. First real consumer: Venture Director's evaluation of scanned (non-searchable)\u2026",
+        "contract": {
+          "stop_line": "None.",
+          "depends_on": [
+            "PCR-OPS-064"
+          ]
+        }
+      },
+      {
+        "id": "INI-162",
+        "name": "YouTube Video-Learning Skill",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. CEO supplied an initial beat-timeline analysis prompt to use as the capability's default analysis template: merge timestamped frames +\u2026",
+        "contract": {
+          "stop_line": "None.",
+          "depends_on": []
+        }
+      },
+      {
+        "id": "INI-163",
+        "name": "Design Tooling Survey",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. CEO confirmed bundling into one initiative rather than 7 separate items.",
+        "contract": {
+          "stop_line": "A survey, not a commitment to adopt anything."
+        }
+      },
+      {
+        "id": "INI-164",
+        "name": "GitHub Copilot Capability Survey",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. CEO already holds a paid Copilot subscription (pre-dating JasonOS) and wants to know what value it can add now, without a predetermined use case.",
+        "contract": {
+          "stop_line": "A survey, not a commitment to adopt anything."
+        }
+      },
+      {
+        "id": "INI-165",
+        "name": "Google Analytics Implementation Audit (Dyson Hope, JCD, SIGIL.ZERO)",
+        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. CEO built these implementations by hand and wants a correctness check now that a GA MCP is available. Temple of Unicorns explicitly out of scope\u2026",
+        "contract": {
+          "stop_line": "Corrections require CEO review before being applied to a live site's tracking configuration \u2014 this is not a blanket authorization to change production analytics config unsupervised.",
+          "depends_on": []
+        }
       }
     ]
   },
@@ -496,6 +589,18 @@
         ]
       },
       {
+        "name": "Governance Tooling & Checker Reliability",
+        "description": "Close the remaining holes in the org's own self-monitoring: detectors that miss a class of drift, and a CEO-facing board that doesn't reconcile against ticket state.",
+        "items": [
+          {
+            "id": "GAP-284",
+            "type": "GAP",
+            "description": "check-work-item-contract-conformance.py's full sweep skips non-Current initiatives, and its\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
         "name": "INI-153 Fiction Development System V1 Engine \u2014 Stage 5 Ship",
         "description": null,
         "items": [
@@ -508,7 +613,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-09T19:25:30.068472+00:00"
+    "generated_at": "2026-09-10T00:38:13.200354+00:00"
   },
   "programs": {
     "groups": [
@@ -550,6 +655,11 @@
             "id": "INI-150",
             "name": "Dyson Hope Reels V2 \u2014 Performance-to-Planning Decision Loop",
             "status": "Current"
+          },
+          {
+            "id": "INI-157",
+            "name": "Dyson Hope Observation Engine \u2192 Reel/Blog Backlog Automation",
+            "status": "Backlog"
           }
         ]
       },
@@ -716,7 +826,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-09T19:25:30.068594+00:00"
+    "generated_at": "2026-09-10T00:38:13.200465+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1299,7 +1409,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 1,
+    "open_gaps": 2,
     "open_rems": 1
   }
 }
