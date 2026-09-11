@@ -1,35 +1,30 @@
 {
-  "generated_at": "2026-09-10T11:56:28Z",
+  "generated_at": "2026-09-11T05:56:45Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-09-04",
-      "end": "2026-09-10"
+      "start": "2026-09-05",
+      "end": "2026-09-11"
     },
     "headline": {
-      "delivered": 1,
-      "recipients": 1,
+      "delivered": 0,
+      "recipients": 0,
       "next": "INI-111",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
-      "delivery_status": "productive",
-      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-111 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "delivery_status": "no_delivery",
+      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-111 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
-      "artifacts": [
-        {
-          "id": "INI-155",
-          "completed": "2026-09-04"
-        }
-      ],
-      "recipients": 1,
+      "artifacts": [],
+      "recipients": 0,
       "rolling_four_period_counts": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ],
       "next": {
         "id": "INI-111",
@@ -38,22 +33,22 @@
       },
       "blockers": [],
       "throughput_floor": {
-        "status": "met",
+        "status": "missed",
         "floor": 1,
         "reporting_period_days": 7,
         "evaluation_window_days": 7,
-        "delivered": 1,
-        "explicit_zero_delivery": false
+        "delivered": 0,
+        "explicit_zero_delivery": true
       },
       "source_contract_defects": []
     },
     "effort": {
       "production_ratio": {
-        "status": "unavailable",
+        "status": "degraded_unquantified",
         "value": null,
-        "numerator": 1,
+        "numerator": 0,
         "denominator": null,
-        "limitation": "CEO-attention denominator is unavailable."
+        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -111,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-10T03:55:12Z",
-    "minutes_since_session": 481,
+    "minutes_since_session": 1561,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -603,7 +598,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T11:56:28.761280+00:00"
+    "generated_at": "2026-09-11T05:56:45.245095+00:00"
   },
   "programs": {
     "groups": [
@@ -868,7 +863,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-10T11:56:28.761406+00:00"
+    "generated_at": "2026-09-11T05:56:45.245225+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
