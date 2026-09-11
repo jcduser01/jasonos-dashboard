@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T15:21:11Z",
+  "generated_at": "2026-09-11T16:49:39Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-10T03:55:12Z",
-    "minutes_since_session": 2125,
+    "minutes_since_session": 2214,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -594,18 +594,6 @@
   "projects": {
     "groups": [
       {
-        "name": "Process & Surface Governance",
-        "description": "Formalize undocumented process/access-surface gaps before they cause a real incident.",
-        "items": [
-          {
-            "id": "PCR-OPS-080",
-            "type": "PCR",
-            "description": "Detached Execution Mode \u2014 a reusable, inert-by-default mechanism for CEO-scoped work that\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "INI-153 Fiction Development System V1 Engine \u2014 Stage 5 Ship",
         "description": null,
         "items": [
@@ -618,7 +606,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-11T15:21:11.994495+00:00"
+    "generated_at": "2026-09-11T16:49:39.250924+00:00"
   },
   "programs": {
     "groups": [
@@ -894,7 +882,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-11T15:21:11.994630+00:00"
+    "generated_at": "2026-09-11T16:49:39.251060+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1433,7 +1421,7 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 1,
+    "open_pcrs": 0,
     "open_gaps": 1,
     "open_rems": 0
   }
