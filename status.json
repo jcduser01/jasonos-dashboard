@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T14:42:24Z",
+  "generated_at": "2026-09-11T14:52:24Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-10T03:55:12Z",
-    "minutes_since_session": 2087,
+    "minutes_since_session": 2097,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -245,7 +245,7 @@
     },
     {
       "id": "INI-167",
-      "name": "Democracy's Next Evolution \u2014 Nonfiction Book (J. Michael Cook)",
+      "name": "Democracy's Next Evolution \u2014 Nonfiction Book (Jason Michael Cook)",
       "status": "active",
       "contract": {
         "stop_line": "This initiative ends at a publication-ready manuscript plus a written self-publication plan. It does not publish. No upload to any publishing platform, no purchase of ISBNs, no commissioning or purchase of cover art or editorial services, no pricing commitment, no marketing execution, and no outreach to agents, publishers, or reviewers occurs under this initiative. Any spending requires separate CEO approval outside this scope. The CEO edits and refines all drafted prose; no draft is treated as final by any agent."
@@ -606,7 +606,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-11T14:42:24.482676+00:00"
+    "generated_at": "2026-09-11T14:52:24.870596+00:00"
   },
   "programs": {
     "groups": [
@@ -872,17 +872,17 @@
       },
       {
         "name": "Jason Cook Nonfiction Publishing",
-        "description": "Long-form nonfiction written and prepared for self-publication under the byline **J. Michael Cook** (a form of the CEO's legal name) \u2014 a distinct authorial identity from both Jason Cook Design and the Ray Graystone fiction pen name. The program name is person-scoped rather than byline-scoped, matching the vault: the vault belongs to the person, and the byline is an attribute of the works inside it. Currently a single book arguing that the central constitutional problem of a computational civilization is the conversion of one form of power into another, written for a non-academic American readership and grounded in the US Constitution and the history of representation; the program carries the manuscript through to a publication-ready draft and a written self-publication plan, stopping short of publishing.",
+        "description": "Long-form nonfiction written and prepared for self-publication under the byline **Jason Michael Cook** (the CEO's full legal name, provisional pending clearance) \u2014 a distinct authorial identity from both Jason Cook Design and the Ray Graystone fiction pen name. The program name is person-scoped rather than byline-scoped, matching the vault: the vault belongs to the person, and the byline is an attribute of the works inside it. Currently a single book arguing that the central constitutional problem of a computational civilization is the conversion of one form of power into another, written for a non-academic American readership and grounded in the US Constitution and the history of representation; the program carries the manuscript through to a publication-ready draft and a written self-publication plan, stopping short of publishing.",
         "items": [
           {
             "id": "INI-167",
-            "name": "Democracy's Next Evolution \u2014 Nonfiction Book (J. Michael Cook)",
+            "name": "Democracy's Next Evolution \u2014 Nonfiction Book (Jason Michael Cook)",
             "status": "Current"
           }
         ]
       }
     ],
-    "generated_at": "2026-09-11T14:42:24.482815+00:00"
+    "generated_at": "2026-09-11T14:52:24.870759+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
