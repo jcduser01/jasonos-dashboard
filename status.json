@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T08:50:21Z",
+  "generated_at": "2026-09-12T10:50:28Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 17
   },
   "operational": {
-    "last_session_date": "2026-09-10T03:55:12Z",
-    "minutes_since_session": 3175,
+    "last_session_date": "2026-09-11T17:21:08Z",
+    "minutes_since_session": 1049,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -253,7 +253,26 @@
     }
   ],
   "queue": [],
-  "ceo_actions": [],
+  "ceo_actions": [
+    {
+      "id": "ACT-HO-1",
+      "category": "required",
+      "label": "Invoke /detached-execution-mode after restarting Claude Code",
+      "context": "the skill exists on disk but is not in the current session's registry. Supply the four elements recorded in the session "
+    },
+    {
+      "id": "ACT-HO-2",
+      "category": "required",
+      "label": "Source acquisition for INI-167",
+      "context": "CEO-owned. Priority 1 titles (Chenoweth \u00d72, Huntington, Evans) unblock flagged passages in the finished foreword. List a"
+    },
+    {
+      "id": "ACT-HO-3",
+      "category": "required",
+      "label": "Manual WorldCat check",
+      "context": "for Cook, Jason Michael \u2014 gap closure on the byline clearance; every accessible source returned clear."
+    }
+  ],
   "status_drift": [],
   "category_drift": [],
   "contract_drift": [],
@@ -606,7 +625,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-12T08:50:21.175792+00:00"
+    "generated_at": "2026-09-12T10:50:28.315939+00:00"
   },
   "programs": {
     "groups": [
@@ -882,7 +901,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-12T08:50:21.175932+00:00"
+    "generated_at": "2026-09-12T10:50:28.316088+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
