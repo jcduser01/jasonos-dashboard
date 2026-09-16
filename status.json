@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T10:47:03Z",
+  "generated_at": "2026-09-16T12:47:12Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -66,7 +66,7 @@
     "maintenance": {
       "admitted": 1,
       "declined_observations": 0,
-      "expired_observations": 16
+      "expired_observations": 17
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-14T14:45:46Z",
-    "minutes_since_session": 2641,
+    "minutes_since_session": 2761,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -679,7 +679,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-16T10:47:03.440847+00:00"
+    "generated_at": "2026-09-16T12:47:12.567339+00:00"
   },
   "programs": {
     "groups": [
@@ -955,7 +955,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-16T10:47:03.440978+00:00"
+    "generated_at": "2026-09-16T12:47:12.567512+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1030,14 +1030,6 @@
       "expires_on": "2026-09-10",
       "project": "Process & Surface Governance",
       "occurrences": 11
-    },
-    {
-      "id": "OBS-RELAY-COMMANDS-CONSTRUCTED-FROM-RECALL-NOT-SPEC-CHECK",
-      "summary": "The CEO reported this session's commit_via_relay.py hand-off went through two malformed iterations before succeeding: (1) --push canonical against jasonos-operations, refused because that repo is single-origin (GAP-051: canonical is only valid for mirrored-governance repos; single-origin repos take --push true) -- the CLI's own --push help text lists 'canonical (upstream only; fork is a CEO-managed backup -- mirrored-governance repos, PCR-OPS-024)' distinctly from 'true (upstream+fork)', which names the distinction directly; (2) a directory-form --pathspec entry (operations/builds/fiction-development-system/modules/) refused with 'file-level pathspec required', which is not a new discovery -- governance/memory/relay-v128-path-limited-and-workers-event-driven.md already documents this exact constraint verbatim ('keep passing explicit space-separated file paths in --pathspec, never a directory or glob', GAP-127 residual) from a prior session. Both failures were avoidable: the CLI's own --help text and an existing memory entry already contained the correct answer before the command was ever typed. The commands were constructed from recalled pattern-memory of prior relay usage rather than by checking commit_via_relay.py --help (or the relevant memory file) against the specific repo/pathspec shape in hand. This is the second known recurrence of the directory-pathspec mistake specifically (the first is what produced the GAP-127/relay-v128 memory entry in the first place), suggesting the existing memory note alone is not reliably surfaced or consulted before a relay command is drafted. Recommendation: before constructing any commit_via_relay.py invocation, run --help (or grep the relay memory files) for the specific flags being used (--push mode for the target repo's topology; --pathspec shape) rather than reconstructing the command from session-to-session recall -- the authoritative spec is one cheap command away and guessing produces exactly this avoidable churn, doubly so when (as here) the guess repeats a mistake already once diagnosed and filed.",
-      "source": "FDS INI-153 Stage 2 gate closure session, 2026-08-16",
-      "observed_at": "2026-08-16",
-      "expires_on": "2026-09-15",
-      "project": "Git Relay Commit-Path Hardening"
     },
     {
       "id": "OBS-GAP239-HOOKSPATH-WARNING-FIRES-ON-EVERY-RELAY-WAKEUP-AGAINST-VALID-HOOKS",
@@ -1323,6 +1315,14 @@
       "project": null
     },
     {
+      "id": "OBS-ENGINEERING-BACKUP-NARRATIVE-MISSING-2026-09-15-16",
+      "summary": "Recurrence of the OBS-SCHEDULED-TASK-LOG-APPEND-MISSED pattern (expired 2026-09-01), now against Logs/director-logs/engineering/engineering-log.md. agent-invocation-master.log shows engineering-backup-20260915 and engineering-backup-20260916 both status=success, and drive-backup-runner-audit.jsonl independently confirms the underlying work ran cleanly both days (2026-09-15: Agent Definitions upload_success 07:33:25Z, KB Vault mirror_success 07:36:34Z, Logs rotation_success+upload_success (one transient 502 self-recovered), Operational Infrastructure upload_success; 2026-09-16: same shape, all upload_success/mirror_success). But engineering-log.md's own narrative entries stop at '## 2026-09-14 \u2014 Daily Engineering Backup (scheduled task)' (file is 2286 lines total, ending at that entry) \u2014 no 09-15 or 09-16 entry exists. Same shape as the expired finding: the underlying control worked, only the mandated evidence-write to the human-readable narrative channel failed or was skipped, two days running. Not admitted as work (no data loss, no live control stopped working \u2014 only the narrative log, and the JSONL audit trail plus invocation-master log independently corroborate the real outcome). Bright line: a third consecutive missed day, or any day where the JSONL audit trail itself also goes quiet, would warrant escalation.",
+      "source": "jasonos-report-triage 2026-09-16 sweep, step 2i existence-vs-outcome verification",
+      "observed_at": "2026-09-16",
+      "expires_on": "2026-10-01",
+      "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
       "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
       "summary": "check-cap-rev-write-claims.py reports 2 defects across 135 governed capability reviews: (1) Logs/capability-reviews/CAP-REV-2026-07-19-INI140.md has no PCR-SEC-011 frontmatter block despite being dated on/after 2026-07-10, when that declaration became mandatory; (2) Logs/capability-reviews/README.md carries no ISO date in its filename, so it cannot be proven exempt and is therefore governed. Both are static and predate this sweep (confirmed present before and after the 2026-09-02 GAP-270/277 batch's Steward artifacts, per that session's own retrospective scan) \u2014 ordinary documentation/contract drift, observation-only under protocol v2.3, not an incident or a live guardrail failure.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 check-cap-rev-write-claims.py; flagged first in 2026-09-02T07:56Z session handoff as 'worth a future report-triage line'",
@@ -1516,6 +1516,14 @@
       "source": "jasonos-report-triage 2026-09-14 sweep",
       "observed_at": "2026-09-14",
       "expires_on": "2026-10-14",
+      "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-15-STAGED-BRANCH-ORPHANED",
+      "summary": "THIRD occurrence in 6 days of report-triage's own step-7/8 write-and-commit failing (see BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION, BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-13-EXECUTED-BUT-UNCOMMITTED), a new failure shape. The 2026-09-15 run (report-triage-20260915, start 11:05:48Z, success 11:14:45Z, duration=900s, normal-looking) DID execute: local branch staged/report-triage-20260915 in jasonos-operations carries one real commit, 83b75eae 'chore(observations): report-triage 2026-09-15 recurrence bumps' (operations/observations.jsonl, 10 insertions/10 deletions, authored 2026-09-15T06:14:40-0500), consistent with genuine recurrence-bump work product. But that branch was never merged into local main (git log main..staged/report-triage-20260915 shows exactly this 1 commit ahead) and no corresponding entry exists in operations/procedure-improvement-log.md for 2026-09-15 (last entry before this sweep's own is 2026-09-14) or in Logs/director-logs/operations/operations-log.md (no Report Triage Sweep heading since 2026-09-13). The 2026-09-16 run repeats the same absence for 09-16 pending this sweep's own close-out. Root cause not established from available evidence (cannot reach origin from this sandbox to confirm push state) \u2014 recorded as cannot_verify on whether the branch was ever pushed, verified on the local-repo facts stated. This sweep does not remediate (write boundary is narrative+observation only) and does not merge or delete the orphaned branch. Flagged for CEO/Engineering Director disposition: the pattern is now recurring often enough (3 of the last 4 daily runs show some form of write/commit-step failure: 09-11 no evidence, 09-13 uncommitted working tree, 09-15 committed-but-unmerged-orphan-branch) that the two concrete fixes proposed in the 09-13 entry (explicit destination path for the step-7 narrative; a git-commit-and-verify as part of the task's own final step rather than a bare local write) look overdue rather than optional.",
+      "source": "jasonos-report-triage 2026-09-16 sweep",
+      "observed_at": "2026-09-16",
+      "expires_on": "2026-10-16",
       "project": "Backup & Scheduled-Task Reliability"
     },
     {
