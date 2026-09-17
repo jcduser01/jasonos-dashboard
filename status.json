@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T14:47:46Z",
+  "generated_at": "2026-09-17T15:39:07Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -99,14 +99,14 @@
   "stats": {
     "done": 118,
     "total": 156,
-    "active": 11,
+    "active": 12,
     "queued": 0,
     "paused": 9,
-    "backlog": 18
+    "backlog": 17
   },
   "operational": {
     "last_session_date": "2026-09-14T14:45:46Z",
-    "minutes_since_session": 4322,
+    "minutes_since_session": 4373,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -249,6 +249,20 @@
       "status": "active",
       "contract": {
         "stop_line": "This initiative ends at a publication-ready manuscript plus a written self-publication plan. It does not publish. No upload to any publishing platform, no purchase of ISBNs, no commissioning or purchase of cover art or editorial services, no pricing commitment, no marketing execution, and no outreach to agents, publishers, or reviewers occurs under this initiative. Any spending requires separate CEO approval outside this scope. The CEO edits and refines all drafted prose; no draft is treated as final by any agent."
+      }
+    },
+    {
+      "id": "INI-168",
+      "name": "Dyson Hope Reels \u2014 HyperFrames Production-Suitability Spike",
+      "status": "active",
+      "contract": {
+        "route": "CEO-first",
+        "runner_scope": "Engineering-buildable with Creative Director quality judgment. Install HyperFrames (github.com/heygen-com/hyperframes, Apache 2.0) locally and use it \u2014 driven by Claude Code as the compositing agent, per its own authoring model \u2014 to assemble one short (~20-30s) Dyson Hope test piece from existing music/artwork plus Higgsfield-generated or already-available shots. Entirely outside the production Dyson Hope Reels pipeline: no production Higgsfield credits spent beyond what a normal INI-142 evaluation would use, no real reel-backlog.csv entry, no publish action. Deliverable is a findings report + the test render, not a shippable asset.",
+        "stop_line": "No change to the production pipeline (INI-085/087 assembly, INI-142 visual-beat routing, INI-143 weekly rhythm) pending this spike's findings. No recurring cost or subscription commitment \u2014 local rendering only; if a step appears to require a paid HeyGen cloud tier, stop and surface that as a finding rather than incurring it. No real reel_id or production record is created; the test piece is disposable and not published to any account. If HyperFrames' agent-authoring workflow does not function as documented in a Claude Code session, or the pre-1.0 API breaks mid-spike, stop, record the failure mode as the finding, and do not sink further time chasing a moving target.",
+        "depends_on": [
+          "INI-141",
+          "INI-142"
+        ]
       }
     }
   ],
@@ -573,20 +587,6 @@
             "INI-158"
           ]
         }
-      },
-      {
-        "id": "INI-168",
-        "name": "Dyson Hope Reels \u2014 HyperFrames Production-Suitability Spike",
-        "notes": "Filed 2026-09-17 per CEO directive after an independent Research Director verification of HyperFrames' claims (see governance/memory \u2014 verification found the core architecture claims solid\u2026",
-        "contract": {
-          "route": "CEO-first",
-          "runner_scope": "Engineering-buildable with Creative Director quality judgment. Install HyperFrames (github.com/heygen-com/hyperframes, Apache 2.0) locally and use it \u2014 driven by Claude Code as the compositing agent, per its own authoring model \u2014 to assemble one short (~20-30s) Dyson Hope test piece from existing music/artwork plus Higgsfield-generated or already-available shots. Entirely outside the production Dyson Hope Reels pipeline: no production Higgsfield credits spent beyond what a normal INI-142 evaluation would use, no real reel-backlog.csv entry, no publish action. Deliverable is a findings report + the test render, not a shippable asset.",
-          "stop_line": "No change to the production pipeline (INI-085/087 assembly, INI-142 visual-beat routing, INI-143 weekly rhythm) pending this spike's findings. No recurring cost or subscription commitment \u2014 local rendering only; if a step appears to require a paid HeyGen cloud tier, stop and surface that as a finding rather than incurring it. No real reel_id or production record is created; the test piece is disposable and not published to any account. If HyperFrames' agent-authoring workflow does not function as documented in a Claude Code session, or the pre-1.0 API breaks mid-spike, stop, record the failure mode as the finding, and do not sink further time chasing a moving target.",
-          "depends_on": [
-            "INI-141",
-            "INI-142"
-          ]
-        }
       }
     ],
     "infrastructure": [
@@ -693,7 +693,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-17T14:47:46.976355+00:00"
+    "generated_at": "2026-09-17T15:39:07.132473+00:00"
   },
   "programs": {
     "groups": [
@@ -749,7 +749,7 @@
           {
             "id": "INI-168",
             "name": "Dyson Hope Reels \u2014 HyperFrames Production-Suitability Spike",
-            "status": "Backlog"
+            "status": "Current"
           }
         ]
       },
@@ -974,7 +974,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-17T14:47:46.976485+00:00"
+    "generated_at": "2026-09-17T15:39:07.132601+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
