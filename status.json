@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T11:44:35Z",
+  "generated_at": "2026-09-18T13:13:52Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -10,12 +10,12 @@
     "headline": {
       "delivered": 0,
       "recipients": 0,
-      "next": "INI-111",
+      "next": "INI-114",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
       "delivery_status": "no_delivery",
-      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-111 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
       "artifacts": [],
@@ -27,8 +27,8 @@
         0
       ],
       "next": {
-        "id": "INI-111",
-        "label": "INI-111",
+        "id": "INI-114",
+        "label": "INI-114",
         "expected_delivery_date": null
       },
       "blockers": [],
@@ -99,34 +99,26 @@
   "stats": {
     "done": 118,
     "total": 156,
-    "active": 12,
+    "active": 11,
     "queued": 0,
-    "paused": 9,
+    "paused": 10,
     "backlog": 17
   },
   "operational": {
     "last_session_date": "2026-09-17T21:44:00Z",
-    "minutes_since_session": 840,
+    "minutes_since_session": 929,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
   "active_initiative": {
-    "id": "INI-111",
-    "name": "Venture Opportunity Engine",
+    "id": "INI-114",
+    "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
     "status": "active",
     "contract": {
-      "stop_line": "Before inference goes LIVE (recording-only \u2192 actually judging notices): the CV3 preconditions must exist (`account-config.json` with the current privacy.com account ceiling; the `jasonos-venture-engine-inference` Anthropic project) AND the CEO must decide to wire it on. The Phase-3 Steward review is DONE (CLEAR, 2026-07-22). Nothing runs inference today \u2014 the poller does not construct a JudgmentEngine; Phase 2 stays recording-only until that wiring decision."
+      "stop_line": "The voice-guide gate is CLEARED (ratified 2026-07-22), so Phase 2 copy may be drafted. Every public claim still clears the Public Voice review gate and publication remains CEO-reserved (Public Voice \u00a7E) \u2014 draft freely, publish nothing. The Phase 3 launch floor is SATISFIED as of 2026-07-21 (CEO decision \u2014 Love All the Way), but IP/consent clearance for actually citing it is not, and is a hard pre-publication gate. Do not write fit-proof copy at all until there is delivered, consented work to describe \u2014 a fabricated version of that passage was produced and withdrawn during Phase 1.5. Do not ship any page without the review gate and consent clearance on every cited case."
     }
   },
   "active_initiatives": [
-    {
-      "id": "INI-111",
-      "name": "Venture Opportunity Engine",
-      "status": "active",
-      "contract": {
-        "stop_line": "Before inference goes LIVE (recording-only \u2192 actually judging notices): the CV3 preconditions must exist (`account-config.json` with the current privacy.com account ceiling; the `jasonos-venture-engine-inference` Anthropic project) AND the CEO must decide to wire it on. The Phase-3 Steward review is DONE (CLEAR, 2026-07-22). Nothing runs inference today \u2014 the poller does not construct a JudgmentEngine; Phase 2 stays recording-only until that wiring decision."
-      }
-    },
     {
       "id": "INI-114",
       "name": "Jason Cook Design \u2014 Website Rebuild (Positioning-Led)",
@@ -489,6 +481,14 @@
         }
       },
       {
+        "id": "INI-111",
+        "name": "Venture Opportunity Engine",
+        "notes": "**PAUSED 2026-09-18 (CEO-directed).** The sam.gov poller (`com.jasonos.venture-engine.samgov`) was suspended 2026-09-17 on CEO instruction \u2014 launchd job unloaded and persistently disabled, engine\u2026",
+        "contract": {
+          "stop_line": "Before inference goes LIVE (recording-only \u2192 actually judging notices): the CV3 preconditions must exist (`account-config.json` with the current privacy.com account ceiling; the `jasonos-venture-engine-inference` Anthropic project) AND the CEO must decide to wire it on. The Phase-3 Steward review is DONE (CLEAR, 2026-07-22). Nothing runs inference today \u2014 the poller does not construct a JudgmentEngine; Phase 2 stays recording-only until that wiring decision."
+        }
+      },
+      {
         "id": "INI-126",
         "name": "CFO Cockpit Planning Mode \u2014 Scenario Modeling (Forward + Bounded-Backward)",
         "notes": "PAUSED 2026-09-10 (CEO-directed deprioritization, not blocked): not an active priority against other current work. PCR-FIN-005 enacted 2026-08-09. Operationalizer disk-write path built (brief +\u2026",
@@ -699,7 +699,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-18T11:44:35.474197+00:00"
+    "generated_at": "2026-09-18T13:13:52.057036+00:00"
   },
   "programs": {
     "groups": [
@@ -766,7 +766,7 @@
           {
             "id": "INI-111",
             "name": "Venture Opportunity Engine",
-            "status": "Current"
+            "status": "Paused"
           },
           {
             "id": "INI-151",
@@ -980,7 +980,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-18T11:44:35.474326+00:00"
+    "generated_at": "2026-09-18T13:13:52.057182+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
