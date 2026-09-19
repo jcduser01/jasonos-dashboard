@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T08:23:54Z",
+  "generated_at": "2026-09-19T10:23:59Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 17
   },
   "operational": {
-    "last_session_date": "2026-09-17T21:44:00Z",
-    "minutes_since_session": 2079,
+    "last_session_date": "2026-09-19T02:25:00Z",
+    "minutes_since_session": 478,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -335,8 +335,14 @@
     {
       "id": "ACT-HO-13",
       "category": "required",
-      "label": "sam.gov suspension \u2014 scope and duration",
-      "context": "the poll is off indefinitely. Decide whether INI-111 and INI-151 (both Current, both fed by this poll) should move to Pa"
+      "label": "Re-activate com.jasonos.venture-engine.samgov when desired",
+      "context": "Steward Finding 2"
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Promote staged/session-close-20260918-samgov",
+      "context": "procedure-improvement-log entry, 1 commit"
     }
   ],
   "status_drift": [],
@@ -699,7 +705,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T08:23:54.687218+00:00"
+    "generated_at": "2026-09-19T10:23:59.593669+00:00"
   },
   "programs": {
     "groups": [
@@ -980,7 +986,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T08:23:54.687346+00:00"
+    "generated_at": "2026-09-19T10:23:59.593794+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
