@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T14:44:58Z",
+  "generated_at": "2026-09-19T15:02:57Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -8,23 +8,28 @@
       "end": "2026-09-19"
     },
     "headline": {
-      "delivered": 0,
-      "recipients": 0,
+      "delivered": 1,
+      "recipients": 1,
       "next": "INI-114",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
-      "delivery_status": "no_delivery",
-      "summary": "Delivered this period: 0 artifacts to 0 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "delivery_status": "productive",
+      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
-      "artifacts": [],
-      "recipients": 0,
+      "artifacts": [
+        {
+          "id": "INI-151",
+          "completed": "2026-09-19"
+        }
+      ],
+      "recipients": 1,
       "rolling_four_period_counts": [
         0,
         1,
         0,
-        0
+        1
       ],
       "next": {
         "id": "INI-114",
@@ -33,22 +38,22 @@
       },
       "blockers": [],
       "throughput_floor": {
-        "status": "missed",
+        "status": "met",
         "floor": 1,
         "reporting_period_days": 7,
         "evaluation_window_days": 7,
-        "delivered": 0,
-        "explicit_zero_delivery": true
+        "delivered": 1,
+        "explicit_zero_delivery": false
       },
       "source_contract_defects": []
     },
     "effort": {
       "production_ratio": {
-        "status": "degraded_unquantified",
+        "status": "unavailable",
         "value": null,
-        "numerator": 0,
+        "numerator": 1,
         "denominator": null,
-        "limitation": "Maintenance was admitted while delivery was zero; the ratio is degraded but cannot be quantified because CEO attention is unavailable."
+        "limitation": "CEO-attention denominator is unavailable."
       },
       "attention": {
         "status": "unavailable",
@@ -97,16 +102,16 @@
     }
   },
   "stats": {
-    "done": 118,
+    "done": 119,
     "total": 156,
-    "active": 11,
+    "active": 10,
     "queued": 0,
     "paused": 10,
     "backlog": 17
   },
   "operational": {
     "last_session_date": "2026-09-19T02:25:00Z",
-    "minutes_since_session": 739,
+    "minutes_since_session": 757,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -211,19 +216,6 @@
         "stop_line": "The system recommends and records planning decisions; it never autonomously changes the backlog, scripts, publishing schedule, strategic guardrails, or account. No comment-body collection, comment scraping spend, human qualitative review queue, or Reel-level GA attribution is in scope.",
         "depends_on": [
           "INI-144"
-        ]
-      }
-    },
-    {
-      "id": "INI-151",
-      "name": "Venture Opportunity Engine \u2014 Deep-Eval Request Lifecycle & Outcome Surfacing",
-      "status": "active",
-      "contract": {
-        "stop_line": "Preserve every existing INI-149 control boundary \u2014 this remains read-only from the console's perspective for scoring/disposition; a deep-eval outcome NEVER auto-changes `dispositions.jsonl` or any other CEO-owned decision, regardless of direction (3A/3B). No new engine-initiated judgment about WHICH opportunities get deep-evaluated \u2014 every deep-eval this initiative processes was already CEO-selected via the console checkbox or an ad hoc PA-run command; this initiative only fixes what happens to a selection that already exists. The poller gaining a new trigger (dispatching deep-eval automatically) is itself a change to an automatic-execution path and requires a Security Steward pass before it goes live, even though the judgment/inference machinery it invokes (`vengine/deepeval/*`) is already built and Steward-reviewed under INI-147.",
-        "depends_on": [
-          "INI-111",
-          "INI-147",
-          "INI-149"
         ]
       }
     },
@@ -705,7 +697,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T14:44:58.239767+00:00"
+    "generated_at": "2026-09-19T15:02:57.540282+00:00"
   },
   "programs": {
     "groups": [
@@ -773,11 +765,6 @@
             "id": "INI-111",
             "name": "Venture Opportunity Engine",
             "status": "Paused"
-          },
-          {
-            "id": "INI-151",
-            "name": "Venture Opportunity Engine \u2014 Deep-Eval Request Lifecycle & Outcome Surfacing",
-            "status": "Current"
           }
         ]
       },
@@ -986,7 +973,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T14:44:58.239897+00:00"
+    "generated_at": "2026-09-19T15:02:57.540425+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
