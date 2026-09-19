@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:04:56Z",
+  "generated_at": "2026-09-19T16:39:37Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -102,16 +102,16 @@
     }
   },
   "stats": {
-    "done": 119,
+    "done": 120,
     "total": 156,
-    "active": 10,
+    "active": 9,
     "queued": 0,
     "paused": 10,
     "backlog": 17
   },
   "operational": {
     "last_session_date": "2026-09-19T02:25:00Z",
-    "minutes_since_session": 819,
+    "minutes_since_session": 854,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -233,20 +233,6 @@
       "status": "active",
       "contract": {
         "stop_line": "This initiative ends at a publication-ready manuscript plus a written self-publication plan. It does not publish. No upload to any publishing platform, no purchase of ISBNs, no commissioning or purchase of cover art or editorial services, no pricing commitment, no marketing execution, and no outreach to agents, publishers, or reviewers occurs under this initiative. Any spending requires separate CEO approval outside this scope. The CEO edits and refines all drafted prose; no draft is treated as final by any agent."
-      }
-    },
-    {
-      "id": "INI-168",
-      "name": "Dyson Hope Reels \u2014 HyperFrames Production-Suitability Spike",
-      "status": "active",
-      "contract": {
-        "route": "CEO-first",
-        "runner_scope": "Engineering-buildable with Creative Director quality judgment. REVISED 2026-09-19 post-CAP-REV-BLOCK: extract-and-adapt, not install. Consume the HyperFrames npm package (github.com/heygen-com/hyperframes, Apache 2.0) as a rendering library/CLI only \u2014 `render` and other individually-vetted subcommands \u2014 never its onboarding/bootstrap flow. Engineering Director's precondition work before any composition attempt: (1) verify `npx hyperframes render` (or equivalent) works against a hand-built/manually-scaffolded project structure with `hyperframes init` never invoked \u2014 if this is not feasible, stop and report rather than falling back to `init`; (2) check for a cache-directory override (`XDG_CACHE_HOME` or documented equivalent) and redirect any local cache writes to inside `/Volumes/SandboxData`, closing the secondary boundary-crossing the first review didn't examine (`~/.cache/hyperframes/fonts/`, observed in Phase 1); (3) confirm render-telemetry-to-HeyGen is actually disabled (`hyperframes telemetry disable` or equivalent), not merely opted out in principle, and that no other outbound call exists beyond what Research/Steward already vetted. Only once all three are confirmed does composition work (the original ~20-30s Dyson Hope test piece from existing music/artwork plus Higgsfield-generated or already-available shots) proceed. Any org-authored skill/reference doc produced from this work is hand-written by Engineering Director (informed by, not re-installing, the Steward-cleared content relocated to `~/Downloads/_temp-storage/hyperframes*`) and lives under the git-tracked `operations/jasonos-operations/skills/` convention \u2014 never `~/.claude/skills/` or any other global/auto-loading path \u2014 with no 'mandatory'/default-router framing. Entirely outside the production Dyson Hope Reels pipeline: no production Higgsfield credits spent beyond a normal INI-142 evaluation, no real reel-backlog.csv entry, no publish action. Deliverable is a findings report + the test render + the authored skill doc, not a shippable asset.",
-        "stop_line": "STANDING, PERMANENT (per CAP-REV-2026-09-19-INI168-HYPERFRAMES-EXTRACT-ADAPT, CLEAR-WITH-CONDITIONS, superseding the 2026-09-18 BLOCK) \u2014 non-waivable by director judgment: (1) `hyperframes init`, `npx skills add`, or any skill-bootstrap-shaped command must NEVER run, in any session, at any scope, for any reason \u2014 not overridable by a director's judgment that intent would otherwise be satisfied; if the render CLI cannot work without it, stop and report rather than falling back to it. (2) The five documented residual outside-sandbox writes (`~/.cache/hyperframes/fonts/{ibm-plex-mono,archivo,inter}/`, `~/.cache/hyperframes/chrome/`, `~/.hyperframes/config.json`, `~/.hyperframes/install-state.json` \u2014 see `operations/jasonos-operations/skills/hyperframes-render/SKILL.md`) are formally accepted, filesystem-cache-only, non-agent-instruction-loading \u2014 but any newly-discovered outside-sandbox write path NOT already in that table requires an immediate halt-and-escalate to Security Steward, not a flag-and-continue. (3) Telemetry: current disable-flag verification (unchanged commandCount) is sufficient for spike use only; any production or recurring use requires stronger verification first \u2014 a network capture during a render, or `HYPERFRAMES_NO_TELEMETRY=1` set on every invocation as a belt-and-suspenders layer independent of config state. (4) `operations/jasonos-operations/skills/hyperframes-render/SKILL.md` is the sole authorized reference; any edit introducing mandatory/default-router framing, or any move to an auto-loading path (including but not limited to `~/.claude/skills/`), requires Security Steward review before taking effect. (5) Version pinned at `hyperframes@0.8.46`; any version change requires a render + lint/check pass before any production-adjacent use. Beyond the standing conditions: this clearance covers the spike only \u2014 production pipeline integration (INI-142 Phase 3 / INI-143) requires its own separate capability review before it can happen. No change to the production pipeline pending that separate review. No recurring cost or subscription commitment \u2014 local rendering only. No real reel_id or production record; test pieces stay disposable, unpublished. If the pre-1.0 API breaks mid-spike, stop, record the failure mode as the finding, and do not sink further time chasing a moving target.",
-        "depends_on": [
-          "INI-141",
-          "INI-142"
-        ]
       }
     }
   ],
@@ -709,7 +695,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T16:04:56.179681+00:00"
+    "generated_at": "2026-09-19T16:39:37.195742+00:00"
   },
   "programs": {
     "groups": [
@@ -761,11 +747,6 @@
             "id": "INI-166",
             "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
             "status": "Backlog"
-          },
-          {
-            "id": "INI-168",
-            "name": "Dyson Hope Reels \u2014 HyperFrames Production-Suitability Spike",
-            "status": "Current"
           }
         ]
       },
@@ -985,7 +966,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T16:04:56.179813+00:00"
+    "generated_at": "2026-09-19T16:39:37.195883+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
