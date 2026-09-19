@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T12:24:04Z",
+  "generated_at": "2026-09-19T14:44:58Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-19T02:25:00Z",
-    "minutes_since_session": 599,
+    "minutes_since_session": 739,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -249,8 +249,8 @@
       "status": "active",
       "contract": {
         "route": "CEO-first",
-        "runner_scope": "Engineering-buildable with Creative Director quality judgment. Install HyperFrames (github.com/heygen-com/hyperframes, Apache 2.0) locally and use it \u2014 driven by Claude Code as the compositing agent, per its own authoring model \u2014 to assemble one short (~20-30s) Dyson Hope test piece from existing music/artwork plus Higgsfield-generated or already-available shots. Entirely outside the production Dyson Hope Reels pipeline: no production Higgsfield credits spent beyond what a normal INI-142 evaluation would use, no real reel-backlog.csv entry, no publish action. Deliverable is a findings report + the test render, not a shippable asset.",
-        "stop_line": "No change to the production pipeline (INI-085/087 assembly, INI-142 visual-beat routing, INI-143 weekly rhythm) pending this spike's findings. No recurring cost or subscription commitment \u2014 local rendering only; if a step appears to require a paid HeyGen cloud tier, stop and surface that as a finding rather than incurring it. No real reel_id or production record is created; the test piece is disposable and not published to any account. If HyperFrames' agent-authoring workflow does not function as documented in a Claude Code session, or the pre-1.0 API breaks mid-spike, stop, record the failure mode as the finding, and do not sink further time chasing a moving target.",
+        "runner_scope": "Engineering-buildable with Creative Director quality judgment. REVISED 2026-09-19 post-CAP-REV-BLOCK: extract-and-adapt, not install. Consume the HyperFrames npm package (github.com/heygen-com/hyperframes, Apache 2.0) as a rendering library/CLI only \u2014 `render` and other individually-vetted subcommands \u2014 never its onboarding/bootstrap flow. Engineering Director's precondition work before any composition attempt: (1) verify `npx hyperframes render` (or equivalent) works against a hand-built/manually-scaffolded project structure with `hyperframes init` never invoked \u2014 if this is not feasible, stop and report rather than falling back to `init`; (2) check for a cache-directory override (`XDG_CACHE_HOME` or documented equivalent) and redirect any local cache writes to inside `/Volumes/SandboxData`, closing the secondary boundary-crossing the first review didn't examine (`~/.cache/hyperframes/fonts/`, observed in Phase 1); (3) confirm render-telemetry-to-HeyGen is actually disabled (`hyperframes telemetry disable` or equivalent), not merely opted out in principle, and that no other outbound call exists beyond what Research/Steward already vetted. Only once all three are confirmed does composition work (the original ~20-30s Dyson Hope test piece from existing music/artwork plus Higgsfield-generated or already-available shots) proceed. Any org-authored skill/reference doc produced from this work is hand-written by Engineering Director (informed by, not re-installing, the Steward-cleared content relocated to `~/Downloads/_temp-storage/hyperframes*`) and lives under the git-tracked `operations/jasonos-operations/skills/` convention \u2014 never `~/.claude/skills/` or any other global/auto-loading path \u2014 with no 'mandatory'/default-router framing. Entirely outside the production Dyson Hope Reels pipeline: no production Higgsfield credits spent beyond a normal INI-142 evaluation, no real reel-backlog.csv entry, no publish action. Deliverable is a findings report + the test render + the authored skill doc, not a shippable asset.",
+        "stop_line": "HARD: never run `hyperframes init`, `npx skills add`, or any `skills add`/skill-bootstrap-shaped command, under any circumstances, in any session, at any scope (project or global). If the render CLI cannot be made to work without `init`, stop and report \u2014 do not fall back to running it to unblock progress. No write outside `/Volumes/SandboxData/` of any kind (cache, config, skills, or otherwise) without it being explicitly identified, redirected inside the sandbox where possible, and reported if it cannot be. No change to the production pipeline (INI-085/087 assembly, INI-142 visual-beat routing, INI-143 weekly rhythm) pending this spike's findings. No recurring cost or subscription commitment \u2014 local rendering only; if a step appears to require a paid HeyGen cloud tier, stop and surface that as a finding rather than incurring it. No real reel_id or production record is created; the test piece is disposable and not published to any account. Before any Phase 2 composition work is treated as complete/shippable, or before this spike is presented as resolving CAP-REV-2026-09-18-INI168-HYPERFRAMES-SKILLS, a Security Steward re-review of the actual resulting approach (commands run, cache/telemetry behavior confirmed, and the authored skill doc's content and placement) is required \u2014 the President Agent does not self-certify closure of a formal BLOCK verdict. If the pre-1.0 API breaks mid-spike, stop, record the failure mode as the finding, and do not sink further time chasing a moving target.",
         "depends_on": [
           "INI-141",
           "INI-142"
@@ -705,7 +705,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T12:24:04.525422+00:00"
+    "generated_at": "2026-09-19T14:44:58.239767+00:00"
   },
   "programs": {
     "groups": [
@@ -986,7 +986,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T12:24:04.525551+00:00"
+    "generated_at": "2026-09-19T14:44:58.239897+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
