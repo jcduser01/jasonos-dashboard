@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-18T13:19:11Z",
+  "generated_at": "2026-09-19T06:23:48Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-09-12",
-      "end": "2026-09-18"
+      "start": "2026-09-13",
+      "end": "2026-09-19"
     },
     "headline": {
       "delivered": 0,
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-17T21:44:00Z",
-    "minutes_since_session": 935,
+    "minutes_since_session": 1959,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -699,7 +699,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-18T13:19:11.148742+00:00"
+    "generated_at": "2026-09-19T06:23:48.220430+00:00"
   },
   "programs": {
     "groups": [
@@ -980,7 +980,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-18T13:19:11.148874+00:00"
+    "generated_at": "2026-09-19T06:23:48.220567+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
