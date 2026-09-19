@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:39:37Z",
+  "generated_at": "2026-09-19T23:27:26Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -75,7 +75,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 15,
+      "guardrail_repairs": 16,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-19T02:25:00Z",
-    "minutes_since_session": 854,
+    "minutes_since_session": 1262,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -693,9 +693,21 @@
             "action": "agent"
           }
         ]
+      },
+      {
+        "name": "Source Control Governance",
+        "description": null,
+        "items": [
+          {
+            "id": "GAP-290",
+            "type": "GAP",
+            "description": "push: false stage-and-hold commits on the shared main branch are silently promoted to canonical by\u2026",
+            "action": "ceo"
+          }
+        ]
       }
     ],
-    "generated_at": "2026-09-19T16:39:37.195742+00:00"
+    "generated_at": "2026-09-19T23:27:26.579887+00:00"
   },
   "programs": {
     "groups": [
@@ -966,7 +978,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T16:39:37.195883+00:00"
+    "generated_at": "2026-09-19T23:27:26.580014+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1556,7 +1568,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 2,
+    "open_gaps": 3,
     "open_rems": 0
   }
 }
