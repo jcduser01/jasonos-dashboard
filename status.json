@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T15:08:18Z",
+  "generated_at": "2026-09-19T15:48:20Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-19T02:25:00Z",
-    "minutes_since_session": 763,
+    "minutes_since_session": 803,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -697,7 +697,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T15:08:18.291311+00:00"
+    "generated_at": "2026-09-19T15:48:20.055754+00:00"
   },
   "programs": {
     "groups": [
@@ -973,7 +973,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T15:08:18.291433+00:00"
+    "generated_at": "2026-09-19T15:48:20.055892+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1098,10 +1098,10 @@
       "id": "OBS-TWO-REGISTERED-CHECKERS-ARE-PERMANENTLY-UNREACHABLE-FROM-THE-UNATTENDED-SWEEPS-OWN-ENVIRONMENT",
       "summary": "Two of the 15 registered checkers cannot run at all in the environment the daily sweep actually executes in, and both have been reported as prose-only cannot_verify for many consecutive runs with no durable row anywhere. (1) check-skills-drift.py exits 2 at locate ('could not locate the skills-plugin/ cache directory') \u2014 twenty-first consecutive sweep, first recorded 2026-07-31; the plugin cache under Library/Application Support is not a granted Cowork folder, so both facets are unreachable by construction. (2) check-scheduled-task-coverage.py exits 2 ('could not locate repo ... or scheduler path (None)') \u2014 fifth consecutive sweep since 2026-08-17T05:33Z; the checker resolves the scheduler at ~/Claude/Scheduled or /sessions/*/mnt/Claude/Scheduled and this session's granted folders are JasonOS, SandboxData and bin only, with no Claude mount. It returned 15/15 on 08-13 because that session happened to have one, so the control's verdict depends on which folders a given unattended session was granted. Neither is a broken checker: the protocol's own rule (an unreachable source is cannot_verify, never clean) is being followed correctly each run. The durable finding is that a permanently-unreachable check has no disposition path \u2014 the Security Steward's standing question F6 ('what should a permanently unreachable check report?') has been re-raised in the sweep narrative on every one of those runs since 2026-07-31 and remains unanswered, so the estate carries two coverage controls whose result is structurally unknowable from the environment they are scheduled in, and only the sweep's prose records it. Scheduled-task coverage was substituted this run by reading live scheduler state via list_scheduled_tasks (15 tasks, all reconciled), which is a weaker hand-run substitute. not admitted as work",
       "source": "jasonos-report-triage 2026-08-20T11:05Z",
-      "observed_at": "2026-09-01",
+      "observed_at": "2026-09-18",
       "expires_on": "2026-09-19",
       "project": "Process & Surface Governance",
-      "occurrences": 13
+      "occurrences": 15
     },
     {
       "id": "OBS-GAP-262-IS-INDEXED-BUT-UNCOMMITTED-AND-NO-CONTROL-WATCHES-THE-OPERATIONS-REPO-WORKING-TREE",
@@ -1142,10 +1142,10 @@
       "id": "OBS-RELAY-CLIENT-WAIT-TIMEOUT-SHORTER-THAN-ROTATION-RUN",
       "summary": "commit_via_relay.py --wait (v1.24) enforces a 35s client budget, but a git-relay.log rotation run legitimately takes ~99s: 2026-08-25 operations backup Step 2 enqueued at 07:41:31Z and abandoned the wait while status=running; terminal status=success landed 07:43:10Z. Fourth consecutive rotation-day occurrence (08-22, 08-23, 08-24, 08-25). The canonical asset's prescribed recovery ('retry the wait once') does not match the client's re-entry semantics: re-invoking enqueues a duplicate backup job against the same Drive target rather than re-attaching to the in-flight one. Both the 08-24 and 08-25 runs instead polled the job's .result file to its terminal value, which is the correct action and is not what the asset says. Candidate fixes: pass an explicit --timeout, or change the retry instruction to 'poll the job .result file'. Filed by the report-triage sweep on the Operations Director's behalf -- it was declared in the 08-25 backup log entry but never reached this register.",
       "source": "report-triage sweep 2026-08-25",
-      "observed_at": "2026-09-14",
+      "observed_at": "2026-09-15",
       "expires_on": "2026-09-24",
       "project": null,
-      "occurrences": 6
+      "occurrences": 7
     },
     {
       "id": "OBS-DASHBOARD-PUBLISHER-CADENCE-IS-2H-AGAINST-A-2H-STALENESS-THRESHOLD",
@@ -1331,7 +1331,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-02",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 11
+      "occurrences": 13
     },
     {
       "id": "OBS-TEST-RELAY-GAP271-HOOKSPATH-SH-UNREGISTERED",
@@ -1348,7 +1348,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 10
+      "occurrences": 12
     },
     {
       "id": "OBS-DEPLOYED-DASHBOARD-PUBLISHER-AND-PRODUCTION-METRICS-DIVERGE-FROM-CANONICAL-2026-09-03",
@@ -1357,7 +1357,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 10
+      "occurrences": 12
     },
     {
       "id": "OBS-CLOSE-WORK-ITEM-SH-REFERENCES-DEAD-MONOLITH-PATH",
@@ -1375,7 +1375,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-03",
       "project": "Knowledge Vault Operations",
-      "occurrences": 8
+      "occurrences": 10
     },
     {
       "id": "OBS-HANDOFF-COMPACTOR-3-INBOX-FILES-UNCONSUMED-PAST-04-00-ROTATION-2026-09-03",
@@ -1390,10 +1390,10 @@
       "id": "OBS-DEAD-PATH-REGROWTH-9-NEW-PINS-2026-09-04",
       "summary": "GAP-065 regrowth guard fired: governed=487 baselined=40 NEW=9. Nine files carry a sole hardcoded mount root not in the baseline allowlist: check-scheduled-task-run-currency.py, jasonos-airlock-financial-router.py, jasonos-dyson-hope-decision-ledger.py, jasonos-index-lock-sweeper.py, jasonos-instagram-reel-metrics-watchdog.py, jasonos-instagram-token-refresh.py, venture-engine/console_app.py, venture-engine/vengine/calibration/_dispositions.py, venture-engine/vengine/deepeval/_requests.py. Guard working as designed (fails closed on new pins so the 40-file legacy debt cannot quietly grow); this is regrowth detected, not a control failure. Disposition: fix pins to use the mount-resolving path helper or consciously baseline as legacy debt. Not admitted as work: ordinary repository/path drift, observation-only under protocol v2.3.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), report-triage 2026-09-04",
-      "observed_at": "2026-09-14",
+      "observed_at": "2026-09-18",
       "expires_on": "2026-10-04",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 8
+      "occurrences": 10
     },
     {
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-6-UNSTAMPED-2026-09-04",
@@ -1402,7 +1402,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-04",
       "project": "Process & Surface Governance",
-      "occurrences": 9
+      "occurrences": 11
     },
     {
       "id": "OBS-GAP-283-MISSING-FROM-INDEX-RESOLVED-TABLE-2026-09-06",
@@ -1419,7 +1419,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-06",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "id": "OBS-GIT-RELAY-LAUNCHD-JOB-DOWN-2026-09-07",
@@ -1444,7 +1444,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-07",
       "project": "Financial Analysis",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "id": "OBS-FINANCIAL-EXPORT-MISPLACED-INTAKE",
@@ -1461,7 +1461,7 @@
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-10",
       "project": "Knowledge Vault Operations",
-      "occurrences": 5
+      "occurrences": 7
     },
     {
       "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION",
@@ -1527,6 +1527,14 @@
       "observed_at": "2026-09-16",
       "expires_on": "2026-10-16",
       "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "OBS-DYSON-HOPE-DRIP-NEXT-SCHEDULED-RUN-OVERDUE-2026-09-18",
+      "summary": "temp/drip-last-run.json's next_scheduled_at (2026-09-17T20:58:15Z) has passed with no newer run recorded as of this sweep's check (~2026-09-18T11:12Z, ~14h14m overdue). Last recorded run: ran_at=2026-09-17T11:25:26Z, status=no-op, dry_run=false, queue_exhausted=false. Not independently verified this run whether the gate governing next_scheduled_at is itself broken or whether the schedule is conditional/gated by content availability -- insufficient evidence this sweep to call it a verified broken guardrail versus a routine gating delay; flagged for a later look rather than admitted as work.",
+      "source": "jasonos-report-triage 2026-09-18 sweep -- temp/drip-last-run.json",
+      "observed_at": "2026-09-18",
+      "expires_on": "2026-10-18",
+      "project": "Dyson Hope Blog-Drip Publishing Pipeline"
     },
     {
       "id": "OBS-PENDING-STEWARD-CLEAR-WITH-CONDITIONS-BACKLOG-2026-09-19",
