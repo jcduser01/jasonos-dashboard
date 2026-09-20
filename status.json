@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T18:43:37Z",
+  "generated_at": "2026-09-20T18:45:39Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -8,28 +8,32 @@
       "end": "2026-09-20"
     },
     "headline": {
-      "delivered": 1,
-      "recipients": 1,
+      "delivered": 2,
+      "recipients": 2,
       "next": "INI-114",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
       "delivery_status": "productive",
-      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "summary": "Delivered this period: 2 artifacts to 2 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
       "artifacts": [
         {
           "id": "INI-151",
           "completed": "2026-09-19"
+        },
+        {
+          "id": "INI-166",
+          "completed": "2026-09-20"
         }
       ],
-      "recipients": 1,
+      "recipients": 2,
       "rolling_four_period_counts": [
         0,
         1,
         0,
-        1
+        2
       ],
       "next": {
         "id": "INI-114",
@@ -42,7 +46,7 @@
         "floor": 1,
         "reporting_period_days": 7,
         "evaluation_window_days": 7,
-        "delivered": 1,
+        "delivered": 2,
         "explicit_zero_delivery": false
       },
       "source_contract_defects": []
@@ -51,7 +55,7 @@
       "production_ratio": {
         "status": "unavailable",
         "value": null,
-        "numerator": 1,
+        "numerator": 2,
         "denominator": null,
         "limitation": "CEO-attention denominator is unavailable."
       },
@@ -102,16 +106,16 @@
     }
   },
   "stats": {
-    "done": 120,
+    "done": 121,
     "total": 156,
-    "active": 10,
+    "active": 9,
     "queued": 0,
     "paused": 10,
     "backlog": 16
   },
   "operational": {
     "last_session_date": "2026-09-20T05:17:49Z",
-    "minutes_since_session": 805,
+    "minutes_since_session": 807,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -225,19 +229,6 @@
       "status": "active",
       "contract": {
         "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No real embedding-model download without separate explicit CEO authorization (remains untouched \u2014 verified via model-cache inspection during the build). The custom combined Postgres/AGE/pgvector image build restriction is discharged as of 2026-09-02 \u2014 CEO explicit authorization this session (\"build the custom PG18/AGE/pgvector image\") \u2014 dispatched to Engineering Director; the B-010 reference benchmark was explicitly held off by the CEO in the same instruction and stays out of scope. No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
-      }
-    },
-    {
-      "id": "INI-166",
-      "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
-      "status": "active",
-      "contract": {
-        "stop_line": "Per-post reel assembly \u2014 applying album art, artist name/text, and track title to each individual reel as it is created \u2014 is ongoing operational work for the CEO, not part of this initiative's deliverable. This initiative delivers the format spec and the reusable bumper asset library; it does not produce or publish individual reels in the series.",
-        "depends_on": [
-          "INI-142",
-          "INI-158",
-          "INI-158"
-        ]
       }
     },
     {
@@ -671,7 +662,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-20T18:43:37.855451+00:00"
+    "generated_at": "2026-09-20T18:45:39.992402+00:00"
   },
   "programs": {
     "groups": [
@@ -718,11 +709,6 @@
             "id": "INI-157",
             "name": "Dyson Hope Observation Engine \u2192 Reel/Blog Backlog Automation",
             "status": "Backlog"
-          },
-          {
-            "id": "INI-166",
-            "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
-            "status": "Current"
           }
         ]
       },
@@ -942,7 +928,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-20T18:43:37.855588+00:00"
+    "generated_at": "2026-09-20T18:45:39.992534+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
