@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T23:27:26Z",
+  "generated_at": "2026-09-20T00:02:30Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -104,14 +104,14 @@
   "stats": {
     "done": 120,
     "total": 156,
-    "active": 9,
+    "active": 10,
     "queued": 0,
     "paused": 10,
-    "backlog": 17
+    "backlog": 16
   },
   "operational": {
     "last_session_date": "2026-09-19T02:25:00Z",
-    "minutes_since_session": 1262,
+    "minutes_since_session": 1297,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -225,6 +225,19 @@
       "status": "active",
       "contract": {
         "stop_line": "No V1 release declaration without a separate explicit CEO authorization and the full PRD \u00a79.12 acceptance evidence on record. The original blanket restriction on populating `ray-graystone-fds` with real content is discharged for the specific action it was written to gate \u2014 the CEO explicitly authorized the President Agent to draft `ray-graystone-fds`'s real bootstrap objects (Author/RegistrySet/Project manifest/root Work for 'The Ledger') on 2026-08-17 ('You have my authorization to draft the bootstrap objects now'), done and committed (`ed7eada`). Any further agent-authored (not CEO-authored) real content in that repo beyond ordinary mechanical scaffolding of this kind should still be treated as needing its own explicit go-ahead, not inferred from this one. No real embedding-model download without separate explicit CEO authorization (remains untouched \u2014 verified via model-cache inspection during the build). The custom combined Postgres/AGE/pgvector image build restriction is discharged as of 2026-09-02 \u2014 CEO explicit authorization this session (\"build the custom PG18/AGE/pgvector image\") \u2014 dispatched to Engineering Director; the B-010 reference benchmark was explicitly held off by the CEO in the same instruction and stays out of scope. No further canonical push to `jasonos-operations`/`jasonos-governance` without a stated authorization basis per PCR-OPS-069 (an explicit CEO push directive this session, or an active Full Autonomy grant \u2014 stated explicitly at commit time, not assumed)."
+      }
+    },
+    {
+      "id": "INI-166",
+      "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
+      "status": "active",
+      "contract": {
+        "stop_line": "Per-post reel assembly \u2014 applying album art, artist name/text, and track title to each individual reel as it is created \u2014 is ongoing operational work for the CEO, not part of this initiative's deliverable. This initiative delivers the format spec and the reusable bumper asset library; it does not produce or publish individual reels in the series.",
+        "depends_on": [
+          "INI-142",
+          "INI-158",
+          "INI-158"
+        ]
       }
     },
     {
@@ -564,19 +577,6 @@
           "stop_line": "None.",
           "depends_on": []
         }
-      },
-      {
-        "id": "INI-166",
-        "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
-        "notes": "Filed 2026-09-09 from CEO sticky-note triage session. This was one of the original items from that session, scoped into a ticket now that INI-158 (the Hypeddit-sourcing shortlist app) has been filed\u2026",
-        "contract": {
-          "stop_line": "Per-post reel assembly \u2014 applying album art, artist name/text, and track title to each individual reel as it is created \u2014 is ongoing operational work for the CEO, not part of this initiative's deliverable. This initiative delivers the format spec and the reusable bumper asset library; it does not produce or publish individual reels in the series.",
-          "depends_on": [
-            "INI-142",
-            "INI-158",
-            "INI-158"
-          ]
-        }
       }
     ],
     "infrastructure": [
@@ -707,7 +707,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T23:27:26.579887+00:00"
+    "generated_at": "2026-09-20T00:02:30.547417+00:00"
   },
   "programs": {
     "groups": [
@@ -758,7 +758,7 @@
           {
             "id": "INI-166",
             "name": "Dyson Hope Reels \u2014 Hypeddit Hot Tracks Recurring Series",
-            "status": "Backlog"
+            "status": "Current"
           }
         ]
       },
@@ -978,7 +978,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-19T23:27:26.580014+00:00"
+    "generated_at": "2026-09-20T00:02:30.547544+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
