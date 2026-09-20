@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T11:19:35Z",
+  "generated_at": "2026-09-20T18:43:37Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -111,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-20T05:17:49Z",
-    "minutes_since_session": 361,
+    "minutes_since_session": 805,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -253,96 +253,48 @@
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
-      "category": "required",
-      "label": "Source acquisition for INI-167",
-      "context": "CEO-owned. Priority 1 titles (Chenoweth \u00d72, Huntington, Evans) unblock flagged passages in the finished foreword. List a"
+      "category": "confirm",
+      "label": "Confirm INI-166 is complete and ready to close",
+      "context": "Dyson Hope Hypeddit Hot Tracks bumper series. All three DoD items satisfied and CEO-confirmed 2026-09-20 (\"Four usable v"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Manual WorldCat check",
-      "context": "for Cook, Jason Michael \u2014 gap closure on the byline clearance; every accessible source returned clear."
+      "label": "Source acquisition for INI-167",
+      "context": "*(combined \u2014 merges the two prior separate line items)* \u2014 Priority 1 titles (Chenoweth \u00d72, Huntington, Evans) unblock fl"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "Decide whether to build an unattended-execution surface for Detached Execution grants",
-      "context": "currently the mode only permits, it never triggers; see the open question above and governance/memory/project_ini167_det"
+      "label": "NEW \u2014 SS-statement vault-entry disposition",
+      "context": "Steward Medium finding, PCR-SEC-011 review 2026-09-14"
     },
     {
       "id": "ACT-HO-4",
-      "category": "confirm",
-      "label": "Review the five chapter drafts (content first, then style, per Position Brief \u00a7 11a)",
-      "context": "now on main in democracys-next-evolution (manuscript/01, 02, 03, 05, 07), promoted and pushed to origin on the CEO's att"
+      "category": "required",
+      "label": "NEW \u2014 Three policy-gap recommendations",
+      "context": "from the same review, not yet admitted as work: (a) whether/when a Claude Code session attachment can ever be an approve"
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "Schedule an attended Creative Director prose review and Research Director re-sourcing pass",
-      "context": "on the five drafts (the [[RE-SOURCE]] and [[NEEDS-SOURCE]] flags) and on the Research Gap Register leads."
+      "label": "NEW \u2014 Pre-existing, session-unrelated check-cap-rev-write-claims.py defects",
+      "context": "still present, re-verified this session"
     },
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "Decide the four proposed source acquisitions",
-      "context": "Pred 1973; John 1995; Feldstein 2021; Higgs 1987"
+      "label": "NEW \u2014 Retirement planning follow-ons",
+      "context": "from the Financial Analysis Director's briefing (informational, no urgency): no stated retirement-age/spending target to"
     },
     {
       "id": "ACT-HO-7",
-      "category": "required",
-      "label": "Choose chapter 6's opening object",
-      "context": "candidates in the Chapter Briefs; drafting is blocked on it."
-    },
-    {
-      "id": "ACT-HO-8",
-      "category": "required",
-      "label": "Security Steward invocation recommended",
-      "context": "scope in the entry above."
-    },
-    {
-      "id": "ACT-HO-9",
-      "category": "required",
-      "label": "NEW \u2014 SS-statement vault-entry disposition (Steward Medium finding, PCR-SEC-011 review 2026-09-14)",
-      "context": "choose one \u2014 (1) retroactive airlock processing (Operations Director manifest + Knowledge Director classification/index/"
-    },
-    {
-      "id": "ACT-HO-10",
-      "category": "required",
-      "label": "NEW \u2014 Three policy-gap recommendations from the same review, not yet admitted as work",
-      "context": "a"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "NEW \u2014 Pre-existing, session-unrelated check-cap-rev-write-claims.py defects surfaced incidentally",
-      "context": "CAP-REV-2026-07-19-INI140.md missing required PCR-SEC-011 frontmatter, and README.md in the same reviews directory has a"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "NEW \u2014 Retirement planning follow-ons from the Financial Analysis Director's briefing",
-      "context": "informational, no urgency"
-    },
-    {
-      "id": "ACT-HO-13",
       "category": "required",
       "label": "Re-activate com.jasonos.venture-engine.samgov when desired",
       "context": "Steward Finding 2"
     },
     {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "Go-ahead on the five-lane cleanup",
-      "context": "authorize re-applying the held staged/session-close-20260918-samgov entry and staged/report-triage-20260918-final's cont"
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "Push 7fd2452c5539",
-      "context": "(session-close memory entry + procedure-log observations, on jasonos-operations main, 1 ahead of origin) \u2014 or let the me"
-    },
-    {
-      "id": "ACT-HO-16",
+      "id": "ACT-HO-8",
       "category": "required",
       "label": "Audio + fuller-brand-motif follow-up render for HyperFrames",
       "context": "informational, not urgent"
@@ -719,7 +671,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-20T11:19:35.920920+00:00"
+    "generated_at": "2026-09-20T18:43:37.855451+00:00"
   },
   "programs": {
     "groups": [
@@ -990,7 +942,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-20T11:19:35.921063+00:00"
+    "generated_at": "2026-09-20T18:43:37.855588+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
