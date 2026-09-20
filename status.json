@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T18:45:39Z",
+  "generated_at": "2026-09-20T20:46:14Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -115,7 +115,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-20T05:17:49Z",
-    "minutes_since_session": 807,
+    "minutes_since_session": 928,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -662,7 +662,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-20T18:45:39.992402+00:00"
+    "generated_at": "2026-09-20T20:46:14.153718+00:00"
   },
   "programs": {
     "groups": [
@@ -928,7 +928,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-20T18:45:39.992534+00:00"
+    "generated_at": "2026-09-20T20:46:14.153852+00:00"
   },
   "contract_quality_gaps": [],
   "pending_notes": [
@@ -1506,6 +1506,14 @@
       "source": "git log/git branch on jasonos-operations, report-triage 2026-09-19 sweep",
       "observed_at": "2026-09-19",
       "expires_on": "2026-10-19",
+      "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-20-SUCCESS-BUT-UNCOMMITTED",
+      "summary": "SIXTH occurrence of report-triage's own write/commit step failing (see BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION, -09-13-EXECUTED-BUT-UNCOMMITTED, -09-15-STAGED-BRANCH-ORPHANED, -09-17-18-THREE-COMPETING-UNMERGED-STAGED-LANES). This ad-hoc sweep was dispatched under the premise that the daily task 'appears to have missed 2026-09-19 and has not yet run for 2026-09-20' (based on the last observations.jsonl commit being dated 2026-09-18). That premise is FALSE: agent-invocation-master.log shows report-triage-20260919 (start 11:06:28Z, success 11:18:30Z, duration=1500s) and report-triage-20260920 (start 11:06:33Z, success 11:09:27Z, duration=1400s) both completed successfully -- the daily task ran on schedule both days. The 09-20 run's real output survived only as an uncommitted working-tree diff to operations/observations.jsonl (4 occurrence bumps on pre-existing rows, mtime 2026-09-20T11:09:16-05:00 i.e. 16:09:16Z, matching the recorded success timestamp to the minute) -- no corresponding procedure-improvement-log.md entry, git commit, or staged/* branch exists for 09-20's sweep narrative anywhere in the repo. Root cause not newly established (same unresolved write/commit-step defect named in the four prior occurrences: no explicit destination path in the protocol for the step-7 narrative write, and no commit-and-verify sub-step in the task's own final step). This ad-hoc sweep did not re-run full channel detection (steps 1-2) to avoid duplicate/conflicting observation filings against the already-completed 09-20 run; it verified and landed the pre-existing legitimate uncommitted diff instead. The two fixes proposed since 09-13 remain unimplemented across seven affected sweeps (09-11, 09-13, 09-15, 09-17, 09-18, and now 09-20) and are overdue for CEO/Engineering Director action.",
+      "source": "jasonos-report-triage 2026-09-20 sweep (verified by ad-hoc President Agent sweep 2026-09-20T18:xx UTC)",
+      "observed_at": "2026-09-20",
+      "expires_on": "2026-10-20",
       "project": "Backup & Scheduled-Task Reliability"
     },
     {
