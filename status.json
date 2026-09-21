@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T12:07:26Z",
+  "generated_at": "2026-09-21T15:25:22Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -79,7 +79,7 @@
     },
     "escape_hatches": {
       "delivery_dependencies": 3,
-      "guardrail_repairs": 16,
+      "guardrail_repairs": 17,
       "maintenance_cap_overrides": 0
     },
     "mechanisms": {
@@ -115,7 +115,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-20T22:07:38Z",
-    "minutes_since_session": 839,
+    "minutes_since_session": 1037,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -626,6 +626,18 @@
   "projects": {
     "groups": [
       {
+        "name": "Backup & Scheduled-Task Reliability",
+        "description": "Make every scheduled backup/log-writer daemon fail loud instead of silent, and stop the health-check monitor from manufacturing false alarms.",
+        "items": [
+          {
+            "id": "GAP-292",
+            "type": "GAP",
+            "description": "jasonos-report-triage's own Step 7/8 narrative write-and-commit recurringly fails, even though the\u2026",
+            "action": "agent"
+          }
+        ]
+      },
+      {
         "name": "Agent Sandbox Governance",
         "description": null,
         "items": [
@@ -633,7 +645,7 @@
             "id": "GAP-289",
             "type": "GAP",
             "description": "No standing policy prevents a third-party npx/CLI installer from writing outside an authorized\u2026",
-            "action": "ceo"
+            "action": "agent"
           }
         ]
       },
@@ -662,7 +674,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-21T12:07:26.508757+00:00"
+    "generated_at": "2026-09-21T15:25:22.373529+00:00"
   },
   "programs": {
     "groups": [
@@ -928,7 +940,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-21T12:07:26.508891+00:00"
+    "generated_at": "2026-09-21T15:25:22.373680+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1544,7 +1556,7 @@
   ],
   "work_item_counts": {
     "open_pcrs": 0,
-    "open_gaps": 4,
+    "open_gaps": 5,
     "open_rems": 0
   }
 }
