@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T10:07:19Z",
+  "generated_at": "2026-09-21T12:07:26Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -115,7 +115,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-20T22:07:38Z",
-    "minutes_since_session": 719,
+    "minutes_since_session": 839,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -662,7 +662,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-21T10:07:19.887828+00:00"
+    "generated_at": "2026-09-21T12:07:26.508757+00:00"
   },
   "programs": {
     "groups": [
@@ -928,7 +928,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-21T10:07:19.887968+00:00"
+    "generated_at": "2026-09-21T12:07:26.508891+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1291,10 +1291,10 @@
       "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS",
       "summary": "check-cap-rev-write-claims.py reports 2 defects across 135 governed capability reviews: (1) Logs/capability-reviews/CAP-REV-2026-07-19-INI140.md has no PCR-SEC-011 frontmatter block despite being dated on/after 2026-07-10, when that declaration became mandatory; (2) Logs/capability-reviews/README.md carries no ISO date in its filename, so it cannot be proven exempt and is therefore governed. Both are static and predate this sweep (confirmed present before and after the 2026-09-02 GAP-270/277 batch's Steward artifacts, per that session's own retrospective scan) \u2014 ordinary documentation/contract drift, observation-only under protocol v2.3, not an incident or a live guardrail failure.",
       "source": "jasonos-report-triage 2026-09-02 sweep \u2014 check-cap-rev-write-claims.py; flagged first in 2026-09-02T07:56Z session handoff as 'worth a future report-triage line'",
-      "observed_at": "2026-09-20",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-02",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 14
+      "occurrences": 15
     },
     {
       "id": "OBS-TEST-RELAY-GAP271-HOOKSPATH-SH-UNREGISTERED",
@@ -1308,37 +1308,37 @@
       "id": "OBS-JASONOS-AIRLOCK-FINANCIAL-ROUTER-PY-UNREGISTERED",
       "summary": "operations/bin/jasonos-airlock-financial-router.py (new script from the 2026-09-02 GAP-278/280 batch's financial-airlock-routing fix) has zero rows in operations/script-registry.md. Ordinary registry drift, observation-only per protocol. 60/60 mechanism ceiling (GAP-279, raised 2026-09-02) not itself breached this run.",
       "source": "check-script-registry-coverage.py (report-triage 2026-09-03)",
-      "observed_at": "2026-09-19",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 12
+      "occurrences": 13
     },
     {
       "id": "OBS-DEPLOYED-DASHBOARD-PUBLISHER-AND-PRODUCTION-METRICS-DIVERGE-FROM-CANONICAL-2026-09-03",
       "summary": "check-script-registry-coverage.py reports two deployed-copy freshness defects: jasonos-dashboard-publisher.sh differs from canonical in both SandboxData/bin and ~/bin; jasonos-production-metrics.py differs from canonical in SandboxData/bin. No functional-failure evidence observed this run (dashboard publisher heartbeat fresh at 09:38:25Z, well within threshold). Same class as the already-CEO-actioned jasonos-git-relay.sh/jasonos-status-generator.py staleness resolved 2026-09-02; recommend bundling into a redeploy/sync action.",
       "source": "check-script-registry-coverage.py (report-triage 2026-09-03)",
-      "observed_at": "2026-09-19",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-03",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 12
+      "occurrences": 13
     },
     {
       "id": "OBS-CLOSE-WORK-ITEM-SH-REFERENCES-DEAD-MONOLITH-PATH",
       "summary": "check-dead-path-drift.py flags one live reference to the retired monolith path: operations/operations/bin/close-work-item.sh:57 sets _JASONOS_LEGACY_REPO=/Volumes/SandboxData/Governance/digital-organization-governance (retired INI-116). No evidence this path is actually invoked at runtime this cycle; observation-only per protocol (repository placement drift).",
       "source": "check-dead-path-drift.py (report-triage 2026-09-03)",
-      "observed_at": "2026-09-19",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-03",
       "project": "Process & Surface Governance",
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "id": "OBS-KB-INBOX-AGING-2026-09-03",
       "summary": "check-kb-completeness.py Facet A: 4 inbox item(s) past the 48h SLA, unresolved in the index Inbox Status table: AIRLOCK-2026-07-31-001-instagram-reel-safe-zone (34.5d), AIRLOCK-2026-08-05-001-jcd-website-visual-direction (29.5d), AIRLOCK-2026-08-23-001-the-ledger-doctrines (11.5d), AIRLOCK-2026-08-30-001-financial-exports-2026-08-29 (4.5d). RESULT: FAIL. Facets B1/B2 clean (link resolution, declared-structure agreement). Same recurring pattern as GAP-221/GAP-275 (KB inbox triage has no standing cadence); observation-only per protocol.",
       "source": "check-kb-completeness.py (report-triage 2026-09-03)",
-      "observed_at": "2026-09-19",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-03",
       "project": "Knowledge Vault Operations",
-      "occurrences": 10
+      "occurrences": 11
     },
     {
       "id": "OBS-HANDOFF-COMPACTOR-3-INBOX-FILES-UNCONSUMED-PAST-04-00-ROTATION-2026-09-03",
@@ -1353,19 +1353,19 @@
       "id": "OBS-DEAD-PATH-REGROWTH-9-NEW-PINS-2026-09-04",
       "summary": "GAP-065 regrowth guard fired: governed=487 baselined=40 NEW=9. Nine files carry a sole hardcoded mount root not in the baseline allowlist: check-scheduled-task-run-currency.py, jasonos-airlock-financial-router.py, jasonos-dyson-hope-decision-ledger.py, jasonos-index-lock-sweeper.py, jasonos-instagram-reel-metrics-watchdog.py, jasonos-instagram-token-refresh.py, venture-engine/console_app.py, venture-engine/vengine/calibration/_dispositions.py, venture-engine/vengine/deepeval/_requests.py. Guard working as designed (fails closed on new pins so the 40-file legacy debt cannot quietly grow); this is regrowth detected, not a control failure. Disposition: fix pins to use the mount-resolving path helper or consciously baseline as legacy debt. Not admitted as work: ordinary repository/path drift, observation-only under protocol v2.3.",
       "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), report-triage 2026-09-04",
-      "observed_at": "2026-09-18",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-04",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 10
+      "occurrences": 11
     },
     {
       "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-6-UNSTAMPED-2026-09-04",
       "summary": "check-doctrine-artifact-currency.py flags 6 artifacts in knowledge/clients/jason-cook-design with no doctrine_reconciled marker against the 2026-07-02 ratified-doctrine baseline: design-system.md, ini114-engagements-copy.md, ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md. Successor to the expired OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-4-UNSTAMPED (expired 2026-09-02) \u2014 same recurring pattern (27 prior occurrences), count grew 4->6, filed under a new id per protocol since the prior id's lifecycle is over. Each needs reconcile / confirm-current / supersede-with-note, then a doctrine_reconciled: <date> stamp. Not admitted as work: observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "check-doctrine-artifact-currency.py (report-triage 2026-09-04)",
-      "observed_at": "2026-09-19",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-04",
       "project": "Process & Surface Governance",
-      "occurrences": 11
+      "occurrences": 12
     },
     {
       "id": "OBS-GAP-283-MISSING-FROM-INDEX-RESOLVED-TABLE-2026-09-06",
@@ -1379,10 +1379,10 @@
       "id": "OBS-AGENT-DISPATCHER-LOG-STALE-BEYOND-7D-THRESHOLD-2026-09-06",
       "summary": "Logs/director-logs/agent-dispatcher.log's last entry is 2026-08-30T07:13:36Z (~7d4h before this sweep's 2026-09-06T11:05:56Z start), exceeding the 7-day infra-health threshold. Verified against agent-invocation-master.log: every director invocation since 2026-08-30 (airlock-monitor, engineering/knowledge/operations-backup, report-triage, financial-state-backup) ran with requester=cowork, not through the Mac-mini agent-dispatcher.sh path; the last dispatcher-mediated call (2026-08-29T21:14Z, a terminal-bridge test) timed out (SIGKILL, 600s) with no dispatcher-log entries since 2026-08-30 07:13. No delivery or control has been shown to depend on the dispatcher currently -- cannot fully verify from this sandbox whether the dispatcher itself is broken or simply superseded/unused under the current Cowork-native operational model. Not admitted as a verified broken guardrail (no failure evidence of a live dependency), but flagged for Engineering Director attention given the threshold breach.",
       "source": "Step 2k infra-health check (report-triage 2026-09-06) -- Logs/director-logs/agent-dispatcher.log",
-      "observed_at": "2026-09-20",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-06",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 7
+      "occurrences": 8
     },
     {
       "id": "OBS-GIT-RELAY-LAUNCHD-JOB-DOWN-2026-09-07",
@@ -1421,10 +1421,10 @@
       "id": "OBS-KB-INDEX-LINK-JCD-DISCOVERY-FRAMEWORK-MISSING-2026-09-10",
       "summary": "KB index link 'sources/jcd-discovery-led-consulting-framework.md' in the JasonOS vault now points at a missing file. Root cause: 2026-09-10T00:41:04Z session relocated jcd-discovery-led-consulting-framework.md out of the JasonOS vault into the correct JCD client vault (storage-by-consumer, PCR-KNOW-004) as a same-session housekeeping fix, but the JasonOS vault index row pointing at the old location was not updated/removed in that same move. Not a data-loss defect -- the file exists at its new correct location, this is a stale index reference in the source vault it was moved out of. Not admitted as work: single stale link, ordinary documentation drift class (Facet B1), not a broken live control.",
       "source": "check-kb-completeness.py Facet B1, 2026-09-10 report-triage sweep",
-      "observed_at": "2026-09-19",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-10",
       "project": "Knowledge Vault Operations",
-      "occurrences": 7
+      "occurrences": 8
     },
     {
       "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION",
@@ -1446,9 +1446,10 @@
       "id": "OBS-OPERATIONS-INFRA-BACKUP-BROKEN-PIPE-2026-09-11",
       "summary": "2026-09-11 daily operations backup: 'operations' target upload_success, but 'operations-infra' target FAILED (commit_via_relay.py: 'non-lane precommand failed'; git-relay.log: UploadError, Errno 32 Broken pipe during Drive upload -- transient network issue, not config/auth). Per the runbook's own guardrail this was not retried autonomously and was flagged for the next session handoff, but no evidence found that any session actually picked up that flag. Self-recovered cleanly on 2026-09-12 (both targets upload_success). Single transient occurrence with same-mechanism precedent (OBS-FINANCIAL-STATE-BACKUP-DRIVE-TIMEOUT-FAILED-SILENTLY, 2026-08-12) establishing that a second consecutive failure, or any failure leaving the Drive copy inconsistent, would meet the broken-guardrail admission bar. Not admitted as work this sweep -- one self-recovered transient failure, no data loss (operations-infra is non-rotating, next day's upload restores coverage).",
       "source": "jasonos-report-triage 2026-09-12 sweep",
-      "observed_at": "2026-09-12",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-12",
-      "project": "Backup & Scheduled-Task Reliability"
+      "project": "Backup & Scheduled-Task Reliability",
+      "occurrences": 2
     },
     {
       "id": "OBS-REPORT-TRIAGE-NARRATIVE-CHANNEL-SILENT-SINCE-20260905",
@@ -1503,10 +1504,10 @@
       "id": "OBS-PENDING-STEWARD-CLEAR-WITH-CONDITIONS-BACKLOG-2026-09-19",
       "summary": "check_pending_steward_reviews.py flags 63 CLEAR-WITH-CONDITIONS capability reviews older than 48h with potentially open conditions, ranging from 131h (2026-09-14) to 1696h/~70.7 days (2026-07-10). Weekly compliance review is current (OK). No existing not_admitted observation tracks this backlog's current scale -- prior steward-review observations in this file are either terminal (addressed/expired) or narrower (single-review, audit-log-size). This sweep did not verify each of the 63 conditions individually against a follow-up workload or GAP reference (out of scope for a single triage pass); it surfaces the count and age range as visibility per protocol Step 2k. Not admitted as work: no verified broken live guardrail (the detector itself is working -- it fired and listed all 63), no named delivery dependency, no incident. The underlying pattern -- CLEAR-WITH-CONDITIONS reviews accumulating for months without a standing disposition cadence -- is worth CEO/Security Steward attention given the widening age range.",
       "source": "check_pending_steward_reviews.py, report-triage 2026-09-19",
-      "observed_at": "2026-09-20",
+      "observed_at": "2026-09-21",
       "expires_on": "2026-10-19",
       "project": "Security Steward Audit-Trail Hygiene",
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-17-18-THREE-COMPETING-UNMERGED-STAGED-LANES",
@@ -1522,6 +1523,14 @@
       "source": "jasonos-report-triage 2026-09-20 sweep (verified by ad-hoc President Agent sweep 2026-09-20T18:xx UTC)",
       "observed_at": "2026-09-20",
       "expires_on": "2026-10-20",
+      "project": "Backup & Scheduled-Task Reliability"
+    },
+    {
+      "id": "OBS-RELAY-CLI-NOT-LOADED-ERROR-TEXT-MISMATCHES-AUDIT-JSONL-2ND-OCCURRENCE-2026-09-21",
+      "summary": "Second occurrence (2026-09-09, 2026-09-21) of commit_via_relay.py's own escalation-triggering error text failing to match the authoritative drive-backup-runner-audit.jsonl record for the same window. 2026-09-09: CLI reported 'not loaded in launchd' on retry, but the audit JSONL showed both targets actually succeeded (session correctly cross-checked the audit trail and did NOT escalate). 2026-09-21: CLI again reported 'not loaded in launchd' (exit 3) on the operations-infra retry, but the audit JSONL's true event was upload_failure/read-timeout (a Drive transport issue, not a daemon-down condition) -- confirmed daemon was running throughout via git-relay.log; this time the operating session took the CLI text at face value, did not cross-check the audit JSONL, and stopped per the SKILL's guardrail, causing an avoidable-looking missed backup for a target that (per the true cause) may have succeeded on a further retry. Not admitted as work: no live control demonstrably failed (the runner + audit trail correctly recorded the true event); this is an operator-facing diagnostic-accuracy/procedure gap. Recommend the loader SKILL/runbook instruct: always cross-check drive-backup-runner-audit.jsonl before treating a commit_via_relay.py 'not loaded in launchd' report as ground truth, especially before escalating and abandoning a target.",
+      "source": "report-triage 2026-09-21 sweep, cross-checking Logs/director-logs/operations/operations-log.md against drive-backup-runner-audit.jsonl and git-relay.log",
+      "observed_at": "2026-09-21",
+      "expires_on": "2026-10-21",
       "project": "Backup & Scheduled-Task Reliability"
     },
     {
