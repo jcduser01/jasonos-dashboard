@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T19:56:20Z",
+  "generated_at": "2026-09-22T23:19:58Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -115,7 +115,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-22T19:55:28Z",
-    "minutes_since_session": 0,
+    "minutes_since_session": 204,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -686,7 +686,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-22T19:56:20.219127+00:00"
+    "generated_at": "2026-09-22T23:19:58.413584+00:00"
   },
   "programs": {
     "groups": [
@@ -952,7 +952,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-22T19:56:20.219280+00:00"
+    "generated_at": "2026-09-22T23:19:58.413731+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -961,6 +961,34 @@
       "value": "infrastructure",
       "file": "governance/gaps/open/GAP-291-relay-has-no-supported-mechanism-for-branch-delete-worktree-remove-or-pull.md",
       "category": "gap-open"
+    },
+    {
+      "type": "invalid_work_class",
+      "field": "work_class",
+      "value": "infrastructure",
+      "file": "governance/gaps/open/GAP-295-agents-install-all-sh-source-dir-points-to-nonexistent-path.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "invalid_work_class",
+      "field": "work_class",
+      "value": "infrastructure",
+      "file": "governance/gaps/open/GAP-296-fable-5-1-fit-for-jasonos-work-uncharacterized.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "invalid_work_class",
+      "field": "work_class",
+      "value": "infrastructure",
+      "file": "governance/gaps/open/GAP-297-relay-has-no-mechanism-to-push-an-already-landed-commit-with-no-new-changes.md",
+      "category": "gap-open"
+    },
+    {
+      "type": "invalid_work_class",
+      "field": "work_class",
+      "value": "infrastructure",
+      "file": "governance/pcrs/open/PCR-SEC-015-claude-agents-carve-out-and-model-assignment-directional-gate.md",
+      "category": "pcr-open"
     }
   ],
   "pending_notes": [
@@ -1535,8 +1563,8 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 0,
-    "open_gaps": 6,
+    "open_pcrs": 1,
+    "open_gaps": 9,
     "open_rems": 0
   }
 }
