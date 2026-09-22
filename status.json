@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T11:19:43Z",
+  "generated_at": "2026-09-22T19:56:20Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -114,8 +114,8 @@
     "backlog": 16
   },
   "operational": {
-    "last_session_date": "2026-09-20T22:07:38Z",
-    "minutes_since_session": 2232,
+    "last_session_date": "2026-09-22T19:55:28Z",
+    "minutes_since_session": 0,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -244,15 +244,15 @@
   "ceo_actions": [
     {
       "id": "ACT-HO-1",
-      "category": "confirm",
-      "label": "Confirm INI-166 is complete and ready to close",
-      "context": "Dyson Hope Hypeddit Hot Tracks bumper series. All three DoD items satisfied and CEO-confirmed 2026-09-20 (\"Four usable v"
+      "category": "required",
+      "label": "Source acquisition for INI-167",
+      "context": "Priority 1 titles (Chenoweth \u00d72, Huntington, Evans) unblock flagged passages already in the finished manuscript. List at"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "Source acquisition for INI-167",
-      "context": "*(combined \u2014 merges the two prior separate line items)* \u2014 Priority 1 titles (Chenoweth \u00d72, Huntington, Evans) unblock fl"
+      "label": "NEW \u2014 Reload the git relay launchd job",
+      "context": "GAP-293"
     },
     {
       "id": "ACT-HO-3",
@@ -270,7 +270,7 @@
       "id": "ACT-HO-5",
       "category": "required",
       "label": "NEW \u2014 Pre-existing, session-unrelated check-cap-rev-write-claims.py defects",
-      "context": "still present, re-verified this session"
+      "context": "CAP-REV-2026-07-19-INI140.md missing required PCR-SEC-011 frontmatter, and README.md in the same reviews directory has a"
     },
     {
       "id": "ACT-HO-6",
@@ -289,6 +289,12 @@
       "category": "required",
       "label": "Audio + fuller-brand-motif follow-up render for HyperFrames",
       "context": "informational, not urgent"
+    },
+    {
+      "id": "ACT-HO-9",
+      "category": "required",
+      "label": "Push 8a314b4863ae",
+      "context": "(jasonos-operations \u2014 observation dispositions for GAP-292 + the new memory entry, 1 commit ahead of origin) \u2014 or let th"
     }
   ],
   "status_drift": [],
@@ -680,7 +686,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-22T11:19:43.959678+00:00"
+    "generated_at": "2026-09-22T19:56:20.219127+00:00"
   },
   "programs": {
     "groups": [
@@ -946,7 +952,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-22T11:19:43.959823+00:00"
+    "generated_at": "2026-09-22T19:56:20.219280+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1445,14 +1451,6 @@
       "occurrences": 9
     },
     {
-      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION",
-      "summary": "VERIFIED BROKEN GUARDRAIL. The 2026-09-11 jasonos-report-triage run recorded status=success (request-id report-triage-20260911, duration=1150s) in agent-invocation-master.log, but left zero discoverable evidence that its designed checks actually executed: (1) operations/procedure-improvement-log.md has no 2026-09-11 sweep-narrative entry -- the last entry before this sweep's own is 2026-09-10; (2) operations/observations.jsonl has no row with observed_at=2026-09-11 and none of the near-daily-recurring findings (KB inbox aging, cap-rev-write-claims, dead-path regrowth, doctrine-artifact-currency, script-registry gaps -- all of which recurred on every other day 09-06 through 09-10 and again today 09-12) were bumped between 09-10 and 09-12, i.e. an entire day's cycle is missing from the recurrence trail; (3) two Security Steward capability-review inbox entries dated 2026-09-11 (2026-09-11t000000z-cap-rev-pcr-ops-080, cap-rev-2026-09-11-pcr-ops-080-c6) sat unmerged in Logs/steward-audit-inbox/ until this 09-12 sweep's own compactor pass picked them up -- the compactor is report-triage's own Step 2e/2e-equivalent, so a report-triage run that actually executed on 09-11 should have merged them same-day. Timing evidence: the 09-11 start/success invocation-log lines are only 162s apart (11:06:20 to 11:09:02), the shortest gap of any of the last 9 daily runs (which otherwise ranged ~4.5-11 minutes of real elapsed time), yet its self-reported duration field (1150s / ~19min) is the LARGEST of the last 9 runs and does not match its own timestamps. jasonos_record_invocation.py's --duration is a caller-supplied argument, not independently measured, so the success line proves only that a tool call was made, not that the protocol's channel-reads/checks/expire-observations.py/compactor steps ran. This is the exact instrument-trust failure class report-triage's own admission-rule machinery (and GAP-262's coverage-limit language) was designed to catch, occurring in the report-triage control itself. No incident resulted (all daily backup/mirror tasks ran independently and successfully on 09-11 per their own logs; the two delayed CAP-REV merges caused no downstream harm and were absorbed cleanly by this sweep) but the control's own completion-recording cannot currently be trusted as proof of execution. Not remediated by this sweep (write boundary is narrative + observation only) -- flagged for CEO/Engineering Director disposition; a GAP against jasonos_record_invocation.py's duration field (measure wall-clock time itself rather than accepting a caller-supplied value) or against the report-triage task prompt (verify at least one substantive check actually ran before writing the success line) would be a reasonable fix if this recurs.",
-      "source": "jasonos-report-triage 2026-09-12 sweep",
-      "observed_at": "2026-09-12",
-      "expires_on": "2026-10-12",
-      "project": "Backup & Scheduled-Task Reliability"
-    },
-    {
       "id": "OBS-FINANCIAL-STATE-MIRROR-REDUNDANT-DOUBLE-INVOCATION-2ND-OCCURRENCE",
       "summary": "The daily financial-state mirror's bare exit-0/'nothing to commit' output (the documented success case for the no-op-anchor design) prompted an unnecessary second identical commit_via_relay.py invocation on 2026-09-12, same as 2026-09-11 (financial-analysis-log.md 09-11 entry explicitly flagged this exact pattern and recommended not retrying on that output) -- the 09-11 lesson didn't transfer to 09-12's run. No harm (both invocations succeeded, audit log shows two mirror_success lines 22s apart, no data issue), but this is now a 2nd consecutive-day occurrence of a lesson recorded in the same log the next day's run should have read. Not admitted as work -- no broken control, purely a process/prompt-clarity issue; a durable fix (task prompt stating plainly that bare exit-0 with no explicit status= field is itself terminal success) would be a reasonable low-effort improvement if a 3rd occurrence follows the same bright-line pattern this register uses elsewhere.",
       "source": "jasonos-report-triage 2026-09-12 sweep",
@@ -1495,22 +1493,6 @@
       "project": "Financial Analysis"
     },
     {
-      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-13-EXECUTED-BUT-UNCOMMITTED",
-      "summary": "VERIFIED BROKEN GUARDRAIL, second occurrence of report-triage's own write/record step failing within 4 days (see BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION), different failure mode. The 2026-09-13 run (report-triage-20260913, start 11:06:28Z, success 11:17:18Z, duration=642s -- a normal-looking gap and duration, unlike 09-11's anomalous 162s) DID execute substantively: it ran the full detector suite, ran expire-observations.py (scanned=127 expired=2 threshold_blocked=8 unchanged=117), and wrote a complete, detailed sweep narrative under heading '### [2026-09-13 11:06 UTC] -- Report Triage Sweep' in Logs/director-logs/operations/operations-log.md (lines 4170-4202). But (1) that narrative was written to operations-log.md, not operations/procedure-improvement-log.md -- the channel actually used by the 09-08/09-09/09-10/09-12 sweeps (all four committed to git under that path) -- so it was never discoverable via the channel this and prior sweeps check; and (2) critically, nothing from the run was ever committed to git:  operations/observations.jsonl | 21 ++++++++++++---------\n 1 file changed, 12 insertions(+), 9 deletions(-) at the start of this 09-14 sweep showed 10 uncommitted local changes (2 expiries + several occurrence bumps) still sitting in the working tree, and no git-relay.log activity exists for report-triage's 09-13 window at all (checked 11:00-11:30 UTC), confirming the relay commit step was never even attempted. The 09-13 narrative itself says so explicitly: 'Nothing committed by this session; these writes join the working tree pending relay.' Root cause for the channel choice is unclear (this sweep's own instructions, read fresh from the canonical protocol asset today, do not specify a destination file for the step-7 narrative at all -- report-triage-and-remediation-protocol.md v2.3 section 'Procedure' step 7 says only 'write a compact sweep narrative', naming no path), which is plausibly why different session instances have picked different files (operations-log.md through 09-04, procedure-improvement-log.md from 09-08). Secondary finding: the 09-13 session also filed OBS-REPORT-TRIAGE-NARRATIVE-CHANNEL-SILENT-SINCE-20260905 concluding an '8-day narrative-channel silence, 09-05 through 09-12, cannot_verify root cause' -- that conclusion was itself an artifact of checking only operations-log.md; procedure-improvement-log.md (the channel that session did not know to check) has real, committed, git-verified narrative entries for 09-08, 09-09, 09-10, and 09-12. The true gap is narrower and more concerning: 09-05/06/07 predate the narrative-writing convention (first procedure-improvement-log.md entry is 09-08; no adverse pattern established), 09-11 has zero evidence anywhere (already admitted), and 09-13 executed but was misplaced and never committed. This sweep's own 09-13 work (2 expiries, occurrence bumps) is being folded into and committed together with today's (09-14) canonical write rather than discarded, since discarding verified completed work would itself lose evidence; the commit message will state the provenance split. Not remediated by this sweep (write boundary is narrative + observation only) -- flagged for CEO/Engineering Director disposition. Two concrete fixes worth considering: (a) the protocol document should name an explicit destination path for the step-7 narrative so this doesn't depend on session memory of an undocumented convention; (b) the report-triage task's own final step should include a git-commit-and-verify (not just a local write), mirroring the same 'a status=success line proves a tool call happened, not that the write landed' lesson already drawn from the 09-11 incident.",
-      "source": "jasonos-report-triage 2026-09-14 sweep",
-      "observed_at": "2026-09-14",
-      "expires_on": "2026-10-14",
-      "project": "Backup & Scheduled-Task Reliability"
-    },
-    {
-      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-15-STAGED-BRANCH-ORPHANED",
-      "summary": "THIRD occurrence in 6 days of report-triage's own step-7/8 write-and-commit failing (see BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION, BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-13-EXECUTED-BUT-UNCOMMITTED), a new failure shape. The 2026-09-15 run (report-triage-20260915, start 11:05:48Z, success 11:14:45Z, duration=900s, normal-looking) DID execute: local branch staged/report-triage-20260915 in jasonos-operations carries one real commit, 83b75eae 'chore(observations): report-triage 2026-09-15 recurrence bumps' (operations/observations.jsonl, 10 insertions/10 deletions, authored 2026-09-15T06:14:40-0500), consistent with genuine recurrence-bump work product. But that branch was never merged into local main (git log main..staged/report-triage-20260915 shows exactly this 1 commit ahead) and no corresponding entry exists in operations/procedure-improvement-log.md for 2026-09-15 (last entry before this sweep's own is 2026-09-14) or in Logs/director-logs/operations/operations-log.md (no Report Triage Sweep heading since 2026-09-13). The 2026-09-16 run repeats the same absence for 09-16 pending this sweep's own close-out. Root cause not established from available evidence (cannot reach origin from this sandbox to confirm push state) \u2014 recorded as cannot_verify on whether the branch was ever pushed, verified on the local-repo facts stated. This sweep does not remediate (write boundary is narrative+observation only) and does not merge or delete the orphaned branch. Flagged for CEO/Engineering Director disposition: the pattern is now recurring often enough (3 of the last 4 daily runs show some form of write/commit-step failure: 09-11 no evidence, 09-13 uncommitted working tree, 09-15 committed-but-unmerged-orphan-branch) that the two concrete fixes proposed in the 09-13 entry (explicit destination path for the step-7 narrative; a git-commit-and-verify as part of the task's own final step rather than a bare local write) look overdue rather than optional.",
-      "source": "jasonos-report-triage 2026-09-16 sweep",
-      "observed_at": "2026-09-16",
-      "expires_on": "2026-10-16",
-      "project": "Backup & Scheduled-Task Reliability"
-    },
-    {
       "id": "OBS-DYSON-HOPE-DRIP-NEXT-SCHEDULED-RUN-OVERDUE-2026-09-18",
       "summary": "temp/drip-last-run.json's next_scheduled_at (2026-09-17T20:58:15Z) has passed with no newer run recorded as of this sweep's check (~2026-09-18T11:12Z, ~14h14m overdue). Last recorded run: ran_at=2026-09-17T11:25:26Z, status=no-op, dry_run=false, queue_exhausted=false. Not independently verified this run whether the gate governing next_scheduled_at is itself broken or whether the schedule is conditional/gated by content availability -- insufficient evidence this sweep to call it a verified broken guardrail versus a routine gating delay; flagged for a later look rather than admitted as work.",
       "source": "jasonos-report-triage 2026-09-18 sweep -- temp/drip-last-run.json",
@@ -1526,22 +1508,6 @@
       "expires_on": "2026-10-19",
       "project": "Security Steward Audit-Trail Hygiene",
       "occurrences": 4
-    },
-    {
-      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-17-18-THREE-COMPETING-UNMERGED-STAGED-LANES",
-      "summary": "FOURTH occurrence in 8 sweeps of report-triage's own write/commit step failing (see BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION, -09-13-EXECUTED-BUT-UNCOMMITTED, -09-15-STAGED-BRANCH-ORPHANED), a fourth distinct failure shape. Neither 09-17 nor 09-18 landed a report-triage narrative on main: agent-invocation-master.log shows report-triage-20260917 (success, duration=?s) and report-triage-20260918 (success, duration=1300s) both status=success, but procedure-improvement-log.md on main has no entry for either date (last landed entry before this sweep is the 09-16 sweep, commit 2d6730f7). Instead, THREE separate local branches exist for 09-18 alone, each explicitly claiming to supersede the last: staged/report-triage-20260918 (f8c9db76, 06:18:05), staged/report-triage-20260918-v2 (69c16602, 06:20:56, 'supersedes staged/report-triage-20260918'), staged/report-triage-20260918-final (799dd9f0, 06:22:46, 'supersedes staged/report-triage-20260918 and -v2') -- none merged to main. The 09-18-final branch's own commit message says it recovers 09-17's uncommitted work, meaning 09-17 also failed to land independently. Additionally, a fourth branch (staged/session-close-20260918-samgov, commit 5aef6e69) holds an unrelated same-day session's procedure-improvement-log addition explicitly deferred 'held: interlock with staged/report-triage-20260918' -- a second write-boundary casualty of the same unresolved lane conflict. The 09-15 orphaned branch (staged/report-triage-20260915, 83b75eae) also remains unmerged, untouched by any of the 09-16/09-17/09-18 sessions. This sweep does not merge, rebase, or delete any of these four branches (write boundary is narrative + observation only, consistent with 09-16's precedent). Pattern is now 4-of-8 daily sweeps affected (09-11, 09-13, 09-15, 09-17+18) and worsening in shape (from 'no evidence' to 'uncommitted' to 'orphaned single commit' to 'three competing self-superseding lanes plus a second casualty branch'). The two fixes proposed on 09-13 and reiterated on 09-15 -- name an explicit destination path for the step-7 narrative in the canonical protocol document, and add a commit-and-verify sub-step to the task's own final step (confirm the write reached main, not just a local commit) -- have not been implemented across five sweeps since first proposed and are overdue for CEO/Engineering Director action rather than continued observation.",
-      "source": "git log/git branch on jasonos-operations, report-triage 2026-09-19 sweep",
-      "observed_at": "2026-09-19",
-      "expires_on": "2026-10-19",
-      "project": "Backup & Scheduled-Task Reliability"
-    },
-    {
-      "id": "BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-20-SUCCESS-BUT-UNCOMMITTED",
-      "summary": "SIXTH occurrence of report-triage's own write/commit step failing (see BROKEN-GUARDRAIL-REPORT-TRIAGE-2026-09-11-NO-VERIFIABLE-EXECUTION, -09-13-EXECUTED-BUT-UNCOMMITTED, -09-15-STAGED-BRANCH-ORPHANED, -09-17-18-THREE-COMPETING-UNMERGED-STAGED-LANES). This ad-hoc sweep was dispatched under the premise that the daily task 'appears to have missed 2026-09-19 and has not yet run for 2026-09-20' (based on the last observations.jsonl commit being dated 2026-09-18). That premise is FALSE: agent-invocation-master.log shows report-triage-20260919 (start 11:06:28Z, success 11:18:30Z, duration=1500s) and report-triage-20260920 (start 11:06:33Z, success 11:09:27Z, duration=1400s) both completed successfully -- the daily task ran on schedule both days. The 09-20 run's real output survived only as an uncommitted working-tree diff to operations/observations.jsonl (4 occurrence bumps on pre-existing rows, mtime 2026-09-20T11:09:16-05:00 i.e. 16:09:16Z, matching the recorded success timestamp to the minute) -- no corresponding procedure-improvement-log.md entry, git commit, or staged/* branch exists for 09-20's sweep narrative anywhere in the repo. Root cause not newly established (same unresolved write/commit-step defect named in the four prior occurrences: no explicit destination path in the protocol for the step-7 narrative write, and no commit-and-verify sub-step in the task's own final step). This ad-hoc sweep did not re-run full channel detection (steps 1-2) to avoid duplicate/conflicting observation filings against the already-completed 09-20 run; it verified and landed the pre-existing legitimate uncommitted diff instead. The two fixes proposed since 09-13 remain unimplemented across seven affected sweeps (09-11, 09-13, 09-15, 09-17, 09-18, and now 09-20) and are overdue for CEO/Engineering Director action.",
-      "source": "jasonos-report-triage 2026-09-20 sweep (verified by ad-hoc President Agent sweep 2026-09-20T18:xx UTC)",
-      "observed_at": "2026-09-20",
-      "expires_on": "2026-10-20",
-      "project": "Backup & Scheduled-Task Reliability"
     },
     {
       "id": "OBS-RELAY-CLI-NOT-LOADED-ERROR-TEXT-MISMATCHES-AUDIT-JSONL-2ND-OCCURRENCE-2026-09-21",
