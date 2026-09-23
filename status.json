@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T07:20:15Z",
+  "generated_at": "2026-09-23T09:20:21Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -114,8 +114,8 @@
     "backlog": 16
   },
   "operational": {
-    "last_session_date": "2026-09-22T19:55:28Z",
-    "minutes_since_session": 684,
+    "last_session_date": "2026-09-22T23:19:08Z",
+    "minutes_since_session": 601,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -295,6 +295,30 @@
       "category": "required",
       "label": "Push 8a314b4863ae",
       "context": "(jasonos-operations \u2014 observation dispositions for GAP-292 + the new memory entry, 1 commit ahead of origin) \u2014 or let th"
+    },
+    {
+      "id": "ACT-HO-10",
+      "category": "required",
+      "label": "Model roster audit finding (GAP-294 recurring audit, 2026-09-22 run)",
+      "context": "Anthropic released Opus 5.5 today. Recommend updating the roster's Opus entry and the Security Steward's standing assign"
+    },
+    {
+      "id": "ACT-HO-11",
+      "category": "required",
+      "label": "Push both repos to canonical",
+      "context": "everything below is staged push:false, per Security Steward's preferred Plan B (a CEO-run direct push needs no relay wor"
+    },
+    {
+      "id": "ACT-HO-12",
+      "category": "required",
+      "label": "Verify the scheduled task's stored config",
+      "context": "F3/C3 remainder"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "confirm",
+      "label": "Review and approve/reject PCR-SEC-015",
+      "context": "`governance/pcrs/open/PCR-SEC-015-...md`"
     }
   ],
   "status_drift": [],
@@ -304,19 +328,19 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-09-22T07:45:15Z",
+      "last_active": "2026-09-23T07:43:24Z",
       "invocations_30d": 31
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-09-23T06:33:34Z",
+      "last_active": "2026-09-23T07:38:08Z",
       "invocations_30d": 55
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-09-21T07:37:36Z",
+      "last_active": "2026-09-23T07:40:58Z",
       "invocations_30d": 29
     },
     {
@@ -334,8 +358,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-09-22T07:47:15Z",
-      "invocations_30d": 36
+      "last_active": "2026-09-23T07:46:19Z",
+      "invocations_30d": 35
     },
     {
       "name": "venture-director",
@@ -686,7 +710,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-23T07:20:15.791840+00:00"
+    "generated_at": "2026-09-23T09:20:21.789156+00:00"
   },
   "programs": {
     "groups": [
@@ -952,7 +976,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-23T07:20:15.791962+00:00"
+    "generated_at": "2026-09-23T09:20:21.789281+00:00"
   },
   "contract_quality_gaps": [
     {
