@@ -1,39 +1,35 @@
 {
-  "generated_at": "2026-09-25T15:21:36Z",
+  "generated_at": "2026-09-26T05:21:45Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-09-19",
-      "end": "2026-09-25"
+      "start": "2026-09-20",
+      "end": "2026-09-26"
     },
     "headline": {
-      "delivered": 2,
-      "recipients": 2,
+      "delivered": 1,
+      "recipients": 1,
       "next": "INI-114",
       "blocker_count": 0,
       "maintenance_attention_share": null,
       "maintenance_attention_label": "Unavailable",
       "delivery_status": "productive",
-      "summary": "Delivered this period: 2 artifacts to 2 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
+      "summary": "Delivered this period: 1 artifacts to 1 recipients \u00b7 Next commitment: INI-114 \u00b7 Delivery blockers: 0 \u00b7 Maintenance attention share: Unavailable"
     },
     "delivery": {
       "artifacts": [
-        {
-          "id": "INI-151",
-          "completed": "2026-09-19"
-        },
         {
           "id": "INI-166",
           "completed": "2026-09-20"
         }
       ],
-      "recipients": 2,
+      "recipients": 1,
       "rolling_four_period_counts": [
         1,
         0,
-        0,
-        2
+        1,
+        1
       ],
       "next": {
         "id": "INI-114",
@@ -46,7 +42,7 @@
         "floor": 1,
         "reporting_period_days": 7,
         "evaluation_window_days": 7,
-        "delivered": 2,
+        "delivered": 1,
         "explicit_zero_delivery": false
       },
       "source_contract_defects": []
@@ -55,7 +51,7 @@
       "production_ratio": {
         "status": "unavailable",
         "value": null,
-        "numerator": 2,
+        "numerator": 1,
         "denominator": null,
         "limitation": "CEO-attention denominator is unavailable."
       },
@@ -115,7 +111,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-22T23:19:08Z",
-    "minutes_since_session": 3842,
+    "minutes_since_session": 4682,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -710,7 +706,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-25T15:21:36.939717+00:00"
+    "generated_at": "2026-09-26T05:21:45.422646+00:00"
   },
   "programs": {
     "groups": [
@@ -976,7 +972,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-25T15:21:36.939841+00:00"
+    "generated_at": "2026-09-26T05:21:45.422782+00:00"
   },
   "contract_quality_gaps": [
     {
