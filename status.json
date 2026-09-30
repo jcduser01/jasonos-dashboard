@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T05:02:10Z",
+  "generated_at": "2026-09-30T07:02:19Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-09-22T23:19:08Z",
-    "minutes_since_session": 10423,
+    "minutes_since_session": 10543,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -325,7 +325,7 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-09-29T07:38:55Z",
+      "last_active": "2026-09-30T06:42:56Z",
       "invocations_30d": 56
     },
     {
@@ -713,7 +713,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-30T05:02:10.149474+00:00"
+    "generated_at": "2026-09-30T07:02:19.064525+00:00"
   },
   "programs": {
     "groups": [
@@ -979,7 +979,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-30T05:02:10.149642+00:00"
+    "generated_at": "2026-09-30T07:02:19.064650+00:00"
   },
   "contract_quality_gaps": [
     {
