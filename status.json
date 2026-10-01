@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-30T13:02:37Z",
+  "generated_at": "2026-10-01T05:02:54Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-09-24",
-      "end": "2026-09-30"
+      "start": "2026-09-25",
+      "end": "2026-10-01"
     },
     "headline": {
       "delivered": 0,
@@ -713,7 +713,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-30T13:02:37.889124+00:00"
+    "generated_at": "2026-10-01T05:02:54.711826+00:00"
   },
   "programs": {
     "groups": [
@@ -979,7 +979,7 @@
         ]
       }
     ],
-    "generated_at": "2026-09-30T13:02:37.889268+00:00"
+    "generated_at": "2026-10-01T05:02:54.711952+00:00"
   },
   "contract_quality_gaps": [
     {
