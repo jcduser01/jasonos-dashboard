@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T09:03:07Z",
+  "generated_at": "2026-10-01T11:03:16Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -349,7 +349,7 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-10-01T07:47:06Z",
+      "last_active": "2026-10-01T10:02:38Z",
       "invocations_30d": 35
     },
     {
@@ -713,7 +713,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-01T09:03:07.716155+00:00"
+    "generated_at": "2026-10-01T11:03:16.759690+00:00"
   },
   "programs": {
     "groups": [
@@ -979,7 +979,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-01T09:03:07.716291+00:00"
+    "generated_at": "2026-10-01T11:03:16.759826+00:00"
   },
   "contract_quality_gaps": [
     {
