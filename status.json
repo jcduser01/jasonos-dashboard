@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-02T12:07:50Z",
+  "generated_at": "2026-10-03T06:08:14Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-09-26",
-      "end": "2026-10-02"
+      "start": "2026-09-27",
+      "end": "2026-10-03"
     },
     "headline": {
       "delivered": 0,
@@ -22,8 +22,8 @@
       "recipients": 0,
       "rolling_four_period_counts": [
         0,
-        0,
-        2,
+        1,
+        1,
         0
       ],
       "next": {
@@ -713,7 +713,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-02T12:07:50.812796+00:00"
+    "generated_at": "2026-10-03T06:08:14.348823+00:00"
   },
   "programs": {
     "groups": [
@@ -979,7 +979,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-02T12:07:50.812943+00:00"
+    "generated_at": "2026-10-03T06:08:14.348956+00:00"
   },
   "contract_quality_gaps": [
     {
