@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T08:08:22Z",
+  "generated_at": "2026-10-05T10:08:27Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 16
   },
   "operational": {
-    "last_session_date": null,
-    "minutes_since_session": null,
+    "last_session_date": "2026-10-05T02:07:58Z",
+    "minutes_since_session": 480,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -284,32 +284,56 @@
     {
       "id": "ACT-HO-9",
       "category": "required",
-      "label": "Push 8a314b4863ae",
-      "context": "(jasonos-operations \u2014 observation dispositions for GAP-292 + the new memory entry, 1 commit ahead of origin) \u2014 or let th"
-    },
-    {
-      "id": "ACT-HO-10",
-      "category": "required",
       "label": "Model roster audit finding (GAP-294 recurring audit, 2026-09-22 run)",
       "context": "Anthropic released Opus 5.5 today. Recommend updating the roster's Opus entry and the Security Steward's standing assign"
     },
     {
-      "id": "ACT-HO-11",
-      "category": "required",
-      "label": "Push both repos to canonical",
-      "context": "everything below is staged push:false, per Security Steward's preferred Plan B (a CEO-run direct push needs no relay wor"
-    },
-    {
-      "id": "ACT-HO-12",
+      "id": "ACT-HO-10",
       "category": "required",
       "label": "Verify the scheduled task's stored config",
       "context": "F3/C3 remainder"
     },
     {
-      "id": "ACT-HO-13",
+      "id": "ACT-HO-11",
       "category": "confirm",
       "label": "Review and approve/reject PCR-SEC-015",
       "context": "`governance/pcrs/open/PCR-SEC-015-...md`"
+    },
+    {
+      "id": "ACT-HO-12",
+      "category": "required",
+      "label": "Buy Chenoweth, *Civil Resistance: What Everyone Needs to Know* (2021)",
+      "context": "then run an attended verification session for Ch15 note 11 and Coda note 1 (second flag): the 1990s ~65% peak, below 34%"
+    },
+    {
+      "id": "ACT-HO-13",
+      "category": "required",
+      "label": "Security Steward: append incident Addendum 2",
+      "context": "closure, Medium final, C1 confirmed"
+    },
+    {
+      "id": "ACT-HO-14",
+      "category": "required",
+      "label": "Feldstein 2021 (*The Rise of Digital Repression*)",
+      "context": "the Coda cites it with a RE-SOURCE flag. Decide whether to add it to the Source Acquisition List."
+    },
+    {
+      "id": "ACT-HO-15",
+      "category": "required",
+      "label": "Merge fork PRs to canonical for four repos",
+      "context": "sigilzero (1 commit: audit file), sigilzero-ai (2), ravecal-cli (1), jasoncookdesign.github.io (1) are ahead of upstream"
+    },
+    {
+      "id": "ACT-HO-16",
+      "category": "required",
+      "label": "Pull INI-159 to Current when ready",
+      "context": "the SIGIL.ZERO codebase audit now carries the recovered 2026-07-16 simplicity audit as prior art; say the word and the E"
+    },
+    {
+      "id": "ACT-HO-17",
+      "category": "required",
+      "label": "Open gaps with no prior CEO-actions line (reconciliation catch-up)",
+      "context": "GAP-289 (no policy for third-party npx CLI installer side-effects in sandboxed spikes), GAP-291 (relay has no supported "
     }
   ],
   "status_drift": [],
@@ -349,8 +373,8 @@
     {
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
-      "last_active": "2026-10-05T07:47:38Z",
-      "invocations_30d": 35
+      "last_active": "2026-10-05T09:06:04Z",
+      "invocations_30d": 36
     },
     {
       "name": "venture-director",
@@ -713,7 +737,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T08:08:22.583282+00:00"
+    "generated_at": "2026-10-05T10:08:27.196515+00:00"
   },
   "programs": {
     "groups": [
@@ -979,7 +1003,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T08:08:22.583415+00:00"
+    "generated_at": "2026-10-05T10:08:27.196639+00:00"
   },
   "contract_quality_gaps": [
     {
