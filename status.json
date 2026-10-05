@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T10:08:27Z",
+  "generated_at": "2026-10-05T12:08:33Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-10-05T02:07:58Z",
-    "minutes_since_session": 480,
+    "minutes_since_session": 600,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -737,7 +737,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T10:08:27.196515+00:00"
+    "generated_at": "2026-10-05T12:08:33.853969+00:00"
   },
   "programs": {
     "groups": [
@@ -1003,7 +1003,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T10:08:27.196639+00:00"
+    "generated_at": "2026-10-05T12:08:33.854113+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1507,10 +1507,10 @@
       "id": "OBS-AGENT-DISPATCHER-LOG-STALE-BEYOND-7D-THRESHOLD-2026-09-06",
       "summary": "Logs/director-logs/agent-dispatcher.log's last entry is 2026-08-30T07:13:36Z (~7d4h before this sweep's 2026-09-06T11:05:56Z start), exceeding the 7-day infra-health threshold. Verified against agent-invocation-master.log: every director invocation since 2026-08-30 (airlock-monitor, engineering/knowledge/operations-backup, report-triage, financial-state-backup) ran with requester=cowork, not through the Mac-mini agent-dispatcher.sh path; the last dispatcher-mediated call (2026-08-29T21:14Z, a terminal-bridge test) timed out (SIGKILL, 600s) with no dispatcher-log entries since 2026-08-30 07:13. No delivery or control has been shown to depend on the dispatcher currently -- cannot fully verify from this sandbox whether the dispatcher itself is broken or simply superseded/unused under the current Cowork-native operational model. Not admitted as a verified broken guardrail (no failure evidence of a live dependency), but flagged for Engineering Director attention given the threshold breach.",
       "source": "Step 2k infra-health check (report-triage 2026-09-06) -- Logs/director-logs/agent-dispatcher.log",
-      "observed_at": "2026-10-03",
+      "observed_at": "2026-10-05",
       "expires_on": "2026-10-06",
       "project": "Governance Tooling & Checker Reliability",
-      "occurrences": 20
+      "occurrences": 21
     },
     {
       "id": "OBS-GIT-RELAY-LAUNCHD-JOB-DOWN-2026-09-07",
@@ -1650,9 +1650,66 @@
       "id": "OBS-KB-COMPLETENESS-FACET-B1-BROKEN-LINK-2026-10-04",
       "summary": "check-kb-completeness.py Facet B1 (index->disk link check, 57 links checked) reports 1 broken link: the jasonos-vault index references sources/jcd-discovery-led-consulting-framework.md, which is missing from disk. Facet A separately FAILs with 8 inbox items past the 48h SLA (same recurring untriaged-inbox pattern as OBS-KB-INBOX-AGING-2026-09-03, expired 2026-10-03, not re-bumped here to avoid creating a second expires_on-precedes-observed_at row per the GAP-298 lesson). Facet B2 clean. Not admitted as work: observation-only under protocol v2.3, no live control failing, no named delivery blocked.",
       "source": "check-kb-completeness.py Facet B1 (report-triage 2026-10-04)",
-      "observed_at": "2026-10-04",
+      "observed_at": "2026-10-05",
       "expires_on": "2026-11-03",
+      "project": "Knowledge Vault Operations",
+      "occurrences": 2
+    },
+    {
+      "id": "OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS-2026-10-05",
+      "summary": "Successor to OBS-CAP-REV-WRITE-CLAIMS-2-PREEXISTING-DEFECTS (expired 2026-10-02, filed under new id per protocol since that row's expiry passed before expire-observations.py could process it -- GAP-298). check-cap-rev-write-claims.py still reports the same 2 static defects across 149 governed capability reviews: (1) Logs/capability-reviews/CAP-REV-2026-07-19-INI140.md has no PCR-SEC-011 frontmatter block; (2) Logs/capability-reviews/README.md carries no ISO date in its filename. Both unchanged, pre-existing, observation-only under protocol v2.3; already flagged as a standing CEO-visibility item in session-handoff.md.",
+      "source": "check-cap-rev-write-claims.py (report-triage 2026-10-05)",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-JASONOS-AIRLOCK-FINANCIAL-ROUTER-PY-UNREGISTERED-2026-10-05",
+      "summary": "Successor to OBS-JASONOS-AIRLOCK-FINANCIAL-ROUTER-PY-UNREGISTERED (expired 2026-10-03, filed under new id per GAP-298 lesson). operations/bin/jasonos-airlock-financial-router.py still has zero rows in operations/script-registry.md. 59/60 mechanism ceiling this run (one short of GAP-279's 60 ceiling). Ordinary registry drift, observation-only.",
+      "source": "check-script-registry-coverage.py (report-triage 2026-10-05)",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-DEPLOYED-DASHBOARD-PUBLISHER-AND-PRODUCTION-METRICS-DIVERGE-FROM-CANONICAL-2026-10-05",
+      "summary": "Successor to the 2026-09-03 id (expired 2026-10-03, new id per GAP-298 lesson). check-script-registry-coverage.py still reports jasonos-dashboard-publisher.sh diverged from canonical in both SandboxData/bin and ~/bin, and jasonos-production-metrics.py diverged in SandboxData/bin. No functional-failure evidence this run (dashboard-publisher heartbeat fresh at 2026-10-05T10:08:25Z, well within the 3h threshold). Same recommend-bundle-into-redeploy disposition as before.",
+      "source": "check-script-registry-coverage.py (report-triage 2026-10-05)",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-DEAD-PATH-REGROWTH-10-NEW-PINS-2026-10-05",
+      "summary": "Successor to OBS-DEAD-PATH-REGROWTH-9-NEW-PINS-2026-09-04 (expired 2026-10-04, new id per GAP-298 lesson). Regrowth guard now shows 10 NEW sole-hardcoded-root files (grew from 9): the prior 9 (check-scheduled-task-run-currency.py, jasonos-airlock-financial-router.py, jasonos-dyson-hope-decision-ledger.py, jasonos-index-lock-sweeper.py, jasonos-instagram-reel-metrics-watchdog.py, jasonos-instagram-token-refresh.py, venture-engine/console_app.py, venture-engine/vengine/calibration/_dispositions.py, venture-engine/vengine/deepeval/_requests.py) plus a new tenth: jasonos-kb-digest-compose.py. Guard working as designed (fails closed on new pins). Not admitted as work: ordinary path drift, observation-only.",
+      "source": "check-dead-path-drift.py mount-root pinned scan (GAP-065), report-triage 2026-10-05",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
+      "project": "Governance Tooling & Checker Reliability"
+    },
+    {
+      "id": "OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-7-UNSTAMPED-2026-10-05",
+      "summary": "Successor to OBS-DOCTRINE-ARTIFACT-CURRENCY-JCD-6-UNSTAMPED-2026-09-04 (expired 2026-10-04, new id per GAP-298 lesson). Count grew 6->7: design-system.md, ini114-engagements-copy.md, ini114-homepage-copy-v2.md, ini114-phase2-copy-draft.md, ini114-phase2-section-architecture.md, web-copy-register-supplement.md, plus a new seventh: ini114-placeholder-copy-2026-09-10.md, all unstamped against the 2026-07-02 ratified jason-cook-design doctrine baseline. Not admitted as work: observation-only under protocol v2.3.",
+      "source": "check-doctrine-artifact-currency.py (report-triage 2026-10-05)",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
+      "project": "Process & Surface Governance"
+    },
+    {
+      "id": "OBS-KB-INBOX-AGING-2026-10-05",
+      "summary": "Successor to OBS-KB-INBOX-AGING-2026-09-03 (expired 2026-10-03, new id per GAP-298 lesson). Facet A now shows 6 inbox items past the 48h SLA (grew from 4): AIRLOCK-2026-08-23-001-the-ledger-doctrines (43.5d), AIRLOCK-2026-08-30-001-financial-exports-2026-08-29 (36.5d), INI-166-hypeddit-hot-tracks-format-spec-manifest-2026-09-19.md (15.5d), INI-166-text-to-video-prompt-engineering-research.md (15.2d), INI-167-ch13-verification-dossier-routing-note.md (15.5d), INI-167-chapter10-verification-2026-09-19.md (15.5d). Same recurring pattern as GAP-221/GAP-275 (KB inbox triage has no standing cadence); observation-only.",
+      "source": "check-kb-completeness.py Facet A (report-triage 2026-10-05)",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
       "project": "Knowledge Vault Operations"
+    },
+    {
+      "id": "OBS-SMTP-DNS-FAILURE-2026-10-01-NOT-SEPARATELY-TICKETED",
+      "summary": "Steward's weekly review: msmtp.log's only recipient channel (CEO digest, jasoncookdesign@gmail.com) last sent successfully 2026-09-28; a 2026-10-01 send attempt failed with 'cannot locate host smtp.gmail.com' (DNS/network), no further attempts logged through 2026-10-05. Steward reads this as the same underlying host/network disruption as GAP-293 (com.jasonos.git-relay launchd unloaded, 2026-10-04 Operations Backup failure) given the timing/host overlap, and explicitly recommends Engineering/Operations check whether they share a root cause -- flagging that the SMTP failure itself is not yet separately ticketed. Low, not admitted as work this sweep (no independent live-control failure evidence beyond what GAP-293 already covers); surfaced for whoever investigates GAP-293's root cause.",
+      "source": "Security Steward weekly compliance review 2026-10-05 07:21 UTC (msmtp.log)",
+      "observed_at": "2026-10-05",
+      "expires_on": "2026-11-04",
+      "project": "Backup & Scheduled-Task Reliability"
     }
   ],
   "work_item_counts": {
