@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T01:01:59Z",
+  "generated_at": "2026-10-05T01:35:52Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -69,7 +69,7 @@
       "expired_observations": 21
     },
     "escape_hatches": {
-      "delivery_dependencies": 4,
+      "delivery_dependencies": 3,
       "guardrail_repairs": 19,
       "maintenance_cap_overrides": 0
     },
@@ -325,8 +325,8 @@
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-10-04T06:43:35Z",
-      "invocations_30d": 54
+      "last_active": "2026-10-05T01:04:11Z",
+      "invocations_30d": 55
     },
     {
       "name": "knowledge-director",
@@ -337,8 +337,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-10-05T00:46:07Z",
-      "invocations_30d": 2
+      "last_active": "2026-10-05T01:34:47Z",
+      "invocations_30d": 5
     },
     {
       "name": "research-director",
@@ -361,8 +361,8 @@
     {
       "name": "creative-director",
       "display": "Creative",
-      "last_active": "2026-10-05T00:26:30Z",
-      "invocations_30d": 6
+      "last_active": "2026-10-05T01:19:20Z",
+      "invocations_30d": 7
     }
   ],
   "paused": {
@@ -701,18 +701,6 @@
         ]
       },
       {
-        "name": "INI-167 Democracy's Next Evolution \u2014 citation verification",
-        "description": null,
-        "items": [
-          {
-            "id": "PCR-SEC-016",
-            "type": "PCR",
-            "description": "Attended source verification in CEO-purchased e-books: a bounded Article VI exception, a\u2026",
-            "action": "agent"
-          }
-        ]
-      },
-      {
         "name": "Source Control Governance",
         "description": null,
         "items": [
@@ -725,7 +713,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T01:01:59.496417+00:00"
+    "generated_at": "2026-10-05T01:35:52.832034+00:00"
   },
   "programs": {
     "groups": [
@@ -991,7 +979,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T01:01:59.496554+00:00"
+    "generated_at": "2026-10-05T01:35:52.832156+00:00"
   },
   "contract_quality_gaps": [
     {
@@ -1644,7 +1632,7 @@
     }
   ],
   "work_item_counts": {
-    "open_pcrs": 2,
+    "open_pcrs": 1,
     "open_gaps": 10,
     "open_rems": 0
   }
