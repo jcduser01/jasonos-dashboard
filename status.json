@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T12:08:33Z",
+  "generated_at": "2026-10-05T15:47:19Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-10-05T02:07:58Z",
-    "minutes_since_session": 600,
+    "minutes_since_session": 819,
     "airlock_queue": 2,
     "airlock_bundles": 2
   },
@@ -367,8 +367,8 @@
     {
       "name": "research-director",
       "display": "Research",
-      "last_active": "2026-09-28T16:37:53Z",
-      "invocations_30d": 1
+      "last_active": "2026-10-05T15:46:26Z",
+      "invocations_30d": 9
     },
     {
       "name": "financial-analysis-director",
@@ -385,8 +385,8 @@
     {
       "name": "creative-director",
       "display": "Creative",
-      "last_active": "2026-10-05T01:19:20Z",
-      "invocations_30d": 7
+      "last_active": "2026-10-05T15:46:26Z",
+      "invocations_30d": 9
     }
   ],
   "paused": {
@@ -737,7 +737,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T12:08:33.853969+00:00"
+    "generated_at": "2026-10-05T15:47:19.471397+00:00"
   },
   "programs": {
     "groups": [
@@ -1003,7 +1003,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-05T12:08:33.854113+00:00"
+    "generated_at": "2026-10-05T15:47:19.471534+00:00"
   },
   "contract_quality_gaps": [
     {
