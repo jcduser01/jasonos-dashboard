@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T12:08:59Z",
+  "generated_at": "2026-10-05T00:46:53Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -337,8 +337,8 @@
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-09-18T13:13:00Z",
-      "invocations_30d": 1
+      "last_active": "2026-10-05T00:46:07Z",
+      "invocations_30d": 2
     },
     {
       "name": "research-director",
@@ -361,8 +361,8 @@
     {
       "name": "creative-director",
       "display": "Creative",
-      "last_active": "2026-09-28T17:00:05Z",
-      "invocations_30d": 4
+      "last_active": "2026-10-05T00:26:30Z",
+      "invocations_30d": 6
     }
   ],
   "paused": {
@@ -713,7 +713,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-04T12:08:59.401772+00:00"
+    "generated_at": "2026-10-05T00:46:53.317867+00:00"
   },
   "programs": {
     "groups": [
@@ -979,7 +979,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-04T12:08:59.401904+00:00"
+    "generated_at": "2026-10-05T00:46:53.318003+00:00"
   },
   "contract_quality_gaps": [
     {
