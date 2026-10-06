@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T07:30:31Z",
+  "generated_at": "2026-10-06T09:30:36Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -105,8 +105,8 @@
     "backlog": 16
   },
   "operational": {
-    "last_session_date": "2026-10-05T02:07:58Z",
-    "minutes_since_session": 1762,
+    "last_session_date": "2026-10-06T05:48:17Z",
+    "minutes_since_session": 222,
     "airlock_queue": 19,
     "airlock_bundles": 3
   },
@@ -236,104 +236,62 @@
     {
       "id": "ACT-HO-1",
       "category": "required",
-      "label": "Source acquisition for INI-167",
-      "context": "Priority 1 titles (Chenoweth \u00d72, Huntington, Evans) unblock flagged passages already in the finished manuscript. List at"
+      "label": "Start INI-114 Phase 2 copy with placeholders?",
+      "context": "approved 2026-10-06 to proceed; say when. The Love All the Way external-client clearance and any DNS cutover stay separa"
     },
     {
       "id": "ACT-HO-2",
       "category": "required",
-      "label": "NEW \u2014 Reload the git relay launchd job",
-      "context": "GAP-293"
+      "label": "observation-engine: review or merge fork commit 3fd94b4",
+      "context": "INI-137 Phase 1b model-selector seam (engine/inference.py, main.py, tests; +174/-12), unreviewed. Dispatch the Engineeri"
     },
     {
       "id": "ACT-HO-3",
       "category": "required",
-      "label": "NEW \u2014 SS-statement vault-entry disposition",
-      "context": "Steward Medium finding, PCR-SEC-011 review 2026-09-14"
+      "label": "Relay-actions project: admit or hold (GAP-291, GAP-297)",
+      "context": "*(stale \u2014 build after the port session lands)* \u2014 relay branch-delete/worktree-remove/pull and a push-only action; my lea"
     },
     {
       "id": "ACT-HO-4",
       "category": "required",
-      "label": "NEW \u2014 Three policy-gap recommendations",
-      "context": "from the same review, not yet admitted as work: (a) whether/when a Claude Code session attachment can ever be an approve"
+      "label": "Report-triage defects: admit or hold (GAP-292, GAP-298)",
+      "context": "*(stale \u2014 the port session is moving report-triage)* \u2014 the sweep's final write/commit step keeps failing, and expire-obs"
     },
     {
       "id": "ACT-HO-5",
       "category": "required",
-      "label": "NEW \u2014 Pre-existing, session-unrelated check-cap-rev-write-claims.py defects",
-      "context": "CAP-REV-2026-07-19-INI140.md missing required PCR-SEC-011 frontmatter, and README.md in the same reviews directory has a"
+      "label": "Steward-hardening GAPs filed, to schedule (GAP-299, GAP-300, GAP-301)",
+      "context": "GAP-299: PCR to gate the Steward's instructions and tool list (Steward recommended this cycle); GAP-300: reproduce the d"
     },
     {
       "id": "ACT-HO-6",
       "category": "required",
-      "label": "NEW \u2014 Retirement planning follow-ons",
-      "context": "from the Financial Analysis Director's briefing (informational, no urgency): no stated retirement-age/spending target to"
+      "label": "Re-activate com.jasonos.venture-engine.samgov when desired",
+      "context": "launchctl enable gui/$(id -u)/com.jasonos.venture-engine.samgov then launchctl bootstrap gui/$(id -u) ~/Library/LaunchAg"
     },
     {
       "id": "ACT-HO-7",
       "category": "required",
-      "label": "Re-activate com.jasonos.venture-engine.samgov when desired",
-      "context": "Steward Finding 2"
+      "label": "Verify the roster-audit scheduled task's stored config (Cowork)",
+      "context": "confirm jasonos-model-roster-audit's name, cadence and next-fire time, and that its stub resolves to operations/assets/j"
     },
     {
       "id": "ACT-HO-8",
       "category": "required",
-      "label": "Audio + fuller-brand-motif follow-up render for HyperFrames",
-      "context": "informational, not urgent"
+      "label": "Security Steward: append incident Addendum 2",
+      "context": "2026-10-04 Play Books incident closure, Medium final, C1 confirmed"
     },
     {
       "id": "ACT-HO-9",
       "category": "required",
-      "label": "Model roster audit finding (GAP-294 recurring audit, 2026-09-22 run)",
-      "context": "Anthropic released Opus 5.5 today. Recommend updating the roster's Opus entry and the Security Steward's standing assign"
+      "label": "Steward audit files: two cap-rev checker defects",
+      "context": "*(informational)* \u2014 CAP-REV-2026-07-19-INI140.md lacks PCR-SEC-011 frontmatter and the reviews folder's README.md has no"
     },
     {
       "id": "ACT-HO-10",
       "category": "required",
-      "label": "Verify the scheduled task's stored config",
-      "context": "F3/C3 remainder"
-    },
-    {
-      "id": "ACT-HO-11",
-      "category": "confirm",
-      "label": "Review and approve/reject PCR-SEC-015",
-      "context": "`governance/pcrs/open/PCR-SEC-015-...md`"
-    },
-    {
-      "id": "ACT-HO-12",
-      "category": "required",
-      "label": "Buy Chenoweth, *Civil Resistance: What Everyone Needs to Know* (2021)",
-      "context": "then run an attended verification session for Ch15 note 11 and Coda note 1 (second flag): the 1990s ~65% peak, below 34%"
-    },
-    {
-      "id": "ACT-HO-13",
-      "category": "required",
-      "label": "Security Steward: append incident Addendum 2",
-      "context": "closure, Medium final, C1 confirmed"
-    },
-    {
-      "id": "ACT-HO-14",
-      "category": "required",
-      "label": "Feldstein 2021 (*The Rise of Digital Repression*)",
-      "context": "the Coda cites it with a RE-SOURCE flag. Decide whether to add it to the Source Acquisition List."
-    },
-    {
-      "id": "ACT-HO-15",
-      "category": "required",
-      "label": "Merge fork PRs to canonical for four repos",
-      "context": "sigilzero (1 commit: audit file), sigilzero-ai (2), ravecal-cli (1), jasoncookdesign.github.io (1) are ahead of upstream"
-    },
-    {
-      "id": "ACT-HO-16",
-      "category": "required",
-      "label": "Pull INI-159 to Current when ready",
-      "context": "the SIGIL.ZERO codebase audit now carries the recovered 2026-07-16 simplicity audit as prior art; say the word and the E"
-    },
-    {
-      "id": "ACT-HO-17",
-      "category": "required",
-      "label": "Open gaps with no prior CEO-actions line (reconciliation catch-up)",
-      "context": "GAP-289 (no policy for third-party npx CLI installer side-effects in sandboxed spikes), GAP-291 (relay has no supported "
+      "label": "Dashboard stale until the scheduled-task port session closes staged/dashboard-scheduled-tasks",
+      "context": "*(waiting)* \u2014 once that lane is merged or closed, the President Agent drops a projection-dirty signal."
     }
   ],
   "status_drift": [],
@@ -344,19 +302,19 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 35
+      "invocations_30d": 34
     },
     {
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 56
+      "invocations_30d": 55
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 30
+      "invocations_30d": 29
     },
     {
       "name": "security-steward",
@@ -374,7 +332,7 @@
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
       "last_active": "2026-10-05T09:06:04Z",
-      "invocations_30d": 36
+      "invocations_30d": 35
     },
     {
       "name": "venture-director",
@@ -725,7 +683,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-06T07:30:31.746978+00:00"
+    "generated_at": "2026-10-06T09:30:36.385206+00:00"
   },
   "programs": {
     "groups": [
@@ -991,7 +949,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-06T07:30:31.747131+00:00"
+    "generated_at": "2026-10-06T09:30:36.385330+00:00"
   },
   "contract_quality_gaps": [
     {
