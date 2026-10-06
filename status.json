@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-06T04:25:19Z",
+  "generated_at": "2026-10-06T05:49:06Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
     "period": {
-      "start": "2026-09-29",
-      "end": "2026-10-05"
+      "start": "2026-09-30",
+      "end": "2026-10-06"
     },
     "headline": {
       "delivered": 0,
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-10-05T02:07:58Z",
-    "minutes_since_session": 1577,
+    "minutes_since_session": 1661,
     "airlock_queue": 19,
     "airlock_bundles": 3
   },
@@ -343,26 +343,26 @@
     {
       "name": "engineering-director",
       "display": "Engineering",
-      "last_active": "2026-10-05T07:44:08Z",
-      "invocations_30d": 33
+      "last_active": "2026-10-06T05:46:58Z",
+      "invocations_30d": 35
     },
     {
       "name": "operations-director",
       "display": "Operations",
-      "last_active": "2026-10-05T15:53:52Z",
-      "invocations_30d": 56
+      "last_active": "2026-10-06T05:46:58Z",
+      "invocations_30d": 57
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
-      "last_active": "2026-10-05T16:07:17Z",
-      "invocations_30d": 29
+      "last_active": "2026-10-06T05:46:58Z",
+      "invocations_30d": 30
     },
     {
       "name": "security-steward",
       "display": "Security",
-      "last_active": "2026-10-05T15:53:52Z",
-      "invocations_30d": 6
+      "last_active": "2026-10-06T05:46:58Z",
+      "invocations_30d": 12
     },
     {
       "name": "research-director",
@@ -725,7 +725,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-06T04:25:19.617748+00:00"
+    "generated_at": "2026-10-06T05:49:06.767460+00:00"
   },
   "programs": {
     "groups": [
@@ -991,7 +991,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-06T04:25:19.617893+00:00"
+    "generated_at": "2026-10-06T05:49:06.767613+00:00"
   },
   "contract_quality_gaps": [
     {
