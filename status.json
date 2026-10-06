@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T09:30:36Z",
+  "generated_at": "2026-10-06T15:37:16Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,9 +106,9 @@
   },
   "operational": {
     "last_session_date": "2026-10-06T05:48:17Z",
-    "minutes_since_session": 222,
-    "airlock_queue": 19,
-    "airlock_bundles": 3
+    "minutes_since_session": 588,
+    "airlock_queue": 20,
+    "airlock_bundles": 4
   },
   "active_initiative": {
     "id": "INI-114",
@@ -683,7 +683,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-06T09:30:36.385206+00:00"
+    "generated_at": "2026-10-06T15:37:16.212730+00:00"
   },
   "programs": {
     "groups": [
@@ -949,7 +949,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-06T09:30:36.385330+00:00"
+    "generated_at": "2026-10-06T15:37:16.212867+00:00"
   },
   "contract_quality_gaps": [
     {
