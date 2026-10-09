@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T07:38:12Z",
+  "generated_at": "2026-10-09T09:38:16Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-10-06T05:48:17Z",
-    "minutes_since_session": 4429,
+    "minutes_since_session": 4549,
     "airlock_queue": 20,
     "airlock_bundles": 4
   },
@@ -308,7 +308,7 @@
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 51
+      "invocations_30d": 50
     },
     {
       "name": "knowledge-director",
@@ -332,7 +332,7 @@
       "name": "financial-analysis-director",
       "display": "Financial Analysis",
       "last_active": "2026-10-05T09:06:04Z",
-      "invocations_30d": 32
+      "invocations_30d": 31
     },
     {
       "name": "venture-director",
@@ -683,7 +683,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-09T07:38:12.041088+00:00"
+    "generated_at": "2026-10-09T09:38:16.111564+00:00"
   },
   "programs": {
     "groups": [
@@ -949,7 +949,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-09T07:38:12.041216+00:00"
+    "generated_at": "2026-10-09T09:38:16.111690+00:00"
   },
   "contract_quality_gaps": [
     {
