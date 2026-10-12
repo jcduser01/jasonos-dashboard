@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T05:39:17Z",
+  "generated_at": "2026-10-12T07:39:23Z",
   "schema_version": "8",
   "generator_version": "3.6",
   "production": {
@@ -106,7 +106,7 @@
   },
   "operational": {
     "last_session_date": "2026-10-06T05:48:17Z",
-    "minutes_since_session": 8631,
+    "minutes_since_session": 8751,
     "airlock_queue": 20,
     "airlock_bundles": 4
   },
@@ -302,19 +302,19 @@
       "name": "engineering-director",
       "display": "Engineering",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 29
+      "invocations_30d": 28
     },
     {
       "name": "operations-director",
       "display": "Operations",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 47
+      "invocations_30d": 46
     },
     {
       "name": "knowledge-director",
       "display": "Knowledge",
       "last_active": "2026-10-06T05:46:58Z",
-      "invocations_30d": 24
+      "invocations_30d": 23
     },
     {
       "name": "security-steward",
@@ -683,7 +683,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-12T05:39:17.248079+00:00"
+    "generated_at": "2026-10-12T07:39:23.518263+00:00"
   },
   "programs": {
     "groups": [
@@ -949,7 +949,7 @@
         ]
       }
     ],
-    "generated_at": "2026-10-12T05:39:17.248257+00:00"
+    "generated_at": "2026-10-12T07:39:23.518385+00:00"
   },
   "contract_quality_gaps": [
     {
